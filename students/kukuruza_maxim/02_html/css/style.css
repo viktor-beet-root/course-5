@@ -9,7 +9,7 @@
 }
 header{
     width: 100vw;
-    position: fixed;
+    position: sticky;
     display: flex;
     flex-direction: row;
     /* justify-content: space-evenly; */
@@ -44,4 +44,13 @@ ul li a{
 }
 h1{
     text-align: center;
+}
+
+/* Main */  
+.info p{
+    font-size: 24px;
+    margin-left: 20px;
+    margin-top: 40px;
+    width: 40%;
+    text-align: justify;
 }
