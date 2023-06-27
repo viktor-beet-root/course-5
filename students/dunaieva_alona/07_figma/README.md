@@ -1,3 +1,5 @@
+https://dunaievaas.github.io/course-5/students/dunaieva_alona/07_figma/index.html
+
 Header:
 font-family: Open Sans;
 font-size: 18px;
@@ -35,6 +37,3 @@ footer:
     p:
     color: #828282;
     font-size: 14px;
-    
-
-
