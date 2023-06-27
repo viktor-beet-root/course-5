@@ -1,3 +1,9 @@
+background-color (white): 
+background: #FFF;
+------------------------
+background color grey:
+background: #F6F6F6;
+------------------------
 nav ul-li:
 
 color: var(--black, #070707);
