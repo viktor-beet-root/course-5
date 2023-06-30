@@ -1,3 +1,4 @@
+https://m-shvydka.github.io/course-5/students/shvydka_maryna/07_figma
 Picture: 4- jpeg/ 10 - svg
 Fonts: class-title (About me/ Skills/ Portfolio/ Contacts) - font-family: Open Sans; font-size: 34px;
 Fonts: class-subtitle (other text in landing, beside "Like me on LinkedIn, Instagram, Behance, Dribble") - font-family: Open Sans; font-size: 18px;
