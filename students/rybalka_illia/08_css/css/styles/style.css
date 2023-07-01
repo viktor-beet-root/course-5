@@ -1,0 +1,25 @@
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 47px;
+    color: #070707;
+}
+
+h2 {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 34px;
+    color: #070707;
+}
+
+p {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
