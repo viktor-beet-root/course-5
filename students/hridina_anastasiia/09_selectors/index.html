@@ -5,111 +5,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Denis Novik</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            line-height: normal;
+            letter-spacing: .5px;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html#">Home</a></li>
-                <li><a href="#about me">About me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="index.html#" class="menu__link">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#about me" class="menu__link">About me</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#skills" class="menu__link">Skills</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#portfolio" class="menu__link">Portfolio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#contacts" class="menu__link">Contacts</a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section>
-            <div>
-                <h1>Denis Novik</h1>
+            <div class="container">
+                <h1 class="heading">Denis Novik</h1>
                 <img src="./images/denis_novik_photo.jpg" width="943" height="387" alt="Denis Novik">
             </div>
         </section>
-        <section>
-            <div id="about me">
+        <section class="section">
+            <div id="aboutme" class="aboutme">
                 <h2>About me</h2>
                 <p>Hi, I'm Denis – UX/UI designer from Minsk.
-                    I'm interested in design and everything connected with it.
+                    I'm interested in design and everything connected with it.</p>
 
-                    I'm studying at courses "Web and mobile design
-                    interfaces" in IT-Academy.
+                <p>I'm studying at courses "Web and mobile design
+                    interfaces" in IT-Academy.</p>
 
-                    Ready to implement excellent projects
-                    with wonderful people.
-                </p>
+                <p>Ready to implement excellent projects with wonderful people.</p>
             </div>
         </section>
-        <section>
-            <div id="skills">
+        <section class="skill-set">
+            <div id="skills" class="skills">
                 <h2>Skills</h2>
-                <h4>I work in such programs as</h4>
-                <img src="./images/photoshop.svg" width="89" height="87" alt="Adobe Photoshop">
-                <p>Adobe Photoshop</p>
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star_empty.svg" alt="Star">
+                <h3>I work in such programs as</h3>
             </div>
-            <div>
-                <img src="./images/illustrator.svg" width="89" height="87" alt="Adobe Illustrator">
-                <p>Adobe Illustrator</p>
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star_empty.svg" alt="Star">
-                <img src=".//images/Star_empty.svg" alt="Star">
-            </div>
-            <div>
-                <img src="./images/after_effects.svg" width="89" height="87" alt="Adobe After Effects">
-                <p>Adobe After Effects</p>
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star_empty.svg" alt="Star">
-            </div>
-            <div>
-                <img src="./images/figma.svg" width="58" height="88" alt="Figma">
-                <p>Figma</p>
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star.svg" alt="Star">
-                <img src="./images/Star_empty.svg" alt="Star">
+            <div class="figures">
+                <div class="figure-one">
+                    <figure><img src="./images/photoshop.svg" width="89" height="87" alt="Adobe Photoshop">
+                        <figcaption>Adobe Photoshop</figcaption>
+                    </figure>
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star_empty.svg" alt="Star">
+                </div>
+                <div class="figure-two">
+                    <figure><img src="./images/illustrator.svg" width="89" height="87" alt="Adobe Illustrator">
+                        <figcaption>Adobe Illustrator</figcaption>
+                    </figure>
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star_empty.svg" alt="Star">
+                    <img src="./images/star_empty.svg" alt="Star">
+                </div>
+                <div class="figure-three">
+                    <figure><img src="./images/after_effects.svg" width="89" height="87" alt="Adobe After Effects">
+                        <figcaption>Adobe After Effects</figcaption>
+                    </figure>
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star_empty.svg" alt="Star">
+                </div>
+                <div class="figure-four">
+                    <figure><img src="./images/figma.svg" width="58" height="88" alt="Figma">
+                        <figcaption>Figma</figcaption>
+                    </figure>
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star.svg" alt="Star">
+                    <img src="./images/star_empty.svg" alt="Star">
+                </div>
             </div>
         </section>
-        <section>
-            <div id="portfolio">
+        <section class="portfolio-list">
+            <div id="portfolio" class="fashion-store">
                 <h2>Portfolio</h2>
                 <img src="./images/fashion_store.jpg" width="936" height="510" alt="Online fashion store">
                 <a href="#">Online fashion store - Homepage</a>
             </div>
-            <div>
+            <div class="reebok-store">
                 <img src="./images/jpeg_reebok_web.jpg" width="936" height="522" alt="Reebok store">
                 <a href="#">Reebok Store - Concept</a>
             </div>
-            <div>
+            <div class="braun-web">
                 <img src="./images/jpeg_braun_web.jpg" width="936" height="522" alt="Braun portable macro camera">
                 <a href="#">Braun Landing Page - Concept</a>
             </div>
         </section>
-        <footer>
-            <div id="contacts">
+        <footer class="footer">
+            <div id="contacts" class="contacts-text">
                 <h2>Contacts</h2>
                 <p>Want to know more or just chat?
                     You are welcome!</p>
                 <button type="button">Send message</button>
             </div>
-            <div>
+            <div class="footer-links">
                 <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
-                <a href="#"><img src=".//images/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="./images/instagram.svg" alt="Instagram"></a>
                 <a href="#"><img src="./images/behance.svg" alt="Behance"></a>
                 <a href="#"><img src="./images/dribble.svg" alt="Dribble"></a>
             </div>
-            <div>
+            <div class="footer-text">
                 <p>
                     Like me on
                     LinkedIn, Instagram, Behance,

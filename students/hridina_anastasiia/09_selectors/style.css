@@ -1,0 +1,68 @@
+.menu {
+    text-align: center;
+    list-style-type: none;
+}
+
+.menu__item .menu__link {
+    color: #828282;
+    text-decoration: none;
+    padding-right: 40px;
+}
+
+li {
+    display: inline;
+    text-shadow: lightgrey 0 3px 3px;
+}
+
+.menu__link:link {
+    color: #828282;
+}
+
+.menu__link:visited {
+    color: #828282;
+}
+
+.menu__link:hover {
+    color: black;
+}
+
+.header {
+    border-bottom: 1px solid black;
+}
+
+.container {
+    text-align: center;
+    padding: 38px 250px 100px 250px;
+}
+
+.heading {
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.section {
+    background-color: #F6F6F6;
+    padding: 100px 488px 100px 488px;
+}
+
+.aboutme {
+    text-align: center;
+}
+
+.aboutme h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.skill-set .skills {
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.skills h3 {
+    font-weight: 400;
+}
