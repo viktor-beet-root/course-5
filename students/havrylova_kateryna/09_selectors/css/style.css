@@ -1,0 +1,45 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: #070707;
+}
+
+.menu {
+    list-style-type: none;
+}
+
+.menu__item {
+    display: inline;
+    padding-right: 40px;
+}
+
+.menu__link {
+    color: #828282;
+}
+
+.hero__title {
+    text-align: left;
+    margin-left: 249px;
+    font-size: 47px;
+    font-weight: 700;
+}
+
+.titeles {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.skills_name {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button {
+    background-color: black;
+    color: #FFF;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
