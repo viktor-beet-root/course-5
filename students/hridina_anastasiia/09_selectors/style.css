@@ -112,9 +112,10 @@ li {
 }
 
 .portfolio-list img {
-    display: inline-block;
+    display: block;
     text-align: center;
-    padding-left: 220px;
+    padding-left: 238px;
+    padding-right: 238px;
     padding-bottom: 166px;
 }
 
@@ -150,10 +151,10 @@ li {
 }
 
 .footer-links {
-    display: inline-block;
-    text-align: center;
-    margin-top: 35px;
-    margin-bottom: 44px;
+    display: inline;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    padding-right: 40px;
 }
 
 .footer-links:nth-child(-n + 3) {
