@@ -152,13 +152,8 @@ li {
 
 .footer-links {
     display: inline;
-    padding-top: 40px;
-    padding-bottom: 44px;
-    padding-right: 40px;
-}
-
-.footer-links:nth-child(-n + 3) {
-    margin-right: 56px;
+    padding: auto;
+    margin: auto;
 }
 
 .footer-text {
