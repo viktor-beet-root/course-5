@@ -1,5 +1,4 @@
 .menu {
-    text-align: center;
     list-style-type: none;
 }
 
@@ -12,6 +11,8 @@
 li {
     display: inline;
     text-shadow: lightgrey 0 3px 3px;
+    border-bottom: 1px solid black;
+    padding-bottom: 28px;
 }
 
 .menu__link:link {
@@ -26,12 +27,7 @@ li {
     color: black;
 }
 
-.header {
-    border-bottom: 1px solid black;
-}
-
 .container {
-    text-align: center;
     padding: 38px 250px 100px 250px;
 }
 
@@ -45,9 +41,6 @@ li {
     padding: 100px 488px 100px 488px;
 }
 
-.aboutme {
-    text-align: center;
-}
 
 .aboutme p span {
     display: block;
@@ -59,25 +52,14 @@ li {
     font-weight: 700;
 }
 
-.skill-set .skills {
-    text-align: center;
-}
-
 .figures {
     display: flex;
     padding-bottom: 80px;
     padding-left: 238px;
+    margin: 0 auto;
 }
 
-.figures .figure-one {
-    padding-right: 94px;
-}
-
-.figures .figure-two {
-    padding-right: 94px;
-}
-
-.figures .figure-three {
+.figures>div {
     padding-right: 94px;
 }
 
@@ -85,11 +67,9 @@ li {
 .figures img {
     display: inline-block;
     padding-top: 36px;
+    margin: 0 auto;
 }
 
-.figures figcaption {
-    text-align: center;
-}
 
 .skills h2 {
     font-size: 34px;
@@ -106,28 +86,30 @@ li {
 }
 
 .fashion-store h2 {
-    text-align: center;
-    padding: 100px 637px 67px 637px;
+    padding: 50px 637px 67px 637px;
     font-size: 34px;
 }
 
 .portfolio-list img {
     display: block;
-    text-align: center;
-    padding-left: 238px;
-    padding-right: 238px;
-    padding-bottom: 166px;
+    margin: 0 auto;
 }
 
+.portfolio-list>div {
+    padding-top: 70px;
+}
+
+.portfolio-list div:last-child {
+    padding-bottom: 70px;
+}
+
+.portfolio-list a {
+    color: black;
+}
 
 .footer {
     display: block;
-    text-align: center;
     padding: 100px 552px 159px 552px;
-}
-
-[class$="text"] {
-    text-align: center;
 }
 
 .footer h2 {
@@ -135,7 +117,7 @@ li {
     font-weight: 700;
 }
 
-.contacts-text p:nth-child(2) {
+.contacts-text span:nth-child(2) {
     padding-bottom: 50px;
 }
 
@@ -151,9 +133,8 @@ li {
 }
 
 .footer-links {
-    display: inline;
-    padding: auto;
-    margin: auto;
+    display: inline-block;
+    padding: 60px;
 }
 
 .footer-text {
