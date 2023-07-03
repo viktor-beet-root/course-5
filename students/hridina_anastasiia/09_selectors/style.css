@@ -49,12 +49,45 @@ li {
     text-align: center;
 }
 
+.aboutme p span {
+    display: block;
+    line-height: 28px;
+}
+
 .aboutme h2 {
     font-size: 34px;
     font-weight: 700;
 }
 
 .skill-set .skills {
+    text-align: center;
+}
+
+.figures {
+    display: flex;
+    padding-bottom: 80px;
+    padding-left: 322px;
+}
+
+.figures .figure-one {
+    padding-right: 94px;
+}
+
+.figures .figure-two {
+    padding-right: 94px;
+}
+
+.figures .figure-three {
+    padding-right: 94px;
+}
+
+
+.figures img {
+    display: inline-block;
+    padding-top: 36px;
+}
+
+.figures figcaption {
     text-align: center;
 }
 
@@ -65,4 +98,78 @@ li {
 
 .skills h3 {
     font-weight: 400;
+}
+
+
+.portfolio-list {
+    background-color: #F6F6F6;
+}
+
+.fashion-store h2 {
+    text-align: center;
+    padding: 100px 637px 67px 637px;
+    font-size: 34px;
+}
+
+.portfolio-list img {
+    display: flex;
+    margin-left: 340px;
+    margin-right: 340px;
+    padding-bottom: 166px;
+}
+
+.portfolio-list a {
+    text-align: center;
+}
+
+.footer {
+    display: block;
+    text-align: center;
+    padding: 100px 552px 159px 552px;
+}
+
+[class$="text"] {
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.contacts-text p:nth-child(2) {
+    padding-bottom: 50px;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 11px 18px;
+    letter-spacing: 2.5px;
+    border-radius: 24px;
+}
+
+.footer-links {
+    padding-top: 44px;
+    padding-bottom: 24px;
+    padding-left: 60px;
+}
+
+.footer-links a img {
+    text-align: center;
+    padding-right: 60px;
+}
+
+.footer-text {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+p span {
+    display: block;
+    line-height: 24px;
 }
