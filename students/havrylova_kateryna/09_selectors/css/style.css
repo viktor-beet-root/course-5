@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
@@ -11,19 +14,29 @@ body {
 
 .menu__item {
     display: inline;
-    padding-right: 40px;
+    margin: 0 auto;
+    padding-left: 40px;
 }
 
 .menu__link {
     color: #828282;
+    text-decoration: none;
+}
+
+
+.hero_block {
+    width: 943px;
+    margin: 0 auto;
+    padding-bottom: 100px;
 }
 
 .hero__title {
     text-align: left;
-    margin-left: 249px;
     font-size: 47px;
+    font-family: Open Sans;
     font-weight: 700;
 }
+
 
 .titles {
     font-size: 34px;
@@ -42,4 +55,39 @@ body {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+}
+
+.line {
+    color: #828282;
+    width: 940px;
+}
+
+.about {
+    background: #F6F6F6;
+    width: 100%;
+
+}
+
+.text-box {
+    width: 480px;
+    margin: 0 auto;
+
+    padding: 100px 0 100px 0;
+}
+
+.text-wight {
+    padding-bottom: 40px;
+}
+
+.text-wight:last-child {
+    padding-bottom: 0px;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list__item {
+    display: inline-block;
+    margin: 0 auto;
 }
