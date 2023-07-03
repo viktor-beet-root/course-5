@@ -66,7 +66,7 @@ li {
 .figures {
     display: flex;
     padding-bottom: 80px;
-    padding-left: 296px;
+    padding-left: 220px;
 }
 
 .figures .figure-one {
@@ -157,6 +157,12 @@ li {
     padding-top: 44px;
     padding-bottom: 24px;
     padding-left: 60px;
+}
+
+.footer-links a img {
+    display: inline;
+    text-align: center;
+    padding-right: 60px;
 }
 
 .footer-text {
