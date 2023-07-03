@@ -108,7 +108,7 @@ li {
 }
 
 .footer {
-    display: block;
+    display: inline;
     padding: 100px 552px 159px 552px;
 }
 
@@ -133,8 +133,16 @@ li {
 }
 
 .footer-links {
-    display: inline-block;
-    padding: 60px;
+    display: inline;
+}
+
+.footer-links img {
+    padding-top: 60px;
+}
+
+
+.footer-links a {
+    margin-right: 40px;
 }
 
 .footer-text {
