@@ -66,7 +66,7 @@ li {
 .figures {
     display: flex;
     padding-bottom: 80px;
-    padding-left: 220px;
+    padding-left: 238px;
 }
 
 .figures .figure-one {
@@ -113,14 +113,11 @@ li {
 
 .portfolio-list img {
     display: flex;
-    margin-left: 340px;
-    margin-right: 340px;
+    margin-left: 300px;
+    margin-right: 300px;
     padding-bottom: 166px;
 }
 
-.portfolio-list a {
-    text-align: center;
-}
 
 .footer {
     display: block;
@@ -153,15 +150,14 @@ li {
 }
 
 .footer-links {
-    display: inline;
+    display: flex;
     padding-top: 44px;
     padding-bottom: 24px;
     padding-left: 60px;
 }
 
 .footer-links a img {
-    display: inline;
-    text-align: center;
+    display: flex;
     padding-right: 60px;
 }
 
