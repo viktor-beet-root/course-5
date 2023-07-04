@@ -31,15 +31,15 @@
     text-shadow: 1px 2px 4px lightgray;
 }
 
-a:link {
+.menu__item a:link {
     color: #828282;
 }
 
-a:visited {
+.menu__item a:visited {
     color: #828282;
 }
 
-a:hover {
+.menu__item a:hover {
     color: black;
 }
 
@@ -97,6 +97,7 @@ p span {
 }
 
 .figures {
+    width: 100%;
     display: flex;
     box-sizing: content-box;
     padding-top: 60px;
@@ -152,12 +153,20 @@ p span {
 
 .footer-links img {
     max-width: 100%;
+    margin: 0 auto;
 }
 
 .footer-links {
     width: 100%;
-    display: inline-block;
-    margin-right: 40px;
+    float: none;
+    margin: 0 auto;
+    margin-right: 30px;
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.footer-text {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
 }
