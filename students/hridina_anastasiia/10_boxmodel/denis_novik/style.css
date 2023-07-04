@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu {
+    list-style-type: none;
+    text-align: center;
+    font-size: 0;
+}
+
+.nav {
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.menu__item {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.menu__link {
+    text-decoration: none;
+    font-size: 18px;
+    color: #828282;
+    text-shadow: 1px 2px 4px lightgray;
+}
+
+a:link {
+    color: #828282;
+}
+
+a:visited {
+    color: #828282;
+}
+
+a:hover {
+    color: black;
+}
+
+section {
+    margin: 0 auto;
+    padding-top: 26px;
+    padding-bottom: 44px;
+}
+
+.heading {
+    font-size: 47px;
+    font-weight: 700;
+    padding-bottom: 26px;
+}
+
+.section {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.aboutme {
+    background-color: #F6F6F6;
+    padding: 100px 400px;
+    line-height: 28px;
+}
+
+.aboutme h2 {
+    padding-bottom: 27px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+p span {
+    display: block;
+}
+
+.skill-set img {
+    max-width: 100%;
+}
+
+.skill-set {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 60px;
+}
+
+.skills h2 {
+    font-size: 34px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.skills h3 {
+    font-weight: 400;
+}
+
+.figures {
+    display: flex;
+    box-sizing: content-box;
+    padding-top: 60px;
+    padding-bottom: 33px;
+    margin-right: 30px;
+}
+
+.fashion-store h2 {
+    font-size: 34px;
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.portfolio-list {
+    background-color: #F6F6F6;
+    margin: 0 auto;
+}
+
+.portfolio-list>div {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px;
+}
+
+.footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.contacts-text h2 {
+    font-size: 34px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+
+.contacts-text p:nth-last-child(2) {
+    padding-bottom: 65px;
+}
+
+.button {
+    background-color: black;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 24px;
+    border-radius: 24px;
+    width: 180px;
+    cursor: pointer;
+}
+
+.footer-links img {
+    max-width: 100%;
+}
+
+.footer-links {
+    width: 100%;
+    display: inline-block;
+    margin-right: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
