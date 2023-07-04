@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    background-color: aqua;
+    padding: 15px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.gallery__item {
+    width: 33%;
+    box-sizing: border-box;
+    float: left;
+    padding: 15px;
+}
+
+.gallery::after {
+    content: '';
+    display: block;
+    clear: both;
+}
