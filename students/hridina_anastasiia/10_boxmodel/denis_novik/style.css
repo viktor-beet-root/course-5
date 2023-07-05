@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
 .menu {
     list-style-type: none;
     text-align: center;
@@ -60,6 +54,11 @@ section {
     margin: 0 auto;
 }
 
+.container {
+    max-width: 946px;
+    margin: 0 auto;
+}
+
 .aboutme {
     background-color: #F6F6F6;
     padding: 100px 400px;
@@ -81,9 +80,8 @@ p span {
 }
 
 .skill-set {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 60px;
 }
 
 .skills h2 {
@@ -94,15 +92,20 @@ p span {
 
 .skills h3 {
     font-weight: 400;
+    padding-bottom: 50px;
 }
 
-.figures {
-    width: 100%;
-    display: flex;
-    box-sizing: content-box;
-    padding-top: 60px;
-    padding-bottom: 33px;
-    margin-right: 30px;
+.figures>* {
+    float: left;
+    box-sizing: border-box;
+    padding-right: 82px;
+    padding-bottom: 60px;
+}
+
+.figures::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .fashion-store h2 {
@@ -116,6 +119,14 @@ p span {
     margin: 0 auto;
 }
 
+.portfolio-list a {
+    color: black;
+}
+
+.portfolio-list a:hover {
+    color: purple;
+}
+
 .portfolio-list>div {
     box-sizing: border-box;
     width: 100%;
@@ -124,9 +135,7 @@ p span {
 
 .footer {
     box-sizing: border-box;
-    width: 100%;
     padding: 40px;
-    margin: 0 auto;
 }
 
 .contacts-text h2 {
@@ -153,16 +162,18 @@ p span {
 
 .footer-links img {
     max-width: 100%;
-    margin: 0 auto;
 }
 
 .footer-links {
-    width: 100%;
-    float: none;
-    margin: 0 auto;
-    margin-right: 30px;
+    text-align: center;
+    box-sizing: border-box;
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
+    padding-left: 56px;
+}
+
+.footer-links img {
+    margin-right: 60px;
 }
 
 .footer-text {

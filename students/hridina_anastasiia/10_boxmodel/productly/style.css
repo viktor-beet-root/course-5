@@ -1,0 +1,64 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.logo__left {
+    float: left;
+    padding-left: 120px;
+}
+
+.buttons__right {
+    float: right;
+    padding-right: 120px;
+}
+
+.button1 {
+    background-color: #ffffff;
+    border: 1px solid #BCD0E5;
+    color: black;
+    padding: 13px 25px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button2 {
+    background-color: #f90;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 32px;
+}
+
+.nav {
+    list-style-type: none;
+    text-align: center;
+    font-size: 0;
+}
+
+.menu .menu__item {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+.menu__link {
+    text-decoration: none;
+}
+
+.menu__link:link {
+    color: black;
+}
+
+.menu__link:visited {
+    color: black;
+}
+
+.menu__link:hover {
+    color: orange;
+}
