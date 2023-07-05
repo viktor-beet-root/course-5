@@ -1,0 +1,45 @@
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    border: 1px solid;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.item {
+    /* flex-basis: 10%; - це базовый розмир з якого починаемо, в ньога вища специфічність*/
+    max-width: 30px;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+/* селектор с псевдоклассом*/
+.item:nth-child(2) {
+    align-self: center;
+}
+
+/*
+.item:last-child {
+    margin-left: auto;
+    margin-right: auto;
+}  */
+
+/* працюю з вiльним простiром 
+.item:nth-child(3) {
+    margin-left: auto;
+    margin-right: auto;
+} 
+*/
+
+.item:last-child {
+    flex-grow: 1;
+    width: auto;
+    max-width: none;
+}
+
+
