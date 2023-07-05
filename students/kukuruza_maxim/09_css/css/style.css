@@ -1,3 +1,7 @@
+* {
+    transition: all .1s ease-in;
+}
+
 /* Header */
 header {
     width: 940px;
@@ -23,10 +27,6 @@ ul li a {
     font-size: 18px;
     color: #828282;
     text-decoration: none;
-}
-
-.active {
-    color: #070707;
 }
 
 /* Main */
@@ -169,4 +169,26 @@ button {
     display: flex;
     gap: 60px;
     justify-content: center;
+}
+
+/* pseudo */
+a:focus {
+    color: #070707;
+}
+
+a:hover {
+    font-weight: 600;
+    transition: .2s linear;
+}
+
+.social a:hover {
+    opacity: 0.5;
+    transition: .2s linear;
+    transition-delay: 0;
+}
+
+[type="button"]:hover {
+    border: 2px solid #070707;
+    background: #f6f6f6;
+    color: #070707;
 }
