@@ -1,11 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     font-family: "Open Sans", Helvetica, sans-serif;
     font-size: 18px;
     color: #070707;
+    text-align: center;
 }
 
 .greyback {
     background: #F6F6F6;
+}
+
+#home {
+    height: 70px;
+}
+
+.nav>li {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 23px;
 }
 
 ul {
@@ -32,7 +49,8 @@ a.black {
 .novik {
     width: 943px;
     height: 387px;
-    background: url(../images/jpg/denis_novik.jpeg)
+    background: url(../images/jpg/denis_novik.jpeg);
+    margin: 0 auto;
 }
 
 h1,
@@ -42,6 +60,8 @@ h2 {
 
 h1 {
     font-size: 47px;
+    text-align: left;
+    margin-left: 249px;
 }
 
 h2 {
@@ -67,4 +87,8 @@ button {
 .contact {
     color: #828282;
     font-size: 14px;
+}
+
+#about_me {
+    height: 517px;
 }

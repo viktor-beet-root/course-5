@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #544837;
+    line-height: 28px;
+}
+
+.container {
+    padding: 17px 120px;
+}
+
+.logo {
+    float: left;
+}
+
+.header_buttons {
+    float: right;
+}
+
+.header_buttons::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.nav>li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #2F281E;
+    line-height: 28px;
+}
+
+.orange {
+    color: #F90;
+}
+
+.sign_in,
+.sign_up {
+    font-weight: 600;
+    padding: 13px 25px;
+    height: 46px;
+    width: 110px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    margin: 0 16px;
+}
+
+.sign_up {
+    background-color: #F90;
+    color: #FFFFFF;
+}
+
+h3 {
+    font-family: "Gotham", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #2F281E;
+}
+
+.footer {
+    display: inline-block;
+}
+
+.footer {
+    width: calc(100% / 4);
+}
+
+.footer-nav a {
+    font-weight: 500;
+    line-height: 26px;
+    color: #544837;
+}
+
+.alink {
+    display: inline-block;
+}
