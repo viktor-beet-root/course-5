@@ -36,10 +36,6 @@ h1 {
     margin-top: 45px;
 }
 
-/* .hero_block {
-    height: 624px;
-} */
-
 .hero_image {
     margin-top: 40px;
 }
@@ -85,16 +81,6 @@ p {
     font-weight: 400;
 }
 
-/* a[class="portfolio_links"] {
-    color: #070707;
-    text-align: center;
-    font-size: 18px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
-    font-weight: 400;
-} */
-
-
-
 h2 {
     color: #070707;
     text-align: center;
@@ -103,66 +89,178 @@ h2 {
     font-weight: 700;
 }
 
+.skills_block {
+    height: 580px;
 
-
-a:hover {
-    text-decoration: underline;
 }
 
+.skills_header {
+    padding-top: 100px;
+}
 
+.skills_description {
+    padding-top: 40px;
+}
 
+[class*=skills_item] {
+    background-color: aqua;
+    display: inline-block;
+    padding-top: 75px;
 
+}
 
+[class*=skills_item]>img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
 
+}
 
+.adobe_images {
+    width: 89px;
+    height: 88px;
+}
 
+.figma_image {
+    width: 58px;
+    height: 88;
+}
 
+.skills_item2 {
+    margin-left: 65px;
+}
+
+.skills_signature {
+    padding-top: 25px;
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.stars {
+
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    padding-top: 60px;
+    margin-right: 9px;
+}
+
+.last_star {
+    display: inline-block;
+    padding-top: 60px;
+    width: 26px;
+    height: 26px;
+}
+
+.portfolio {
+    display: inline-block;
+    background-color: #F6F6F6;
+    padding: 120px 0 110px;
+    max-height: 2240px;
+    height: 100%;
+}
+
+.fashion-store {
+    padding-top: 75px;
+}
+
+.portfolio_image {
+    width: 940px;
+}
 
 li>a {
     text-decoration: none;
     color: #828282;
 }
 
-
-.portfolio {
-    background-color: #F6F6F6;
+.portfolio_links {
+    color: #070707;
+    padding-top: 15px;
+    line-height: 1.3em;
 }
 
-.stars {
-    display: inline-block;
-    margin-right: 9px
+.reebok-store {
+    padding-top: 100px;
 }
 
-.last_star {
-    display: inline-block
+.reebok-store {
+    padding-top: 100px;
 }
 
-.skills_signature {
-    color: #828282;
-    text-align: center;
-    font-size: 14px;
-    font-family: Open Sans, Arial, Helvetica, sans-serif;
-    font-weight: 400;
+.braun {
+    padding-top: 100px;
 }
 
 .portfolio_links {
+    display: inline-block;
     color: #070707;
+}
 
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-box {
+    height: 670px;
+}
+
+.contacts_header {
+    padding-top: 110px;
+}
+
+.contacts-description {
+    padding-top: 25px;
+    color: #070707;
+    font-family: Open Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+
+.button-box {
+    padding-top: 70px;
 }
 
 .button {
+    display: block;
+    margin: 0 auto;
     color: #FFF;
     text-align: center;
     font-size: 18px;
     font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 700;
     letter-spacing: 1.8px;
+    width: 180px;
+    height: 42px;
+    border-radius: 24px;
+    background-color: #070707;
 }
 
-footer>p {
+.links_box {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.follow-links {
+    display: inline-block;
+    padding-top: 35px;
+    padding-left: 55px;
+}
+
+[class=follow-links]:first-child {
+    padding-left: 300px;
+}
+
+.footer_description {
+    padding-top: 50px;
     color: #828282;
     text-align: center;
     font-size: 14px;
     font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-weight: 400;
+    line-height: 1.3em;
 }
