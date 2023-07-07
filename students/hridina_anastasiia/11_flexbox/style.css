@@ -178,6 +178,14 @@ h2 {
     color: black;
 }
 
+.footer__link a:active {
+    color: bisque;
+}
+
+.footer__link a:hover {
+    color: #F90;
+}
+
 .input h4 {
     line-height: 30px;
 }
