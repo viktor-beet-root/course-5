@@ -53,9 +53,10 @@ li {
 }
 
 .figures {
+    max-width: 937px;
+    width: 100%;
     display: flex;
     padding-bottom: 80px;
-    padding-left: 238px;
     margin: 0 auto;
 }
 
@@ -63,10 +64,14 @@ li {
     padding-right: 94px;
 }
 
+figcaption {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 .figures img {
     display: inline-block;
-    padding-top: 36px;
     margin: 0 auto;
 }
 
@@ -78,6 +83,7 @@ li {
 
 .skills h3 {
     font-weight: 400;
+    padding-bottom: 40px;
 }
 
 
@@ -142,7 +148,7 @@ li {
 
 
 .footer-links a {
-    margin-right: 40px;
+    margin-right: 45px;
 }
 
 .footer-text {
