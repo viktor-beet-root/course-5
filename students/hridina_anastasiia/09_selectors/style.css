@@ -113,6 +113,14 @@ figcaption {
     color: black;
 }
 
+.portfolio-list a:active {
+    color: black;
+}
+
+.portfolio-list a:hover {
+    color: purple;
+}
+
 .footer {
     display: inline;
     padding: 100px 552px 159px 552px;
