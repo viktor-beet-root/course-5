@@ -52,21 +52,22 @@ li {
     font-weight: 700;
 }
 
-.figures {
+.figures>div {
     max-width: 937px;
-    width: 100%;
-    display: flex;
+    display: inline-block;
     padding-bottom: 80px;
     margin: 0 auto;
+    padding-right: 100px;
 }
 
-.figures>div {
-    padding-right: 94px;
+.figures>div:first-child {
+    padding-left: 90px;
 }
 
 figcaption {
     font-size: 14px;
     font-weight: 400;
+    padding-bottom: 35px;
 }
 
 
@@ -122,7 +123,8 @@ figcaption {
 }
 
 .footer {
-    display: inline;
+    max-width: 936px;
+    display: block;
     padding: 100px 552px 159px 552px;
 }
 
@@ -147,7 +149,9 @@ figcaption {
 }
 
 .footer-links {
-    display: inline;
+    display: inline-block;
+    margin: 0 auto;
+
 }
 
 .footer-links img {
@@ -156,7 +160,7 @@ figcaption {
 
 
 .footer-links a {
-    margin-right: 45px;
+    padding-right: 40px;
 }
 
 .footer-text {
