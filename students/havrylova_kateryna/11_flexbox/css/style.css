@@ -1,0 +1,9 @@
+.menu__container,
+.logo,
+.menu,
+.section1,
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
