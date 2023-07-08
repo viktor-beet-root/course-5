@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 * {
     margin: 0;
@@ -13,20 +14,23 @@ body {
 
 .container {
     padding: 17px 120px;
+    height: 80px;
+    height: 1200px;
 }
 
 .logo {
     float: left;
+    width: 200px;
+    height: 32px;
+}
+
+.alink {
+    display: inline-block;
 }
 
 .header_buttons {
     float: right;
-}
-
-.header_buttons::after {
-    content: "";
-    clear: both;
-    display: block;
+    max-width: 250px;
 }
 
 li {
@@ -35,12 +39,16 @@ li {
 
 nav {
     text-align: center;
-    box-sizing: border-box;
+    width: calc(100% - 205px - 245px);
 }
 
 .nav>li {
     display: inline-block;
     padding-right: 20px;
+}
+
+.nav>li:last-child {
+    padding-right: 0;
 }
 
 a {
@@ -57,17 +65,39 @@ a {
 .sign_up {
     font-weight: 600;
     padding: 13px 25px;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.sign_in {
     height: 46px;
     width: 110px;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
-    border-radius: 4px;
     border: 1px solid #BCD0E5;
-    margin: 0 16px;
+    margin-right: 11px;
+    background-color: #FFFFFF;
 }
 
 .sign_up {
     background-color: #F90;
     color: #FFFFFF;
+    height: 46px;
+    width: 114px;
+    border: none;
+    margin-left: 10px;
+}
+
+.footcont {
+    width: 1200px;
+    height: 349px;
+    margin: 0 auto;
+}
+
+.footcont::after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 h3 {
@@ -78,12 +108,9 @@ h3 {
     color: #2F281E;
 }
 
-.footer {
-    display: inline-block;
-}
-
-.footer {
-    width: calc(100% / 4);
+.col-4 {
+    width: 25%;
+    float: left;
 }
 
 .footer-nav a {
@@ -92,6 +119,30 @@ h3 {
     color: #544837;
 }
 
-.alink {
-    display: inline-block;
+.phonenum {
+    width: 320px;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+}
+
+::placeholder {
+    color: #BCD0E5;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+.sign_up_now {
+    background-color: #F90;
+    color: #FFFFFF;
+    height: 50px;
+    width: 180px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    padding: 13px 25px;
+    font-family: Poppins, Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
 }

@@ -12,8 +12,12 @@
     <header>
         <div class="container">
             <div class="logo">
-                <img src="images/jpg/Bitmap.jpg" alt="productly icon">
-                <img src="images/svg/Productly.svg" alt="productly logo">
+                <div class="logo__image icon">
+                    <img src="images/jpg/Bitmap.jpg" alt="productly icon">
+                </div>
+                <div class="logo__image">
+                    <img src="images/svg/Productly.svg" alt="productly logo">
+                </div>
             </div>
             <nav class="alink">
                 <ul class="nav">
@@ -30,32 +34,41 @@
         </div>
     </header>
     <footer>
-        <div class="footer">
-            <img src="images/jpg/Bitmap.jpg" alt="productly icon">
-            <img src="images/svg/Productly.svg" alt="productly logo">
-        </div>
-        <div class="footer">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">FAQ</a></li>
-            </ul>
-        </div>
-        <div class="footer">
-            <h3>Legal Stuff</h3>
-            <ul class="footer-nav">
-                <li><a href="">Disclaimer</a></li>
-                <li><a href="">Financing</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="footer">
-            <h3>Knowing you're always on the best energy deal.</h3>
-            <input type="text" placeholder="Enter your phone Number">
-            <button class="sign_up">Sign up Now</button>
+        <div class="footcont">
+            <div class="col-4">
+                <div class="logo__image">
+                    <img src="images/jpg/Bitmap.jpg" alt="productly icon">
+                </div>
+                <div class="logo__image">
+                    <img src="images/svg/Productly.svg" alt="productly logo">
+                </div>
+            </div>
+            <div class="col-4">
+                <h3>Quick Links</h3>
+                <br>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>Legal Stuff</h3>
+                <br>
+                <ul class="footer-nav">
+                    <li><a href="">Disclaimer</a></li>
+                    <li><a href="">Financing</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <h3>Knowing you're always on the best energy deal.</h3>
+                <br>
+                <input class="phonenum" type="tel" id="phone" name="phone" placeholder="Enter your phone Number">
+                <button class="sign_up_now">Sign up Now</button>
+            </div>
         </div>
     </footer>
 </body>
