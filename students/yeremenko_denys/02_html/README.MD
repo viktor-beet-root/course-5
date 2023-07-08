@@ -1,1 +1,1 @@
-https://github.com/viktor-beet-root/course-5/pull/9
+https://volchenkastudent.github.io/course-5/students/yeremenko_denys/02_html/index.html
