@@ -5,16 +5,15 @@
 }
 
 .nav {
-    max-width: 600px;
+    max-width: 936px;
     margin: 0 auto;
     box-sizing: border-box;
+    border-bottom: 1px solid black;
 }
-
 
 .menu__item {
     display: inline-block;
     text-decoration: none;
-    border-bottom: 1px solid black;
     padding: 20px;
 }
 
@@ -98,8 +97,12 @@ p span {
 .figures>* {
     float: left;
     box-sizing: border-box;
-    padding-right: 82px;
+    padding-right: 70px;
     padding-bottom: 60px;
+}
+
+.figures>div:first-child {
+    padding-left: 50px;
 }
 
 .figures::after {
@@ -167,7 +170,7 @@ p span {
 .footer-links {
     text-align: center;
     box-sizing: border-box;
-    padding-top: 40px;
+    padding-top: 60px;
     padding-bottom: 20px;
     padding-left: 56px;
 }
