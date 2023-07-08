@@ -65,7 +65,7 @@
 }
 
 .footer {
-    max-width: 1440px;
+    max-width: 1200px;
     padding: 70px 120px;
 }
 
@@ -81,23 +81,25 @@
     margin: 0 auto;
 }
 
-.quick__links {
-    display: inline-block;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-.legal__staff {
-    display: inline-block;
-    list-style-type: none;
-    text-decoration: none;
-}
-
 .block__one,
 .block__two::after {
     content: '';
     display: block;
     clear: both;
+}
+
+.quick__links {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.legal__staff {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.block__links a {
+    text-decoration: none;
 }
 
 .input {
@@ -125,14 +127,8 @@
 }
 
 .buttons {
+    max-width: 340px;
     float: right;
-    width: 340px;
-}
-
-.buttons::after {
-    content: '';
-    display: block;
-    clear: both;
 }
 
 input[type=number] {
