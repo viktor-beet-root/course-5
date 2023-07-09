@@ -40,7 +40,7 @@ h1 {
     margin-top: 40px;
 }
 
-main {
+.about_me_container {
     background-color: #F6F6F6;
     height: 517px
 }
@@ -103,17 +103,15 @@ h2 {
 }
 
 [class*=skills_item] {
-    background-color: aqua;
+    ;
     display: inline-block;
     padding-top: 75px;
-
 }
 
 [class*=skills_item]>img {
     display: block;
     width: auto;
     margin: 0 auto;
-
 }
 
 .adobe_images {
@@ -124,6 +122,10 @@ h2 {
 .figma_image {
     width: 58px;
     height: 88;
+}
+
+.skills_signature>span {
+    display: none;
 }
 
 .skills_item2 {
