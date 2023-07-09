@@ -62,3 +62,40 @@ font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+
+COLORS:
+
+text:
+
+-header: 
+
+colors: #070707, #828282;
+
+-h1:
+
+color: #070707;
+
+-h2:
+
+color:  #070707;
+
+-p:
+
+color: #070707;
+
+-captions:
+
+color: #828282;
+
+-links:
+
+color:  #070707;
+
+-button:
+
+color: #FFF;
+
+-footer:
+
+color: #828282;
+
