@@ -25,18 +25,20 @@
 .navigation_list {
     display: inline-block;
     margin: 0 auto;
-    width: calc(100% / 5 * 2, 5);
-
 }
 
 .navigation_item {
     display: inline-block;
+    padding-top: 28px;
+}
+
+.navigation_item>a {
+    text-decoration: none;
     color: #2F281E;
-    font-family: Montserrat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
-    padding-top: 28px;
 }
 
 .navigation_item:first-child {
@@ -47,15 +49,12 @@
     padding-left: 20px;
 }
 
-.navigation_item:hover {
+.navigation_item>a:hover {
     color: #F90;
 }
 
 .sign_in_up {
     display: inline-block;
-    width: calc(100% / 5* 2, 5);
-
-
 }
 
 .sign_in {
@@ -70,7 +69,7 @@
     border-radius: 4px;
     border: 1px solid #BCD0E5;
     color: #2F281E;
-    font-family: Montserrat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -88,7 +87,7 @@
     border-radius: 4px;
     border: 1px solid #F90;
     color: #FFF;
-    font-family: Montserrat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -107,7 +106,6 @@
     display: inline-block;
     text-align: left;
     vertical-align: top;
-
 }
 
 .footer_icon {
@@ -131,7 +129,7 @@
 
 .footer_headers {
     color: #2F281E;
-    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
@@ -151,7 +149,7 @@
 .legal_stuff_item {
     color: #544837;
     text-decoration: none;
-    font-family: Montserrat;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 2.6em;
@@ -187,7 +185,7 @@
     width: 180px;
     height: 50px;
     color: #FFF;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
