@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box model</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: aqua;
+            padding: 15px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: lightgray;
+            padding: 15px;
+            border: 1px solid;
+        }
+
+        .nav {
+            background-color: white;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            list-style-type: none;
+            /* text-align: center; */
+            /* font-size: 0; */
+        }
+
+        /*
+        .menu__item {
+            display: inline-block;
+            background-color: brown;
+            font-size: 16px;
+        } */
+
+        /* .menu__item:last-child {
+            border-right: none;
+        } */
+
+        /* .menu__item:not(:last-child) {
+            border-right: 4px solid green;
+        }
+
+        .menu__link {
+            padding: 5px 10px;
+            color: white;
+            text-decoration: none;
+        } */
+
+        .menu__item {
+            float: left;
+            padding: 15px;
+        }
+
+        /* .menu::after {
+            content: '';
+            display: block;
+            clear: both;
+        } */
+
+        img {
+            max-width: 100%;
+        }
+
+        .clear-fix::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* .container.clear-fix {
+            background-color: red;
+        } */
+
+        /* .gallery {
+            font-size: 0;
+        } */
+
+
+        :root {
+            --column: 3;
+        }
+
+        .gallery__item {
+            width: calc(100% / var(--column, 2) - 30px);
+            /* box-sizing: border-box; */
+            float: left;
+            padding: 15px;
+        }
+
+        /* .gallery__item {
+            display: inline-block;
+            width: 33.33%;
+            box-sizing: border-box;
+            padding: 7px;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <ul class="menu clear-fix" id="menu">
+                    <li data-text="test" class="menu__item active home">
+                        <a href="#home" class="menu__link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="menu__item active">
+                        <a href="#aboutme" class="menu__link">About me</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#skills" class="menu__link">Skills</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#portfolio" class="menu__link">Portfolio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container clear-fix">
+        <p><img style="float: left; margin-right: 15px;" width="350" src="./images/01.jpg" alt=""> Lorem ipsum dolor sit
+            amet consectetur
+            adipisicing elit.
+            Libero, ratione
+            ducimus rem, veniam officia saepe</p>
+
+    </div>
+
+    <div class="gallery container clear-fix">
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+        <div class="gallery__item">
+            <img class="gallery__image" src="./images/01.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
