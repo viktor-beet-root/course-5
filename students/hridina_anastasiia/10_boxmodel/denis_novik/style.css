@@ -36,12 +36,6 @@
     color: black;
 }
 
-section {
-    margin: 0 auto;
-    padding-top: 26px;
-    padding-bottom: 44px;
-}
-
 .heading {
     font-size: 47px;
     font-weight: 700;
@@ -56,11 +50,12 @@ section {
 .container {
     max-width: 946px;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .aboutme {
     background-color: #F6F6F6;
-    padding: 100px 400px;
+    padding: 15px;
     line-height: 28px;
 }
 
@@ -79,42 +74,36 @@ p span {
 }
 
 .skill-set {
-    max-width: 1000px;
+    max-width: 937px;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .skills h2 {
     font-size: 34px;
     font-weight: 700;
-    padding-bottom: 40px;
 }
 
 .skills h3 {
     font-weight: 400;
-    padding-bottom: 50px;
 }
 
 .figures>* {
-    float: left;
-    box-sizing: border-box;
-    padding-right: 70px;
-    padding-bottom: 60px;
+    display: inline-block;
+    margin: 0 auto;
+    padding-right: 50px;
+    padding-bottom: 20px;
 }
 
-.figures>div:first-child {
-    padding-left: 50px;
-}
-
-.figures::after {
-    content: '';
-    display: block;
-    clear: both;
+figcaption {
+    padding-top: 15px;
+    padding-bottom: 20px;
 }
 
 .fashion-store h2 {
     font-size: 34px;
     font-weight: 700;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 .portfolio-list {
@@ -132,13 +121,13 @@ p span {
 
 .portfolio-list>div {
     box-sizing: border-box;
-    width: 100%;
     padding: 40px;
 }
 
 .footer {
-    box-sizing: border-box;
-    padding: 40px;
+    max-width: 937px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 .contacts-text h2 {
@@ -148,7 +137,7 @@ p span {
 }
 
 .contacts-text p:nth-last-child(2) {
-    padding-bottom: 65px;
+    padding-bottom: 25px;
 }
 
 .button {
@@ -168,7 +157,6 @@ p span {
 }
 
 .footer-links {
-    text-align: center;
     box-sizing: border-box;
     padding-top: 60px;
     padding-bottom: 20px;

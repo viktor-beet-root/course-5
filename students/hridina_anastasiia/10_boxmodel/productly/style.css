@@ -1,7 +1,7 @@
 .container {
     max-width: 1200px;
-    height: 80px;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .logo__left {
@@ -65,20 +65,21 @@
 }
 
 .footer {
-    max-width: 1440px;
-    padding: 70px 120px;
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    display: inline-block;
 }
 
 .footer__logo {
     float: left;
+    padding-left: 100px;
 }
 
 .block__one,
 .block__two {
     line-height: 30px;
     display: inline-block;
-    margin: 0 auto;
-    padding-left: 160px;
 }
 
 .quick__links,
@@ -89,6 +90,18 @@
 
 .block__links a {
     text-decoration: none;
+}
+
+.block__links a:link {
+    color: black;
+}
+
+.block__links a:visited {
+    color: black;
+}
+
+.block__links a:hover {
+    color: #f90;
 }
 
 .input {
