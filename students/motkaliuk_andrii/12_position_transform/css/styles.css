@@ -1,0 +1,77 @@
+ body {
+     color: #000;
+ }
+
+ .container {
+     display: flex;
+     justify-content: space-between;
+     padding: 0 120px;
+     max-width: 1440px;
+     width: 100%;
+     margin: 0 auto;
+ }
+
+ .header_container {
+     display: flex;
+     width: 100%;
+ }
+
+ .language {}
+
+ .name {}
+
+ .logo {}
+
+ .sidebar_conteiner {
+     width: 33%;
+ }
+
+ .side-bar_item>a {
+     color: #000;
+     text-decoration: none;
+     font-family: Francois One;
+     font-size: 36px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 48px;
+     letter-spacing: 1.44px;
+     text-transform: uppercase;
+ }
+
+ h2 {
+     font-family: Francois One;
+     font-size: 36px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 48px;
+     letter-spacing: 1.44px;
+     text-transform: uppercase;
+ }
+
+ p {
+     font-family: PT Sans;
+     font-size: 28px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 48px;
+ }
+
+ .main-content_container {
+     width: 66%;
+
+ }
+
+
+ .psevdo-line {
+     position: relative;
+ }
+
+ .psevdo-line::before {
+     content: '';
+     position: absolute;
+     background-color: red;
+     width: 100px;
+     height: 8px;
+     top: -15px;
+     left: 0;
+ }
