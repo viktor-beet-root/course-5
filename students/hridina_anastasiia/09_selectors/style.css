@@ -1,3 +1,9 @@
+.header {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
 .menu {
     list-style-type: none;
 }
@@ -12,7 +18,7 @@ li {
     display: inline;
     text-shadow: lightgrey 0 3px 3px;
     border-bottom: 1px solid black;
-    padding-bottom: 28px;
+    padding-bottom: 20px;
 }
 
 .menu__link:link {
@@ -28,7 +34,9 @@ li {
 }
 
 .container {
-    padding: 38px 250px 100px 250px;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 15px;
 }
 
 .heading {
@@ -38,9 +46,8 @@ li {
 
 .section {
     background-color: #F6F6F6;
-    padding: 100px 488px 100px 488px;
+    padding: 15px;
 }
-
 
 .aboutme p span {
     display: block;
@@ -52,30 +59,24 @@ li {
     font-weight: 700;
 }
 
-.figures>div {
-    max-width: 937px;
-    display: inline-block;
-    padding-bottom: 80px;
+.skill-set {
+    max-width: 940px;
     margin: 0 auto;
-    padding-right: 100px;
+    padding: 15px;
+    padding-bottom: 20px;
 }
 
-.figures>div:first-child {
-    padding-left: 90px;
+.figures>div {
+    display: inline-block;
+    padding-right: 50px;
 }
 
 figcaption {
     font-size: 14px;
     font-weight: 400;
+    padding-top: 15px;
     padding-bottom: 35px;
 }
-
-
-.figures img {
-    display: inline-block;
-    margin: 0 auto;
-}
-
 
 .skills h2 {
     font-size: 34px;
@@ -84,30 +85,22 @@ figcaption {
 
 .skills h3 {
     font-weight: 400;
-    padding-bottom: 40px;
 }
 
 
 .portfolio-list {
     background-color: #F6F6F6;
+    padding: 15px;
 }
 
 .fashion-store h2 {
-    padding: 50px 637px 67px 637px;
     font-size: 34px;
 }
 
 .portfolio-list img {
     display: block;
     margin: 0 auto;
-}
-
-.portfolio-list>div {
-    padding-top: 70px;
-}
-
-.portfolio-list div:last-child {
-    padding-bottom: 70px;
+    padding: 15px;
 }
 
 .portfolio-list a {
@@ -122,11 +115,15 @@ figcaption {
     color: purple;
 }
 
+.portfolio-list>div {
+    padding-bottom: 20px;
+}
+
 .footer {
-    max-width: 936px;
+    max-width: 940px;
     display: inline;
     margin: 0 auto;
-    padding: 100px 552px 159px 552px;
+    padding: 15px
 }
 
 .footer h2 {
