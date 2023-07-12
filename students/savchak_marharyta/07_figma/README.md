@@ -83,3 +83,4 @@ text:
 
 -footer: #828282;
 
+- background(main section 2): #F6F6F6
