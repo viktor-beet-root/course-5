@@ -1,0 +1,14 @@
+$color-red: red;
+$color-green: green;
+$color-lite: lightgray;
+
+$default-body-color: $color-lite;
+$default-font-name: 'Roboto';
+$fallback: Arial, Helvetica, sans-serif;
+
+$main-font: $default-font-name, $fallback;
+
+$container-padding: 15px;
+$container-max-width: 1200px;
+
+$font-path: './fonts/'

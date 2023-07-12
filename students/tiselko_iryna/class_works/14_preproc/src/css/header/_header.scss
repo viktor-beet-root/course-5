@@ -1,0 +1,72 @@
+@import "./logo";
+@import "./menu";
+@import "./buttons";
+
+.header {
+    .container {
+        @include flexnew(flex-start, nowrap);
+    }
+
+    .logo {
+        @include test {
+            font-size: 50px;
+
+            img {
+                width: 50px;
+            }
+        }
+
+        background-color: aqua;
+
+        &+.search {
+            padding: 15px;
+        }
+    }
+
+    >.menu {
+        border-color: brown;
+    }
+
+    .menu {
+        padding: 15px;
+
+        &__wrapper {
+            list-style-type: none;
+        }
+
+        &__link {
+            font-style: 25px;
+
+            &:hover {
+                color: red;
+            }
+
+            &::after {
+                content: 'dfgsfghs';
+            }
+        }
+
+        
+    }
+}
+
+.menu {
+    &__wrapper {
+        @extend %flex-jst-wrap;
+    }
+
+    &__link {
+        .active & {
+            color: red;
+        }
+    }
+
+    &__item {
+        &:hover{
+            &+.menu__item .menu__link {
+                color: green;
+            }
+        }
+    }
+}
+
