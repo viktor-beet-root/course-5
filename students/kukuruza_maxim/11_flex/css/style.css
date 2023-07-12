@@ -1,17 +1,9 @@
-a {
+body {
     font-family: Montserrat;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 26px;
-    font-weight: 500;
-}
-
-p {
-    font-family: Gotham;
     font-size: 20px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 30px;
+    line-height: 26px;
+    font-weight: 400;
 }
 
 button {
@@ -39,6 +31,46 @@ button {
     margin: 0 auto;
 }
 
+/* Main */
+section {
+    margin-bottom: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-title {
+    width: 539px;
+    font-size: 36px;
+    margin: 0 auto;
+}
+
+.card-container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.card {
+    width: 270px;
+}
+
+.card-icon {
+    padding-bottom: 30px;
+}
+
+.card-descrition {
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.btn-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Footer */
 .footer-links {
     margin-top: 30px;
     gap: 15px;
@@ -51,6 +83,7 @@ button {
 a {
     text-decoration: none;
     color: #544837;
+    font-size: 16px;
 }
 
 .logo {
