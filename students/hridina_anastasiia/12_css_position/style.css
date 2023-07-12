@@ -53,3 +53,121 @@
     font-weight: 400;
     src: url('fonts/staatliches-v11-latin-regular.woff2') format('woff2');
 }
+
+.container>div {
+    max-width: 1200px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header {
+    width: 100%;
+    margin-top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.documentation {
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+.eng {
+    font-family: Tourney;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.88px;
+}
+
+.documentation {
+    font-family: Staatliches;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.66px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenav {
+    margin-top: 80px;
+    width: 40%;
+    text-align: left;
+    position: relative;
+    height: 462px;
+}
+
+.main {
+    width: 60%;
+    margin-top: 90px;
+    padding: 15px;
+    font-family: PT Sans;
+    font-size: 28px;
+    line-height: 48px;
+}
+
+.main h3 {
+    font-family: Francois One;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    border-top: 8px solid black;
+    width: 100px;
+}
+
+.main sup {
+    font-family: Farro;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1.2px;
+    padding-left: 10px;
+}
+
+mark {
+    background-color: #DADADA;
+}
+
+.nav__list {
+    list-style-type: none;
+    font-family: Francois One;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    position: sticky;
+    top: 80px;
+}
+
+.nav__link {
+    top: 0;
+    left: 20px;
+    padding-bottom: 70px;
+}
+
+.nav__link a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.nav__link a:active {
+    color: #BDBDBD;
+}
+
+.nav__link a:visited {
+    color: black;
+}
+
+.nav__link a:hover {
+    color: #BDBDBD;
+}
