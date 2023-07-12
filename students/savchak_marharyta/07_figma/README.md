@@ -67,35 +67,19 @@ COLORS:
 
 text:
 
--header: 
+-header:  #070707, #828282;
 
-colors: #070707, #828282;
+-h1: #070707;
 
--h1:
+-h2:  #070707;
 
-color: #070707;
+-p: #070707;
 
--h2:
+-captions: #828282;
 
-color:  #070707;
+-links:  #070707;
 
--p:
+-button: #FFF;
 
-color: #070707;
-
--captions:
-
-color: #828282;
-
--links:
-
-color:  #070707;
-
--button:
-
-color: #FFF;
-
--footer:
-
-color: #828282;
+-footer: #828282;
 
