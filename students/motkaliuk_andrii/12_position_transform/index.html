@@ -6,6 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konstruct</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:wght@400;700&family=Staatliches&family=Tourney:wght@600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -30,7 +35,7 @@
             </section>
             <section class="main-content_container">
                 <div class="content_item">
-                    <h2 class="psevdo-line">Introduction<span class="power">Chapter 1</span></h2>
+                    <h2 class="psevdo-line">Introduction<sup>Chapter 1</sup></h2>
                     <p>Welcome to the very start of your React Native journey! If you're looking for environment setup
                         instructions, they've
                         moved to their own section. Continue reading for an introduction to the documentation, Native
@@ -38,7 +43,7 @@
                         more!</p>
                 </div>
                 <div class="content_item">
-                    <h2 class="psevdo-line">core components<span class="power">Chapter 2</span></h2>
+                    <h2 class="psevdo-line">core components<sup>Chapter 2</sup></h2>
                     <p>React Native is an open source framework for building Android and iOS applications using React
                         and the app platform’s
                         native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well
@@ -48,7 +53,7 @@
                         React in the next section. But first, let’s cover how components work in React Native.</p>
                 </div>
                 <div class="content_item">
-                    <h2 class="psevdo-line">react fundamentals<span class="power">Chapter 3</span></h2>
+                    <h2 class="psevdo-line">react fundamentals<sup>Chapter 3</sup></h2>
                     <p>React Native runs on React, a popular open source library for building user interfaces with
                         JavaScript. To make the most
                         of React Native, it helps to understand React itself. This section can get you started or can
@@ -60,14 +65,12 @@
                             examples: friendly, approachable creatures that
                             need names and a cafe to work in.</li>
                         <li class="rf-list_item">JSX. React and React Native use JSX, a syntax that lets you write
-                            elements inside JavaScript like so:
-                            <Text>Hello, I am your cat!</Text>.
+                            elements inside JavaScript like so: &lt;Text&gt;Hello, I am your cat!&lt;/Text&gt;.
                         </li>
                         <p>The React docs have a comprehensive guide to JSX you can refer to learn even more. Because
                             JSX is JavaScript, you can
                             use variables inside it. Here you are declaring a name for the cat, name, and embedding it
-                            with curly braces inside
-                            <Text>
+                            with curly braces inside&lt;Text&gt;
                         </p>
                         <li class="rf-list_item">props. Props is short for “properties”.</li>
                         <li class="rf-list_item">state. While you can think of props as arguments you use to configure
@@ -77,7 +80,7 @@
                             State gives your components memory!</li>
                     </ul>
                     <div class="content_item">
-                        <h2 class="psevdo-line">handling text input<span class="power">Chapter 4</span></h2>
+                        <h2 class="psevdo-line">handling text input<sup>Chapter 4</sup></h2>
                         <p>TextInput is a Core Component that allows the user to enter text. It has an onChangeText prop
                             that takes a function to
                             be called every time the text changed, and an onSubmitEditing prop that takes a function to
@@ -86,8 +89,7 @@
                         <p>For example, let's say that as the user types, you're translating their words into a
                             different language. In this new
                             language, every single word is written the same way: 🍕. So the sentence "Hello there Bob"
-                            would be translated as "🍕
-                            🍕".</p>
+                            would be translated as "🍕 🍕".</p>
                     </div>
                 </div>
             </section>
