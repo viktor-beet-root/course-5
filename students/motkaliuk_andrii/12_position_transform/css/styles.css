@@ -1,5 +1,10 @@
  body {
      color: #000;
+     font-family: PT Sans;
+     font-size: 28px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 48px;
  }
 
  /* font-family: 'Farro',sans-serif;
@@ -27,6 +32,9 @@ font-family: 'Tourney',cursive; */
      margin: 0 auto;
      justify-content: space-between;
      padding-top: 80px;
+
+
+
  }
 
  .language {
@@ -56,7 +64,7 @@ font-family: 'Tourney',cursive; */
      flex-grow: 1;
  }
 
- .sidebar_conteiner {
+ .sidebar {
      /* width: 33%; */
      max-width: 385px;
      width: 100%;
@@ -96,6 +104,7 @@ font-family: 'Tourney',cursive; */
  }
 
  h2>sup {
+     text-transform: none;
      color: #000;
      font-family: Farro;
      font-size: 30px;
@@ -115,7 +124,11 @@ font-family: 'Tourney',cursive; */
      line-height: 48px;
  }
 
- .main-content_container {
+ em {
+     font-style: italic;
+ }
+
+ .main-content {
      /* width: 66%; */
      max-width: 785px;
      width: 100%;
@@ -131,23 +144,48 @@ font-family: 'Tourney',cursive; */
  .psevdo-line::before {
      content: '';
      position: absolute;
-     background-color: red;
+     background-color: black;
      width: 100px;
      height: 8px;
      top: -20px;
-     left: 0;
  }
 
- .main-content_container>.content_item {
-     padding-top: 70px;
+ .main-content>.content_item {
+     padding-top: 95px;
  }
 
- .main-content_container>.content_item:first-child {
+ .main-content>.content_item:first-child {
      padding-top: 0px;
  }
 
  .content_item>p {
-     padding-top: 40px;
+     padding: 20px 0;
  }
 
- .power {}
+ /* .content_item>p:first-child {
+     padding-top: 0;
+ } */
+
+ .content_item li {
+     padding-bottom: 40px;
+     position: relative;
+ }
+
+ .content_item li::before {
+     content: "+";
+     font-weight: bold;
+     margin-right: 3px;
+ }
+
+ .selected-text {
+     background-color: lightgray
+ }
+
+ .underline-text {
+     text-decoration: underline;
+ }
+
+ .background-image {
+     top: 30px;
+     left: 30px;
+ }
