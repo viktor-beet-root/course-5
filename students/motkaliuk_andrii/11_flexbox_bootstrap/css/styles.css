@@ -9,7 +9,6 @@ body {
     width: 100%;
     padding: 0 120px;
     box-sizing: border-box;
-
 }
 
 .header {
@@ -57,49 +56,49 @@ body {
     color: #F90;
 }
 
-.sign_in_up {
+.sign-in-up {
     display: inline-block;
 }
 
-.sign_in {
+.sign-in {
     display: inline-block;
-    padding-left: 197px;
+    padding-left: 190px;
 }
 
-button {
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+[class$="_button"] {
+    text-decoration: none;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     border-radius: 4px;
+    border: 1px solid #BCD0E5;
 }
 
-.sign_in_button {
-    height: 46px;
-    width: 110px;
+.sign-in_button {
+    color: #2F281E;
     background-color: #FFF;
     border: 1px solid #BCD0E5;
-    color: #2F281E;
+    padding: 13px 25px;
 }
 
-.sign_up {
+.sign-up {
     display: inline-block;
     padding-left: 32px;
 }
 
-.sign_up_button {
-    height: 46px;
-    width: 110px;
+.sign-up_button {
+    color: #FFF;
+    font-size: 16px;
     background-color: #F90;
     border-radius: 4px;
     border: 1px solid #F90;
-    color: #FFF;
+    padding: 13px 25px;
 }
 
 /* The design container */
 .design {
     display: flex;
-    padding-top: 15px;
+    padding-top: 20px;
     padding-bottom: 100px;
 }
 
@@ -130,19 +129,16 @@ button {
 }
 
 .button_container {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .get_started_button {
-    width: 180px;
-    height: 50px;
-    border-radius: 4px;
+    padding: 13px 40px;
     border: none;
     background: #F90;
     color: #FFF;
     text-align: center;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
-    font-size: 16px;
     font-weight: 700;
 }
 
@@ -156,7 +152,7 @@ button {
 
 }
 
-.we_design_container {
+.we-design_list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -165,7 +161,7 @@ button {
 
 }
 
-.we_design_header {
+.we-design_header {
     width: 100%;
     display: inline-block;
     color: #2F281E;
@@ -173,21 +169,21 @@ button {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.2em;
-    padding-bottom: 50px;
+    padding-bottom: 55px;
 }
 
-.we_disign_item {
+.we-design_item {
     width: 25%;
     max-height: 175px;
 }
 
-.we_design_item_header {
-    padding-top: 35px;
+.we-design_item_header {
+    padding-top: 30px;
     font-size: 22px;
     font-weight: 600;
 }
 
-.we_design_content {
+.we-design_content {
     padding-top: 20px;
     font-size: 16px;
     font-style: normal;
@@ -197,10 +193,20 @@ button {
 
 .we_disign_button_container {
     width: 100%;
-    max-height: 175px;
     align-self: flex-start;
-    padding-top: 75px;
+    padding-top: 85px;
     padding-left: calc(50% - 90px);
+}
+
+.we_disign_button {
+    padding: 13px 40px;
+    border: none;
+    background: #F90;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -210,26 +216,26 @@ button {
     width: 100%;
 }
 
-.footer_icon,
-.quick_links_block,
-.legal_stuff_block,
+.footer_logo,
+.quick-links_block,
+.legal-stuff_block,
 .input_place {
     display: inline-block;
     text-align: left;
     vertical-align: top;
 }
 
-.footer_icon {
+.footer_logo {
     display: inline-block;
     width: 26%;
 }
 
-.quick_links_block {
+.quick-links_block {
     width: 22%;
     padding-left: 20px;
 }
 
-.legal_stuff_block {
+.legal-stuff_block {
     width: 22%;
 }
 
@@ -239,18 +245,18 @@ button {
     line-height: 30px;
 }
 
-.quick_links_item:first-child,
-.legal_stuff_item:first-child {
+.quick-links_item:first-child,
+.legal-stuff_item:first-child {
     padding-top: 20px;
 }
 
-.quick_links>ul,
-.legal_stuff>ul {
+.quick-links>ul,
+.legal-stuff>ul {
     padding-top: 20px;
 }
 
-.quick_links_item,
-.legal_stuff_item {
+.quick-links_item,
+.legal-stuff_item {
     color: #544837;
     text-decoration: none;
     font-size: 16px;
@@ -272,28 +278,22 @@ button {
     color: #BCD0E5;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     padding-left: 10px;
     border-radius: 4px;
     border: 1px solid #BCD0E5;
 }
 
 .footer_button_box {
-    padding-top: 20px;
+    padding-top: 40px;
 }
 
 .footer_button {
-    width: 180px;
-    height: 50px;
-    color: #FFF;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #FFF;
+    padding: 13px 40px;
     font-size: 16px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     background-color: #F90;
-    border-radius: 4px;
     border: 1px solid #F90;
 }
