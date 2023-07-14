@@ -55,7 +55,7 @@
 }
 
 .container>div {
-    max-width: 1200px;
+    max-width: 1440px;
     padding: 15px;
     margin: 0 auto;
     display: flex;
@@ -76,6 +76,10 @@
 .documentation {
     margin-right: auto;
     padding-left: 50px;
+    font-family: Staatliches;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.66px;
 }
 
 .eng {
@@ -86,16 +90,11 @@
     letter-spacing: 0.88px;
 }
 
-.documentation {
-    font-family: Staatliches;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.66px;
-}
-
 .wrapper {
-    max-width: 1200px;
+    max-width: 1440px;
+    height: 4000px;
     margin: 0 auto;
+    padding: 15px;
     display: flex;
     flex-direction: row;
 }
@@ -104,17 +103,28 @@
     margin-top: 80px;
     width: 40%;
     text-align: left;
-    position: relative;
-    height: 462px;
+    height: 4000px;
+}
+
+.nav {
+    position: sticky;
+    top: 120px;
+    left: 0;
 }
 
 .main {
+    max-width: 1440px;
     width: 60%;
-    margin-top: 90px;
+    margin-top: 60px;
     padding: 15px;
     font-family: PT Sans;
     font-size: 28px;
     line-height: 48px;
+    background-image: url(./images/background_picture.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: right;
+    background-attachment: fixed;
 }
 
 .main h3 {
@@ -122,8 +132,21 @@
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 1.44px;
-    border-top: 8px solid black;
+}
+
+h3 {
+    position: sticky;
+    top: 100px;
+    padding-bottom: 62px;
+}
+
+h3::before {
+    content: '';
+    display: block;
+    position: relative;
     width: 100px;
+    border: 4px solid black;
+    margin-bottom: 20px;
 }
 
 .main sup {
@@ -132,6 +155,7 @@
     font-weight: 300;
     letter-spacing: 1.2px;
     padding-left: 10px;
+    vertical-align: 45%;
 }
 
 mark {
@@ -144,13 +168,10 @@ mark {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: 1.44px;
-    position: sticky;
     top: 80px;
 }
 
 .nav__link {
-    top: 0;
-    left: 20px;
     padding-bottom: 70px;
 }
 
