@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:wght@400;700&family=Staatliches&family=Tourney:wght@600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Staatliches&family=Tourney:wght@600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -17,27 +17,28 @@
 </head>
 
 <body>
-    <header class="header_container">
-        <div class="language">ENG</div>
-        <div class="name">Documentation / Who's using</div>
-        <div class="logo"><img src="images/company-logo-black.svg" alt="company-logo"></div>
+    <header class="header">
+        <div class="container">
+            <div class="language">ENG</div>
+            <div class="name">Documentation / Who's using</div>
+            <div class="logo"><img src="images/company-logo-black.svg" alt="company-logo"></div>
+        </div>
     </header>
 
 
     <main>
         <div class="container">
-            <!-- <img class="background-image" src="images/bg-picture.svg" alt="gear"> -->
-            <section class="sidebar">
+            <div class="sidebar">
                 <ul>
-                    <li class="side-bar_item"><a href="#">Introduction</a></li>
-                    <li class="side-bar_item"><a href="#">core components</a></li>
-                    <li class="side-bar_item"><a href="#">react fundamentals</a></li>
-                    <li class="side-bar_item"><a href="#">handling text input</a></li>
+                    <li class="sidebar_item"><a href="#introduction">Introduction</a></li>
+                    <li class="sidebar_item"><a href="#core-components">core components</a></li>
+                    <li class="sidebar_item"><a href="#react-fundamentals">react fundamentals</a></li>
+                    <li class="sidebar_item"><a href="#handling-text-input">handling text input</a></li>
                 </ul>
-            </section>
+            </div>
             <section class="main-content">
                 <div class="content_item">
-                    <h2 class="psevdo-line">Introduction<sup>Chapter 1</sup></h2>
+                    <h2 class="psevdo-line" id="introduction">Introduction<sup>Chapter 1</sup></h2>
                     <p>Welcome to the very start of your React Native journey! If you're looking for environment setup
                         instructions, they've
                         moved to their own section. Continue reading for an introduction to the documentation, Native
@@ -45,7 +46,7 @@
                         more!</p>
                 </div>
                 <div class="content_item">
-                    <h2 class="psevdo-line">core components<sup>Chapter 2</sup></h2>
+                    <h2 class="psevdo-line" id="core-components">core components<sup>Chapter 2</sup></h2>
                     <p>React Native is an open source framework for building Android and iOS applications using React
                         and the app platform’s
                         native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well
@@ -57,7 +58,7 @@
 
                 </div>
                 <div class="content_item">
-                    <h2 class="psevdo-line">react fundamentals<sup>Chapter 3</sup></h2>
+                    <h2 class="psevdo-line" id="react-fundamentals">react fundamentals<sup>Chapter 3</sup></h2>
                     <p>React Native runs on React, a popular open source library for building user interfaces with
                         JavaScript. To make the most
                         of React Native, it helps to understand React itself. This section can get you started or can
@@ -78,12 +79,10 @@
 
                             <p>The React docs have <span class="underline-text">a comprehensive guide to JSX</span> you
                                 can refer to learn even more.
-                                Because
-                                JSX is JavaScript, you can
-                                use variables inside it. Here you are declaring a <span
-                                    class="selected-text">name</span> for the cat, name, and embedding
-                                it
-                                with curly braces inside<span class="selected-text">&lt;Text&gt;</span></p>
+                                Because JSX is JavaScript, you can use variables inside it. Here you are declaring a
+                                <span class="selected-text">name</span> for the cat, name, and embedding
+                                it with curly braces inside<span class="selected-text">&lt;Text&gt;</span>
+                            </p>
                         </li>
                         <li class="rf-list_item"><strong>props.</strong> Props is short for “properties”.</li>
                         <li class="rf-list_item"><strong>state.</strong> While you can think of props as arguments you
@@ -96,7 +95,7 @@
                     </ul>
                 </div>
                 <div class="content_item">
-                    <h2 class="psevdo-line">handling text input<sup>Chapter 4</sup></h2>
+                    <h2 class="psevdo-line" id="handling-text-input">handling text input<sup>Chapter 4</sup></h2>
                     <p>TextInput is a Core Component that allows the user to enter text. It has an <em>onChangeText</em>
                         prop
                         that takes a function to

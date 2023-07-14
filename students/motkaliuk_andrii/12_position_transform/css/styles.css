@@ -1,26 +1,20 @@
  body {
      color: #000;
-     font-family: PT Sans;
+     font-family: 'PT Sans', Open Sans, Roboto, sans-serif;
      font-size: 28px;
      font-style: normal;
      font-weight: 400;
      line-height: 48px;
  }
 
- /* font-family: 'Farro',sans-serif;
-font-family: 'Francois One',sans-serif;
-font-family: 'PT Sans',sans-serif;
-font-family: 'Staatliches',cursive;
-font-family: 'Tourney',cursive; */
-
- .header_container {
-     display: flex;
+ .header {
      align-items: center;
-     padding: 10px 120px;
-     max-width: 1200px;
-     width: 100%;
-     margin: 0 auto;
+     padding: 13px;
      max-height: 54px;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0px;
+     background-color: white;
  }
 
  .container {
@@ -30,16 +24,18 @@ font-family: 'Tourney',cursive; */
      max-width: 1200px;
      width: 100%;
      margin: 0 auto;
-     justify-content: space-between;
-     padding-top: 80px;
+ }
 
-
-
+ main {
+     background-image: url(../images/bg-picture.svg);
+     background-repeat: no-repeat;
+     background-position: right 340px top 80px;
+     padding-bottom: 90px;
  }
 
  .language {
-     text-align: center;
-     font-family: Tourney;
+     align-self: center;
+     font-family: 'Tourney', Comic Sans MS, Bradley Hand, cursive;
      font-size: 22px;
      font-weight: 600;
      line-height: 18px;
@@ -48,8 +44,9 @@ font-family: 'Tourney',cursive; */
  }
 
  .name {
+     align-self: center;
      color: #000;
-     font-family: Staatliches;
+     font-family: 'Staatliches', Lobster, Brush Script MT, cursive;
      font-size: 22px;
      font-weight: 400;
      letter-spacing: 0.66px;
@@ -58,33 +55,36 @@ font-family: 'Tourney',cursive; */
  }
 
  .logo {
-     align-self: flex-end;
+     align-self: center;
      width: 238px;
      height: 54px;
      flex-grow: 1;
  }
 
- .sidebar {
-     /* width: 33%; */
+ .sidebar>ul {
+     margin-top: 70px;
      max-width: 385px;
      width: 100%;
      padding: 10px;
+     position: -webkit-sticky;
+     position: sticky;
+     top: 150px;
  }
 
- .side-bar_item {
+ .sidebar_item {
      border-bottom: 1px solid #BDBDBD;
      height: 58px;
      padding-top: 70px;
  }
 
- .side-bar_item:first-child {
+ .sidebar_item:first-child {
      padding-top: 0px;
  }
 
- .side-bar_item>a {
+ .sidebar_item>a {
      color: #000;
      text-decoration: none;
-     font-family: Francois One;
+     font-family: 'Francois One', Impact, Futura, sans-serif;
      font-size: 36px;
      font-style: normal;
      font-weight: 400;
@@ -94,7 +94,7 @@ font-family: 'Tourney',cursive; */
  }
 
  h2 {
-     font-family: Francois One;
+     font-family: 'Francois One', Impact, Futura, sans-serif;
      font-size: 36px;
      font-style: normal;
      font-weight: 400;
@@ -103,21 +103,20 @@ font-family: 'Tourney',cursive; */
      text-transform: uppercase;
  }
 
- h2>sup {
+ .psevdo-line sup {
      text-transform: none;
      color: #000;
-     font-family: Farro;
-     font-size: 30px;
+     font-family: 'Farro', Arial, Helvetica, sans-serif;
      font-style: normal;
      font-weight: 300;
      line-height: normal;
      letter-spacing: 1.2px;
      vertical-align: super;
-     font-size: smaller;
+     padding-left: 5px;
+     font-size: medium;
  }
 
  p {
-     font-family: PT Sans;
      font-size: 28px;
      font-style: normal;
      font-weight: 400;
@@ -129,11 +128,9 @@ font-family: 'Tourney',cursive; */
  }
 
  .main-content {
-     /* width: 66%; */
      max-width: 785px;
      width: 100%;
-     padding-top: 15px;
-
+     margin-top: 90px;
  }
 
 
@@ -147,7 +144,13 @@ font-family: 'Tourney',cursive; */
      background-color: black;
      width: 100px;
      height: 8px;
-     top: -20px;
+     top: -30px;
+ }
+
+ .psevdo-line {
+     position: -webkit-sticky;
+     position: sticky;
+     top: 100px;
  }
 
  .main-content>.content_item {
@@ -155,37 +158,29 @@ font-family: 'Tourney',cursive; */
  }
 
  .main-content>.content_item:first-child {
-     padding-top: 0px;
+     padding-top: 10px;
  }
 
- .content_item>p {
-     padding: 20px 0;
+ .content_item p {
+     padding-top: 40px;
  }
-
- /* .content_item>p:first-child {
-     padding-top: 0;
- } */
 
  .content_item li {
-     padding-bottom: 40px;
+     padding: 20px 0;
      position: relative;
  }
 
  .content_item li::before {
      content: "+";
      font-weight: bold;
-     margin-right: 3px;
+     margin-right: 5px;
  }
 
  .selected-text {
-     background-color: lightgray
+     background-color: lightgray;
+     padding: 7px 0;
  }
 
  .underline-text {
      text-decoration: underline;
- }
-
- .background-image {
-     top: 30px;
-     left: 30px;
  }
