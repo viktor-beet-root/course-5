@@ -1,0 +1,186 @@
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #544837;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.menu,
+.footer__links,
+.footer__menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__menu,
+.footer__block {
+    display: flex;
+    align-items: flex-start;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.img-back {
+    background-image: url(../images/half-oval.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.hero_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__menu {
+    justify-content: space-between;
+}
+
+.menu {
+    gap: 20px;
+}
+
+.menu__link:link,
+.menu__link:visited {
+    color: #2F281E;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    color: #F90;
+    font-weight: 400;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-third__item,
+.btn-second__item {
+    color: #fff;
+    background-color: #F90;
+    border: 1px solid #F90;
+}
+
+.btn-first__item {
+    color: #000000;
+    border: 1px solid #BCD0E5;
+    background-color: #fff;
+}
+
+.btn-third__item {
+    padding: 13px 40px;
+}
+
+.btn-first__item,
+.btn-second__item {
+    padding: 13px 25px;
+    display: inline-block;
+}
+
+header button {
+    float: right;
+}
+
+.header__button button:first-child {
+    margin-left: 32px;
+}
+
+.footer__logo,
+.footer__links,
+.footer__stuff,
+.footer__form {
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .menu__item {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+h1 {
+    color: #2F281E;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+h4 {
+    color: #544837;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 0 20px 0;
+    text-align: left;
+}
+
+.hero__text p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.footer__form span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    min-height: 30px;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+}
+
+input[type="tel"]::placeholder {
+    color: #BCD0E5;
+}
+
+.hero__img img {
+    width: 100%;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.tools__item {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0 10px;
+    align-items: stretch;
+}
+
+.sign_btn {
+    padding: 70px;
+}
