@@ -15,6 +15,7 @@
      position: sticky;
      top: 0px;
      background-color: white;
+     z-index: 2;
  }
 
  .container {
@@ -101,6 +102,7 @@
      line-height: 48px;
      letter-spacing: 1.44px;
      text-transform: uppercase;
+     z-index: 2;
  }
 
  .psevdo-line sup {
@@ -150,7 +152,7 @@
  .psevdo-line {
      position: -webkit-sticky;
      position: sticky;
-     top: 100px;
+     top: 20px;
  }
 
  .main-content>.content_item {
