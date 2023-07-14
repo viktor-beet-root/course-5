@@ -166,10 +166,6 @@ input[type="tel"]::placeholder {
     color: #BCD0E5;
 }
 
-.hero__img img {
-    width: 100%;
-}
-
 .center-text {
     text-align: center;
 }
