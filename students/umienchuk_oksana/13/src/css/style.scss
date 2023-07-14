@@ -1,3 +1,52 @@
 @import "./variables";
 @import "./global";
-@import "./header/header"
+@import "./header/header";
+
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    width: auto;
+    border: 1px solid gold;
+    position: relative;
+    z-index: -2;
+}
+
+.flex-item {
+    width: 400px;
+    height: 400px;
+    margin: 15px;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.row::before {
+    content: "";
+    width: 432px;
+    height: 234px;
+    background-color: $default-body-color;
+    z-index: -1;
+    position: absolute;
+    left: -1px;
+    top: 100px;
+}
+
+.row::after {
+    content: "";
+    width: 234px;
+    height: 432px;
+    background-color: $default-body-color;
+    z-index: -1;
+    position: absolute;
+    left: 100px;
+    top: -1px;
+}
