@@ -149,8 +149,13 @@ li {
 h1 {
     color: #2F281E;
     font-size: 44px;
-    font-weight: 700;
     line-height: 54px;
+}
+
+h1,
+h2,
+h4 {
+    font-weight: 700;
 }
 
 .hero-text>p {
@@ -167,6 +172,10 @@ h1 {
 .superpowers {
     padding-top: 91px;
     flex-direction: column;
+    background-image: url(../images/svg/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 100px;
 }
 
 .main-idea {
@@ -184,7 +193,6 @@ h3 {
 
 h2 {
     font-size: 36px;
-    font-weight: 700;
 }
 
 h3 {
@@ -224,7 +232,6 @@ h3 {
 
 h4 {
     font-size: 20px;
-    font-weight: 700;
     line-height: 30px;
 }
 
