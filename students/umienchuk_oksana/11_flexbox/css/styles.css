@@ -26,12 +26,6 @@ body {
     align-items: flex-start;
 }
 
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
 .img-back {
     background-image: url(../images/half-oval.svg);
     background-size: contain;
@@ -145,6 +139,7 @@ h4 {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    width: 100%;
 }
 
 .footer__form span {
@@ -179,4 +174,18 @@ input[type="tel"]::placeholder {
 
 .sign_btn {
     padding: 70px;
+}
+
+.hero__img img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-2 {
+    width: 50%;
 }
