@@ -1,0 +1,73 @@
+$label-font-size: 20px;
+$label-color: $white-color;
+$label-bg: $gray-8-color;
+$icon-bg: $gray-3-color;
+$icon-color: $gray-7-color;
+$input-height: 50px;
+$icon-height: $input-height;
+$icon-width: $icon-height;
+$icon-img-size: math.div($input-height, 2);
+
+
+.form-control {
+
+    // .form-control_required
+
+    &_required {
+        .form-control__label {
+            &::after {
+                content: '*';
+            }
+        }
+    }
+
+    // .form-control__label
+
+    &__label {
+        font-size: $label-font-size;
+        color: $label-color;
+        background-color: $label-bg;
+        display: block;
+        padding: 5px 10px;
+    }
+
+    // .form-control__group
+
+    &__group {
+        display: flex;
+    }
+
+    // .form-control__input
+
+    &__input {}
+
+    // .form-control__icon
+
+    &__icon {}
+}
+
+.form-input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    padding: 0 10px;
+    height: $input-height;
+    border: none;
+}
+
+.icon {
+    width: input-height;
+    height: $icon-height;
+    background: $icon-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // .icon__img
+
+    &__img {
+        width: $icon-img-size;
+        height: $icon-img-size;
+        fill: $icon-color;
+    }
+}
