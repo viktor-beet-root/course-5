@@ -1,0 +1,48 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #070707;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu {
+    border-bottom: 1px solid #828282;
+}
+
+nav a {
+    text-decoration-line: none;
+}
+
+h1 {
+    font-size: 47px;
+    text-align: left;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.about__me {
+    background-color: #F6F6F6;
+}
+
+.portfolio {
+    background-color: #F6F6F6;
+}
+
+.rating~.rating img {
+    width: 26px;
+    height: 26px;
+}
+
+.footer a {
+    text-decoration-line: none;
+}
+
+.button {
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
