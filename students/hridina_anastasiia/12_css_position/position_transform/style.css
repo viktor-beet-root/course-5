@@ -1,0 +1,179 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v30-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/tourney-v11-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/tourney-v11-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/staatliches-v11-latin-regular.woff2') format('woff2');
+}
+
+.container>div {
+    max-width: 1440px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    width: 100%;
+    margin-top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.documentation {
+    margin-right: auto;
+    padding-left: 50px;
+    font-family: Staatliches;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.66px;
+}
+
+.eng {
+    font-family: Tourney;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.88px;
+}
+
+.heading {
+    max-width: 326px;
+    padding: 15px;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-weight: 600px;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    text-align: right;
+    padding-top: 83px;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 8px;
+    background: #000000;
+    position: absolute;
+    margin-top: 7%;
+}
+
+.logo__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    perspective: 1000px;
+}
+
+.facebook__logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+.facebook__inner:hover .facebook__logo {
+    transform: rotateY(180deg);
+}
+
+.facebook__front,
+.facebook__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.facebook__back {
+    transform: rotateY(180deg);
+}
+
+.insta__logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .8s;
+    transform-style: preserve-3d;
+}
+
+.insta__inner:hover .insta__logo {
+    transform: rotateX(180deg);
+}
+
+.insta__front,
+.insta__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.insta__back {
+    transform: rotateX(180deg);
+}
+
+.shopify__logo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.shopify__inner:hover .shopify__logo {
+    transform: skewX(20deg);
+}
+
+.shopify__front,
+.shopify__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
