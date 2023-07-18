@@ -1,9 +1,3 @@
-// @include font-face('open-sans-v35-latin-700', 'Open-sans', 700);
-// @include font-face('raleway-v28-latin-500', 500);
-// @include font-face('raleway-v28-latin-regular');
-// @include font-face('roboto-v30-latin-900', 900);
-
-
 @font-face {
     font-display: swap;
     font-family: 'Open Sans';
@@ -47,7 +41,6 @@ body {
     padding: $container-padding;
     max-width: $container-max-width;
     margin: 0 auto;
-
 }
 
 .row {

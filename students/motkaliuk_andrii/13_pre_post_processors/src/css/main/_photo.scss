@@ -4,26 +4,26 @@
     align-items: center;
     position: relative;
     padding-top: 65px;
-}
 
-.wrapper::before {
-    content: "";
-    position: absolute;
-    left: calc(50% - 115px);
-    top: -1px;
-    bottom: -1px;
-    width: 230px;
-    background-color: $default-body-color;
-}
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(50% - 115px);
+        top: -1px;
+        bottom: -1px;
+        width: 230px;
+        background-color: $default-body-color;
+    }
 
-.wrapper::after {
-    content: "";
-    position: absolute;
-    left: -1px;
-    right: -1px;
-    top: 170px;
-    bottom: 100px;
-    background-color: $default-body-color;
+    &::after {
+        content: "";
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        top: 170px;
+        bottom: 100px;
+        background-color: $default-body-color;
+    }
 }
 
 .hero-photo {
@@ -41,14 +41,14 @@
 
 .pseudo-vertical-line {
     position: relative;
-}
 
-.pseudo-vertical-line::after {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 560px;
-    left: 100%;
-    bottom: -60px;
-    background-color: $color-gold;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 560px;
+        left: 100%;
+        bottom: -60px;
+        background-color: $color-gold;
+    }
 }
