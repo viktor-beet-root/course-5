@@ -1,3 +1,19 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/open-sans-v35-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/open-sans-v35-latin-700.woff2') format('woff2');
+}
+
 .menu {
     list-style-type: none;
     text-align: center;
@@ -51,11 +67,13 @@
     max-width: 946px;
     margin: 0 auto;
     padding: 15px;
+    padding-bottom: 85px;
 }
 
 .aboutme {
     background-color: #F6F6F6;
-    padding: 15px;
+    padding-top: 45px;
+    padding-bottom: 65px;
     line-height: 28px;
 }
 
@@ -77,6 +95,8 @@ p span {
     max-width: 937px;
     margin: 0 auto;
     padding: 15px;
+    padding-top: 45px;
+    padding-bottom: 75px;
 }
 
 .skills h2 {
@@ -86,16 +106,20 @@ p span {
 
 .skills h3 {
     font-weight: 400;
+    padding-bottom: 30px;
 }
 
 .figures>* {
+    max-width: 937px;
     display: inline-block;
     margin: 0 auto;
-    padding-right: 50px;
+    padding-right: 60px;
     padding-bottom: 20px;
 }
 
 figcaption {
+    color: #828282;
+    font-size: 14px;
     padding-top: 15px;
     padding-bottom: 20px;
 }
@@ -109,6 +133,7 @@ figcaption {
 .portfolio-list {
     background-color: #F6F6F6;
     margin: 0 auto;
+    padding: 15px;
 }
 
 .portfolio-list a {

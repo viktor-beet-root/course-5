@@ -1,7 +1,37 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/montserrat-v25-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .logo__left {
@@ -45,7 +75,7 @@
 .menu .menu__item {
     display: inline-block;
     font-size: 16px;
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
 .menu__link {
@@ -68,15 +98,12 @@
     max-width: 1200px;
     padding: 15px;
     margin: 0 auto;
-    display: inline-block;
-    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer__logo {
     float: left;
     width: 30%;
-    padding: 15px;
-    padding-left: 103px;
 }
 
 .footer::after {
@@ -90,13 +117,14 @@
     line-height: 35px;
     display: inline-block;
     width: 15%;
+    padding-right: 45px;
 }
 
 .block__one h4,
 .block__two h4 {
     text-align: center;
     line-height: 10px;
-    padding-right: 15px;
+    padding-right: 40px;
 }
 
 .quick__links,
@@ -144,6 +172,7 @@
 .buttons {
     float: right;
     width: 18%;
+    padding-right: 100px;
 }
 
 input[type=number] {
