@@ -23,7 +23,7 @@
     src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
 }
 
-.header {
+.container {
     max-width: 940px;
     margin: 0 auto;
     padding: 15px;
@@ -58,10 +58,11 @@ li {
     color: black;
 }
 
-.container {
+.container__heading {
     max-width: 940px;
     margin: 0 auto;
     padding: 15px;
+    padding-bottom: 45px;
 }
 
 .heading {
@@ -72,6 +73,7 @@ li {
 .section {
     background-color: #F6F6F6;
     padding: 15px;
+    padding-bottom: 45px;
 }
 
 .aboutme p span {
@@ -88,7 +90,7 @@ li {
     max-width: 940px;
     margin: 0 auto;
     padding: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
 }
 
 .figures>div {
@@ -116,6 +118,7 @@ figcaption {
 .portfolio-list {
     background-color: #F6F6F6;
     padding: 15px;
+    padding-bottom: 45px;
 }
 
 .fashion-store h2 {
