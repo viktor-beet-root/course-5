@@ -1,0 +1,146 @@
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #544837
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.logo__img {
+    padding: 8px 0;
+    float: left;
+}
+
+.menu {
+    list-style-type: none;
+    width: calc(100% - 200px - 200px / 3);
+    text-align: center;
+}
+
+header .menu__item {
+    display: inline-block;
+}
+
+header .menu__item:not(:last-child) {
+    padding-right: 20px;
+}
+
+.menu__link:link,
+.menu__link:visited {
+    color: #2F281E;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    color: #F90;
+    font-weight: 400;
+}
+
+button {
+    font-size: 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-third__item,
+.btn-second__item {
+    color: #fff;
+    background-color: #F90;
+    border: 1px solid #F90;
+}
+
+.btn-first__item {
+    color: #000000;
+    border: 1px solid #BCD0E5;
+    background-color: #fff;
+}
+
+.btn-third__item {
+    padding: 13px 40px;
+}
+
+.btn-first__item,
+.btn-second__item {
+    padding: 13px 25px;
+    display: inline-block;
+}
+
+header button {
+    float: right;
+}
+
+.header__button button:first-child {
+    margin-left: 32px;
+}
+
+.footer__logo,
+.footer__links,
+.footer__stuff,
+.footer__form {
+    padding: 0;
+    float: left;
+    width: calc(100% / 4 - 26px);
+    box-sizing: content-box;
+    text-align: justify;
+    line-height: 26px;
+}
+
+.footer__block::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.footer__menu {
+    list-style-type: none;
+}
+
+.footer__menu {
+    padding: 0;
+    margin: 0;
+}
+
+.footer__logo {
+    padding-top: 20px;
+}
+
+footer .menu__item {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+h4 {
+    color: #544837;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.footer__form span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input {
+    padding: 0 10px;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    min-height: 30px;
+    width: 100%;
+    max-width: 340px;
+}
+
+input[type="tel"]::placeholder {
+    color: #BCD0E5;
+}
