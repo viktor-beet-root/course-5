@@ -87,6 +87,11 @@ a {
 
 }
 
+[class*="col-"] {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
 .section1__text-title {
     color: #2F281E;
     font-size: 44px;
