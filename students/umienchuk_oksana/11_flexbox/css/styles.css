@@ -10,12 +10,13 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px;
+    padding: 0 15px;
 }
 
 .menu,
 .footer__links,
-.footer__menu {
+.footer__menu,
+.list-block {
     list-style-type: none;
     padding: 0;
 }
@@ -26,11 +27,19 @@ body {
     align-items: flex-start;
 }
 
+.header__menu {
+    margin: 17px 0;
+}
+
+.logo__img {
+    margin-top: 5px;
+}
+
 .img-back {
     background-image: url(../images/half-oval.svg);
-    background-size: contain;
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-position: bottom;
+    background-size: cover;
 }
 
 .hero_block {
@@ -114,7 +123,7 @@ header button {
 
 footer .menu__item {
     text-align: left;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -122,16 +131,30 @@ h1 {
     font-size: 44px;
     font-weight: 700;
     line-height: 54px;
+    margin: 30px 0;
+}
+
+h2 {
+    color: #2F281E;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 h4 {
+    color: #2F281E;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+h5 {
     color: #544837;
-    font-family: Montserrat;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 30px;
-    margin: 0 0 20px 0;
+    margin: 0 0 30px 0;
     text-align: left;
 }
 
@@ -172,7 +195,34 @@ input[type="tel"]::placeholder {
     align-items: stretch;
 }
 
+.center-text>h2,
+.tools__item>img {
+    margin-bottom: 30px;
+}
+
+.tools_block {
+    margin-bottom: 70px;
+}
+
 .sign_btn {
+    padding-bottom: 70px;
+}
+
+.tools__item>p {
+    margin: 0;
+}
+
+.tools__item>h3 {
+    margin: 0 0 16px 0;
+    color: #2F281E;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+
+.tools__item>img .sign_btn {
     padding: 70px;
 }
 
@@ -184,8 +234,54 @@ input[type="tel"]::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 100px;
 }
 
-.col-2 {
+.col-6 {
     width: 50%;
+}
+
+.hero_block {
+    margin: 70px 0 100px;
+}
+
+.main_container,
+footer {
+    padding: 100px 0;
+}
+
+.main_container .row:not(:last-child) {
+    margin-bottom: 100px;
+}
+
+.done-item {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.done-item:not(:last-child),
+.list-block li:not(:last-child) {
+    margin: 0 0 30px;
+}
+
+.done-item p,
+.list-block p {
+    margin: 0;
+}
+
+.main_container p {
+    line-height: 26px;
+}
+
+h2+p {
+    margin: 0 0 40px;
+}
+
+.main_container h2 {
+    margin: 0 0 20px;
+}
+
+p:first-child {
+    margin: 0;
 }
