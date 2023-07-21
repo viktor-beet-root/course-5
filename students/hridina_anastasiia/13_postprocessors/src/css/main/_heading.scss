@@ -1,0 +1,54 @@
+.heading {
+    margin: 0 auto;
+    max-width: 450px;
+
+    &__top {
+        text-align: center;
+        color: $color-subgray;
+        font-family: 'Raleway', $fallback;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+
+    &__bottom {
+        margin: 0;
+        color: $color-gold;
+        text-align: center;
+        font-family: 'Roboto', $fallback;
+        font-size: 60px;
+        font-weight: 900;
+        line-height: 66px;
+        text-transform: uppercase;
+
+    }
+}
+
+.horizontal-line {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 330px;
+        bottom: 15px;
+        max-width: 210px;
+        width: 100%;
+        border: 1px solid $color-gold;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 330px;
+        bottom: 15px;
+        max-width: 210px;
+        width: 100%;
+        border: 1px solid $color-gold;
+    }
+}

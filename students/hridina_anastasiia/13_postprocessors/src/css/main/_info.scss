@@ -1,0 +1,117 @@
+.vertical-line {
+    position: relative;
+    padding: 15px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -250px;
+        border-left: 1px solid $color-gold;
+        height: 560px;
+    }
+}
+
+.fullname {
+    text-align: center;
+    vertical-align: text-top;
+    font-family: $default-font-name;
+    color: $color-gray;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding-bottom: 30px;
+    position: relative;
+
+    &::after {
+        content: '';
+        border-bottom: 1px solid $color-gold;
+        width: 100px;
+        padding-bottom: 65px;
+        left: 210px;
+        position: absolute;
+    }
+}
+
+.skill {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Raleway', $fallback;
+    color: $color-gray;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-transform: capitalize;
+}
+
+.web {
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding-bottom: 50px;
+    }
+}
+
+.description {
+    text-align: center;
+    color: $color-darkgray;
+    font-family: 'Raleway', $fallback;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+
+.divider {
+    position: relative;
+    display: flex;
+    content: '';
+    max-width: 20px;
+    left: calc(50% - 10px);
+    width: 100%;
+    border-bottom: 4px solid $color-gold;
+
+    &::before {
+        position: absolute;
+        content: '';
+        max-width: 10px;
+        width: 100%;
+        left: calc(50% - 25px);
+        border-bottom: 4px solid $color-gold;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        max-width: 10px;
+        width: 100%;
+        right: calc(50% - 25px);
+        border-bottom: 4px solid $color-gold;
+    }
+}
+
+.button {
+    text-align: center;
+    padding-top: 30px;
+}
+
+button {
+    text-align: center;
+    color: $color-gray;
+    font-family: 'Open Sans', $fallback;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-transform: uppercase;
+    border: 1px solid $color-gold;
+    padding: 5px 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-gold;
+        color: $color-white;
+    }
+
+}

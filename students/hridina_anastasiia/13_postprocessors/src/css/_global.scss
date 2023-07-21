@@ -1,0 +1,59 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/raleway-v28-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/raleway-v28-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: url('fonts/roboto-v30-latin-900.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('fonts/open-sans-v35-latin-700.woff2') format('woff2');
+}
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+}
+
+.container {
+    padding: $container-padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.col-12 {
+    max-width: 1170px;
+    width: 100%;
+    padding: $container-padding;
+}
+
+.col-6 {
+    max-width: 1030px;
+    width: 100%;
+    padding-left: 85px;
+}
