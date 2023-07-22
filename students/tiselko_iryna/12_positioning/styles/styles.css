@@ -17,9 +17,47 @@ a {
     color: #000
 }
 
+i {
+    font-style: italic;
+}
+
+b {
+    font-weight: 700;
+}
+
+h2 {
+    font-family: Francois One;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    padding-top: 70px;
+}
+
+h2::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 8px;
+    background-color: #000;
+    margin-bottom: 20px;
+
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 13px;
 }
 
 .row {
@@ -29,26 +67,10 @@ a {
     align-items: center;
 }
 
-.col-3 {
-    width: calc(100% / 12 * 3);
-    margin: 0 -15px;
-    align-self: start;
-    position: sticky;
-    top: 81px;
-}
-
 .col-8 {
     width: calc(100% / 12 * 8);
-    margin: 0 -15px;
     position: relative;
-}
-
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: #fff;
-    z-index: 1;
+    margin-bottom: 90px;
 }
 
 .nav {
@@ -108,4 +130,63 @@ header {
     background-repeat: no-repeat;
     background-position: right -135px top 164px;
     background-attachment: fixed;
+}
+
+.sidenav {
+    align-self: start;
+    position: sticky;
+    top: 81px;
+}
+
+.sidenav__content {
+    font-family: Francois One;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+.sidenav__item {
+    border-bottom: 1px solid #BDBDBD;
+    margin-bottom: 70px;
+}
+
+.sidenav__item:last-child {
+    margin-bottom: 0;
+}
+
+
+.title__sup {
+    font-family: Farro;
+    font-size: medium;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1.2px;
+    text-transform: none;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.fundamentals__mark {
+    background-color: #DADADA;
+}
+
+.title__introduction {
+    padding-top: 0;
+}
+
+.introduction__content,
+.components__content {
+    padding-top: 40px;
+}
+
+.fundamentals__content>p {
+    padding-top: 40px;
+}
+
+.input__content>p {
+    padding-top: 40px;
 }

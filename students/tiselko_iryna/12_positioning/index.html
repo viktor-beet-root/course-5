@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Francois+One&family=PT+Sans:ital@0;1&family=Staatliches&family=Tourney:wght@600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=PT+Sans:ital@0;1&family=Staatliches&family=Tourney:wght@600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
@@ -36,21 +36,24 @@
         <div class="bg">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
-                        <aside class="container__sidenav">
-                            <ul class="sidenav__content">
-                                <li class="sidenav__item"><a href="#introduction">introduction</a></li>
-                                <li class="sidenav__item"><a href="#components">core components</a></li>
-                                <li class="sidenav__item"><a href="#fundamentals">react fundamentals</a></li>
-                                <li class="sidenav__item"><a href="#input">handling text input</a></li>
-                            </ul>
-                        </aside>
-                    </div>
+                    <aside class="sidenav">
+                        <ul class="sidenav__content">
+                            <li class="sidenav__item"><a href="#introduction" class="sidenav__links">introduction</a>
+                            </li>
+                            <li class="sidenav__item"><a href="#components" class="sidenav__links">core components</a>
+                            </li>
+                            <li class="sidenav__item"><a href="#fundamentals" class="sidenav__links">react
+                                    fundamentals</a></li>
+                            <li class="sidenav__item"><a href="#input" class="sidenav__links">handling text input</a>
+                            </li>
+                        </ul>
+                    </aside>
 
                     <div class="col-8">
                         <section>
-                            <div class="container__introduction" id="introduction">
-                                <h2 ntroduction__title>introduction</h2>
+                            <div class="wrapper__introduction" id="introduction">
+                                <h2 class="title__introduction">introduction<span class="title__sup">Chapter 1</span>
+                                </h2>
                                 <p class="introduction__content">
                                     Welcome to the very start of your React Native journey! If
                                     you're looking for environment setup instructions, they've moved to
@@ -63,8 +66,9 @@
                         </section>
 
                         <section>
-                            <div class="container__components components" id="components">
-                                <h2 class="components__title">core components</h2>
+                            <div class="wrapper__components" id="components">
+                                <h2 class="title__component">core components<span class="title__sup">Chapter 2</span>
+                                </h2>
                                 <p class="components__content">
                                     React Native is an open source framework for building Android
                                     and
@@ -73,7 +77,7 @@
                                     you
                                     use JavaScript to access your platform’s APIs as well as to describe the appearance
                                     and
-                                    behavior of your UI using React components: <i>bundles of reusable</i>, <i>nestable
+                                    behavior of your UI using React components: <i>bundles of reusable, nestable
                                         code</i>. You
                                     can learn more about React in the next section. But first, let’s cover how
                                     components
@@ -84,8 +88,9 @@
                         </section>
 
                         <section>
-                            <div class="container__fundamentals fundamentals" id="fundamentals">
-                                <h2 class="fundamentals__title">react fundamentals</h2>
+                            <div class="wrapper__fundamentals" id="fundamentals">
+                                <h2 class="title__fundamentals">react fundamentals<span class="title__sup">Chapter
+                                        3</span></h2>
                                 <div class="fundamentals__content">
                                     <p>
                                         React Native runs on React, a popular open source library
@@ -106,19 +111,19 @@
                                         <b>+ JSX.</b> React and React Native use JSX, a syntax that lets you write
                                         elements
                                         inside JavaScript like so:
-                                        <span fundamentals__content mark>&lt;Text&gt;Hello, I am your
-                                            cat!&lt;/Text&gt;</span>.
                                     </p>
+                                    <span class="fundamentals__mark">&lt;Text&gt;Hello, I am your
+                                        cat!&lt;/Text&gt;.</span>
                                     <p>
                                         The React docs have <ins>a comprehensive guide to JSX</ins> you can refer to
                                         learn
                                         even more.
                                         Because JSX is JavaScript, you can use variables inside it. Here you are
                                         declaring a
-                                        <span class="fundamentals__content mark">name</span> for the cat, name, and
+                                        <span class="fundamentals__mark">name</span> for the cat, name, and
                                         embedding it
                                         with curly braces inside <span
-                                            class="fundamentals__content mark">&lt;Text&gt;&lt;/Text&gt;</span>
+                                            class="fundamentals__mark">&lt;Text&gt;&lt;/Text&gt;</span>
                                     </p>
                                     <p>
                                         <b>+ props.</b> Props is short for “properties”.
@@ -136,20 +141,26 @@
                         </section>
 
                         <section>
-                            <div class="container__input input" id="input">
-                                <h2 class="input__title">handling text input</h2>
-                                <p class="input__content">
-                                    TextInput is a Core Component that allows the user to enter text. It has an
-                                    <i>onChangeText</i>
-                                    prop that takes a function to be called every time the text changed, and an
-                                    onSubmitEditing prop that takes a function to be called when the text is submitted.
-                                </p>
-                                <p>
-                                    For example, let's say that as the user types, you're translating their words into a
-                                    different language. In this new language, every single word is written the same way:
-                                    🍕.
-                                    So the sentence "Hello there Bob" would be translated as "🍕 🍕".
-                                </p>
+                            <div class="wrapper__input" id="input">
+                                <h2 class="title__input">handling text input<span class="title__sup">Chapter 4</span>
+                                </h2>
+                                <div class="input__content">
+                                    <p>
+                                        TextInput is a Core Component that allows the user to enter text. It has an
+                                        <i>onChangeText</i>
+                                        prop that takes a function to be called every time the text changed, and an
+                                        onSubmitEditing prop that takes a function to be called when the text is
+                                        submitted.
+                                    </p>
+                                    <p>
+                                        For example, let's say that as the user types, you're translating their words
+                                        into a
+                                        different language. In this new language, every single word is written the same
+                                        way:
+                                        🍕.
+                                        So the sentence "Hello there Bob" would be translated as "🍕 🍕".
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </div>
