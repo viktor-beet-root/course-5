@@ -28,20 +28,23 @@
     padding: 15px;
 }
 
-.container::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
 .logo__left {
     float: left;
     padding-left: 120px;
+    box-sizing: border-box;
 }
 
 .buttons__right {
     float: right;
     padding-right: 120px;
+    box-sizing: border-box;
+}
+
+.logo__left::after,
+.buttons__right::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .button1 {
@@ -102,12 +105,7 @@
 
 .footer__logo {
     float: left;
-}
-
-.footer::after {
-    content: '';
-    display: block;
-    clear: both;
+    box-sizing: border-box;
 }
 
 .block__one {
@@ -173,9 +171,16 @@
 
 .buttons {
     float: right;
-    width: 18%;
-    padding-right: 115px;
+    box-sizing: border-box;
 }
+
+.footer__logo::after,
+.buttons::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 
 input[type=number] {
     width: 340px;
