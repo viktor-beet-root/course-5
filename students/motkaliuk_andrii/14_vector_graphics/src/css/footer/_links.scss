@@ -1,0 +1,33 @@
+.quick-links_block {
+    width: 22%;
+    padding-left: 20px;
+}
+
+.legal-stuff_block {
+    width: 22%;
+}
+
+.footer_headers {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.quick-links_item:first-child,
+.legal-stuff_item:first-child {
+    padding-top: 20px;
+}
+
+.quick-links>ul,
+.legal-stuff>ul {
+    padding-top: 20px;
+}
+
+.quick-links_item,
+.legal-stuff_item {
+    color: #544837;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.6em;
+}

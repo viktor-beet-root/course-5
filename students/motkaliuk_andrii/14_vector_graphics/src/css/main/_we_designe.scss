@@ -1,0 +1,65 @@
+.we-design {
+    background-image: url(../images/curve.svg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 100px;
+
+}
+
+.we-design_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+    padding-bottom: 75px;
+
+}
+
+.we-design_header {
+    width: 100%;
+    display: inline-block;
+    color: #2F281E;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2em;
+    padding-bottom: 55px;
+}
+
+.we-design_item {
+    width: 25%;
+    max-height: 175px;
+}
+
+.we-design_item_header {
+    padding-top: 30px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.we-design_content {
+    padding-top: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.we_disign_button_container {
+    width: 100%;
+    align-self: flex-start;
+    padding-top: 85px;
+    padding-left: calc(50% - 90px);
+}
+
+.we_disign_button {
+    padding: 13px 40px;
+    border: none;
+    background: #F90;
+    color: #FFF;
+    text-align: center;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
