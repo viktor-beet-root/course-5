@@ -1,23 +1,30 @@
+.header .row {
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+}
+
 .menu {
-    display: inline-block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    // display: inline-block;
+    // margin: 0 auto;
+    // background-color: aqua;
 }
 
 .menu_item {
     display: inline-block;
-    padding-top: 28px;
+    // padding-top: 28px;
 }
 
 .menu_item>a {
     text-decoration: none;
-    color: #2F281E;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 0px;
+    color: $black-color;
 }
 
 .menu_item:first-child {
-    padding-left: 160px;
+    // padding-left: 160px;
 }
 
 .menu_item:not(:first-child) {
@@ -25,5 +32,5 @@
 }
 
 .menu_item>a:hover {
-    color: #F90;
+    color: $orange-color;
 }

@@ -43,7 +43,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    src: url('../fonts/poppins-v20-latin-700.woff2') format('woff2');
+    src: url('fonts/poppins-v20-latin-700.woff2') format('woff2');
 }
 
 
@@ -61,4 +61,50 @@ body {
     width: 100%;
     padding: $container-padding;
     box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    // margin: 0 (-$gap);
+}
+
+.col-12 {
+    max-width: calc(100% / 12 * 12);
+    width: 100%;
+}
+
+.col-7 {
+    max-width: calc(100% / 12 * 7);
+    width: 100%;
+}
+
+.col-6 {
+    max-width: calc(100% / 12 * 6);
+    width: 100%;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+    width: 100%;
+}
+
+.col-5 {
+    max-width: calc(100% / 12 * 5);
+    width: 100%;
+}
+
+.col-3 {
+    max-width: calc(100% / 12 * 3);
+    width: 100%;
+}
+
+.col-2 {
+    max-width: calc(100% / 12 * 2);
+    width: 100%;
+}
+
+[class*="header"] {
+    color: $black-color;
+    font-weight: 700;
 }
