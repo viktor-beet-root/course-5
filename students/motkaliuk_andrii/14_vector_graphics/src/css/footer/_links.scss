@@ -4,21 +4,21 @@
     line-height: 30px;
 }
 
-.quick-links_item:first-child,
-.legal-stuff_item:first-child {
-    padding-top: 20px;
+.quick-links_block {
+    padding-left: 30px;
 }
 
+.quick-links_item:first-child,
+.legal-stuff_item:first-child,
 .quick-links>ul,
 .legal-stuff>ul {
     padding-top: 20px;
 }
 
+
 .quick-links_item,
 .legal-stuff_item {
     color: $gray-color;
-    text-decoration: none;
-    font-size: 16px;
     font-weight: 500;
     line-height: 2.6em;
 }

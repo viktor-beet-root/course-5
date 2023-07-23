@@ -8,29 +8,20 @@
     display: flex;
     justify-content: center;
     font-weight: 400;
-    // display: inline-block;
-    // margin: 0 auto;
-    // background-color: aqua;
 }
 
 .menu_item {
     display: inline-block;
-    // padding-top: 28px;
-}
 
-.menu_item>a {
-    text-decoration: none;
-    color: $black-color;
-}
+    &>a {
+        color: $black-color;
+    }
 
-.menu_item:first-child {
-    // padding-left: 160px;
-}
+    &:not(:first-child) {
+        padding-left: 20px;
+    }
 
-.menu_item:not(:first-child) {
-    padding-left: 20px;
-}
-
-.menu_item>a:hover {
-    color: $orange-color;
+    &>a:hover {
+        color: $orange-color;
+    }
 }

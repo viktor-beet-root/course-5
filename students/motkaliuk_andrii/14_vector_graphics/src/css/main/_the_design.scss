@@ -2,20 +2,20 @@
     display: flex;
     padding-top: 20px;
     padding-bottom: 100px;
-}
 
-.design_item1 {
-    padding-top: 170px;
-}
+    &_item1 {
+        padding-top: 170px;
+    }
 
-.design_item2 {
-    text-align: end;
-    padding-top: 70px;
-}
+    &_item2 {
+        text-align: end;
+        padding-top: 70px;
+    }
 
-.design_header {
-    font-size: 44px;
-    line-height: 54px;
+    &_header {
+        font-size: 44px;
+        line-height: 54px;
+    }
 }
 
 
@@ -30,7 +30,6 @@
 }
 
 .get_started_button {
-    padding: 13px 40px;
     background: $orange-color;
     color: $white-color;
     font-family: 'Poppins', $fallback;
