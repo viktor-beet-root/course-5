@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #544837;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    letter-spacing: 0;
+}
+
+.header .container {
+    min-height: 80px;
+    padding: 17px 0;
+}
+
+.logo {
+    max-height: 32px;
+}
+
+.header__logo {
+    float: left;
+    padding-top: 7px;
+}
+
+.logo__title {
+    height: 29px;
+}
+
+.logo__image {
+    height: 31px;
+    padding-right: 12px;
+}
+
+.action {
+    float: right;
+    font-size: 0;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 16px;
+    border: none;
+    padding: 13px 26px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #f90;
+}
+
+.btn-primary:hover {
+    background-color: rgba(255, 153, 0, 0.6);
+}
+
+.btn-secondary {
+    border: 1px solid #BCD0E5;
+    background-color: #fff;
+    margin-right: 32px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(119, 82, 152, 0.8);
+    color: #fff;
+}
+
+.btn-primary span {
+    color: #fff;
+}
+
+.nav {
+    padding-top: 7px;
+}
+
+nav .menu {
+    text-align: center;
+}
+
+nav .menu__item {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+nav .menu__item>a {
+    color: #2F281E;
+    text-decoration: none;
+    line-height: 28px;
+}
+
+nav .menu__item>a:hover {
+    color: #f90;
+}
+
+.row {
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.col-3 {
+    padding-top: 70px;
+    padding-right: 144px;
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+    vertical-align: text-top;
+}
+
+.col-3:last-of-type {
+    padding-right: 0;
+}
+
+.footer .menu__title {
+    padding-bottom: 15px;
+}
+
+.item__link {
+    list-style-type: none;
+    padding-top: 15px;
+}
+
+.item__link a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.form__title {
+    padding-bottom: 25px;
+    max-width: 280px;
+}
+
+.form__input {
+    width: 320px;
+    padding-bottom: 25px;
+}
+
+.form__input input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: #BCD0E5;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.footer .btn-primary {
+    width: 180px;
+    height: 50px;
+    box-sizing: border-box;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
