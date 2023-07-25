@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.scss">
     <link rel="stylesheet" href="css/styles.css">
     <title>Our Team</title>
 </head>
@@ -25,25 +26,36 @@
             <div class="row">
                 <div class="col-6">
                     <div class="wrapper">
-                        <img src="./images/photo.jpg" alt="photo" class="photo">
+                        <div class="borders">
+                            <img src="./images/photo.jpg" alt="photo" width="400px" class="photo">
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="content">
                         <h2 class="content__name">Sahariar Kabir</h2>
                         <h3 class="content__profession">Frontend Developer</h3>
-                        <img src="./images/social.svg" alt="socials" class="content__socials">
+                        <div class="content__socials socials">
+                            <a href="#" target="_blank" class="socials__links"><img src="./images/socials/facebook.svg"
+                                    alt="socials" class="socials__img"></a>
+                            <a href="#" target="_blank" class="socials__links"><img src="./images/socials/twitter.svg"
+                                    alt="socials" class="socials__img"></a>
+                            <a href="#" target="_blank" class="socials__links"><img src="./images/socials/google+.svg"
+                                    alt="socials" class="socials__img"></a>
+                            <a href="#" target="_blank" class="socials__links"><img src="./images/socials/linkedin.svg"
+                                    alt="socials" class="socials__img"></a>
+                        </div>
                         <p class="content__about">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita excepturi dignissimos quo
                             consequuntur enim inventore velit rerum dicta mollitia.
                             Impedit ad eaque odit aperiam architecto aut facilis illo quia. Eveniet corporis, ab impedit
                             repudiandae amet aut qui eaque.
-                            Quasi, quis. Enim natus repellendus architecto! Soluta cupiditate doloremque nemo iusto
-                            natus
-                            facere debitis. Officiis quaerat harum laboriosam, deleniti tempore beatae voluptate nemo,
-                            dolor
-                            similique odit optio qui quisquam reiciendis!</p>
-                        <button class="content__btn">view profile</button>
+                            Quasi, quis. Enim natus repellendus architecto!
+                        </p>
+
+                        <div class="content__btn btn">
+                            <button class="btn__btn">view profile</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,81 @@
+.content {
+    width: 430px;
+    padding-left: 85px;
+
+    // .content__name
+
+    &__name {
+        text-align: center;
+        padding-top: 70px;
+        padding-bottom: 30px;
+        position: relative;
+    }
+
+    &__name::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 1px;
+        background-color: $color-gold;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%);
+    }
+
+    // .content__profession
+
+    &__profession {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    // .content__socials
+
+    &__socials {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        padding-bottom: 49px;
+    }
+
+    // .content__about
+
+    &__about {
+        padding-bottom: 28px;
+        text-align: center;
+        position: relative;
+    }
+
+    &__about::after {
+        content: '';
+        display: block;
+        max-width: 100%;
+        width: 50px;
+        height: 4px;
+        background-image: url(../../images/decore_line.svg);
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        transform: translate(50%);
+    }
+
+    // .content__btn
+
+    &__btn {
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 70px;
+    }
+}
+
+.btn__btn {
+    width: 118px;
+    height: 24px;
+}
+
+.btn__btn:hover {
+    color: $color-white;
+    background-color: $color-gold;
+}

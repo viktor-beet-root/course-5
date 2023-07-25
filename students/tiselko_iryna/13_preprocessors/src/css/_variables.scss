@@ -12,7 +12,19 @@ $headline-font-name: 'Roboto';
 $fallback: Arial, Helvetica, sans-serif;
 $main-font: $default-font-name, $fallback;
 
+// font-size
+$default-font-size: 14px;
+$h1-font-size: 60px;
+$h2-font-size: 36px;
+$h3-font-size: 24px;
+$subtitle: 18px;
+$btn-font-size: inherit;
+
+
+// font-weight
+$default-font-weight: 500;
+
 
 // container
 $container-padding: 15px;
-$container-max-width: 1200px;
+$container-max-width: 1170px;

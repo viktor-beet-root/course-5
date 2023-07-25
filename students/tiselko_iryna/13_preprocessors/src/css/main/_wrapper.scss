@@ -1,0 +1,55 @@
+.wrapper {
+    padding-left: 70px;
+    padding-right: 85px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.wrapper::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 560px;
+    background-color: $color-gold;
+    position: absolute;
+    right: 0;
+}
+
+.borders {
+    width: 430px;
+    height: 430px;
+    border: 1px solid $color-gold;
+    position: relative;
+    z-index: 1
+}
+
+.borders::before {
+    content: '';
+    display: block;
+    width: 230px;
+    height: calc(100% + 4px);
+    background-color: $color-white;
+    z-index: -1;
+    position: absolute;
+    top: -2px;
+    right: 100px;
+}
+
+.borders::after {
+    content: '';
+    display: block;
+    width: calc(100% + 4px);
+    height: 230px;
+    background-color: $color-white;
+    z-index: -2;
+    position: absolute;
+    top: 100px;
+    left: -2px;
+}
+
+
+.photo {
+    margin: 15px;
+    border: 1px solid $color-gold;
+}
