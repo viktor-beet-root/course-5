@@ -1,0 +1,95 @@
+.heading {
+
+    h2 {
+        padding-top: 50px;
+        color: $color-darkgray;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 54px;
+    }
+
+    p {
+        color: $color-lightgray;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+}
+
+.heading__center {
+    text-align: center;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 700;
+    }
+}
+
+.heading__benefits {
+
+    & p:first-child {
+        margin: 0;
+    }
+
+    p {
+        color: $color-lightgray;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    h2 {
+        color: $color-darkgray;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+}
+
+.heading__managers {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+
+
+    & p:first-child {
+        margin: 0;
+    }
+
+    p {
+        color: $color-lightgray;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    h2 {
+        color: $color-darkgray;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 0;
+    }
+}
+
+.heading__marketers {
+
+    & p:first-child {
+        margin: 0;
+    }
+
+    p {
+        color: $color-lightgray;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+
+    h2 {
+        color: $color-darkgray;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,32 @@
+// colors
+$color-orange: #F90;
+$color-white: white;
+$color-darkgray: #2F281E;
+$color-lightgray: #544837;
+$color-lightblue: #BCD0E5;
+$color-black: black;
+
+//$default-body-color: $color-white;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1200px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

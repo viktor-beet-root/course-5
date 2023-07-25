@@ -1,0 +1,44 @@
+.buttons__right {
+    display: inline-flex;
+    gap: 32px;
+}
+
+.sign__in {
+    border: 1px solid $color-lightblue;
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 4px;
+    padding: 13px 25px;
+    width: 110px;
+    height: 46px;
+    font-size: 16px;
+    font-weight: 600;
+    transition-duration: .4s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-lightblue;
+        color: $color-white;
+        border: 1px solid skyblue;
+    }
+
+}
+
+.sign__up {
+    border: none;
+    background-color: $color-orange;
+    color: $color-white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    transition-duration: .4s;
+    cursor: pointer;
+    width: 110px;
+    height: 46px;
+
+    &:hover {
+        background-color: gold;
+        color: $color-white;
+        border: none;
+    }
+}

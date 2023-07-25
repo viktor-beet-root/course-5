@@ -1,0 +1,16 @@
+.button__start {
+    @include button-orng;
+}
+
+.button__left {
+    padding-top: 20px;
+}
+
+.button__center {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.button__now {
+    @include button-orng;
+}
