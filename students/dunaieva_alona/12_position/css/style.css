@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: PT Sans, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    line-height: 48px;
+    color: #000;
+    padding-top: 80px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    top: 0;
+}
+
+h2 {
+    display: flex;
+    gap: 10px;
+    font-weight: normal;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    min-width: 100px;
+    min-height: 8px;
+    background-color: #000;
+    top: -20px;
+}
+
+h2>span {
+    font-family: Farro, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: none;
+    line-height: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+li>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li>a:hover {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.header .container {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.nav,
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    gap: 10px;
+}
+
+.menu__item>a {
+    font-family: Staatliches, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.66;
+}
+
+.lang {
+    padding-right: 50px;
+    font-family: Tourney, Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1.32px;
+}
+
+.logo {
+    margin-left: auto;
+}
+
+.base .container {
+    padding-top: 70px;
+    padding-bottom: 90px;
+    position: relative;
+    background: url(../images/bg.svg) no-repeat right 294px top 150px fixed
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.col-4 {
+    min-width: 385px;
+}
+
+.main-menu {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    position: sticky;
+    top: 80px;
+}
+
+.main-menu__item {
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 10px;
+}
+
+.main-menu__item,
+.col-8 h2 {
+    font-family: Francois One, Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    line-height: 48px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+.col-8 {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+[class*=block] {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 20px;
+}
+
+.bg-text {
+    background-color: #DADADA;
+    padding: 6px 0;
+}
