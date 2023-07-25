@@ -10,6 +10,8 @@ $default-body-color: $color-white;
 $default-font-name: 'Raleway';
 $fallback: Arial, Helvetica, sans-serif;
 $main-font: $default-font-name, $fallback;
+$title-font-name: 'Roboto';
+$title-font: $title-font-name, $fallback;
 $font-path: './fonts/';
 
 //containers
