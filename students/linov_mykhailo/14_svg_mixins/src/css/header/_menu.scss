@@ -1,1 +1,9 @@
+.menu {
+    @include flex;
+    gap: 20px;
+    font-weight: normal;
 
+    &__item>a:hover {
+        color: $color-orange;
+    }
+}

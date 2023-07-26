@@ -824,8 +824,15 @@ template {
   src: url("./fonts/figtree-v4-latin-700.woff2") format("woff2");
 }
 body {
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-weight: 500;
   background-color: #FFF;
+  color: #544837;
+}
+
+body,
+a {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -935,8 +942,51 @@ body {
 
 a {
   text-decoration: none;
+  color: #544837;
 }
 
 section {
   padding-bottom: 100px;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: normal;
+}
+.menu__item > a:hover {
+  color: #F90;
+}
+
+.white-button,
+.orange-button {
+  width: 110px;
+  height: 46px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.white-button {
+  color: #2F281E;
+  background-color: #FFF;
+  border: 1px solid #BCD0E5;
+  margin-right: 32px;
+}
+
+.orange-button {
+  color: #FFF;
+  background-color: #F90;
+  border: 1px solid #F90;
+}
+
+.header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 17px;
 }
