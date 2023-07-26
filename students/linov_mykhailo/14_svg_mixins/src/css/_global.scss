@@ -1,114 +1,17 @@
 @include font-face('montserrat-v25-latin-500');
-
-/* montserrat-regular - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('fonts/montserrat-v25-latin-regular.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-500 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    src: url('fonts/montserrat-v25-latin-500.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-600 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    src: url('fonts/montserrat-v25-latin-600.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* montserrat-700 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* poppins-700 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    src: url('fonts/poppins-v20-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-
-/* figtree-700 - latin */
-@font-face {
-    font-display: swap;
-    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Figtree';
-    font-style: normal;
-    font-weight: 700;
-    src: url('fonts/figtree-v4-latin-700.woff2') format('woff2');
-    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
+@include font-face('montserrat-v25-latin-600', 600);
+@include font-face('montserrat-v25-latin-700', 700);
+@include font-face('montserrat-v25-latin-regular', 400);
+@include font-face('poppins-v20-latin-700', 700, normal, $button-font-name);
+@include font-face('figtree-v4-latin-700', 700, normal, $gotham-font-name);
 
 body {
+    font-family: $main-font;
     background-color: $default-body-color;
-    font-family: $main-font;
-    font-size: 14px;
-    font-style: normal;
-    text-align: center;
 }
 
-.container {
-    padding: $container-padding;
-    max-width: $container-max-width;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 90px;
-}
+@include grid;
 
-.row {
-    display: flex;
-    justify-content: center;
-}
-
-.col-6 {
-    width: 50%;
-    max-width: 430px;
-    padding-top: 66px;
-    padding-bottom: 66px;
-}
-
-.col-6:first-child {
-    border-right: 1px solid $color-gold;
-    padding-right: 85px;
-}
-
-.col-6:last-child {
-    padding-left: 85px;
-}
-
-p {
-    color: $color-text;
-    font-family: $main-font;
-    font-weight: 500;
-    line-height: 24px;
-    font-size: 14px;
+a {
+    text-decoration: none;
 }
