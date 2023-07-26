@@ -1,0 +1,8 @@
+@mixin font-face($_font-name, $_font-weight: 500, $_font-style: normal, $_font-family: $default-font-name) {
+    @font-face {
+        font-family: $default-font-name;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
+    }
+}
