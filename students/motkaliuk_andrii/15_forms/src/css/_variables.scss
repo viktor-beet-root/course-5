@@ -1,4 +1,4 @@
-$white-color: #fff;
+$light-gray-color: #ececec;
 $gray-color: #c7c8ca;
 $black-color: #000000;
 $blue-color: #045aaf;
@@ -10,40 +10,9 @@ $default-font-name: 'Roboto';
 $fallback: Arial, Helvetica, sans-serif;
 $main-font: $default-font-name, $fallback;
 
-$container-padding: 15px;
-$container-max-width: 1200px;
+$container-padding: 30px 30px;
+$container-max-width: 450px;
 
 $font-path: './fonts/';
 $default-width: 600px;
 $gap: 15px;
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    // justify-items: center;
-}
-
-.col-12 {
-    max-width: calc(100% / 12 * 12);
-    width: 100%;
-}
-
-.col-8 {
-    max-width: calc(100% / 12 * 8);
-    width: 100%;
-}
-
-.col-6 {
-    max-width: calc(100% / 12 * 6);
-    width: 100%;
-}
-
-.col-4 {
-    max-width: calc(100% / 12 * 4);
-    width: 100%;
-}
-
-.jst-left {
-    display: flex;
-    justify-content: flex-start;
-}
