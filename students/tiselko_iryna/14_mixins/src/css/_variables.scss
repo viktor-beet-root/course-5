@@ -1,9 +1,9 @@
 // colors
 $color-white: #fff;
-$color-lightgray: #898F8F;
-$color-gray: #666;
-$color-darkgray: #333;
-$color-gold: #FC0;
+$color-lightblue: #BCD0E5;
+$color-gray: #544837;
+$color-darkgray: #2F281E;
+$color-orange: #F90;
 
 // fonts
 $default-font-name: 'Montserrat';
@@ -15,23 +15,25 @@ $btn-font-name: $extended-font-name, $fallback;
 $font-path: './fonts/';
 
 // font-size
-$default-font-size: 14px;
-$h1-font-size: 60px;
+$default-font-size: 16px;
+$h1-font-size: 44px;
 $h2-font-size: 36px;
-$h3-font-size: 24px;
-$h4-font-size: 24px;
-$h5-font-size: 24px;
-$subtitle: 18px;
+$h3-font-size: 22px;
+$h4-font-size: 20px;
+$h5-font-size: 16px;
 $btn-font-size: inherit;
 
 
 // font-weight
 $default-font-weight: 500;
+$headline-font-weight: 700;
+$btn-font-weight: 600;
+$extended-font-weight: 400;
 
 
 // container
 $container-padding: 15px;
-$container-max-width: 1170px;
+$container-max-width: 1200px;
 $gap: 15px;
 
 // grid

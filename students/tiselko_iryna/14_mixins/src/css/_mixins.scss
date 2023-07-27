@@ -4,9 +4,11 @@
     flex-wrap: wrap;
 }
 
-@mixin flexnew ($_jst-cont: center, $_flex-wrap: wrap) {
+@mixin flexvariables ($_jst-cont: center, $_align-items: center, $_flex-direction: row, $_flex-wrap: wrap) {
     display: flex;
+    flex-direction: $_flex-direction;
     justify-content: $_jst-cont;
+    align-items: $_align-items;
     flex-wrap: $_flex-wrap;
 }
 
@@ -18,6 +20,12 @@
         src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
     }
 }
+
+@mixin border ($_border: 1px solid $color-lightblue, $_background-color: $color-white) {
+    border: $_border;
+    background-color: $_background-color;
+}
+
 
 @mixin test {
     @include flex;

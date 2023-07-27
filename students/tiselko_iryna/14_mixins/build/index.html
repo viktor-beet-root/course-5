@@ -11,7 +11,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container header">
             <div class="row">
                 <div class="col-4">
                     <div class="logo">
@@ -30,12 +30,12 @@
                     <div class="menu__btn">
                         <div class="menu__btn up">
                             <button class="up__btn">
-                                <span class="up__btn__text">Sign Up</span>
+                                <span class="up__btn-text">Sign Up</span>
                             </button>
                         </div>
                         <div class="menu__btn in">
                             <button class="in__btn">
-                                <span class="in__btn__text">Sign In</span>
+                                <span class="in__btn-text">Sign In</span>
                             </button>
                         </div>
                     </div>
@@ -49,20 +49,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <h1 class="content__title">The Design Thinking superpowers</h1>
-                        <p class="content__text">Tools, tutorials, design and innovation experts, all in one
-                            place!
-                            The
-                            most intuitive way to imagine your next user experience.
-                        </p>
-                        <div class="input__btn__block">
-                            <button class="input__btn">
-                                <span class="input__btn_text">Get started</span>
-                            </button>
+                        <div class="text-area">
+                            <h1 class="content__title">The Design Thinking superpowers</h1>
+                            <p class="content__text">Tools, tutorials, design and innovation experts, all in one
+                                place!
+                                The
+                                most intuitive way to imagine your next user experience.
+                            </p>
+                            <div class="wrapper__block input">
+                                <button class="input__btn">
+                                    <span class="input__btn__text">Sign up Now</span>
+                                </button>
+                            </div>
+
                         </div>
                     </div>
-                    <div class="col-6"><img class="hero__container-img" src="images/hero/hero_img.svg"
-                            alt="design_superpowers"></div>
+                    <div class="col-6">
+                        <img class="hero__container-img" src="images/hero/hero_img.svg" alt="design_superpowers">
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,7 +76,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2 class="tools__title">We design tools to unveil your superpowers</h2>
+                            <h2 class="tools__title">We design tools to unveil <br> your superpowers</h2>
                             <div class="tools__wraper">
                                 <div class="tools__content card">
                                     <img class="card__icon" src="images/tools/klick.svg" alt="icon_klick">
@@ -96,9 +100,9 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="input__btn__block">
-                                <button class="input__btn">
-                                    <span class="input__btn_text">Sign up Now</span>
+                            <div class="tools__sign-up">
+                                <button class="sign-up__btn">
+                                    <span class="sign-up__btn__text">Sign up Now</span>
                                 </button>
                             </div>
                         </div>
@@ -111,19 +115,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <p class="subtitle">Effortless Validation for</p>
-                        <h2>Design Professionals</h2>
-                        <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices
-                            and the overall personality of the person.</p>
-                        <h5>Accessory makers</h5>
-                        <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the
-                            fun</p>
-                        <h5>Alterationists</h5>
-                        <p>If you are looking for a new way to promote your business that won’t cost you more money,
-                        </p>
-                        <h5>Custom Design designers</h5>
-                        <p>If you are looking for a new way to promote your business that won’t cost you more money,
-                        </p>
+                        <div class="text-area">
+                            <p class="professionals__subcontent">Effortless Validation for</p>
+                            <h2 class="professionals__title">Design Professionals</h2>
+                            <p class="professionals__mcontent">The Myspace page defines the individual, his or her
+                                characteristics, traits, personal choices
+                                and the overall personality of the person.</p>
+                            <h5 class="professionals__subtitle">Accessory makers</h5>
+                            <p class="professionals__content">While most people enjoy casino gambling, sports betting,
+                                lottery and bingo playing for the
+                                fun</p>
+                            <h5 class="professionals__subtitle">Alterationists</h5>
+                            <p class="professionals__content">If you are looking for a new way to promote your business
+                                that
+                                won’t cost you more money,
+                            </p>
+                            <h5 class="professionals__subtitle">Custom Design designers</h5>
+                            <p class="professionals__content">If you are looking for a new way to promote your business
+                                that
+                                won’t cost you more money,
+                            </p>
+                        </div>
                     </div>
                     <div class="col-6">
                         <img src="./images/professionals/Proffesionals.svg" alt="proffesionals">
@@ -135,23 +147,37 @@
 
         <section class="pm">
             <div class="container">
-                <div class="row">
+                <div class="row pm">
                     <div class="col-6">
-                        <p class="subtitle">Easier decision making for</p>
-                        <h2>Product Managers</h2>
-                        <p>The Myspace page defines the individual, his or her characteristics, traits, personal choices
+                        <p class="pm__subtitle">Easier decision making for</p>
+                        <h2 class="pm__title">Product Managers</h2>
+                        <p class="pm__content">The Myspace page defines the individual, his or her characteristics,
+                            traits, personal
+                            choices
                             and the overall personality of the person.</p>
-                        <ul>
-                            <li>Never worry about overpaying for your energy bill again. </li>
-                            <li>We will only switch you to energy companies that we trust and will treat you right.</li>
-                            <li>We track the markets daily and know where the savings are.</li>
+                        <ul class="pm__list">
+                            <li class="pm__item">
+                                <img src="./images/pm/marker.svg" alt="pm__item__marker">
+                                <span class="pm__item__content">Never worry about overpaying for
+                                    your
+                                    energy bill again. </span>
+                            </li>
+                            <li class="pm__item">
+                                <img src="./images/pm/marker.svg" alt="pm__item__marker">
+                                <span class="pm__item__content">We will only switch you to energy
+                                    companies that we trust and will treat you right.</span>
+                            </li>
+                            <li class="pm__item">
+                                <img src="./images/pm/marker.svg" alt="pm__item__marker">
+                                <span class="pm__item__content">We track the markets daily and know
+                                    where the savings are.</span>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-6">
                         <img src="./images/pm/pm.svg" alt="proffesionals">
                     </div>
                 </div>
-
             </div>
         </section>
 
@@ -159,19 +185,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <p class="subtitle">Optimisation for</p>
-                        <h2>Marketers</h2>
-                        <p>Few would argue that, despite the advancements of feminism over the past three decades, women
-                            still face a double standard when it comes to their behavior.</p>
-                        <h5>Accessory makers</h5>
-                        <p>While most people enjoy casino gambling, sports betting, lottery and bingo playing for the
-                            fun</p>
-                        <h5>Alterationists</h5>
-                        <p>If you are looking for a new way to promote your business that won’t cost you more money,
-                        </p>
-                        <h5>Custom Design designers</h5>
-                        <p>If you are looking for a new way to promote your business that won’t cost you more money,
-                        </p>
+                        <div class="text-area">
+                            <p class="marketers__subcontent">Optimisation for</p>
+                            <h2 class="marketers__title">Marketers</h2>
+                            <p class="marketers__mcontent">Few would argue that, despite the advancements of feminism
+                                over
+                                the past three decades, women
+                                still face a double standard when it comes to their behavior.</p>
+                            <h5 class="marketers__subtitle">Accessory makers</h5>
+                            <p class="marketers__content">While most people enjoy casino gambling, sports betting,
+                                lottery
+                                and bingo playing for the
+                                fun</p>
+                            <h5 class="marketers__subtitle">Alterationists</h5>
+                            <p class="marketers__content">If you are looking for a new way to promote your business that
+                                won’t cost you more money,
+                            </p>
+                            <h5 class="marketers__subtitle">Custom Design designers</h5>
+                            <p class="marketers__content">If you are looking for a new way to promote your business that
+                                won’t cost you more money,
+                            </p>
+                        </div>
                     </div>
                     <div class="col-6">
                         <img src="./images/marketers/marketers.svg" alt="marketers">
@@ -184,38 +218,38 @@
 
     <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-3">
+            <div class="row footer">
+                <div class="col-2">
                     <div class="logo">
                         <img class="logo_img" src="./images/logo/Logo.svg" alt="logo">
                     </div>
                 </div>
-                <div class="col-3">
-                    <h4>Quick Links</h4>
-                    <ul class="links__caption">
+                <div class="col-2">
+                    <h4 class="links__caption">Quick Links</h4>
+                    <ul class="links__menu">
                         <li class="links__item"><a href="#" class="links__url">About Us</a></li>
                         <li class="links__item"><a href="#" class="links__url">Blog</a></li>
                         <li class="links__item"><a href="#" class="links__url">Contact</a></li>
                         <li class="links__item"><a href="#" class="links__url">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
-                    <h4>Legal Stuff</h4>
-                    <ul class="links__caption">
+                <div class="col-2">
+                    <h4 class="links__caption">Legal Stuff</h4>
+                    <ul class="links__menu">
                         <li class="links__item"><a href="#" class="links__url">Disclaimer</a></li>
                         <li class="links__item"><a href="#" class="links__url">Financing</a></li>
                         <li class="links__item"><a href="#" class="links__url">Privacy Policy</a></li>
                         <li class="links__item"><a href="#" class="links__url">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <h4 class="input__caption">Knowing you're always on<br>the best energy deal.</h4>
                     <div class="input__block">
                         <input class="input__box" type="tel" name="telnum" id="" placeholder="Enter your phone Number">
                     </div>
-                    <div class="input__btn__block">
+                    <div class="wrapper__block input">
                         <button class="input__btn">
-                            <span class="input__btn_text">Sign up Now</span>
+                            <span class="input__btn__text">Sign up Now</span>
                         </button>
                     </div>
                 </div>

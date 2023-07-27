@@ -1,0 +1,18 @@
+.hero {
+    margin-bottom: 99px;
+    // .hero__container-img
+}
+
+.content {
+
+    // .content__title
+    &__title {
+        padding-top: 97px;
+        padding-bottom: 30px;
+    }
+
+    // .content__text
+    &__text {
+        padding-bottom: 20px;
+    }
+}

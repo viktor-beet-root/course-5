@@ -10,35 +10,71 @@ body {
     font-size: $default-font-size;
     font-weight: $default-font-weight;
     font-style: normal;
-    line-height: 24px;
+    line-height: 26px;
+    color: $color-gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: $headline-font-weight;
     color: $color-darkgray;
 }
 
 h1 {
     font-size: $h1-font-size;
-    color: $color-gold;
+    line-height: 54px;
 }
 
 h2 {
     font-size: $h2-font-size;
-    color: $color-gray;
+    line-height: normal;
 }
 
 h3 {
     font-size: $h3-font-size;
-    color: $color-gray;
+    line-height: normal;
 }
+
+h4 {
+    font-size: $h4-font-size;
+    line-height: 30px;
+}
+
+h5 {
+    font-size: $h5-font-size;
+    line-height: 26px;
+}
+
+
+a {
+    text-decoration: none;
+}
+
 
 button {
     font-family: $btn-font-name;
     font-size: inherit;
-    font-weight: 700;
-    line-height: 14px;
-    color: $color-gray;
-    border: 1px solid $color-gold;
-    background-color: $color-white;
+    font-style: inherit;
+    font-weight: $btn-font-weight;
     text-align: center;
-    text-transform: uppercase;
+    border: none
 }
 
 @include grid;
+
+.row {
+    justify-content: space-between;
+    align-items: center
+}
+
+.input__btn,
+.sign-up__btn {
+    @include border (none, $color-orange);
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    color: $color-white;
+}

@@ -1,0 +1,31 @@
+.professionals {
+    margin-bottom: 100px;
+
+    // .professionals__mcontent
+
+    &__mcontent {
+        padding-bottom: 40px;
+    }
+
+    // .professionals__content
+
+    &__content {
+        padding-bottom: 30px;
+
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+    }
+
+    // .professionals__title
+
+    &__title {
+        padding-bottom: 20px;
+    }
+
+    // .professionals__subtitle
+
+    &__subtitle {
+        padding-bottom: 10px;
+    }
+}

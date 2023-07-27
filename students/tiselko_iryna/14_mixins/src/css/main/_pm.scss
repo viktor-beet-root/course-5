@@ -1,0 +1,46 @@
+.pm {
+    margin-bottom: 100px;
+    flex-direction: row-reverse;
+
+    // .pm__subtitle
+
+    &__subtitle {
+        padding-left: 100px;
+    }
+
+    // .pm__title
+
+    &__title {
+        padding-left: 100px;
+        padding-bottom: 20px;
+    }
+
+    // .pm__content
+
+    &__content {
+        padding-left: 100px;
+        padding-bottom: 40px;
+    }
+
+    // .pm__list
+
+    &__list {
+        padding-left: 100px;
+    }
+
+    // .pm__item
+
+    &__item {
+        display: flex;
+        padding-bottom: 30px;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &__content {
+            padding-left: 30px;
+        }
+    }
+
+}
