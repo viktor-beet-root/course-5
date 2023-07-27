@@ -1,0 +1,11 @@
+.form {
+    box-sizing: border-box;
+
+    &__list {
+        list-style-type: none;
+
+        & li {
+            padding-bottom: 15px;
+        }
+    }
+}
