@@ -1,0 +1,44 @@
+@include font-face('montserrat-v25-latin-regular');
+@include font-face('montserrat-v25-latin-500', 500);
+@include font-face('montserrat-v25-latin-600', 600);
+@include font-face('montserrat-v25-latin-700', 700);
+@include font-face('poppins-v20-latin-700', 700);
+
+
+body {
+    font-family: $main-font;
+    font-size: $default-font-size;
+    font-weight: $default-font-weight;
+    font-style: normal;
+    line-height: 24px;
+    color: $color-darkgray;
+}
+
+h1 {
+    font-size: $h1-font-size;
+    color: $color-gold;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    color: $color-gray;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    color: $color-gray;
+}
+
+button {
+    font-family: $btn-font-name;
+    font-size: inherit;
+    font-weight: 700;
+    line-height: 14px;
+    color: $color-gray;
+    border: 1px solid $color-gold;
+    background-color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@include grid;
