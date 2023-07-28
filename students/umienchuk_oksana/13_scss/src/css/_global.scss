@@ -1,0 +1,65 @@
+/* raleway-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: $default-font-name;
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$font-path}raleway-v28-latin-regular.woff2') format('woff2');
+}
+
+/* raleway-500 - latin */
+@font-face {
+    font-display: swap;
+    font-family: $default-font-name;
+    font-style: normal;
+    font-weight: 500;
+    src: url('#{$font-path}raleway-v28-latin-500.woff2') format('woff2');
+}
+
+/* roboto-900 - latin */
+@font-face {
+    font-display: swap;
+    font-family: $font-name-title;
+    font-style: normal;
+    font-weight: 900;
+    src: url('#{$font-path}roboto-v30-latin-900.woff2') format('woff2');
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    font-family: $font-name-btn;
+    font-style: normal;
+    font-weight: 700;
+    src: url('#{$font-path}open-sans-v35-latin-700.woff2') format('woff2');
+}
+
+body {
+    font-family: $main-font;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.container {
+    max-width: $container-max-widt;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+.row {
+    width: 100%;
+}
+
+.row-6 {
+    width: 50%;
+}
+
+main {
+    padding: 122px 135px;
+}
+
+a {
+    text-decoration: none;
+}
