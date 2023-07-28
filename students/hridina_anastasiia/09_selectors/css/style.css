@@ -23,8 +23,15 @@
     src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
 }
 
+body {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: normal;
+    letter-spacing: .5px;
+    text-align: center;
+}
+
 .container {
-    max-width: 940px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -59,7 +66,7 @@ li {
 }
 
 .container__heading {
-    max-width: 940px;
+    max-width: 970px;
     margin: 0 auto;
     padding: 15px;
     padding-bottom: 45px;
@@ -70,10 +77,10 @@ li {
     font-weight: 700;
 }
 
-.section {
+.aboutme {
     background-color: #F6F6F6;
-    padding: 15px;
-    padding-bottom: 45px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .aboutme p span {
@@ -87,15 +94,17 @@ li {
 }
 
 .skill-set {
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 15px;
+    padding-top: 50px;
     padding-bottom: 60px;
 }
 
 .figures>div {
     display: inline-block;
-    padding-right: 50px;
+    padding-right: 90px;
+}
+
+.figure-one {
+    padding-left: 80px;
 }
 
 figcaption {
@@ -112,13 +121,14 @@ figcaption {
 
 .skills h3 {
     font-weight: 400;
+    padding-bottom: 30px;
 }
 
 
 .portfolio-list {
     background-color: #F6F6F6;
-    padding: 15px;
-    padding-bottom: 45px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .fashion-store h2 {
