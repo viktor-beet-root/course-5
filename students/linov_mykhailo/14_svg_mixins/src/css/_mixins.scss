@@ -40,7 +40,27 @@
     }
 }
 
-@mixin flex {
+@mixin flex-center {
     display: flex;
     justify-content: center;
+}
+
+@mixin flex-jst-sbw {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-jst-sbw-col {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+@mixin font-family ($_weight: 500, $_size: 16px, $_color: $color-text, $_height: 26px, $_family: $main-font, $_style: normal) {
+    font-weight: $_weight;
+    font-size: $_size;
+    color: $_color;
+    line-height: $_height;
+    font-family: $_family;
+    font-style: $_style;
 }

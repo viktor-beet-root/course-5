@@ -9,6 +9,7 @@ body {
     font-weight: 500;
     background-color: $default-body-color;
     color: $color-text;
+    line-height: 26px;
 }
 
 body,
@@ -19,15 +20,27 @@ a {
 
 @include grid;
 
+section:first-of-type {
+    padding-top: 70px;
+}
 
+section {
+    padding-top: 100px;
+}
+
+.container {
+
+    // .container__centered
+
+    &__centered {
+        margin: 0 auto;
+        text-align: center;
+        width: 539px;
+        padding-bottom: 30px;
+    }
+}
 
 a {
     text-decoration: none;
     color: $color-text;
-}
-
-
-
-section {
-    padding-bottom: 100px;
 }

@@ -1,16 +1,21 @@
+.buttons {
+    @include flex-jst-sbw;
+    width: 252px;
+    padding-left: calc(100% - 252px);
+}
+
 .white-button,
 .orange-button {
-    width: 110px;
-    height: 46px;
     font-weight: 600;
     border-radius: 4px;
+    padding: 10px 25px;
+    text-align: center;
 }
 
 .white-button {
     color: $color-title;
     background-color: $default-body-color;
     border: 1px solid $color-placeholder;
-    margin-right: 32px;
 }
 
 .orange-button {
