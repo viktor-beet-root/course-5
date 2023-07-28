@@ -1,55 +1,59 @@
-.caption p {
-    text-align: center;
-    font-family: $default-font-name, $fallback;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: $color-sub-text;
-    margin-bottom: 15px;
-}
+.header {
 
-h1 {
-    color: $color-gold;
-    text-align: center;
-    font-family: $font-name-title;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 66px;
-    text-transform: uppercase;
-    padding: 0 73px 50px 73px;
-    z-index: 1;
-}
+    .caption p {
+        text-align: center;
+        font-family: $default-font-name, $fallback;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $color-sub-text;
+        margin-bottom: 15px;
+    }
 
-.caption {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 40px;
-}
+    h1 {
+        color: $color-gold;
+        text-align: center;
+        font-family: $font-name-title;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 66px;
+        text-transform: uppercase;
+        padding: 0 73px 50px 73px;
+        z-index: 1;
+    }
 
-h1::after {
-    content: '';
-    width: 450px;
-    height: 1px;
-    background-color: $color-gold;
-    z-index: 2;
-    position: absolute;
-    left: 50%;
-    transform: $transform-center;
-    bottom: 10px;
-}
+    .caption {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 40px;
+    }
 
-h1::before {
-    content: '';
-    background-image: url('../../images/bonfire-sharp-1.svg');
-    height: 20px;
-    width: 20px;
-    background-color: #fff;
-    position: absolute;
-    z-index: 3;
-    left: 50%;
-    transform: $transform-center;
-    bottom: -10px;
+    h1::after {
+        content: '';
+        width: 450px;
+        height: 1px;
+        background-color: $color-gold;
+        z-index: 2;
+        position: absolute;
+        left: 50%;
+        transform: $transform-center;
+        bottom: 10px;
+    }
+
+    h1::before {
+        content: '';
+        background-image: url('../../images/bonfire-sharp-1.svg');
+        height: 20px;
+        width: 20px;
+        background-color: #fff;
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        transform: $transform-center;
+        bottom: -10px;
+    }
+
 }
