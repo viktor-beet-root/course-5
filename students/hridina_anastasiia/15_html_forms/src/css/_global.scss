@@ -13,4 +13,11 @@ body {
 .container {
     padding: $container-padding;
     max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.col-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
