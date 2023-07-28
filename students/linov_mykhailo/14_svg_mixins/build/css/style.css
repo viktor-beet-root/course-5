@@ -941,12 +941,16 @@ a {
   flex-basis: 100%;
 }
 
+section {
+  padding-bottom: 100px;
+}
+
 section:first-of-type {
   padding-top: 70px;
 }
 
-section {
-  padding-top: 100px;
+section:last-of-type {
+  padding-bottom: 0;
 }
 
 .container__centered {
@@ -1078,6 +1082,8 @@ h4 {
 .bg-cemicercle {
   background-image: url(../../images/svg/bg.svg);
   background-repeat: no-repeat;
+  background-position: bottom 60px center;
+  background-size: cover;
 }
 
 .section-title > h2 {

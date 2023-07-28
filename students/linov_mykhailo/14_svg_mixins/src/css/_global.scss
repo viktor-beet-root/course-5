@@ -20,12 +20,16 @@ a {
 
 @include grid;
 
+section {
+    padding-bottom: 100px;
+}
+
 section:first-of-type {
     padding-top: 70px;
 }
 
-section {
-    padding-top: 100px;
+section:last-of-type {
+    padding-bottom: 0;
 }
 
 .container {
