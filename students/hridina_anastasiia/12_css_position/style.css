@@ -92,7 +92,6 @@
 
 .wrapper {
     max-width: 1440px;
-    height: 4000px;
     margin: 0 auto;
     padding: 15px;
     display: flex;
@@ -103,7 +102,6 @@
     margin-top: 80px;
     width: 40%;
     text-align: left;
-    height: 4000px;
 }
 
 .nav {
@@ -115,6 +113,7 @@
 .main {
     max-width: 1440px;
     width: 60%;
+    height: 5000px;
     margin-top: 60px;
     padding: 15px;
     font-family: PT Sans;
