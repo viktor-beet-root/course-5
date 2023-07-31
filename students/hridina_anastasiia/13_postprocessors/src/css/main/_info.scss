@@ -1,13 +1,15 @@
-.vertical-line {
+.info {
     position: relative;
-    padding: 15px;
+    top: 70px;
+    left: 50px;
 
-    &::after {
+    &::before {
         content: '';
-        position: absolute;
-        top: -250px;
         border-left: 1px solid $color-gold;
+        position: absolute;
         height: 560px;
+        top: -70px;
+        left: -50px;
     }
 }
 
@@ -20,14 +22,14 @@
     font-weight: 900;
     text-transform: capitalize;
     padding-bottom: 30px;
-    position: relative;
+
 
     &::after {
         content: '';
         border-bottom: 1px solid $color-gold;
         width: 100px;
         padding-bottom: 65px;
-        left: 210px;
+        left: 230px;
         position: absolute;
     }
 }
@@ -55,6 +57,8 @@
 }
 
 .description {
+    width: 430px;
+    height: 116px;
     text-align: center;
     color: $color-darkgray;
     font-family: 'Raleway', $fallback;
@@ -62,39 +66,37 @@
     font-weight: 500;
     line-height: 24px;
     padding-bottom: 20px;
-}
-
-.divider {
     position: relative;
-    display: flex;
-    content: '';
-    max-width: 20px;
-    left: calc(50% - 10px);
-    width: 100%;
-    border-bottom: 4px solid $color-gold;
+    left: 70px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        border: 4px solid $color-gold;
+        width: 10px;
+        height: 4px;
+        top: 138px;
+        left: 170px;
+        right: 200px;
+    }
 
     &::before {
-        position: absolute;
         content: '';
-        max-width: 10px;
-        width: 100%;
-        left: calc(50% - 25px);
+        position: absolute;
         border-bottom: 4px solid $color-gold;
+        width: 20px;
+        height: 4px;
+        top: 138px;
+        left: 190px;
     }
 
-    &::after {
-        position: absolute;
-        content: '';
-        max-width: 10px;
-        width: 100%;
-        right: calc(50% - 25px);
-        border-bottom: 4px solid $color-gold;
-    }
 }
+
 
 .button {
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 button {

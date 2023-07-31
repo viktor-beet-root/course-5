@@ -1,6 +1,4 @@
 .heading {
-    margin: 0 auto;
-    max-width: 450px;
 
     &__top {
         text-align: center;
@@ -14,41 +12,34 @@
     }
 
     &__bottom {
-        margin: 0;
+        margin: 0 auto;
         color: $color-gold;
         text-align: center;
         font-family: 'Roboto', $fallback;
         font-size: 60px;
         font-weight: 900;
         line-height: 66px;
+        padding-bottom: 40px;
         text-transform: uppercase;
+        position: relative;
 
-    }
-}
+        &::after,
+        &::before {
+            content: '';
+            border-bottom: 1px solid $color-gold;
+            position: absolute;
+            width: 210px;
+            height: 1px;
+            top: 90%;
+        }
 
-.horizontal-line {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    position: relative;
+        &::before {
+            left: -80px;
+        }
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 330px;
-        bottom: 15px;
-        max-width: 210px;
-        width: 100%;
-        border: 1px solid $color-gold;
-    }
+        &::after {
+            right: -80px;
+        }
 
-    &::after {
-        content: '';
-        position: absolute;
-        right: 330px;
-        bottom: 15px;
-        max-width: 210px;
-        width: 100%;
-        border: 1px solid $color-gold;
     }
 }
