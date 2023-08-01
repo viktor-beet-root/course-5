@@ -1,4 +1,4 @@
-bodY {
+body {
     font-family: Open Sans, Arial, Helvetica, sans-serif;
     color: #070707;
 }
@@ -17,7 +17,7 @@ a[class="portfolio_links"] {
 }
 
 h1 {
-    font-size: 47.339px;
+    font-size: 48px;
     font-weight: 700;
 }
 
