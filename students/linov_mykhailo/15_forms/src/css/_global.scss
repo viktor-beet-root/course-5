@@ -4,8 +4,12 @@
 
 body {
     font-family: $main-font;
-    background-color: $default-body-color;
+    background-color: $white-color;
     font-size: $default-font-size;
 }
 
 @include grid();
+
+.container {
+    background-color: $gray-3-color;
+}
