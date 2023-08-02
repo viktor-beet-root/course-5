@@ -1,11 +1,8 @@
-.wrapper {
-    background: #FFE5D2A0, #FFF4E500;
-    background-image: linear-gradient(0deg, rgba(255, 229, 210, 0.63) 0%, rgba(255, 244, 229, 0.00) 100%);
+.block__tools {
+    background-image: url(../images/background.svg);
     background-size: cover;
-    border-radius: 50%;
-    border-top-left-radius: 15%;
-    border-top-right-radius: 15%;
-    padding-bottom: 60px;
+    background-position: center bottom;
+    padding-bottom: 40px;
 }
 
 .tools {

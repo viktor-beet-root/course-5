@@ -1,6 +1,7 @@
 @mixin flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
@@ -10,16 +11,17 @@
     flex-wrap: $_flex-wrap;
 }
 
-@mixin button-orng {
-    border-radius: 4px;
-    border: none;
+@mixin button-orng ($_brd_rad: 4px, $_brd: none, $_font-size: 16px, $_font-weight: 700) {
+    border-radius: $_brd_rad;
+    border: $_brd;
     background-color: $color-orange;
     color: $color-white;
+    padding: 13px 40px;
     width: 180px;
     height: 50px;
     text-align: center;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: $_font-size;
+    font-weight: $_font-weight;
     cursor: pointer;
 
     &:hover {
@@ -134,7 +136,7 @@
     }
 
     @for $i from 1 through $count {
-        $width: 100% / $count * $i;
+        $width: math.div(100%, $count)t * $i;
 
         .col-#{$i} {
             max-width: $width;

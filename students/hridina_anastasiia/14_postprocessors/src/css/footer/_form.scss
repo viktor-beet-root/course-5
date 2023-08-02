@@ -1,4 +1,9 @@
-.form h4 {
+.form {
+    display: flex;
+    gap: 25px;
+}
+
+.form__heading {
     margin-top: 0;
     color: $color-darkgray;
     font-size: 20px;
@@ -6,11 +11,7 @@
     line-height: 30px;
 }
 
-.form {
-
-    &__number {
-        padding-bottom: 25px;
-    }
+.form__number {
 
     input {
         border: 1px solid $color-lightblue;
@@ -19,6 +20,7 @@
         height: 50px;
         padding: 0px 10px;
     }
+
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -34,4 +36,5 @@
 
 .button__footer {
     @include button-orng;
+    width: 190px;
 }
