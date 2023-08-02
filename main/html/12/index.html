@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felxbox</title>
+    <style>
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            /* flex-direction: column; */
+            /* justify-content: space-between; */
+            border: 1px solid;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .item {
+            flex-grow: 1;
+            /* max-width: 50px;
+            width: 100%; */
+            background-color: lightgrey;
+        }
+
+        .item:nth-child(2) {
+            align-self: center;
+        }
+
+        /* .item:nth-child(3) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .item:last-child {
+            margin-right: auto;
+        } */
+
+        /* .item:nth-child(5) {
+            width: auto;
+            max-width: none;
+            flex-grow: 1;
+        } */
+
+        /* .item:last-child {
+            flex-grow: 1;
+            width: auto;
+            max-width: none;
+        } */
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="item">1<br>sdf</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4 <br>sdf<br>sdf<br>sdf</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+
+</html>

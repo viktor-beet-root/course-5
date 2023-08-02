@@ -1,0 +1,82 @@
+body {
+    font-size: 18px;
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #070707;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav a:link {
+    color: #828282;
+    text-decoration: none;
+}
+
+nav a:visited {
+    color: #828282;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #070707;
+    font-weight: 600;
+}
+
+nav a:focus {
+    color: #070707;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.skills_item figure>figcaption {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+footer p:nth-child(5) {
+    color: #828282;
+    font-size: 14px;
+}
+
+button {
+    background-color: #070707;
+    width: 180px;
+    height: 44px;
+    padding: 0px 16px;
+    border-radius: 22px;
+}
+
+button:hover {
+    background-color: #828282;
+    border-color: #828282;
+}
+
+span {
+    color: white;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+}
+
+ul[class$="list"] {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #070707;
+    text-decoration: underline;
+}
