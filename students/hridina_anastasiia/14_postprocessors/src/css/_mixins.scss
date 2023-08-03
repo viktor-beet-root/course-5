@@ -136,7 +136,7 @@
     }
 
     @for $i from 1 through $count {
-        $width: math.div(100%, $count)t * $i;
+        $width: math.div(100%, $count) * $i;
 
         .col-#{$i} {
             max-width: $width;

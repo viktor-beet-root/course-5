@@ -1,6 +1,7 @@
 .heading__left {
 
     padding-top: 50px;
+    padding-bottom: 30px;
     color: $color-darkgray;
     font-size: 44px;
     font-weight: 700;
@@ -12,6 +13,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
+    padding-bottom: 20px;
 }
 
 .heading__center {
@@ -35,8 +37,8 @@
     color: $color-darkgray;
     font-size: 36px;
     font-weight: 700;
-    line-height: normal;
     margin-top: 0;
+    padding-bottom: 20px;
 }
 
 
@@ -54,6 +56,7 @@
     font-size: 36px;
     font-weight: 700;
     margin-top: 0;
+    padding-bottom: 20px;
 }
 
 
@@ -72,4 +75,5 @@
     font-weight: 700;
     line-height: normal;
     margin-top: 0;
+    padding-bottom: 20px;
 }

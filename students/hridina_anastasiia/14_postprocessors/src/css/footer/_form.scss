@@ -1,5 +1,6 @@
 .form {
     display: flex;
+    flex-direction: column;
     gap: 25px;
 }
 
@@ -11,28 +12,26 @@
     line-height: 30px;
 }
 
-.form__number {
-
-    input {
-        border: 1px solid $color-lightblue;
-        border-radius: 4px;
-        width: 340px;
-        height: 50px;
-        padding: 0px 10px;
-    }
-
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    input[type=number] {
-        -moz-appearance: textfield;
-    }
-
+.number {
+    border: 1px solid $color-lightblue;
+    border-radius: 4px;
+    width: 340px;
+    height: 50px;
+    padding: 0px 10px;
 }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
 
 .button__footer {
     @include button-orng;
