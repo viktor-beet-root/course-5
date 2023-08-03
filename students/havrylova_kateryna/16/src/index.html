@@ -66,6 +66,12 @@
                 </div>
                 <div class="col-12 social-list">
                     <input class="input-hidden social-list__input" type="checkbox" name="facebook" id="facebook">
+                    <input class="input-hidden social-list__input" type="checkbox" name="instagram" id="instagram">
+                    <input class="input-hidden social-list__input" type="checkbox" name="linkedin" id="linkedin">
+                    <input class="input-hidden social-list__input" type="checkbox" name="google" id="google">
+                    <input class="input-hidden social-list__input" type="checkbox" name="twitter" id="twitter">
+
+
                     <div class="row social-list__row">
                         <div class="col-6">
                             <p class="social-list__label">Choose your social network</p>
@@ -78,6 +84,43 @@
                                         </svg>
                                     </div>
                                 </li>
+
+                                <li class="social-list__item social-list__item_instagram">
+                                    <label class="social-list__label-item" for="instagram">Instagram</label>
+                                    <div class="social-list__icon icon">
+                                        <svg class="icon__img">
+                                            <use xlink:href="#instagram-brands" />
+                                        </svg>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__item social-list__item_linkedin">
+                                    <label class="social-list__label-item" for="linkedin">Linkedin</label>
+                                    <div class="social-list__icon icon">
+                                        <svg class="icon__img">
+                                            <use xlink:href="#linkedin-in-brands" />
+                                        </svg>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__item social-list__item_google">
+                                    <label class="social-list__label-item" for="google">Google+</label>
+                                    <div class="social-list__icon icon">
+                                        <svg class="icon__img">
+                                            <use xlink:href="#google-plus-g-brands" />
+                                        </svg>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__item social-list__item_twitter">
+                                    <label class="social-list__label-item" for="twitter">Twitter</label>
+                                    <div class="social-list__icon icon">
+                                        <svg class="icon__img">
+                                            <use xlink:href="#twitter-brands" />
+                                        </svg>
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
                         <div class="col-6">
@@ -85,7 +128,7 @@
                             <ul class="social-list__url-items-wrapper">
                                 <li class="social-list__url-item social-list__url-item_facebook">
                                     <div class="form-control form-control__group form-control__group_right">
-                                        <input placeholder="facebook" @@required name="facebook_url"
+                                        <input placeholder="Url Facebook" @@required name="facebook_url"
                                             class="form-control__input form-input" value="" type="text">
                                         <div class="form-control__icon icon">
                                             <svg class="icon__img">
@@ -93,15 +136,81 @@
                                             </svg>
                                         </div>
                                     </div>
-
                                 </li>
+
+                                <li class="social-list__url-item social-list__url-item_instagram">
+                                    <div class="form-control form-control__group form-control__group_right">
+                                        <input placeholder="Url Instagram" @@required name="instagram_url"
+                                            class="form-control__input form-input" value="" type="text">
+                                        <div class="form-control__icon icon">
+                                            <svg class="icon__img">
+                                                <use xlink:href="#instagram-brands" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__url-item social-list__url-item_linkedin">
+                                    <div class="form-control form-control__group form-control__group_right">
+                                        <input placeholder="Url Linkedin" @@required name="linkedin_url"
+                                            class="form-control__input form-input" value="" type="text">
+                                        <div class="form-control__icon icon">
+                                            <svg class="icon__img">
+                                                <use xlink:href="#linkedin-in-brands" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__url-item social-list__url-item_google">
+                                    <div class="form-control form-control__group form-control__group_right">
+                                        <input placeholder="Url Google plus" @@required name="google_url"
+                                            class="form-control__input form-input" value="" type="text">
+                                        <div class="form-control__icon icon">
+                                            <svg class="icon__img">
+                                                <use xlink:href="#google-plus-g-brands" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="social-list__url-item social-list__url-item_twitter">
+                                    <div class="form-control form-control__group form-control__group_right">
+                                        <input placeholder="Url Twitter" @@required name="twitter_url"
+                                            class="form-control__input form-input" value="" type="text">
+                                        <div class="form-control__icon icon">
+                                            <svg class="icon__img">
+                                                <use xlink:href="#twitter-brands" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
 
+
+                <div class="row message__row">
+                    <div class="col-12 ">
+                        <!-- <form class="form" action="#" method="post" autocomplete="off"> -->
+                        <label class="form-control__label" for="message">Message</label>
+                        <div class="input-form">
+                            <textarea class="textarea" name="message" id="message">
+                            </textarea>
+
+                            <div class="message__icon icon">
+                                <svg class="icon__img">
+                                    <use xlink:href="#comment-alt-regular" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- </form> -->
+                    </div>
                 </div>
+
                 <div class="col-12">
                     <div class="row">
                         <div class="col-4">
