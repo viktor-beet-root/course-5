@@ -1,0 +1,32 @@
+// colors
+$color-orange: #FF9900;
+$color-title: #2F281E;
+$color-text: #544837;
+$color-btn-text: #FFFFFF;
+$default-text-color: $color-text;
+
+// fonts
+$fallback: Arial,
+    Helvetica,
+    sans-serif;
+$default-font-name: 'Montserrat;';
+$main-font: $default-font-name,
+    $fallback;
+$title-font: 'Roboto',
+    $fallback;
+$btn-font: 'Open Sans',
+    $fallback;
+$font-path: './fonts/';
+
+//font-size
+$size-menu: 16px;
+$size-h1: 44px;
+$size-h2: 36px;
+$size-h3: 22px;
+$size-text: 16px;
+$default-font-size: $size-text;
+
+// container
+$default-width: 1200px;
+$container-max-width: $default-width;
+$default-coutn-col: 6;

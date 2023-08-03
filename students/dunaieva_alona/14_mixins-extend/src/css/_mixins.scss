@@ -1,0 +1,20 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin vertical-center($_jst-cont, $_align_items) {
+    display: flex;
+    justify-content: $_jst-cont;
+    align-items: $_align_items;
+}
+
+//fonts
+@mixin font-face($_font-name, $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name) {
+    @font-face {
+        font-family: $_font-family;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: url('#{$font-path}#{$_font-name}.woff2') format('woff2')
+    }
+}
