@@ -23,23 +23,22 @@
         text-transform: uppercase;
         position: relative;
 
-        &::after,
-        &::before {
+        &::after {
             content: '';
             border-bottom: 1px solid $color-gold;
             position: absolute;
-            width: 210px;
+            width: 440px;
             height: 1px;
             top: 90%;
+            left: -65px;
         }
 
         &::before {
-            left: -80px;
+            content: '';
+            position: absolute;
+            background-image: url(../images/bonfire-sharp.svg);
+            background-color: $color-white;
+            z-index: 10;
         }
-
-        &::after {
-            right: -80px;
-        }
-
     }
 }
