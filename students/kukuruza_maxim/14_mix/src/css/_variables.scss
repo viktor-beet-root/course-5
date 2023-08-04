@@ -1,16 +1,18 @@
 // colors
-$color-red: red;
-$color-green: green;
-$color-lightgray: lightgray;
-
-$default-body-color: $color-lightgray;
-
+$white: #fff;
+$black: #2F281E;
+$dark-brown: #544837;
 // fonts
-$default-font-name: 'Roboto';
+$default-font-name: 'Montserrat';
+$footer-title-font: 'Gotham';
+$nav-font: 'Montserrat';
 $fallback: Arial, Helvetica, sans-serif;
 
 $main-font: $default-font-name, $fallback;
 $font-path: './fonts/';
+
+$main-font-size: 16px;
+$secondary-fonts-size: 18px;
 
 // containers
 $container-padding: 15px;
