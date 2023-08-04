@@ -1,50 +1,20 @@
-@include font-face('montserrat-v25-latin-regular');
-
 .header {
+    margin-bottom: 70px;
+
     .container {
-        padding: 17px 10px;
+        padding: 17px 0;
     }
-
-    // .header__logo
-
-    &__logo {}
 }
-
-
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.col-6 {
-    width: 50%;
-
-}
-
-.logo {
-
-    // .logo__image
-
-    &__image {}
-}
-
-.col-4 {}
-
-.nav {}
 
 .menu {
-    display: flex;
-    justify-content: center;
+    @include flex-jsc-al(center, center);
     gap: 20px;
 
-    // .menu__item
-
-    &__item {}
-
     &__item>a {
+        font-weight: 400;
         text-decoration: none;
         color: $color-title;
+        line-height: 28px;
     }
 
     &__item>a:hover {
@@ -53,6 +23,31 @@
 }
 
 .action {
+    @include flex-jsc-al(end, center);
+    gap: 20px;
 
-    &__link {}
+    &__link {
+        padding: 13px 25px;
+        text-decoration: none;
+        font-weight: 600;
+        color: $color-link-text;
+        background-color: $color-orange;
+        border-radius: 4px;
+    }
+
+    &__link:first-of-type {
+        color: $color-title;
+        background-color: $color-bg-body;
+        border: 1px solid $color-border;
+    }
+
+    &__link:first-of-type:hover {
+        color: $color-link-text;
+        background-color: $color-orange;
+        transition: 0.3s ease-in-out;
+    }
+
+    &__link:last-of-type:hover {
+        @extend %opasity;
+    }
 }

@@ -1,9 +1,4 @@
-@mixin flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-@mixin vertical-center($_jst-cont, $_align_items) {
+@mixin flex-jsc-al($_jst-cont, $_align_items) {
     display: flex;
     justify-content: $_jst-cont;
     align-items: $_align_items;
@@ -17,4 +12,38 @@
         font-weight: $_font-weight;
         src: url('#{$font-path}#{$_font-name}.woff2') format('woff2')
     }
+}
+
+//link
+@mixin link {
+    font-family: $secondary-font;
+    font-weight: 700;
+    display: inline-block;
+    text-decoration: none;
+    color: $color-link-text;
+    background-color: $color-orange;
+    border-radius: 4px;
+    padding: 16px 45px;
+}
+
+//h2
+@mixin h2 {
+    font-weight: 700;
+    font-size: $size-h2;
+    color: $color-title;
+    padding-bottom: 20px;
+}
+
+//h3 
+@mixin h3 {
+    font-size: $size-h3;
+    font-weight: 600;
+    color: #2F281E;
+}
+
+//h4
+@mixin h4 {
+    font-weight: 700;
+    font-size: $size-h4;
+    color: #2F281E;
 }
