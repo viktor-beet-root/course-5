@@ -1,0 +1,61 @@
+$textarea_height: 150px;
+$textarea_border: none;
+$icon-focus-color: $orang-color;
+
+.form {
+
+    // .form__message
+
+    &__message {
+        background-color: $gray-8-color;
+        color: $white-color;
+        display: block;
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+}
+
+.input {
+
+    // .input__textarea
+
+    &__textarea {
+        display: flex;
+    }
+
+}
+
+.textarea-left {
+    flex-direction: row-reverse;
+
+
+}
+
+.textarea {
+    height: $textarea_height;
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 100%;
+    font-family: inherit;
+    border: $textarea_border;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus+.icon .icon__img {
+        fill: $icon-focus-color;
+    }
+}
+
+.textarea-width {
+    width: 100%;
+
+}
+
+.icon_textarea {
+    box-sizing: border-box;
+    height: 150px;
+    padding: 5px;
+    border: $textarea_border;
+
+}
