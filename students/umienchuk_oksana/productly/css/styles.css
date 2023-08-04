@@ -16,17 +16,19 @@ body {
     float: left;
 }
 
-.menu {
+.nav {
     list-style-type: none;
-    width: calc(100% - 200px - 200px / 3);
+    width: calc(100% - 450px / 3);
     text-align: center;
+    vertical-align: middle;
+    display: block;
 }
 
-header .menu__item {
+.header .menu__item {
     display: inline-block;
 }
 
-header .menu__item:not(:last-child) {
+.header .menu__item:not(:last-child) {
     padding-right: 20px;
 }
 
@@ -43,12 +45,10 @@ header .menu__item:not(:last-child) {
     font-weight: 400;
 }
 
-button {
+button,
+.btn {
     font-size: 16px;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .btn-third__item,
@@ -71,16 +71,24 @@ button {
 .btn-first__item,
 .btn-second__item {
     padding: 13px 25px;
-    display: inline-block;
+    font-weight: 600;
 }
 
-header button {
+.btn {
     float: right;
-}
-
-.header__button button:first-child {
+    text-decoration: none;
     margin-left: 32px;
 }
+
+.header__button {
+    margin-left: 32px;
+}
+
+.header {
+    width: 100%;
+    background-color: #F90;
+}
+
 
 .footer__logo,
 .footer__links,
@@ -94,7 +102,8 @@ header button {
     line-height: 26px;
 }
 
-.footer__block::after {
+.footer__block::after,
+.header__button::after {
     content: '';
     display: block;
     clear: both;
@@ -118,7 +127,7 @@ footer .menu__item {
     padding-bottom: 15px;
 }
 
-h4 {
+.footer__title {
     color: #544837;
     font-size: 20px;
     font-weight: 700;

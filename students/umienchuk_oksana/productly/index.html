@@ -7,29 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/styles.css">
     <title>Productly</title>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="logo">
-                <img class="logo__img" src="./images/logo.svg" alt="logo">
+        <div class="container header">
+            <div class="header">
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#" class="menu__link">Product</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Customers</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Resources</a></li>
+                    </ul>
+                </nav>
+                <div class="logo">
+                    <img class="logo__img" src="./images/logo.svg" alt="logo">
+                </div>
+                <div class="header__button">
+                    <a class="btn btn-second__item" href="#">Sign Up</a>
+                    <a class="btn btn-first__item" href="#">Sign In</a>
+                </div>
             </div>
-            <div class="header__button">
-                <a href="#"><button class="btn-second__item" type="button">Sign Up</button></a>
-                <a href="#"><button class="btn-first__item" type="button">Sign In</button></a>
-            </div>
-            <nav>
-                <ul class="menu">
-                    <li class="menu__item"><a href="#" class="menu__link">Product</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Customers</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">Resources</a></li>
-                </ul>
-            </nav>
-
         </div>
     </header>
     <main>
@@ -43,7 +45,7 @@
                     <img src="./images/logo.svg" alt="logo">
                 </div>
                 <div class="footer__links">
-                    <h4>Quick Links</h4>
+                    <h4 class="footer__title">Quick Links</h4>
                     <ul class="footer__menu">
                         <li class="menu__item">About Us</li>
                         <li class="menu__item">Blog</li>
@@ -52,7 +54,7 @@
                     </ul>
                 </div>
                 <div class="footer__stuff">
-                    <h4>Legal Stuff</h4>
+                    <h4 class="footer__title">Legal Stuff</h4>
                     <ul class="footer__menu">
                         <li class="menu__item">Disclaimer</li>
                         <li class="menu__item">Financing</li>
@@ -61,7 +63,7 @@
                     </ul>
                 </div>
                 <div class="footer__form">
-                    <h4>Knowing you're always on the best energy deal.</h4>
+                    <h4 class="footer__title">Knowing you're always on the best energy deal.</h4>
                     <form>
                         <input type="tel" id="phone" name="phone" placeholder="Enter your phone Number"><br><br>
                         <button class="btn-third__item" type="submit"><span>Sign up Now</span></button>
