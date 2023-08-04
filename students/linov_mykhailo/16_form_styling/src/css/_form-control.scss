@@ -1,13 +1,17 @@
 $label-font-size: 20px;
+
 $label-color: $white-color;
 $label-bg: $gray-8-color;
 $icon-bg: $gray-3-color;
 $icon-color: $grey-7-color;
+
 $input-height: 50px;
 $icon-height: $input-height;
 $icon-width: $icon-height;
 $icon-img-size: math.div($input-height, 2);
 $icon-focus-color: $orang-color;
+$textarea-height: 150px;
+$icon-img-size-textarea: $textarea-height;
 
 .form-control {
     &_required {
@@ -40,7 +44,11 @@ $icon-focus-color: $orang-color;
 
     // .form-control__input
 
-    &__input {}
+    &__input {
+        &[required]:valid+.icon>.icon__img {
+            fill: $green-color;
+        }
+    }
 
     // .form-control__icon
 
@@ -61,8 +69,6 @@ $icon-focus-color: $orang-color;
         fill: $icon-focus-color;
     }
 }
-
-
 
 .icon {
     background-color: $icon-bg;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCSS</title>
+    <title>Superform</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -66,6 +66,10 @@
                 </div>
                 <div class="col-12 social-list">
                     <input class="input-hidden social-list__input" type="checkbox" name="facebook" id="facebook">
+                    <input class="input-hidden social-list__input" type="checkbox" name="instagram" id="instagram">
+                    <input class="input-hidden social-list__input" type="checkbox" name="linkedin" id="linkedin">
+                    <input class="input-hidden social-list__input" type="checkbox" name="googleplus" id="googleplus">
+                    <input class="input-hidden social-list__input" type="checkbox" name="twitter" id="twitter">
                     <div class="row social-list__row">
                         <div class="col-6">
                             <p class="social-list__label">Choose your social networks</p>
@@ -78,6 +82,30 @@
                                         </svg>
                                     </div>
                                 </li>
+                                @@include('_social-network.html', {
+                                "social-list__item_name": "social-list__item_instagram",
+                                "label-for": "instagram",
+                                "name": "Instagram",
+                                "network-icon": "#instagram-brands"
+                                })
+                                @@include('_social-network.html', {
+                                "social-list__item_name": "social-list__item_linkedin",
+                                "label-for": "linkedin",
+                                "name": "Linkedin",
+                                "network-icon": "#linkedin-in-brands"
+                                })
+                                @@include('_social-network.html', {
+                                "social-list__item_name": "social-list__item_googleplus",
+                                "label-for": "googleplus",
+                                "name": "Google+",
+                                "network-icon": "#google-plus-g-brands"
+                                })
+                                @@include('_social-network.html', {
+                                "social-list__item_name": "social-list__item_twitter",
+                                "label-for": "twitter",
+                                "name": "Twitter",
+                                "network-icon": "#twitter-brands"
+                                })
                             </ul>
                         </div>
                         <div class="col-6">
@@ -94,32 +122,61 @@
                                         </div>
                                     </div>
                                 </li>
+                                @@include('_social-input.html', {
+                                "social-list__url-item_name": "social-list__url-item_instagram",
+                                "placeholder": "instagram",
+                                "name__url": "instagram__url",
+                                "social-icon": "#instagram-brands"
+                                })
+                                @@include('_social-input.html', {
+                                "social-list__url-item_name": "social-list__url-item_linkedin",
+                                "placeholder": "linkedin",
+                                "name__url": "linkedin__url",
+                                "social-icon": "#linkedin-in-brands"
+                                })
+                                @@include('_social-input.html', {
+                                "social-list__url-item_name": "social-list__url-item_googleplus",
+                                "placeholder": "googleplus",
+                                "name__url": "googleplus__url",
+                                "social-icon": "#google-plus-g-brands"
+                                })
+                                @@include('_social-input.html', {
+                                "social-list__url-item_name": "social-list__url-item_twitter",
+                                "placeholder": "twitter",
+                                "name__url": "twitter__url",
+                                "social-icon": "#twitter-brands"
+                                })
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-12">
-
-                </div>
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-4">
-                            @@include('_form-control.html')
-                        </div>
-                        <div class="col-4">
-                            @@include('_form-control.html')
-                        </div>
-                        <div class="col-4">
-                            @@include('_form-control.html')
+                    <div>
+                        <label class="form-control__label" for="">Message</label>
+                        <div class="form-control__group form-control__group_right">
+                            <textarea placeholder="Enter your message" name="message" id="message" class="textarea"
+                                rows="7">
+                            </textarea>
+                            <div class="form-control__icon icon">
+                                <svg class="icon__img">
+                                    <use xlink:href="#comment-alt-regular" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                        <div class="col-4"></div>
+                    </div>
+                </div>
+                <div class="col-12 buttons">
+                    <button class="btn btn__cancel" type="reset">cancel</button>
+                    <button class="btn btn__submit" type="submit">register</button>
+                </div>
             </div>
-            <input type="radio" name="color" value="red" id="">
-            <input type="radio" name="color" value="black" id="">
-            <input type="checkbox" name="test">
-            <input type="checkbox" name="ddddd">
-            <button type="submit">submit</button>
         </form>
     </div>
 

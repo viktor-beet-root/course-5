@@ -8,3 +8,8 @@ body {
 }
 
 @include grid();
+
+.main-title,
+.sub-title {
+    text-align: center;
+}
