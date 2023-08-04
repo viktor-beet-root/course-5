@@ -1,0 +1,28 @@
+// colors
+$color-gray: lightgray;
+$font-size: 24px;
+$default-body-color: $color-gray;
+
+// fonts
+$default-font-name: 'Roboto';
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: $font-size;
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1200px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

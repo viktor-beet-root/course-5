@@ -1,0 +1,44 @@
+$color-lightgrey: #f9f9f9;
+$color-black: black;
+$small-font-size: 20px;
+
+.form {
+    padding: 16px;
+    background: $color-lightgrey;
+    border: 1px solid #c1c1c1;
+    margin-top: 32px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+
+    input {
+        width: 320px;
+        height: 35px;
+        border: 1px solid $color-black;
+    }
+}
+
+.radio__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox {
+    font-size: $small-font-size;
+
+    & input {
+        width: 25px;
+    }
+
+    & label {
+        padding-left: 15px;
+        vertical-align: 40%;
+    }
+}
+
+button {
+    width: 250px;
+    height: 40px;
+}
