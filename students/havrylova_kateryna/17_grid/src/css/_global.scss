@@ -1,0 +1,12 @@
+@include font-face('delius-unicase-v26-latin-regular');
+
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+    margin: 0 auto;
+
+}
+
+@include grid();
