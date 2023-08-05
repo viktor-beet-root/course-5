@@ -197,20 +197,37 @@
                 <div class="col-12">
                     <div class="row">
                         <div class="col-4">
-                            <label for="">
-                                <input type="checkbox">
-                                <span></span>
+                            <label for="round-switch" class="round-switch__label">
+                                <input type="checkbox" name="round-switch" id="round-switch"
+                                    class="round-switch__input">
+                                <span class="round-switch__slider"></span>
+                                <span class="round-switch__name"> Round Switch Test</span>
                             </label>
-                            <label for="">
-                                <input type="checkbox">
-                                <span></span>
-                            </label>
+                            <div class="round-switch__text-wrapper">
+                                <label for="" class="round-switch__text-label">
+                                    <input type="checkbox" class="round-switch__text-input">
+                                    <span class="round-switch__text-slider"></span>
+                                    <span class="round-switch__text-slider"></span>
+                                    <span class="round-switch__text-name">Round Switch with text</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="col-4">
-                            @@include('_form-control.html')
+                            <div class="switch__wrapper">
+                                <label for="" class="round-switch__label">
+                                    <input type="checkbox" class="round-switch__input">
+                                    <span class="round-switch__slider"></span>
+                                    <span class="round-switch__name">Switch Test</span>
+                                </label>
+                            </div>
                         </div>
                         <div class="col-4">
-                            @@include('_form-control.html')
+                            <!-- <div class="switch__wrapper">
+                                <label for="" class="round-switch__label">
+                                    <input type="radio" class="round-switch__input">
+                                    <input type="radio" class="round-switch__input">
+                                </label>
+                            </div> -->
                         </div>
                     </div>
                 </div>

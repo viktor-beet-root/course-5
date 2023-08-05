@@ -2,6 +2,8 @@
 
 @include font-face('roboto-v30-latin-500' 500);
 
+@include grid;
+
 body {
     font-family: $main-font;
     background-color: $default-body-color;

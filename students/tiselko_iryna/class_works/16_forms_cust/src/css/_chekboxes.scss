@@ -1,0 +1,88 @@
+.round-switch {
+
+    // .round-switch__wrapper
+
+    &__wrapper {
+        margin-bottom: 20px;
+        display: flex;
+    }
+
+    // .round-switch__label
+
+    &__label {
+        position: relative;
+        display: inline-flex;
+        width: 60px;
+        height: 30px;
+    }
+
+    // .round-switch__input
+
+    &__input {
+        @include visuality-hidden;
+
+        &:checked+.round-switch__slider::before {
+            transform: translateX(26px);
+            background-color: $green-color;
+        }
+    }
+
+    // .round-switch__slider
+
+    &__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $white-color;
+        transition: .2s;
+        border-radius: 30px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 2px;
+            background-color: $gray-3-color;
+            transition: all 0.5s ease-in-out;
+            border-radius: 50%;
+        }
+    }
+
+    // .round-switch__name
+
+    &__name {
+        margin-left: 20px;
+    }
+
+    // .round-switch__text-wrapper
+
+    &__text-wrapper {}
+
+    // .round-switch__text-label
+
+    &__text-label {}
+
+    // .round-switch__text-input
+
+    &__text-input {}
+
+    // .round-switch__text-slider
+
+    &__text-slider {}
+
+    // .round-switch__text-name
+
+    &__text-name {}
+}
+
+.switch {
+
+    // .switch__wrapper
+
+    &__wrapper {}
+}

@@ -50,6 +50,11 @@ $label-item-bg: $white-color;
         flex-direction: row-reverse;
         opacity: .4;
         transition: opacity .3s ease-in-out;
+        padding-bottom: 5px;
+
+        &:hover {
+            opacity: .8;
+        }
     }
 
     // .social-list__label-item
@@ -72,7 +77,8 @@ $label-item-bg: $white-color;
     &__url-item {
         transform: translateX(-100%);
         opacity: .4;
-        transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+        transition: transform .3s ease-in-out;
+        padding-bottom: 5px;
     }
 }
 
