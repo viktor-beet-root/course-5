@@ -20,9 +20,6 @@ $icon-focus-color: $orang-color;
 
     }
 
-
-    // .form-control__label
-
     &__label {
         font-size: $label-font-size;
         color: $label-color;
@@ -30,8 +27,6 @@ $icon-focus-color: $orang-color;
         display: block;
         padding: 5px 10px;
     }
-
-    // .form-control__group
 
     &__group {
         display: flex;
@@ -41,11 +36,7 @@ $icon-focus-color: $orang-color;
         }
     }
 
-    // .form-control__input
-
     &__input {}
-
-    // .form-control__icon
 
     &__icon {}
 }

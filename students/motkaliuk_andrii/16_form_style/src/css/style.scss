@@ -1,7 +1,7 @@
 @use 'sass:math';
+@import "./reset";
 @import "./variables";
 @import "./mixins";
 @import "./global";
 @import "./extend";
-@import "./form-control";
-@import "./social-list";
+@import "./form";
