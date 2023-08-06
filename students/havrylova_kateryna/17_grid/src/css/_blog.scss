@@ -91,6 +91,13 @@ img {
     }
 }
 
+span[class*=img-text] {
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+
+}
 
 .title {}
 
@@ -107,6 +114,18 @@ img {
         background: linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.50%);
         opacity: 0.8;
         cursor: pointer;
+    }
+
+    &__img-text_name {
+        color: $white-color;
+        left: 20px;
+
+
+    }
+
+    &__img-text_date {
+        color: $alto-color;
+        right: 20px;
     }
 
     // .blog-article__title

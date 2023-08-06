@@ -1,7 +1,6 @@
 @include font-face('delius-unicase-v26-latin-regular');
 
-
-body {
+@include font-face() body {
     font-family: $main-font;
     background-color: $default-body-color;
     font-size: $default-font-size;
