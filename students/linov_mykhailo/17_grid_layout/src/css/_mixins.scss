@@ -10,13 +10,22 @@
     flex-wrap: $_flex-wrap;
 }
 
-@mixin font-face($_font-name, $_font-weight: 500, $_font-style: normal, $_font-family: $default-font-name) {
+@mixin font-face($_font-name, $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name) {
     @font-face {
         font-family: $_font-family;
         font-style: $_font-style;
         font-weight: $_font-weight;
         src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
     }
+}
+
+@mixin font-family ($_weight: 500, $_size: 20px, $_color: $color-text, $_height: normal, $_family: $main-font, $_style: normal) {
+    font-weight: $_weight;
+    font-size: $_size;
+    color: $_color;
+    line-height: $_height;
+    font-family: $_family;
+    font-style: $_style;
 }
 
 @mixin test {

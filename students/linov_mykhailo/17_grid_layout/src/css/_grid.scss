@@ -1,11 +1,4 @@
-.title {
-    text-align: center;
-    padding-top: 86px;
-    padding-bottom: 80px;
-}
-
 .grid {
-    height: 100%;
     display: grid;
     // grid-template-columns: 250px 250px 100px;
     // grid-template-columns: minmax(50px, 250px) minmax(50px, 250px);
@@ -21,11 +14,12 @@
     // grid-template-columns: minmax(auto, 300px) 50px;
     // grid-template-columns: minmax(300px, auto) 50px;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 330px);
+
+    grid-template-rows: repeat(3, 370px);
     // grid-template-rows: auto auto;
     // grid-template-rows: min-content 1fr minmax(250px, auto);
 
-    // grid-auto-rows: 100px;
+    grid-auto-rows: 330px;
 
     // column-gap: 50px;
     // row-gap: 10px;
@@ -82,7 +76,14 @@
         right: 0;
         display: flex;
         justify-content: space-between;
+        padding: 0 20px;
+
+        &-author {
+            @include font-family (500, 20px, $white-color);
+        }
+
+        &-date {
+            @include font-family (400, 20px, $white-color);
+        }
     }
 }
-
-.text {}
