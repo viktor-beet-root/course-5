@@ -14,7 +14,7 @@ html,
 [class*="__title"] {
     color: #000;
     text-align: center;
-    font-family: 'Delius Unicase', ;
+    font-family: 'Delius Unicase', $fallback;
     font-size: 36px;
     letter-spacing: 1.8px;
     text-transform: uppercase;
@@ -45,9 +45,22 @@ html,
 }
 
 .item {
+    position: relative;
+
+    &:hover .item__button-like,
+    &:hover .item__button-download {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+    }
+
     &_blure {
-        // filter: blur(2px);
-        // background-image: linear-gradient(to bottom, #ffffff, #000000);
+        background: linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.50%);
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
     }
 
     &__img {
@@ -55,22 +68,55 @@ html,
         height: 100%;
         object-fit: cover;
         position: absolute;
-
     }
 
     &__author {
         position: absolute;
-        bottom: -20px;
-        left: 0;
+        bottom: -10px;
+        left: 10px;
         padding: 10px;
         color: #FFFFFF;
     }
 
     &__date {
         position: absolute;
-        bottom: -20px;
-        right: 0;
+        bottom: -10px;
+        right: 10px;
         padding: 10px;
         color: #FFFFFF;
+    }
+
+    &__button {
+        &-like {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(224, 224, 224, 0.50);
+            ;
+            cursor: pointer;
+            opacity: 0;
+
+            &:hover {
+                background: #E0E0E0;
+            }
+        }
+
+        &-download {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(224, 224, 224, 0.50);
+            ;
+            cursor: pointer;
+            opacity: 0;
+
+            &:hover {
+                background-color: #E0E0E0;
+            }
+        }
     }
 }
