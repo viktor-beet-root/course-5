@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+    <main class="main">
+        <section class="block">
+            <div class="container">
+                <form class="form" action="#" method="post" target="_blank">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="name">Повне ім'я</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" id="name" name="text">
+                        </div>
+                        <div class="col-6">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="col-6">
+                            <label for="password">Пароль</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="col-6">
+                            <label for="gender" id="gender">Стать</label>
+                        </div>
+                        <div class="col-6">
+                           <label class="gender">
+                            <input type="radio" name="gender" value="male" checked>чоловіча 
+                           </label>
+                           <label class="gender">
+                            <input type="radio" name="gender" value="female">жіноча 
+                           </label>
+                        </div>
+                        <div class="col-6">
+                            <label for="age">Вік</label>
+                        </div>
+                        <div class="col-6">
+                            <input type="number" name="age" id="age">
+                        </div>
+                        <div class="col-6">
+                            <label for="course">Курс</label>
+                        </div>
+                        <div class="col-6">
+                            <select name="course" id="course">
+                                <option value="">-=Виберіть курс=-
+                                    <option value="front-end">Front-End</option>
+                                    <option value="back-end">Back-End</option>
+                                    <option value="project_management">Project Management</option>
+                                    <option value="qa_manual">QA Manual</option>
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label for="addresses">Повна адреса</label>
+                        </div>
+                        <div class="col-6">
+                            <textarea name="addresses" id="addresses" cols="22" rows="5" placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <input type="checkbox" id="personal-data" name="personal-data">
+                            <label class="personal-data" for="personal-data">Я погоджуюсь з обробкою персональних даних</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 btn">
+                            <input type="reset" value="Очистити форму">
+                        </div>
+                        <div class="col-6 btn">
+                            <input type="submit" value="Зареєструватися">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+   
+</body>
+
+</html>
