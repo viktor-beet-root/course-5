@@ -11,7 +11,7 @@ const path = {
         fonts: buildPath + 'css/fonts/',
     },
     src: {
-        html: srcPath + '[^_]*.html',
+        html: srcPath + '**/[^_]*.html',
         js: srcPath + 'js/**/*.js',
         lib: srcPath + 'lib/**/*.js',
         css: srcPath + 'css/**/*.{scss,css}',
