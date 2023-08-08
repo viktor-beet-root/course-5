@@ -15,7 +15,8 @@ $default-font-name: 'Roboto';
 $fallback: Arial, Helvetica, sans-serif;
 $default-font-size: 20px;
 $default-font-color: $white-color;
-$title-font: 'Delius Unicase';
+$title-font-name: 'Delius Unicase';
+$title-main: $title-font-name, $fallback;
 
 $main-font: $default-font-name, $fallback;
 $font-path: './fonts/';

@@ -26,9 +26,9 @@ img {
     border-radius: 20px;
 }
 
-.title {
-    @include font-family (400, 36px, $black-color, normal, );
+.container .title {
+    @include font-family (400, 36px, $black-color, normal, 1.8px, $title-main, normal);
     text-align: center;
-    padding-top: 86px;
-    padding-bottom: 80px;
+    padding-top: 36px;
+    padding-bottom: 50px;
 }
