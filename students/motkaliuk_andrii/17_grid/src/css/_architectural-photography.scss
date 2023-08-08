@@ -54,6 +54,7 @@ html,
     }
 
     &_blure {
+        // градієнт не працює, не знаю як це зробити
         background: linear-gradient(0deg, #241F24 0%, rgba(91, 91, 91, 0.45) 34.11%, rgba(187, 186, 192, 0.26) 62.50%);
         opacity: 0.8;
 
@@ -72,7 +73,7 @@ html,
 
     &__author {
         position: absolute;
-        bottom: -10px;
+        bottom: 10px;
         left: 10px;
         padding: 10px;
         color: #FFFFFF;
@@ -80,7 +81,7 @@ html,
 
     &__date {
         position: absolute;
-        bottom: -10px;
+        bottom: 10px;
         right: 10px;
         padding: 10px;
         color: #FFFFFF;
@@ -94,7 +95,6 @@ html,
             padding: 10px;
             border-radius: 8px;
             background: rgba(224, 224, 224, 0.50);
-            ;
             cursor: pointer;
             opacity: 0;
 
@@ -110,7 +110,6 @@ html,
             padding: 10px;
             border-radius: 8px;
             background: rgba(224, 224, 224, 0.50);
-            ;
             cursor: pointer;
             opacity: 0;
 

@@ -11,10 +11,10 @@
 }
 
 
-
-@mixin font-face($_font-name, $_font-weight: 700, $_font-style: normal, $_font-family: $default-font-name) {
+// назва файлу, жирність, стиль, назва шрифта
+@mixin font-face($_font-name, $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name) {
     @font-face {
-        font-family: $_font-name;
+        font-family: $_font-family;
         font-style: $_font-style;
         font-weight: $_font-weight;
         src: url("#{$font-path}#{$_font-name}.woff2") format('woff2');

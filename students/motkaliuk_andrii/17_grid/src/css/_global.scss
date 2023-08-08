@@ -1,15 +1,7 @@
 @include font-face('roboto-v30-latin-regular');
 @include font-face('roboto-v30-latin-500', 500);
-@include font-face('delius-unicase-v26-latin-regular');
-@include font-face("Delius Unicase");
+@include font-face("delius-unicase-v26-latin-regular", 400, normal, 'Delius Unicase');
 
-@font-face {
-    font-display: swap;
-    font-family: 'Delius Unicase';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/delius-unicase-v26-latin-regular.woff2') format('woff2');
-}
 
 body {
     font-family: $main-font;
