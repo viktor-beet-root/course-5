@@ -1,0 +1,40 @@
+$color-white: white;
+$color-orage: #F90;
+$color-title: #2F281E;
+$color-main-text: #544837;
+$color-boder-btn: #BCD0E5;
+$color-black: black;
+
+//main color for text 
+$default-text-color: $color-main-text;
+
+// font for body
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: Montserrat;
+$main-font: $default-font-name, $fallback;
+
+$font-name-button: Poppins;
+$font-path: './fonts/';
+
+// container
+$container-padding: 15px;
+$container-max-width: 1200px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+$default-width: 1200px;
+
+// header
+$menu-gap: 20px;
+$default-menu-gap: $menu-gap;
+
+// transform-center
+$transform-center: translate(-50%, -50%);
+
+// main-container
+$main-gap: 100px;
+$flex-gap: $main-gap;
+
+// buttons
+$font-size-btn: 16px;
+$border-radius-btn: 4px;

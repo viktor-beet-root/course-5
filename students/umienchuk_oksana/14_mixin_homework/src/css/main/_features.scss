@@ -1,0 +1,52 @@
+.img-back {
+    background-image: url(../images/half-oval.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.tools {
+
+    // .tools_block
+
+    &_block {
+        margin-bottom: 70px;
+    }
+
+    // .tools__item
+
+    &__item {
+        padding: 0 10px 0 10px;
+
+        &>img .sign_btn {
+            margin-bottom: 70px;
+        }
+
+        &>img {
+            margin-bottom: 30px;
+        }
+    }
+
+
+    // .tools__title
+
+    &__title {}
+
+    // .tools__text
+
+    &__text {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        margin: 0 0 40px;
+    }
+}
+
+.sign_btn {
+    padding-bottom: 70px;
+}
