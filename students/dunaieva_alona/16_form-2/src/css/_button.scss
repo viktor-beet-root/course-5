@@ -1,0 +1,39 @@
+$padding-btn: 15px 40px;
+$font-size-btn: 18px;
+$border-color-btn: 1px solid #495057;
+
+
+.action-wrapper {
+    @include flex-jtc-al(space-between);
+    background-color: $gray-8-color;
+    padding: 10px;
+}
+
+.btn {
+
+    padding: $padding-btn;
+    font-size: $font-size-btn;
+    border: $border-color-btn;
+
+    &__reset {
+        color: $orang-color;
+        background-color: $white-color;
+
+        &:hover {
+            color: $white-color;
+            background-color: $orang-color;
+            transition: 0.5s ease-in-out;
+        }
+    }
+
+    &__submit {
+        color: $white-color;
+        background-color: $orang-color;
+
+        &:hover {
+            color: $gray-8-color;
+            background-color: $white-color;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
