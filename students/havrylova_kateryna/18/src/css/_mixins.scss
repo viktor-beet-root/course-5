@@ -120,7 +120,7 @@
             }
 
             .hidden-#{$breackpoint} {
-                display: none;
+                display: none !important;
             }
         }
     }
