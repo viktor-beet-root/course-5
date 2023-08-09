@@ -1,6 +1,8 @@
-@include font-face('delius-unicase-v26-latin-regular');
+@include font-face('roboto-v30-latin-regular', 400, normal, 'Roboto');
+@include font-face('roboto-v30-latin-500', 500, normal, 'Roboto');
+@include font-face('delius-unicase-v26-latin-regular', 400, normal, 'Delius Unicase');
 
-@include font-face() body {
+body {
     font-family: $main-font;
     background-color: $default-body-color;
     font-size: $default-font-size;

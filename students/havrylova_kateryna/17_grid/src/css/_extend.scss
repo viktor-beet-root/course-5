@@ -10,3 +10,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+%icon-style {
+    position: absolute;
+    max-width: 20px;
+    max-height: 20px;
+    top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #E0E0E0;
+}
