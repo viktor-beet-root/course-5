@@ -20,11 +20,11 @@ $btn-padding: 15px 40px;
         font-family: inherit;
         cursor: pointer;
         font-size: 100%;
+        transition: all .5s ease-in-out;
 
         &:hover {
             color: $white-color;
             background-color: $orang-color;
-            transition: all .5s ease-in-out;
         }
     }
 }
@@ -42,11 +42,11 @@ $btn-padding: 15px 40px;
         cursor: pointer;
         font-family: inherit;
         font-size: 100%;
+        transition: all .5s ease-in-out;
 
         &:hover {
             color: $orang-color;
             background-color: $white-color;
-            transition: all .5s ease-in-out;
         }
     }
 }

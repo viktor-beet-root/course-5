@@ -4,6 +4,13 @@ $icon-focus-color: $orang-color;
 
 .form {
 
+    &__row {
+        padding: 15px;
+    }
+}
+
+.form {
+
     // .form__message
 
     &__message {
