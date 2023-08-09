@@ -1,0 +1,54 @@
+@mixin flex-jst-align ($_jst-content: space-between, $_al-item: center, $_wrap: wrap) {
+    display: flex;
+    justify-content: $_jst-content;
+    align-items: $_al-item;
+    flex-wrap: $_wrap;
+}
+
+@mixin font-face ($_font-name, $_font-weight: 500, $_font-family: $default-font-name, $_font-style: normal) {
+    @font-face {
+        font-display: swap;
+        font-family: $_font-family;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
+    }
+}
+
+@mixin container {
+    .container {
+        max-width: $default-width;
+        margin: 0 auto;
+        padding: $gap;
+    }
+}
+
+@mixin grid($count: 12) {
+    @include container;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$gap);
+    }
+
+    [class*="col-"] {
+        padding: $gap;
+        box-sizing: border-box;
+    }
+
+    @for $i from 1 through $count {
+        $width: 100% / $count * $i;
+
+        .col-#{$i} {
+            max-width: $width;
+            width: 100%;
+            flex-basis: $width;
+        }
+    }
+}
+
+@mixin btn ($_font-size: $font-size-btn, $_border-radius: $border-radius-btn) {
+    font-size: $_font-size;
+    border-radius: $_border-radius;
+}

@@ -1,0 +1,85 @@
+.footer {
+    padding: 70px 0;
+
+    // .footer__block
+
+    &__block {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    // .footer__logo
+
+    &__logo {
+        width: 100%;
+    }
+
+    // .footer__links
+
+    &__links {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    // .footer__menu
+
+    &__menu {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    // .footer__stuff
+
+    &__stuff {
+        width: 100%;
+    }
+
+    // .footer__form
+
+    &__form {
+        width: 100%;
+    }
+}
+
+.form_span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.menu {
+
+    // .menu__item
+
+    &__item {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+}
+
+.btn-third {
+
+    // .btn-third__item
+
+    &__item {
+        color: $color-white;
+        background-color: $color-orage;
+        border: 1px solid $color-orage;
+        padding: 13px 40px;
+    }
+}
+
+input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #BCD0E5;
+    min-height: 30px;
+    width: 100%;
+    max-width: 340px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+input[type="tel"]::placeholder {
+    color: $color-boder-btn;
+}

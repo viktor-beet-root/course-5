@@ -1,0 +1,81 @@
+.header {
+
+    // .header__menu
+
+    &__menu {
+        @include flex-jst-align (space-between, center);
+        margin: 17px 0;
+    }
+}
+
+.logo {
+
+    // .logo__img
+
+    &__img {
+        // margin-top: 5px;
+    }
+}
+
+.header__button {
+    display: flex;
+    gap: 32px;
+}
+
+.menu__items {
+    @extend %flex-jst-wrap;
+    gap: $default-menu-gap;
+}
+
+.header__button button:first-child {
+    margin-left: 32px;
+}
+
+.menu {
+
+    // .menu__link
+
+    &__link {
+
+        &:link {
+            color: $color-title;
+            font-weight: 400;
+        }
+
+        &:visited {
+            color: $color-title;
+            font-weight: 400;
+        }
+
+        &:hover {
+            color: $color-orage;
+            font-weight: 400;
+        }
+
+        .menu__link:focus {
+            color: $color-orage;
+            font-weight: 400;
+        }
+    }
+}
+
+.btn-first__item,
+.btn-second__item {
+    padding: 13px 25px;
+}
+
+.btn-second__item {
+    color: $color-white;
+    background-color: $color-orage;
+    border: 1px solid $color-orage;
+}
+
+.btn-first__item {
+    color: $color-black;
+    border: 1px solid $color-boder-btn;
+    background-color: $color-white;
+}
+
+.btn {
+    @include btn;
+}
