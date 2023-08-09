@@ -23,11 +23,12 @@
     font-size: $_font-size;
     font-weight: $_font-weight;
     cursor: pointer;
+    transition: all .4s ease-in-out;
 
     &:hover {
         background-color: gold;
         color: $color-white;
-        transition-duration: .4s;
+
     }
 }
 
