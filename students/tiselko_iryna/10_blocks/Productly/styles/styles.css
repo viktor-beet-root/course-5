@@ -14,7 +14,7 @@ body {
 
 h4 {
     color: #2F281E;
-    font-family: Gotham, Montserrat, Arial, Helvetica, sans-serif;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
@@ -44,7 +44,7 @@ button {
 }
 
 
-.header__container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
@@ -78,7 +78,8 @@ button {
     text-decoration: none;
 }
 
-.menu__links:hover {
+.menu__links:hover,
+.footer__links:hover {
     color: #F90;
 }
 
@@ -122,7 +123,7 @@ button {
     float: right;
 }
 
-.nav__footer {
+.footer__menu {
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -130,7 +131,7 @@ button {
 }
 
 .footer__logo,
-.footer__links,
+.footer__nav,
 .footer__input {
     display: inline-block;
     width: calc(100% / 25%);
@@ -141,24 +142,24 @@ button {
     padding-right: 65px;
 }
 
-.footer__links {
+.footer__nav {
     padding-right: 65px;
     padding-left: 65px;
 }
 
-.footer__links>h4 {
+.footer__nav>h4 {
     margin-top: 0;
     margin-bottom: 0;
     padding-bottom: 30px;
 }
 
-.links__caption {
+.footer__caption {
     padding: 0;
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.links__url {
+.footer__links {
     color: #2F281E;
     font-weight: 400;
     line-height: 28px;
@@ -171,11 +172,12 @@ button {
 .input__box {
     border-radius: 4px;
     border: 1px solid #BCD0E5;
-    width: 340px;
+    width: 330px;
     height: 50px;
+    padding-left: 10px;
 }
 
-::placeholder {
+.input__box::placeholder {
     color: #BCD0E5;
     font-weight: 400;
     padding-left: 10px;
