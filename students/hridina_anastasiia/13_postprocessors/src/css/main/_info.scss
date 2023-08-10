@@ -69,27 +69,33 @@
     position: relative;
     left: 70px;
 
+
     &::after {
         content: '';
         position: absolute;
         border-bottom: 4px solid $color-gold;
         width: 20px;
-        top: 135px;
-        right: 204px;
-        border-left: 4px solid $color-white;
-        border-right: 4px solid $color-white;
+        bottom: -20px;
+        right: 48%;
+        border-left: 5px solid $color-white;
+        border-right: 5px solid $color-white;
+        z-index: 1;
     }
 
     &::before {
         content: '';
         position: absolute;
+        display: block;
         border-bottom: 4px solid $color-gold;
         width: 50px;
-        top: 135px;
-        left: 191px;
+        position: absolute;
+        bottom: -20px;
+        left: 44%;
+        z-index: -1;
     }
 
 }
+
 
 
 .button {

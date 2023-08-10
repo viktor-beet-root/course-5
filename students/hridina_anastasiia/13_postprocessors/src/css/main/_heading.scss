@@ -27,18 +27,24 @@
             content: '';
             border-bottom: 1px solid $color-gold;
             position: absolute;
-            width: 440px;
+            width: 450px;
             height: 1px;
-            top: 90%;
-            left: -65px;
+            top: 100px;
+            right: -25%;
+            z-index: -1;
         }
 
         &::before {
             content: '';
             position: absolute;
             background-image: url(../images/bonfire-sharp.svg);
-            background-color: $color-white;
-            z-index: 10;
+            border-left: 5px solid $color-white;
+            border-right: 5px solid $color-white;
+            padding: 40px 7px;
+            background-repeat: no-repeat;
+            background-position: center;
+            top: 60px;
+            left: 46%;
         }
     }
 }
