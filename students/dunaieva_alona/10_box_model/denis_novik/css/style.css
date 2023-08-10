@@ -65,8 +65,8 @@ img {
     color: black;
 }
 
-#about-me,
-#portfolio {
+.about-me,
+.portfolio {
     background-color: #F6F6F6;
 }
 
