@@ -4,9 +4,9 @@
 }
 
 body {
-    font-family: Open Sans, Arial, Helvetica, sans-serif; 
-    font-size: 18px; 
-    color: #070707; 
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #070707;
     text-align: center;
     letter-spacing: .3px;
     line-height: normal;
@@ -17,14 +17,14 @@ body {
 }
 
 h1 {
-    font-size: 47px; 
+    font-size: 47px;
     font-weight: 700;
     text-align: left;
     padding: 35px 0 39px 0;
 }
 
 h2 {
-    font-size: 34px; 
+    font-size: 34px;
     font-weight: 700;
     padding-top: 101px;
 }
@@ -34,10 +34,8 @@ li {
     display: inline-block;
 }
 
-
-
 .nav {
-    width: 940px;
+    max-width: 940px;
     margin: 0 auto;
 }
 
@@ -55,7 +53,7 @@ li {
 }
 
 .nav__links {
-    text-decoration: none; 
+    text-decoration: none;
     color: #828282;
 }
 
@@ -66,27 +64,22 @@ li {
 
 
 
-.home__container {
-    max-width: 940px;
+.home {
     display: inline-block;
     margin-bottom: 100px;
 }
 
 
-
-.about__container, .portfolio__container {
+.about,
+.portfolio {
     background-color: #F6F6F6;
-    padding-left: 100%;
-    margin-left: -100%;
-    padding-right: 100%;
-    margin-right: -100%;
 }
 
 .about__caption {
     padding-bottom: 28px;
 }
 
-.about__content > p {
+.about__content>p {
     padding-bottom: 48px;
 }
 
@@ -95,9 +88,7 @@ li {
 }
 
 
-
-.skills__container {
-    max-width: 940px;
+.skills {
     display: inline-block;
 }
 
@@ -105,12 +96,12 @@ li {
     padding-bottom: 25px;
 }
 
-.skills__caption + p {
+.skills__caption+p {
     padding-bottom: 77px;
 }
 
-.skills__level > figcaption {
-    font-size: 14px; 
+.skills__level>figcaption {
+    font-size: 14px;
     color: #828282;
     padding-top: 20px;
     padding-bottom: 50px;
@@ -156,19 +147,19 @@ li {
 }
 
 .contact__btn {
-    width: 180px; 
-    height: 42px; 
-    background-color: #070707; 
+    width: 180px;
+    height: 42px;
+    background-color: #070707;
     border: 0;
     border-radius: 100px;
     margin-top: 78px;
     margin-bottom: 37px;
-    
+
 }
 
 .contact__btn__name {
     font-size: 18px;
-    font-weight: 700; 
+    font-weight: 700;
     color: #FFFFFF;
     letter-spacing: 1.8px;
 }
@@ -184,7 +175,7 @@ li {
 }
 
 .contacts__last_p {
-    font-size: 14px; 
+    font-size: 14px;
     color: #828282;
     padding-top: 44px;
     padding-bottom: 159px;
