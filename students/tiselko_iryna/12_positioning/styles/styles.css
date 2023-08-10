@@ -46,7 +46,7 @@ h2::before {
 
 }
 
-header {
+.header {
     width: 100%;
     position: fixed;
     top: 0;
@@ -124,7 +124,8 @@ header {
     margin-left: auto;
 }
 
-.bg {
+.main {
+
     margin-top: 151px;
     background-image: url('../images/bg-picture.svg');
     background-repeat: no-repeat;
