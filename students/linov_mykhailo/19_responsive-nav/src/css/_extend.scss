@@ -16,3 +16,13 @@
     padding: 0;
     list-style-type: none;
 }
+
+%black-triangle {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transition: transform .3s ease-in-out;
+}

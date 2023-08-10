@@ -1,4 +1,5 @@
 $padding-link-menu: 15px 25px;
+$padding-link-submenu: 15px;
 
 .manu-wrapper {
     margin: -$gap 0;
@@ -42,15 +43,9 @@ $padding-link-menu: 15px 25px;
 
         &_submenu {
             .menu__link::after {
-                content: '';
-                width: 10px;
-                height: 10px;
-                display: inline-block;
-                margin-left: 10px;
+                @extend %black-triangle;
                 transform: rotate(45deg);
-                border-bottom: 1px solid black;
-                border-right: 1px solid black;
-                transition: transform .3s ease-in-out;
+                margin-left: 10px;
             }
         }
     }
@@ -71,7 +66,6 @@ $padding-link-menu: 15px 25px;
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
-        overflow: hidden;
         transform: translateY(-20px);
         transition: all .3s ease-in-out;
     }
@@ -85,12 +79,38 @@ $padding-link-menu: 15px 25px;
     // .submenu__item
 
     &__item {
+        position: relative;
         text-align: center;
         border-bottom: $default-border;
 
         &:hover {
-            .submenu__link {
+            >.submenu__link {
                 background-color: $grey-light;
+            }
+
+            >.submenu__submenu {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: all;
+            }
+        }
+
+        &_submenu {
+            >.submenu__link::after {
+                @extend %black-triangle;
+                transform: rotate(-45deg);
+            }
+
+            &_right {
+                position: relative;
+
+                >.submenu__link::before {
+                    @extend %black-triangle;
+                    transform: rotate(135deg);
+                    position: absolute;
+                    top: 40%;
+                    left: 25%;
+                }
             }
         }
     }
@@ -101,5 +121,26 @@ $padding-link-menu: 15px 25px;
         text-decoration: none;
         display: block;
         padding: $padding-link-menu;
+    }
+
+    &__submenu {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        border-top: $default-border;
+        top: -1px;
+
+        .submenu__link {
+            padding: 15px 40px;
+        }
+
+        &_right {
+            left: 100%;
+        }
+
+        &_left {
+            right: 100%;
+        }
     }
 }
