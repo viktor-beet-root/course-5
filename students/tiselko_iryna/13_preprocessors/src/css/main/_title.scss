@@ -1,6 +1,7 @@
 .title {
-    text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     // .title__sub
 
@@ -23,7 +24,6 @@
     &__main::before {
         content: '';
         display: block;
-        max-width: 100%;
         width: 450px;
         height: 1px;
         background-color: $color-gold;
