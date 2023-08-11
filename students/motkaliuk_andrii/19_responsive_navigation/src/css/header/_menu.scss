@@ -70,7 +70,8 @@ $paddind-link-menu: 15px 25px;
     &__submenu {
         position: absolute;
         left: -1px;
-        right: -1px;
+        // right: -1px;
+        width: max-content;
         visibility: hidden;
         opacity: 0;
         pointer-events: none;
@@ -86,6 +87,7 @@ $paddind-link-menu: 15px 25px;
     // .submenu__item
 
     &__item {
+        position: relative;
         text-align: center;
         border-bottom: $default-border;
 
@@ -101,6 +103,18 @@ $paddind-link-menu: 15px 25px;
                 transform: translateY(0px);
             }
         }
+
+        >.submenu__submenu {
+            border-top: $default-border;
+
+            &_right {
+                right: unset;
+            }
+
+            &_left {
+                left: unset;
+            }
+        }
     }
 
     // .submenu__link
@@ -113,5 +127,14 @@ $paddind-link-menu: 15px 25px;
 
     &__submenu {
         @extend .menu__submenu;
+        top: 0;
+
+        &_right {
+            left: 100%;
+        }
+
+        &_left {
+            right: 100%;
+        }
     }
 }
