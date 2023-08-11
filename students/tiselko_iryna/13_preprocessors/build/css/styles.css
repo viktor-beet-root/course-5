@@ -710,7 +710,7 @@ button {
   max-width: 100%;
   width: 50px;
   height: 4px;
-  background-image: url(../../images/decore_line.svg);
+  background-image: url(../images/decore_line.svg);
   position: absolute;
   bottom: 0;
   right: 50%;
