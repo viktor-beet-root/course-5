@@ -54,7 +54,8 @@ a {
 }
 
 
-button {
+button,
+.btn__btn {
     font-family: $btn-font-name;
     font-size: inherit;
     font-style: inherit;
@@ -63,18 +64,23 @@ button {
     border: none
 }
 
-@include grid;
-
-.row {
-    justify-content: space-between;
-    align-items: center
-}
-
 .input__btn,
-.sign-up__btn {
+.btn__btn {
     @include border (none, $color-orange);
     width: 180px;
     height: 50px;
     border-radius: 4px;
     color: $color-white;
+}
+
+.btn__btn {
+    padding: 13px 40px;
+}
+
+
+@include grid;
+
+.row {
+    justify-content: space-between;
+    align-items: center
 }

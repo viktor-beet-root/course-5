@@ -4,39 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.scss">
     <link rel="stylesheet" href="css/styles.css">
     <title>Productly</title>
 </head>
 
 <body>
-    <header>
-        <div class="container header">
+    <header class="header">
+        <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <div class="logo">
+                    <div class="menu__logo">
                         <img class="logo_img" src="./images/logo/Logo.svg" alt="logo">
                     </div>
                 </div>
                 <nav class="col-4">
                     <ul class="menu__block">
-                        <li class="menu__item"><a href="#" class="menu__links">Product</a></li>
-                        <li class="menu__item"><a href="#" class="menu__links">Customers</a></li>
-                        <li class="menu__item"><a href="#" class="menu__links">Pricing</a></li>
-                        <li class="menu__item"><a href="#" class="menu__links">Resources</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Product</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Customers</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Pricing</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Resources</a></li>
                     </ul>
                 </nav>
                 <div class="col-4">
                     <div class="menu__btn">
-                        <div class="menu__btn up">
-                            <button class="up__btn">
-                                <span class="up__btn-text">Sign Up</span>
-                            </button>
+                        <div class="menu__btn-up">
+                            <a href="#" class="btn-up__btn">Sign Up</a>
                         </div>
-                        <div class="menu__btn in">
-                            <button class="in__btn">
-                                <span class="in__btn-text">Sign In</span>
-                            </button>
+                        <div class="menu__btn-in">
+                            <a href="#" class="btn-in__btn">Sign In</a>
                         </div>
                     </div>
                 </div>
@@ -44,24 +39,19 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="hero">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <div class="text-area">
-                            <h1 class="content__title">The Design Thinking superpowers</h1>
-                            <p class="content__text">Tools, tutorials, design and innovation experts, all in one
-                                place!
-                                The
-                                most intuitive way to imagine your next user experience.
-                            </p>
-                            <div class="wrapper__block input">
-                                <button class="input__btn">
-                                    <span class="input__btn__text">Sign up Now</span>
-                                </button>
-                            </div>
-
+                        <h1 class="content__title">The Design Thinking superpowers</h1>
+                        <p class="content__text">Tools, tutorials, design and innovation experts, all in one
+                            place!
+                            The
+                            most intuitive way to imagine your next user experience.
+                        </p>
+                        <div class="content__btn">
+                            <a href="#" class="btn__btn">Sign up Now</a>
                         </div>
                     </div>
                     <div class="col-6">
@@ -72,39 +62,37 @@
         </section>
 
         <section class="tools">
-            <div class="tools__bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="tools__title">We design tools to unveil <br> your superpowers</h2>
-                            <div class="tools__wraper">
-                                <div class="tools__content card">
-                                    <img class="card__icon" src="images/tools/klick.svg" alt="icon_klick">
-                                    <h3 class="card__title">First click tests</h3>
-                                    <p class="card__text">While most people enjoy casino gambling.</p>
-                                </div>
-                                <div class="tools__content card">
-                                    <img class="card__icon" src="images/tools/design.svg" alt="icon_design">
-                                    <h3 class="card__title">Design surveys</h3>
-                                    <p class="card__text">Sports betting, lottery and bingo playing for the fun.</p>
-                                </div>
-                                <div class="tools__content card">
-                                    <img class="card__icon" src="images/tools/preference.svg" alt="icon_preference">
-                                    <h3 class="card__title">Preference tests</h3>
-                                    <p class="card__text">The Myspace page defines the individual.</p>
-                                </div>
-                                <div class="tools__content card">
-                                    <img class="card__icon" src="images/tools/tests.svg" alt="icon_klick">
-                                    <h3 class="card__title">Five second tests</h3>
-                                    <p class="card__text">Personal choices and the overall personality of the person.
-                                    </p>
-                                </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tools__title">We design tools to unveil <br> your superpowers</h2>
+                        <div class="tools__wraper">
+                            <div class="tools__content card">
+                                <img class="card__icon" src="images/tools/klick.svg" alt="icon_klick">
+                                <h3 class="card__title">First click tests</h3>
+                                <p class="card__text">While most people enjoy casino gambling.</p>
                             </div>
-                            <div class="tools__sign-up">
-                                <button class="sign-up__btn">
-                                    <span class="sign-up__btn__text">Sign up Now</span>
-                                </button>
+                            <div class="tools__content card">
+                                <img class="card__icon" src="images/tools/design.svg" alt="icon_design">
+                                <h3 class="card__title">Design surveys</h3>
+                                <p class="card__text">Sports betting, lottery and bingo playing for the fun.</p>
                             </div>
+                            <div class="tools__content card">
+                                <img class="card__icon" src="images/tools/preference.svg" alt="icon_preference">
+                                <h3 class="card__title">Preference tests</h3>
+                                <p class="card__text">The Myspace page defines the individual.</p>
+                            </div>
+                            <div class="tools__content card">
+                                <img class="card__icon" src="images/tools/tests.svg" alt="icon_klick">
+                                <h3 class="card__title">Five second tests</h3>
+                                <p class="card__text">Personal choices and the overall personality of the person.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="tools__btn">
+                            <a href="#" class="btn__btn">Sign up Now</a>
                         </div>
                     </div>
                 </div>
@@ -115,27 +103,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <div class="text-area">
-                            <p class="professionals__subcontent">Effortless Validation for</p>
-                            <h2 class="professionals__title">Design Professionals</h2>
-                            <p class="professionals__mcontent">The Myspace page defines the individual, his or her
-                                characteristics, traits, personal choices
-                                and the overall personality of the person.</p>
-                            <h5 class="professionals__subtitle">Accessory makers</h5>
-                            <p class="professionals__content">While most people enjoy casino gambling, sports betting,
-                                lottery and bingo playing for the
-                                fun</p>
-                            <h5 class="professionals__subtitle">Alterationists</h5>
-                            <p class="professionals__content">If you are looking for a new way to promote your business
-                                that
-                                won’t cost you more money,
-                            </p>
-                            <h5 class="professionals__subtitle">Custom Design designers</h5>
-                            <p class="professionals__content">If you are looking for a new way to promote your business
-                                that
-                                won’t cost you more money,
-                            </p>
-                        </div>
+                        <p class="professionals__subcontent">Effortless Validation for</p>
+                        <h2 class="professionals__title">Design Professionals</h2>
+                        <p class="professionals__mcontent">The Myspace page defines the individual, his or her
+                            characteristics, traits, personal choices
+                            and the overall personality of the person.</p>
+                        <h5 class="professionals__subtitle">Accessory makers</h5>
+                        <p class="professionals__content">While most people enjoy casino gambling, sports betting,
+                            lottery and bingo playing for the
+                            fun</p>
+                        <h5 class="professionals__subtitle">Alterationists</h5>
+                        <p class="professionals__content">If you are looking for a new way to promote your business
+                            that
+                            won’t cost you more money,
+                        </p>
+                        <h5 class="professionals__subtitle">Custom Design designers</h5>
+                        <p class="professionals__content">If you are looking for a new way to promote your business
+                            that
+                            won’t cost you more money,
+                        </p>
                     </div>
                     <div class="col-6">
                         <img src="./images/professionals/Proffesionals.svg" alt="proffesionals">
@@ -185,73 +171,69 @@
             <div class="container">
                 <div class="row">
                     <div class="col-6">
-                        <div class="text-area">
-                            <p class="marketers__subcontent">Optimisation for</p>
-                            <h2 class="marketers__title">Marketers</h2>
-                            <p class="marketers__mcontent">Few would argue that, despite the advancements of feminism
-                                over
-                                the past three decades, women
-                                still face a double standard when it comes to their behavior.</p>
-                            <h5 class="marketers__subtitle">Accessory makers</h5>
-                            <p class="marketers__content">While most people enjoy casino gambling, sports betting,
-                                lottery
-                                and bingo playing for the
-                                fun</p>
-                            <h5 class="marketers__subtitle">Alterationists</h5>
-                            <p class="marketers__content">If you are looking for a new way to promote your business that
-                                won’t cost you more money,
-                            </p>
-                            <h5 class="marketers__subtitle">Custom Design designers</h5>
-                            <p class="marketers__content">If you are looking for a new way to promote your business that
-                                won’t cost you more money,
-                            </p>
-                        </div>
+                        <p class="marketers__subcontent">Optimisation for</p>
+                        <h2 class="marketers__title">Marketers</h2>
+                        <p class="marketers__mcontent">Few would argue that, despite the advancements of feminism
+                            over
+                            the past three decades, women
+                            still face a double standard when it comes to their behavior.</p>
+                        <h5 class="marketers__subtitle">Accessory makers</h5>
+                        <p class="marketers__content">While most people enjoy casino gambling, sports betting,
+                            lottery
+                            and bingo playing for the
+                            fun</p>
+                        <h5 class="marketers__subtitle">Alterationists</h5>
+                        <p class="marketers__content">If you are looking for a new way to promote your business that
+                            won’t cost you more money,
+                        </p>
+                        <h5 class="marketers__subtitle">Custom Design designers</h5>
+                        <p class="marketers__content">If you are looking for a new way to promote your business that
+                            won’t cost you more money,
+                        </p>
                     </div>
                     <div class="col-6">
                         <img src="./images/marketers/marketers.svg" alt="marketers">
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="row footer">
-                <div class="col-2">
+            <div class="row">
+                <div class="col-3">
                     <div class="logo">
                         <img class="logo_img" src="./images/logo/Logo.svg" alt="logo">
                     </div>
                 </div>
-                <div class="col-2">
-                    <h4 class="links__caption">Quick Links</h4>
-                    <ul class="links__menu">
-                        <li class="links__item"><a href="#" class="links__url">About Us</a></li>
-                        <li class="links__item"><a href="#" class="links__url">Blog</a></li>
-                        <li class="links__item"><a href="#" class="links__url">Contact</a></li>
-                        <li class="links__item"><a href="#" class="links__url">FAQ</a></li>
+                <div class="col-3">
+                    <h4 class="footer__caption">Quick Links</h4>
+                    <ul class="footer__menu">
+                        <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Blog</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="col-2">
-                    <h4 class="links__caption">Legal Stuff</h4>
-                    <ul class="links__menu">
-                        <li class="links__item"><a href="#" class="links__url">Disclaimer</a></li>
-                        <li class="links__item"><a href="#" class="links__url">Financing</a></li>
-                        <li class="links__item"><a href="#" class="links__url">Privacy Policy</a></li>
-                        <li class="links__item"><a href="#" class="links__url">Terms of Service</a></li>
+                <div class="col-3">
+                    <h4 class="footer__caption">Legal Stuff</h4>
+                    <ul class="footer__menu">
+                        <li class="footer__item"><a href="#" class="footer__link">Disclaimer</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Financing</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy Policy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms of Service</a></li>
                     </ul>
                 </div>
-                <div class="col-4">
-                    <h4 class="input__caption">Knowing you're always on<br>the best energy deal.</h4>
-                    <div class="input__block">
-                        <input class="input__box" type="tel" name="telnum" id="" placeholder="Enter your phone Number">
-                    </div>
-                    <div class="wrapper__block input">
-                        <button class="input__btn">
-                            <span class="input__btn__text">Sign up Now</span>
-                        </button>
-                    </div>
+                <div class="col-3">
+                    <form action="#" method="post" class="footer__input">
+                        <label for="telnum" class="input__label">
+                            Knowing you're always on<br>the best energy deal.
+                            <input class="input__box" type="tel" name="telnum" id="telnum"
+                                placeholder="Enter your phone Number">
+                        </label>
+                        <button class="input__btn" type="submit">Sign up Now</button>
+                    </form>
                 </div>
             </div>
 

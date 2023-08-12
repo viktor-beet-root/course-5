@@ -1,6 +1,5 @@
 .hero {
     margin-bottom: 99px;
-    // .hero__container-img
 }
 
 .content {
@@ -14,5 +13,10 @@
     // .content__text
     &__text {
         padding-bottom: 20px;
+    }
+
+    // .content__btn
+    &__btn {
+        margin-top: 30px;
     }
 }

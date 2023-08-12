@@ -1,14 +1,9 @@
 .tools {
-    margin-bottom: 104px;
-    // .tools__bg
-
-    &__bg {
-        background-image: url(../images/tools/background_tools.svg);
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
+    background-image: url(../images/tools/background_tools.svg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 100px;
 
     // .tools__title
 
@@ -39,9 +34,9 @@
 
 .tools {
 
-    // .tools__sign-up
-    &__sign-up {
-        @include flexvariables (center);
+    // .tools__btn
+    &__btn {
+        text-align: center;
         padding-top: 70px;
         padding-bottom: 74px;
     }

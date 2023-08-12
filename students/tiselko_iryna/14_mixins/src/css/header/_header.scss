@@ -1,4 +1,5 @@
 .header {
+    margin-top: 17px;
     margin-bottom: 70px;
 }
 
@@ -10,9 +11,9 @@
         align-items: center;
     }
 
-    // .menu__links
+    // .menu__link
 
-    &__links {
+    &__link {
         color: $color-darkgray;
 
         &:hover {
@@ -25,30 +26,42 @@
     &__btn {
         @include flexvariables (flex-start, center, row-reverse)
     }
+
+    // .menu__btn-up
+
+    &__btn-up {
+        padding-left: 16px;
+    }
+
+    // .menu__btn-in
+
+    &__btn-in {
+        padding-right: 16px;
+    }
 }
 
-.up {
-    padding-left: 16px;
-    // .up__btn
+.btn-up__btn,
+.btn-in__btn {
+    padding: 13px 25px;
+    width: 110px;
+    height: 46px;
+    border-radius: 4px;
+}
+
+.btn-up {
+    // .btn-up__btn
 
     &__btn {
         @include border (none, $color-orange);
-        width: 110px;
-        height: 46px;
-        border-radius: 4px;
         color: $color-white;
     }
 }
 
-.in {
-    padding-right: 16px;
-    // .in__btn
+.btn-in {
+    // .btn-in__btn
 
     &__btn {
         @include border ();
-        width: 110px;
-        height: 46px;
-        border-radius: 4px;
         color: $color-darkgray;
     }
 }
