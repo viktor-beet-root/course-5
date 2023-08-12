@@ -4,17 +4,19 @@
         border-left: 1px solid $color-gold;
         height: 560px;
         position: absolute;
+        left: -75px;
+        top: 0;
     }
 }
 
 .info {
-    position: relative;
-    top: 70px;
-    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .fullname {
-    text-align: center;
     vertical-align: text-top;
     font-family: $default-font-name;
     color: $color-gray;
@@ -22,6 +24,7 @@
     font-weight: 900;
     text-transform: capitalize;
     padding-bottom: 30px;
+    position: relative;
 
 
     &::after {
@@ -29,7 +32,7 @@
         border-bottom: 1px solid $color-gold;
         width: 100px;
         padding-bottom: 65px;
-        left: 230px;
+        left: 60px;
         position: absolute;
     }
 }
@@ -37,7 +40,6 @@
 .skill {
     padding-top: 30px;
     padding-bottom: 30px;
-    text-align: center;
     font-family: 'Raleway', $fallback;
     color: $color-gray;
     font-size: 24px;
@@ -59,7 +61,6 @@
 .description {
     width: 430px;
     height: 116px;
-    text-align: center;
     color: $color-darkgray;
     font-family: 'Raleway', $fallback;
     font-size: 14px;
@@ -67,16 +68,20 @@
     line-height: 24px;
     padding-bottom: 20px;
     position: relative;
-    left: 70px;
+    text-align: center;
 
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: $color-gold;
+        height: 4px;
+    }
 
     &::after {
-        content: '';
-        position: absolute;
-        border-bottom: 4px solid $color-gold;
-        width: 20px;
+        width: 30px;
         bottom: -20px;
-        right: 48%;
+        right: 46%;
         border-left: 5px solid $color-white;
         border-right: 5px solid $color-white;
         z-index: 1;
@@ -84,13 +89,10 @@
 
     &::before {
         content: '';
-        position: absolute;
         display: block;
-        border-bottom: 4px solid $color-gold;
         width: 50px;
-        position: absolute;
         bottom: -20px;
-        left: 44%;
+        left: 44.6%;
         z-index: -1;
     }
 
