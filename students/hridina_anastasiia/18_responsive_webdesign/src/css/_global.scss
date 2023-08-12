@@ -1,0 +1,32 @@
+@include font-face('montserrat-v25-latin-regular');
+
+@include font-face('montserrat-v25-latin-500', $_font-style: normal, $_font-weight: 500);
+
+body {
+    font-family: $main-font;
+    //background-color: $default-body-color;
+}
+
+.block {
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    @media screen and (max-width: 992px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.container {
+    max-width: $container-max-width;
+    padding: $container-padding;
+}
+
+@include grid();
+
+input {
+    @include placeholder {
+        color: $color-lightblue;
+        font-size: 16px;
+    }
+}
