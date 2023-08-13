@@ -1,0 +1,41 @@
+$label-font-size: 20px;
+$label-color: $white-color;
+$label-bg: $gray-8-color;
+$icon-bg: $gray-3-color;
+$icon-color: $grey-7-color;
+$textarea-height: 150px;
+$icon-height: $textarea-height;
+$icon-width: 50px;
+$icon-focus-color: $orang-color;
+
+.message-lable {
+    @extend .form-control__label;
+}
+
+.message-wrapper {
+    @extend .form-control__group;
+    flex-direction: row-reverse;
+
+    // .message-wrapper__icon
+
+    &__icon {
+        height: $icon-height;
+    }
+}
+
+.textarea {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    padding: 0 10px;
+    height: 50px;
+    border: none;
+    height: $textarea-height;
+    width: calc(100% - $icon-width);
+
+    &:focus+.icon {
+        .icon__img {
+            fill: $icon-focus-color;
+        }
+    }
+}

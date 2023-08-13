@@ -1,0 +1,29 @@
+@include font-face('roboto-v30-latin-regular');
+@include font-face('roboto-v30-latin-regular', $_font-style: italic);
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+}
+
+@include grid();
+
+.main-title {
+    text-align: center;
+}
+
+.sub-title {
+    text-align: center;
+}
+
+.sprite {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
