@@ -186,7 +186,7 @@
 }
 
 @mixin media-m($point: sm) {
-    @media screen and (min-width: map-get($breack-points, $point)) {
+    @media screen and (min-width: (map-get($breack-points, $point) + 1)) {
         @content;
     }
 }

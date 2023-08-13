@@ -11,6 +11,12 @@
         gap: 32px;
         white-space: nowrap;
     }
+
+    @include media(sm) {
+        position: fixed;
+        top: 60px;
+        left: 25%;
+    }
 }
 
 .white-button,

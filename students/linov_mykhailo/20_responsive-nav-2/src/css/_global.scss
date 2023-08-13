@@ -54,3 +54,15 @@ a {
 .regular-p {
     margin: 0;
 }
+
+.mobile-only {
+    @include media(sm) {
+        display: none;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
+}
