@@ -1,0 +1,29 @@
+.button__start {
+    @include button-orng;
+}
+
+.button__left {
+    padding-top: 20px;
+
+    & .button__start {
+        @include button-orng;
+    }
+}
+
+.button__center {
+
+    padding-top: 120px;
+    text-align: center;
+
+    & .button__cntr {
+        @include button-orng;
+        text-decoration: none;
+        color: $color-white;
+    }
+
+}
+
+
+.button__now {
+    @include button-orng;
+}
