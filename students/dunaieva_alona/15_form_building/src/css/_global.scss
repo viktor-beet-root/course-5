@@ -1,0 +1,16 @@
+body {
+    font-family: $main-font;
+    font-size: $default-font-size;
+
+}
+
+@include grid ();
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: $periwikle-gray;
+    padding-top: 15px;
+    margin-top: 50px;
+}
