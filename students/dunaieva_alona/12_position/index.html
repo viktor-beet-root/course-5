@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=Poppins:wght@700&family=Roboto&family=Tourney:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=Poppins:wght@700&family=Roboto&family=Tourney:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=PT+Sans&family=Poppins:wght@700&family=Roboto&family=Tourney:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=PT+Sans&family=Poppins:wght@700&family=Roboto&family=Staatliches&family=Tourney:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&family=Francois+One&family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;700&family=PT+Sans&family=Poppins:wght@700&family=Roboto&family=Staatliches&family=Tourney:wght@600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -19,6 +15,11 @@
         <div class="container">
             <nav class="nav">
                 <p class="lang">ENG</p>
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__link" href="#">DOCUMANTATION / </a>
+                    <a class="breadcrumbs__link" href="#">WHO'S USING</a>
+                </div>
+                <!-- <p class="lang">ENG</p>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="#">DOCUMANTATION</a>
@@ -27,7 +28,7 @@
                     <li class="menu__item">
                         <a href="#">WHO'S USING</a>
                     </li>
-                </ul>
+                </ul> -->
                 <img class="logo" src="images/company-logo-black.svg" alt="company-logo-black">
             </nav>
         </div>
@@ -53,37 +54,39 @@
                         </ul>
                     </div>
                     <div class="col-8">
-                        <div class="first-block" id="introduction">
-                            <h2>Introduction<span>Chapter 1</span></h2>
-                            <p>Welcome to the very start of your React Native journey! If you're looking for environment setup instructions, they've moved to
-                                <u>their own section.</u> Continue reading for an introduction to the documentation, Native Components, React, and more!</p>
-                        </div>
-                        <div class="second-block" id="components">
-                            <h2>core components<span>Chapter 2</span></h2>
-                            <p>React Native is an open source framework for building Android and iOS applications using React and the app platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well as to describe
-                                the appearance and behavior of your UI using React components:
-                                <i>bundles of reusable, nestable code.</i> You can learn more about React in the next section. But first, let’s cover how components work in React Native.</p>
-                        </div>
-                        <div class="third-block" id="react">
-                            <h2>react fundamentals<span>Chapter 3</span></h2>
-                            <p>React Native runs on <u>React</u>, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve
-                                as a refresher course.</p>
-                            <p>We’re going to cover the core concepts behind React:</p>
-                            <p><strong>+ components.</strong> The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in.</p>
-                            <p><strong>+ JSX.</strong> React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: <br><span class="bg-text">&lsaquo;Text&rsaquo;Hello, I am your cat!&lsaquo;/Text&rsaquo;</span></p>
-                            <p>The React docs have <u>a comprehensive guide to JSX</u> you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span class="bg-text">name</span> for the cat, name,
-                                and embedding it with curly braces inside <span class="bg-text">&lsaquo;Text&rsaquo;</span></p>
-                            <p><strong>+ props.</strong>Props is short for “properties”. </p>
-                            <p><strong>+ state.</strong> While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or
-                                that comes from user interaction. State gives your components memory!</p>
-                        </div>
-                        <div class="fourth-block" id="input">
-                            <h2>handling text input<span>Chapter 4</span></h2>
-                            <p>TextInput is a Core Component that allows the user to enter text. It has an <i>onChangeText</i> prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called
-                                when the text is submitted.</p>
-                            <p>For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated
-                                as "🍕 🍕".</p>
-                        </div>
+                     <div class="bloks-wrapper">
+                            <div class="first-block" id="introduction">
+                                <h2>Introduction<span>Chapter 1</span></h2>
+                                <p>Welcome to the very start of your React Native journey! If you're looking for environment setup instructions, they've moved to
+                                    <u>their own section.</u> Continue reading for an introduction to the documentation, Native Components, React, and more!</p>
+                            </div>
+                            <div class="second-block" id="components">
+                                <h2>core components<span>Chapter 2</span></h2>
+                                <p>React Native is an open source framework for building Android and iOS applications using React and the app platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well as to describe
+                                    the appearance and behavior of your UI using React components:
+                                    <i>bundles of reusable, nestable code.</i> You can learn more about React in the next section. But first, let’s cover how components work in React Native.</p>
+                            </div>
+                            <div class="third-block" id="react">
+                                <h2>react fundamentals<span>Chapter 3</span></h2>
+                                <p>React Native runs on <u>React</u>, a popular open source library for building user interfaces with JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you started or can serve
+                                    as a refresher course.</p>
+                                <p>We’re going to cover the core concepts behind React:</p>
+                                <p><strong>+ components.</strong> The rest of this introduction to React uses cats in its examples: friendly, approachable creatures that need names and a cafe to work in.</p>
+                                <p><strong>+ JSX.</strong> React and React Native use JSX, a syntax that lets you write elements inside JavaScript like so: <br><span class="bg-text">&lsaquo;Text&rsaquo;Hello, I am your cat!&lsaquo;/Text&rsaquo;</span></p>
+                                <p>The React docs have <u>a comprehensive guide to JSX</u> you can refer to learn even more. Because JSX is JavaScript, you can use variables inside it. Here you are declaring a <span class="bg-text">name</span> for the cat, name,
+                                    and embedding it with curly braces inside <span class="bg-text">&lsaquo;Text&rsaquo;</span></p>
+                                <p><strong>+ props.</strong>Props is short for “properties”. </p>
+                                <p><strong>+ state.</strong> While you can think of props as arguments you use to configure how components render, state is like a component’s personal data storage. State is useful for handling data that changes over time or
+                                    that comes from user interaction. State gives your components memory!</p>
+                            </div>
+                            <div class="fourth-block" id="input">
+                                <h2>handling text input<span>Chapter 4</span></h2>
+                                <p>TextInput is a Core Component that allows the user to enter text. It has an <i>onChangeText</i> prop that takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function to be called
+                                    when the text is submitted.</p>
+                                <p>For example, let's say that as the user types, you're translating their words into a different language. In this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be translated
+                                    as "🍕 🍕".</p>
+                            </div>
+                     </div>
                     </div>
                 </div>
             </div>
