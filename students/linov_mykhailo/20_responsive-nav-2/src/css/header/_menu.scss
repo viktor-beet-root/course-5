@@ -9,16 +9,16 @@
         @include media(sm) {
             position: fixed;
             width: 100%;
-            top: 107px;
+            top: 110px;
             bottom: 0;
             display: block;
             text-align: center;
             background-color: white;
-            transform: translateX(-105%);
+            transform: translateX(-101%);
             transition: transform .3s ease-in-out;
 
             .menu-open-input:checked~& {
-                transform: translateX(-5%);
+                transform: translateX(0);
             }
         }
     }
@@ -33,7 +33,7 @@
 
             border-bottom: $default-border;
             text-align: center;
-            padding: 15px;
+            padding: 15px 0px;
         }
     }
 

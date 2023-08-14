@@ -982,23 +982,23 @@ a {
   .menu-wrapper__item {
     position: fixed;
     width: 100%;
-    top: 107px;
+    top: 110px;
     bottom: 0;
     display: block;
     text-align: center;
     background-color: white;
-    -webkit-transform: translateX(-105%);
-    -ms-transform: translateX(-105%);
-    transform: translateX(-105%);
+    -webkit-transform: translateX(-101%);
+    -ms-transform: translateX(-101%);
+    transform: translateX(-101%);
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
     transition: -webkit-transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .menu-open-input:checked ~ .menu-wrapper__item {
-    -webkit-transform: translateX(-5%);
-    -ms-transform: translateX(-5%);
-    transform: translateX(-5%);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -1006,7 +1006,7 @@ a {
   .menu__item {
     border-bottom: 1px solid #BCD0E5;
     text-align: center;
-    padding: 15px;
+    padding: 15px 0px;
   }
   .menu__item:first-child {
     border-top: 1px solid #BCD0E5;
@@ -1115,7 +1115,7 @@ a {
 @media screen and (max-width: 768px) {
   .buttons {
     position: fixed;
-    top: 60px;
+    top: 55px;
     left: 25%;
   }
 }
