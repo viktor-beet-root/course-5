@@ -23,6 +23,7 @@ $border-color: $grey-light;
 $default-border: 1px solid $grey-light;
 
 $default-body-color: $white-color;
+$default-font-color: $text-color;
 
 // fonts
 $default-font-name: 'Lato';
@@ -31,6 +32,9 @@ $default-font-size: 19px;
 
 $main-font: $default-font-name, $fallback;
 $font-path: './fonts/';
+
+$title-font-name: 'Red Hat Display';
+$title-font: $title-font-name, $fallback;
 
 // containers
 $container-padding: 15px;

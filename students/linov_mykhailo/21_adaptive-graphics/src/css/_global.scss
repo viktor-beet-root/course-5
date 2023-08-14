@@ -2,22 +2,10 @@ body {
     font-family: $main-font;
     background-color: $default-body-color;
     font-size: $default-font-size;
+    color: $default-font-color;
 }
 
 @include grid();
-
-.test {
-    height: 150px;
-    background-color: red;
-
-    @include media(md) {
-        background-color: green;
-    }
-
-    @include media(sm) {
-        background-color: yellow;
-    }
-}
 
 .mobile-only {
     @include media-m(sm) {
@@ -29,4 +17,8 @@ body {
     @include media(sm) {
         display: none;
     }
+}
+
+.title {
+    @include font-family($_weight: 600, $_size: 28px, $_color: $title-color, $_height: 166%, $_spacing: 2.8px, $_family: $title-font, $_style: normal)
 }

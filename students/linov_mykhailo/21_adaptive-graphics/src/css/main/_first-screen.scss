@@ -1,0 +1,17 @@
+.first-screen {
+
+    // .first-screen__picture
+
+    &__picture {}
+
+    // .first-screen__text
+
+    &__text {
+        max-width: 570px;
+    }
+}
+
+.main-title {
+    @include font-family($_weight: 600, $_size: 48px, $_color: $title-color, $_height: 64px, $_spacing: 2.4px, $_family: $title-font, $_style: normal);
+    margin-top: 90px;
+}

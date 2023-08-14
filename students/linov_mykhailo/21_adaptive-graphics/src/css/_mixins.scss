@@ -19,11 +19,12 @@
     }
 }
 
-@mixin font-family($_weight: 500, $_size: 16px, $_color: $color-text, $_height: 26px, $_family: $main-font, $_style: normal) {
+@mixin font-family($_weight: 500, $_size: 16px, $_color: $color-text, $_height: 26px, $_spacing: 2.8px, $_family: $main-font, $_style: normal) {
     font-weight: $_weight;
     font-size: $_size;
     color: $_color;
     line-height: $_height;
+    letter-spacing: $_spacing;
     font-family: $_family;
     font-style: $_style;
 }
