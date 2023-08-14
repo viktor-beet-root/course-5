@@ -1,0 +1,33 @@
+@include font-face('lato-v24-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name);
+
+@font-face {
+    font-display: swap;
+
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/red-hat-display-v14-latin-regular.woff2') format('woff2');
+
+}
+
+
+@font-face {
+    font-display: swap;
+
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/red-hat-display-v14-latin-600.woff2') format('woff2');
+
+}
+
+
+@font-face {
+    font-display: swap;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/lato-v24-latin-regular.woff2') format('woff2');
+
+}
