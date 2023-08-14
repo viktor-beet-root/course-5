@@ -53,10 +53,10 @@ h2::after {
     content: '';
     background-color: $color-gold;
     height: 1px;
-    width: 42%;
+    width: calc(100% - 378px);
     position: absolute;
     top: 100%;
-    right: 25%
+    right: 38%
 }
 
 h3 {
@@ -65,17 +65,6 @@ h3 {
     line-height: 26px;
     text-transform: capitalize;
     color: $color-text;
-}
-
-h4 {
-    font-family: $main-font;
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 24px;
-    color: $color-sub-text;
-    padding-bottom: 15px;
-    text-align: center;
 }
 
 .container {
