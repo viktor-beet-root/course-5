@@ -86,6 +86,10 @@
         max-width: $default-width;
         margin: 0 auto;
         padding: 0 $gap;
+
+        @include media(sm) {
+            padding: 0 $gap-mobile;
+        }
     }
 }
 

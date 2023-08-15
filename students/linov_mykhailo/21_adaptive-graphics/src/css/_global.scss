@@ -18,7 +18,3 @@ body {
         display: none;
     }
 }
-
-.title {
-    @include font-family($_weight: 600, $_size: 28px, $_color: $title-color, $_height: 166%, $_spacing: 2.8px, $_family: $title-font, $_style: normal)
-}
