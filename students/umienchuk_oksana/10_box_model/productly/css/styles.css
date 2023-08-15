@@ -147,6 +147,7 @@ input {
     min-height: 30px;
     width: 100%;
     max-width: 340px;
+    margin-bottom: 25px;
 }
 
 input[type="tel"]::placeholder {
