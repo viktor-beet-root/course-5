@@ -1,0 +1,44 @@
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: 20px;
+$default-font-name: 'Roboto';
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+//font-size
+$h2-font-size: 36px;
+
+// container
+$container-padding: 15px;
+$container-max-width: 1200px;
+$gap: 30px;
+$default-coutn-col: 12;
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+    "xxxs": 320px
+);
+
+//colors
+$color-author: #FFFFFF;
+$color-data-gray-5: #E0E0E0;
+
+//border 
+$border-radius: 20px;
+$default-border-radius: $border-radius;
+
+//padding 
+$padding-caption: 20px;
+$default-padding-caption: $padding-caption;
+
+//icon 
+$icon-brd-radius: 8px;
+$icon-width: 40px;
+$default-icon-width: $icon-width;
+$icon-height: $icon-width;
+$default-icon-height: $default-icon-width;

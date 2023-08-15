@@ -1,0 +1,13 @@
+.city-block {
+
+    &__image-wrapper {
+
+        &:nth-of-type(4n+2) {
+            grid-column: span 2;
+        }
+
+        &:nth-of-type(4n+3) {
+            grid-column: span 2;
+        }
+    }
+}
