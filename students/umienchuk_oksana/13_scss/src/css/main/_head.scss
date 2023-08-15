@@ -1,6 +1,6 @@
 .header {
 
-    .caption p {
+    .header__subtitle {
         text-align: center;
         font-family: $default-font-name, $fallback;
         font-size: 18px;
@@ -12,7 +12,7 @@
         margin-bottom: 15px;
     }
 
-    h1 {
+    .header__title {
         color: $color-gold;
         text-align: center;
         font-family: $font-name-title;
@@ -25,13 +25,13 @@
         z-index: 1;
     }
 
-    .caption {
+    .header__title {
         position: relative;
         z-index: 1;
         margin-bottom: 40px;
     }
 
-    h1::after {
+    .header__title::after {
         content: '';
         width: 450px;
         height: 1px;
@@ -43,7 +43,7 @@
         bottom: 10px;
     }
 
-    h1::before {
+    .header__title::before {
         content: '';
         background-image: url('../images/bonfire-sharp-1.svg');
         height: 20px;
