@@ -1,14 +1,16 @@
 .btn {
+    text-decoration: none;
+
+    font-weight: 500;
     display: inline-block;
     border: 1px solid transparent;
-    padding: 15px 40px;
-    border-radius: 4px;
+
+    border-radius: 50px;
     height: $border-height;
     display: inline-flex;
     align-items: center;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
+
+
 
 
     &-small {
@@ -21,13 +23,12 @@
     }
 
     &-primary {
-        border-color: $border-btn-color-primary;
         background-color: $orang-color;
         color: $white-color;
     }
 
     &-secondary {
-        border-color: $border-btn-color-secondary;
-        color: #2f281e;
+        background-color: $orang-color;
+        color: $white-color;
     }
 }
