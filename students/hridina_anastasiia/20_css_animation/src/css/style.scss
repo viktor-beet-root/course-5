@@ -1,0 +1,11 @@
+@use 'sass:math';
+@import "./normalize";
+@import './reset';
+@import "./variables";
+@import "./mixins";
+@import "./global";
+@import "./extend";
+@import './form';
+@import "./header/header";
+@import './main/main';
+@import './footer/footer';

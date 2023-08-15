@@ -1,0 +1,49 @@
+// colors
+$color-orange: #F90;
+$color-white: white;
+$color-darkgray: #2F281E;
+$color-lightgray: #544837;
+$color-lightblue: #BCD0E5;
+$color-black: black;
+$color-skyblue: #87CEEB;
+$color-gold: #ffd700;
+
+//$default-body-color: $color-white;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+$default-font-size: 16px;
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1200px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+// buttons
+$small-btn-padding: 13px 25px;
+$small-btn-width: 110px;
+$small-btn-height: 46px;
+$large-btn-padding: 13px 40px;
+$large-btn-width: 180px;
+$large-btn-height: 50px;
+$btn-border-radius: 4px;
+$btn-width: 115px;
+$btn-height: 46px;
+$btn-border: 1px solid;
+$small-btn-font-weight: 600;
+
+
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);
