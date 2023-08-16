@@ -1,0 +1,16 @@
+@use 'sass:math';
+@import '../../node_modules/normalize.css/normalize';
+@import "variables";
+@import 'mixins';
+@import 'extend';
+@import 'reset';
+@import 'fonts';
+@import "global";
+@import "form";
+@import "header/header";
+@import "sections/hero";
+@import "sections/tools";
+@import "sections/design";
+@import "sections/managers";
+@import "sections/marketers";
+@import "footer/footer";

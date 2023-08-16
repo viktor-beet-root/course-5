@@ -1,0 +1,56 @@
+.header {
+    padding: 17px;
+
+    &__container {
+        @include flex-jsc-al(space-between, center);
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.menu {
+    @include flex-jsc-al(space-between, center);
+    gap: 20px;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+
+
+    // .menu__item
+
+    &__item {}
+
+    // .menu__link
+
+    &__link {
+        text-decoration: none;
+        color: $color-title;
+
+        &:hover {
+            color: $orang-color;
+        }
+    }
+}
+
+.auth {
+    @include flex-jsc-al(space-between, center);
+    gap: 20px;
+
+
+    // .auth__link
+
+    &__link {}
+}
+
+.hidden-md {}
+
+.btn {}
+
+.btn-secondary {}
+
+.btn-small {}
+
+.btn-primary {}
