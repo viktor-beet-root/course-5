@@ -1,6 +1,5 @@
 .footer {
     background-color: $footer-grey;
-    // .footer__info
 
     &__flex {
         display: flex;
@@ -17,6 +16,11 @@
         margin: 0;
         padding-bottom: 25px;
         font-weight: 400;
+
+        @include media(md) {
+            padding-bottom: 20px;
+            margin-bottom: 0;
+        }
 
         @include media(sm) {
             font-size: 32px;
@@ -46,9 +50,7 @@
         }
     }
 
-    // .footer__email
-
-    &__email {
+    &__text {
         @include font-family(400, 16px, $black-color, 166%, 1.6px, $main-font, normal);
         text-decoration: none;
         margin: 0;
@@ -58,31 +60,26 @@
             letter-spacing: 1.8px;
         }
     }
-
-    // .footer__phone
-
-    &__phone {
-        @include font-family(400, 16px, $black-color, 166%, 1.6px, $main-font, normal);
-        text-decoration: none;
-        margin: 0;
-
-        @include media(sm) {
-            font-size: 18px;
-            letter-spacing: 1.8px;
-        }
-    }
-
-    // .footer__social
 
     &__social {
+        padding-top: 15px;
         display: flex;
         gap: 23px;
 
         &_icon {
-            max-width: 50px;
-            max-height: 50px;
-            padding: 10px;
+            @extend %flex-jcc-aic;
+            width: $icon-width;
+            height: $icon-height;
+            padding: $icon-padding;
             border: $default-border;
+
+            &:hover {
+                background-color: $grey-color;
+
+                path {
+                    fill: $white-color;
+                }
+            }
         }
     }
 }
@@ -102,4 +99,8 @@
         font-size: 16px;
         letter-spacing: 1.6px;
     }
+}
+
+.path:hover {
+    fill: white;
 }
