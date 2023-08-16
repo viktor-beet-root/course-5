@@ -1,0 +1,27 @@
+$color-white: white;
+$color-gold: #FC0;
+$color-sub-text: #898F8F;
+$color-main-text: #333;
+$color-h-text: #666;
+
+//main color for text 
+$default-text-color: $color-main-text;
+
+// font for body
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: Raleway;
+$main-font: $default-font-name, $fallback;
+
+$font-name-title: Roboto;
+$font-name-btn: Open Sans;
+$font-path: './fonts/';
+
+
+// container
+$container-padding: 15px;
+$container-max-widt: 1170px;
+
+// transform-center
+$transform-center: translate(-50%, -50%);
+
+// 
