@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        //Мінімум
+        //1.Створи HTML-файл, в ньому пропиши всі можливі способи використання JS;
+        /*- writing scripts for web pages
+        * - make web-pages interactive
+        * - create web apps
+        * - server-side programming
+        * - mobile apps programming
+        * - dekstop apps programming
+        * - PDF extensions written in JavaScript
+        * /
+
+        /*2.Тобі потрібно зберігати ім’я та прізвище в змінній, придумай до 4-х імен змінних, що потрібні тобі для даної задачі. 
+        Також напиши до 5 неправильних імен (неправильні імена повинні бути закоментовані);*/
+        const myFirstName = 'Iryna';
+        const myLastName = 'Tiselko';
+        const mySalutation = 'My name is';
+        const myNationality = 'Ukrainian';
+        const myInformation = mySalutation + ' ' + myFirstName + ' ' + myLastName + ' and I am' + ' ' + myNationality;
+        console.log(myInformation);
+
+        /* constant 1name = Ira;
+        * constant nazwis`ko = Ira;
+        * constant @name = Ira;
+        * constant first!name = Ira;
+        * constant first-name = Ira;
+        * /
+
+        //3.Вкажи всі можливі способи коментування коду;
+
+        // one line comment
+
+        /*
+        * multi-line
+        * comment
+        */
+
+        /**
+         * JSDoc
+        */
+
+        //4.Які стилі написання імен змінних ти знаєш?
+        // snake_case
+        // сamelCase
+
+
+        // Нормa
+        //1.Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
+        const useName = prompt('What is your name?', '');
+        console.log('Привіт,' + useName);
+
+        //2.Запитай рік народження користувача, порахуй його/її вік і виведи результат. Поточний рік вкажи в коді як константу;
+        const userBirthYear = prompt('What is your year of birth?', '');
+        const currentYear = 2023;
+        const userAge = currentYear - userBirthYear;
+        console.log('So you are' + ' ' + userAge + 'y.o now?');
+
+        //3.Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
+        const lenthSquare = prompt('Specify side length of a square', '');
+        const squarePerimeter = (4 * lenthSquare);
+        console.log('Your total square perimeter is' + ' ' + squarePerimeter);
+
+
+        //Максимум
+        //1.Запитай у користувача радіус кола і виведи площу такої окружності.
+        const circleRadius = prompt('Enter any circle radius', '');
+        const PI = Math.PI;
+        const circleArea = (circleRadius ** 2) * PI;
+        console.log('Circle area is equal to' + ' ' + circleArea);
+
+        //2.Запитай у користувача відстань в кілометрах між двома містами і за скільки годин він хоче дістатися. Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
+        const userDistance = prompt('Enter the distance beetwen cities in km', '');
+        const hoursOfTravel = prompt('How many hours you want to get there?', '');
+        const userSpeed = userDistance / hoursOfTravel;
+        console.log('Your speed must be' + ' ' + userSpeed + ' km/h');
+
+
+        //3.Реалізуй конвертор валют. Користувач вводить долари, програма переводить їх в євро. Курс валют зберігається в константі.
+        const userUSD = prompt('Enter your sum', '');
+        const euroRate = 0.92;
+        const userConversionRate = userUSD * euroRate;
+        console.log('You will get' + ' ' + userConversionRate + ' euro');
+    </script>
+</body>
+
+</html>
