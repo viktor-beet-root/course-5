@@ -1,3 +1,8 @@
+@include font-face ('josefin-sans-v26-latin-300', 300);
+@include font-face ('josefin-sans-v26-latin-regular', 400);
+@include font-face ('josefin-sans-v26-latin-700', 700);
+@include font-face ('aleo-v12-latin-regular', 400, $font-sub-font);
+
 body {
     font-family: $main-font;
     background-color: $default-body-color;
