@@ -19,6 +19,14 @@
     }
 }
 
+@mixin newfont($_weight: 400, $_style: normal, $_font-size: 19px, $_line-height: 32px, $_letter-spacing: 0.95px, $_font-name: $default-font-name) {
+    font-weight: $_weight;
+    font-style: $_style;
+    font-size: $_font-size;
+    line-height: $_line-height;
+    letter-spacing: $_letter-spacing;
+}
+
 @mixin test {
     @include flex;
 

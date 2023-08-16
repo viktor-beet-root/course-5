@@ -1,0 +1,113 @@
+.blog {
+
+    // .blog__container
+
+    &__container {}
+
+    // .blog__article
+
+    &__article {}
+
+    // .blog__heading
+
+    &__heading {
+        @include newfont(600, normal, 48px, 64px, $title-font-name);
+        letter-spacing: 2.4px;
+
+        @include media(sm) {
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 1.5px;
+        }
+    }
+}
+
+.heading {
+    @include newfont(400, normal, 16px, 150%, 8px);
+    text-transform: uppercase;
+}
+
+.blog-article {
+
+    // .blog-article__title
+
+    &__title {
+        @include newfont(600, normal, 28px, 166%, 2.8px, $title-font-name);
+
+        &_top {
+            @include newfont(600, normal, 28px, 166%, 2.8px, $title-font-name);
+            padding-top: 60px;
+        }
+    }
+
+    &__img {
+        @include media(sm) {
+            display: block;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            object-position: center;
+
+            @supports not (aspect-ratio: 1 / 1) {
+                height: 300px;
+            }
+        }
+
+
+        display: block;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+        object-position: center;
+        opacity: .7;
+
+        @supports not (aspect-ratio: 2 / 1) {
+            height: 500px;
+        }
+
+        &_second {
+            display: block;
+            aspect-ratio: 2 / 1;
+            object-fit: cover;
+            object-position: right 75%;
+            filter: brightness(1);
+
+            @supports not (aspect-ratio: 2 / 1) {
+                height: 500px;
+            }
+
+            @include media(sm) {
+                display: block;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: center;
+
+                @supports not (aspect-ratio: 1 / 1) {
+                    height: 300px;
+                }
+            }
+        }
+
+    }
+
+    // .blog-article__text
+
+    &__text {
+        @include newfont;
+        color: $color-grey;
+
+        &_left {
+            @include media(md) {
+                width: 100%;
+            }
+
+            @include newfont;
+            color: $color-grey;
+            width: 50%;
+            height: 25%;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+}
