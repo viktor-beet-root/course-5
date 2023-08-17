@@ -1,0 +1,28 @@
+.tools {
+
+    background: url('../../images/tools/bg.svg') center bottom;
+    background-size: cover;
+    padding-bottom: 74px;
+    padding-top: 99px;
+    margin-bottom: 103px;
+
+    &__title {
+        max-width: 539px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: normal;
+    }
+
+    &__subtitle {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+
+    &__text {
+        padding-bottom: 83px;
+    }
+
+    &__action {
+        text-align: center;
+    }
+}

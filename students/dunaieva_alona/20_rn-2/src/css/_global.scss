@@ -1,0 +1,46 @@
+@include grid ();
+
+body {
+    font-family: $main-font;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+img {
+    width: auto;
+}
+
+.container {
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.row {
+    align-items: center;
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    padding-bottom: 30px;
+
+}
+
+h2 {
+    @include h2;
+    font-size: 36px;
+}
+
+h3 {
+    @include h3;
+    font-size: 22px;
+}
+
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
