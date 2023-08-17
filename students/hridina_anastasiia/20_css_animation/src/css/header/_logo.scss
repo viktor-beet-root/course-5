@@ -8,6 +8,8 @@
     }
 
     @include media(sm) {
+        width: 50%;
+        display: block;
         justify-content: center;
         position: fixed;
         top: 50px;

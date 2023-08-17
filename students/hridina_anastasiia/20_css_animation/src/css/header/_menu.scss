@@ -226,29 +226,3 @@
 
     }
 }
-
-.menu-open-label-menu {
-    height: 50px;
-    width: 50px;
-    border-left: 1px solid $color-lightblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &::after {
-        content: '';
-        display: block;
-        width: 30%;
-        height: 30%;
-        border-bottom: 1px solid $color-lightblue;
-        border-right: 1px solid $color-lightblue;
-        transform: rotate(-45deg);
-        border-color: $color-orange;
-    }
-}
-
-
-.menu-close-label-submenu {
-    width: 100%;
-    display: block;
-}
