@@ -14,3 +14,26 @@ body {
     font-family: Open Sans, Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
+
+section {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 47px;
+    font-weight: 700;
+
+}
+
+h2 {
+    text-align: center;
+}
