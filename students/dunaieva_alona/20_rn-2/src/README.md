@@ -1,1 +1,1 @@
-https://dunaievaas.github.io/course-5/students/dunaieva_alona/18_responsive_web_design/build/index.html
+https://dunaievaas.github.io/course-5/students/dunaieva_alona/20_rn-2/build/index.html
