@@ -1,0 +1,20 @@
+.header {
+    &__button {
+        margin-left: auto;
+        gap: 20px;
+        box-shadow: $default-box-shadow;
+
+        @include media(sm) {
+            display: none;
+        }
+    }
+
+    &__button:hover {
+        color: $color-white;
+        background-color: $border-btn-color-primary;
+
+        path {
+            stroke: $color-white;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import "./logo";
+@import "./menu";
+@import "./button";
+
+.header {
+    &__container {
+        display: flex;
+        align-items: center;
+        padding-top: 20px;
+
+        @include media(sm) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+}

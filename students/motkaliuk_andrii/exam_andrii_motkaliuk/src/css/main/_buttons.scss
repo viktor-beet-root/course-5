@@ -1,0 +1,31 @@
+.btn {
+    @include font-family(500, 16px, $color-darkblue, 160%, 0.08px, $main-font, normal);
+    text-decoration: none;
+    @extend %flex-jcc-aic;
+    width: 210px;
+    height: 60px;
+    border: $default-border;
+    border-radius: 50px;
+    box-shadow: $default-box-shadow;
+}
+
+.btn-violet {
+    background-color: $color-medium-purple;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-electric-violet;
+        background-color: $color-electric-violet;
+    }
+}
+
+.btn-pink {
+    color: $color-white;
+    border: 1px solid $color-brilliant-rose;
+    background-color: $color-brilliant-rose;
+
+    &:hover {
+        background-color: $color-pink-middle;
+        background-color: $color-pink-middle;
+    }
+}

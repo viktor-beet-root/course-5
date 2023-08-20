@@ -1,0 +1,59 @@
+// colors
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-darkgray: #4B5D68;
+$color-darkblue: #212353;
+$color-medium-purple: #9C69E2;
+$color-white-ice: #EAF6FC;
+$color-periwinkle: #CCDDFF;
+$color-cerulean: #00ACEE;
+$color-light-green: #F0FAF9;
+$color-brilliant-rose: #F063B8;
+$color-light-pink: #FEF0F8;
+$color-medium-pink: #FDE8F5;
+$color-medium-purple: #9C69E2;
+$color-light-violet: #F6F0FD;
+$color-electric-violet: #8A40EE;
+$color-light-gray: #D9D9D9;
+$color-medium-redviolet: #C13584;
+$color-pink-middle: #EB4BAB;
+
+$default-font-color: $color-darkgray;
+
+$default-box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+$border-btn-color-primary: $color-medium-purple;
+$border-height: 50px;
+$btn-font-weight: 600;
+
+$border-color: $color-medium-purple;
+$default-border: 1px solid $border-btn-color-primary;
+
+$default-body-color: $color-white;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: 16px;
+
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+$title-font-name: 'Work Sans';
+$title-font: $title-font-name, $fallback;
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1170px;
+
+$gap: 15px;
+$default-count-col: 12;
+
+$default-width: 1170px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

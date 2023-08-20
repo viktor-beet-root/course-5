@@ -1,0 +1,23 @@
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+}
+
+@include grid();
+
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
+}
+
+.title {
+    @include font-family(700, 36px, #000, 160%, normal, $title-font, normal);
+}
