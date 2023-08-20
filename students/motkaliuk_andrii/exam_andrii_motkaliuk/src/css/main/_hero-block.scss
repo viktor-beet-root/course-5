@@ -1,65 +1,56 @@
-$margin-left-img: 300px;
+.container,
+.row,
+.col,
+.search-wrapper {
+    height: 100%;
+}
 
 .hero-block {
+    background-image: url(../../images/header-background.png);
+    background-size: cover;
+    height: 100vh;
+
+    &__search {}
+}
+
+.search-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    text-align: center;
 
     &__title {
+        text-align: center;
         margin: 0;
-        @include font-family(700, 80px, $color-darkblue, 1.1, normal, $title-font, normal);
+        // padding-top: 30vh;
 
-        @include media(md) {
-            font-size: 50px;
 
-        }
-
-        @include media(sm) {
-            font-size: 50px;
-
-        }
+        color: $color-white;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+        text-transform: uppercase;
     }
 
-    &__text {
-        margin: 0;
-        @include font-family(500, 18px, $color-darkgray);
-        max-width: 370px;
-
-        @include media(sm) {
-            margin: 0 auto;
-            text-align: center;
-        }
-    }
-
-    &__img {
-        max-width: calc(100% + $margin-left-img);
-        margin-left: -$margin-left-img;
-        position: relative;
-        top: 18%;
-        z-index: 0;
-
-        @include media (md) {
-            margin-left: calc($margin-left-img / 2 * -1);
-            max-width: calc(100% + $margin-left-img / 2);
-        }
-
-        @include media (sm) {
-            margin-left: unset;
-            max-width: 100%;
-            left: 0;
-            top: 0;
-        }
-    }
-
-    .btn {
-        @include media(sm) {
-            margin: 0 auto;
-
-        }
+    &__subtitle {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 28px;
+        letter-spacing: 6.82px;
     }
 }
 
-.hero-block-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    position: relative;
-    z-index: 1;
+.scroll-down {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 2.8px;
+    margin: 0;
+}
+
+.chevron-down {
+    width: 14px;
 }
