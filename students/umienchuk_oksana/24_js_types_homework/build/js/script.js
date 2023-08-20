@@ -1504,6 +1504,33 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/string-repeat.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/string-repeat.js ***!
+  \*********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
+var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+
+var $RangeError = RangeError;
+
+// `String.prototype.repeat` method implementation
+// https://tc39.es/ecma262/#sec-string.prototype.repeat
+module.exports = function repeat(count) {
+  var str = toString(requireObjectCoercible(this));
+  var result = '';
+  var n = toIntegerOrInfinity(count);
+  if (n < 0 || n === Infinity) throw $RangeError('Wrong number of repetitions');
+  for (;n > 0; (n >>>= 1) && (str += str)) if (n & 1) result += str;
+  return result;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/string-trim.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/internals/string-trim.js ***!
@@ -2037,6 +2064,147 @@ if (IS_PURE && PureNumberNamespace) copyConstructorProperties(path[NUMBER], Pure
 if (FORCED || IS_PURE) copyConstructorProperties(path[NUMBER], NativeNumber);
 
 
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.number.to-fixed.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.number.to-fixed.js ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
+var thisNumberValue = __webpack_require__(/*! ../internals/this-number-value */ "./node_modules/core-js/internals/this-number-value.js");
+var $repeat = __webpack_require__(/*! ../internals/string-repeat */ "./node_modules/core-js/internals/string-repeat.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+var $RangeError = RangeError;
+var $String = String;
+var floor = Math.floor;
+var repeat = uncurryThis($repeat);
+var stringSlice = uncurryThis(''.slice);
+var nativeToFixed = uncurryThis(1.0.toFixed);
+
+var pow = function (x, n, acc) {
+  return n === 0 ? acc : n % 2 === 1 ? pow(x, n - 1, acc * x) : pow(x * x, n / 2, acc);
+};
+
+var log = function (x) {
+  var n = 0;
+  var x2 = x;
+  while (x2 >= 4096) {
+    n += 12;
+    x2 /= 4096;
+  }
+  while (x2 >= 2) {
+    n += 1;
+    x2 /= 2;
+  } return n;
+};
+
+var multiply = function (data, n, c) {
+  var index = -1;
+  var c2 = c;
+  while (++index < 6) {
+    c2 += n * data[index];
+    data[index] = c2 % 1e7;
+    c2 = floor(c2 / 1e7);
+  }
+};
+
+var divide = function (data, n) {
+  var index = 6;
+  var c = 0;
+  while (--index >= 0) {
+    c += data[index];
+    data[index] = floor(c / n);
+    c = (c % n) * 1e7;
+  }
+};
+
+var dataToString = function (data) {
+  var index = 6;
+  var s = '';
+  while (--index >= 0) {
+    if (s !== '' || index === 0 || data[index] !== 0) {
+      var t = $String(data[index]);
+      s = s === '' ? t : s + repeat('0', 7 - t.length) + t;
+    }
+  } return s;
+};
+
+var FORCED = fails(function () {
+  return nativeToFixed(0.00008, 3) !== '0.000' ||
+    nativeToFixed(0.9, 0) !== '1' ||
+    nativeToFixed(1.255, 2) !== '1.25' ||
+    nativeToFixed(1000000000000000128.0, 0) !== '1000000000000000128';
+}) || !fails(function () {
+  // V8 ~ Android 4.3-
+  nativeToFixed({});
+});
+
+// `Number.prototype.toFixed` method
+// https://tc39.es/ecma262/#sec-number.prototype.tofixed
+$({ target: 'Number', proto: true, forced: FORCED }, {
+  toFixed: function toFixed(fractionDigits) {
+    var number = thisNumberValue(this);
+    var fractDigits = toIntegerOrInfinity(fractionDigits);
+    var data = [0, 0, 0, 0, 0, 0];
+    var sign = '';
+    var result = '0';
+    var e, z, j, k;
+
+    // TODO: ES2018 increased the maximum number of fraction digits to 100, need to improve the implementation
+    if (fractDigits < 0 || fractDigits > 20) throw $RangeError('Incorrect fraction digits');
+    // eslint-disable-next-line no-self-compare -- NaN check
+    if (number !== number) return 'NaN';
+    if (number <= -1e21 || number >= 1e21) return $String(number);
+    if (number < 0) {
+      sign = '-';
+      number = -number;
+    }
+    if (number > 1e-21) {
+      e = log(number * pow(2, 69, 1)) - 69;
+      z = e < 0 ? number * pow(2, -e, 1) : number / pow(2, e, 1);
+      z *= 0x10000000000000;
+      e = 52 - e;
+      if (e > 0) {
+        multiply(data, 0, z);
+        j = fractDigits;
+        while (j >= 7) {
+          multiply(data, 1e7, 0);
+          j -= 7;
+        }
+        multiply(data, pow(10, j, 1), 0);
+        j = e - 1;
+        while (j >= 23) {
+          divide(data, 1 << 23);
+          j -= 23;
+        }
+        divide(data, 1 << j);
+        multiply(data, 1, 1);
+        divide(data, 2);
+        result = dataToString(data);
+      } else {
+        multiply(data, 0, z);
+        multiply(data, 1 << -e, 0);
+        result = dataToString(data) + repeat('0', fractDigits);
+      }
+    }
+    if (fractDigits > 0) {
+      k = result.length;
+      result = sign + (k <= fractDigits
+        ? '0.' + repeat('0', fractDigits - k) + result
+        : stringSlice(result, 0, k - fractDigits) + '.' + stringSlice(result, k - fractDigits));
+    } else {
+      result = sign + result;
+    } return result;
+  }
+});
+
+
 /***/ })
 
 /******/ 	});
@@ -2128,117 +2296,15 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.number.to-fixed.js */ "./node_modules/core-js/modules/es.number.to-fixed.js");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1__);
 
-// //незмінні примітивні типи
-
-// //number
-// const num = (2, 2.5, -1, 0, -0, Infinity, -Infinity, NaN);
-
-// console.log(NaN === NaN);
-// console.log('2' + 2);
-// console.log(isNaN(NaN));
-// console.log((0.1 * 10 + 0.2 * 10) / 10);
-// console.log(Number.MAX_SAFE_INTEGER);
-// console.log((2.3456456985).toFixed(2));
-// console.log((2).toFixed(2));
-// console.log(typeof (2.3456456985).toFixed(2));
-// console.log(Math.floor(2.5));
-// console.log(Math.round(2.7));
-// console.log(Math.ceil(2.3));
-
-// //Bigint
-// //2n + 1n;
-
-// // String
-// const string = ("cs'nck'j", 'djc2\"hsk', `geeedf`);
-// console.log("djc \\  2\" \n hsk");
-// console.log(`nlnv
-// vjdnlvjn
-// djlvnjk
-// dvbkbh`);
-
-// const n = 'test';
-// console.log(`
-// ${n}
-// ${n + n}
-// ${n + 2}
-// ${n + 'test'}
-// vjdnlvjn
-// djlvnjk
-// `);
-
-// let f = 'sssss';
-// f = f + 'a';
-
-// console.log(f.length, f.toLocaleUpperCase());
-// console.log(f.split('').reverse().join(''));
-
-// //undefined
-// let typeUndefined;
-// typeUndefined = 2;
-
-// typeUndefined = undefined;
-
-// console.log(typeUndefined);
-
-// //null
-// const typeNull = null;
-
-// //Booler
-// let typeBool = true; //1
-// typeBool = false; //0
-
-// const typeSymbol = Symbol('vnjkdnvk');
-
-// //Об'єктні типи, що змінюються
-
-// const arr = [0, 1, 0, 1]; //, '', {}, [], null, undefined, function
-// arr[0] = 1;
-// console.log(arr);
-// // [[, 0, 0], [1, 2, 0], [1, 1, 0]]
-
-// const obj = {
-//     userName: "Vasya",
-//     age: 20,
-//     b: 21,
-//     2: 2
-// };
-
-// obj.age = 30;
-// console.log(obj);
-
-// //приведення типів
-
-// //Number, String, Bool
-// console.log(String(false), Number('2'), Boolean({}), [1, 2, 34].toString());
-// console.log((15).toString(16));
-// console.log(+'34', parseInt('1.1px'), parseFloat('1.2'), ~~(2.5));
-
-// //!!!!!!!!!
-// console.log(false, !!'', !!0, !!-0, !!undefined, !!null, !!NaN);
-// console.log(!!2121, !!Infinity);
-// //!= !==
-
-// console.log(2 == '2', 2 === '2', 2 < 5, 4 > 5, 3 <= 3, 3 <= 4);
-// const a = [];
-// const b = a;
-// console.log(a === b);
-
-// console.log(+false, +true, +null, true + true, [] + []);
-
-// //
-// console.log(1 && 0); //і
-// console.log(1 || 0); //або
-
-// //const s = +prompt('age?') || 10;
-// // const s = +prompt('age?') ?? 10;
-// // console.log(s);
-
-// console.log(12 % 2)
 
 // Мінімум
 
 // Виконай додавання 0, 1 і 0, 2 добийся математично правильної відповіді.
+
+
 var x = 0.1;
 var y = 0.2;
 var xy = (x * 10 + y * 10) / 10;
@@ -2253,21 +2319,53 @@ var stringThree = 'Sum:' + ' ' + sumStringNumber;
 console.log(stringThree);
 
 // Користувач вказує обсяг флешки в Гб.Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.
+var gigaBytes = prompt('How many Gb are on a flash drive?', '');
+var megaBytes = 1000; //number of megabytes in 1 gigabyte
+var fileMegaBytes = 820; //
+var howManyFiles = +gigaBytes * megaBytes / 820; //single file size
+var filesRounding = 'Files fit on a flash drive:' + ' ' + Math.floor(howManyFiles);
+console.log(filesRounding);
 
 //     Норма
 
 // Користувач вводить суму грошей в гаманці і ціну однієї шоколадки.Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
+var totalMoney = prompt('How much money is in the wallet?', '');
+var priceChocolate = prompt('What is the price of chocolate?', '');
+var numberOfChocolates = +totalMoney / +priceChocolate; //number of chocolates
+var numberChocRounding = Math.floor(numberOfChocolates); //rounding
+var numberChocRounString = 'You can buy chocolates:' + ' ' + numberChocRounding;
+console.log(numberChocRounString);
+var changeMoney = +totalMoney - numberChocRounding * priceChocolate; //cash change
+console.log(changeMoney.toFixed(2));
+
 // Запитай у користувача тризначне число і виведи його задом наперед.Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
+var numberOfUser = prompt('Enter a three-digit number', '');
+var unitsUser = +numberOfUser % 10;
+var tensUser = ~~(+numberOfUser / 10) % 10;
+var hundredsUser = ~~(+numberOfUser / 100) % 10;
+console.log('Your number:' + ' ' + String(unitsUser) + String(tensUser) + String(hundredsUser));
+console.log('Your number:' + ' ' + unitsUser + tensUser + hundredsUser);
 
 // Максимум
 
 // Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5 % річних.Вивести суму нарахованих відсотків.
+var originalDeposit = prompt('What is the deposit amount?', '');
+var totalMonths = prompt('How many months is the deposit?', '');
+var persentOfDeposite = 5; //percentage of the deposit rate for the year
+var totalDeposite = +originalDeposit * persentOfDeposite * Number(totalMonths) / 12 / 100;
+var totalDepositeRouting = 'Your deposit interest:' + ' ' + totalDeposite.toFixed(2);
+console.log(totalDepositeRouting);
+
 // Що повернуть вирази:
 // 2 && 0 && 3
-
+0;
+console.log( true && 0 && 0);
 // 2 || 0 || 3
-
+2;
+console.log(2 || 0 || 0);
 // 2 && 0 || 3
+3;
+console.log( false || 3);
 }();
 /******/ })()
 ;
