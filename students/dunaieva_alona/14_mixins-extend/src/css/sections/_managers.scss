@@ -1,0 +1,20 @@
+.managers {
+    margin-bottom: 100px;
+
+    .row {
+        gap: 161px;
+    }
+
+    &__overtext {
+        @extend .design__overtext;
+    }
+
+    &__items {
+        @extend .design__items;
+
+        &__list {
+            display: flex;
+            gap: 30px;
+        }
+    }
+}
