@@ -1,0 +1,96 @@
+body {
+    font-family: $main-font;
+}
+
+h1 {
+    font-family: $title-font;
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $color-gold;
+    text-align: center;
+    position: relative;
+    padding-bottom: 43px;
+    margin-bottom: 114px;
+}
+
+h1::after {
+    content: '';
+    min-height: 1px;
+    background-color: $color-gold;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: calc(100% + 146px);
+}
+
+h1::before {
+    content: '';
+    background: url(../images/bonfire-sharp.svg) no-repeat center;
+    position: absolute;
+    min-width: 20px;
+    min-height: 20px;
+    top: 93%;
+    right: 44%;
+    background-color: $color-bg;
+    padding: 0 5px;
+    z-index: 1;
+}
+
+h2 {
+    font-family: $title-font;
+    font-size: 36px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: $color-sub-text;
+    position: relative;
+    padding-bottom: 35px;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    background-color: $color-gold;
+    height: 1px;
+    width: calc(100% - 378px);
+    position: absolute;
+    top: 100%;
+    right: 38%
+}
+
+h3 {
+    font-family: $default-font-name;
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: $color-text;
+}
+
+.container {
+    max-width: $default-width;
+    margin: 0 auto;
+    padding: $container-padding;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.col-6 {
+    width: calc(100% / 2);
+    display: flex;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.our-team .row:last-of-type::after {
+    content: '';
+    height: calc(100% + 60px);
+    width: 1px;
+    background-color: $color-gold;
+    position: absolute;
+    transform: translate(2px, -62px);
+}
