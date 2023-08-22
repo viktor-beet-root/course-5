@@ -1,0 +1,15 @@
+.nature-block {
+
+    &__image-wrapper {
+
+        &:nth-of-type(3n+2) {
+            grid-column: span 2;
+        }
+
+        &:nth-of-type(5n+3) {
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+        }
+
+    }
+}
