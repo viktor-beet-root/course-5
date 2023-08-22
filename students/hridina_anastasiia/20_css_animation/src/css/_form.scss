@@ -1,0 +1,110 @@
+.auth {
+    display: inline-flex;
+    gap: 30px;
+    white-space: nowrap;
+    position: relative;
+
+    @include media(md) {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    @include media(sm) {
+        padding: 15px 10px;
+        position: fixed;
+        top: 0px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.btn {
+
+    &-small {
+        border: $btn-border $color-lightblue;
+        background-color: $color-white;
+        color: $color-black;
+        text-decoration: none;
+        border-radius: $btn-border-radius;
+        padding: $small-btn-padding;
+        font-size: $default-font-size;
+        font-weight: $small-btn-font-weight;
+        text-align: center;
+        width: $small-btn-width;
+        height: $small-btn-height;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-lightblue;
+            color: $color-white;
+            border: $btn-border $color-skyblue;
+        }
+    }
+
+    &-small-orng {
+        background-color: $color-orange;
+        color: $color-white;
+        text-decoration: none;
+        border-radius: $btn-border-radius;
+        padding: $small-btn-padding;
+        font-size: $default-font-size;
+        font-weight: $small-btn-font-weight;
+        text-align: center;
+        width: $small-btn-width;
+        height: $small-btn-height;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-gold;
+            color: $color-white;
+        }
+    }
+
+}
+
+.button__start {
+    @include button-orng;
+    white-space: nowrap;
+
+}
+
+.button__left {
+    padding-top: 20px;
+
+    @media screen and (max-width: 992px) {
+        text-align: center;
+    }
+
+    & .button__start {
+        @include button-orng;
+    }
+}
+
+.button__center {
+
+    padding-top: 120px;
+    text-align: center;
+
+    & .button__cntr {
+        @include button-orng;
+        text-decoration: none;
+        color: $color-white;
+    }
+
+}
+
+
+.button__now {
+    @include button-orng;
+}
+
+.button__footer {
+    @include button-orng;
+    width: 190px;
+    white-space: nowrap;
+}

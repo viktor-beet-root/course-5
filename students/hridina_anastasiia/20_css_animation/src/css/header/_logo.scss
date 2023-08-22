@@ -1,0 +1,19 @@
+.logo {
+    display: flex;
+
+    @include media(md) {
+        position: absolute;
+        justify-content: left;
+        top: 10px;
+    }
+
+    @include media(sm) {
+        width: 50%;
+        display: block;
+        justify-content: center;
+        position: fixed;
+        top: 50px;
+        left: 0;
+        padding: 15px 10px;
+    }
+}
