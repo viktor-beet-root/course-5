@@ -11,10 +11,10 @@ const textSample$ = 'My name is:'
 const fullNameUser1 = textSample$ + ' ' + nameUser + ' ' + surNameUser;
 console.log(fullNameUser1);
 // const 1989Ivan = 25;
-// const $_567 = 25;
+// const &567 = 25;
 // const UPI-TER = 25;
-// const data = 25;
-// const радіус = 25;
+// const data+for = 25;
+// const {} = 25;
 
 
 // Вкажи всі можливі способи коментування коду;
@@ -32,6 +32,7 @@ commentary3*/
 
 // Які стилі написання імен змінних ти знаєш?
 // camelCase
+// snake_case
 
 // Норма
 
