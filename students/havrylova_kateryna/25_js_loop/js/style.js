@@ -29,8 +29,8 @@ if (amount >= 200 && amount < 300) {
 } else if (amount >= 500) {
     discount = 7;
 }
-
-console.log("Your dicount is " + discount + "%");
+const answerDiscount = "Your dicount is " + discount + "%";
+console.log(answerDiscount);
 
 
 
@@ -62,12 +62,16 @@ for (let i = 0; i < 10; i++) {
         // console.log('even ' + Number(userListArr[i]));
     }
 }
-
-console.log('positiv numbers: ' + positiv);
-console.log('negativ numbers: ' + negativ);
-console.log('zero: ' + zero);
-console.log('odd numbers: ' + odd);
-console.log('even numbers: ' + even);
+const resultPositiv = 'positiv numbers: ' + positiv;
+console.log(resultPositiv);
+const resultNegativ = 'negativ numbers: ' + positiv;
+console.log(resultNegativ);
+const resultZero = 'zero: ' + zero;
+console.log(resultZero);
+const resultOdd = 'odd numbers: ' + odd;
+console.log(resultOdd);
+const resultEven = 'even numbers: ' + even;
+console.log(resultEven);
 
 
 // Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
@@ -81,5 +85,5 @@ for (let i = 2; i < 10; i++) {
         divisors = divisors + i + ", ";
     }
 }
-
-console.log(divisors + ' are the divisors of number ' + number);
+const resultDivisors = divisors + ' are the divisors of number ' + number;
+console.log(resultDivisors);
