@@ -2054,13 +2054,28 @@ console.log('Here is your number, reversed: ' + reverseUserNumber);
 
 // 1. Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних. Вивести суму нарахованих відсотків.
 
+var customerAmount = prompt('Please enter your amount');
+var accumulatedPercentage = customerAmount * 0.05;
+var accumulatedPercentageMonth = accumulatedPercentage / 12;
+var twoMonths = (accumulatedPercentageMonth * 2).toFixed(2);
+console.log(twoMonths);
+
 // 2. Що повернуть вирази:
 
 //  2 && 0 && 3
 
+0;
+console.log( true && 0 && 0);
+
 //  2 || 0 || 3
 
+2;
+console.log(2 || 0 || 0);
+
 // 2 && 0 || 3
+
+3;
+console.log( false || 3);
 }();
 /******/ })()
 ;
