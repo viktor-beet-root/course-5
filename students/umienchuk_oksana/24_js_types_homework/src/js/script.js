@@ -26,9 +26,9 @@ console.log(filesRounding);
 //     Норма
 
 // Користувач вводить суму грошей в гаманці і ціну однієї шоколадки.Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.
-const totalMoney = prompt('How much money is in the wallet?', '');
-const priceChocolate = prompt('What is the price of chocolate?', '');
-const numberOfChocolates = +totalMoney / +priceChocolate; //number of chocolates
+const totalMoney = +prompt('How much money is in the wallet?', '');
+const priceChocolate = +prompt('What is the price of chocolate?', '');
+const numberOfChocolates = totalMoney / priceChocolate; //number of chocolates
 const numberChocRounding = Math.floor(numberOfChocolates); //rounding
 const numberChocRounString = 'You can buy chocolates:' + ' ' + numberChocRounding;
 console.log(numberChocRounString);
