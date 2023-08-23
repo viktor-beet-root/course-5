@@ -77,7 +77,7 @@ console.log(message);
 // console.log(myAge);
 //2 + 2 * 2
 
-const stringText = 'dsfkgjhdklsfghdklsfjghlkjsdq';
+const stringText = '1sfkgjhdklsfghdklsfjghlkjsdq';
 
 console.log(stringText.length, stringText[0], stringText[stringText.length - 1]);
 
@@ -99,7 +99,17 @@ for (let i = 0; n > i; i++) {
     m += '\n';
 }
 
-console.log(m)
+for (let i = 0; 10 > i; i++) {
+    if (i === 5) break;
+    if (!(i % 2)) continue;
+    console.log(i);
+}
+
+// while (true) {
+//     if (i++ > 20) break;
+// }
+
+//console.log(m)
 
 //#
 //##

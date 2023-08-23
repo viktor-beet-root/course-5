@@ -75,7 +75,7 @@ console.log(message);
 // console.log(myAge);
 //2 + 2 * 2
 
-var stringText = 'dsfkgjhdklsfghdklsfjghlkjsdq';
+var stringText = '1sfkgjhdklsfghdklsfjghlkjsdq';
 console.log(stringText.length, stringText[0], stringText[stringText.length - 1]);
 for (var w = 0; stringText.length > w; w++) {
   console.log(stringText[w]);
@@ -90,7 +90,17 @@ for (var _i = 0; n > _i; _i++) {
   }
   m += '\n';
 }
-console.log(m);
+for (var _i2 = 0; 10 > _i2; _i2++) {
+  if (_i2 === 5) break;
+  if (!(_i2 % 2)) continue;
+  console.log(_i2);
+}
+
+// while (true) {
+//     if (i++ > 20) break;
+// }
+
+//console.log(m)
 
 //#
 //##
