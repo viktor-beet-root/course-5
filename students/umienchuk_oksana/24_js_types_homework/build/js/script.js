@@ -2339,10 +2339,10 @@ var changeMoney = +totalMoney - numberChocRounding * priceChocolate; //cash chan
 console.log(changeMoney.toFixed(2));
 
 // Запитай у користувача тризначне число і виведи його задом наперед.Для вирішення завдання тобі знадобиться оператор % (залишок від ділення).
-var numberOfUser = prompt('Enter a three-digit number', '');
-var unitsUser = +numberOfUser % 10;
-var tensUser = ~~(+numberOfUser / 10) % 10;
-var hundredsUser = ~~(+numberOfUser / 100) % 10;
+var numberOfUser = +prompt('Enter a three-digit number', '');
+var unitsUser = numberOfUser % 10;
+var tensUser = ~~(numberOfUser / 10) % 10;
+var hundredsUser = ~~(numberOfUser / 100) % 10;
 console.log('Your number:' + ' ' + String(unitsUser) + String(tensUser) + String(hundredsUser));
 console.log('Your number:' + ' ' + unitsUser + tensUser + hundredsUser);
 
