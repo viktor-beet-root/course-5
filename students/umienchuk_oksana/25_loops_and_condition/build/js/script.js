@@ -209,27 +209,76 @@ var __webpack_exports__ = {};
 // }
 // console.log(m);
 
+/////////////////////////////////////////////////////////
 // Мінімум
 
 // Запитай у користувача його вік і визначи, ким він є: дитиною(0 - 11), підлітком(12 - 17), дорослим(18_59) або пенсіонером(60 ...), передбач можливість введення невірних даних.
-var userAge = +prompt('How old are you?');
-if (userAge >= 60) {
-  console.log('You are a pensioner');
-} else if (userAge > 17) {
-  console.log('You are a adult');
-} else if (userAge > 12) {
-  console.log('You are a teenager');
-} else {
-  console.log('You are a child');
-}
+// const userAge = +prompt('How old are you?');
+
+// if (userAge >= 60) {
+//     console.log('You are a pensioner');
+// } else if (userAge >= 17) {
+//     console.log('You are a adult');
+// } else if (userAge >= 12) {
+//     console.log('You are a teenager');
+// } else if (userAge >= 0) {
+//     console.log('You are a child');
+// } else {
+//     console.log('default');
+// }
 
 // Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші(1!, 2 @, 3 # і т.д).
+// const numUser = +prompt('Enter number 1-9:');
+// switch (numUser) {
+//     case 1:
+//         console.log('!');
+//         break;
+//     case 2:
+//         console.log('@');
+//         break;
+//     case 3:
+//         console.log('#');
+//         break;
+//     case 4:
+//         console.log('$');
+//         break;
+//     case 5:
+//         console.log('%');
+//         break;
+//     case 6:
+//         console.log('^');
+//         break;
+//     case 7:
+//         console.log('&');
+//         break;
+//     case 8:
+//         console.log('*');
+//         break;
+//     case 9:
+//         console.log('(');
+//         break;
+//     default:
+//         console.log('Enter another number');
+// }
+
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
-// Запитай у користувача 2 числа і знайди найбільший спільний дільник.
+// let i = +prompt('Enter first number');
+// let secondNum = +prompt('Enter second number');
+// let sumNum = secondNum;
+// while (secondNum > i) {
+//     sumNum = sumNum + i;
+//     i++; 10
+// }
+// console.log(sumNum);
+
+// Запитай у користувача 2 числа і знайди найбільший спільний дільник. ???????????????
+
 // Запитай у користувача число і виведи всі дільники цього числа.
+
 //     Норма
 
 // Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
+
 // Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
 // від 200 до 300 - знижка буде 3 %;
 // від 300 до 500 - 5 %;
