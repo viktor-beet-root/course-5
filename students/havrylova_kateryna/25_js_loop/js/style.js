@@ -80,7 +80,7 @@ console.log(resultEven);
 // Запитай у користувача число і виведи всі дільники цього числа.
 const number = +prompt("Enter number");
 let divisors = '';
-for (let i = 2; i < 10; i++) {
+for (let i = 2; i < number; i++) {
     if (!(number % i)) {
         divisors = divisors + i + ", ";
     }
