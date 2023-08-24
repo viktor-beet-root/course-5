@@ -261,14 +261,14 @@
 // }
 
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
-// let i = +prompt('Enter first number');
-// let secondNum = +prompt('Enter second number');
-// let sumNum = secondNum;
-// while (secondNum > i) {
-//     sumNum = sumNum + i;
-//     i++; 10
-// }
-// console.log(sumNum);
+let i = +prompt('Enter first number');
+let secondNum = +prompt('Enter second number');
+let sumNum = secondNum;
+while (secondNum > i) {
+    sumNum = sumNum + i;
+    i++;
+}
+console.log(sumNum);
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник. ???????????????
 
