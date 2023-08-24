@@ -10,16 +10,3 @@ body {
 }
 
 @include grid();
-
-.test {
-    height: 150px;
-    background-color: red;
-
-    @include media(md) {
-        background-color: green;
-    }
-
-    @include media(sm) {
-        background-color: yellow;
-    }
-}
