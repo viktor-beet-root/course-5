@@ -1,0 +1,60 @@
+@import "./menu";
+
+
+.header {
+    background-image: url(../../images/header/HeaderBackground.png);
+    background-color: $dodger-blue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    // .header__hero
+
+    &__hero {}
+
+    // .header__logo
+
+    &__logo {}
+
+    // .header__subtitle
+
+    &__subtitle {}
+
+    // .header__wrapper
+
+    &__wrapper {}
+
+    // .header__svg
+
+    &__svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    // .header__scroll
+
+    &__scroll {}
+
+    // .header__navblock
+
+    &__navblock {}
+}
+
+.navblock {}
+
+.input {
+
+    // .input__wrapper
+
+    &__wrapper {}
+
+    // .input__item
+
+    &__item {}
+
+    // .input__btn
+
+    &__btn {}
+}
+
+.btn {}

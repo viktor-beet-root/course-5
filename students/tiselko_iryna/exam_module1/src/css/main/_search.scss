@@ -1,0 +1,49 @@
+.search {
+    background-color: $dark-gray;
+
+    //.search__wrapper
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 123px;
+        margin-bottom: 59px;
+    }
+
+    //.search__svg
+    &__svg {
+        width: 64px;
+        height: 64px;
+    }
+
+    // .search__item
+
+    &__img {
+        fill: $dodger-blue;
+    }
+
+    // .search__text
+
+    &__title {
+        text-align: center;
+    }
+}
+
+.check {
+
+    // .check__item
+
+    &__img {
+        fill: $bittersweetapprox;
+    }
+}
+
+.like {
+
+    // .like__item
+
+    &__img {
+        fill: $azure-radiance;
+    }
+}

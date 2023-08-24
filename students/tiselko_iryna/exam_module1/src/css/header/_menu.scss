@@ -1,0 +1,30 @@
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: $white-color;
+    text-align: center;
+}
+
+.navblock {
+
+    // .navblock__wrapper
+
+    &__wrapper {}
+
+    // .navblock__menu
+
+    &__menu {}
+}
+
+.menu {
+
+    // .menu__items
+
+    &__items {}
+
+    // .menu__link
+
+    &__link {}
+}

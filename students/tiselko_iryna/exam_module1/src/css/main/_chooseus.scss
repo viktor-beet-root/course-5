@@ -1,0 +1,41 @@
+.chooseus {
+    background-image: url(../../images/ChooseUs/WhyBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    // .chooseus__title
+
+    &__title {}
+
+    // .chooseus__text
+
+    &__text {}
+
+    // .chooseus__img
+
+    &__img {}
+
+    // .chooseus__img-left
+
+    &__img-left {}
+
+    // .chooseus__img-right
+
+    &__img-right {}
+}
+
+.container {}
+
+.row {}
+
+.col-6 {}
+
+.btn {
+
+    // .btn__text
+
+    &__text {}
+}
+
+.btn-primary {}
