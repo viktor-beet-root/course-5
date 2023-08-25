@@ -1,3 +1,8 @@
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**************************!*\
+  !*** ./src/js/script.js ***!
+  \**************************/
 
 // function bar(message, type) {
 //     switch (type) {
@@ -15,8 +20,6 @@
 // bar('Hello', 'log');
 // bar('Andrii', 'error');
 // bar('Alina', 'info');
-
-
 
 // function sum(aString, bString) {
 //     const a = Number(aString);
@@ -43,7 +46,6 @@
 //     ddd()
 // }
 
-
 // function hoo(firstName, lastName, sign = '!') {
 //     console.log('Hello ' + firstName + ' ' + lastName + sign);
 // }
@@ -60,7 +62,6 @@
 // const aaaa = sum(sum(1, 32), sum(2, 26));
 
 // console.log(ss, sss, aaaa)
-
 
 // function plus(f1, f2) {
 //     return f1 + f2;
@@ -99,13 +100,11 @@
 // console.log(ggg)
 // culc()
 
-
 // function ddss(a, b, ...other) {
 //     console.log(arguments);
 //     console.log(other)
 // }
 // ddss(1, 1, 1, 1, 1, 1, 1)
-
 
 // Мінімум
 
@@ -171,7 +170,6 @@
 // console.log(res2);
 // console.log(res3);
 
-
 //     Норма
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”.
@@ -180,3 +178,6 @@
 // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону,
 // і виводить тільки ті числа з діапазону, які є досконалими.Використовуй написану раніше функцію,
 // щоб дізнатися, чи є це число досконалим.
+/******/ })()
+;
+//# sourceMappingURL=script.js.map
