@@ -1,0 +1,175 @@
+.hero {
+    height: 100vh;
+    background: url(../../images/header/headerbackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    // .hero__content
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .hero__logo
+
+    &__logo {
+        padding-bottom: 8px;
+
+        @include media (xxs) {
+            padding-top: 20px;
+        }
+    }
+
+    // .hero__subtitle
+
+    &__subtitle {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 6.82px;
+        padding-bottom: 48px;
+
+        @include media (xxs) {
+            letter-spacing: 4.82px;
+        }
+    }
+
+    // .hero__wrapper
+
+    &__wrapper {
+        margin-bottom: 211px;
+
+        @include media (xxs) {
+            margin-bottom: 130px;
+        }
+    }
+
+    // .hero__svg
+
+    &__svg {
+        width: 16px;
+        height: 16px;
+        fill: $white-color;
+
+        // .hero__svg-search
+        &-search {
+            padding-right: 12px;
+
+            @include media () {
+                padding: 0;
+            }
+
+            @include media (xxs) {
+                padding-right: 12px;
+            }
+        }
+
+        // .hero__svg-down
+        &-down {
+            padding: 0;
+        }
+    }
+
+    // .hero__scroll
+
+    &__scroll {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: $white-color;
+    }
+}
+
+.input {
+
+    // .input__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 647px;
+        height: 60px;
+        background-color: $white-color;
+
+        @include media () {
+            width: 447px;
+        }
+
+        @include media (xxs) {
+            height: 152px;
+            flex-direction: column;
+            align-items: center;
+            background-color: transparent;
+        }
+    }
+
+    // .input__item
+
+    &__item {
+        width: 277px;
+        border: none;
+        padding-left: 36px;
+        font-family: inherit;
+        font-style: inherit;
+
+        @include media (xxs) {
+            height: 52px;
+            padding-left: 16px;
+        }
+
+        @include placeholder () {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 2.8px;
+            color: $gray-color;
+
+            @include media (xxs) {
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    // .input__btn
+
+    &__btn {
+
+        &.btn {
+            margin: 4px 5px 4px 0;
+
+            @include media () {
+                width: 70px;
+                // padding-top: 10px;
+                // padding-bottom: 10px;
+            }
+
+            @include media (xxs) {
+                width: 139px;
+                height: 52px;
+                margin: 10px;
+            }
+        }
+    }
+
+    // .input__btn-text
+
+    &__btn-text {
+        @include media () {
+            display: none;
+        }
+
+        @include media (xxs) {
+            display: block;
+        }
+    }
+}

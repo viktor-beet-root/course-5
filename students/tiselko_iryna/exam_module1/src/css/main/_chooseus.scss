@@ -6,11 +6,21 @@
 
     // .chooseus__title
 
-    &__title {}
+    &__title {
+        padding-top: 190px;
+        padding-bottom: 24px;
+    }
 
     // .chooseus__text
 
-    &__text {}
+    &__text {
+        padding-bottom: 32px;
+    }
+
+    // .chooseus__btn-wrapper
+    &__btn-wrapper {
+        padding-bottom: 190px;
+    }
 
     // .chooseus__img
 
@@ -18,24 +28,16 @@
 
     // .chooseus__img-left
 
-    &__img-left {}
+    &__img-left {
+        margin-top: 124px;
+        padding-left: 130px;
+        padding-bottom: 16px;
+    }
 
     // .chooseus__img-right
 
-    &__img-right {}
+    &__img-right {
+        padding-right: 112px;
+        padding-left: 230px;
+    }
 }
-
-.container {}
-
-.row {}
-
-.col-6 {}
-
-.btn {
-
-    // .btn__text
-
-    &__text {}
-}
-
-.btn-primary {}

@@ -10,33 +10,35 @@
 
 <body class="page">
     <header class="header">
-        <section class="header__hero">
-            <div class="container">
-                <div class="`row">
-                    <div class="col-12">
-                        <h1 class="header__logo">Bhromaon</h1>
-                        <p class="header__subtitle">Safe Travel Anywhere</p>
-                        <form action="#" method="post" class="header__wrapper input__wrapper">
-                            <input type="text" placeholder="Search Your Travel Destination" name="search"
-                                class="input__item">
-                            <button class="input__btn btn-secondary" type="submit">
-                                <svg class="header__svg">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                                Search
-                            </button>
-                        </form>
-                        <a href="#" class="header__scroll">Scroll Down</a>
-                    </div>
-                </div>
+        <section class="header__hero hero">
+            <div class="hero__content">
+                <h1 class="hero__logo">Bhromaon</h1>
+                <p class="hero__subtitle">Safe Travel Anywhere</p>
+                <form action="#" method="post" class="hero__wrapper input__wrapper">
+                    <input type="text" placeholder="Search Your Travel Destination" name="search" class="input__item">
+                    <button class="input__btn btn btn-secondary" type="submit">
+                        <svg class="hero__svg hero__svg-search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                        <span class="input__btn-text">Search</span>
+                    </button>
+                </form>
+                <a href="#navblock_start" class="hero__scroll">
+                    Scroll Down
+                    <svg class="hero__svg hero__svg-down">
+                        <use xlink:href="#chevron-down"></use>
+                    </svg>
+                </a>
             </div>
         </section>
         <section class="header__navblock navblock">
             <div class="container">
                 <div class="row">
-                    <p class="col-6 logo">Bhromaon</p>
-                    <nav class="col-6 navblock__wrapper">
-                        <ul class="navblock__menu">
+                    <div class="col-5 header__logo" id="navblock_start">
+                        <p class="logo">Bhromaon</p>
+                    </div>
+                    <nav class="col-7 navblock__wrapper">
+                        <ul class="navblock__menu menu">
                             <li class="menu__items">
                                 <a href="" class="menu__link">Who We Are</a>
                             </li>
@@ -68,13 +70,15 @@
                         <p class="chooseus__text">Ddislike men who are so beguiled and demoralized by the charms of
                             pleasure of the moment, so
                             blinded by desire, that.</p>
-                        <a href="#" class="btn btn-primary">
-                            <span class="btn__text">Explore Places</span>
-                        </a>
+                        <div class="chooseus__btn-wrapper ">
+                            <a href="#" class="btn btn-primary ">
+                                <span class="btn__text">Explore Places</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-6">
-                        <img class="chooseus__img chooseus__img-left" src="./images/ChooseUs/1st_img.png" alt="House">
-                        <img class="chooseus__img chooseus__img-right" src="./images/ChooseUs/2nd_img.png"
+                        <img class="chooseus__img chooseus__img-left" src="./images/chooseus/1st_img.png" alt="House">
+                        <img class="chooseus__img chooseus__img-right" src="./images/chooseus/2nd_img.png"
                             alt="Mountaine">
                     </div>
                 </div>
@@ -84,22 +88,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-4 search__wrapper">
-                        <svg class="search__svg search__img">
+                        <svg class="search-svg search-svg__search">
                             <use xlink:href="#search"></use>
                         </svg>
                         <h2 class="search__title">Search Places</h2>
                     </div>
                     <div class="col-4 search__wrapper">
-                        <svg class="search__svg check__img">
+                        <svg class="search-svg search-svg__check">
                             <use xlink:href="#check-circle"></use>
                         </svg>
-                        <h2 class="search__title">Search Places</h2>
+                        <h2 class="search__title">Select Places</h2>
                     </div>
                     <div class="col-4 search__wrapper">
-                        <svg class="search__svg like__img">
+                        <svg class="search-svg search-svg__like">
                             <use xlink:href="#thumbs-up"></use>
                         </svg>
-                        <h2 class="search__title">Search Places</h2>
+                        <h2 class="search__title">Book &amp; Enjoy</h2>
                     </div>
                 </div>
             </div>
@@ -144,7 +148,7 @@
                     <div class="col-12">
                         <h2 class="touristssay__title">What Our Tourists Say</h2>
                         <div class="touristssay__item">
-                            <img src="./images/TouristsSay/TouristsSay_1st_img.png" alt="tourists say"
+                            <img src="./images/touristssay/touristssay_1st_img.png" alt="tourists say"
                                 class="touristssay__img">
                             <div class="touristssay__wrapper">
                                 <h4 class="touristssay__subtitle">Sam Sumon</h4>
