@@ -52,7 +52,7 @@ console.log(areaCircle);
 // Реалізуй конвертор валют.Користувач вводить долари, програма переводить їх в євро.Курс валют зберігається в константі.
 const dollarExchangeRate = 0.92;
 const dollarAmount = prompt('Введи количество долларов, а я конвертирую их в Евро', '');
-const evroAmount = dollarAmount * dollarExchangeRate;
+const evroAmount = ((dollarAmount * 100) * (dollarExchangeRate * 100)) / 10000;
 const evroAmountPrint = 'Ваша сумма ' + evroAmount + ' ' + 'Евро';
 console.log(evroAmountPrint);
 
