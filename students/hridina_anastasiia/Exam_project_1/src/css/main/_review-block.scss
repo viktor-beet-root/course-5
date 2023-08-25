@@ -1,0 +1,86 @@
+.review {
+
+    // .review_img
+
+    &_img {}
+
+    // .review__block
+
+    &__block {
+        background-image: url(../images/bg_5.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 680px;
+    }
+
+    // .review__heading
+
+    &__heading {
+        margin: 0;
+        @include new-font('Aleo', 36px, 400, normal, 40px);
+        color: $white-color;
+        text-align: center;
+        padding-top: 110px;
+        padding-bottom: 65px;
+    }
+
+
+    // .review__image-wrapper
+
+    &__image-wrapper {
+        width: 40%;
+        display: inline-block;
+    }
+
+
+    // .review_svg
+
+    &_svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 9px;
+        margin-bottom: 4px;
+    }
+
+    // .review__text
+
+    &__text {
+        width: 60%;
+        height: 194px;
+        padding: 45px;
+        margin-left: 0;
+        background: $darkgrey-color;
+        overflow: hidden;
+
+        // .review__text_heading
+
+        &_heading {
+            @include new-font($default-font-name, 20px, 400, normal, 28px);
+            text-transform: uppercase;
+            color: $white-color;
+            margin-top: -10px;
+        }
+
+        // .review__text_paragraph
+
+        &_paragraph {
+            @include new-font(16px, 300, normal, 1.6px);
+            color: $white-color;
+            margin-top: -20px;
+        }
+    }
+}
+
+.container {}
+
+.image {
+
+    // .image__block
+
+    &__block {
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}

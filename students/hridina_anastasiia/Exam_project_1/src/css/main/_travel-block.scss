@@ -1,0 +1,62 @@
+.travel {
+
+    // .travel_container
+
+    &_container {
+        position: absolute;
+        top: 30%;
+        left: 15%;
+        width: 600px;
+        background: rgba(35, 35, 35, 0.90);
+        padding: 30px;
+    }
+
+    // .travel__block
+
+    &__block {
+        background-image: url(../images/bg_3.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 684px;
+        position: relative;
+    }
+
+    &__header {
+        margin: 0;
+        @include new-font;
+        color: $white-color;
+        padding-top: 15px;
+
+        // .travel__header_upprcase
+
+        &_upprcase {
+            @include new-font;
+            text-transform: uppercase;
+            color: $white-color;
+        }
+    }
+
+    // .travel__text
+
+    &__text {
+        @include new-font($default-font-name, 300, normal, 1.6px);
+        color: $white-color;
+    }
+}
+
+
+.btn-wrapper {
+
+    // .btn-wrapper_small
+
+    &_small {
+        padding-top: 15px;
+    }
+}
+
+.button {}
+
+.btn-bottom {
+    padding: 15px 40px;
+}

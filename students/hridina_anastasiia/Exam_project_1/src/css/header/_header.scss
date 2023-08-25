@@ -16,6 +16,7 @@
     &__form {
         display: flex;
         justify-content: center;
+        flex-wrap: nowrap;
         align-items: center;
         padding-top: 20px;
     }
@@ -106,7 +107,7 @@
 
     &__down {
         padding-top: 130px;
-        padding-bottom: 100px;
+        padding-bottom: 125px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -119,11 +120,15 @@
             @include new-font(14px, 400, normal, 20px, 2.8px);
             color: $white-color;
             text-decoration: none;
+            position: relative;
         }
 
         &_svg {
             width: 16px;
             height: 16px;
+            position: absolute;
+            top: 15px;
+            left: 40px;
         }
     }
 }
