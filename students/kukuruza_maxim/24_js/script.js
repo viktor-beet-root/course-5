@@ -35,7 +35,7 @@ const num = prompt("Enter a three-digit number:")
 const firstNum = +num % 10;
 const secondNum = (~~(+num / 10) % 10);
 const thirdNum = (~~(+num / 100) % 10);
-console.log(firstNum + '' + firstNum + '' + thirdNum);
+console.log("Your number in reverse is " + firstNum + '' + firstNum + '' + thirdNum);
 
 // Максимум
 
