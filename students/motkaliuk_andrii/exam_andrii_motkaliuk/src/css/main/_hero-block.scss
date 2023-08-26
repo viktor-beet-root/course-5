@@ -8,7 +8,7 @@
 .hero-block {
     background-image: url(../../images/header-background.png);
     background-size: cover;
-    height: 100vh;
+    height: calc(100vh - 84px);
 
     &__search {}
 }
@@ -22,12 +22,12 @@
 
 .search {
     text-align: center;
+    position: relative;
 
     &__title {
         text-align: center;
         margin: 0;
-        // padding-top: 30vh;
-
+        margin-top: 10vh;
 
         color: $color-white;
         font-size: 48px;
@@ -42,6 +42,57 @@
         line-height: 28px;
         letter-spacing: 6.82px;
     }
+
+    &__input {
+        width: 647px;
+        height: 60px;
+        padding: 0;
+
+        font-family: Josefin Sans;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2.8px;
+        padding-left: 36px;
+        border: none;
+
+    }
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: $color-blue-accent;
+    width: 140px;
+    height: 52px;
+    top: 5px;
+    right: 5px;
+    border: none;
+
+
+
+    &__img {
+        width: 16px;
+        height: 16px;
+        fill: white;
+    }
+
+    &__title {
+        color: $color-white;
+        font-family: Aleo;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+        padding-left: 12px;
+    }
+}
+
+.scroll-down-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 210px;
 }
 
 .scroll-down {
@@ -49,8 +100,10 @@
     line-height: 20px;
     letter-spacing: 2.8px;
     margin: 0;
+    color: $color-white;
 }
 
 .chevron-down {
     width: 14px;
+    fill: $color-white;
 }

@@ -1,0 +1,51 @@
+.why-choose-us {
+    background-image: url(../../images/castle-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    padding: 124px 0;
+
+    &__title {
+        color: $color-white;
+        font-family: Aleo;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 40px;
+        text-transform: capitalize;
+    }
+
+
+    &__description {
+        color: $color-white;
+        font-weight: 300;
+        line-height: 28px;
+        letter-spacing: 1.6px;
+    }
+
+
+    &__button-wrapper {}
+
+
+    &__button {}
+
+    &__images-wrapper {
+        padding-left: 136px;
+    }
+
+    &__img-top {
+        width: 350px;
+        height: 220px;
+    }
+
+    &__img-bottom {
+        width: 350px;
+        height: 220px;
+        padding-top: 16px;
+        padding-left: 70px;
+    }
+
+}
+
+
+.button {}
