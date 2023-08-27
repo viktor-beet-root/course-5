@@ -8,6 +8,11 @@ body {
     background-color: $default-body-color;
     font-size: $default-font-size;
     color: $default-body-color;
+    font-weight: $default-font-weight;
+}
+
+btn {
+    text-decoration: none;
 }
 
 @include grid();
