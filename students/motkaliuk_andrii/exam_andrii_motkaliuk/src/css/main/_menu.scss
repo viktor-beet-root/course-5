@@ -11,7 +11,7 @@
 
 .logo {
     color: $color-white;
-    font-family: Josefin Sans;
+    font-family: $main-font;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
@@ -37,12 +37,21 @@
 
     &__link {
         color: $color-white;
-        font-family: Aleo;
+        font-family: $title-font;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 1.4px;
         text-transform: uppercase;
         text-decoration: none;
-        ;
+        padding: 10px;
+        border: 1px solid $color-blue-accent;
+        border-radius: 0px;
+        transition: border-color .5s, border-radius .5s;
+
+        &:hover {
+            border: 1px solid $color-white;
+            border-radius: 15px;
+
+        }
     }
 }

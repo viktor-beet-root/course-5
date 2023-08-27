@@ -4,7 +4,9 @@
     background-size: cover;
     background-position: center center;
 
-    padding: 124px 0;
+    &__text-wrapper {
+        padding: 124px 0;
+    }
 
     &__title {
         color: $color-white;
@@ -13,14 +15,17 @@
         font-weight: 400;
         line-height: 40px;
         text-transform: capitalize;
+        padding: 76px 0 24px;
+        margin: 0;
     }
-
 
     &__description {
         color: $color-white;
         font-weight: 300;
         line-height: 28px;
         letter-spacing: 1.6px;
+        padding-bottom: 32px;
+        margin: 0;
     }
 
 
@@ -30,7 +35,7 @@
     &__button {}
 
     &__images-wrapper {
-        padding-left: 136px;
+        padding: 124px 0 124px 136px;
     }
 
     &__img-top {
@@ -41,7 +46,7 @@
     &__img-bottom {
         width: 350px;
         height: 220px;
-        padding-top: 16px;
+        padding-top: 10px;
         padding-left: 70px;
     }
 
