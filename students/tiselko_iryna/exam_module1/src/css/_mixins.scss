@@ -162,3 +162,26 @@
         }
     }
 }
+
+
+@mixin dev-col($_col: $default-count-col) {
+    $width: math.div(100%, $default-count-col) * $_col;
+
+    max-width: $width;
+    width: 100%;
+    flex-basis: $width;
+    padding: $gap;
+    box-sizing: border-box;
+}
+
+@mixin col($_col: $default-count-col, $_breackpoint: '') {
+    @if $_breackpoint !='' {
+        @include media($_breackpoint) {
+            @include dev-col($_col);
+        }
+    }
+
+    @else {
+        @include dev-col($_col);
+    }
+}

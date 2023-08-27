@@ -3,6 +3,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include media (md) {
+        background-position-x: 45%;
+    }
 }
 
 .grandspain {
