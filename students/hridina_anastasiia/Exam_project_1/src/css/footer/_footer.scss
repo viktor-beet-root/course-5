@@ -35,16 +35,19 @@
 
 .social {
 
-    // .social__item
-
-    &__item {}
-
     // .social__link
 
-    &__link {}
+    &__link {
+        &:hover {
+            & .social__icon {
+                fill: $dodgerblue-color;
+            }
+        }
+    }
 
     &__svg {
         width: 26px;
         height: 32px;
     }
+
 }
