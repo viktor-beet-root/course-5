@@ -1,54 +1,137 @@
 .header {
+    text-align: center;
+    position: relative;
+    background-image: url(../../images/headerbackground.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    // width: 1920px;
+    // height: 862px;
+    padding-top: 295px;
+    padding-bottom: 214px;
 
     // .header__menu
 
-    &__menu {}
+    &__menu {
+        background-color: $accent;
+    }
 }
 
-.main-title {}
-
-.title-sub-text {}
-
-.search-form {
-
-    // .search-form__wrapper
-
-    &__wrapper {}
-
-    // .search-form__input
-
-    &__input {}
-
-    // .search-form__button-container
-
-    &__button-container {}
-
-    // .search-form__button
-
-    &__button {}
+.main-title {
+    text-align: center;
+    font-size: $font-size-h1;
+    font-weight: 700;
+    line-height: 52px;
+    text-transform: uppercase;
+    margin: 0 0 8px;
 }
 
-.input-form {}
+.title-sub-text {
+    text-align: center;
+    font-size: $font-size-logo-sub;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 6.82px;
+}
 
-.btn {}
+.main-wrap {
+    text-align: center;
+}
 
-.btn-primary {}
+.main {
 
-.icon-img {}
+    // .main__link
+
+    &__link {
+        text-decoration: none;
+    }
+
+    // .main__icon-img
+
+    &__icon-img {
+        height: 16px;
+        width: 16px;
+        bottom: 0;
+    }
+}
+
+.scroll-down {
+    text-align: center;
+    font-size: $font-size-small;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2.8px;
+    color: $color-white;
+    margin-bottom: 0;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.icon-white {}
 
 .menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 
     // .menu__logo
 
-    &__logo {}
+    &__logo {
+        font-size: $font-size-h3;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+    }
+
+    // .menu__logo-link
+
+    &__logo-link {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 
     // .menu__items
 
-    &__items {}
+    &__items {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
 
     // .menu__item
 
-    &__item {}
+    &__item {
+        list-style-type: none;
+    }
+
+    // .menu__link
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+
+        font-family: $default-font-sub-font;
+        font-size: $font-size-small;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
-.logo {}
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
