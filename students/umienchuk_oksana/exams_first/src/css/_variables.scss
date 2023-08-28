@@ -8,6 +8,7 @@ $accent: #5373FD;
 $red: #FF6363;
 $blue: #00A2FF;
 $font-weight: 300;
+$black: #000;
 
 
 //main color for text 
@@ -33,16 +34,10 @@ $font-size-h3: 24px;
 $font-size-h2: 36px;
 $font-size-h1: 48px;
 
-
-
-// $border-btn-color-primary: $orang-color;
-// $border-btn-color-secondary: $periwinkle-gray;
+// btn
 $btn-height: 60px;
 $btn-weight: 213px;
 $btn-font-weight: 400;
-
-// $border-color: $grey-light;
-// $default-border: 1px solid $grey-light;
 
 // containers
 $container-padding: 15px;
@@ -61,6 +56,8 @@ $icon-height: 64px;
 //content
 $background-bg-content: rgba(35, 35, 35, 0.9);
 
+// footer 
+$footer-gap-social-icons: 32px;
 $breack-points: (
     "lg": 1200px,
     "md": 992px,
