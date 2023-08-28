@@ -1,5 +1,6 @@
 .hero {
-    height: 100vh;
+    width: 100svw;
+    height: 100svh;
     background: url(../../images/header/headerbackground.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -149,8 +150,6 @@
 
             @include media () {
                 width: 70px;
-                // padding-top: 10px;
-                // padding-bottom: 10px;
             }
 
             @include media (xxs) {

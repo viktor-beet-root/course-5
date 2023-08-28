@@ -8,13 +8,20 @@
 
 .btn {
     position: relative;
-    margin-bottom: 44px;
-    margin-left: 32px;
 
-    //.btn__text
-    &__text {
+    @include media(xxs) {
+        width: 139px;
+        height: 52px;
+        margin: 10px;
+    }
 
-        z-index: 10;
+    //.btn-text-wrap
+    &-text-wrap {
+        @include media (xxs) {
+            &__hidden {
+                display: none;
+            }
+        }
     }
 }
 
@@ -24,5 +31,9 @@
         position: absolute;
         right: 105px;
         bottom: -6px;
+
+        @include media(xxs) {
+            display: none;
+        }
     }
 }

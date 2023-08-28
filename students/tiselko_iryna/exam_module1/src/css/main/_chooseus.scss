@@ -4,27 +4,99 @@
     background-size: cover;
     background-position: center;
 
+    @include media () {
+        background-position: 75% 25%;
+    }
+
+    // .chooseus__title
+
+    &__content {
+        @include media(md) {
+            padding: 100px 30px 24px 30px;
+        }
+
+        @include media(xxs) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
     // .chooseus__title
 
     &__title {
         padding-top: 190px;
         padding-bottom: 24px;
+
+        @include media(md) {
+            padding-top: 0;
+        }
+
+        @include media (xs) {
+            font-size: 26px;
+            letter-spacing: 1.6px;
+        }
     }
 
     // .chooseus__text
 
     &__text {
         padding-bottom: 32px;
+
+        @include media (xs) {
+            font-size: 14px;
+            line-height: 22.4px;
+            padding-bottom: 32px;
+        }
     }
 
     // .chooseus__btn-wrapper
+
     &__btn-wrapper {
         padding-bottom: 190px;
+
+        @include media(md) {
+            padding-bottom: 40px;
+            margin-bottom: 0;
+        }
+
+        @include media() {
+            padding-bottom: 20px;
+        }
+
+        @include media(xxs) {
+            padding-bottom: 10px;
+        }
+    }
+
+    // .chooseus__img-wrapper
+
+    &__img-wrapper {
+        @include media(md) {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+
+        @include media(xs) {
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 
     // .chooseus__img
 
-    &__img {}
+    &__img {
+        display: block;
+        aspect-ratio: 3/1.9;
+        object-fit: cover;
+        object-position: center;
+
+        @supports not (aspect-ratio: 3/1.9) {
+            height: 220px;
+        }
+    }
 
     // .chooseus__img-left
 
@@ -32,6 +104,15 @@
         margin-top: 124px;
         padding-left: 130px;
         padding-bottom: 16px;
+
+        @include media(lg) {
+            padding-left: 65px;
+        }
+
+        @include media(md) {
+            margin: 0;
+            padding: 0;
+        }
     }
 
     // .chooseus__img-right
@@ -39,5 +120,14 @@
     &__img-right {
         padding-right: 112px;
         padding-left: 230px;
+
+        @include media(lg) {
+            padding-left: 125px;
+        }
+
+        @include media(md) {
+            margin: 0;
+            padding: 0;
+        }
     }
 }

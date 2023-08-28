@@ -7,9 +7,21 @@
     @include media (md) {
         background-position-x: 45%;
     }
+
+    @include media (xxs) {
+        background-position-x: 46%;
+    }
 }
 
 .grandspain {
+
+    // .grandspain__item
+    &__item {
+        @include media (xs) {
+            justify-content: center;
+            align-items: center;
+        }
+    }
 
     // .grandspain__subtitile
 
@@ -22,6 +34,11 @@
     &__title {
         padding-bottom: 16px;
         padding-left: 32px;
+
+        @include media (xs) {
+            font-size: 18px;
+            letter-spacing: 0.6px;
+        }
     }
 
     // .grandspain__text
@@ -29,6 +46,15 @@
     &__text {
         padding-left: 32px;
         padding-bottom: 24px;
+
+        @include media (md) {
+            padding-right: 32px;
+        }
+
+        @include media (xs) {
+            font-size: 14px;
+            letter-spacing: 0.6px;
+        }
     }
 
     //grandspain__wrapper
@@ -37,5 +63,26 @@
         background-color: $block-bg-color;
         margin-top: 220px;
         margin-bottom: 120px;
+
+        @include media (md) {
+            margin: 200px 20px 120px 20px;
+        }
+
+        @include media (xs) {
+            width: 400px;
+        }
+
+        @include media(xxs) {
+            margin-top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    //grandspain__btn 
+    &__btn {
+        margin-bottom: 44px;
+        margin-left: 32px;
     }
 }

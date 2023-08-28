@@ -8,7 +8,6 @@
 
 .header {
 
-
     // .header__logo
     &__logo {
         display: flex;
@@ -26,14 +25,90 @@
 
     // .navblock__wrapper
 
-    &__wrapper {}
+    &__wrapper {
+        display: flex;
+        position: relative;
+
+        @include media (md) {
+            justify-content: space-between;
+        }
+    }
+
+    // .navblock__menu-open-input
+
+    &__menu-open-input {}
+
+    // .navblock__menu-open-label
+
+    &__menu-open-label {}
+
 
     // .navblock__menu
 
     &__menu {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 40px;
+
+        @include media (md) {}
+    }
+}
+
+.menu-open-label {
+    @include media (md) {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid transparent;
+
+        .navblock__menu-open-input:checked+& {
+            .menu-open-label__span {
+                background-color: transparent;
+
+                &::before {
+                    top: unset;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    bottom: unset;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &__span {
+            position: relative;
+            display: block;
+            width: 90%;
+            background-color: $white-color;
+            height: 5px;
+            transition: background-color .3s ease-in-out;
+
+
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $white-color;
+                position: absolute;
+                transition: all .3s ease-in-out;
+            }
+
+            &::before {
+                top: -15px;
+            }
+
+            &::after {
+                bottom: -15px;
+            }
+        }
     }
 }
 
@@ -56,8 +131,6 @@
         text-decoration: none;
         color: $white-color;
         padding: 10px;
-
-
 
         &:hover {
             text-decoration: underline;
