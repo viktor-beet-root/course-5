@@ -2,8 +2,21 @@
     background-image: url(../../images/house-spain.png);
     background-size: cover;
 
+    &__hs-item {
+        box-sizing: border-box;
+        margin: 220px 672px 120px 0;
+        padding: 44px 32px;
+        max-width: 648px;
+        width: 100%;
+        max-height: 344px;
+    }
 
-    &__hs-item {}
+    &__wrapper {
+        // display: flex;
+        // justify-content: flex-start;
+        max-width: 648px;
+        width: 100%;
+    }
 }
 
 .container {}
@@ -13,12 +26,7 @@
 .col-6 {}
 
 .hs-item {
-    margin: 220px 672px 120px 0;
-    padding: 44px 32px;
-    max-width: 648px;
-    width: 100%;
-    max-height: 344px;
-    background-color: rgba(35, 35, 35, 0.90);
+    background-color: $color-gray-transparent;
     color: $color-white;
 
     &__subtitle {

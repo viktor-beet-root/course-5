@@ -2,24 +2,22 @@
     background-image: url(../../images/sea-mountains.png);
     background-size: cover;
 
-    &__ms-item {}
+    &__ms-item {
+        box-sizing: border-box;
+        margin: 220px 0 120px 0;
+        padding: 44px 32px;
+        max-width: 648px;
+        width: 100%;
+        max-height: 344px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
-.container {}
-
-.row {}
-
-.col-6 {}
-
-.right {}
-
 .ms-item {
-
-    margin: 220px 0 120px 0;
-    padding: 44px 32px;
-    max-width: 648px;
-    width: 100%;
-    max-height: 344px;
     background-color: rgba(35, 35, 35, 0.90);
     color: $color-white;
 
@@ -32,7 +30,6 @@
         margin: 0;
     }
 
-
     &__title {
         font-size: 20px;
         font-weight: 400;
@@ -42,7 +39,6 @@
         margin: 0;
     }
 
-
     &__description {
         font-weight: 300;
         line-height: 28px;
@@ -50,11 +46,4 @@
         padding-bottom: 24px;
         margin: 0;
     }
-
-    &__button-wrapper {}
-
-
-    &__button {}
 }
-
-.button {}

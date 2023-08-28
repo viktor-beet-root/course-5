@@ -10,7 +10,7 @@
 
     &__title {
         color: $color-white;
-        font-family: Aleo;
+        font-family: $title-font;
         font-size: 36px;
         font-weight: 400;
         line-height: 40px;
@@ -28,9 +28,7 @@
         margin: 0;
     }
 
-
     &__button-wrapper {}
-
 
     &__button {}
 
@@ -46,11 +44,6 @@
     &__img-bottom {
         width: 350px;
         height: 220px;
-        padding-top: 10px;
-        padding-left: 70px;
+        padding: 10px 0 0 70px;
     }
-
 }
-
-
-.button {}
