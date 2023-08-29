@@ -1504,6 +1504,33 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/string-repeat.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/string-repeat.js ***!
+  \*********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
+var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+
+var $RangeError = RangeError;
+
+// `String.prototype.repeat` method implementation
+// https://tc39.es/ecma262/#sec-string.prototype.repeat
+module.exports = function repeat(count) {
+  var str = toString(requireObjectCoercible(this));
+  var result = '';
+  var n = toIntegerOrInfinity(count);
+  if (n < 0 || n === Infinity) throw $RangeError('Wrong number of repetitions');
+  for (;n > 0; (n >>>= 1) && (str += str)) if (n & 1) result += str;
+  return result;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/string-trim.js":
 /*!*******************************************************!*\
   !*** ./node_modules/core-js/internals/string-trim.js ***!
@@ -2037,6 +2064,147 @@ if (IS_PURE && PureNumberNamespace) copyConstructorProperties(path[NUMBER], Pure
 if (FORCED || IS_PURE) copyConstructorProperties(path[NUMBER], NativeNumber);
 
 
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.number.to-fixed.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.number.to-fixed.js ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
+var thisNumberValue = __webpack_require__(/*! ../internals/this-number-value */ "./node_modules/core-js/internals/this-number-value.js");
+var $repeat = __webpack_require__(/*! ../internals/string-repeat */ "./node_modules/core-js/internals/string-repeat.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+var $RangeError = RangeError;
+var $String = String;
+var floor = Math.floor;
+var repeat = uncurryThis($repeat);
+var stringSlice = uncurryThis(''.slice);
+var nativeToFixed = uncurryThis(1.0.toFixed);
+
+var pow = function (x, n, acc) {
+  return n === 0 ? acc : n % 2 === 1 ? pow(x, n - 1, acc * x) : pow(x * x, n / 2, acc);
+};
+
+var log = function (x) {
+  var n = 0;
+  var x2 = x;
+  while (x2 >= 4096) {
+    n += 12;
+    x2 /= 4096;
+  }
+  while (x2 >= 2) {
+    n += 1;
+    x2 /= 2;
+  } return n;
+};
+
+var multiply = function (data, n, c) {
+  var index = -1;
+  var c2 = c;
+  while (++index < 6) {
+    c2 += n * data[index];
+    data[index] = c2 % 1e7;
+    c2 = floor(c2 / 1e7);
+  }
+};
+
+var divide = function (data, n) {
+  var index = 6;
+  var c = 0;
+  while (--index >= 0) {
+    c += data[index];
+    data[index] = floor(c / n);
+    c = (c % n) * 1e7;
+  }
+};
+
+var dataToString = function (data) {
+  var index = 6;
+  var s = '';
+  while (--index >= 0) {
+    if (s !== '' || index === 0 || data[index] !== 0) {
+      var t = $String(data[index]);
+      s = s === '' ? t : s + repeat('0', 7 - t.length) + t;
+    }
+  } return s;
+};
+
+var FORCED = fails(function () {
+  return nativeToFixed(0.00008, 3) !== '0.000' ||
+    nativeToFixed(0.9, 0) !== '1' ||
+    nativeToFixed(1.255, 2) !== '1.25' ||
+    nativeToFixed(1000000000000000128.0, 0) !== '1000000000000000128';
+}) || !fails(function () {
+  // V8 ~ Android 4.3-
+  nativeToFixed({});
+});
+
+// `Number.prototype.toFixed` method
+// https://tc39.es/ecma262/#sec-number.prototype.tofixed
+$({ target: 'Number', proto: true, forced: FORCED }, {
+  toFixed: function toFixed(fractionDigits) {
+    var number = thisNumberValue(this);
+    var fractDigits = toIntegerOrInfinity(fractionDigits);
+    var data = [0, 0, 0, 0, 0, 0];
+    var sign = '';
+    var result = '0';
+    var e, z, j, k;
+
+    // TODO: ES2018 increased the maximum number of fraction digits to 100, need to improve the implementation
+    if (fractDigits < 0 || fractDigits > 20) throw $RangeError('Incorrect fraction digits');
+    // eslint-disable-next-line no-self-compare -- NaN check
+    if (number !== number) return 'NaN';
+    if (number <= -1e21 || number >= 1e21) return $String(number);
+    if (number < 0) {
+      sign = '-';
+      number = -number;
+    }
+    if (number > 1e-21) {
+      e = log(number * pow(2, 69, 1)) - 69;
+      z = e < 0 ? number * pow(2, -e, 1) : number / pow(2, e, 1);
+      z *= 0x10000000000000;
+      e = 52 - e;
+      if (e > 0) {
+        multiply(data, 0, z);
+        j = fractDigits;
+        while (j >= 7) {
+          multiply(data, 1e7, 0);
+          j -= 7;
+        }
+        multiply(data, pow(10, j, 1), 0);
+        j = e - 1;
+        while (j >= 23) {
+          divide(data, 1 << 23);
+          j -= 23;
+        }
+        divide(data, 1 << j);
+        multiply(data, 1, 1);
+        divide(data, 2);
+        result = dataToString(data);
+      } else {
+        multiply(data, 0, z);
+        multiply(data, 1 << -e, 0);
+        result = dataToString(data) + repeat('0', fractDigits);
+      }
+    }
+    if (fractDigits > 0) {
+      k = result.length;
+      result = sign + (k <= fractDigits
+        ? '0.' + repeat('0', fractDigits - k) + result
+        : stringSlice(result, 0, k - fractDigits) + '.' + stringSlice(result, k - fractDigits));
+    } else {
+      result = sign + result;
+    } return result;
+  }
+});
+
+
 /***/ })
 
 /******/ 	});
@@ -2128,95 +2296,209 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
 /* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.number.to-fixed.js */ "./node_modules/core-js/modules/es.number.to-fixed.js");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_1__);
+
 
 // Мінімум
 
 // 1. Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
 
-// const age = prompt('Enter your age', '');
-
-// if (age >= 0 && age <= 11) {
-//     console.log("You are a child");
-// } else if (age >= 12 && age <= 17) {
-//     console.log("You are a teenager");
-// } else if (age >= 18 && age <= 59) {
-//     console.log("You are an adult");
-// } else if (age >= 60) {
-//     console.log("You are an elder");
-// } else {
-//     console.log('This is incorrect input')
-// }
+var userAge = prompt('Enter your age', '');
+var age = userAge;
+if (age >= 0 && age <= 11) {
+  console.log("You are a child");
+} else if (age >= 12 && age <= 17) {
+  console.log("You are a teenager");
+} else if (age >= 18 && age <= 59) {
+  console.log("You are an adult");
+} else if (age >= 60) {
+  console.log("You are an elder");
+} else {
+  console.log('This is incorrect input');
+}
 
 // 2. Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
 
-// const userNumber = prompt('Enter your number from 0 to 9', '');
-// const number = Number(userNumber);
-// switch (number) {
-//     case 0:
-//         console.log(')');
-//         break;
-//     case 1:
-//         console.log('!');
-//         break;
-//     case 2:
-//         console.log('@');
-//         break;
-//     case 3:
-//         console.log('#');
-//         break;
-//     case 4:
-//         console.log('$');
-//         break;
-//     case 5:
-//         console.log('%');
-//         break;
-//     case 6:
-//         console.log('^');
-//         break;
-//     case 7:
-//         console.log('&');
-//         break;
-//     case 8:
-//         console.log('*');
-//         break;
-//     case 9:
-//         console.log('(');
-//         break;
-// }
+var userNumber = prompt('Enter your number from 0 to 9', '');
+var number = Number(userNumber);
+switch (number) {
+  case 0:
+    console.log(')');
+    break;
+  case 1:
+    console.log('!');
+    break;
+  case 2:
+    console.log('@');
+    break;
+  case 3:
+    console.log('#');
+    break;
+  case 4:
+    console.log('$');
+    break;
+  case 5:
+    console.log('%');
+    break;
+  case 6:
+    console.log('^');
+    break;
+  case 7:
+    console.log('&');
+    break;
+  case 8:
+    console.log('*');
+    break;
+  case 9:
+    console.log('(');
+    break;
+}
 
 // 3. Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 
-// let userRangeStart = Number(prompt("Enter start number of a range", ""));
-// let userRangeEnd = Number(prompt("Enter last number of a range", ""));
-// let range = 0;
-
-// while (userRangeEnd >= userRangeStart) {
-//     range += userRangeStart;
-//     userRangeStart++;
-// }
-// console.log(range);
+var userRangeStart = Number(prompt("Enter start number of a range", ""));
+var userRangeEnd = Number(prompt("Enter last number of a range", ""));
+var range = 0;
+while (userRangeEnd >= userRangeStart) {
+  range += userRangeStart;
+  userRangeStart++;
+}
+console.log(range);
 
 // 4. Запитай у користувача 2 числа і знайди найбільший спільний дільник.
 
 var firstNum = Number(prompt('Please enter first number', ''));
 var secondNum = Number(prompt('Please enter second number', ''));
-var commonDenominator = '';
-if (firstNum / commonDenominator && secondNum / commonDenominator) {}
+var a = firstNum;
+var b = secondNum;
+while (b !== 0) {
+  var remainder = a % b;
+  a = b;
+  b = remainder;
+}
+console.log("The greatest common divisor is " + a);
 
 // 5. Запитай у користувача число і виведи всі дільники цього числа.
+
+var askNumber = Number(prompt('Please enter a number', ''));
+var aaa = askNumber;
+var dividerArray = [];
+var goingUp = 1;
+while (aaa >= goingUp) {
+  var _remainder = aaa % goingUp;
+  if (_remainder === 0) {
+    dividerArray.push(goingUp);
+  }
+  goingUp++;
+}
+console.log('Here are the dividers for your number: ', dividerArray);
 
 // Норма
 
 // 1. Запитай у користувача п’ятирозрядне число і визначи, чи є воно паліндромом.
+
+var userNumberPalindrome = prompt('Please enter a five-digit number');
+var digit1 = ~~(userNumberPalindrome / 10000);
+var digit2 = ~~(userNumberPalindrome / 1000) % 10;
+var digit3 = ~~(userNumberPalindrome / 100) % 10;
+var digit4 = ~~(userNumberPalindrome / 10) % 10;
+var digit5 = userNumberPalindrome % 10;
+var reversedNumber = digit5 * 10000 + digit4 * 1000 + digit3 * 100 + digit2 * 10 + digit1;
+if (userNumberPalindrome == reversedNumber) {
+  console.log('The number is a palindrome.');
+} else {
+  console.log('The number is not a palindrome.');
+}
 
 // 2. Запитай у користувача суму покупки і виведи суму до оплати зі знижкою:
 // 2.a від 200 до 300 - знижка буде 3%;
 // 2.b від 300 до 500 - 5%;
 // 2.c від 500 і вище - 7%.
 
+var userAmount = Number(prompt('Please enter a number', ''));
+var userDiscount;
+if (userAmount > 0 && userAmount < 200) {
+  userDiscount = 0;
+} else if (userAmount >= 200 && userAmount < 300) {
+  userDiscount = 0.03;
+} else if (userAmount >= 300 && userAmount < 500) {
+  userDiscount = 0.05;
+} else if (userAmount >= 500) {
+  userDiscount = 0.07;
+} else {
+  console.log('Please enter a correct amount.');
+}
+var userPrice = Number(userAmount * (1 - userDiscount)).toFixed(2);
+console.log('Your final price is ' + userPrice);
+
 // 3. Запитай у користувача 10 чисел і порахуй, скільки він ввів додатніх, від’ємних і нулів. При цьому також порахуй, скільки з них парних і непарних. Виведи статистику на екран. Враховуй, що достатньо однієї змінної (не 10) для введення чисел користувачем.
 
+var positiveNumber = 0;
+var negativeNumber = 0;
+var zeroNumber = 0;
+var evenNumber = 0;
+var oddNumber = 0;
+for (var i = 0; i < 10; i++) {
+  var askUser = Number(prompt('Please enter number ' + (i + 1), ''));
+  if (!isNaN(askUser)) {
+    if (askUser > 0) {
+      positiveNumber++;
+    } else if (askUser < 0) {
+      negativeNumber++;
+    } else {
+      zeroNumber++;
+    }
+    if (askUser % 2 === 0) {
+      evenNumber++;
+    } else {
+      oddNumber++;
+    }
+  } else {
+    console.log('Invalid input for number ' + (i + 1) + '. Please enter a valid number.');
+    i--;
+  }
+}
+console.log('Positive Numbers: ' + positiveNumber);
+console.log('Negative Numbers: ' + negativeNumber);
+console.log('Zero Numbers: ' + zeroNumber);
+console.log('Even Numbers: ' + evenNumber);
+console.log('Odd Numbers: ' + oddNumber);
+
 // 4. Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
+
+var userConfirm;
+var dayOfTheWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+var counter = 0;
+do {
+  userConfirm = confirm(dayOfTheWeek[counter % dayOfTheWeek.length] + '. Do you want to see next day?');
+  counter++;
+} while (userConfirm == true);
+
+// Йолка easy
+
+var userHashEasy = Number(prompt('Please enter hash quantity'), '');
+for (var _i = 0; userHashEasy > _i; _i++) {
+  var line = '';
+  for (var j = 0; j <= _i; j++) {
+    line += '#';
+  }
+  console.log(line);
+}
+// 
+// Йолка normal
+
+var userHashNormal = Number(prompt('Please enter hash quantity'), '');
+for (var _i2 = userHashNormal; _i2 >= 1; _i2--) {
+  var _line = '';
+  for (var _j = 1; _j <= _i2; _j++) {
+    _line += ' ';
+  }
+  for (var k = _i2; k <= userHashNormal; k++) {
+    _line += '#';
+  }
+  console.log(_line);
+}
 }();
 /******/ })()
 ;
