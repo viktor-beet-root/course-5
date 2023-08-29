@@ -79,6 +79,10 @@
             padding-bottom: 100px;
         }
 
+        @include media() {
+            gap: 20px;
+        }
+
         @include media(xs) {
             flex-direction: column;
             gap: 20px;
@@ -108,11 +112,6 @@
         @include media(lg) {
             padding-left: 65px;
         }
-
-        @include media(md) {
-            margin: 0;
-            padding: 0;
-        }
     }
 
     // .chooseus__img-right
@@ -124,10 +123,18 @@
         @include media(lg) {
             padding-left: 125px;
         }
+    }
 
+
+    &__img-right,
+    &__img-left {
         @include media(md) {
             margin: 0;
             padding: 0;
+        }
+
+        @include media() {
+            width: 300px;
         }
     }
 }
