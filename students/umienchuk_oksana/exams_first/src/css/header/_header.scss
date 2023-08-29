@@ -5,10 +5,15 @@
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    // width: 1920px;
-    // height: 862px;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    // width: 100svw;
+    // height: 100svh;
     padding-top: 295px;
     padding-bottom: 214px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     // .header__menu
 

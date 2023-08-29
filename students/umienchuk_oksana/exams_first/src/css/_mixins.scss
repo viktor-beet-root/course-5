@@ -21,6 +21,15 @@
     }
 }
 
+@mixin fonts-type ($_font-family: $default-font-name, $_font-size: $default-font-size, $_font-weight: $default-font-weight, $_line-height: $line-height-text, $_letter-spacing: normal, $_text-transform: none) {
+    font-family: $_font-family;
+    font-size: $_font-size;
+    font-weight: $_font-weight;
+    line-height: $_line-height;
+    letter-spacing: $_letter-spacing;
+    text-transform: $_text-transform;
+}
+
 @mixin test {
     @include flex;
 

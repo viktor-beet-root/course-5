@@ -10,13 +10,18 @@
     &-primary {
         padding: 20px 32px;
         height: $btn-height-primary;
-        width: $btn-weight;
-        font-size: inherit;
+        @include fonts-type($font-sub-font, 16px, $font-weight-name, $line-height, $letter-spacing-btn, $text-transform-upper);
     }
 
     &-secondary {
+        border: 0;
         padding: 16px 24px;
         height: $btn-height-secondary;
         font-size: $font-size-small;
+        @include fonts-type($font-sub-font, $font-size-small, $font-weight-name, $line-height, $letter-spacing-menu, $text-transform-upper);
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

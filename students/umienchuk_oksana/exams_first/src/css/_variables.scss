@@ -9,10 +9,16 @@ $red: #FF6363;
 $blue: #00A2FF;
 $black: #000;
 
+$font-size-small: 14px;
+$font-size-h5: 20px;
+$font-size-logo-sub: 22px;
+$font-size-h3: 24px;
+$font-size-h2: 36px;
+$font-size-h1: 48px;
+
 $font-weight: 300;
 $font-weight-name: 400;
 $font-weight-title: 700;
-
 
 $line-height: 20px;
 $line-height-text: 28px;
@@ -45,21 +51,13 @@ $font-sub-font: Aleo;
 $default-font-sub-font: $font-sub-font, $fallback;
 $font-path: './fonts/';
 
-$font-size-small: 14px;
-$font-size-h5: 20px;
-$font-size-logo-sub: 22px;
-$font-size-h3: 24px;
-$font-size-h2: 36px;
-$font-size-h1: 48px;
+
 
 // btn
-$btn-height-pr: 60px;
+$btn-height-pr: 20px;
 $btn-height-primary: $btn-height-pr;
 $btn-height-sec: 52px;
 $btn-height-secondary: $btn-height-sec;
-
-$btn-weight: 213px;
-$btn-font-weight: 400;
 
 // containers
 $container-padding: 15px;
