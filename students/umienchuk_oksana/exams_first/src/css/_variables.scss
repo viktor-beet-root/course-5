@@ -7,8 +7,28 @@ $dark-grey: #333;
 $accent: #5373FD;
 $red: #FF6363;
 $blue: #00A2FF;
-$font-weight: 300;
 $black: #000;
+
+$font-weight: 300;
+$font-weight-name: 400;
+$font-weight-title: 700;
+
+
+$line-height: 20px;
+$line-height-text: 28px;
+$line-height-h: 40px;
+$line-height-title: 52px;
+
+$letter-spacing-btn: 1.12px;
+$letter-spacing-menu: 1.4px;
+$letter-spacing-text: 1.6px;
+$letter-spacing-h6: 2px;
+$letter-spacing: 2.4px;
+$letter-spacing-holder: 2.8px;
+$letter-spacing-sub-text: 6.82px;
+
+$text-transform-upper: uppercase;
+$text-transform-capit: capitalize;
 
 
 //main color for text 
@@ -25,8 +45,6 @@ $font-sub-font: Aleo;
 $default-font-sub-font: $font-sub-font, $fallback;
 $font-path: './fonts/';
 
-
-
 $font-size-small: 14px;
 $font-size-h5: 20px;
 $font-size-logo-sub: 22px;
@@ -35,7 +53,11 @@ $font-size-h2: 36px;
 $font-size-h1: 48px;
 
 // btn
-$btn-height: 60px;
+$btn-height-pr: 60px;
+$btn-height-primary: $btn-height-pr;
+$btn-height-sec: 52px;
+$btn-height-secondary: $btn-height-sec;
+
 $btn-weight: 213px;
 $btn-font-weight: 400;
 
@@ -58,6 +80,10 @@ $background-bg-content: rgba(35, 35, 35, 0.9);
 
 // footer 
 $footer-gap-social-icons: 32px;
+
+//search-form 
+$color-btn: $accent;
+
 $breack-points: (
     "lg": 1200px,
     "md": 992px,
