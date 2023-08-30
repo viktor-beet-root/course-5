@@ -6,6 +6,7 @@ body {
     line-height: $default-line-height;
     letter-spacing: $default-letter-spacing;
     color: $white-color;
+    overflow-x: hidden
 }
 
 h1 {
@@ -41,3 +42,5 @@ h4 {
 }
 
 @include grid();
+
+
