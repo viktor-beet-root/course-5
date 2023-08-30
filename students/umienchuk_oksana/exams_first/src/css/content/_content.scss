@@ -54,9 +54,9 @@
 .btn-primary {}
 
 .content-first {
-    background-image: url(../../images/content-1.png);
+    background-image: url(#{$base-img-path}images/content-1.png);
 }
 
 .content-second {
-    background-image: url(../../images/content-2.png);
+    background-image: url(#{$base-img-path}images/content-2.png);
 }
