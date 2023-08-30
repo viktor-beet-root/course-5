@@ -114,6 +114,30 @@ var __webpack_exports__ = {};
 
 // 1. Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
 
+// function perfectNumber(n) {
+//     if (n <= 0) {
+//         return false;
+//     }
+
+//     let sum = 0;
+
+//     for (let i = 1; i < n; i++) {
+//         if (n % i === 0) {
+//             sum += i;
+//         }
+//     }
+//     return sum === n;
+// }
+
+// const checking = 496;
+// const isPerfect = perfectNumber(checking);
+
+// if (isPerfect) {
+//     console.log('This is a perfect number');
+// } else {
+//     console.log('This is not a perfect number');
+// }
+
 // 2. Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
 /******/ })()
 ;
