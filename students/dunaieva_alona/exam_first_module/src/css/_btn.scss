@@ -1,0 +1,13 @@
+.btn {
+    padding: 20px 56px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: $btn-color;
+    color: $white-color;
+
+    &-small {
+        padding: 16px 24px;
+    }
+}

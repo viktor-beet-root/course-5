@@ -1,0 +1,44 @@
+@include grid ();
+
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+    font-size: 16px;
+    // color: $white-color;
+}
+
+.container {
+    max-width: $container-max-with;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+// .row {
+//     align-items: center;
+// }
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    text-transform: uppercase;
+}
+
+h2 {
+    @include h2;
+}
+
+
+
+// h3 {
+//     @include h3;
+//     font-size: 22px;
+// }
+
+// .mobile-only {
+//     @include media-m(sm) {
+//         display: none !important;
+//     }
+// }

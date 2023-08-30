@@ -1,0 +1,38 @@
+.hero {
+    background: url(../../images/hero-bg.jpg);
+
+    &__title {
+        padding-bottom: 24px;
+    }
+
+    &__text {
+        padding-bottom: 32px;
+    }
+}
+
+.container {}
+
+.row {}
+
+.col-6 {}
+
+.images-wrapper {}
+
+.action {}
+
+.col-12 {}
+
+.icon-wrapper {}
+
+.icon {
+
+    // .icon__item
+
+    &__item {}
+}
+
+.icon-search {}
+
+.icon-check {}
+
+.icon-thumbs-up {}
