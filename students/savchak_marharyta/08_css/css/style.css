@@ -15,16 +15,34 @@ body {
     font-size: 18px;
 }
 
+nav {
+    text-align: center;
+}
+
 section {
     max-width: 100%;
+    margin-bottom: 100px;
+    margin: 0 auto;
+
+}
+
+
+
+ul {
     margin: 0 auto;
 }
 
 li {
     list-style-type: none;
+    display: block;
+    margin: 0 auto;
 }
 
 p {
+    text-align: center;
+}
+
+figcaption {
     text-align: center;
 }
 
@@ -36,4 +54,26 @@ h1 {
 
 h2 {
     text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    border-radius: 22px;
+    background-color: black;
+    color: #ffff;
+    font-weight: 700;
+    padding: 7px 16px;
+    letter-spacing: 1.8px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 0 auto;
 }
