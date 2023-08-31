@@ -4,14 +4,12 @@
     background-position: center;
     background-size: cover;
     padding: 124px 0;
+
     // .block-why__title
 
     &__title {
-        font-family: $default-font-sub-font;
-        font-size: $font-size-h2;
-        font-weight: 400;
-        line-height: 40px;
-        text-transform: capitalize;
+        @include fonts-type($font-sub-font, $font-size-h2, $font-weight-name, $line-height-h, normal, $text-transform-capit);
+        margin: 0 0 24px;
     }
 
     // .block-why__text
@@ -28,22 +26,22 @@
         display: flex;
         gap: 16px;
         flex-direction: column;
+
     }
 
     // .block-why__image
 
     &__image-one {
         align-self: flex-start;
-        width: 350px;
-        height: 220px;
-        flex-shrink: 0;
+        object-fit: contain;
+        object-position: center;
     }
 
     &__image-two {
         align-self: flex-end;
-        width: 350px;
-        height: 220px;
-        flex-shrink: 0;
+
+        object-fit: contain;
+        object-position: center;
     }
 }
 

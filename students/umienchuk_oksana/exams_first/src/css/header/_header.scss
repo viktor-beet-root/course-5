@@ -52,6 +52,8 @@
 
     &__link {
         text-decoration: none;
+        display: inline-block;
+        padding: 0 15px;
     }
 
     // .main__icon-img
@@ -99,6 +101,8 @@
     // .menu__items
 
     &__items {
+        list-style-type: none;
+        padding: 0;
         display: flex;
         gap: 40px;
         align-items: center;
@@ -107,14 +111,14 @@
 
     // .menu__item
 
-    &__item {
-        list-style-type: none;
-    }
+    &__item {}
 
     // .menu__link
 
     &__link {
         text-decoration: none;
+        display: inline-block;
+        padding: 0 20px;
         color: $color-white;
 
         @include fonts-type($font-sub-font, $font-size-small, $font-weight-name, $line-height, $letter-spacing-menu, $text-transform-upper);

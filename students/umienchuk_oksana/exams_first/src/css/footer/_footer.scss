@@ -21,19 +21,8 @@
     &__social-icons {}
 }
 
-.logo {
-    font-size: $font-size-h3;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 2.4px;
-    text-transform: uppercase;
-}
-
 .title-sub-text {
-    font-size: $font-size-small;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 2.8px;
+    @include fonts-type($default-font-name, $font-size-small, $font-weight-name, $line-height, $letter-spacing-holder, none);
 }
 
 .social-icons {
