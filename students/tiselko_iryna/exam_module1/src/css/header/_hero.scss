@@ -1,7 +1,7 @@
 .hero {
     width: 100svw;
     height: 100svh;
-    background: url(../../images/header/headerbackground.png);
+    background: url(#{$base-img-pass}images/header/headerbackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -107,6 +107,7 @@
         }
 
         @include media (xxs) {
+            width: 300px;
             height: 152px;
             flex-direction: column;
             align-items: center;

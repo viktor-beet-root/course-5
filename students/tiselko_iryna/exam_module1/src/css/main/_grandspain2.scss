@@ -1,5 +1,5 @@
 .grandspain2 {
-    background-image: url(../../images/GrandSpain_2.png);
+    background-image: url(#{$base-img-pass}images/GrandSpain_2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -10,10 +10,5 @@
 
     &__reverse {
         flex-direction: row-reverse;
-
-        @include media (xs) {
-            justify-content: center;
-            align-items: center;
-        }
     }
 }

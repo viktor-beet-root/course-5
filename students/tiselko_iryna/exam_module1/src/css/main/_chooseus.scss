@@ -1,52 +1,59 @@
 .chooseus {
-    background-image: url(../../images/ChooseUs/WhyBackground.png);
+    background-image: url(#{$base-img-pass}images/ChooseUs/WhyBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     @include media () {
-        background-position: 75% 25%;
+        background-position: 15% 85%;
     }
 
     // .chooseus__title
 
     &__content {
-        @include media(md) {
-            padding: 100px 30px 24px 30px;
-        }
+        // padding-top: 190px;
+        padding: 190px 95px 50px 95px;
 
-        @include media(xxs) {
+        @include media() {
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 100px 40px 20px 40px;
+        }
+
+        @include media (xs) {
+            padding-left: 40px;
+            padding-right: 40px;
         }
     }
 
     // .chooseus__title
 
     &__title {
-        padding-top: 190px;
         padding-bottom: 24px;
 
-        @include media(md) {
-            padding-top: 0;
-        }
-
         @include media (xs) {
-            font-size: 26px;
-            letter-spacing: 1.6px;
+            padding-left: 0;
+            text-align: center;
+            font-size: 18px;
+            letter-spacing: 0.6px;
         }
     }
 
     // .chooseus__text
 
     &__text {
-        padding-bottom: 32px;
+        &:not(:last-of-type) {
+            padding-bottom: 32px;
+        }
 
         @include media (xs) {
             font-size: 14px;
-            line-height: 22.4px;
-            padding-bottom: 32px;
+            letter-spacing: 0.6px;
+
+            &:not(:last-of-type) {
+                padding-bottom: 15px;
+            }
         }
     }
 
@@ -56,8 +63,8 @@
         padding-bottom: 190px;
 
         @include media(md) {
+            padding-top: 40px;
             padding-bottom: 40px;
-            margin-bottom: 0;
         }
 
         @include media() {
@@ -65,6 +72,7 @@
         }
 
         @include media(xxs) {
+            padding-top: 24px;
             padding-bottom: 10px;
         }
     }
@@ -72,18 +80,15 @@
     // .chooseus__img-wrapper
 
     &__img-wrapper {
-        @include media(md) {
+        @include media (md) {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding-bottom: 100px;
-        }
-
-        @include media() {
             gap: 20px;
+            padding: 0 15px 124px 15px;
         }
 
-        @include media(xs) {
+        @include media (xs) {
             flex-direction: column;
             gap: 20px;
         }
@@ -93,48 +98,48 @@
 
     &__img {
         display: block;
-        aspect-ratio: 3/1.9;
+        aspect-ratio: 3/2;
         object-fit: cover;
         object-position: center;
 
-        @supports not (aspect-ratio: 3/1.9) {
+        @supports not (aspect-ratio: 3/2) {
             height: 220px;
+        }
+
+        @include media () {
+            width: 50%;
+        }
+
+        @media screen and (max-width: 700px) and (min-width: 577px) {
+            width: 40%;
+        }
+
+        @include media () {
+            width: 70%;
+        }
+
+        @include media (xxs) {
+            width: 90%;
         }
     }
 
     // .chooseus__img-left
 
     &__img-left {
-        margin-top: 124px;
-        padding-left: 130px;
-        padding-bottom: 16px;
+        margin: 124px 0 16px 50px;
 
-        @include media(lg) {
-            padding-left: 65px;
+        @include media(md) {
+            margin: 0;
         }
     }
 
     // .chooseus__img-right
 
     &__img-right {
-        padding-right: 112px;
-        padding-left: 230px;
+        margin-left: auto;
 
-        @include media(lg) {
-            padding-left: 125px;
-        }
-    }
-
-
-    &__img-right,
-    &__img-left {
         @include media(md) {
             margin: 0;
-            padding: 0;
-        }
-
-        @include media() {
-            width: 300px;
         }
     }
 }
