@@ -33,3 +33,13 @@ second method
 let meDanceInTheDark; //camelCase
 
 let me_dance_in_the_dark; //snake_case
+
+
+// Норма
+
+// 1.Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
+
+let userName = prompt('Enter your name', '');
+console.log('Привіт, ' + userName);
+
+
