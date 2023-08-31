@@ -33,3 +33,25 @@ second method
 let meDanceInTheDark; //camelCase
 
 let me_dance_in_the_dark; //snake_case
+
+
+// Норма
+
+// 1.Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
+
+let userName = prompt('Enter your name', '');
+console.log('Привіт, ' + userName);
+
+// 2.Запитай рік народження користувача, порахуй його/її вік і виведи результат. 
+// Поточний рік вкажи в коді як константу;
+
+const thisYear = 2023;
+const userBirthYear = +prompt('Enter year of your birth', '');
+const age = thisYear - userBirthYear;
+console.log(age);
+
+// 3.Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
+
+const sideLength = +prompt('Enter length of the squares side', '');
+const perimeter = sideLength * 4;
+console.log(perimeter);
