@@ -42,4 +42,10 @@ let me_dance_in_the_dark; //snake_case
 let userName = prompt('Enter your name', '');
 console.log('Привіт, ' + userName);
 
+// 2.Запитай рік народження користувача, порахуй його/її вік і виведи результат. 
+// Поточний рік вкажи в коді як константу;
 
+const thisYear = 2023;
+const userBirthYear = +prompt('Enter year of your birth', '');
+const age = thisYear - userBirthYear;
+console.log(age);
