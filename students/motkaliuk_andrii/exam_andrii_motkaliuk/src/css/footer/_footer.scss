@@ -1,7 +1,7 @@
 .footer {
     background-color: $color-black;
     color: $color-white;
-    padding-bottom: 65px;
+    padding: 65px 0;
 
     &__links {
         display: flex;
@@ -17,7 +17,7 @@
         text-transform: uppercase;
         text-align: center;
         margin: 0;
-        padding: 65px 0 10px;
+        padding-bottom: 10px;
     }
 
     &__subtitle {

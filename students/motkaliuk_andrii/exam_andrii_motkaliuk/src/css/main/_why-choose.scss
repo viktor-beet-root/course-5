@@ -1,3 +1,10 @@
+.why-choose-us .row {
+
+    @include media(md) {
+        flex-direction: column-reverse;
+    }
+}
+
 .why-choose-us {
     background-image: url(../../images/castle-background.png);
     background-repeat: no-repeat;
@@ -6,6 +13,11 @@
 
     &__text-wrapper {
         padding: 124px 0;
+
+        @include media(md) {
+            text-align: center;
+            padding: 0 0 30px 0;
+        }
     }
 
     &__title {
@@ -17,6 +29,10 @@
         text-transform: capitalize;
         padding: 76px 0 24px;
         margin: 0;
+
+        @include media(md) {
+            padding: 0 24px;
+        }
     }
 
     &__description {
@@ -28,7 +44,12 @@
         margin: 0;
     }
 
-    &__button-wrapper {}
+    &__button-wrapper {
+        @include media(md) {
+            display: flex;
+            justify-content: center;
+        }
+    }
 
     &__button {}
 
@@ -36,8 +57,13 @@
         padding: 124px 0 124px 0;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: flex-end;
+
+        @include media(md) {
+            flex-direction: row;
+            padding: 45px 0 0 0;
+        }
     }
 
     &__image-container {
@@ -47,10 +73,10 @@
         overflow: hidden;
 
         &:first-child {
-            padding-right: 70px;
+            margin-right: 70px;
 
-            @include media(md) {
-                padding-right: 36px;
+            @include media(lg) {
+                margin-right: 36px;
             }
         }
 

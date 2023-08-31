@@ -1,12 +1,23 @@
 .nav {
     background-color: $color-blue-accent;
-    height: 84px;
+    height: $nav-height-desktop;
+
+    @include media(md) {
+        height: $nav-height-md;
+    }
 }
 
 .logo-wrapper {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     height: 100%;
+    width: 100%;
+
+    @include media(md) {
+        align-items: flex-end;
+        justify-content: center;
+    }
 }
 
 .logo {
@@ -18,6 +29,8 @@
     letter-spacing: 2.4px;
     text-transform: uppercase;
     margin: 0;
+
+
 }
 
 .menu-wrapper {

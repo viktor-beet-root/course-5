@@ -2,21 +2,26 @@
     background-image: url(../../images/house-spain.png);
     background-size: cover;
 
-    &__hs-item {
-        box-sizing: border-box;
-        margin: 220px 672px 120px 0;
-        padding: 44px 32px;
+    &__wrapper {
         max-width: 648px;
         width: 100%;
-        max-height: 344px;
+
+        @include media(md) {
+            max-width: 100%;
+        }
     }
 
-    &__wrapper {
-        // display: flex;
-        // justify-content: flex-start;
-        max-width: 648px;
-        width: 100%;
+    &__hs-item {
+        box-sizing: border-box;
+        margin: 205px 0 105px 0;
+        padding: 44px 32px;
+
+        @include media(md) {
+            margin: 105px 0;
+        }
     }
+
+
 }
 
 .container {}
