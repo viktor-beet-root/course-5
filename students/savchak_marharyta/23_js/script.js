@@ -76,3 +76,8 @@ console.log(speedNeeded + ' km/hour');
 
 // 3.Реалізуй конвертор валют.Користувач вводить долари, програма переводить їх в євро.
 // Курс валют зберігається в константі.
+
+const userMoney = parseFloat(prompt('Enter how much dollars you want to exchange', ''));
+const exchangeRate = 0.92;
+const exchange = userMoney * exchangeRate;
+console.log(exchange + ' euro');
