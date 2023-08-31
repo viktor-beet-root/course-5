@@ -49,3 +49,9 @@ const thisYear = 2023;
 const userBirthYear = +prompt('Enter year of your birth', '');
 const age = thisYear - userBirthYear;
 console.log(age);
+
+// 3.Запитай у користувача довжину сторони квадрату і виведи периметр цього квадрата
+
+const sideLength = +prompt('Enter length of the squares side', '');
+const perimeter = sideLength * 4;
+console.log(perimeter);
