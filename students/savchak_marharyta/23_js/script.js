@@ -68,5 +68,11 @@ console.log(circleArea);
 // 2.Запитай у користувача відстань в кілометрах між двома містами і за скільки
 // годин він хоче дістатися.Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
 
+const cityDistance = parseInt(prompt('Enter distance between two cities in kilometers', ''));
+
+const driveTime = parseInt(prompt('Enter how much hours do you want to go', ''));
+const speedNeeded = cityDistance / driveTime;
+console.log(speedNeeded + ' km/hour');
+
 // 3.Реалізуй конвертор валют.Користувач вводить долари, програма переводить їх в євро.
 // Курс валют зберігається в константі.
