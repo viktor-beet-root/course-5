@@ -55,3 +55,18 @@ console.log(age);
 const sideLength = +prompt('Enter length of the squares side', '');
 const perimeter = sideLength * 4;
 console.log(perimeter);
+
+// Максимум
+
+// 1.Запитай у користувача радіус кола і виведи площу такої окружності.
+
+const radius = +prompt('Enter circle radius', '');
+const circleArea = Math.PI * Math.pow(radius, 2);
+console.log(circleArea);
+
+
+// 2.Запитай у користувача відстань в кілометрах між двома містами і за скільки
+// годин він хоче дістатися.Порахуй швидкість, з якою необхідно рухатися, щоб встигнути вчасно.
+
+// 3.Реалізуй конвертор валют.Користувач вводить долари, програма переводить їх в євро.
+// Курс валют зберігається в константі.
