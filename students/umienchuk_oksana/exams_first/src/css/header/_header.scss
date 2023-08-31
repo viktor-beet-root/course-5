@@ -81,7 +81,9 @@
 
     // .menu__logo
 
-    &__logo {}
+    &__logo {
+        margin: 28px 0;
+    }
 
     // .menu__logo-link
 
@@ -100,6 +102,7 @@
         display: flex;
         gap: 40px;
         align-items: center;
+        margin: 32px 0;
     }
 
     // .menu__item
