@@ -27,3 +27,9 @@ second method
 /**third
  * method
  */
+
+// 4.Які стилі написання імен змінних ти знаєш?
+
+let meDanceInTheDark; //camelCase
+
+let me_dance_in_the_dark; //snake_case
