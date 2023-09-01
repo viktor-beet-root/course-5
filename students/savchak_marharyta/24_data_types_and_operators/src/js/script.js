@@ -44,11 +44,38 @@ console.log(backwards);
 // 1.Користувач вводить суму вкладу в банк на 2 місяці, з процентною ставкою депозиту 5% річних.
 //Вивести суму нарахованих відсотків.
 
-
+const deposit = +prompt('Enter your deposit', '');
+const annualPayout = (deposit / 100) * 5;
+const monthPayout = (annualPayout / 12) * 2;
+const profitPrecent = ((monthPayout * 100) / deposit).toFixed(3);
+console.log('Your two months precents of profit are ' + profitPrecent);
 
 // 2.Що повернуть вирази:
+
 //  2 && 0 && 3
+
+/*
+this expression will return 0, because operator && returns true only if all operands are true. 
+here we have "0", wich value is always false. In that case program will stop working and return 0;
+*/
+
+console.log(2 && 0 && 3);
+
 
 //  2 || 0 || 3
 
+/*
+this expression will return 2, because operator || returns false only if all operands are false.
+here we have only one "0", wich value is always false. In that case program will stop working on "2" and return this value;
+*/
+
+console.log(2 || 0 || 3);
+
 // 2 && 0 || 3
+
+/*
+this expression will return 3, because operator && stops on false value, wich is "0". Than we have || operator, wich compare the result of
+the first coparison and number 3, than returns true value? wich is "3".
+*/
+
+console.log(2 && 0 || 3);
