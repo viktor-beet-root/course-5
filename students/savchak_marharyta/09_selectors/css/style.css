@@ -15,54 +15,73 @@ body {
     font-size: 18px;
 }
 
-nav {
+.nav {
     text-align: center;
 }
 
 section {
     max-width: 100%;
     margin-bottom: 100px;
-    margin: 0 auto;
 
 }
 
 
-
-ul {
-    margin: 0 auto;
+.devider {
+    border-bottom: 1px solid #070707;
 }
 
-li {
+
+.menu__item {
     list-style-type: none;
     display: block;
     margin: 0 auto;
+
+
 }
+
+
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+}
+
+.menu__link_home {
+    text-decoration: none;
+    color: #070707;
+}
+
+
 
 p {
     text-align: center;
 }
 
-figcaption {
-    text-align: center;
+.skills__list_item,
+.contacts__item {
+    list-style-type: none;
 }
 
-h1 {
+
+
+.heroblock__title {
     font-size: 47px;
     font-weight: 700;
-
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 h2 {
     text-align: center;
 }
 
-img {
+.heroblock__img,
+.portfolio__img {
     max-width: 100%;
     display: block;
     margin: 0 auto;
 }
 
-button {
+.footer__button {
     border-radius: 22px;
     background-color: black;
     color: #ffff;
