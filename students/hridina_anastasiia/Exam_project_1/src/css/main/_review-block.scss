@@ -2,7 +2,13 @@
 
     // .review_img
 
-    &_img {}
+    &_img {
+        display: block;
+
+        @include media(md) {
+            margin: 0 auto;
+        }
+    }
 
     // .review__block
 
@@ -11,7 +17,8 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 680px;
+        background-attachment: fixed;
+        height: 100dvh;
     }
 
     // .review__heading
@@ -23,6 +30,11 @@
         text-align: center;
         padding-top: 110px;
         padding-bottom: 65px;
+
+        @include media(md) {
+            padding-bottom: 30px;
+            padding-top: 60px;
+        }
     }
 
 
@@ -30,7 +42,11 @@
 
     &__image-wrapper {
         width: 40%;
-        display: inline-block;
+        display: block;
+
+        @include media(md) {
+            width: 100%;
+        }
     }
 
 
@@ -46,12 +62,14 @@
     // .review__text
 
     &__text {
-        width: 60%;
-        height: 194px;
-        padding: 45px;
-        margin-left: 0;
-        background: $darkgrey-color;
         overflow: hidden;
+        width: 60%;
+        padding-top: 40px;
+        margin-left: 15px;
+
+        @include media(md) {
+            width: 100%;
+        }
 
         // .review__text_heading
 
@@ -60,6 +78,10 @@
             text-transform: uppercase;
             color: $white-color;
             margin-top: -10px;
+
+            @include media(md) {
+                padding-left: 10px;
+            }
         }
 
         // .review__text_paragraph
@@ -68,11 +90,13 @@
             @include new-font(16px, 300, normal, 1.6px);
             color: $white-color;
             margin-top: -20px;
+
+            @include media(md) {
+                padding: 10px;
+            }
         }
     }
 }
-
-.container {}
 
 .image {
 
@@ -82,5 +106,26 @@
         display: flex;
         justify-content: center;
         box-sizing: border-box;
+        width: 100%;
+        background: $darkgrey-color;
+
+        @include media(md) {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            margin-left: 25%;
+        }
+
+        @include media(sm) {
+            width: 70%;
+            margin-left: 15%;
+        }
+
+        @include media(xs) {
+            width: 90%;
+            margin-left: 5%;
+        }
     }
 }

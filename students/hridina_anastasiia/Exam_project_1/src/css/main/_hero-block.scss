@@ -3,13 +3,18 @@
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+
+    @include media(md) {
+        height: 100%;
+    }
+
+    @include media(sm) {
+        height: 100%;
+    }
+
 }
-
-.container {}
-
-.row {}
-
-.col-6 {}
 
 .hero {
 
@@ -20,7 +25,17 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 120px 110px;
+        padding: 110px 100px;
+
+        @include media(md) {
+            padding-top: 80px;
+
+        }
+
+        @include media(sm) {
+            padding-top: 25px;
+            padding-bottom: 58px;
+        }
 
     }
 
@@ -31,10 +46,14 @@
         // .hero__text_left
 
         &_left {
-            width: 650px;
-            height: 330px;
+            width: 100%;
             display: flex;
             flex-direction: column;
+
+            @include media(sm) {
+                text-align: center;
+                padding-right: 0;
+            }
         }
     }
 }
@@ -59,6 +78,10 @@
 
 .btn-wrapper {
     padding-top: 32px;
+
+    @include media(sm) {
+        padding-top: 10px;
+    }
 }
 
 .button {
@@ -78,29 +101,63 @@
     &:hover {
         background-color: $color-azureradiance;
     }
+
 }
 
 .image-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 15px;
+    @include media(sm) {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 30px;
+    }
 }
 
 .image {
 
-    // .image__left
-
-    &__left {
-        display: block;
-    }
-
     // .image__right
 
     &__right {
+        width: 60%;
+        object-fit: cover;
+        object-position: center;
         display: block;
-        padding-left: 150px;
+
+        &:first-child {
+            margin-bottom: 15px;
+            margin-left: 45px;
+
+            @include media(sm) {
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: 120px;
+
+            @include media(sm) {
+                margin-left: 20px;
+            }
+        }
+
+
+        @include media(md) {
+            width: 85%;
+            object-fit: cover;
+        }
+
+        @include media(sm) {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include media(xs) {
+            width: 100%;
+        }
     }
+
 }
 
 .search {
@@ -109,7 +166,22 @@
 
     &__links {
         background-color: $darkgrey-color;
-        padding: 50px 100px;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        position: relative;
+        bottom: 0;
+
+
+        @include media(md) {
+            padding-top: 5px;
+        }
+
+        @include media(sm) {
+            padding-top: 0;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
     }
 }
 
@@ -121,6 +193,29 @@
     gap: 160px;
     margin-top: 90px;
     margin-bottom: 0;
+
+    @include media(md) {
+        display: flex;
+        gap: 80px;
+    }
+
+    @include media(sm) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding-left: 10px;
+    }
+
+    @include media(xs) {
+        gap: 30px;
+        padding-left: 10px;
+    }
+
+    @include media(xxs) {
+        gap: 40px;
+        padding-left: 10px;
+    }
 }
 
 .links {
@@ -133,7 +228,18 @@
         color: $white-color;
         position: relative;
         white-space: nowrap;
-        position: relative;
+
+        @include media(md) {
+            font-size: 30px;
+        }
+
+        @include media(sm) {
+            font-size: 20px;
+        }
+
+        @include media(xxs) {
+            font-size: 15px;
+        }
 
         &:nth-child(-n+2) {
             &::after {
@@ -148,6 +254,14 @@
                 height: 100px;
                 clip-path: ellipse(50% 50%);
                 opacity: .5;
+
+                @include media(md) {
+                    visibility: hidden;
+                }
+
+                @include media(xs) {
+                    visibility: hidden;
+                }
             }
         }
     }
@@ -160,5 +274,10 @@
         position: absolute;
         bottom: 130%;
         left: 37%;
+
+        @include media(sm) {
+            width: 30px;
+            height: 30px;
+        }
     }
 }

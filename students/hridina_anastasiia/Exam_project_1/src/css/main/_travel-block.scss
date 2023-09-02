@@ -1,14 +1,26 @@
 .travel {
 
-    // .travel_container
+    // .travel_textblock
 
-    &_container {
-        position: absolute;
-        top: 30%;
-        left: 15%;
-        width: 600px;
+    &__textblock {
+        width: 50%;
         background: rgba(35, 35, 35, 0.90);
-        padding: 30px;
+        margin-top: 240px;
+        margin-left: 120px;
+        padding: 20px;
+        box-sizing: border-box;
+
+        @include media(md) {
+            text-align: center;
+            margin-left: 25%;
+            margin-top: 16%;
+        }
+
+        @include media(xs) {
+            width: 80%;
+            margin-left: 11%;
+            margin-top: 25%;
+        }
     }
 
     // .travel__block
@@ -18,8 +30,9 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         height: 684px;
-        position: relative;
+
     }
 
     &__header {
@@ -55,8 +68,9 @@
     }
 }
 
-.button {}
-
 .btn-bottom {
+    @include new-font('Aleo', 16px, 400, normal, 20px, 1.12px);
+    text-transform: uppercase;
+    display: inline-block;
     padding: 15px 40px;
 }

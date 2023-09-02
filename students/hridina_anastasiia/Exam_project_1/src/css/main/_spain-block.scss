@@ -8,18 +8,32 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        position: relative;
+        background-attachment: fixed;
+
+
     }
 
-    // .spain__container
+    // .spain__textblock
 
-    &__container {
-        position: absolute;
-        top: 31%;
-        left: 36%;
+    &__textblock {
         background: rgba(35, 35, 35, 0.90);
-        width: 600px;
-        padding: 30px;
+        width: 50%;
+        padding: 20px;
+        margin-top: 200px;
+        margin-left: 400px;
+        box-sizing: border-box;
+
+        @include media(md) {
+            text-align: center;
+            margin-left: 24%;
+            margin-top: 17%;
+        }
+
+        @include media(xs) {
+            width: 80%;
+            margin-left: 11%;
+            margin-top: 25%;
+        }
     }
 
     // .spain__header
