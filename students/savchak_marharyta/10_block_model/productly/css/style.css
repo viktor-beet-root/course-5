@@ -1,1 +1,80 @@
+@import url("fonts.css");
 
+body {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.clear-fix {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.logo {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    padding-right: 127px;
+}
+
+.logo__img {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.menu__item {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu__item:not(:last-of-type) {
+    padding-right: 12px;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #2F281E;
+}
+
+.menu__link:hover {
+    color: #F90;
+}
+
+.header__buttons {
+    float: right;
+}
+
+.header__buttons:not(:last-of-type) {
+    padding-right: 20px;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.content {
+    max-width: 50%;
+    float: right;
+}
+
+.heroblock__img {
+    float: right;
+}
+
+img {
+    max-width: 100%;
+}
+
+.heroblock {
+    display: inline-block;
+    box-sizing: border-box;
+}
