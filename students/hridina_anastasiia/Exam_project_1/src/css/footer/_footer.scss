@@ -12,6 +12,10 @@
         text-transform: uppercase;
         text-align: center;
         padding-top: 80px;
+
+        @include media(sm) {
+            font-size: 30px;
+        }
     }
 
     // .footer__text
@@ -20,6 +24,10 @@
         color: $white-color;
         @include new-font(14px, 20px);
         text-align: center;
+
+        @include media(sm) {
+            font-size: 24px;
+        }
     }
 }
 
@@ -48,6 +56,11 @@
     &__svg {
         width: 26px;
         height: 32px;
+
+        @include media(sm) {
+            width: 36px;
+            height: 36px;
+        }
     }
 
 }

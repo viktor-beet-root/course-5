@@ -3,7 +3,6 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     padding: 0;
     width: 100dvw;
     height: 100dvh;
@@ -206,14 +205,47 @@
     align-items: center;
     gap: 30px;
     margin-right: 30px;
+    position: relative;
+
+    @include media(sm) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        margin: 0 auto;
+    }
 
     // .menu__wrapper-item
 
-    &__wrapper-item {}
+    &__wrapper-item {
+
+        @include media(sm) {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            bottom: 11%;
+            left: 100%;
+            background-color: $dodgerblue-color;
+            transform: translateX(0);
+            transition: transform .3s ease-in-out;
+
+            .menu-open-input:checked~& {
+                transform: translateX(-100%);
+            }
+        }
+    }
 
     // .menu__item
 
-    &__item {}
+    &__item {
+        @include media(sm) {
+            border-bottom: 1px solid $white-color;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 15px;
+        }
+    }
 
     // .menu__link
 
@@ -227,5 +259,80 @@
             text-decoration: underline;
         }
 
+        @include media(sm) {
+            font-size: 24px;
+        }
+
+    }
+}
+
+
+.menu-open-input {
+    @include visuality-hidden;
+}
+
+.menu-open-label {
+
+    @include media(sm) {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid transparent;
+
+        .menu-open-input:checked+& {
+
+            .menu-open-label__line {
+                background-color: transparent;
+
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+    }
+
+    // .menu-open-label__line
+
+    &__line {
+        @include media(sm) {
+            position: relative;
+            display: block;
+            width: 80%;
+            background-color: $white-color;
+            height: 4px;
+            border-radius: 4px;
+            transition: background-color .3s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $white-color;
+                border-radius: inherit;
+                position: absolute;
+                transition: all .3s ease-in-out;
+            }
+
+            &::before {
+                top: -15px;
+            }
+
+            &::after {
+                bottom: -15px;
+            }
+        }
     }
 }

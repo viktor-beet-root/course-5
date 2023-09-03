@@ -17,8 +17,11 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
         height: 100dvh;
+
+        @include media(xs) {
+            height: 100dvh;
+        }
     }
 
     // .review__heading
@@ -120,12 +123,17 @@
 
         @include media(sm) {
             width: 70%;
-            margin-left: 15%;
+            margin: 0 auto;
         }
 
         @include media(xs) {
             width: 90%;
-            margin-left: 5%;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+
+        @include media(xxs) {
+            margin-top: -15px;
         }
     }
 }

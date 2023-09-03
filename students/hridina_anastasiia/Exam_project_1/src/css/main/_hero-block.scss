@@ -3,7 +3,6 @@
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     width: 100%;
 
     @include media(md) {
@@ -35,6 +34,8 @@
         @include media(sm) {
             padding-top: 25px;
             padding-bottom: 58px;
+            padding-left: 10px;
+            padding-right: 15px;
         }
 
     }
@@ -213,8 +214,7 @@
     }
 
     @include media(xxs) {
-        gap: 40px;
-        padding-left: 10px;
+        gap: 30px;
     }
 }
 
