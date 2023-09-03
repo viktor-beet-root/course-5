@@ -60,10 +60,10 @@ section {
     color: #828282;
 }
 
-.menu__link_home {
-    text-decoration: none;
+.menu__link:hover {
     color: #070707;
 }
+
 
 .aboutme {
     max-width: 100%;
