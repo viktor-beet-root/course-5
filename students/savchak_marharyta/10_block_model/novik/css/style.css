@@ -210,23 +210,31 @@ img {
 
 .footer__button {
     margin-top: 50px;
+    margin-bottom: 24px;
 }
 
 .contacts {
     margin: 0 auto;
-    max-width: 240px;
+    max-width: 250px;
+    padding: 0;
+    margin-bottom: 45px;
 }
 
-/* .contacts::after {
-    content: '';
-    display: block;
-    clear: both;
-} */
+.contacts :not(:last-child) {
+    padding-right: 35.5px;
+}
+
 
 .contacts__item {
-    margin: 0 auto;
     display: inline-block;
-    width: 25%;
-    box-sizing: border-box;
+}
 
+.contacts__img {
+    margin: 0;
+    display: block;
+    height: 32px;
+}
+
+.portfolio__item {
+    font-size: 12px;
 }
