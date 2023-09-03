@@ -21,15 +21,7 @@
             margin: 105px 0;
         }
     }
-
-
 }
-
-.container {}
-
-.row {}
-
-.col-6 {}
 
 .hs-item {
     background-color: $color-gray-transparent;
@@ -44,7 +36,6 @@
         margin: 0;
     }
 
-
     &__title {
         font-size: 20px;
         font-weight: 400;
@@ -54,7 +45,6 @@
         margin: 0;
     }
 
-
     &__description {
         font-weight: 300;
         line-height: 28px;
@@ -63,13 +53,7 @@
         margin: 0;
     }
 
-
     &__button-wrapper {}
-
 
     &__button {}
 }
-
-.button {}
-
-.btn {}

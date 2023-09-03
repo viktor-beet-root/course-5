@@ -55,7 +55,6 @@ $text-wrapper-height: auto;
 
         @include media(md) {
             max-height: 336px;
-            // object-position: top;
         }
     }
 
@@ -65,7 +64,6 @@ $text-wrapper-height: auto;
         position: relative;
         height: auto;
         padding: 48px 60px;
-        // margin-bottom: 180px;
     }
 }
 
@@ -94,6 +92,5 @@ $text-wrapper-height: auto;
         line-height: 28px;
         letter-spacing: 1.6px;
         margin: 0;
-        // padding-right: 60px;
     }
 }

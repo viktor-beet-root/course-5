@@ -31,7 +31,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        // max-width: 424px;
         width: 100%;
 
         &:first-child {
@@ -40,17 +39,8 @@
     }
 }
 
-.container {}
-
-.col-12 {}
-
-.row {}
-
-.steps {}
 
 .steps-item {
-
-
     &__img {
         width: 64px;
         height: 64px;
