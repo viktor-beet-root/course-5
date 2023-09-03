@@ -9,6 +9,7 @@
     background-image: url(../../images/header-background.png);
     background-size: cover;
     height: calc(100vh - $nav-height-desktop);
+    background-position: center center;
 
     @include media(md) {
         height: calc(100vh - $nav-height-md);
@@ -17,7 +18,7 @@
     &__title {
         text-align: center;
         margin: 0;
-        margin-top: 30vh;
+        margin-top: 20vh;
         color: $color-white;
         font-size: 48px;
         font-weight: 700;
@@ -46,22 +47,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .search {
     text-align: center;
     position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 650px;
+    width: 100%;
 
     &__input {
-        width: 647px;
+        // max-width: 647px;
+        width: 100%;
+        // width: 647px;
+        // box-sizing: border-box;
         height: 60px;
         padding: 0;
         font-family: $main-font;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 2.8px;
-        padding-left: 36px;
+        // padding-left: 36px;
         border: none;
+
+        &::placeholder {
+            padding-left: 36px;
+        }
     }
 }
 
@@ -103,13 +117,16 @@
 
 .scroll-down {
     // margin-top: 210px;
+    display: flex;
 
 
     &__link {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-end;
         text-decoration: none;
+        margin-bottom: 105px;
     }
 
     &__title {
