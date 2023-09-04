@@ -106,4 +106,4 @@ const [first, second, ...other] = number;
 // const second = number[1];
 // const other = number.slice(2);
 
-console.log(first, second, other); 
+console.log(first, second, other);

@@ -22,7 +22,13 @@ const webpackConfig = {
                                 corejs: 3,
                                 useBuiltIns: "usage",
                             }
-                        ]
+                        ],
+                        [
+                            "@babel/preset-react",
+                            {
+                                development: isDev,
+                            },
+                        ],
                     ]
                 }
             }
@@ -30,4 +36,4 @@ const webpackConfig = {
     }
 };
 
-export default webpackConfig;
+module.exports = webpackConfig;

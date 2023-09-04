@@ -1,17 +1,24 @@
-const gulp = require('gulp'),
-    browserSync = require('browser-sync').create(),
-    webpack = require('webpack-stream'),
-    fileinclude = require('gulp-file-include'),
-    del = require("del"),
-    cleanCSS = require('gulp-clean-css'),
-    rename = require("gulp-rename"),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    gcmq = require('gulp-group-css-media-queries'),
-    sass = require('gulp-sass')(require('sass'));
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import webpack from 'webpack-stream';
+import fileinclude from 'gulp-file-include';
+import { deleteAsync } from 'del';
+import cleanCSS from 'gulp-clean-css';
+import rename from 'gulp-rename';
+import autoprefixer from 'gulp-autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import gcmq from 'gulp-group-css-media-queries';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 
-const path = require('./gulp/pathConfig.js');
-const webpackConfig = require('./gulp/webpackConfig.js');
+const sass = gulpSass(dartSass);
+
+const server = browserSync.create();
+
+
+import path from './gulp/pathConfig.js';
+import webpackConfig from './gulp/webpackConfig.js';
+
 const isDev = !process.argv.includes('--prod');
 
 function style() {
@@ -36,11 +43,11 @@ function image() {
         .pipe(gulp.dest(path.build.images));
 }
 
-function html(cb) {
+function html() {
     return gulp.src(path.src.html)
         .pipe(fileinclude())
         .pipe(gulp.dest(path.build.html))
-        .pipe(browserSync.stream());
+        .pipe(server.stream());
 }
 
 function fonts() {
@@ -52,55 +59,35 @@ function js() {
     return gulp.src(path.src.js)
         .pipe(webpack(webpackConfig))
         .pipe(gulp.dest(path.build.js))
-        .pipe(browserSync.stream());
+        .pipe(server.stream());
 }
 
-function server(cb) {
-    browserSync.init({
+function serv(done) {
+    server.init({
         host: 'localhost',
         port: 3000,
         tunnel: false,
         server: path.build.html,
     });
-
-    cb();
-}
-
-function lib() {
-    return gulp.src(path.src.lib)
-        .pipe(gulp.dest(path.build.lib));
+    done();
 }
 
 function clean() {
-    return del(path.clean);
+    return deleteAsync(path.clean);
 }
 
 function watch() {
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.lib], lib);
     gulp.watch([path.watch.images], image);
-    gulp.watch([path.watch.css], style).on('change', browserSync.reload);
+    gulp.watch([path.watch.css], style).on('change', server.reload);
 }
 
-exports.html = html;
-exports.js = js;
-exports.lib = lib;
-exports.clean = clean;
-exports.style = style;
-exports.image = image;
-exports.fonts = fonts;
+export { clean, html, js, image, style };
 
-if (isDev) {
-    exports.default = gulp.series(
-        html,
-        js,
-        lib,
-        style,
-        image,
-        fonts,
-        gulp.parallel(watch, server)
-    );
-} else {
-    exports.default = gulp.series(clean, html, js, lib, style, image, fonts);
-}
+const dev =
+    isDev ?
+        gulp.series(html, js, style, image, fonts, serv, watch) :
+        gulp.series(clean, html, js, style, image, fonts)
+
+export default dev;

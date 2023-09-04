@@ -28,4 +28,4 @@ const path = {
     clean: buildPath
 };
 
-module.exports = path;
+export default path;
