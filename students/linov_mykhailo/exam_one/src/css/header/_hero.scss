@@ -1,0 +1,90 @@
+.header {
+    background: url("../../images/header.png"), lightgray 50% / cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    &__hero {
+        padding-top: 280px;
+        max-width: 647px;
+        margin: 0 auto;
+        text-align: center;
+
+        // .header__hero_text
+
+        &_text {
+            letter-spacing: 6.82px;
+            margin: 0;
+            padding-top: 8px;
+            padding-bottom: 48px;
+            @include font-family(400, 22px);
+        }
+
+        &_form {
+            position: relative;
+        }
+
+        &_form-input {
+            padding: 20px 334px 20px 36px;
+            width: 647px;
+            margin-bottom: 211px;
+
+            &::placeholder {
+                font-family: $sub-font;
+                @include font-family(400, 14px, $grey-color, 20px);
+                letter-spacing: 2.8px;
+                overflow: visible;
+            }
+        }
+
+        &_scroll-down {
+            display: block;
+            text-decoration: none;
+            color: $default-font-color;
+            font-family: inherit;
+            letter-spacing: 2.8px;
+            font-size: 14px;
+
+            svg {
+                display: block;
+                margin: 0 auto;
+                padding-top: 4px;
+            }
+        }
+
+    }
+}
+
+.main-title {
+    @include font-family(700, 48px, $default-font-color, 52px);
+    margin: 0;
+}
+
+.btn {
+    display: block;
+    @include font-family(400, 16px, $default-font-color, 20px, $sub-font);
+    letter-spacing: 1.12px;
+    max-width: 213px;
+    padding: 20px 32px;
+    background-color: $btn-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-sizing: border-box;
+
+    &:hover {
+        background-color: $darker-violet-color;
+    }
+}
+
+.hero-btn {
+    @include font-family(400, 14px, $default-font-color, 20px, $sub-font);
+    letter-spacing: 1.4px;
+    padding: 16px 24px;
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    top: 4px;
+    right: 5px;
+}

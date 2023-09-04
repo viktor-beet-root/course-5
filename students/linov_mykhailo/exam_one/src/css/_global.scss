@@ -1,7 +1,5 @@
 body {
-    font-family: $main-font;
-    background-color: $default-body-color;
-    font-size: $default-font-size;
+    @include font-family(400, 16px, $default-font-color, 28px, $main-font, normal);
 }
 
 @include grid();

@@ -1,0 +1,26 @@
+.why-choose-us {
+    background-image: url(../../images/whychooseus.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .container {
+        padding: 124px 0;
+    }
+
+    &__header {
+        @include font-family(400, 36px, $default-font-color, 40px, $sub-font);
+    }
+
+
+    &__text {
+        font-weight: 300;
+        letter-spacing: 1.6px;
+        padding-bottom: 32px;
+    }
+}
+
+.whyus-mountain {
+    padding-left: 70px;
+    padding-top: 10px;
+}

@@ -19,6 +19,15 @@
     }
 }
 
+@mixin font-family($_weight: 400, $_size: 16px, $_color: $default-font-color, $_height: 28px, $_family: $main-font, $_style: normal) {
+    font-weight: $_weight;
+    font-size: $_size;
+    color: $_color;
+    line-height: $_height;
+    font-family: $_family;
+    font-style: $_style;
+}
+
 @mixin ellipsis($line: 1) {
     @if $line==1 {
         text-overflow: ellipsis;
