@@ -5,11 +5,16 @@
     background-position: center;
     background-size: cover;
 
-    // .content__right
+    @include media(md) {
+        padding: 165px 0 100px;
+    }
 
-    &__right {
-        // display: flex;
-        // justify-content: flex-end;
+    @include media(md) {
+        padding: 110px 0 80px;
+    }
+
+    @include media(sm) {
+        padding: 50px 0;
     }
 
     // .content__sub-text
@@ -39,7 +44,6 @@
         line-height: 28px;
         letter-spacing: 1.6px;
         margin-bottom: 0 0 32px 0;
-        ;
     }
 
 }
@@ -47,11 +51,12 @@
 .content-block {
     background-color: $background-bg-content;
     padding: 44px 32px;
+
+    @include media(sm) {
+        padding: 32px;
+    }
+
 }
-
-.btn {}
-
-.btn-primary {}
 
 .content-first {
     background-image: url(#{$base-img-path}images/content-1.png);
@@ -59,4 +64,20 @@
 
 .content-second {
     background-image: url(#{$base-img-path}images/content-2.png);
+}
+
+.content__right {
+    margin-left: 50%;
+
+    @include media(md) {
+        margin: 0 auto;
+    }
+}
+
+.content__left {
+    margin-right: 50%;
+
+    @include media(md) {
+        margin: 0 auto;
+    }
 }

@@ -2,6 +2,18 @@
     padding: 80px;
     background-color: $black;
 
+    @include media(lg) {
+        padding: 70px;
+    }
+
+    @include media(md) {
+        padding: 60px;
+    }
+
+    @include media(sm) {
+        padding: 50px;
+    }
+
     // .footer__logo
 
     &__logo {
@@ -56,12 +68,4 @@
 
 .icon-white {
     fill: $color-white;
-}
-
-.content__right {
-    margin-left: 50%;
-}
-
-.content__left {
-    margin-right: 50%;
 }

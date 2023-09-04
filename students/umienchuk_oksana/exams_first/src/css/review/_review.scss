@@ -6,10 +6,34 @@
     padding-top: 120px;
     padding-bottom: 180px;
 
+    @include media(lg) {
+        padding: 95px 0 140px;
+    }
+
+    @include media(md) {
+        padding: 70px 0 100px;
+    }
+
+    @include media(sm) {
+        padding: 50px 0 50px;
+    }
+
     // .reviews__title
 
     &__title {
         margin: 0 auto 60px auto;
+
+        @include media(lg) {
+            margin: 0 auto 50px auto;
+        }
+
+        @include media(md) {
+            margin: 0 auto 40px auto;
+        }
+
+        @include media(sm) {
+            margin: 0 auto 30px auto;
+        }
     }
 }
 
@@ -23,6 +47,12 @@
     flex-wrap: nowrap;
     background-color: $dark-grey;
 
+    @include media(md) {
+        flex-direction: column;
+    }
+
+
+
     // .reviews-wrap__img
 
     &__img {
@@ -34,6 +64,14 @@
 
     &__block {
         padding: 48px 60px;
+
+        @include media(sm) {
+            padding: 32px 40px;
+        }
+
+        @include media(sm) {
+            padding: 32px;
+        }
     }
 
     // .reviews-wrap__title

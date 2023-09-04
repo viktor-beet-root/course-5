@@ -2,7 +2,9 @@
     background-color: $default-bg-color;
     padding: 60px 0;
 
-
+    @include media(sm) {
+        padding: 30px 0;
+    }
 
     // .steps__items
 
@@ -13,6 +15,10 @@
         padding: 0;
         align-items: center;
 
+        @include media(sm) {
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 
     // .steps__item
@@ -26,12 +32,22 @@
     // .steps__title
 
     &__title {
-        font-family: $default-font-sub-font;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 40px;
-        text-transform: capitalize;
+        @include fonts-type($default-font-sub-font, $font-size-h2, $font-weight-name, $line-height-h, normal, $text-transform-capit);
+
+        @include media (md) {
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 36px;
+        }
+
+        @include media(sm) {
+            white-space: nowrap;
+            margin-bottom: 0;
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 34px;
+        }
+
     }
 
     // .steps__icon
@@ -39,7 +55,14 @@
     &__icon {}
 }
 
+.steps-oval {
+    width: 100%;
 
+    @include media(lg) {
+        overflow: hidden;
+        display: none;
+    }
+}
 
 .icon-img {
     width: $icon-width;

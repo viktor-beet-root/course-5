@@ -106,7 +106,8 @@
         display: flex;
         gap: 40px;
         align-items: center;
-        margin: 32px 0;
+        margin: 20px 0;
+
     }
 
     // .menu__item
@@ -127,4 +128,11 @@
             text-decoration: underline;
         }
     }
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
