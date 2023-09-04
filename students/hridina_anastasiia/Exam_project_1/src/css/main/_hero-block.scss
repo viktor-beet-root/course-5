@@ -64,7 +64,7 @@
     // .choose__heading
 
     &__heading {
-        @include new-font('Aleo', 36px, 400, normal, 40px);
+        @include new-font($extra-font, 36px, 400, normal, 40px);
         text-transform: capitalize;
         color: $white-color;
     }
@@ -86,7 +86,7 @@
 }
 
 .button {
-    @include new-font('Aleo', 16px, 400, normal, 20px, 1.12px);
+    @include new-font($extra-font, 16px, 400, normal, 20px, 1.12px);
     text-transform: uppercase;
     text-align: center;
     text-decoration: none;
@@ -223,7 +223,7 @@
     // .links__item
 
     &__item {
-        @include new-font('Aleo', 36px, 400, normal, 40px);
+        @include new-font($extra-font, 36px, 400, normal, 40px);
         text-transform: capitalize;
         color: $white-color;
         position: relative;
