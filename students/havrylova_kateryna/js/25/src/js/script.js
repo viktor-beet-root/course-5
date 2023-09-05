@@ -184,3 +184,4 @@ for (let i = 0; i < numb; i++) {
         console.log(symbol);
     }
 }
+
