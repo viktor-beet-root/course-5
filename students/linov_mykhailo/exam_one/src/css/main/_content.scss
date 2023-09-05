@@ -1,0 +1,75 @@
+.spain-one {
+    background-image: url(../../images/spain-1.png);
+    @extend %bg-img-cover-center;
+}
+
+.card {
+    background-color: $grey-card-color;
+    padding: 44px 32px;
+    margin-top: 205px;
+    margin-bottom: 105px;
+    // .card__header-six
+
+    &__header-six {
+        @include font-family(300, 20px);
+        letter-spacing: 2px;
+        margin: 0;
+    }
+
+    // .card__header-five
+
+    &__header-five {
+        @include font-family(400, 20px);
+        margin: 16px 0;
+        text-transform: uppercase;
+    }
+
+    // .card__text
+
+    &__text {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-weight: 300;
+        letter-spacing: 1.6px;
+    }
+}
+
+.spain-two {
+    background-image: url(../../images/spain-2.png);
+    @extend %bg-img-cover-center;
+}
+
+.tourists {
+    background-image: url(../../images/tourists.png);
+    @extend %bg-img-cover-center;
+}
+
+.tourists__header {
+    @include font-family(400, 36px, $default-font-color, 40px, $sub-font);
+    margin-top: 105px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.tourists-card {
+    display: flex;
+
+    &__heading-five {
+        @include font-family(400, 20px);
+        text-transform: uppercase;
+        margin-top: 48px;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-weight: 300;
+        letter-spacing: 1.6px;
+        margin: 0;
+    }
+}
+
+.tourists-card__review-area {
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: $dark-grey-color;
+}

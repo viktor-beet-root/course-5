@@ -1,7 +1,10 @@
 .header-line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
     background-color: $violet-color;
     padding: 32px 300px;
-    margin-top: 95px;
 
     .col-12 {
         @extend %flex-jst-wrap;
@@ -14,8 +17,6 @@
     @include font-family(700, 24px);
     letter-spacing: 2.4px;
 }
-
-.nav {}
 
 .menu {
     @extend %flex-jst-wrap;

@@ -1,8 +1,6 @@
 .why-choose-us {
     background-image: url(../../images/whychooseus.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    @extend %bg-img-cover-center;
 
     .container {
         padding: 124px 0;
@@ -10,6 +8,7 @@
 
     &__header {
         @include font-family(400, 36px, $default-font-color, 40px, $sub-font);
+        padding-top: 30px;
     }
 
 
