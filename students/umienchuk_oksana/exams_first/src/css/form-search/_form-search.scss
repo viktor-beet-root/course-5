@@ -23,7 +23,13 @@
     }
 
     @include media(xs) {
-        min-width: 350px;
+        width: 320px;
+        transition: width .3s ease;
+    }
+
+    @include media(xxs) {
+        width: 300px;
+        transition: width .3s ease;
     }
 
     // .search-form__wrapper
@@ -52,6 +58,10 @@
 
         @include media(xs) {
             padding: 4px 5px 4px 22px;
+        }
+
+        @include media(xxs) {
+            padding: 4px 5px 4px 10px;
         }
     }
 
@@ -99,4 +109,9 @@
     width: 100%;
     padding: 0 10px 0 0;
     @include fonts-type ($default-font-name, $font-size-small, $font-weight-name, $line-height, $letter-spacing-holder);
+
+    @include media(xxs) {
+        padding: 0 5px 0 0;
+    }
+
 }

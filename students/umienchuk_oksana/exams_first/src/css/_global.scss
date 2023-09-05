@@ -11,8 +11,14 @@ body {
     font-weight: $default-font-weight;
 }
 
-btn {
+.btn {
     text-decoration: none;
 }
 
 @include grid();
+
+.mobyle-only {
+    @include media-m(sm) {
+        display: none;
+    }
+}

@@ -9,6 +9,8 @@ $red: #FF6363;
 $blue: #00A2FF;
 $black: #000;
 
+$default-border: 1px solid $color-white;
+
 $font-size-small: 14px;
 $font-size-h5: 20px;
 $font-size-logo-sub: 22px;
@@ -73,6 +75,12 @@ $default-width: 1350px;
 $default-bg-color: $dark-grey;
 $icon-width: 64px;
 $icon-height: 64px;
+
+//menu_open
+$default-bg-color-menu-open: $color-white;
+
+//header__menu
+$default-bg-color-nav: $accent;
 
 //content
 $background-bg-content: rgba(35, 35, 35, 0.9);
