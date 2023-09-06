@@ -44,6 +44,10 @@
     @extend %bg-img-cover-center;
 }
 
+.tourists-card {
+    margin-bottom: 165px;
+}
+
 .tourists__header {
     @include font-family(400, 36px, $default-font-color, 40px, $sub-font);
     margin-top: 105px;
@@ -53,6 +57,7 @@
 
 .tourists-card {
     display: flex;
+
 
     &__heading-five {
         @include font-family(400, 20px);
@@ -72,4 +77,9 @@
     padding-left: 60px;
     padding-right: 60px;
     background-color: $dark-grey-color;
+
+    svg {
+        padding-bottom: 3px;
+        padding-right: 3px;
+    }
 }
