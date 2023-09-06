@@ -1,1 +1,37 @@
+@import url("fonts.css");
 
+body {
+    font: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: #FFF;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.main {
+    max-width: 1390px;
+    margin: 0 auto;
+    background-color: #39C;
+    border: 25px solid #2B81AC;
+}
+
+.weather-forecast__wrapper {
+    margin: 0 auto;
+    margin-bottom: 200px;
+
+}
+
+.weather-forecast {
+    display: inline-block;
+}
+
+.weather-forecast:not(:last-of-type) {
+    padding-right: 50px;
+}
+
+.weather {
+    display: inline-block;
+}

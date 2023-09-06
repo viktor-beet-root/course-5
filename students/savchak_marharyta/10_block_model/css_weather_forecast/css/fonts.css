@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Lucida Sans Unicode";
+    src: url("../fonts/lucida-sans-unicode.woff2") format("woff2");
+    /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
