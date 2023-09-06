@@ -1,1 +1,19 @@
+.second-service {
+    background: url(../../images/second-service-bg.jpg) center;
 
+    &__sub-title {
+        @extend .first-service__sub-title;
+    }
+
+    &__title {
+        @extend .first-service__title;
+    }
+
+    &__text {
+        @extend .first-service__text;
+    }
+}
+
+.second-service-wrapper {
+    @extend .first-service-wrapper;
+}

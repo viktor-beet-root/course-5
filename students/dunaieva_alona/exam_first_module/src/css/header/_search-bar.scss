@@ -1,19 +1,28 @@
 .search-bar {
     background: url(../../images/header-bg.jpg) center, no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     position: relative;
+    font-weight: 400;
 
     &__text {
         letter-spacing: 6.82px;
         padding-bottom: 48px;
 
+        @include media(xxs) {
+            text-align: center;
+        }
+
     }
 
-    &__scroll {
+    &__scroll-link {
         position: absolute;
         top: 80%;
+        color: inherit;
+        text-decoration: none;
     }
+
 }
 
 .search-bar-wrapper {
@@ -26,13 +35,26 @@
     width: 647px;
     position: relative;
 
+    @include media(md) {
+        width: 350px;
+    }
+
+
+    @include media(sm) {
+        width: fit-content;
+    }
+
 
     &__btn {
         display: flex;
         gap: 10px;
         border: none;
-    }
 
+        @include media(md) {
+            gap: unset;
+        }
+
+    }
 
     &__input {
         border: none;
@@ -40,12 +62,25 @@
         height: 60px;
         box-sizing: border-box !important;
         padding: 0 150px 0 36px;
+
+        @include media(md) {
+            padding: 0 70px 0 10px;
+        }
     }
 
     &__input::placeholder {
         font-family: $main-font;
         line-height: 20px;
         letter-spacing: 2.8px;
+
+        @include media(md) {
+            font-size: 0.5em;
+        }
+
+        @include media (sm) {
+            letter-spacing: 1.4px;
+        }
+
 
     }
 
@@ -59,6 +94,7 @@
         width: 16px;
         height: 16px;
         fill: $white-color;
+
     }
 }
 

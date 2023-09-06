@@ -1,28 +1,49 @@
-.tools {
-
-    background: url('../../images/tools/bg.svg') center bottom;
-    background-size: cover;
-    padding-bottom: 74px;
-    padding-top: 99px;
-    margin-bottom: 103px;
+.feedback {
+    background: url(../../images/feedback-bg.jpg) center;
 
     &__title {
-        max-width: 539px;
-        margin: 0 auto;
         text-align: center;
-        line-height: normal;
+        padding: 120px 0 60px 0;
+
+        @include media(md) {
+            padding: 1.2em;
+        }
+
+
     }
 
-    &__subtitle {
-        padding-top: 30px;
-        padding-bottom: 16px;
+    &__user-name {
+        padding-bottom: 10px;
     }
+}
 
-    &__text {
-        padding-bottom: 83px;
+.icon-quote-left {
+    width: 20px;
+    height: 20px;
+    fill: $icon-dodger-blue;
+
+    @include media(sm) {
+        width: 1em;
+        height: 1em;
     }
+}
 
-    &__action {
+.feedback-wrapper {
+    background-color: $dark-grey;
+    @include flex-jsc-al (center, center);
+    margin-bottom: 150px;
+
+    @include media(md) {
+        display: block;
         text-align: center;
+        margin-bottom: 70px;
+    }
+}
+
+.feedback-wrapper-info {
+    padding: 48px 65px 48px 60px;
+
+    @include media(sm) {
+        padding: 0.5em;
     }
 }
