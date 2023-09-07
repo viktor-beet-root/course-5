@@ -48,19 +48,34 @@ automobileList.findDriver();
 
 function timeAndFuelAmount(distance) {
     const time = distance / automobileList.averageSpeed;
-    const timeWithBreaks = time + 1;
+    const timeWithBreaks = (time / 4) * 1;
+    const totalTime = time + timeWithBreaks;
     const fuelAmountNeeded = distance * automobileList.averageFuelConsumption / 100;
 
-    console.log(timeWithBreaks + 'hours,', fuelAmountNeeded + 'litres');
+    console.log(totalTime.toFixed(2) + 'hours,', fuelAmountNeeded.toFixed(2) + 'litres');
 };
 
-timeAndFuelAmount(600);
+timeAndFuelAmount(900);
 
 //  Норма
 
 // Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
+
+const currentTime = {
+    hours: 10,
+    minutes: 15,
+    seconds: 47,
+};
+
 // Для виведення часу на екран.
+
+const now = new Date();
+console.log(now);
+
 // Зміни часу на передану кількість секунд.
+
+
+
 // Зміни часу на передану кількість хвилин.
 // Зміни часу на передану кількість годин.
 // Враховуйте, що в останніх 3 - х функціях, при зміні однієї частини часу, може змінитися і інша.
