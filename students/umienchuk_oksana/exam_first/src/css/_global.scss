@@ -1,0 +1,29 @@
+@include font-face ('josefin-sans-v26-latin-300', 300);
+@include font-face ('josefin-sans-v26-latin-regular', 400);
+@include font-face ('josefin-sans-v26-latin-700', 700);
+@include font-face ('aleo-v12-latin-regular', 400, $font-sub-font);
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-bg-color;
+    font-size: $default-font-size;
+    color: $default-body-color;
+    font-weight: $default-font-weight;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+@include grid();
+
+.mobyle-only {
+    @include media-m(sm) {
+        display: none;
+    }
+}
+
+
+.sprite {
+    position: fixed;
+}

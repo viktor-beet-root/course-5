@@ -1,0 +1,111 @@
+.reviews {
+    background-image: url(#{$base-img-path}images/review-photo-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 120px;
+    padding-bottom: 180px;
+
+    @include media(lg) {
+        padding: 95px 0 140px;
+    }
+
+    @include media(md) {
+        padding: 70px 0 100px;
+    }
+
+    @include media(sm) {
+        padding: 50px 0 50px;
+    }
+
+    // .reviews__title
+
+    &__title {
+        margin: 0 auto 60px auto;
+
+        @include media(lg) {
+            margin: 0 auto 50px auto;
+        }
+
+        @include media(md) {
+            margin: 0 auto 40px auto;
+        }
+
+        @include media(sm) {
+            margin: 0 auto 30px auto;
+        }
+    }
+}
+
+.reviews-title {
+    @include fonts-type($default-font-sub-font, $font-size-h2, $font-weight-name, $line-height-h, normal, $text-transform-capit);
+}
+
+.reviews-wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    background-color: $dark-grey;
+
+    @include media(md) {
+        flex-direction: column;
+    }
+
+
+
+    // .reviews-wrap__img
+
+    &__img {
+        object-fit: contain;
+        object-position: center;
+    }
+
+    // .reviews-wrap__block
+
+    &__block {
+        padding: 48px 60px;
+
+        @include media(sm) {
+            padding: 32px 40px;
+        }
+
+        @include media(sm) {
+            padding: 32px;
+        }
+    }
+
+    // .reviews-wrap__title
+
+    &__title {
+        @include fonts-type($default-font-name, $font-size-h5, $font-weight-name, $line-height-text, normal, $text-transform-upper);
+        margin: 0 0 16px 0;
+    }
+
+    // .reviews-wrap__block-text
+
+    &__block-text {
+        position: relative;
+    }
+
+    // .reviews-wrap__icon
+
+    &__icon {
+        position: absolute;
+        top: -7px;
+    }
+
+    // .reviews-wrap__text
+
+    &__text {
+        display: block;
+        text-indent: 2em;
+        line-height: 28px;
+        letter-spacing: 1.6px;
+        margin: 0;
+    }
+}
+
+.icon-img-review {
+    height: 20px;
+    width: 20px;
+}
