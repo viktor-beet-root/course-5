@@ -1,14 +1,17 @@
-@import url("fonts.css");
+@import url(fonts.css);
 
 body {
-    font: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-family: Lucida Sans Unicode, 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 22px;
     color: #FFF;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
 .container {
     max-width: 1170px;
     margin: 0 auto;
+    padding: 37px;
 }
 
 .main {
@@ -20,18 +23,110 @@ body {
 
 .weather-forecast__wrapper {
     margin: 0 auto;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
 
 }
 
 .weather-forecast {
-    display: inline-block;
+    float: left;
+    border: 5px solid #FFF;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 24px 60px;
 }
 
-.weather-forecast:not(:last-of-type) {
-    padding-right: 50px;
+.lisabon {
+    width: 50%;
+    background-color: #3399CC;
+}
+
+.paris {
+    background-color: #33CCCC;
+}
+
+.belgrade {
+    background-color: #996699;
+}
+
+.venice {
+    background-color: #C24747;
+}
+
+.tel-avive {
+    background-color: #E2674A;
+}
+
+.cair {
+    background-color: #FFCC66;
+}
+
+.new-york {
+    background-color: #99CC99;
+}
+
+.new-dehli {
+    background-color: #669999;
+}
+
+
+.san-francisco {
+    background-color: #CC6699;
+    width: 50%;
+}
+
+.tokyo {
+    background-color: #339966;
+}
+
+.sydney {
+    background-color: #666699;
+    width: 100%;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.weather-forecast__title_wrapper {
+    display: inline-block;
+    padding-bottom: 28px;
 }
 
 .weather {
+    margin: 0 auto;
+}
+
+.weather-forecast__title {
+    font-weight: 400;
+    font-size: 21px;
+    margin: 0;
     display: inline-block;
+    padding-right: 2px;
+}
+
+/* .weather-forecast__title-img {
+   
+} */
+
+.weather-forecast__city {
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+}
+
+.weather-forecast__temp {
+    float: left;
+    padding-right: 10px;
+}
+
+.weather-forecast__img {
+    box-sizing: border-box;
+
+}
+
+img {
+    max-width: 100%;
 }
