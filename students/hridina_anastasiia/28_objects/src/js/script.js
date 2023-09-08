@@ -62,22 +62,64 @@ timeAndFuelAmount(900);
 // Створити об'єкт, що описує час (години, хвилини, секунди), і такі функції для роботи з цим об'єктом:
 
 const currentTime = {
-    hours: 10,
-    minutes: 15,
-    seconds: 47,
+    hours: new Date(),
+    minutes: new Date(),
+    seconds: new Date(),
 };
+
+console.log(currentTime.hours.getHours());
+console.log(currentTime.minutes.getMinutes());
+console.log(currentTime.seconds.getSeconds());
 
 // Для виведення часу на екран.
 
-const now = new Date();
-console.log(now);
+function now(date) {
+    date.newDate(date);
+    return date;
+}
+
+const currentDate = new Date();
+console.log(currentDate);
 
 // Зміни часу на передану кількість секунд.
 
+function addSeconds(date, seconds) {
+    const dateCopy = new Date(date);
+    dateCopy.setSeconds(date.getSeconds() + seconds);
+    return dateCopy;
+}
 
+const date = new Date();
+const newDate = addSeconds(date, 90);
+
+console.log(newDate);
 
 // Зміни часу на передану кількість хвилин.
+
+function addMinutes(date, minutes) {
+    const dateCopy = new Date(date);
+    dateCopy.setMinutes(date.getMinutes() + minutes);
+    return dateCopy;
+}
+
+const dateAddMinutes = new Date();
+const dateWithAddedMinutes = addMinutes(date, 75);
+
+console.log(dateWithAddedMinutes);
+
 // Зміни часу на передану кількість годин.
+
+function addHours(date, hours) {
+    const dateCopy = new Date(date);
+    dateCopy.setHours(date.getHours() + hours);
+    return dateCopy;
+}
+
+const dateAddHours = new Date();
+const dateWithAddedHours = addHours(date, 5);
+
+console.log(dateWithAddedHours);
+
 // Враховуйте, що в останніх 3 - х функціях, при зміні однієї частини часу, може змінитися і інша.
 //Наприклад: якщо до часу «20: 59: 45» додати 30 секунд, то повинно вийти «21:00: 15», а не «20: 59: 75». 
 //Також потрібно передбачити можливість того що користувач може передати 150 секунд, або 75 хвилин.
@@ -85,7 +127,14 @@ console.log(now);
 
 //  Максимум
 
-// Створи об'єкт, що описує звичайний дріб. Створи об'єкт, який має методи роботи з дробом:
+// Створи об'єкт, що описує звичайний дріб.
+
+const fraction = {
+    numerator: 2,
+    denominator: 5,
+};
+
+// Створи об'єкт, який має методи роботи з дробом:
 // Складання 2 - х об'єктів-дробів.
 // Віднімання 2 - х об'єктів-дробів.
 // Множення 2 - х об'єктів-дробів.
