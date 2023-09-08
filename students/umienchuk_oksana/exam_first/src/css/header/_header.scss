@@ -26,21 +26,48 @@
         box-sizing: border-box;
     }
 
+    // .header__main-title
+
     &__main-title {
         @include fonts-type($default-font-name, $font-size-h1, $font-weight-title, $line-height-title, normal, $text-transform-upper);
         margin: 0 0 8px;
+        text-align: center;
+
+        @include media(xxs) {
+            font-size: $font-size-h1-xxs;
+            transition: font-size .3s ease;
+        }
+
     }
+
+
+    // .header__title-sub-text
 
     &__title-sub-text {
         @include fonts-type($default-font-name, $font-size-logo-sub, $font-weight-name, $line-height-text, $letter-spacing-sub-text, none);
         margin: 0 0 48px;
+        text-align: center;
+
+
+        @include media(xxs) {
+            font-size: $font-size-small;
+            transition: font-size .3s ease;
+            margin: 0 0 25px;
+        }
     }
 }
 
 .main-wrap {
     text-align: center;
     position: absolute;
-    bottom: 10%;
+    bottom: 0;
+
+    @include media(xxs) {
+        font-size: $font-size-small-xxs;
+        transition: font-size .3s ease;
+        bottom: 0;
+    }
+
 }
 
 .logo {
@@ -84,7 +111,6 @@
     list-style-type: none;
     padding: 0;
     display: flex;
-    // gap: 20px;
     align-items: center;
 
     @include media(md) {
@@ -136,6 +162,7 @@
 
             .menu-open-input:checked~& {
                 transform: translateX(0);
+
             }
         }
     }

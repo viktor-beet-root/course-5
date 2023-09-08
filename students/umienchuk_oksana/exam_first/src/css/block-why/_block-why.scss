@@ -43,27 +43,24 @@
 
     }
 
-    // .block-why__image
+    // .block-why__image-one
 
     &__image-one {
-        align-self: flex-start;
+        display: block;
         object-fit: contain;
         object-position: center;
-
-        @include media(sm) {
-            align-self: center;
-        }
+        margin-right: auto;
+        margin-bottom: 16px;
     }
 
-    &__image-two {
-        align-self: flex-end;
+    // .block-why__image-two
 
+    &__image-two {
+        display: block;
         object-fit: contain;
         object-position: center;
+        margin-left: auto;
 
-        @include media(sm) {
-            align-self: center;
-        }
     }
 }
 
