@@ -95,6 +95,28 @@ module.exports = function (argument) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/array-for-each.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/array-for-each.js ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+var $forEach = (__webpack_require__(/*! ../internals/array-iteration */ "./node_modules/core-js/internals/array-iteration.js").forEach);
+var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "./node_modules/core-js/internals/array-method-is-strict.js");
+
+var STRICT_METHOD = arrayMethodIsStrict('forEach');
+
+// `Array.prototype.forEach` method implementation
+// https://tc39.es/ecma262/#sec-array.prototype.foreach
+module.exports = !STRICT_METHOD ? function forEach(callbackfn /* , thisArg */) {
+  return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
+// eslint-disable-next-line es/no-array-prototype-foreach -- safe
+} : [].forEach;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/array-from.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/internals/array-from.js ***!
@@ -302,6 +324,26 @@ module.exports = function (METHOD_NAME) {
       return { foo: 1 };
     };
     return array[METHOD_NAME](Boolean).foo !== 1;
+  });
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/array-method-is-strict.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/internals/array-method-is-strict.js ***!
+  \******************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+
+module.exports = function (METHOD_NAME, argument) {
+  var method = [][METHOD_NAME];
+  return !!method && fails(function () {
+    // eslint-disable-next-line no-useless-call -- required for testing
+    method.call(null, argument || function () { return 1; }, 1);
   });
 };
 
@@ -4329,6 +4371,39 @@ $({ target: 'Symbol', stat: true, forced: !NATIVE_SYMBOL_REGISTRY }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/web.dom-collections.for-each.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/core-js/modules/web.dom-collections.for-each.js ***!
+  \**********************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var DOMIterables = __webpack_require__(/*! ../internals/dom-iterables */ "./node_modules/core-js/internals/dom-iterables.js");
+var DOMTokenListPrototype = __webpack_require__(/*! ../internals/dom-token-list-prototype */ "./node_modules/core-js/internals/dom-token-list-prototype.js");
+var forEach = __webpack_require__(/*! ../internals/array-for-each */ "./node_modules/core-js/internals/array-for-each.js");
+var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
+
+var handlePrototype = function (CollectionPrototype) {
+  // some Chrome versions have non-configurable methods on DOMTokenList
+  if (CollectionPrototype && CollectionPrototype.forEach !== forEach) try {
+    createNonEnumerableProperty(CollectionPrototype, 'forEach', forEach);
+  } catch (error) {
+    CollectionPrototype.forEach = forEach;
+  }
+};
+
+for (var COLLECTION_NAME in DOMIterables) {
+  if (DOMIterables[COLLECTION_NAME]) {
+    handlePrototype(global[COLLECTION_NAME] && global[COLLECTION_NAME].prototype);
+  }
+}
+
+handlePrototype(DOMTokenListPrototype);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/web.dom-collections.iterator.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/core-js/modules/web.dom-collections.iterator.js ***!
@@ -4436,18 +4511,21 @@ var __webpack_exports__ = {};
   !*** ./src/js/script.js ***!
   \**************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
-/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
-/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
-/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
-/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
-/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
-/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
-/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_es_symbol_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.symbol.js */ "./node_modules/core-js/modules/es.symbol.js");
+/* harmony import */ var core_js_modules_es_symbol_description_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.symbol.description.js */ "./node_modules/core-js/modules/es.symbol.description.js");
+/* harmony import */ var core_js_modules_es_symbol_iterator_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.symbol.iterator.js */ "./node_modules/core-js/modules/es.symbol.iterator.js");
+/* harmony import */ var core_js_modules_es_array_iterator_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.array.iterator.js */ "./node_modules/core-js/modules/es.array.iterator.js");
+/* harmony import */ var core_js_modules_es_string_iterator_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.string.iterator.js */ "./node_modules/core-js/modules/es.string.iterator.js");
+/* harmony import */ var core_js_modules_web_dom_collections_iterator_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/web.dom-collections.iterator.js */ "./node_modules/core-js/modules/web.dom-collections.iterator.js");
+/* harmony import */ var core_js_modules_es_array_from_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.from.js */ "./node_modules/core-js/modules/es.array.from.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+
 
 
 
@@ -4492,14 +4570,18 @@ var menuItems = _toConsumableArray(nav.querySelectorAll('.menu > li'));
 // console.log(Array.prototype.slice.call(menuItems));
 // console.log(menuItems);
 
-console.log(nav.parentElement);
-console.log(nav.closest('.page'));
-console.log(nav.firstChild);
-console.log(nav.firstElementChild);
-console.log(nav.lastChild);
-console.log(nav.lastElementChild);
-console.log(menu.previousElementSibling);
-console.log(menu.nextElementSibling);
+// console.log(nav.parentElement);
+// console.log(nav.closest('.page'));
+
+// console.log(nav.firstChild);
+// console.log(nav.firstElementChild);
+
+// console.log(nav.lastChild);
+// console.log(nav.lastElementChild);
+
+// console.log(menu.previousElementSibling);
+// console.log(menu.nextElementSibling);
+
 function foo(element) {
   console.log(element);
   var nextElement = element.nextElementSibling;
@@ -4515,23 +4597,29 @@ function foo(element) {
 //menu.innerHTML = '';
 //menu.outerHTML = '<h1>sdfsdfsd</h1>';
 
-console.log(menu.innerHTML);
-console.log(menu.outerHTML);
+//console.log(menu.innerHTML);
+//console.log(menu.outerHTML);
 
 // console.log(menuItems[0].innerText);
 // console.log(menuItems[0].outerText);
 
-console.log(menuItems[0].querySelector('a > span').textContent = 'sdafdsf');
+//console.log(menuItems[0].querySelector('a > span').textContent = 'sdafdsf');
+
 nav.setAttribute('title', 'test');
-console.log(nav.getAttribute('title'));
+
+//console.log(nav.getAttribute('title'));
+
 nav.removeAttribute('title');
-console.log(nav.hasAttribute('title'));
+
+//console.log(nav.hasAttribute('title'));
+
 nav.dataset.navTest = 6;
-console.log(nav.dataset.navTest);
-console.dir(menu.classList.add('dddd', 'sdfsdf', 'sdfsdfs'));
-console.dir(menu.classList.remove('dddd'));
-console.dir(menu.classList.contains('menu'));
-console.dir(menu.classList.toggle('menu', false));
+//console.log(nav.dataset.navTest);
+
+// console.dir(menu.classList.add('dddd', 'sdfsdf', 'sdfsdfs'));
+// console.dir(menu.classList.remove('dddd'));
+// console.dir(menu.classList.contains('menu'));
+// console.dir(menu.classList.toggle('menu', false));
 //console.dir(menu.classList.toggle('menu'));
 
 //console.log(document.body.style.backgroundColor = '#999');
@@ -4545,7 +4633,9 @@ var link = document.createElement('a');
 link.setAttribute('href', '#');
 link.classList.add('link');
 link.textContent = 'link';
-console.log(link);
+
+//console.log(link);
+
 nav.append(link);
 nav.prepend(link);
 nav.before(link);
@@ -4561,6 +4651,83 @@ link.remove();
 // parent.replaceChild(newElem, node)
 
 //document.body.innerHTML = `<li>${'sdfdf'}</li>`;
+
+//tag {String}
+//atributtes {Object}
+//class 'dsfasdf asdf asdf asdf asdf asdf asdf dsf' {String}
+//content 'sdfdsdf' {Sting} | {Node} | [{Node}, {Node}]
+function createElement(tagName) {
+  var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  var content = arguments.length > 2 ? arguments[2] : undefined;
+  if (!tagName) return;
+  var element = document.createElement(tagName);
+  var className = '';
+  if (props && props.className) {
+    className = props.className;
+    delete props.className;
+  }
+  if (props) addAttr(element, props);
+  if (className) {
+    addClass(element, className);
+  }
+  if (content) addContent(element, content);
+  return element;
+}
+function addContent(element, content) {
+  if (!element || !content) return;
+  if (typeof content === 'string') {
+    element.textContent = content;
+    return;
+  }
+  if (isNodeElem(content)) {
+    element.append(content);
+    return;
+  }
+  if (Array.isArray(content)) {
+    content.forEach(function (elem) {
+      if (isNodeElem(elem)) {
+        //element.append(elem);
+        addContent(element, elem);
+      }
+    });
+  }
+}
+function isNodeElem(elem) {
+  return _typeof(elem) === 'object' && elem.nodeType === 1;
+}
+function addClass(element, classes) {
+  var _element$classList;
+  if (!element || !classes) return;
+  var classList = classes.split(' ');
+  (_element$classList = element.classList).add.apply(_element$classList, _toConsumableArray(classList));
+  // classList.forEach(className => {
+  //     element.classList.add(className);
+  // });
+}
+
+function addAttr(element, option) {
+  if (!element || !option) return;
+  for (var key in option) {
+    element.setAttribute(key, option[key]);
+  }
+}
+document.body.prepend(createElement('header', {
+  className: 'header'
+}, [createElement('a', {
+  href: '#'
+}, 'logo'), createElement('button', {
+  type: 'button'
+}, 'Sing Up')]));
+
+// document.body.prepend(createElement('h2', {
+//     title: 'Hello',
+//     className: 'main-title test ddd',
+// }, [createElement('span', null, 'Hello'), createElement('span', null, 'Hello')]));
+
+// document.body.prepend(createElement('div', {
+//     title: 'Hello',
+//     className: 'main',
+// }, 'Hello World'));
 }();
 /******/ })()
 ;
