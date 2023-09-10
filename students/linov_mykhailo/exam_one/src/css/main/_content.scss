@@ -8,7 +8,16 @@
     padding: 44px 32px;
     margin-top: 205px;
     margin-bottom: 105px;
-    // .card__header-six
+
+    @include media (md) {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    @include media (sm) {
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
 
     &__header-six {
         @include font-family(300, 20px);
@@ -16,15 +25,11 @@
         margin: 0;
     }
 
-    // .card__header-five
-
     &__header-five {
         @include font-family(400, 20px);
         margin: 16px 0;
         text-transform: uppercase;
     }
-
-    // .card__text
 
     &__text {
         margin-top: 16px;
@@ -37,6 +42,15 @@
 .spain-two {
     background-image: url(../../images/spain-2.png);
     @extend %bg-img-cover-center;
+
+    .col-6 {
+        margin-left: 50%;
+
+        @include media (md) {
+            margin: 0;
+        }
+
+    }
 }
 
 .tourists {
@@ -46,6 +60,11 @@
 
 .tourists-card {
     margin-bottom: 165px;
+
+    @include media(md) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .tourists__header {
@@ -53,6 +72,16 @@
     margin-top: 105px;
     margin-bottom: 60px;
     text-align: center;
+
+    @include media(md) {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+    @include media(sm) {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
 }
 
 .tourists-card {
@@ -77,6 +106,10 @@
     padding-left: 60px;
     padding-right: 60px;
     background-color: $dark-grey-color;
+
+    @include media (md) {
+        padding-bottom: 30px;
+    }
 
     svg {
         padding-bottom: 3px;

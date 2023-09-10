@@ -4,17 +4,23 @@
     right: 0;
     left: 0;
     background-color: $violet-color;
-    padding: 32px 300px;
+    padding: 30px 300px;
 
     @media (max-width: 1355px) {
-        padding: 32px 200px;
+        padding: 30px 200px;
     }
 
     @include media(lg) {
         padding: 20px 100px;
     }
 
-    @include media (md) {}
+    @include media(md) {
+        padding: 10px 50px;
+    }
+
+    @include media (xxs) {
+        padding: 10px 25px;
+    }
 
     .col-12 {
         @extend %flex-jst-wrap;
@@ -35,15 +41,19 @@
 .menu {
     @extend %flex-jst-wrap;
     @extend %ul-not-marker;
-    gap: 40px;
 
     &__item {
         @include font-family(400, 14px, $default-font-color, 20px, $sub-font);
         letter-spacing: 1.4px;
         text-transform: uppercase;
 
+        &:nth-of-type(-n+3) {
+            padding-right: 40px;
+        }
+
         @include media(md) {
-            border-bottom: $default-border;
+            border-top: $default-border;
+            padding: 20px 0;
         }
     }
 
@@ -67,12 +77,17 @@
 }
 
 .menu-wrapper {
+    display: flex;
+    align-items: center;
+
     &__item {
         @include media(md) {
             padding: 0;
             position: fixed;
-            width: 500px;
-            top: 90px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
             bottom: 0;
             display: block;
             text-align: center;
@@ -90,6 +105,33 @@
 
 .menu-open-input {
     @include visuality-hidden;
+}
+
+.menu-open-label-close {
+    @include media(md) {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border: $default-border;
+        margin-left: calc(50% - 26px);
+
+        .menu-open-label__line {
+            background-color: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
 }
 
 .menu-open-label {
