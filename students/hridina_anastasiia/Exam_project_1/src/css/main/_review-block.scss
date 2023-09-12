@@ -28,7 +28,7 @@
 
     &__heading {
         margin: 0;
-        @include new-font('Aleo', 36px, 400, normal, 40px);
+        @include new-font($extra-font, 36px, 400, normal, 40px);
         color: $white-color;
         text-align: center;
         padding-top: 110px;
@@ -90,7 +90,7 @@
         // .review__text_paragraph
 
         &_paragraph {
-            @include new-font(16px, 300, normal, 1.6px);
+            @include new-font($default-font-name, 16px, 300, normal, 28px, 1.6px);
             color: $white-color;
             margin-top: -20px;
 

@@ -44,7 +44,7 @@
         // .spain__header_upprcase
 
         &_upprcase {
-            @include new-font;
+            @include new-font($default-font-name, 20px, 400, normal, 28px);
             text-transform: uppercase;
             color: $white-color;
         }
@@ -53,7 +53,7 @@
     // .spain__text
 
     &__text {
-        @include new-font($default-font-name, 300, normal, 1.6px);
+        @include new-font($default-font-name, 16px, 300, normal, 28px, 1.6px);
         color: $white-color;
     }
 }
