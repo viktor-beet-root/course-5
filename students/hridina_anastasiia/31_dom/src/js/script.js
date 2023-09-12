@@ -96,6 +96,7 @@ for (i = 0; i < playList.length; i++) {
     songsItem.append(songName);
     songsItem.append(document.createTextNode(playList[i].song));
     console.log(songName);
+
 }
 
 
