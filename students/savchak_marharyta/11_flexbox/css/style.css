@@ -136,10 +136,36 @@ img {
     padding-top: 30px;
 }
 
-.heroblock__button {
+.big-orange__button {
     color: #FFF;
     background-color: #F90;
     border: 1px solid #F90;
     padding: 12px 36.5px;
     border-radius: 5px;
+}
+
+.col-3 {
+    width: calc(100% / 12 * 3);
+}
+
+.row {
+    display: flex;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quality__image-wrapper {
+    z-index: 0;
+}
+
+.first-section__title {
+    z-index: 1;
+}
+
+.row {
+    z-index: 1;
 }
