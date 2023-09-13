@@ -3,6 +3,7 @@
 
     &__container {
         @include flex-jsc-al(space-between, center);
+        margin-bottom: 40px;
 
         @media screen and (max-width: 768px) {
             flex-direction: column;

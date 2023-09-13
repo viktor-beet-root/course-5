@@ -4,6 +4,7 @@ body {
     font-family: $main-font;
     font-weight: 500;
     line-height: 26px;
+    letter-spacing: 1.1px;
 }
 
 img {
@@ -14,7 +15,6 @@ img {
     max-width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
-    margin-bottom: 100px;
 }
 
 .row {
