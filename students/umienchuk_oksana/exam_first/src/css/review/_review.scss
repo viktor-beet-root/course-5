@@ -21,7 +21,8 @@
     // .reviews__title
 
     &__title {
-        margin: 0 auto 60px auto;
+        margin-top: 0;
+        margin-bottom: 60px;
 
         @include media(lg) {
             margin: 0 auto 50px auto;
@@ -39,6 +40,8 @@
 
 .reviews-title {
     @include fonts-type($default-font-sub-font, $font-size-h2, $font-weight-name, $line-height-h, normal, $text-transform-capit);
+    white-space: normal;
+    text-align: center;
 }
 
 .reviews-wrap {

@@ -1,6 +1,6 @@
 .steps {
     background-color: $default-bg-color;
-    padding: 60px 0;
+    padding: 123px 0 60px 0;
 
     @include media(sm) {
         padding: 30px 0;
@@ -15,11 +15,14 @@
         padding: 0;
         align-items: center;
         margin-bottom: 0;
+        position: relative;
+
 
         @include media(sm) {
             flex-direction: column;
             gap: 30px;
         }
+
     }
 
     // .steps__item
@@ -28,15 +31,66 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
+
+        &-arc {
+            &::before {
+                content: "";
+                width: 580px;
+                height: 580px;
+                border-top: 2px dashed $color-white;
+                border-radius: 50%;
+                clip-path: polygon(0 0, 100% 0, 100% 11%, 0 12%);
+                position: absolute;
+                top: -60%;
+                right: 12%;
+                z-index: 5;
+
+                @include media(lg) {
+                    width: 500px;
+                    height: 500px;
+                    transition: width .3s ease-in-out;
+                }
+
+                @include media(md) {
+                    display: none;
+                }
+            }
+
+            &::after {
+                content: "";
+                width: 580px;
+                height: 580px;
+                border-top: 2px dashed $color-white;
+                border-radius: 50%;
+                clip-path: polygon(0 0, 100% 0, 100% 12%, 0 12%);
+                position: absolute;
+                top: -60%;
+                left: 12%;
+                z-index: 5;
+
+
+                @include media(lg) {
+                    width: 500px;
+                    height: 500px;
+                    transition: width .3s ease-in-out;
+                }
+
+                @include media(md) {
+                    display: none;
+                }
+            }
+
+
+        }
     }
 
     // .steps__title
 
     &__title {
-        margin-bottom: 0;
+        margin: 20px 0 0 0;
         @include fonts-type($default-font-sub-font, $font-size-h2, $font-weight-name, $line-height-h, normal, $text-transform-capit);
 
-        @include media (md) {
+        @include media(md) {
             font-size: 34px;
             font-weight: 400;
             line-height: 36px;

@@ -69,7 +69,7 @@
             </li>
             <li class="menu__item">
                 <label class="menu-open-label mobyle-only menu-open-label-center" for="menu_open">
-                    <span class="menu-open-label__line"></span>
+                    <span class="menu-open-label__line menu-open-label__line-menu-small"></span>
                 </label>
             </li>
         </ul>
@@ -81,7 +81,7 @@
     <main class="main">
         <section class="block-why">
     <div class="container">
-        <div class="row block-why-flex">
+        <div class="row">
             <div class="col-6 col-sm-12">
                 <h2 class="block-why__title">Why Choose Us</h2>
                 <p class="block-why__text">Tion and dislike men who are so beguiled and demoralized by
@@ -95,11 +95,9 @@
                     the moment, so blinded by desire, that. </p>
                 <a class="btn btn-primary" href="#">Explore Places</a>
             </div>
-            <div class="col-5 col-sm-12">
-
+            <div class="col-6 col-sm-12 block-why__images">
                 <img class="block-why__image-one" src="./images/house-near-river.svg" alt="House Near River">
                 <img class="block-why__image-two" src="./images/mountains.svg" alt="Mountains">
-
             </div>
         </div>
     </div>
@@ -107,35 +105,26 @@
 
         <section class="steps">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <svg class="steps-oval" width="874" height="92" viewBox="0 0 874 92" fill="none">
-                    <path opacity="0.502" d="M1 91C1 91 217.014 -110.278 442.118 91C442.118 91 639.939 -111.5 873 91"
-                        stroke="white" stroke-linecap="round" stroke-dasharray="2 5" />
+        <ul class="steps__items">
+            <li class="steps__item">
+                <h2 class="steps__title ">Search Places</h2>
+                <svg class="steps__icon icon-img icon-accent">
+                    <use xlink:href="#search" />
                 </svg>
-                <ul class="steps__items">
-                    <li class="steps__item">
-                        <h2 class="steps__title">Search Places</h2>
-                        <svg class="steps__icon icon-img icon-accent">
-                            <use xlink:href="#search" />
-                        </svg>
-                    </li>
-                    <li class="steps__item">
-                        <h2 class="steps__title">Select Places</h2>
-                        <svg class="steps__icon icon-img icon-red">
-                            <use xlink:href="#check-circle" />
-                        </svg>
-                    </li>
-                    <li class="steps__item">
-                        <h2 class="steps__title">Book & Enjoy</h2>
-                        <svg class="steps__icon icon-img icon-blue">
-                            <use xlink:href="#thumbs-up" />
-                        </svg>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
+            </li>
+            <li class="steps__item steps__item-arc">
+                <h2 class="steps__title">Select Places</h2>
+                <svg class="steps__icon icon-img icon-red">
+                    <use xlink:href="#check-circle" />
+                </svg>
+            </li>
+            <li class="steps__item">
+                <h2 class="steps__title">Book & Enjoy</h2>
+                <svg class="steps__icon icon-img icon-blue">
+                    <use xlink:href="#thumbs-up" />
+                </svg>
+            </li>
+        </ul>
     </div>
 </section>
 
@@ -172,27 +161,25 @@
 
         <section class="reviews">
     <div class="container">
-        <div class="row">
-            <h2 class="reviews-title reviews__title">What Our Tourists Say</h2>
-            <div class="reviews-wrap">
-                <img class="reviews-wrap__img" src="./images/review-photo.png" alt="Review Photo">
-                <div class="reviews-wrap__block">
-                    <h5 class="reviews-wrap__title">Sam Sumon</h5>
-                    <div class="reviews-wrap__block-text">
-                        <svg class="reviews-wrap__icon icon-img-review icon-accent">
-                            <use xlink:href="#quote-left" />
-                        </svg>
-                        <p class="reviews-wrap__text"> But I must explain to you how all this mistaken idea
-                            of
-                            account to
-                            denouncinpleasure and
-                            praising pain But I must explain to you how all this mistaken idea of account to nai
-                            denouncing pleasure and praising pain was account born and I account will give you a
-                            complete account of the system was account born and I account will give you a nai
-                            the
-                            complete account of the system
-                        </p>
-                    </div>
+        <h2 class="reviews-title reviews__title">What Our Tourists Say</h2>
+        <div class="reviews-wrap">
+            <img class="reviews-wrap__img" src="./images/review-photo.png" alt="Review Photo">
+            <div class="reviews-wrap__block">
+                <h5 class="reviews-wrap__title">Sam Sumon</h5>
+                <div class="reviews-wrap__block-text">
+                    <svg class="reviews-wrap__icon icon-img-review icon-accent">
+                        <use xlink:href="#quote-left" />
+                    </svg>
+                    <p class="reviews-wrap__text"> But I must explain to you how all this mistaken idea
+                        of
+                        account to
+                        denouncinpleasure and
+                        praising pain But I must explain to you how all this mistaken idea of account to nai
+                        denouncing pleasure and praising pain was account born and I account will give you a
+                        complete account of the system was account born and I account will give you a nai
+                        the
+                        complete account of the system
+                    </p>
                 </div>
             </div>
         </div>
