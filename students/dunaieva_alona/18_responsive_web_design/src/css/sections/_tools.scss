@@ -1,10 +1,17 @@
 .tools {
-
     background: url('../../images/tools/bg.svg') center bottom;
     background-size: cover;
     padding-bottom: 74px;
-    padding-top: 99px;
     margin-bottom: 103px;
+
+    @media screen and (max-width: 992px) {
+        margin-bottom: unset;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 
     &__title {
         max-width: 539px;
@@ -20,6 +27,10 @@
 
     &__text {
         padding-bottom: 83px;
+
+        @media screen and (max-width: 992px) {
+            padding-bottom: unset;
+        }
     }
 
     &__action {

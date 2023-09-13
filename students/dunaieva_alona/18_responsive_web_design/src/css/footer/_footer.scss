@@ -1,4 +1,11 @@
 .footer {
+    margin-top: 100px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: unset;
+        text-align: center;
+    }
+
     .row {
         align-items: start;
     }
@@ -21,5 +28,14 @@
 
     &__link:hover {
         color: $orang-color;
+    }
+}
+
+.form {
+    &__link {
+
+        @media screen and (max-width: 768px) {
+            margin: 0 auto;
+        }
     }
 }

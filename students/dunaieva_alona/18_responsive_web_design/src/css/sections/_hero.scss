@@ -1,9 +1,15 @@
 .hero {
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 992px) {
+        margin-bottom: unset;
+    }
 
     &__text {
         padding-bottom: 20px;
         font-size: 18px;
         font-weight: normal;
         line-height: 28px;
+        letter-spacing: 1.1px;
     }
 }

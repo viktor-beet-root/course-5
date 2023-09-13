@@ -1,4 +1,9 @@
 .managers {
+    margin-bottom: 70px;
+
+    @media screen and (max-width: 768px) {
+        margin-bottom: unset;
+    }
 
     &__overtext {
         @extend .design__overtext;
