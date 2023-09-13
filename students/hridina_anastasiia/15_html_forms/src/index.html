@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form class="form" action="#" method="post" autocomplete="off">
+            <div class="row">
+                <div class="col-5">
+                    <label for="fullname">Повне імʼя</label>
+                </div>
+                <div class="col-7">
+                    <input placeholder="Повне імʼя" type="text" required name="fullname" id="fullname">
+                </div>
+                <div class="col-5">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-7">
+                    <input placeholder="Email" type="email" required name="email" id="email">
+                </div>
+                <div class="col-5">
+                    <label for="password">Пароль</label>
+                </div>
+                <div class="col-7">
+                    <input placeholder="Пароль" type="password" name="password" id="password" required>
+                </div>
+                <div class="col-5">
+                    <label for="confirm_password">Пароль ще раз</label>
+                </div>
+                <div class="col-7">
+                    <input placeholder="Пароль ще раз" type="password" name="confirm_password" id="confirm_password"
+                        required>
+                </div>
+                <div class="col-5">
+                    <label for="sex">Стать</label>
+                </div>
+                <div class="col-7">
+                    <div class="radio__btn">
+                        <input type="radio" name="sex" id="male" value="male">
+                        <label for="male">чоловіча</label>
+                        <input type="radio" name="sex" id="female" value="female">
+                        <label for="female">жіноча</label>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <label for="age">Вік</label>
+                </div>
+                <div class="col-7">
+                    <input type="number" required name="age" id="age">
+                </div>
+                <div class="col-5">
+                    <label for="course">Курс</label>
+                </div>
+                <div class="col-7">
+                    <select name="course" id="course">
+                        <option>-=Виберіть курс=-</option>
+                        <option value="front-end">Front-End</option>
+                        <option value="back-end">Back-End</option>
+                        <option value="project-management">Project Management</option>
+                        <option value="qa-manual">QA Manual</option>
+                    </select>
+                </div>
+                <div class="col-5">
+                    <label for="address">Повна адреса</label>
+                </div>
+                <div class="col-7">
+                    <textarea placeholder="Країна, регіон, місто/селище, вулиця" name="address" id="address" cols="25"
+                        rows="4"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="checkbox">
+                        <input type="checkbox" name="personal-info" id="personal-info">
+                        <label for="personal-info">Я погоджуюсь з обробкою персональних даних</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <button type="reset">Очистити форму</button>
+                </div>
+                <div class="col-6">
+                    <button type="submit">Зареєструватися</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #070707;
+}
+
+.header {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.nav {
+    border-style: solid;
+    border-width: 0 0 1px;
+    padding-bottom: 30px;
+}
+
+.menu {
+    text-align: center;
+}
+
+.menu__item {
+    display: inline-block;
+    padding-top: 25px;
+    color: #828282;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.item_next {
+    padding-left: 40px;
+}
+
+.hero_block {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 45px;
+}
+
+.hero_image {
+    margin-top: 40px;
+}
+
+.about_me_container {
+    background-color: #F6F6F6;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.about_me_header {
+    margin-top: 105px;
+    padding-top: 105px;
+}
+
+.about_item1 {
+    margin-top: 30px;
+    line-height: 1.4em;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about_item2 {
+    padding-top: 47px;
+    line-height: 1.4em;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.skills_block {
+    max-width: 940px;
+    margin: 0 auto;
+    padding-top: 110px;
+    padding-bottom: 90px;
+
+}
+
+.skills_description {
+    padding-top: 30px;
+}
+
+[class*=skills_item] {
+    display: inline-block;
+    padding-top: 75px;
+}
+
+[class*=skills_item]>img {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+}
+
+.adobe_images {
+    width: 89px;
+    height: 88px;
+}
+
+.figma_image {
+    width: 58px;
+    height: 88;
+}
+
+.skills_signature>span {
+    display: none;
+}
+
+.skills_item2 {
+    margin-left: 65px;
+}
+
+.skills_signature {
+    padding-top: 25px;
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+}
+
+.stars {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    padding-top: 60px;
+    margin-right: 9px;
+}
+
+.last_star {
+    display: inline-block;
+    padding-top: 60px;
+    width: 26px;
+    height: 26px;
+}
+
+.portfolio {
+    margin: 0 auto;
+    background-color: #F6F6F6;
+    padding: 120px 0 110px;
+}
+
+.fashion-store {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.portfolio_image {
+    width: 940px;
+}
+
+li>a {
+    text-decoration: none;
+    color: #828282;
+}
+
+.portfolio_links {
+    color: #070707;
+    padding-top: 15px;
+    line-height: 1.3em;
+}
+
+.reebok-store {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.braun {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.portfolio_links {
+    display: inline-block;
+    color: #070707;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer-box {
+    margin: 0 auto;
+    padding-top: 110px;
+    padding-bottom: 100px;
+}
+
+.contacts-description {
+    padding-top: 25px;
+    color: #070707;
+    font-size: 18px;
+    line-height: 1.3em;
+}
+
+
+.button-box {
+    padding-top: 70px;
+}
+
+.button {
+    display: block;
+    margin: 0 auto;
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    width: 180px;
+    height: 42px;
+    border-radius: 24px;
+    background-color: #070707;
+}
+
+.links_box {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.follow-links {
+    display: inline-block;
+    padding-top: 35px;
+    padding-left: 55px;
+}
+
+[class=follow-links]:first-child {
+    padding-left: 0px;
+}
+
+.footer_description {
+    padding-top: 50px;
+    color: #828282;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.3em;
+}

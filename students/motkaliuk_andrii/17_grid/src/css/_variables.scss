@@ -1,0 +1,17 @@
+$white-color: #FFFFFF;
+$light-gray-color: #E0E0E0;
+$gray-color: rgba(224, 224, 224, 0.50);
+
+$default-body-color: $white-color;
+
+// fonts
+$default-font-name: 'Roboto';
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-name, $fallback;
+
+$container-padding: 15px;
+$container-max-width: 1170px;
+
+$font-path: './fonts/';
+$default-width: 1170px;
+$gap: 15px;

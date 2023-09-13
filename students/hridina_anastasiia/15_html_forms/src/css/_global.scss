@@ -1,0 +1,23 @@
+@include font-face('roboto-v30-latin-regular');
+
+@include font-face('roboto-v30-latin-700', $_font-style: italic, $_font-weight: 700);
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+}
+
+@include grid();
+
+.container {
+    padding: $container-padding;
+    max-width: $container-max-width;
+    margin: 0 auto;
+}
+
+.col-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

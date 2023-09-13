@@ -1,0 +1,8 @@
+@import "./logo";
+@import "./menu";
+@import "./buttons";
+
+.header {
+    background-color: $color-green;
+    display: flex;
+}

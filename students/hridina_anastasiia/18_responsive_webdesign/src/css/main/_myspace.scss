@@ -1,0 +1,36 @@
+.myspace__list {
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+
+    padding-top: 40px;
+
+
+    .icon {
+        display: flex;
+        align-items: center;
+        padding-bottom: 30px;
+        text-align: left;
+
+        img {
+            padding-right: 30px;
+            display: block;
+        }
+
+        p {
+            color: $color-lightgray;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+    }
+}
+
+.myspace {
+    padding-left: 110px;
+
+    @media screen and (max-width: 992px) {
+        padding-left: 15px;
+    }
+}

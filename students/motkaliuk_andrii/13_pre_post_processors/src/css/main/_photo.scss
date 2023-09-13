@@ -1,0 +1,50 @@
+.hero-photo {
+    display: flex;
+    max-height: 430px;
+    height: 100%;
+    max-width: 430px;
+    width: 100%;
+    border: 1px solid $color-gold;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    // margin-top: 65px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        width: 50%;
+        background-color: $default-body-color;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        left: -1px;
+        height: 50%;
+        background-color: $default-body-color;
+    }
+}
+
+.hero-img {
+    border: 1px solid $color-gold;
+    z-index: 3;
+}
+
+.pseudo-vertical-line {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 560px;
+        left: 100%;
+        bottom: -60px;
+        background-color: $color-gold;
+    }
+}

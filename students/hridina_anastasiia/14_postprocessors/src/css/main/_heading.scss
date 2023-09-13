@@ -1,0 +1,79 @@
+.heading__left {
+
+    padding-top: 50px;
+    padding-bottom: 30px;
+    color: $color-darkgray;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+}
+
+.text__left {
+    color: $color-lightgray;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    padding-bottom: 20px;
+}
+
+.heading__center {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+
+}
+
+.validation,
+.validation__text {
+    margin: 0;
+    color: $color-lightgray;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+
+}
+
+.professionals {
+    color: $color-darkgray;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+
+.managers__toptext,
+.managers__text {
+    margin: 0;
+    color: $color-lightgray;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.managers__heading {
+    color: $color-darkgray;
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 20px;
+}
+
+
+.marketers__toptext,
+.marketers__text {
+    margin: 0;
+    color: $color-lightgray;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.marketers__heading {
+    color: $color-darkgray;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,29 @@
+// colors
+$gray-light: lightgrey;
+
+//border
+$border-color: $gray-light;
+$default-border: 1px solid $gray-light;
+
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: 18px;
+$default-font-name: 'Roboto';
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+// container
+$container-padding: 15px;
+$container-max-with: 1200px;
+$gap: 15px;
+$default-coutn-col: 6;
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+    "xxxs": 320px
+);

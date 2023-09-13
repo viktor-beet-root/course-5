@@ -1,0 +1,46 @@
+.tools {
+    background: url('../../images/tools/bg.svg') center bottom;
+    background-size: cover;
+    padding-bottom: 74px;
+    padding-top: 99px;
+    margin-bottom: 103px;
+
+    .row {
+        gap: 50px
+    }
+
+    &__title {
+        line-height: normal;
+        text-align: center;
+        max-width: 539px;
+        margin: 0 auto;
+        padding-bottom: 31px;
+
+    }
+
+    &__image {
+        width: auto;
+    }
+
+    &__subtitle {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+
+    &__text {
+        padding-bottom: 83px;
+    }
+
+    &__action {
+        text-align: center;
+
+        &__link {
+            @include link;
+        }
+
+        &__link:hover {
+            @extend %opasity;
+        }
+    }
+
+}

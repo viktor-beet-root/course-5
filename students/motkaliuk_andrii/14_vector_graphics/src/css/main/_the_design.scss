@@ -1,0 +1,40 @@
+.design {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    &_item1 {
+        padding-top: 120px;
+    }
+
+    &_item2 {
+        text-align: end;
+        padding-top: 30px;
+
+        img {
+            float: right;
+        }
+    }
+
+    &_header {
+        font-size: 44px;
+        line-height: 54px;
+    }
+}
+
+.design_item_content {
+    padding: 30px 50px 0 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.button_container {
+    padding-top: 50px;
+}
+
+.get_started_button {
+    background: $orange-color;
+    color: $white-color;
+    font-family: 'Poppins', $fallback;
+    font-weight: 700;
+}

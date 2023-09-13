@@ -1,0 +1,27 @@
+.myspace__list {
+
+    padding-top: 40px;
+
+
+    p {
+        padding-bottom: 30px;
+        display: flex;
+        align-items: center;
+        line-height: 26px;
+
+        img {
+            padding-right: 30px;
+        }
+
+        span {
+            color: $color-lightgray;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+    }
+}
+
+.myspace {
+    padding-left: 110px;
+}

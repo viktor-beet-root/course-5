@@ -1,0 +1,20 @@
+.hero {
+
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: $color-text;
+        padding-right: 44px;
+        padding-bottom: 20px;
+    }
+
+    &__link {
+        @include link;
+    }
+
+    &__link:hover {
+        @extend %opasity;
+    }
+
+}

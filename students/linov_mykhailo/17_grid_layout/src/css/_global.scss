@@ -1,0 +1,41 @@
+@include font-face('roboto-v30-latin-regular');
+@include font-face('roboto-v30-latin-500', 500);
+@include font-face('delius-unicase-v26-latin-regular', 400, normal, 'Delius Unicase');
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+    padding: 15px 135px;
+}
+
+@include grid();
+
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    padding-bottom: 120px;
+}
+
+.image-gallery {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.title {
+    @include font-family (400, 36px, $black-color, normal, 1.8px, $title-main, normal);
+    text-align: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.title:first-of-type {
+    padding-top: 36px;
+    padding-bottom: 50px;
+}

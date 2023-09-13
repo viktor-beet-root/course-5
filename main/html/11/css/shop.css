@@ -1,0 +1,275 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v30-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v30-latin-500.woff2') format('woff2');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding-top: 67px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.625;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+
+[class*="col-"] {
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.product {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.product__image-wrapper {}
+
+.product__image {}
+
+.product__title {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 18px;
+    height: 58.5px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    position: relative;
+}
+
+
+
+.product__rate {
+    margin-bottom: 15px;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+}
+
+.rate__image {
+    margin-right: 15px;
+}
+
+.rate__link {
+    position: relative;
+}
+
+.tool-tip {
+    position: absolute;
+    top: -140%;
+    left: 0;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    padding: 5px 10px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    pointer-events: none;
+    box-shadow: 0 0 5px lightgrey;
+}
+
+.rate__link:hover .tool-tip {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.product__price {}
+
+.price-box {}
+
+.product__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.price-box__old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+}
+
+.price-box__final-price {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 23px;
+}
+
+.price-box__old-price+.price-box__final-price {
+    color: red;
+    margin-top: 0;
+}
+
+.product__qty {}
+
+.qty {
+    width: 85px;
+}
+
+.qty__label {
+    font-size: 11px;
+}
+
+.qty__wrapper {
+    display: flex;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.qty__btn {
+    border: none;
+    background: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.qty__input {
+    width: calc(100% - 50px);
+    appearance: none;
+    text-align: center;
+    border: none;
+}
+
+
+.qty__input::-webkit-outer-spin-button,
+.qty__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.qty__input {
+    -moz-appearance: textfield;
+}
+
+.product__label {
+    margin-bottom: 15px;
+}
+
+.label {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    margin: 0;
+}
+
+.label__item {
+    width: 35px;
+    margin: 0;
+}
+
+.product__action {
+    display: flex;
+    gap: 10px;
+    /* margin-top: auto; */
+    flex-grow: 1;
+    align-items: flex-end;
+}
+
+.product__btn-primary {
+    flex-grow: 1;
+}
+
+.bnt-primary {
+    background-color: #009f36;
+    color: #fff;
+}
+
+.bnt-secondary {
+    background-color: #67BDFC;
+    width: 42px;
+
+}
+
+.bnt-secondary>span {
+    /* display: none; */
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+}
+
+.bnt-primary,
+.bnt-secondary {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    height: 42px;
+}
+
+button,
+input {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+.position-fixed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.header {
+    padding: 20px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid black;
+    width: 100%;
+    z-index: 10;
+}

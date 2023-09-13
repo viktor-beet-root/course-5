@@ -1,0 +1,24 @@
+.block__one,
+.block__two {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+}
+
+.block__one h4,
+.block__two h4 {
+    margin-top: 0;
+    padding-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $color-darkgray;
+}
+
+.quick__links {
+    @include links;
+}
+
+.legal__links {
+    @include links;
+}

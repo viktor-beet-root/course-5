@@ -1,0 +1,27 @@
+.marketers__list {
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+
+    list-style-type: none;
+    padding-left: 0;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    & .marketers__item {
+        color: $color-darkgray;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 26px;
+
+        p {
+            color: $color-lightgray;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+        }
+    }
+}

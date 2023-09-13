@@ -1,0 +1,12 @@
+.gender {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.personal-data {
+    font-size: $size-personal-data;
+}
+
+.btn {
+    @include flex-center ();
+}
