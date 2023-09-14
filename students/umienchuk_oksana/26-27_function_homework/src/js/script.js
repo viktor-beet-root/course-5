@@ -1,17 +1,19 @@
 //Мінімум
 
 //Напиши всі можливі варіанти створення функцій.
-
+// Function Declaration
+// Function Expression
+// стрілкові функції”
 
 // Створи функцію, яка буде виводити кількість переданих їй аргументів.
 
-function func1() {
+function funcLength() {
     console.log(arguments.length);
 }
 
-func1(1);
-func1(1, 2);
-func1(2, 3, 4, 5);
+funcLength(1);
+funcLength(1, 2);
+funcLength(2, 3, 4, 5);
 
 // Напиши функцію, яка приймає 2 числа і повертає :
 // -1, якщо перше число менше, ніж друге;
@@ -20,22 +22,35 @@ func1(2, 3, 4, 5);
 
 function numReturn(x, y) {
     if (x < y) {
-        console.log('-1');
+        return -1;
     } else if (x > y) {
-        console.log('1');
+        return 1;
     } else {
-        console.log('0');
+        return 0;
     }
 }
 
-numReturn(100, 100);
+console.log(numReturn(100, 25));
 
 // Напиши функцію, яка обчислює факторіал переданого їй числа.
 function numFactorial(n) {
-
-}
+    let facktorial = n;
+    for (i = 1; n > i; i++) {
+        facktorial = facktorial * (n - i);
+    }
+    return facktorial;
+};
+console.log(numFactorial(7));
 
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
+function combiningInString(firstNum, secondNum, thirdNum) {
+    let totalString = '' + firstNum + secondNum + thirdNum;
+    return totalString;
+}
+
+console.log(combiningInString(5, 9, 7))
+
+
 // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
 
 // function func1() {
