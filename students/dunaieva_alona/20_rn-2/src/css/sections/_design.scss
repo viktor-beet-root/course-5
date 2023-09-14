@@ -1,6 +1,10 @@
 .design {
     margin-bottom: 70px;
 
+    @include media(md) {
+        margin-bottom: unset;
+    }
+
     &__overtext {
         line-height: 43px;
     }

@@ -1,6 +1,10 @@
 .hero {
     margin-bottom: 93px;
 
+    @include media(md) {
+        margin-bottom: unset;
+    }
+
     &__text {
         padding-bottom: 20px;
         font-size: 18px;

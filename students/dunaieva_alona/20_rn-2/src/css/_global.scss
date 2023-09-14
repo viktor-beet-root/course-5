@@ -40,7 +40,7 @@ h3 {
 }
 
 .mobile-only {
-    @include media-m(sm) {
+    @include media-m(md) {
         display: none !important;
     }
 }

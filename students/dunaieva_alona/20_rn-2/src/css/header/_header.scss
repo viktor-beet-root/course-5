@@ -1,13 +1,20 @@
 .header {
     padding: 17px;
+    margin-bottom: 40px;
+
+    @include media(md) {
+        position: sticky;
+        top: 0;
+        margin-bottom: unset;
+        background-color: $white-color;
+    }
 
     &__container {
         @include flex-jsc-al(space-between, center);
-        margin-bottom: 40px;
+
 
         @media screen and (max-width: 768px) {
             flex-direction: column;
-            align-items: center;
         }
     }
 }
@@ -19,22 +26,25 @@
     padding-top: 10px;
 
     &__item {
-        @include media(sm) {
+        @include media(md) {
             position: fixed;
             width: 100%;
             left: 0;
-            top: 123px;
-            bottom: 0;
+            top: 94px;
             background-color: white;
-            text-align: center;
             transform: translateX(-100%);
             transition: transform 0.5s ease-in-out;
+
 
             .menu-open-input:checked~& {
                 transform: translateX(0);
 
             }
+        }
 
+        @include media(sm) {
+            top: 200px;
+            text-align: center;
         }
     }
 }
@@ -47,22 +57,25 @@
         flex-direction: column;
     }
 
-
-    // .menu__item
-
     &__item {
-        @include media(sm) {
+        @include media(md) {
+            padding-bottom: 10px;
             width: 100%;
             border-bottom: 1px solid $border-btn-color-primary;
         }
-
     }
-
-    // .menu__link
 
     &__link {
         text-decoration: none;
         color: $color-title;
+
+        @include media(md) {
+            padding-left: 50px;
+        }
+
+        @include media(sm) {
+            padding-left: unset;
+        }
 
         &:hover {
             color: $orang-color;
@@ -74,10 +87,9 @@
     @include flex-jsc-al(space-between, center);
     gap: 20px;
 
-
-    // .auth__link
-
-    &__link {}
+    @include media(sm) {
+        padding-top: 25px;
+    }
 }
 
 .menu-open-input {

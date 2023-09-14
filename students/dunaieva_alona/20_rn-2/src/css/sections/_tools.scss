@@ -4,6 +4,10 @@
     background-size: cover;
     padding-bottom: 74px;
 
+    @include media(md) {
+        text-align: center;
+    }
+
     &__title {
         max-width: 539px;
         margin: 0 auto;
@@ -18,6 +22,10 @@
 
     &__text {
         padding-bottom: 83px;
+
+        @include media(md) {
+            padding-bottom: unset;
+        }
     }
 
     &__action {
