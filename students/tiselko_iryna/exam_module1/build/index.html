@@ -10,59 +10,63 @@
 
 <body class="page">
     <header class="header">
-        <section class="header__hero hero">
-            <div class="hero__content">
-                <h1 class="hero__logo">Bhromaon</h1>
-                <p class="hero__subtitle">Safe Travel Anywhere</p>
-                <form action="#" method="post" class="hero__wrapper input__wrapper">
-                    <input type="text" placeholder="Search Your Travel Destination" name="search" class="input__item">
-                    <button class="input__btn btn btn-secondary" type="submit">
-                        <svg class="hero__svg hero__svg-search">
-                            <use xlink:href="#search"></use>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 hero__content">
+                    <h1 class="hero__logo">Bhromaon</h1>
+                    <p class="hero__subtitle">Safe Travel Anywhere</p>
+                    <form action="#" method="post" class="hero__wrapper input__wrapper">
+                        <input type="text" placeholder="Search Your Travel Destination" name="search"
+                            class="input__item">
+                        <button class="input__btn btn btn-secondary" type="submit">
+                            <svg class="hero__svg hero__svg-search">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                            <span class="input__btn-text">Search</span>
+                        </button>
+                    </form>
+                    <a href="#scroll_start" class="hero__scroll">
+                        Scroll Down
+                        <svg class="hero__svg hero__svg-down">
+                            <use xlink:href="#chevron-down"></use>
                         </svg>
-                        <span class="input__btn-text">Search</span>
-                    </button>
-                </form>
-                <a href="#scroll_start" class="hero__scroll">
-                    Scroll Down
-                    <svg class="hero__svg hero__svg-down">
-                        <use xlink:href="#chevron-down"></use>
-                    </svg>
-                </a>
-            </div>
-        </section>
-        <section class="header__navblock navblock" id="scroll_start">
-            <div class="container">
-                <div class="row">
-                    <div class="col-5 col-lg-2 header__logo">
+                    </a>
+                </div>
+                <div class="col-12 header__navblock navblock__container">
+                    <div class="navblock__logo col-lg-2">
                         <p class="logo">Bhromaon</p>
                     </div>
-                    <nav class="col-7 col-lg-10 navblock__wrapper">
+                    <nav class="navblock__wrapper col-lg-10">
                         <input class="navblock__menu-open-input" type="checkbox" id="open_menu">
                         <label class="navblock__menu-open-label menu-open-label" for="open_menu">
                             <span class="menu-open-label__span"></span>
                         </label>
                         <ul class="navblock__menu menu">
-                            <li class="menu__items">
-                                <a href="" class="menu__link">Who We Are</a>
+                            <li class="menu__item">
+                                <a href="#whoweare" class="menu__link">Who We Are</a>
                             </li>
-                            <li class="menu__items">
-                                <a href="" class="menu__link">What We Do</a>
+                            <li class="menu__item">
+                                <a href="#whatwedo" class="menu__link">What We Do</a>
                             </li>
-                            <li class="menu__items">
-                                <a href="" class="menu__link">Travel With Us</a>
+                            <li class="menu__item">
+                                <a href="#travelwithus" class="menu__link">Travel With Us</a>
                             </li>
-                            <li class="menu__items">
-                                <a href="" class="menu__link">Contact Us</a>
+                            <li class="menu__item">
+                                <a href="#contactus" class="menu__link">Contact Us</a>
+                            </li>
+                            <li class="menu__item">
+                                <label class="navblock__menu-open-label menu-close-label" for="open_menu">
+                                    <span class="menu-open-label__span"></span>
+                                </label>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </section>
+        </div>
     </header>
     <main class="main">
-        <section class="chooseus">
+        <section class="chooseus" id="scroll_start">
             <div class="container">
                 <div class="row">
                     <div class="col-6 col-md-12 chooseus__content">
@@ -115,7 +119,7 @@
                 </div>
             </div>
         </section>
-        <section class="grandspain1">
+        <section class="grandspain1" id="whoweare">
             <div class="container">
                 <div class="row grandspain__item">
                     <div class="col-6 col-sm-12 grandspain__wrapper">
@@ -134,7 +138,7 @@
                 </div>
             </div>
         </section>
-        <section class="grandspain2">
+        <section class="grandspain2" id="whatwedo">
             <div class="container">
                 <div class="row grandspain__reverse">
                     <div class="col-6 col-sm-12 grandspain__wrapper">
@@ -153,7 +157,7 @@
                 </div>
             </div>
         </section>
-        <section class="touristssay">
+        <section class="touristssay" id="travelwithus">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -180,7 +184,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contactus">
         <div class="container">
             <div class="row">
                 <div class="col-12">

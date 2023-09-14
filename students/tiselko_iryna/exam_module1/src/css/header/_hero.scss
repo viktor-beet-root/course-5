@@ -1,33 +1,33 @@
-.hero {
+.header {
     width: 100svw;
     height: 100svh;
     background: url(#{$base-img-pass}images/header/HeaderBackground.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+}
 
+.hero {
 
     // .hero__content
 
     &__content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
     }
 
     // .hero__logo
 
     &__logo {
+        padding-top: 280px;
         padding-bottom: 8px;
 
         @include media (xxs) {
-            padding-top: 20px;
+            // padding-top: 20px;
         }
     }
 
@@ -40,6 +40,7 @@
         padding-bottom: 48px;
 
         @include media (xxs) {
+            text-align: center;
             letter-spacing: 4.82px;
         }
     }
@@ -47,9 +48,9 @@
     // .hero__wrapper
 
     &__wrapper {
-        margin-bottom: 211px;
+        margin-bottom: 190px;
 
-        @include media (xxs) {
+        @include media (md) { 
             margin-bottom: 130px;
         }
     }
@@ -65,12 +66,8 @@
         &-search {
             padding-right: 12px;
 
-            @include media () {
+            @include media (xs) {
                 padding: 0;
-            }
-
-            @include media (xxs) {
-                padding-right: 12px;
             }
         }
 
@@ -103,15 +100,15 @@
         background-color: $white-color;
 
         @include media () {
-            width: 447px;
+            width: 540px;
+        }
+
+        @include media (xs) {
+            width: 480px;
         }
 
         @include media (xxs) {
             width: 300px;
-            height: 152px;
-            flex-direction: column;
-            align-items: center;
-            background-color: transparent;
         }
     }
 
@@ -124,7 +121,7 @@
         font-family: inherit;
         font-style: inherit;
 
-        @include media (xxs) {
+        @include media (xs) {
             height: 52px;
             padding-left: 16px;
         }
@@ -136,7 +133,7 @@
             letter-spacing: 2.8px;
             color: $gray-color;
 
-            @include media (xxs) {
+            @include media (xs) {
                 letter-spacing: 2px;
             }
         }
@@ -149,14 +146,8 @@
         &.btn {
             margin: 4px 5px 4px 0;
 
-            @include media () {
+            @include media (xs) {
                 width: 70px;
-            }
-
-            @include media (xxs) {
-                width: 139px;
-                height: 52px;
-                margin: 10px;
             }
         }
     }
@@ -164,12 +155,8 @@
     // .input__btn-text
 
     &__btn-text {
-        @include media () {
+        @include media (xs) {
             display: none;
-        }
-
-        @include media (xxs) {
-            display: block;
         }
     }
 }
