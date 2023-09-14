@@ -40,12 +40,12 @@ function numFactorial(n) {
     }
     return facktorial;
 };
-console.log(numFactorial(7));
+console.log(numFactorial(5));
 
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
 function combiningInString(firstNum, secondNum, thirdNum) {
-    let totalString = '' + firstNum + secondNum + thirdNum;
-    return totalString;
+    let totalNumber = firstNum * 100 + secondNum * 10 + thirdNum;
+    return totalNumber;
 }
 
 console.log(combiningInString(5, 9, 7))
@@ -53,29 +53,59 @@ console.log(combiningInString(5, 9, 7))
 
 // Напиши функцію, яка приймає довжину і ширину прямокутника і обчислює його площу. Якщо в функцію передали 1 параметр, то вона обчислює площу квадрата.
 
-// function func1() {
-//     if(arguments.length == 2)
-//     {
-//         return arguments[0] * arguments[1];
-//     } else if(arguments.length == 1)
-//     {
-//         return arguments[0] * arguments[0];
-//     } else
-//     {
-//         //error
-//     }
-// }
+function calcArea(sideFirst, sideSecond) {
+    if (arguments.length === 2) {
+        return sideFirst * sideSecond;
+    } else if (arguments.length === 1) {
+        return sideFirst * sideFirst;
+    } else {
+        return "Error";
+    }
+}
 
-// function func1(a, b) {
-//     if(b == undefined)
-//     {
-//         return a * a;
-//     } else{
-//         return a * b;
-//     }
-// }
+console.log(calcArea(6, 2, 3))
+
+function func1(sideFirst, sideSecond) {
+    if (sideSecond == undefined) {
+        return sideFirst * sideFirst;
+    } else {
+        return sideFirst * sideSecond;
+    }
+}
+console.log(func1(7, 3))
+
 
 // Норма
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
+function numPerfect(z) {
+    let sumPerfect = 0;
+    for (let j = 1; j < z; j++) {
+        if (z % j === 0) {
+            sumPerfect = sumPerfect + j;
+        }
+    }
+
+    // sumPerfect === z ? console.log('Число ' + z + ' досконале') : console.log('Число ' + z + ' не досконале')
+    return sumPerfect === z;
+}
+
+console.log(numPerfect(6))
+
 // Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
+
+function findPerf(a, b) {
+    let min = (a > b) ? b : a;
+    let max = (a < b) ? b : a;
+    console.log('Min: ' + min);
+    console.log('Max: ' + max);
+
+    for (let p = min; p <= max; p++) {
+        if (numPerfect(p)) {
+            console.log('Число ' + p + ' досконале');
+        }
+    }
+}
+
+
+console.log(findPerf(30, 6))
