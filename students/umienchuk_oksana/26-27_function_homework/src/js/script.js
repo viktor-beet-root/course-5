@@ -86,7 +86,7 @@ function numPerfect(z) {
         }
     }
 
-    // sumPerfect === z ? console.log('Число ' + z + ' досконале') : console.log('Число ' + z + ' не досконале')
+    sumPerfect === z ? console.log('Число ' + z + ' досконале') : console.log('Число ' + z + ' не досконале')
     return sumPerfect === z;
 }
 
