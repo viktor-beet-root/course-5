@@ -2,16 +2,6 @@
     margin: 0 auto;
     width: 647px;
 
-    // @include media(lg) {
-    //     width: 600px;
-    //     transition: width .3s ease;
-    // }
-
-    // @include media(md) {
-    //     width: 540px;
-    //     transition: width .3s ease;
-    // }
-
     @include media(sm) {
         width: 540px;
         transition: width .3s ease;
@@ -42,24 +32,6 @@
         align-items: center;
         background-color: $color-white;
         justify-content: space-between;
-        padding: 4px 5px 4px 36px;
-
-        @include media(lg) {
-            padding: 4px 5px 4px 32px;
-        }
-
-        @include media(md) {
-            padding: 4px 5px 4px 28px;
-        }
-
-        @include media(sm) {
-            padding: 4px 5px 4px 24px;
-        }
-
-        @include media(xs) {
-            padding: 4px 5px 4px 10px;
-        }
-
     }
 
     // .search-form__input
@@ -104,17 +76,18 @@
     color: $color-gray;
     border: 0;
     width: 100%;
-    padding: 0 10px 0 0;
+    padding: 16px 10px 16px 36px;
 
     @include fonts-type ($default-font-name, $font-size-small, $font-weight-name, $line-height, $letter-spacing-holder);
 
     @include media(xs) {
+        padding: 10px 5px 10px 20px;
         @include fonts-type ($default-font-name, $font-size-small, $font-weight-name, $line-height, $letter-spacing-text);
+
     }
 
     @include media(xxs) {
-        padding: 0 5px 0 0;
+        padding: 5px 3px 5px 10px;
         @include fonts-type ($default-font-name, $font-size-small, $font-weight-name, $line-height, normal);
     }
-
 }
