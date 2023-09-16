@@ -1,0 +1,7 @@
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+}
+
+@include grid();

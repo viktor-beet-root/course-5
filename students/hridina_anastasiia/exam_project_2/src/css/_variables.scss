@@ -1,0 +1,39 @@
+// colors
+$white-color: #fff;
+$black-color: #000;
+$pickled-bluewood: #2C4058;
+$malibu-color: #55B7FF;
+$heliotrope-color: #7E5AFF;
+$riverbed-color: #4B5562;
+
+
+$border-height: 50px;
+$btn-font-weight: 600;
+
+
+$default-body-color: $white-color;
+
+// fonts
+$default-font-name: 'Montserrat';
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-size: 18px;
+
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1600px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1200px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+);
