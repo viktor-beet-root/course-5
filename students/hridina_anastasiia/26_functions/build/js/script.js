@@ -53,7 +53,7 @@ console.log(factorial(6));
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
 
 function digits(h, m, j) {
-  if (h, m, j) {
+  if (h !== 0 && m !== 0 && j !== 0) {
     return h * 100 + m * 10 + j;
   }
 }
@@ -65,9 +65,9 @@ console.log(digits(4, 5, 6));
 function area(x, y) {
   var areaOfRectangle = x * y;
   var areaOfSquare = x * x;
-  if (x, y) {
+  if (x > 0 && y > 0) {
     return areaOfRectangle;
-  } else if (x, x) {
+  } else {
     return areaOfSquare;
   }
 }
@@ -78,6 +78,7 @@ console.log(area(15, 4));
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. 
 // Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
+
 function perfectNumber(number) {
   var n = 0;
   for (var i = 1; i <= number / 2; i++) {
@@ -86,18 +87,13 @@ function perfectNumber(number) {
     }
   }
   if (n === number && n !== 0) {
-    console.log('It is a perfect number');
+    return true;
   } else {
-    console.log('It is not a perfect number');
+    return false;
   }
 }
-perfectNumber(28);
-
-// Напиши функцію, яка приймає мінімальне і максимальне значення для діапазону, і виводить тільки ті числа з діапазону, які є досконалими. 
-// Використовуй написану раніше функцію, щоб дізнатися, чи є це число досконалим.
-
-function isPerfect(min, max) {}
-console.log(isPerfect(1, 600));
+console.log(perfectNumber(28));
+console.log(perfectNumber(4));
 /******/ })()
 ;
 //# sourceMappingURL=script.js.map

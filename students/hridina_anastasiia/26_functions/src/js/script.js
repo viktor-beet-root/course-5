@@ -4,8 +4,8 @@
 // Напиши всі можливі варіанти створення функцій.
 
 function name(parameter1, parameter2, ...parameterN) { }; // Function Declaration
-let func = function () { }; // Function Expression
-let arrow = (arg1, arg2, arg3, argN) => expression; // Arrow Function
+const func = function () { }; // Function Expression
+const arrow = (arg1, arg2, arg3, argN) => expression; // Arrow Function
 
 // Створи функцію, яка буде виводити кількість переданих їй аргументів.
 
@@ -47,7 +47,7 @@ console.log(factorial(6));
 // Напиши функцію, яка приймає три окремі цифри і перетворює їх в одне число. Наприклад: цифри 1, 4, 9 перетворяться в число 149.
 
 function digits(h, m, j) {
-    if (h, m, j) {
+    if (h !== 0 && m !== 0 && j !== 0) {
         return h * 100 + m * 10 + j;
     }
 }
@@ -59,9 +59,9 @@ console.log(digits(4, 5, 6));
 function area(x, y) {
     const areaOfRectangle = x * y;
     const areaOfSquare = x * x;
-    if (x, y) {
+    if (x > 0 && y > 0) {
         return areaOfRectangle;
-    } else if (x, x) {
+    } else {
         return areaOfSquare;
     }
 }
@@ -73,6 +73,7 @@ console.log(area(15, 4));
 
 // Напиши функцію, яка перевіряє, чи є передане їй число “досконалим числом”. 
 // Досконале число - це число, яке дорівнює сумі всіх своїх дільників.
+
 function perfectNumber(number) {
     let n = 0;
     for (let i = 1; i <= number / 2; i++) {
@@ -81,13 +82,14 @@ function perfectNumber(number) {
         }
     }
     if (n === number && n !== 0) {
-        console.log('It is a perfect number');
+        return true;
     } else {
-        console.log('It is not a perfect number');
+        return false;
     }
 }
 
-perfectNumber(28);
+console.log(perfectNumber(28));
+console.log(perfectNumber(4));
 
 
 
