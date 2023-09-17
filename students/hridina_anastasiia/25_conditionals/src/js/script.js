@@ -64,7 +64,13 @@ const numRange1 = +prompt('Enter an initial value', '');
 const numRange2 = +prompt('Enter a final value', '');
 let a = (numRange2 - numRange1) + 1;
 let b = (numRange1 + numRange2);
-const rangeSum = (a * b) / 2;
+let rangeSum;
+
+if (numRange1 !== 0 && numRange2 !== 0) {
+    rangeSum = (a * b) / 2;
+} else {
+    console.log('Wrong number');
+}
 
 console.log(rangeSum);
 
@@ -93,7 +99,7 @@ console.log(divider);
 const aNumber = +prompt('Please enter a number', '');
 
 for (let i = 1; i <= aNumber; i++) {
-    if (aNumber % i == 0) {
+    if (aNumber % i === 0) {
         console.log(i);
     }
 }
@@ -116,7 +122,7 @@ while (y > 0) {
 }
 console.log(reversed);
 
-if (w == reversed) {
+if (w === reversed) {
     console.log("It is a palindrome", reversed);
 } else {
     console.log('It is not a palindrome', reversed);
@@ -129,9 +135,9 @@ if (w == reversed) {
 // від 500 і вище - 7 %.
 
 const sumTotal = +prompt('What is the total cost of your purchase?', '');
-let threePercent = (sumTotal / 100) * 3;
-let fivePercent = (sumTotal / 100) * 5;
-let sevenPercent = (sumTotal / 100) * 7;
+const threePercent = (sumTotal / 100) * 3;
+const fivePercent = (sumTotal / 100) * 5;
+const sevenPercent = (sumTotal / 100) * 7;
 
 if (sumTotal >= 200 && sumTotal < 300) {
     console.log(sumTotal - threePercent);

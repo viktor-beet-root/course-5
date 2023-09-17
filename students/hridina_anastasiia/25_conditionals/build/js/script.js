@@ -66,7 +66,12 @@ var numRange1 = +prompt('Enter an initial value', '');
 var numRange2 = +prompt('Enter a final value', '');
 var a = numRange2 - numRange1 + 1;
 var b = numRange1 + numRange2;
-var rangeSum = a * b / 2;
+var rangeSum;
+if (numRange1 !== 0 && numRange2 !== 0) {
+  rangeSum = a * b / 2;
+} else {
+  console.log('Wrong number');
+}
 console.log(rangeSum);
 
 // Запитай у користувача 2 числа і знайди найбільший спільний дільник.
@@ -89,7 +94,7 @@ console.log(divider);
 
 var aNumber = +prompt('Please enter a number', '');
 for (var i = 1; i <= aNumber; i++) {
-  if (aNumber % i == 0) {
+  if (aNumber % i === 0) {
     console.log(i);
   }
 }
@@ -109,7 +114,7 @@ while (y > 0) {
   y = parseInt(y / 10);
 }
 console.log(reversed);
-if (w == reversed) {
+if (w === reversed) {
   console.log("It is a palindrome", reversed);
 } else {
   console.log('It is not a palindrome', reversed);
