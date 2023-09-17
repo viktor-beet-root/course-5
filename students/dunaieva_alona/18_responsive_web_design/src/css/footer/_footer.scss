@@ -1,0 +1,41 @@
+.footer {
+    margin-top: 100px;
+
+    @media screen and (max-width: 768px) {
+        margin-top: unset;
+        text-align: center;
+    }
+
+    .row {
+        align-items: start;
+    }
+
+    &__title {
+        padding-bottom: 30px;
+        @include h4;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__link:hover {
+        color: $orang-color;
+    }
+}
+
+.form {
+    &__link {
+
+        @media screen and (max-width: 768px) {
+            margin: 0 auto;
+        }
+    }
+}

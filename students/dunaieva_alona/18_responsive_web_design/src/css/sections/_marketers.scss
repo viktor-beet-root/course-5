@@ -1,0 +1,15 @@
+.marketers {
+
+    &__overtext {
+        @extend .design__overtext;
+    }
+
+    &__items {
+        @extend .design__items;
+
+        &__list>p:first-child {
+            font-weight: 700;
+            padding-bottom: 10px;
+        }
+    }
+}
