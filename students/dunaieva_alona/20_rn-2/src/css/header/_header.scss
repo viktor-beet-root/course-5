@@ -1,0 +1,154 @@
+.header {
+    padding: 17px;
+    margin-bottom: 40px;
+
+    @include media(md) {
+        position: sticky;
+        top: 0;
+        margin-bottom: unset;
+        background-color: $white-color;
+    }
+
+    &__container {
+        @include flex-jsc-al(space-between, center);
+
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+
+    &__item {
+        @include media(md) {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 94px;
+            background-color: white;
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in-out;
+
+
+            .menu-open-input:checked~& {
+                transform: translateX(0);
+
+            }
+        }
+
+        @include media(sm) {
+            top: 200px;
+            text-align: center;
+        }
+    }
+}
+
+.menu {
+    @include flex-jsc-al(space-between, center);
+    gap: 20px;
+
+    @media screen and (max-width: 992px) {
+        flex-direction: column;
+    }
+
+    &__item {
+        @include media(md) {
+            padding-bottom: 10px;
+            width: 100%;
+            border-bottom: 1px solid $border-btn-color-primary;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-title;
+
+        @include media(md) {
+            padding-left: 50px;
+        }
+
+        @include media(sm) {
+            padding-left: unset;
+        }
+
+        &:hover {
+            color: $orang-color;
+        }
+    }
+}
+
+.auth {
+    @include flex-jsc-al(space-between, center);
+    gap: 20px;
+
+    @include media(sm) {
+        padding-top: 25px;
+    }
+}
+
+.menu-open-input {
+    @include visuality-hidden;
+}
+
+.menu-open-lable {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 6px;
+    border: 1px solid $border-btn-color-primary;
+    justify-content: center;
+    align-items: center;
+
+    .menu-open-input:checked+& {
+        .menu-open-lable__line {
+            background-color: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        display: block;
+        position: relative;
+        width: 70%;
+        background-color: $border-btn-color-primary;
+        height: 4px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $border-btn-color-primary;
+            border-radius: inherit;
+            position: absolute;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &::before {
+            top: -11px;
+        }
+
+        &::after {
+            bottom: -11px;
+        }
+
+    }
+}
