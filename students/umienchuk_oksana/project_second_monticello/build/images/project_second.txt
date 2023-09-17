@@ -1,0 +1,172 @@
+**colors**
+
+$img-bg-first:#55B7FF;
+$img-bg-second:#7E5AFF;
+$color-white: #FFF;
+$color-night-blue:#2C4058;
+$color-black:#000;
+
+
+$dufault-color-text:$color-night-blue;
+$color-text-second:$color-white;
+
+**fonts**
+
+Montserrat
+400;700;
+normal
+
+Source Sans Pro
+400;
+normal
+
+Open Sans
+400;
+italic
+normal
+
+h1
+
+color: #FFF;
+font-family: Montserrat;
+font-size: 80px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 8px;
+
+sub-text-h1
+
+color: #FFF;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 5.4px;
+
+
+menu
+
+color: #FFF;  
+font-family: Source Sans Pro;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+h2 title of block
+
+color: #2C4058;   #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+h3 - title of content
+
+color: #2C4058;
+font-family: Montserrat;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+sub-title
+
+color: #2C4058;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+p
+
+color: #2C4058;
+font-family: Open Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 166.667% */
+
+maps
+
+color: #000;
+font-family: Open Sans;
+font-size: 15px;
+font-style: italic;
+font-weight: 400;
+line-height: normal;
+
+button
+
+color: #000;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+**cards slider**
+
+title
+
+color: #2C4058;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+p
+
+color: #2C4058;
+font-family: Open Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+img-name
+
+color: #2C4058;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+card-data
+
+color: #55B7FF;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+form
+
+title
+
+GET IN TOUCH
+color: #2C4058;
+text-align: center;
+font-family: Montserrat;
+font-size: 44px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+text
+
+color: #000;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+
