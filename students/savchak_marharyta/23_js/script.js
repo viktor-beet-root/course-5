@@ -39,7 +39,7 @@ let me_dance_in_the_dark; //snake_case
 
 // 1.Запитай ім’я користувача та виведи у відповідь “Привіт, *ім’я*”;
 
-let userName = prompt('Enter your name', '');
+const userName = prompt('Enter your name', '');
 console.log('Привіт, ' + userName);
 
 // 2.Запитай рік народження користувача, порахуй його/її вік і виведи результат. 
