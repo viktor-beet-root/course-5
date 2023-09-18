@@ -1,17 +1,17 @@
 //МІНІМУМ
 // Запитай у користувача його вік і визначи, ким він є: дитиною (0-11), підлітком (12-17), дорослим (18_59) або пенсіонером (60 ...), передбач можливість введення невірних даних.
- const askUserAge = +prompt('How old you are?');
- if (askUserAge >=0 && askUserAge <=11) {
+const askUserAge = +prompt('How old you are?');
+if (askUserAge >= 0 && askUserAge <= 11) {
     console.log('child');
- } else if (askUserAge >= 12 && askUserAge <= 17) {
+} else if (askUserAge >= 12 && askUserAge <= 17) {
     console.log('teenager');
- } else if (askUserAge >=18 && askUserAge <=59) {
+} else if (askUserAge >= 18 && askUserAge <= 59) {
     console.log('adult');
- } else if (askUserAge >= 60) {
+} else if (askUserAge >= 60) {
     console.log('elderly people');
- } else {
+} else {
     console.log('undefiend');
- }
+}
 
 // Запитай у користувача число від 0 до 9 і виведи йому спецсимвол, який розташований на цій клавіші (1 !, 2 @, 3 # і т. д).
 const askUserNumber = +prompt('Please enter a number');
@@ -28,7 +28,7 @@ switch (askUserNumber) {
         break;
     case 4:
         numberSymbol = '$';
-        break; 
+        break;
     case 5:
         numberSymbol = '%';
         break;
@@ -37,7 +37,7 @@ switch (askUserNumber) {
         break;
     case 7:
         numberSymbol = '&';
-        break; 
+        break;
     case 8:
         numberSymbol = '*';
         break;
@@ -45,20 +45,20 @@ switch (askUserNumber) {
         numberSymbol = '(';
         break;
     default:
-        numberSymbol = 'undefiend';     
+        numberSymbol = 'undefiend';
 }
 console.log(numberSymbol);
 
 // Підрахуй суму всіх чисел в заданому користувачем діапазоні.
 
 let firstValue = +prompt('First value');
-let secondValue = +prompt('Second value');
+const secondValue = +prompt('Second value');
 let sumValue = 0;
 const sentenceValue = 'Sum of the numbers:';
 
 while (firstValue <= secondValue) {
-  sumValue = sumValue + firstValue;
-  firstValue++;
+    sumValue = sumValue + firstValue;
+    firstValue++;
 }
 console.log(sentenceValue + ' ' + sumValue);
 
@@ -66,19 +66,20 @@ console.log(sentenceValue + ' ' + sumValue);
 
 const firstNum = +prompt('First of number?');
 const secondNum = +prompt('Second of number?');
+let greatestСommonDivisor = 1;
 
-for(let i = firstNum > secondNum ? firstNum : secondNum; i > 0; i--) {
-    if(firstNum % i === 0 && secondNum % i === 0) {
-        console.log(i);
-        break;
-    }
+for (let i = firstNum > secondNum ? firstNum : secondNum; i > 0; i--) {
+    if (firstNum % i === 0 && secondNum % i === 0);
+    greatestСommonDivisor = i;
+    break;
 }
+console.log(greatestСommonDivisor);
 
 // Запитай у користувача число і виведи всі дільники цього числа.
 const someNum = +prompt('Enter some number');
 
-for(let i = 1; someNum >= i; i++) {
-    if(someNum % i === 0) {
+for (let i = 1; someNum >= i; i++) {
+    if (someNum % i === 0) {
         console.log(i);
     }
 }
@@ -141,7 +142,7 @@ const answerOddNumbers = 'The number of odd integers is:';
 
 for (let i = 0; i < 10; i++) {
     const enterNumber = +prompt('Please enter number');
-    
+
     if (typeof enterNumber === 'number') {
         if (enterNumber > 0) {
             positiveNumbers++;
@@ -150,7 +151,7 @@ for (let i = 0; i < 10; i++) {
         } else {
             zeroNumber++;
         }
-    
+
         if (enterNumber % 2 === 0) {
             evenNumber++;
         } else {
@@ -166,19 +167,41 @@ console.log(answerEvenNumbers + ' ' + evenNumber);
 console.log(answerOddNumbers + ' ' + oddNumber);
 
 // Зацикли відображення днів тижня таким чином: «День тижня. Хочеш побачити наступний день? » і так до тих пір, поки користувач натискає OK.
-
-const dayOfWeek = ['Monday!', 'Tuesday!', 'Wensday!', 'Thursday!', 'Friday!', 'Saturday!', 'Sunday!'];
 let isConfirmed;
-let i = 0;
+let dayOfWeek = 1;
+const textConfirm = ' Do you want to see the next day of the week?';
 
 do {
-    isConfirmed = confirm(dayOfWeek[i] + ' ' + 'Do you want to see the next day of the week?');
-    i++;
-    if (i === dayOfWeek.length) {
-        i = 0;
+    switch (dayOfWeek) {
+        case 1:
+            isConfirmed = confirm('Monday' + textConfirm);
+            break;
+        case 2:
+            isConfirmed = confirm('Tuesday' + textConfirm);
+            break;
+        case 3:
+            isConfirmed = confirm('Wednesday' + textConfirm);
+            break;
+        case 4:
+            isConfirmed = confirm('Thursday' + textConfirm);
+            break;
+        case 5:
+            isConfirmed = confirm('Friday' + textConfirm);
+            break;
+        case 6:
+            isConfirmed = confirm('Saturday' + textConfirm);
+            break;
+        case 7:
+            isConfirmed = confirm('Sunday' + textConfirm);
+            break;
+    }
+    dayOfWeek = dayOfWeek + 1;
+
+    if (dayOfWeek > 7) {
+        dayOfWeek = 1;
     }
 
-} while(isConfirmed);
+} while (isConfirmed);
 
 //Користувач вводить число і відображається "ялинка" зі знаків #
 //Лівий край
@@ -189,22 +212,25 @@ let emptyString = '';
 let markHash = '#';
 
 for (let i = 0; askNumber1Hash > i; i++) {
-    emptyString = emptyString + markHash;
-    console.log(emptyString);   
+
+    for (let j = 0; j <= i; j++) {
+        emptyString = emptyString + markHash;
+    }
+    emptyString = emptyString + '\n';
+
 }
+console.log(emptyString);
 
 // Прaвий край
+
 const askNumber2Hash = +prompt('Please enter a number (#)');
 
-let markString = '';
-emptyString = '';
+let finalOutput = '';
 
-for (let i = 1; askNumber2Hash >= i; i++) {
-    for (let y = askNumber2Hash - i; y > 0; y--) {
-        emptyString += ' '; 
-    }
-
-    markString += markHash;
-    console.log(emptyString + markString);
-    emptyString = '';
+for (let i = 1; i <= askNumber2Hash; i++) {
+    let emptyString = ' '.repeat(askNumber2Hash - i);
+    let markHash = '#'.repeat(i);
+    finalOutput += emptyString + markHash + '\n';
 }
+
+console.log(finalOutput);
