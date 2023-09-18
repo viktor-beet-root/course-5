@@ -1,0 +1,15 @@
+@use 'sass:math';
+@import '../../node_modules/normalize.css/normalize';
+@import "variables";
+@import 'mixins';
+@import 'extend';
+@import 'reset';
+@import 'fonts';
+@import "global";
+@import "btn";
+@import "header/header";
+@import "sections/hero";
+@import "sections/first-service";
+@import "sections/second-service";
+@import "sections/feedback";
+@import "footer/footer";

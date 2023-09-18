@@ -1,0 +1,25 @@
+.first-service {
+    background: url(../images/first-service-bg.jpg) center;
+
+    &__sub-title {
+        font-size: 20px;
+        padding-bottom: 16px;
+        letter-spacing: 2px;
+    }
+
+    &__title {
+        padding-bottom: 16px;
+    }
+
+    &__text {
+        padding-bottom: 24px;
+    }
+}
+
+.first-service-wrapper {
+    padding: 32px;
+    margin-top: 220px;
+    margin-bottom: 120px;
+    background-color: $dark-grey;
+    opacity: 0.9;
+}
