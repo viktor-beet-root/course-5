@@ -1,0 +1,23 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Tourney';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/tourney-v13-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Francois One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/francois-one-v21-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v17-latin-regular.woff2') format('woff2');
+}
