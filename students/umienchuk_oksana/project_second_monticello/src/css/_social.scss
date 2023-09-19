@@ -1,0 +1,24 @@
+$social-gap: 20px;
+
+.social {}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: $social-gap;
+
+    &__left {
+        justify-content: flex-end;
+    }
+}
+
+.social-icon {
+
+    // .social-icon__link
+
+    &__link {}
+
+    // .social-icon__img
+
+    &__img {}
+}
