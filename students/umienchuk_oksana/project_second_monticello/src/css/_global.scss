@@ -1,6 +1,6 @@
 @include font-face ('montserrat-v25-latin-regular', 400);
 @include font-face ('montserrat-v25-latin-700', 700);
-@include font-face ('source-sans-3-v9-latin-regular', 400);
+@include font-face ('source-sans-3-v9-latin-regular', 400, $font-sub-menu);
 @include font-face ('open-sans-v35-latin-regular', 400, $font-sub-first);
 @include font-face ('open-sans-v35-latin-italic', 400, $font-sub-first, italic);
 

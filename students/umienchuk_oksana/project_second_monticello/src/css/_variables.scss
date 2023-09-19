@@ -1,9 +1,11 @@
 // colors
-$main-color-text: $color-night-blue;
-$second-color-text: $color-whit;
 $color-white: #FFF;
 $color-night-blue: #2C4058;
 $color-black: #000;
+
+$main-color-text: $color-night-blue;
+$second-color-text: $color-white;
+
 
 $img-bg-first: #55B7FF;
 $img-bg-second: #7E5AFF;
@@ -22,7 +24,7 @@ $font-size-h1: 80px;
 $font-weight: 400;
 $font-weight-title: 700;
 
-// $line-height: 20px;
+// $line-height: 20px;git stat  
 // $line-height-text: 28px;
 // $line-height-h: 40px;
 // $line-height-title: 52px;
@@ -35,8 +37,8 @@ $font-weight-title: 700;
 // $letter-spacing-holder: 2.8px;
 // $letter-spacing-sub-text: 6.82px;
 
-$text-transform-upper: uppercase;
-$text-transform-capit: capitalize;
+// $text-transform-upper: uppercase;
+// $text-transform-capit: capitalize;
 
 
 //main color for text 
@@ -51,7 +53,7 @@ $default-font-size: 18px;
 $default-font-weight: $font-weight;
 
 $font-sub-first: "Open Sans";
-$font-sub-menu: "Source Sans Pro";
+$font-sub-menu: "Source Sans 3";
 $default-font-sub-font: $font-sub-first, $fallback;
 $font-path: './fonts/';
 $base-img-path: '../';
@@ -62,6 +64,8 @@ $base-img-path: '../';
 // $btn-height-primary: $btn-height-pr;
 // $btn-height-sec: 52px;
 // $btn-height-secondary: $btn-height-sec;
+$color-btn: transparent;
+$default-btn-color: $color-black;
 
 // containers
 $container-padding: 15px;
@@ -71,7 +75,7 @@ $gap-cont: 15px;
 $gap: 15px;
 $defaulp-count-col: 12;
 
-// $default-width: 1170px;
+$default-width: 1170px;
 
 //menu_open
 // $default-bg-color-menu-open: $color-white;
