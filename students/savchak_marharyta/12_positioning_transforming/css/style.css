@@ -1,0 +1,93 @@
+@import './fonts.css';
+
+body {
+    font-family: PT Sans, Arial, Verdana, Tahoma;
+}
+
+.container {
+    max-width: 1195px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+
+.link-element {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-family: Francois One;
+    font-size: 36px;
+}
+
+.nav__tab {
+    font-size: 20px;
+}
+
+.nav__tab-wrapper {
+    padding-top: 18px;
+}
+
+.lang-change__text {
+    font-family: Tourney;
+    font-size: 23px;
+}
+
+.nav__lang-change {
+    float: left;
+    padding-right: 50px;
+}
+
+.nav__tab-wrapper {
+    float: left;
+    padding-right: 12px;
+}
+
+.logo-wrapper {
+    float: right;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main {
+    display: flex;
+    gap: 40px;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main__bg-img {
+    position: absolute;
+    z-index: 0;
+    right: 210px;
+    top: 150px;
+
+}
+
+.article {
+    z-index: 1;
+}
+
+.chapter__title {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-family: Francois One;
+    margin: 0;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+}
+
+.col-8 {
+    max-width: calc(100% / 12 * 8);
+}
+
+.chapter__text {
+    font-size: 28px;
+}
