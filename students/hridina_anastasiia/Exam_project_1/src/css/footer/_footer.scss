@@ -16,6 +16,10 @@
         @include media(sm) {
             font-size: 30px;
         }
+
+        @include media(xxs) {
+            font-size: 26px;
+        }
     }
 
     // .footer__text
@@ -27,6 +31,10 @@
 
         @include media(sm) {
             font-size: 24px;
+        }
+
+        @include media(xxs) {
+            font-size: 20px;
         }
     }
 }
@@ -47,7 +55,7 @@
 
     &__link {
         &:hover {
-            & .social__icon {
+            & .social__svg {
                 fill: $dodgerblue-color;
             }
         }
@@ -56,10 +64,16 @@
     &__svg {
         width: 26px;
         height: 32px;
+        fill: $white-color;
 
         @include media(sm) {
             width: 36px;
             height: 36px;
+        }
+
+        @include media(xxs) {
+            width: 30px;
+            height: 30px;
         }
     }
 

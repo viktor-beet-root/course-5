@@ -1,5 +1,5 @@
 .header {
-    background-image: url(../images/header_bg.png);
+    background-image: url(../images/header_background.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,18 +15,21 @@
 
     &__title {
         text-align: center;
-        padding-top: 200px;
+        padding-top: 160px;
     }
 
     // .header__form
 
     &__form {
-        display: flex;
+        display: inline-flex;
         justify-content: center;
-        flex-wrap: nowrap;
+        margin-top: 20px;
         align-items: center;
-        padding-top: 20px;
         position: relative;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+
 
         @include media(md) {
             margin: 0 auto;
@@ -41,10 +44,12 @@
 
     &__input {
         padding: 14px 16px;
-        min-width: 41%;
+        width: 520px;
+        height: 50px;
         font-size: 14px;
         line-height: 20px;
         letter-spacing: 2.8px;
+        padding-left: 30px;
         color: $dustygrey-color;
         border: none;
         background-color: $white-color;
@@ -54,49 +59,60 @@
         }
 
         @include media(md) {
-            min-width: 45%;
-            font-size: 12px;
+            width: 500px;
+            font-size: 14px;
             letter-spacing: 1.1px;
         }
 
         @include media(sm) {
             letter-spacing: 1px;
-            font-size: 11px;
+            font-size: 14px;
         }
 
         @include media(xs) {
-            font-size: 0;
+            width: 450px;
+            font-size: 13px;
+        }
+
+        @include media(xxs) {
+            width: 300px;
+            font-size: 10px;
         }
     }
 
     // .header__button
 
-    & .button {
+    & .button_hdr {
         @include new-font('Aleo', 14px, 400, normal, 20px, 1.4px);
         text-transform: uppercase;
         display: inline-flex;
         gap: 12px;
         color: $white-color;
-        padding: 10px 24px;
+        padding: 12px 14px;
         background-color: $dodgerblue-color;
         border: none;
         cursor: pointer;
         position: absolute;
-        right: 30%;
+        right: 0.8%;
+        transition: background-color .3s;
 
         &:hover {
             background-color: $color-azureradiance;
         }
 
         @include media(md) {
-            right: 28%;
-            padding: 10px 16px;
+            right: 0.8%;
+            padding: 12px 16px;
         }
 
         @include media(sm) {
+            padding: 12px 16px;
+        }
+
+        @include media(xxs) {
+            padding: 12px;
             font-size: 0;
-            background-color: transparent;
-            padding: 0;
+            gap: 0;
         }
 
     }
@@ -108,14 +124,13 @@
         height: 16px;
 
         @include media(sm) {
-            width: 26px;
-            height: 26px;
+            width: 16px;
+            height: 16px;
         }
 
-        &_search {
-            @include media(sm) {
-                fill: $dodgerblue-color;
-            }
+        @include media(xxs) {
+            width: 20px;
+            height: 20px;
         }
     }
 
@@ -123,7 +138,7 @@
 
     &__bottom {
         width: 100%;
-        height: 13%;
+        height: 76px;
         box-sizing: border-box;
         background-color: $dodgerblue-color;
         display: flex;
@@ -133,7 +148,7 @@
         bottom: 0;
         padding-left: 15px;
 
-        @include media(md) {}
+        @include media(lg) {}
     }
 }
 
@@ -145,14 +160,21 @@
         @include new-font($default-font-name, 48px, 700, normal, 52px);
         text-transform: uppercase;
         color: $white-color;
+        margin-left: 5px;
+        padding-bottom: 20px;
     }
 
     // .heading__text
 
     &__text {
         @include new-font($default-font-name, 22px, 400, normal, 28px, 6.82px);
-        margin-top: -25px;
+        margin-top: -45px;
+        margin-left: 5px;
         color: $white-color;
+
+        @include media(xxs) {
+            font-size: 18px;
+        }
     }
 
     // .heading__bottom
@@ -161,7 +183,15 @@
         @include new-font(24px, 700, normal, 28px, 2.4px);
         text-transform: uppercase;
         color: $white-color;
-        margin-left: 10px;
+        margin-left: 230px;
+
+        @include media(lg) {
+            margin-left: 100px;
+        }
+
+        @include media(md) {
+            margin-left: 15px;
+        }
     }
 }
 
@@ -170,8 +200,9 @@
     // .scroll__down
 
     &__down {
-        padding-top: 130px;
+        padding-top: 160px;
         padding-bottom: 125px;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -185,15 +216,22 @@
             color: $white-color;
             text-decoration: none;
             position: relative;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border-right: 2px solid $white-color;
+                border-bottom: 2px solid $white-color;
+                display: inline-block;
+                transform: rotate(45deg);
+                position: absolute;
+                top: 11px;
+                left: 45px;
+            }
         }
 
-        &_svg {
-            width: 16px;
-            height: 16px;
-            position: absolute;
-            top: 15px;
-            left: 40px;
-        }
     }
 }
 
@@ -204,8 +242,17 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-right: 30px;
+    margin-right: 150px;
     position: relative;
+
+    @include media(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+        margin: 0 auto;
+    }
 
     @include media(sm) {
         display: flex;
@@ -219,6 +266,25 @@
     // .menu__wrapper-item
 
     &__wrapper-item {
+        @include media(lg) {
+            margin-right: 80px;
+        }
+
+        @include media(md) {
+            position: fixed;
+            width: 100%;
+            height: 93%;
+            top: 0;
+            bottom: 11%;
+            left: 100%;
+            background-color: $dodgerblue-color;
+            transform: translateX(0);
+            transition: transform .3s ease-in-out;
+
+            .menu-open-input:checked~& {
+                transform: translateX(-100%);
+            }
+        }
 
         @include media(sm) {
             position: fixed;
@@ -239,6 +305,14 @@
     // .menu__item
 
     &__item {
+
+        @include media(md) {
+            border-bottom: 1px solid $white-color;
+            text-align: center;
+            width: 100%;
+            padding-bottom: 15px;
+        }
+
         @include media(sm) {
             border-bottom: 1px solid $white-color;
             text-align: center;
@@ -273,6 +347,35 @@
 
 .menu-open-label {
 
+    @include media(md) {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid transparent;
+
+        .menu-open-input:checked+& {
+
+            .menu-open-label__line {
+                background-color: transparent;
+
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+
+        }
+    }
+
     @include media(sm) {
         width: 70px;
         height: 70px;
@@ -305,6 +408,37 @@
     // .menu-open-label__line
 
     &__line {
+
+        @include media(md) {
+            position: relative;
+            display: block;
+            width: 80%;
+            background-color: $white-color;
+            height: 4px;
+            border-radius: 4px;
+            transition: background-color .3s ease-in-out;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: $white-color;
+                border-radius: inherit;
+                position: absolute;
+                transition: all .3s ease-in-out;
+            }
+
+            &::before {
+                top: -15px;
+            }
+
+            &::after {
+                bottom: -15px;
+            }
+        }
+
         @include media(sm) {
             position: relative;
             display: block;
@@ -334,5 +468,7 @@
                 bottom: -15px;
             }
         }
+
     }
+
 }

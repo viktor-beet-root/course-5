@@ -13,14 +13,18 @@
     // .review__block
 
     &__block {
-        background-image: url(../images/bg_5.png);
+        background-image: url(../images/review_bg.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 100dvh;
+        height: 100%;
+        padding-top: 100px;
+        padding-bottom: 170px;
 
         @include media(xs) {
-            height: 100dvh;
+            height: 100%;
+            padding-bottom: 20px;
+            padding-top: 30px;
         }
     }
 
@@ -31,13 +35,13 @@
         @include new-font($extra-font, 36px, 400, normal, 40px);
         color: $white-color;
         text-align: center;
-        padding-top: 110px;
         padding-bottom: 65px;
 
         @include media(md) {
             padding-bottom: 30px;
             padding-top: 60px;
         }
+
     }
 
 
