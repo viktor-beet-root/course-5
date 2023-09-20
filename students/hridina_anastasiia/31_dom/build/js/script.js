@@ -37,21 +37,18 @@ list.classList.add('songs__list');
 console.log(list);
 for (i = 0; i < playList.length; i++) {
   var songsItem = document.createElement('li');
-  songsItem.classList.add('songs_item');
-  list.prepend(songsItem);
-  console.log(songsItem);
   var songAuthor = document.createElement('strong');
-  songAuthor.textContent = 'Author:' + ' ';
-  songsItem.prepend(songAuthor);
-  songsItem.append(document.createTextNode(playList[i].author));
-  console.log(songAuthor);
+  var authors = document.createElement('span');
   var lineBreak = document.createElement('br');
-  songsItem.append(lineBreak);
   var songName = document.createElement('strong');
+  var songs = document.createElement('span');
+  songsItem.classList.add('songs_item');
+  songAuthor.textContent = 'Author:' + ' ';
+  authors.textContent = playList[i].author;
   songName.textContent = 'Song:' + ' ';
-  songsItem.append(songName);
-  songsItem.append(document.createTextNode(playList[i].song));
-  console.log(songName);
+  songs.textContent = playList[i].song;
+  songsItem.prepend(songAuthor, authors, lineBreak, songName, songs);
+  list.append(songsItem);
 }
 /******/ })()
 ;

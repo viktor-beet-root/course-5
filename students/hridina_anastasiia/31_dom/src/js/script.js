@@ -1,5 +1,5 @@
 
-var playList = [
+const playList = [
 
     {
 
@@ -78,25 +78,22 @@ console.log(list);
 
 for (i = 0; i < playList.length; i++) {
     const songsItem = document.createElement('li');
-    songsItem.classList.add('songs_item');
-    list.prepend(songsItem);
-    console.log(songsItem);
-
     const songAuthor = document.createElement('strong');
-    songAuthor.textContent = 'Author:' + ' ';
-    songsItem.prepend(songAuthor);
-    songsItem.append(document.createTextNode(playList[i].author));
-    console.log(songAuthor);
-
+    const authors = document.createElement('span');
     const lineBreak = document.createElement('br');
-    songsItem.append(lineBreak);
-
     const songName = document.createElement('strong');
-    songName.textContent = 'Song:' + ' ';
-    songsItem.append(songName);
-    songsItem.append(document.createTextNode(playList[i].song));
-    console.log(songName);
+    const songs = document.createElement('span');
 
+    songsItem.classList.add('songs_item');
+
+    songAuthor.textContent = 'Author:' + ' ';
+    authors.textContent = playList[i].author;
+
+    songName.textContent = 'Song:' + ' ';
+    songs.textContent = playList[i].song;
+
+    songsItem.prepend(songAuthor, authors, lineBreak, songName, songs);
+    list.append(songsItem);
 }
 
 
