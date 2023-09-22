@@ -1,11 +1,10 @@
-$social-gap: 20px;
-
 .social {}
 
 .social-icons {
     list-style: none;
     display: flex;
     gap: $social-gap;
+    justify-content: flex-end;
 
     &__left {
         justify-content: flex-end;
@@ -17,8 +16,16 @@ $social-gap: 20px;
     // .social-icon__link
 
     &__link {}
+}
 
-    // .social-icon__img
+.steps {
 
-    &__img {}
+    // .steps__icon
+
+    &__icon {}
+}
+
+.icon-img {
+    height: 40px;
+    width: 40px;
 }
