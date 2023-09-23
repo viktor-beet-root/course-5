@@ -1,3 +1,4 @@
+import Masonry from 'masonry-layout';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
@@ -22,3 +23,13 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
 });
+
+setTimeout(function () {
+    var elem = document.querySelector('.grid');
+    var msnry = new Masonry(elem, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 20
+    });
+}, 1000)
