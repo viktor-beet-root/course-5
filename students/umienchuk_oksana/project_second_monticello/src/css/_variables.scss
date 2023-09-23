@@ -1,4 +1,6 @@
 // colors
+$img-bg-first: #55B7FF;
+$img-bg-second: #7E5AFF;
 $color-white: #FFF;
 $color-night-blue: #2C4058;
 $color-black: #000;
@@ -37,8 +39,8 @@ $font-weight-title: 700;
 // $letter-spacing-holder: 2.8px;
 // $letter-spacing-sub-text: 6.82px;
 
-// $text-transform-upper: uppercase;
-// $text-transform-capit: capitalize;
+$text-transform-upper: uppercase;
+$text-transform-capit: capitalize;
 
 
 //main color for text 
@@ -58,6 +60,8 @@ $default-font-sub-font: $font-sub-first, $fallback;
 $font-path: './fonts/';
 $base-img-path: '../';
 
+//header
+$header-title: $color-white;
 
 // btn
 // $btn-height-pr: 20px;

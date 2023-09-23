@@ -13830,7 +13830,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider').slick();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider').slick({
+  arrows: false,
+  dots: true,
+  draggable: true,
+  speed: 100,
+  easing: 'easeInOutCubic',
+  vertical: true,
+  verticalSwiping: true
+});
 }();
 /******/ })()
 ;
