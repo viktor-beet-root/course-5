@@ -3,7 +3,7 @@ import JustValidatePluginDate from 'just-validate-plugin-date';
 import dict from './dict.js';
 
 
-function createFormValidation(form, createCourse) {
+function createFormValidation(form, createCourseFn) {
     const validator = new JustValidate(form, undefined, dict);
     console.log(validator);
 
@@ -46,13 +46,18 @@ function createFormValidation(form, createCourse) {
             })),
             errorMessage: 'Date should be in yyyy-MM-dd format',
         }
+    ]).addField('[name="speakers"]', [
+        {
+            rule: 'required',
+            errorMessage: 'Is required',
+        }
     ]);
 
     validator.setCurrentLocale('uk');
 
     validator.onSuccess((event) => {
-        // console.log(123);
-        createCourse(new FormData(event.target))
+        if (typeof createCourseFn !== 'function') return;
+        createCourseFn(new FormData(event.target))
     });
 }
 
