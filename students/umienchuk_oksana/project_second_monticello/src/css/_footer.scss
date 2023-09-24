@@ -1,1 +1,16 @@
-.footer {}
+.footer {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.map {
+    width: 100%;
+
+}
+
+.google-map {
+    width: 100%;
+    height: 600px;
+    /* Задайте высоту по вашим требованиям */
+    border: 0;
+}

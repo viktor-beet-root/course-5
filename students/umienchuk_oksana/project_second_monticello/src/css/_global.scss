@@ -5,12 +5,12 @@
 @include font-face ('open-sans-v35-latin-italic', 400, $font-sub-first, italic);
 
 body {
+    margin: 0 auto;
     font-family: $main-font;
     background-color: $default-body-bg-color;
     font-size: $default-font-size;
     color: $default-body-color;
     font-weight: $default-font-weight;
-    margin: 0 auto;
 }
 
 .btn {

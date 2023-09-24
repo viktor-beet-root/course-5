@@ -13834,7 +13834,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider').slick({
   arrows: false,
   dots: true,
   draggable: true,
-  speed: 100,
+  speed: 500,
   easing: 'easeInOutCubic',
   vertical: true,
   verticalSwiping: true

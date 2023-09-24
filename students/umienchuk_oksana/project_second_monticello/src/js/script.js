@@ -4,7 +4,7 @@ $('.slider').slick({
     arrows: false,
     dots: true,
     draggable: true,
-    speed: 100,
+    speed: 500,
     easing: 'easeInOutCubic',
     vertical: true,
     verticalSwiping: true,
