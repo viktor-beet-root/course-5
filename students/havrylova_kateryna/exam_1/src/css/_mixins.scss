@@ -1,0 +1,53 @@
+@mixin positionCenter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin bgCover($img) {
+    background-image: url($img);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+// @mixin fontFace($fontFamily, $fontPath, $fontStyle: normal, $fontWeight: normal) {
+//     @font-face {
+//         font-family: $fontFamily;
+//         font-style: $fontStyle;
+//         font-weight: $fontWeight;
+//         src:url('#{$fontPath}.woff2') format('woff2'),
+//         // url('#{$fontPath}.woff') format('woff');
+//     }
+// }
+
+// @mixin font-face($_font-name, $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-name) {
+//     @font-face {
+//         font-family: $_font-family;
+//         font-style: $_font-style;
+//         font-weight: $_font-weight;
+//         src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
+//     }
+// }
+
+
+@mixin font-face ($_font-name, $_font-weight: 300, $_font-family: $default-font-name, $_font-style: normal) {
+    @font-face {
+        font-display: swap;
+        font-family: $_font-family;
+        font-style: $_font-style;
+        font-weight: $_font-weight;
+        src: url('#{$font-path}#{$_font-name}.woff2') format('woff2');
+    }
+}
+
+@mixin fonts-type ($_font-family: $default-font-name, $_font-size: $default-font-size, $_font-weight: $default-font-weight, $_line-height: $line-height-text, $_letter-spacing: normal, $_text-transform: none) {
+    font-family: $_font-family;
+    font-size: $_font-size;
+    font-weight: $_font-weight;
+    line-height: $_line-height;
+    letter-spacing: $_letter-spacing;
+    text-transform: $_text-transform;
+}
