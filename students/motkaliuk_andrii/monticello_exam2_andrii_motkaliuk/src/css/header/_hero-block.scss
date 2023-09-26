@@ -1,0 +1,14 @@
+.container,
+.row,
+.col,
+.search-wrapper {
+    height: 100%;
+}
+
+.hero-block {
+    background-image: url(../images/header-background.jpg);
+    background-size: cover;
+    // height: calc(100vh - $nav-height-desktop);
+    background-position: center center;
+
+}

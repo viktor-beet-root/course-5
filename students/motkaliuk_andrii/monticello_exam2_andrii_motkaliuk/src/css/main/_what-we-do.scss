@@ -1,0 +1,118 @@
+.what-we-do {
+    color: #2C4058;
+    font-family: Open Sans, $fallback;
+    margin: 0;
+    padding-top: 130px;
+
+}
+
+.container {}
+
+.row .right {
+    justify-content: end;
+}
+
+.wwd-title {
+    display: block;
+    font-family: Montserrat;
+    font-size: 44px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.wwd-main-title {
+    text-align: center;
+    padding-bottom: 150px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        max-width: 100px;
+        width: 100%;
+        height: 1px;
+        background-color: $color-black;
+
+        top: -30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.wwd-subtitle {
+    font-family: Montserrat, $fallback;
+    font-size: 22px;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.wwd-decription {
+    line-height: 30px;
+    margin: 0;
+    padding: 20px 0 40px;
+}
+
+.wwd-image-wrapper {
+    max-width: 630px;
+    width: 100%;
+    max-height: 470px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.wwd-pseudoelement-wrapper-left {
+    &::before {
+        overflow: visible;
+        position: absolute;
+        content: url(../../images/rectangle-blue.svg);
+        display: block;
+        top: -50px;
+        right: 260px;
+    }
+}
+
+.wwd-pseudoelement-wrapper-right {
+    &::before {
+        overflow: visible;
+        position: absolute;
+        content: url(../../images/rectangle-purple.svg);
+        display: block;
+        top: -50px;
+        left: 260px;
+        z-index: 1;
+    }
+}
+
+.wwd-image {
+    z-index: 2;
+}
+
+.btn-wrapper {}
+
+.btn {}
+
+.wwd-location {
+    position: relative;
+    padding-top: 60px;
+
+
+    &__wwd-img {
+        display: inline-block;
+        position: absolute;
+        width: 9px;
+        height: 17px;
+        bottom: 0px;
+    }
+
+    &__decription {
+        display: inline-block;
+        padding-left: 15px;
+        color: #000;
+        font-family: Open Sans;
+        font-size: 15px;
+        font-style: italic;
+        margin: 0;
+    }
+}
