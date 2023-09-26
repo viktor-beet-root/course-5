@@ -13839,6 +13839,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.slider').slick({
   vertical: true,
   verticalSwiping: true
 });
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
+  arrows: true,
+  dots: true,
+  draggable: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  easing: 'easeInOutCubic'
+});
 }();
 /******/ })()
 ;

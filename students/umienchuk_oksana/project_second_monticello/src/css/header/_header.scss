@@ -3,6 +3,9 @@
     position: relative;
     background-image: url(../../images/header-hero.jpg);
     // background-image: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .slider {
