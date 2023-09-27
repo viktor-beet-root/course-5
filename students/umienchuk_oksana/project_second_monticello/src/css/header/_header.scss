@@ -23,9 +23,11 @@
     // .slider__img
 
     &__img {
+        display: block;
         object-fit: cover;
         height: 100%;
-        opacity: .5;
+        width: 100%;
+        opacity: .7;
     }
 
     // .slider__text
