@@ -1,0 +1,32 @@
+@use 'sass:math';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+
+@import './variables';
+@import './mixins';
+
+@import './global';
+@import './menu';
+@import 'hero';
+
+html {
+    scroll-behavior: smooth;
+}
+
+.map {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
+
+.scroll-to-top {
+    display: block;
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, .15);
+    border-radius: 50%;
+}
