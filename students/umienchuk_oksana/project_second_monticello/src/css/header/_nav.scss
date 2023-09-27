@@ -1,1 +1,20 @@
+.nav {}
 
+.logo {}
+
+.menu-wrapper {
+    @include media-m(sm) {
+        display: none;
+    }
+}
+
+.menu {
+
+    // .menu__item
+
+    &__item {}
+}
+
+.menu-open-btn {}
+
+.only-mobile {}

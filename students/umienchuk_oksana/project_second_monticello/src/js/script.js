@@ -1,11 +1,15 @@
+
 import $ from 'jquery';
 import 'slick-carousel';
-$('.slider').slick({
+
+$('.hero-slider').slick({
     arrows: false,
     dots: true,
     draggable: true,
     speed: 500,
     easing: 'easeInOutCubic',
+    slidesToShow: 1,
+    slidesToScroll: 1,
     vertical: true,
     verticalSwiping: true,
 });
