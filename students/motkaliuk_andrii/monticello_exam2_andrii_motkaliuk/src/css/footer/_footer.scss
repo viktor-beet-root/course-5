@@ -1,1 +1,40 @@
+.footer {
+    padding: 200px 0;
+    background-color: $color-light-blue;
 
+}
+
+.footer-container {
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+
+.logo {
+
+
+
+    &__img {}
+}
+
+.social-media {
+
+
+    &__social-media-item {}
+}
+
+.social-media-item {
+    display: block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid red;
+
+    &__link {}
+
+
+    &__image {
+        height: 18px;
+    }
+}
+
+.copyrights {}

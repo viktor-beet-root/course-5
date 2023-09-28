@@ -1,0 +1,56 @@
+.hero {
+    height: 100vh;
+}
+
+.hero-slider {
+    height: 100%;
+
+    &__item {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        &:nth-child(n+2) {
+            display: none;
+        }
+
+        .slick-initialized & {
+            &:nth-child(n+2) {
+                display: block;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-image: url(../../images/big-house.jpg);
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__title {}
+
+    &__text {}
+}
