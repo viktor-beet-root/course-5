@@ -21,6 +21,7 @@
     width: 100%;
     padding: 60px;
     background-color: $color-white;
+    z-index: 10;
 
     &::before {
         content: "";

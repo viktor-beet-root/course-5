@@ -3,10 +3,17 @@
     font-family: Open Sans, $fallback;
     margin: 0;
     padding-top: 130px;
-
 }
 
-.container {}
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.right {
+    float: right;
+    padding-right: 30px;
+}
+
 
 .row .right {
     justify-content: end;
@@ -86,12 +93,9 @@
 }
 
 .wwd-image {
-    z-index: 2;
+    z-index: 100;
 }
 
-.btn-wrapper {}
-
-.btn {}
 
 .wwd-location {
     position: relative;
