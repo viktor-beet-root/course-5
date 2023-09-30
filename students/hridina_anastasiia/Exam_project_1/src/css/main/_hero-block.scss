@@ -1,0 +1,345 @@
+.hero-block {
+    background-image: url(../images/why_background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    @include media(md) {
+        height: 100%;
+    }
+
+    @include media(sm) {
+        height: 100%;
+        background-position: 20% 50%;
+    }
+
+    @include media(xs) {
+        background-position: 15% 60%;
+    }
+
+}
+
+.hero {
+
+    // .hero_container
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 110px 100px;
+
+        @include media(md) {
+            padding-top: 80px;
+
+        }
+
+        @include media(sm) {
+            padding-top: 25px;
+            padding-bottom: 58px;
+            padding-left: 10px;
+            padding-right: 15px;
+        }
+
+    }
+
+    // .hero__text
+
+    &__text {
+
+        // .hero__text_left
+
+        &_left {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            @include media(sm) {
+                text-align: center;
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.choose {
+
+    // .choose__heading
+
+    &__heading {
+        @include new-font($extra-font, 36px, 400, normal, 40px);
+        text-transform: capitalize;
+        color: $white-color;
+    }
+
+    // .choose__text
+
+    &__text {
+        @include new-font;
+        color: $white-color;
+    }
+}
+
+.btn-wrapper {
+    padding-top: 32px;
+
+    @include media(sm) {
+        padding-top: 10px;
+    }
+}
+
+.button {
+    @include new-font($extra-font, 16px, 400, normal, 20px, 1.12px);
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    gap: 12px;
+    color: $white-color;
+    padding: 14px 20px;
+    background-color: $dodgerblue-color;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $dodgerbluedarker-color;
+        height: 48.2px;
+        clip-path: polygon(0 0, 40% 0%, 100% 100%, 100% 100%, 0 100%);
+        width: 95px;
+        right: 95.5px;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &:hover {
+        background-color: $dodgerbluedarker-color;
+    }
+
+}
+
+.image-wrapper {
+
+    @include media(sm) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    @include media(xs) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 20px;
+    }
+
+}
+
+.image {
+
+    // .image__right
+
+    &__right {
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+
+        @supports not (aspect-ratio: 3/2) {
+            height: 220px;
+        }
+
+        &:first-child {
+            margin-bottom: 15px;
+            margin-left: 45px;
+
+            @include media(sm) {
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(2) {
+            margin-left: 120px;
+
+            @include media(sm) {
+                margin-left: 20px;
+            }
+
+            @include media(xs) {
+                margin-left: 0;
+            }
+        }
+
+
+        @include media(md) {
+            width: 85%;
+        }
+
+        @include media(sm) {
+            width: 100%;
+        }
+
+        @include media(xs) {
+            width: 90%;
+        }
+
+        @include media(xxs) {
+            width: 95%;
+        }
+    }
+
+}
+
+.search {
+
+    // .search__links
+
+    &__links {
+        background-color: $darkgrey-color;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        position: relative;
+        bottom: 0;
+
+
+        @include media(md) {
+            padding-top: 5px;
+        }
+
+        @include media(sm) {
+            padding-top: 5px;
+            padding-bottom: 15px;
+            justify-content: center;
+        }
+
+        @include media(xxs) {
+            padding-top: 10px;
+        }
+    }
+}
+
+.links-wrapper {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 160px;
+    margin-top: 90px;
+    margin-bottom: 0;
+
+    @include media(lg) {
+        gap: 150px;
+    }
+
+    @include media(md) {
+        gap: 65px;
+        padding-left: 0;
+    }
+
+    @include media(sm) {
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+    }
+
+    @include media(xs) {
+        gap: 22px;
+        padding-left: 10px;
+    }
+
+    @include media(xxs) {
+        gap: 100px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.links {
+
+    // .links__item
+
+    &__item {
+        @include new-font($extra-font, 36px, 400, normal, 40px);
+        text-transform: capitalize;
+        color: $white-color;
+        position: relative;
+        white-space: nowrap;
+
+        @include media(lg) {
+            font-size: 30px;
+        }
+
+        @include media(md) {
+            font-size: 30px;
+        }
+
+        @include media(sm) {
+            font-size: 20px;
+        }
+
+        @include media(xxs) {
+            font-size: 25px;
+            padding-bottom: 25px;
+        }
+
+        &:nth-child(-n+2) {
+            &::after {
+                content: '';
+                position: absolute;
+                border-top: 1px dashed $white-color;
+                border-radius: 50%;
+                bottom: -110%;
+                left: 51%;
+                padding: 50px;
+                width: 280px;
+                height: 105px;
+                clip-path: ellipse(50% 50%);
+                opacity: .5;
+
+                @include media(lg) {
+                    left: 44%;
+                }
+
+                @include media(md) {
+                    visibility: hidden;
+                }
+
+                @include media(xs) {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+
+    // .links_svg
+
+    &_svg {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 130%;
+        left: 37%;
+
+        @include media(sm) {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include media(xxs) {
+            width: 45px;
+            height: 45px;
+        }
+    }
+}
