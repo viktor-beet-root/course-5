@@ -1,51 +1,48 @@
 .footer {
-    background-color: $bgFooter;
+    background-color: $color-black;
+    padding: 80px 0;
 
-    &__container {
+    @include media() {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+
+
+    &__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        text-align: center;
-        // padding: 115px 15px 48px;
-    }
-
-    &__logo-link {
-        display: inline-block;
-        font-size: 24px;
-        letter-spacing: 3px;
-        color: $textColorWhite;
-        font-weight: 700;
-        text-decoration: none;
-        text-transform: uppercase;
-        line-height: 1.2;
-        margin-bottom: 3px;
     }
 
     &__text {
-        font-size: 16px;
-        letter-spacing: 0.5px;
-        margin-bottom: 22px;
+        padding-top: 10px;
+        @include fonts-type ($main-font, $font-size-14, $font-weight-400, $line-height-20, 2.8px);
+        color: $color-white;
     }
+}
 
-    &__list {
+.links {
+
+    &__wrapper {
+        padding-top: 20px;
         display: flex;
-        justify-content: space-between;
-        width: 165px;
     }
 
     &__item {
-        &-link {
-            display: block;
 
-            &:hover .footer__svg>path {
-                fill: $fiilSvgFooter;
-                transition: fill .5s ease-in-out;
-            }
+
+        &:not(:last-child) {
+            padding-right: 32px;
         }
     }
 
-    &__svg>path {
-        fill: $textColorPage;
+
+    &__svg {
+        fill: $color-white;
+
+        &-blue {
+            fill: $color-darkblue;
+        }
     }
 }

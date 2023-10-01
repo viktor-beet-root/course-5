@@ -3,253 +3,253 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
     <title>Bhromaon</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body class="page">
+<body>
     <header class="header">
-        <section class="header__main">
+        <div class="hero">
             <div class="container">
-                <div class="header__wrapp">
-                    <h1 class="header__heading">Bhromaon</h1>
-                    <span class="header__text">Safe Travel Anywhere</span>
-                    <form class="header__search" action="#" method="GET">
-                        <div class="header__search-wrapp">
-                            <input class="header__search-input" type="search"
-                                placeholder="Search Your Travel Destination">
-                            <button class="header__search-btn">
-                                <img class="header__search-btn-img" src="images/search.png" alt="">
-                                <span class="header__search-btn-text">Search</span>
-                            </button>
-                        </div>
-                    </form>
-                    <a href="#whychose" class="header__scroll">Scroll Down
-                        <span class="header__scroll-elem"></span>
-                    </a>
+                <div class="hero__wrapper">
+                    <div class="hero__title">
+                        <h1 class="title-h1">
+                            Bhromaon
+                        </h1>
+                        <p class="subtitle">
+                            Safe Travel Anywhere
+                        </p>
+                        <form class="search" action="#" method="get">
+                            <div class="search__wrapper">
+                                <input type="text" name="search" placeholder="Search Your Travel Destination"
+                                    class="search__input input">
+                                <button type="submit" class="search__button btn">
+                                    <img src="./images/search.svg" alt="" />
+                                    <span class="search__span">Search</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="scroll">
+                        <a href="#main" class="scroll__link">
+                            <p class="scroll__text">Scroll Down</p>
+                            <svg width="14" height="16" viewBox="0 0 14 16" class="scroll__down"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path id="Vector"
+                                    d="M6.46966 11.9211L0.396437 5.84786C0.103531 5.55496 0.103531 5.08008 0.396437 4.78721L1.10478 4.07886C1.39719 3.78646 1.87109 3.7859 2.16419 4.07761L7 8.89077L11.8358 4.07761C12.1289 3.7859 12.6028 3.78646 12.8952 4.07886L13.6035 4.78721C13.8964 5.08011 13.8964 5.55499 13.6035 5.84786L7.53034 11.9211C7.23744 12.214 6.76256 12.214 6.46966 11.9211Z" />
+                            </svg>
+
+                        </a>
+                    </div>
                 </div>
             </div>
-        </section>
-        <div class="menu__wrapp">
-            <div class="container menu__container">
-                <div class="row menu__row">
-                    <div class="col-6 col-lg-4 logo">
-                        <a href="#" class="logo__link">Bhromaon</a>
+        </div>
+        <div class="header__menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2 col-lg-3 col-sm-12">
+                        <p class="header__logo logo">Bhromaon</p>
                     </div>
-                    <nav class="col-6 col-lg-8 menu">
-                        <input class="menu__input" hidden aria-hidden="true" type="checkbox" id="menuBtn">
-                        <label class="menu__btn" aria-label="button menu" for="menuBtn">
-                            <span class="menu__btn-line"></span>
+                    <nav class="header__nav col-10 col-lg-9 col-sm-12">
+                        <input type="checkbox" id="openMenuBtn" class="open-menu-input">
+                        <label class="open-menu-btn" for="openMenuBtn">
+                            <span></span>
                         </label>
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a href="#whychose" class="menu__link"><span class="menu__link-text">Who We
-                                        Are</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#whatwe" class="menu__link"><span class="menu__link-text">What We
-                                        Do</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#tourist" class="menu__link"><span class="menu__link-text">Travel With
-                                        Us</span></a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#footer" class="menu__link"><span class="menu__link-text">Contact
-                                        Us</span></a>
-                            </li>
+                        <ul class="menu__wrapper menu">
+                            <li class="menu__item"><a href="#" class="menu__link">Who We Are</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">What We Do</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Travel With Us</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <main class="main">
-        <section class="whychose" id="whychose">
-            <div class="container whychose__container">
+    <main class="main" id="main">
+        <section class="choose">
+            <div class="container">
                 <div class="row">
-                    <div class="col-6 col-xl-5 col-lg-12">
-                        <h2 class="whychose__heading">Why Choose Us</h2>
-                        <p class="whychose__text">Tion and dislike men who are so beguiled and demoralized by desire
-                            by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee
+                    <div class="col-6 col-lg-7 col-sm-12">
+                        <div class="choose__content">
+                            <h2 class="title-h2 choose__title-h2">
+                                Why Choose Us
+                            </h2>
+                            <p class="choose__text text">
+                                Tion and dislike men who are so beguiled and demoralized by desire by the charms of
+                                pleasure of the moment, so blinded by desire, that they cannot foresee
+                                <br class="enter">
+                                <br class="enter">
+                                Ddislike men who are so beguiled and demoralized by the charms of pleasure of the
+                                moment, so blinded by desire, that.
+                            </p>
+                            <a href="#" class="main__btn btn choose__btn">Explore Places</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-5 col-sm-12 choose__img-wrapper">
+                        <div class="choose__img col-8 col-lg-12">
+                            <img src="./images/image1.jpg" alt="#" class="img choose__photo-1 col-sm-6">
+                            <img src="./images/image2.jpg" alt="#" class="img choose__photo-2 col-sm-6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sprites">
+            <div class="container">
+                <div class="row sprites__wrapper">
+                    <div class="col-4 col-sm-12 sprites__container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                            class="sprites__search">
+                            <path
+                                d="M63.1296 55.3321L50.6662 42.8708C50.1037 42.3084 49.3411 41.9959 48.541 41.9959H46.5034C49.9537 37.5838 52.0038 32.0344 52.0038 25.9975C52.0038 11.6364 40.3655 0 26.0019 0C11.6384 0 0 11.6364 0 25.9975C0 40.3586 11.6384 51.9949 26.0019 51.9949C32.0398 51.9949 37.5903 49.9451 42.0031 46.4955V48.5328C42.0031 49.3327 42.3156 50.0951 42.8781 50.6576L55.3416 63.1188C56.5166 64.2937 58.4168 64.2937 59.5794 63.1188L63.1171 59.5817C64.2922 58.4068 64.2922 56.507 63.1296 55.3321ZM26.0019 41.9959C17.1638 41.9959 10.0007 34.8466 10.0007 25.9975C10.0007 17.1608 17.1513 9.99902 26.0019 9.99902C34.84 9.99902 42.0031 17.1483 42.0031 25.9975C42.0031 34.8341 34.8526 41.9959 26.0019 41.9959Z" />
+                        </svg>
+                        <p class="sprite__text">Search Places</p>
+                    </div>
+                    <div class="col-4 col-sm-12 sprites__container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                            class="sprites__ok">
+                            <path
+                                d="M32 1C14.8791 1 1 14.8791 1 32C1 49.1209 14.8791 63 32 63C49.1209 63 63 49.1209 63 32C63 14.8791 49.1209 1 32 1ZM32 7C45.8165 7 57 18.1814 57 32C57 45.8165 45.8186 57 32 57C18.1835 57 7 45.8186 7 32C7 18.1835 18.1814 7 32 7ZM49.5255 23.2834L46.7085 20.4436C46.1251 19.8555 45.1754 19.8516 44.5872 20.4351L26.9182 37.9621L19.4443 30.4275C18.8609 29.8394 17.9111 29.8355 17.323 30.4189L14.4831 33.2359C13.895 33.8192 13.8911 34.769 14.4746 35.3573L25.8223 46.7967C26.4056 47.3849 27.3554 47.3887 27.9435 46.8052L49.5171 25.4048C50.1051 24.8213 50.1089 23.8715 49.5255 23.2834V23.2834Z" />
+                        </svg>
+
+                        <p class="sprite__text">Select Places</p>
+                    </div>
+                    <div class="col-4 col-sm-12 sprites__container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"
+                            class="sprites__like">
+                            <path
+                                d="M58.2837 35.8363C59.38 33.98 60 32 60 29.6063C60 24.1044 55.3477 18.9088 49.2725 18.9088H44.7125C45.3275 17.3075 45.8187 15.3925 45.8187 13.0913C45.8187 3.992 41.1075 0 33.91 0C26.2091 0 26.6484 11.8666 24.94 13.575C22.0966 16.4184 18.7381 21.8809 16.345 24H4C1.79087 24 0 25.7909 0 28V58C0 60.2091 1.79087 62 4 62H12C13.8616 62 15.426 60.7282 15.8722 59.0062C21.4359 59.1314 25.2548 63.9987 38.0975 63.9987C39 63.9987 40 64 40.875 64C50.5146 64 54.8733 59.0721 54.9925 52.0838C56.6574 49.7806 57.5299 46.6935 57.16 43.71C58.3917 41.4035 58.868 38.6671 58.2837 35.8363ZM50.565 42.565C52.135 45.2062 50.7225 48.7412 48.8225 49.7612C49.785 55.8587 46.6215 57.9987 42.1825 57.9987H37.455C28.5001 57.9987 22.7014 53.2713 16 53.2713V30H17.365C20.91 30 25.8625 21.1387 29.1825 17.8175C32.7275 14.2725 31.5462 8.36375 33.91 6C39.8187 6 39.8187 10.1225 39.8187 13.0913C39.8187 17.9875 36.2738 20.1813 36.2738 24.9088H49.2725C51.9112 24.9088 53.9887 27.2725 54 29.6362C54.0113 31.9987 52.3975 34.3625 51.2163 34.3625C52.9024 36.1819 53.2626 40.017 50.565 42.565V42.565ZM11 54C11 55.6569 9.65688 57 8 57C6.34312 57 5 55.6569 5 54C5 52.3431 6.34312 51 8 51C9.65688 51 11 52.3431 11 54Z" />
+                        </svg>
+                        <p class="sprite__text">Book & Enjoy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="spain bg3">
+            <div class="container">
+                <div class="row spain1">
+                    <div class="col-6 col-lg-7 col-sm-12 spain__bg">
+                        <div class="spain__content">
+                            <p class="h3-subtitle">Spain</p>
+                            <h3 class="title-h3">
+                                Grand Spain Madrid
+                            </h3>
+                            <p class="spain__text text">
+                                But I must explain to you how all this mistaken idea of account to denouncing
+                                pleasure
+                                and praising pain was account born and I account will give you a complete
+                                account
+                                of the
+                                system
+                            </p>
+                            <a href="#" class="spain__btn main__btn btn">book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="spain bg4">
+            <div class="container">
+                <div class="row spain2">
+                    <div class="col-6 col-lg-7 col-sm-12 spain__bg">
+                        <div class="spain__content">
+                            <p class="h3-subtitle">Spain</p>
+                            <h3 class="title-h3">
+                                Grand Spain Madrid
+                            </h3>
+                            <p class="spain__text text">
+                                But I must explain to you how all this mistaken idea of account to denouncing
+                                pleasure and praising pain was account born and I account will give you
+                                a complete account of the system
+                            </p>
+                            <a href="#" class="spain__btn main__btn btn">book now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tourist">
+            <div class="container">
+                <div class="row tourist__wrapper">
+                    <h2 class="title-h2 col-12 tourist__title-h2">What Our Tourists Say</h2>
+                    <img src="./images/image3.jpg" alt="#" class="col-4 col-sm-12 img tourist__img">
+                    <div class="tourist__content col-8 col-sm-12">
+                        <h3 class="title-h3">SAM SUMON</h3>
+                        <p class="tourist__text text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                class="tourist__quot">
+                                <path
+                                    d="M18.125 10H15V7.5C15 6.12109 16.1211 5 17.5 5H17.8125C18.332 5 18.75 4.58203 18.75 4.0625V2.1875C18.75 1.66797 18.332 1.25 17.8125 1.25H17.5C14.0469 1.25 11.25 4.04688 11.25 7.5V16.875C11.25 17.9102 12.0898 18.75 13.125 18.75H18.125C19.1602 18.75 20 17.9102 20 16.875V11.875C20 10.8398 19.1602 10 18.125 10ZM6.875 10H3.75V7.5C3.75 6.12109 4.87109 5 6.25 5H6.5625C7.08203 5 7.5 4.58203 7.5 4.0625V2.1875C7.5 1.66797 7.08203 1.25 6.5625 1.25H6.25C2.79688 1.25 0 4.04688 0 7.5V16.875C0 17.9102 0.839844 18.75 1.875 18.75H6.875C7.91016 18.75 8.75 17.9102 8.75 16.875V11.875C8.75 10.8398 7.91016 10 6.875 10Z" />
+                            </svg>
+                            But I must explain to you how all this mistaken idea of account to
+                            denouncinpleasure and praising pain But I must explain to you how all this
+                            mistaken idea of account to nai denouncing pleasure and praising pain was
+                            account born and I account will give you a complete account of the system
+                            was account born and I account will give you a nai the complete account of
+                            the system
                         </p>
-                        <p class="whychose__text">Ddislike men who are so beguiled and demoralized by the charms of
-                            pleasure of the moment, so blinded by desire, that.</p>
-                        <a href="#" class="whychose__link">
-                            <span class="whychose__link-text">Explore Places</span>
-                        </a>
-                    </div>
-                    <div class="col-6 col-xl-7 col-lg-12">
-                        <div class="row">
-                            <div class="col-8 offset-1 col-lg-12 whychose__picture-1">
-                                <img class="whychose__img" src="images/why01.jpg" alt="picture">
-                            </div>
-                            <div class="col-8 offset-4 col-lg-12 whychose__picture-2">
-                                <img class="whychose__img" src="images/why02.jpg" alt="picture">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="search">
-            <div class="container search__container">
-                <div class="search__link search__link-01">
-                    <div class="search__link-around search__link-around01">
-                        <svg class="search__link-svg search__link" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            width="58px" height="60px">
-                            <path fill-rule="evenodd" fill="rgb(84, 116, 253)"
-                                d="M57.266,53.812 L54.312,56.766 L38.000,40.453 C37.062,41.297 36.031,42.048 34.906,42.703 C33.781,43.360 32.608,43.922 31.391,44.391 C30.171,44.861 28.881,45.212 27.523,45.445 C26.163,45.680 24.827,45.797 23.516,45.797 C20.327,45.797 17.350,45.188 14.586,43.969 C11.820,42.751 9.405,41.110 7.344,39.047 C5.280,36.986 3.663,34.571 2.492,31.805 C1.319,29.040 0.734,26.109 0.734,23.016 C0.734,19.830 1.319,16.852 2.492,14.086 C3.663,11.322 5.280,8.907 7.344,6.844 C9.405,4.783 11.820,3.165 14.586,1.992 C17.350,0.821 20.327,0.234 23.516,0.234 C26.609,0.234 29.538,0.821 32.305,1.992 C35.069,3.165 37.484,4.783 39.547,6.844 C41.608,8.907 43.249,11.322 44.469,14.086 C45.686,16.852 46.297,19.830 46.297,23.016 C46.297,24.329 46.178,25.665 45.945,27.023 C45.710,28.383 45.359,29.673 44.891,30.890 C44.420,32.110 43.858,33.281 43.203,34.406 C42.546,35.531 41.797,36.564 40.953,37.500 L57.266,53.812 L57.266,53.812 ZM3.125,23.016 C3.125,25.828 3.639,28.454 4.672,30.890 C5.702,33.329 7.155,35.485 9.031,37.359 C10.905,39.236 13.085,40.712 15.570,41.789 C18.053,42.868 20.703,43.406 23.516,43.406 C26.328,43.406 28.952,42.868 31.391,41.789 C33.827,40.712 35.983,39.236 37.859,37.359 C39.734,35.485 41.210,33.329 42.289,30.890 C43.366,28.454 43.906,25.828 43.906,23.016 C43.906,20.203 43.366,17.555 42.289,15.070 C41.210,12.587 39.734,10.408 37.859,8.531 C35.983,6.657 33.827,5.204 31.391,4.172 C28.952,3.141 26.328,2.625 23.516,2.625 C20.703,2.625 18.053,3.141 15.570,4.172 C13.085,5.204 10.905,6.657 9.031,8.531 C7.155,10.408 5.702,12.587 4.672,15.070 C3.639,17.555 3.125,20.203 3.125,23.016 L3.125,23.016 Z" />
-                        </svg>
-                    </div>
-                    <h2 class="search__link-heading">Search Places</h2>
-                </div>
-                <div class="search__link search__link-02">
-                    <div class="search__link-around search__link-around02">
-                        <svg class="search__link-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px"
-                            height="60px">
-                            <path fill-rule="evenodd" fill="rgb(255, 99, 99)"
-                                d="M30.000,0.547 C34.124,0.547 38.016,1.320 41.672,2.867 C45.328,4.414 48.514,6.548 51.234,9.265 C53.952,11.986 56.086,15.172 57.633,18.828 C59.180,22.484 59.953,26.376 59.953,30.500 C59.953,34.626 59.180,38.515 57.633,42.172 C56.086,45.828 53.952,49.016 51.234,51.734 C48.514,54.454 45.328,56.586 41.672,58.133 C38.016,59.679 34.124,60.453 30.000,60.453 C25.873,60.453 21.984,59.679 18.328,58.133 C14.672,56.586 11.484,54.454 8.766,51.734 C6.045,49.016 3.914,45.828 2.367,42.172 C0.820,38.515 0.047,34.626 0.047,30.500 C0.047,26.376 0.820,22.484 2.367,18.828 C3.914,15.172 6.045,11.986 8.766,9.265 C11.484,6.548 14.672,4.414 18.328,2.867 C21.984,1.320 25.873,0.547 30.000,0.547 L30.000,0.547 ZM30.000,58.062 C33.843,58.062 37.429,57.337 40.758,55.883 C44.084,54.430 47.016,52.486 49.547,50.047 C51.984,47.516 53.928,44.587 55.383,41.258 C56.835,37.931 57.562,34.345 57.562,30.500 C57.562,26.657 56.835,23.071 55.383,19.742 C53.928,16.415 51.984,13.484 49.547,10.953 C47.016,8.516 44.084,6.572 40.758,5.117 C37.429,3.665 33.843,2.937 30.000,2.937 C26.155,2.937 22.569,3.665 19.242,5.117 C15.913,6.572 12.984,8.516 10.453,10.953 C8.014,13.484 6.070,16.415 4.617,19.742 C3.163,23.071 2.437,26.657 2.437,30.500 C2.437,34.345 3.163,37.931 4.617,41.258 C6.070,44.587 8.014,47.516 10.453,50.047 C12.984,52.486 15.913,54.430 19.242,55.883 C22.569,57.337 26.155,58.062 30.000,58.062 L30.000,58.062 ZM45.047,19.812 C45.328,19.439 45.726,19.250 46.242,19.250 C46.756,19.250 47.202,19.439 47.578,19.812 C47.859,20.188 48.000,20.634 48.000,21.148 C48.000,21.665 47.811,22.062 47.437,22.344 L26.906,42.312 C26.812,42.501 26.647,42.618 26.414,42.664 C26.179,42.712 25.968,42.734 25.781,42.734 C25.500,42.734 25.241,42.712 25.008,42.664 C24.773,42.618 24.608,42.501 24.516,42.312 L16.500,34.297 C16.124,33.923 15.938,33.477 15.938,32.961 C15.938,32.447 16.124,32.047 16.500,31.765 C16.781,31.392 17.179,31.203 17.695,31.203 C18.209,31.203 18.655,31.392 19.031,31.765 L25.781,38.515 L45.047,19.812 L45.047,19.812 Z" />
-                        </svg>
-                    </div>
-                    <h2 class="search__link-heading">Select Places</h2>
-                </div>
-                <div class="search__link">
-                    <div class="search__link-around search__link-around03">
-                        <svg class="search__link-svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62px"
-                            height="60px">
-                            <path fill-rule="evenodd" fill="rgb(0, 162, 255)"
-                                d="M61.586,28.656 C61.586,29.313 61.491,29.922 61.305,30.484 C61.116,31.047 60.834,31.563 60.461,32.031 C60.085,32.501 59.663,32.875 59.195,33.156 C58.725,33.437 58.211,33.672 57.648,33.859 C57.930,34.329 58.163,34.822 58.351,35.336 C58.538,35.852 58.633,36.439 58.633,37.094 C58.633,37.656 58.538,38.219 58.351,38.781 C58.163,39.344 57.930,39.860 57.648,40.328 C57.273,40.704 56.851,41.055 56.383,41.383 C55.912,41.712 55.445,41.969 54.977,42.156 C55.258,42.626 55.491,43.140 55.680,43.703 C55.866,44.266 55.961,44.828 55.961,45.391 C55.961,46.047 55.866,46.634 55.680,47.148 C55.491,47.665 55.258,48.157 54.977,48.625 C54.601,49.095 54.179,49.493 53.711,49.820 C53.241,50.150 52.726,50.361 52.164,50.453 C52.538,50.923 52.819,51.416 53.008,51.929 C53.195,52.446 53.289,53.033 53.289,53.687 C53.289,54.344 53.148,55.001 52.867,55.656 C52.586,56.313 52.210,56.876 51.742,57.344 C51.180,57.814 50.569,58.187 49.914,58.469 C49.257,58.750 48.554,58.890 47.805,58.890 L29.242,58.890 C28.585,58.890 27.836,58.798 26.992,58.609 C26.148,58.423 25.256,58.141 24.320,57.766 C23.382,57.484 22.444,57.133 21.508,56.711 C20.570,56.289 19.631,55.891 18.695,55.515 C17.570,55.047 16.467,54.580 15.391,54.109 C14.312,53.641 13.538,53.406 13.070,53.406 L0.273,53.406 L0.273,25.984 L1.398,25.844 C6.742,25.844 10.398,25.844 12.367,25.844 C13.211,25.844 13.984,25.751 14.687,25.562 C15.391,25.376 16.116,25.000 16.867,24.437 C17.711,23.969 18.671,23.312 19.750,22.469 C20.827,21.625 22.116,20.594 23.617,19.375 C26.522,16.938 28.234,13.890 28.750,10.234 C29.264,6.578 29.523,4.469 29.523,3.906 C29.523,3.344 29.664,2.805 29.945,2.289 C30.226,1.775 30.600,1.375 31.070,1.094 C31.538,0.720 32.030,0.461 32.547,0.320 C33.061,0.179 33.553,0.109 34.023,0.109 C34.773,0.109 35.522,0.204 36.273,0.390 C37.023,0.579 37.726,1.001 38.383,1.656 C39.038,2.313 39.554,3.181 39.930,4.258 C40.303,5.337 40.492,6.767 40.492,8.547 C40.492,10.142 40.373,11.665 40.141,13.117 C39.906,14.572 39.600,15.954 39.226,17.266 C38.945,18.579 38.594,19.775 38.172,20.851 C37.750,21.930 37.398,22.844 37.117,23.594 L56.242,23.594 C57.086,23.594 57.811,23.712 58.422,23.945 C59.031,24.180 59.617,24.532 60.180,25.000 C60.648,25.470 60.999,26.009 61.234,26.617 C61.467,27.228 61.586,27.907 61.586,28.656 L61.586,28.656 L61.586,28.656 ZM56.242,31.609 C56.710,31.609 57.132,31.539 57.508,31.398 C57.881,31.258 58.163,31.047 58.351,30.765 C58.633,30.484 58.866,30.181 59.055,29.852 C59.241,29.524 59.336,29.126 59.336,28.656 C59.336,27.907 59.055,27.250 58.492,26.687 C57.930,26.125 57.178,25.844 56.242,25.844 L47.805,25.844 C47.805,25.938 47.805,25.938 47.805,25.844 L33.320,25.844 L34.164,24.156 C36.788,17.687 38.102,12.484 38.102,8.547 C38.102,5.453 37.585,3.649 36.555,3.133 C35.522,2.618 34.678,2.359 34.023,2.359 C33.742,2.359 33.320,2.500 32.758,2.781 C32.195,3.062 31.914,3.438 31.914,3.906 C31.914,4.469 31.866,5.407 31.773,6.719 C31.679,8.033 31.398,9.531 30.930,11.219 C30.459,12.906 29.780,14.642 28.891,16.422 C27.999,18.204 26.757,19.751 25.164,21.062 C23.569,22.376 22.233,23.477 21.156,24.367 C20.077,25.259 19.069,25.984 18.133,26.547 C17.194,27.109 16.256,27.531 15.320,27.812 C14.382,28.094 13.398,28.234 12.367,28.234 C11.616,28.234 10.796,28.234 9.906,28.234 C9.014,28.234 8.100,28.234 7.164,28.234 C6.320,28.234 5.498,28.234 4.703,28.234 C3.905,28.234 3.227,28.234 2.664,28.234 L2.664,51.016 L13.070,51.016 C13.725,51.016 14.593,51.226 15.672,51.648 C16.748,52.070 18.084,52.611 19.680,53.265 C20.429,53.641 21.248,54.039 22.141,54.461 C23.030,54.883 23.898,55.234 24.742,55.515 C25.678,55.797 26.522,56.056 27.273,56.289 C28.023,56.524 28.680,56.641 29.242,56.641 L44.851,56.641 L47.805,56.641 C48.273,56.641 48.695,56.548 49.070,56.359 C49.444,56.172 49.773,55.937 50.055,55.656 C50.336,55.469 50.547,55.188 50.687,54.812 C50.828,54.439 50.898,54.063 50.898,53.687 C50.898,53.219 50.828,52.822 50.687,52.492 C50.547,52.165 50.336,51.859 50.055,51.578 C49.773,51.297 49.444,51.086 49.070,50.945 C48.695,50.805 48.273,50.734 47.805,50.734 L47.523,50.734 L47.523,48.344 L50.758,48.344 C51.131,48.344 51.507,48.273 51.883,48.133 C52.256,47.992 52.586,47.781 52.867,47.500 C53.054,47.219 53.241,46.891 53.430,46.516 C53.616,46.142 53.711,45.766 53.711,45.391 C53.711,45.017 53.616,44.641 53.430,44.266 C53.241,43.892 53.054,43.562 52.867,43.281 C52.586,43.094 52.256,42.907 51.883,42.719 C51.507,42.532 51.131,42.437 50.758,42.437 L49.773,42.437 L49.773,40.047 L53.289,40.047 C53.663,40.047 54.038,39.976 54.414,39.836 C54.788,39.695 55.117,39.484 55.398,39.203 C55.680,38.922 55.912,38.594 56.102,38.219 C56.288,37.845 56.383,37.469 56.383,37.094 C56.383,36.626 56.288,36.204 56.102,35.828 C55.912,35.454 55.680,35.173 55.398,34.984 C55.117,34.703 54.788,34.470 54.414,34.281 C54.038,34.094 53.663,34.000 53.289,34.000 L52.164,34.000 L52.164,31.609 L56.242,31.609 L56.242,31.609 L56.242,31.609 L56.242,31.609 L56.242,31.609 Z" />
-                        </svg>
-                    </div>
-                    <h2 class="search__link-heading">Book & Enjoy</h2>
-                </div>
-            </div>
-        </section>
-        <section class="whatwe" id="whatwe">
-            <div class="container whatwe__container">
-                <div class="row">
-                    <div class="col-6 col-xl-8 col-lg-10 col-md-12">
-                        <div class="whatwe__wrapp">
-                            <h2 class="whatwe__heading-2">Spain</h2>
-                            <h2 class="whatwe__heading-1">Grand Spain Madrid</h2>
-                            <p class="whatwe__text">But I must explain to you how all this mistaken idea of account
-                                to denouncing pleasure and praising pain was account born and I account will give
-                                you a complete account of the system</p>
-                            <a href="#" class="whatwe__link"><span class="whatwe__link-text">Book Now</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="whatwe-02">
-            <div class="container whatwe__container">
-                <div class="row">
-                    <div class="col-6 offset-6 col-xl-8 col-lg-10 col-md-12 whatwe__wrapp-2">
-                        <div class="whatwe__wrapp">
-                            <h3 class="whatwe__heading-2">Spain</h3>
-                            <h2 class="whatwe__heading-1">Grand Spain Madrid</h2>
-                            <p class="whatwe__text">But I must explain to you how all this mistaken idea of account
-                                to denouncing pleasure and praising pain was account born and I account will give
-                                you a complete account of the system</p>
-                            <a href="#" class="whatwe__link"><span class="whatwe__link-text">Book Now</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="tourist" id="tourist">
-            <div class="container tourist__container">
-                <h2 class="tourist__heading">What Our Tourist Say</h2>
-                <div class="row ">
-                    <div class="col-5 col-xl-12 col-lg-12 col-sm-12 tourist__picture"><img class="tourist__picture-img"
-                            src="images/turistImg.jpg" alt="Tourist">
-                    </div>
-                    <div class="col-7 col-xl-12 tourist__content-wrapp">
-                        <div class="tourist__content">
-                            <h2 class="tourist__content-title">Sam Sumon</h2>
-                            <div class="tourist__content-paragraph">
-                                <div class="tourist__content-quotes"><svg aria-hidden="true" focusable="false"
-                                        data-prefix="fas" role="img" viewBox="0 0 512 512">
-                                        <path fill="#5474fd"
-                                            d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
-                                        </path>
-                                    </svg>
-                                </div>
-                                <p class="tourist__content-text"> But I must explain to you how all this mistaken
-                                    idea of account to denouncinpleasure and praising pain But I must explain to you
-                                    how all this mistaken idea of account to nai denouncing pleasure and praising
-                                    pain was account born and I account will give you a complete account of the
-                                    system was account born and I account will give you a nai the complete account
-                                    of the system
-                                </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer" id="footer">
-        <div class="container footer__container">
-            <a href="#" class="footer__logo-link">Bhromaon</a>
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <p class="footer__logo logo">Bhromaon</p>
             <p class="footer__text">Safe Travel Anywhere</p>
-            <ul class="footer__list">
-                <li class="footer__item">
-                    <a href="#" class="footer__item-link">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 320 512"
-                            width="9px" heigh="16px" class="footer__svg">
-                            <path fill="currentColor"
-                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
-                            </path>
+            <ul class="links__wrapper">
+                <li class="links__item"><a href="#" class="links__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32"
+                            class="links__svg">
+                            <path
+                                d="M17.4463 18L18.335 12.2087H12.7782V8.45063C12.7782 6.86625 13.5544 5.32188 16.0432 5.32188H18.5694V0.39125C18.5694 0.39125 16.2769 0 14.085 0C9.50879 0 6.51754 2.77375 6.51754 7.795V12.2087H1.43066V18H6.51754V32H12.7782V18H17.4463Z" />
                         </svg>
                     </a>
                 </li>
-                <li class="footer__item">
-                    <a href="#" class="footer__item-link">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 512 512"
-                            width="15px" heigh="12px" class="footer__svg">
-                            <path fill="currentColor"
-                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                            </path>
+                <li class="links__item">
+                    <a href="#" class="links__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"
+                            class="links__svg">
+                            <path
+                                d="M28.7106 9.48201C28.7309 9.76626 28.7309 10.0506 28.7309 10.3348C28.7309 19.0048 22.132 28.9947 10.0711 28.9947C6.35531 28.9947 2.90356 27.9185 0 26.0506C0.527937 26.1114 1.0355 26.1318 1.58375 26.1318C4.64969 26.1318 7.47206 25.0963 9.72587 23.3298C6.84262 23.2688 4.42637 21.3805 3.59387 18.7815C4 18.8424 4.40606 18.883 4.8325 18.883C5.42131 18.883 6.01019 18.8018 6.55837 18.6597C3.55331 18.0505 1.29944 15.4109 1.29944 12.2231V12.1419C2.1725 12.6293 3.18781 12.9338 4.26388 12.9744C2.49738 11.7967 1.34006 9.78657 1.34006 7.51245C1.34006 6.2942 1.66488 5.17745 2.23344 4.20282C5.46187 8.18251 10.3147 10.7814 15.7563 11.0658C15.6548 10.5784 15.5938 10.0709 15.5938 9.56326C15.5938 5.94901 18.5177 3.00488 22.1522 3.00488C24.0405 3.00488 25.7461 3.79676 26.9441 5.07595C28.4263 4.7917 29.8476 4.24345 31.1065 3.4922C30.6191 5.01507 29.5836 6.29426 28.2232 7.10638C29.5431 6.96432 30.8222 6.59876 31.9999 6.0912C31.1066 7.39063 29.9898 8.54795 28.7106 9.48201Z" />
                         </svg>
                     </a>
                 </li>
-                <li class="footer__item">
-                    <a href="#" class="footer__item-link">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 448 512"
-                            width="15px" heigh="15px" class="footer__svg">
-                            <path fill="currentColor"
-                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                            </path>
+                <li class="links__item"><a href="#" class="links__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"
+                            class="links__svg-blue">
+                            <path
+                                d="M26 2H1.99375C0.89375 2 0 2.90625 0 4.01875V27.9813C0 29.0938 0.89375 30 1.99375 30H26C27.1 30 28 29.0938 28 27.9813V4.01875C28 2.90625 27.1 2 26 2ZM8.4625 26H4.3125V12.6375H8.46875V26H8.4625ZM6.3875 10.8125C5.05625 10.8125 3.98125 9.73125 3.98125 8.40625C3.98125 7.08125 5.05625 6 6.3875 6C7.7125 6 8.79375 7.08125 8.79375 8.40625C8.79375 9.7375 7.71875 10.8125 6.3875 10.8125ZM24.0187 26H19.8687V19.5C19.8687 17.95 19.8375 15.9563 17.7125 15.9563C15.55 15.9563 15.2188 17.6438 15.2188 19.3875V26H11.0688V12.6375H15.05V14.4625H15.1062C15.6625 13.4125 17.0188 12.3062 19.0375 12.3062C23.2375 12.3062 24.0187 15.075 24.0187 18.675V26Z" />
                         </svg>
                     </a>
                 </li>
-                <li class="footer__item">
-                    <a href="#" class="footer__item-link">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 576 512"
-                            width="17px" heigh="16px" class="footer__svg">
-                            <path fill="currentColor"
-                                d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                            </path>
+                <li class="links__item">
+                    <a href="#" class="links__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="32" viewBox="0 0 36 32"
+                            class="links__svg">
+                            <path
+                                d="M34.3534 7.75519C33.9609 6.27706 32.8042 5.11294 31.3357 4.71788C28.6738 4 18 4 18 4C18 4 7.32623 4 4.66429 4.71788C3.19573 5.113 2.0391 6.27706 1.64654 7.75519C0.933289 10.4344 0.933289 16.0243 0.933289 16.0243C0.933289 16.0243 0.933289 21.6141 1.64654 24.2933C2.0391 25.7714 3.19573 26.8871 4.66429 27.2821C7.32623 28 18 28 18 28C18 28 28.6737 28 31.3357 27.2821C32.8042 26.8871 33.9609 25.7714 34.3534 24.2933C35.0667 21.6141 35.0667 16.0243 35.0667 16.0243C35.0667 16.0243 35.0667 10.4344 34.3534 7.75519ZM14.509 21.0994V10.9491L23.4302 16.0244L14.509 21.0994Z" />
                         </svg>
                     </a>
                 </li>
-                <li class="footer__item">
-                    <a href="#" class="footer__item-link">
-                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img" viewBox="0 0 496 512"
-                            width="14px" heigh="14px" class="footer__svg">
-                            <path fill="currentColor"
-                                d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z">
-                            </path>
+                <li class="links__item">
+                    <a href="#" class="links__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 62 62"
+                            class="links__svg">
+                            <path
+                                d="M62 31C62 48.125 48.125 62 31 62C27.8 62 24.725 61.5125 21.825 60.6125C23.0875 58.55 24.975 55.175 25.675 52.4875C26.05 51.0375 27.6 45.1125 27.6 45.1125C28.6125 47.0375 31.5625 48.675 34.7 48.675C44.05 48.675 50.7875 40.075 50.7875 29.3875C50.7875 19.15 42.425 11.4875 31.675 11.4875C18.3 11.4875 11.1875 20.4625 11.1875 30.25C11.1875 34.8 13.6125 40.4625 17.475 42.2625C18.0625 42.5375 18.375 42.4125 18.5125 41.85C18.6125 41.425 19.1375 39.3125 19.375 38.3375C19.45 38.025 19.4125 37.75 19.1625 37.45C17.9 35.8875 16.875 33.0375 16.875 30.375C16.875 23.5375 22.05 16.925 30.875 16.925C38.4875 16.925 43.825 22.1125 43.825 29.5375C43.825 37.925 39.5875 43.7375 34.075 43.7375C31.0375 43.7375 28.75 41.225 29.4875 38.1375C30.3625 34.45 32.05 30.475 32.05 27.8125C32.05 25.4375 30.775 23.45 28.125 23.45C25.0125 23.45 22.5125 26.6625 22.5125 30.975C22.5125 33.725 23.4375 35.575 23.4375 35.575C23.4375 35.575 20.375 48.55 19.8125 50.975C19.1875 53.65 19.4375 57.425 19.7 59.875C8.175 55.3625 0 44.1375 0 31C0 13.875 13.875 0 31 0C48.125 0 62 13.875 62 31Z" />
                         </svg>
                     </a>
                 </li>
             </ul>
         </div>
     </footer>
+
+
+
 </body>
 
 </html>
