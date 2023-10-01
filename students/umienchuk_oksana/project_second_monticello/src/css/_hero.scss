@@ -1,11 +1,9 @@
+* {
+    outline: 2px solid red;
+}
+
 .hero {
     height: 100vh;
-    // position: relative;
-    // background-image: url(../../images/header-hero.jpg);
-    // background-image: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size: cover;
 }
 
 .hero-slider {
@@ -14,9 +12,9 @@
     // .slider__block
 
     &__block {
-        height: 100vh;
         position: relative;
-        display: flex;
+        height: 100vh;
+        display: flex !important;
         justify-content: center;
         align-items: center;
 
@@ -30,10 +28,6 @@
             }
         }
 
-        &__container {
-            position: absolute;
-        }
-
         &::after {
             content: '';
             display: block;
@@ -42,70 +36,65 @@
             bottom: 0;
             right: 0;
             left: 0;
-            z-index: 2;
             background-image: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
+            z-index: 2;
         }
-
-        // position: relative;
-        // overflow: hidden;
     }
 
     // .slider__img
 
     &__img {
-        // display: block;
-        width: 100%;
         position: absolute;
         top: 0;
-        bottom: 0;
-        right: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         object-fit: cover;
         object-position: center;
+        width: 100%;
         z-index: 1;
-        height: 100vh;
-        // opacity: .7;
+        height: 100%;
     }
 
-    // .slider__text
-
-    &__text {
-        // position: absolute;
-        // z-index: 10;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        // text-align: center;
+    &__container {
+        position: relative;
+        z-index: 10;
     }
 
-    // .slider__title
+    // .hero-slider__title
 
     &__title {
-        // white-space: nowrap;
-        // color: $header-title;
-        // font-size: 80px;
-        // font-weight: 700;
-        // letter-spacing: 8px;
-        // margin: 0 0 20px;
+        text-align: center;
+        white-space: nowrap;
+        color: $header-title;
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin: 0 0 20px;
     }
 
-    &__sub-title {
-        //     white-space: nowrap;
-        //     color: $header-title;
-        //     font-size: 44px;
-        //     font-weight: 700;
-        //     letter-spacing: 8px;
-        //     margin: 0 0 20px;
-    }
-
-    // .slider__sub-text
+    // .hero-slider__sub-text
 
     &__sub-text {
-        // color: $header-title;
-        // font-size: 18px;
-        // font-weight: 400;
-        // letter-spacing: 5.4px;
-        // text-transform: uppercase;
+        text-align: center;
+        color: $header-title;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 5.4px;
+        text-transform: uppercase;
+    }
+
+    // .hero-slider__sub-title
+
+    &__sub-title {
+        text-align: center;
+        // white-space: nowrap;
+        color: $header-title;
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin: 0 0 20px;
+        text-transform: uppercase;
     }
 }
 
@@ -114,9 +103,17 @@
     bottom: 4%;
     left: 50%;
     transform: translate(-50%, -50%);
+    stroke: green;
+    fill: aqua;
+
+    @include media(sm) {
+        bottom: 0;
+    }
 }
 
-.icon-img {}
+.icon-img {
+    fill: aqua;
+}
 
 /* Слайдер */
 .slick-slider {}
@@ -133,9 +130,13 @@
 }
 
 /* Лента слайдов */
-.hero-slider .slick-track {
-    display: block;
-}
+// .slider .slick-track {
+//     display: block;
+
+//     // @include media(md) {
+//     //     display: flex;
+//     // }
+// }
 
 /* Слайд */
 .slick-slide {}
@@ -174,16 +175,24 @@
 
 /* Точки (булиты) */
 .hero-slider .slick-dots {
-    bottom: unset;
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 40px;
     top: 50%;
-
+    bottom: 50%;
 }
 
 /* Список точок */
 .hero-slider .slick-dots li {
     list-style: none;
     margin: 10px 0;
+
+    @include media(sm) {
+        margin: 1px 0;
+    }
 }
 
 /* Елемент точки */
@@ -202,5 +211,3 @@
 .hero-slider .slick-dots li.slick-active button {
     background-color: $color-white;
 }
-
-.slick-slide {}

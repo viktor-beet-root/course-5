@@ -13830,6 +13830,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
 
 
+console.log((jquery__WEBPACK_IMPORTED_MODULE_0___default()));
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   arrows: false,
   dots: true,
@@ -13839,7 +13840,19 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   vertical: true,
-  verticalSwiping: true
+  verticalSwiping: true,
+  responsive: [{
+    breakpoint: 992,
+    settings: {
+      // dots: false,
+      // draggable: false,
+      // vertical: false,
+      verticalSwiping: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      easing: 'easeInOutCubic'
+    }
+  }]
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
   arrows: true,
@@ -13848,7 +13861,32 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
   speed: 500,
   slidesToShow: 3,
   slidesToScroll: 3,
-  easing: 'easeInOutCubic'
+  easing: 'easeInOutCubic',
+  responsive: [{
+    breakpoint: 992,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: true
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      draggable: false,
+      autoplay: true
+    }
+  }, {
+    breakpoint: 576,
+    settings: {
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      autoplay: true
+    }
+  }]
 });
 }();
 /******/ })()
