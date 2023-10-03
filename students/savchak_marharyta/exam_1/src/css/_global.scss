@@ -1,18 +1,24 @@
-@font-face {
-    font-family: $default-font-name ;
-    font-style: normal;
-    font-weight: 400;
-    src: url('#{$font-path}roboto-v30-latin-regular.woff2') format('woff2');
-}
-
 body {
-
     font-family: $main-font;
-    background-color: $default-body-color;
+    font-size: $default-font-size;
 }
 
 .container {
     padding: $container-padding;
     max-width: $container-max-width;
     margin: 0 auto;
+}
+
+@include grid();
+
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
 }

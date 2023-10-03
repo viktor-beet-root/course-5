@@ -1,31 +1,4 @@
-@font-face {
-    font-display: swap;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/josefin-sans-v32-latin-300.woff2') format('woff2');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/josefin-sans-v32-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Josefin Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/josefin-sans-v32-latin-700.woff2') format('woff2');
-}
-
-@font-face {
-    font-display: swap;
-    font-family: 'Aleo';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/aleo-v14-latin-regular.woff2') format('woff2');
-}
+@include font-face('josefin-sans-v32-latin-300', $_font-weight: 300, $_font-style: normal, $_font-family: $default-font-family);
+@include font-face('aleo-v14-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-family);
+@include font-face('josefin-sans-v32-latin-regular', $_font-weight: 400, $_font-style: normal, $_font-family: $default-font-family);
+@include font-face('josefin-sans-v32-latin-700', $_font-weight: 700, $_font-style: normal, $_font-family: $default-font-family);

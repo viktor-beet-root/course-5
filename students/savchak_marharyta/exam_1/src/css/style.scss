@@ -1,9 +1,6 @@
 @import "./variables";
 @import "./global";
 @import "./reset";
-@import "./header";
-@import "./footer";
-@import "./heroblock";
-@import "./places";
-@import "./testimonial";
-@import "./why_choose_us";
+@import "./mixins";
+@import "./header/header";
+@import "./main/main";
