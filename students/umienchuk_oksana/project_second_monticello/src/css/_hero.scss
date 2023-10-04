@@ -1,6 +1,6 @@
-* {
-    outline: 2px solid red;
-}
+// * {
+//     outline: 2px solid red;
+// }
 
 .hero {
     height: 100vh;
@@ -103,8 +103,7 @@
     bottom: 4%;
     left: 50%;
     transform: translate(-50%, -50%);
-    stroke: green;
-    fill: aqua;
+
 
     @include media(sm) {
         bottom: 0;
