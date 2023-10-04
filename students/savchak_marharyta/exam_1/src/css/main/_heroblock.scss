@@ -1,5 +1,6 @@
 .heroblock {
     background-image: url("../../images/heroblock-bg.jpeg");
+    background-size: cover;
     background-repeat: no-repeat;
     color: $white;
 
@@ -7,6 +8,8 @@
         text-transform: uppercase;
         font-size: 48px;
         text-align: center;
+        margin: 0;
+        padding-bottom: 8px;
     }
 
     // .heroblock__text
@@ -14,6 +17,8 @@
     &__text {
         font-size: 22px;
         text-align: center;
+        margin: 0;
+        padding-bottom: 48px;
     }
 
     // .heroblock__input-wrapper
@@ -22,9 +27,8 @@
         background-color: $white;
         margin: 0 auto;
         position: relative;
-        width: 647px;
-        height: 60px;
         padding: 20px 36px;
+        margin-bottom: 211px;
     }
 
     // .heroblock__input
@@ -33,7 +37,7 @@
         font-size: 14px;
         color: $light-gray;
         border: none;
-
+        width: 647px;
 
     }
 
@@ -41,13 +45,20 @@
 
     &__button-wrapper {
         position: absolute;
+        right: 5px;
+        top: 4px;
         background-color: $blue;
+        padding: 16px 24px;
+        font-size: 14px;
     }
 
     // .heroblock__button-img
 
     &__button-img {
-        // fill: #FFF !important;
+        width: 16px;
+        height: 16px;
+        fill: #FFF;
+        padding-right: 12px;
     }
 
     // .heroblock__button
@@ -55,11 +66,34 @@
     &__button {
         color: $white;
         text-decoration: none;
+        text-transform: uppercase;
+        font-family: $btn-font-family, $fallback ;
+        letter-spacing: 2.8px;
+        line-height: 20px;
+    }
+
+    &__scrolldown {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+        &_text {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            padding-bottom: 4px;
+            letter-spacing: 2.8px;
+        }
+
+        &_arrow {
+            margin: 0 auto;
+        }
     }
 }
 
 .heroblock__container {
     padding-top: 295px;
+    padding-bottom: $container-bottom-padding;
 }
 
 .row {
