@@ -1,33 +1,69 @@
 .heroblock {
     background-image: url("../../images/heroblock-bg.jpeg");
     background-repeat: no-repeat;
-    // .heroblock__title
+    color: $white;
 
-    &__title {}
+    &__title {
+        text-transform: uppercase;
+        font-size: 48px;
+        text-align: center;
+    }
 
     // .heroblock__text
 
-    &__text {}
+    &__text {
+        font-size: 22px;
+        text-align: center;
+    }
 
     // .heroblock__input-wrapper
 
-    &__input-wrapper {}
+    &__input-wrapper {
+        background-color: $white;
+        margin: 0 auto;
+        position: relative;
+        width: 647px;
+        height: 60px;
+        padding: 20px 36px;
+    }
 
     // .heroblock__input
 
-    &__input {}
+    &__input {
+        font-size: 14px;
+        color: $light-gray;
+        border: none;
+
+
+    }
 
     // .heroblock__button-wrapper
 
-    &__button-wrapper {}
+    &__button-wrapper {
+        position: absolute;
+        background-color: $blue;
+    }
 
     // .heroblock__button-img
 
-    &__button-img {}
+    &__button-img {
+        // fill: #FFF !important;
+    }
 
     // .heroblock__button
 
-    &__button {}
+    &__button {
+        color: $white;
+        text-decoration: none;
+    }
 }
 
-.container {}
+.heroblock__container {
+    padding-top: 295px;
+}
+
+.row {
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
