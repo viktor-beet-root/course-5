@@ -1,0 +1,86 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v35-latin-regular.woff2') format('woff2'),
+}
+
+body {
+    font-family: Open Sans, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.nav {
+    text-align: center;
+}
+
+section {
+    max-width: 100%;
+    margin-bottom: 100px;
+}
+
+
+.devider {
+    border-bottom: 1px solid #070707;
+}
+
+
+.menu__item {
+    list-style-type: none;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #828282;
+}
+
+.menu__link_home {
+    text-decoration: none;
+    color: #070707;
+}
+
+p {
+    text-align: center;
+}
+
+.skills__list_item,
+.contacts__item {
+    list-style-type: none;
+}
+
+.heroblock__title {
+    font-size: 47px;
+    font-weight: 700;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+.heroblock__img,
+.portfolio__img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer__button {
+    border-radius: 22px;
+    background-color: black;
+    color: #ffff;
+    font-weight: 700;
+    padding: 7px 16px;
+    letter-spacing: 1.8px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 0 auto;
+}
