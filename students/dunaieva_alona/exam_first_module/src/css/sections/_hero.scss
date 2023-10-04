@@ -19,7 +19,12 @@
     }
 
     background: url(../images/hero-bg.jpg);
-    background-position-y: -200px;
+    background-position: center -200px;
+    background-size: cover;
+
+    @include media-m(lg) {
+        background-position-y: -400px;
+    }
 
     &__title {
         padding-bottom: 24px;

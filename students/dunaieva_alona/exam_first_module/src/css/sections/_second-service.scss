@@ -1,5 +1,6 @@
 .second-service {
     background: url(../images/second-service-bg.jpg) center;
+    background-size: cover;
 
     &__sub-title {
         @extend .first-service__sub-title;

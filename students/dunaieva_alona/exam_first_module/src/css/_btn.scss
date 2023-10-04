@@ -8,7 +8,7 @@
     letter-spacing: 1.12px;
     line-height: 20px;
     text-decoration: none;
-    background-color: $btn-color;
+    background: $btn-color;
     color: $white-color;
 
     &:hover {
@@ -22,6 +22,7 @@
 
     &-small {
         padding: 16px 24px;
+        background: $btn-color-small;
 
         @include media(md) {
             text-indent: -9999px;
