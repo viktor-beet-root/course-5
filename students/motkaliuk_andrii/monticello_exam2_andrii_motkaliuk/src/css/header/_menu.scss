@@ -4,18 +4,32 @@
     right: 0;
     left: 0;
     z-index: 100;
+    padding: 35px 15px;
+
+    &.bg-header {
+        background-color: rgba($color-steel-blue, $alpha: 0.8);
+        backdrop-filter: blur(5px);
+        transition: background-color 0.5s ease-in-out;
+    }
 }
 
 .logo {}
 
-.nav {}
+.nav {
+    height: 100%;
+}
 
-.menu-wrapper {}
+.menu-wrapper {
+    height: 100%;
+}
 
 .menu {
     display: flex;
     list-style-type: none;
     margin-bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
 
     @include media(sm) {
         display: none;
@@ -35,7 +49,34 @@
         }
     }
 
-    &__item {}
+    &__item {
+        align-self: center;
+    }
+
+    &__item-link {
+        color: $color-white;
+        font-size: 14px;
+        text-decoration: none;
+        padding: 15px;
+        border: 2px solid transparent;
+
+        &::before {
+            content: url(../../images/ellipse-3.svg);
+            padding-right: 5px;
+        }
+
+        &:hover {
+            border: 2px solid $color-white;
+            border-radius: 10px;
+            transition: border .5s ease-in-out;
+
+            &::before {
+                content: url(../../images/ellipse-4.svg);
+            }
+        }
+
+
+    }
 }
 
 .menu-open-btn {
