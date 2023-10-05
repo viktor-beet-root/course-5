@@ -2,12 +2,13 @@
     background-image: url("../../images/heroblock-bg.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: -20% 50%;
     color: $white;
 
     &__title {
         text-transform: uppercase;
-        font-size: 48px;
         text-align: center;
+        font-size: 48px;
         margin: 0;
         padding-bottom: 8px;
     }
@@ -18,7 +19,9 @@
         font-size: 22px;
         text-align: center;
         margin: 0;
+        padding-left: 5px;
         padding-bottom: 48px;
+        letter-spacing: 6.82px;
     }
 
     // .heroblock__input-wrapper
@@ -27,8 +30,9 @@
         background-color: $white;
         margin: 0 auto;
         position: relative;
-        padding: 20px 36px;
-        margin-bottom: 211px;
+        padding: 21px 34px;
+        margin-bottom: 214px;
+        width: 580px;
     }
 
     // .heroblock__input
@@ -37,8 +41,8 @@
         font-size: 14px;
         color: $light-gray;
         border: none;
-        width: 647px;
-
+        letter-spacing: 2.8px;
+        width: 572px;
     }
 
     // .heroblock__button-wrapper
@@ -46,10 +50,11 @@
     &__button-wrapper {
         position: absolute;
         right: 5px;
-        top: 4px;
+        top: 5px;
         background-color: $blue;
-        padding: 16px 24px;
+        padding: 15px 23px;
         font-size: 14px;
+        display: flex;
     }
 
     // .heroblock__button-img
@@ -58,7 +63,7 @@
         width: 16px;
         height: 16px;
         fill: #FFF;
-        padding-right: 12px;
+        padding-right: 11px;
     }
 
     // .heroblock__button
@@ -68,8 +73,9 @@
         text-decoration: none;
         text-transform: uppercase;
         font-family: $btn-font-family, $fallback ;
-        letter-spacing: 2.8px;
+        letter-spacing: 1.4px;
         line-height: 20px;
+        padding: 0;
     }
 
     &__scrolldown {
@@ -92,6 +98,7 @@
 }
 
 .heroblock__container {
+    margin: 0 auto;
     padding-top: 295px;
     padding-bottom: $container-bottom-padding;
 }
