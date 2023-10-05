@@ -1,0 +1,33 @@
+.header {
+    background-color: $blue ;
+    // .header__title
+
+    &__title {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 24px;
+    }
+}
+
+.nav {}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+
+    &__item {}
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $btn-font;
+        font-size: 14px;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+}
