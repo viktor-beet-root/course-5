@@ -19,6 +19,8 @@
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
+    "@types/jquery": "^3.5.20",
+    "@types/slick-carousel": "^1.6.38",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.27.7",
     "core-js": "^3.20.2",
@@ -36,7 +38,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
+    "jquery": "^3.7.1",
     "just-validate": "^4.2.0",
-    "just-validate-plugin-date": "^1.2.0"
+    "just-validate-plugin-date": "^1.2.0",
+    "lightbox2": "^2.11.4",
+    "slick-carousel": "^1.8.1"
   }
 }

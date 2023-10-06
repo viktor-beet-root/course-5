@@ -1,4 +1,4 @@
-@include font-face('montserrat-v25-latin-700.woff2', 700, normal, $default-font-name);
-@include font-face('montserrat-v25-latin-regular.woff2', 400, normal, $default-font-name);
-@include font-face('open-sans-v35-latin-regular.woff2', 400, normal, $fallback);
-@include font-face('source-sans-3-v9-latin-regular.woff2', 400, normal, $fallback);
+@include font-face('montserrat-v25-latin-700', 700, normal, $default-font-name);
+@include font-face('montserrat-v25-latin-regular', 400, normal, $default-font-name);
+@include font-face('open-sans-v35-latin-regular', 400, normal, $opensans-font);
+@include font-face('source-sans-3-v9-latin-regular', 400, normal, $sourcesans-font);
