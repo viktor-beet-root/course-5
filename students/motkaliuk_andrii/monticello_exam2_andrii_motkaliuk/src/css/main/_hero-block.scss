@@ -1,6 +1,7 @@
 .hero {
     height: 100vh;
     color: $color-white;
+    position: relative;
 }
 
 .slick-vertical .slick-slide {
@@ -123,5 +124,37 @@
         text-align: center;
         margin: 0;
         padding-top: 20px;
+    }
+}
+
+.scroll-down {
+
+    position: absolute;
+    z-index: 200;
+    // background-color: black;
+    height: 40px;
+    width: 100%;
+    bottom: 60px;
+
+    &__wrapper {
+        position: relative;
+        height: 100%;
+        width: 40px;
+        left: calc(50% - 20px);
+        padding-bottom: 60px;
+    }
+
+    &__circle {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 18px;
+        left: 15px;
     }
 }

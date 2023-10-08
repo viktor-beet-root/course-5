@@ -16268,6 +16268,7 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()('.hero-slider').slick({
   pauseOnHover: false
 });
 jquery__WEBPACK_IMPORTED_MODULE_3___default()('.news-slider').slick({
+  infinite: true,
   dots: true,
   slidesToShow: 3,
   slidesToScroll: 1,
