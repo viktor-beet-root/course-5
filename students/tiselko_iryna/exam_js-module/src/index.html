@@ -11,13 +11,13 @@
 
 
 <body class="page">
-    <header style="background-color: aqua;" class="header">
-        <div class="container">
+    <header class="header">
+        <div class="container header__container fixed-top">
             <div class="row">
-                <div class="col-3 header__logo">
-                    <img src="images/Logo.png" alt="Monticello-logo">
+                <div class="header__logo col-3  col-sm-6">
+                    <img src="images/Logo.png" alt="Monticello-logo" class="logo-img">
                 </div>
-                <nav class="col-6 menu">
+                <nav class="menu col-6 cols-sm-6">
                     <ul class="menu__list">
                         <li class="menu__item">
                             <a href="#" class="menu__link">about us</a>
@@ -31,54 +31,305 @@
                         <li class="menu__item">
                             <a href="#" class="menu__link">contact</a>
                         </li>
+                        <li class="menu__item socials-items">
+                            <a href="https://www.facebook.com/" target="_blank"
+                                class="header-socials__facebook socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#facebook"></use>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/" target="_blank" class="header-socials__twitter socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
+                            <a href="https://www.instagram.com/" target="_blank"
+                                class="header-socials__instagram socials-link">
+                                <svg class="icon">
+                                    <use xlink:href="#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
+                    <button class="menu-open-btn only-mobile" type="button">
+                        <span class="menu-open-btn__line"></span>
+                    </button>
                 </nav>
                 <div class="col-3 header-socials">
-                    <svg class="icon">
-                        <use xlink:href="#facebook"></use>
-                    </svg>
-                    <svg class="icon">
-                        <use xlink:href="#twitter"></use>
-                    </svg>
-                    <svg class="icon">
-                        <use xlink:href="#instagram"></use>
-                    </svg>
+                    <a href="https://www.facebook.com/" target="_blank" class="header-socials__facebook">
+                        <svg class="icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" class="header-socials__twitter">
+                        <svg class="icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="header-socials__instagram">
+                        <svg class="icon">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
     <main class="main">
-    </main>
-    <footer class="footer">
-        <!-- <div class="container">
-            <div class="row">
-                <div class="footer__map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8558.73471313815!2d-73.90462597362755!3d40.67463707410932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c4f226cf74d%3A0xb352e17b22c087fe!2sMcDonald&#39;s!5e0!3m2!1suk!2sua!4v1695560616759!5m2!1suk!2sua"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section class="hero">
+            <div class="hero-slider">
+                <div class="hero-slider__item">
+                    <img src="images/hero/main-hero.jpg" alt="slider_1" class="hero-slider__img">
+                    <div class="container hero-slider__container">
+                        <h1 class="hero-slider__title">SIMPLE &amp; MODERN</h1>
+                        <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        <a href="#">
+                            <svg class="icon">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
+                <div class="hero-slider__item">
+                    <img src="images/hero/hero_2.jpg" alt="slider_2" class="hero-slider__img">
+                    <div class="container hero-slider__container">
+                        <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
+                        <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        <a href="#">
+                            <svg class="icon">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-slider__item">
+                    <img src="images/hero/hero_3.jpg" alt="slider_3" class="hero-slider__img">
+                    <div class="container hero-slider__container">
+                        <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
+                        <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        <a href="#">
+                            <svg class="icon">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-slider__item">
+                    <img src="images/hero/hero_4.jpg" alt="slider_4" class="hero-slider__img">
+                    <div class="container hero-slider__container">
+                        <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
+                        <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        <a href="#">
+                            <svg class="icon">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-slider__item">
+                    <img src="images/hero/hero_5.jpg" alt="slider_5" class="hero-slider__img">
+                    <div class="container hero-slider__container">
+                        <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
+                        <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+                        <a href="#">
+                            <svg class="icon">
+                                <use xlink:href="#arrow"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <h3 class="about__heading">What we do</h3>
+                    <div class="col-7 about__img-wrapper">
+                        <img src="images/about/about_1.jpg" alt="New York City" width="630" height="470"
+                            class="about__img">
+                        <div class="about__img-shadow">
+                            <div class="about__img-shadow_color"></div>
+                        </div>
+                    </div>
+                    <div class="col-5 about__content-wrapper">
+                        <p class="about__suptitle">ONE WORLD</p>
+                        <h3 class="about__title">TRADE CENTER</h3>
+                        <p class="about__content">Increasing prosperity in our lives can be accomplished by having the
+                            right frame of mind. The truth is, our thoughts are very powerful.</p>
+                        <div class="btn__wrapper btn btn-primary">
+                            <a href="#" class="about__btn">MORE DETAILS</a>
+                        </div>
+                        <p class="about__subcontent">
+                            <svg class="icon about__icon">
+                                <use xlink:href="#bi bi-geo-alt-fill"></use>
+                            </svg>
+                            <span class="subcontent-text">New York City, United States - 1776 feet</span>
+                        </p>
+                    </div>
+                    <div class="col-5 about__content-wrapper">
+                        <p class="about__suptitle">INTERNATIONAL</p>
+                        <h3 class="about__title">COMMERCE CENTRE</h3>
+                        <p class="about__content">Successful businesses have many things in common, today we’ll look at
+                            the big &#180;R&#180; of recognition and how a digital advertising network may help.</p>
+                        <div class="btn__wrapper btn btn-primary">
+                            <a href="#" class="about__btn">MORE DETAILS</a>
+                        </div>
+                        <p class="about__subcontent">
+                            <svg class="icon about__icon">
+                                <use xlink:href="#bi bi-geo-alt-fill"></use>
+                            </svg>
+                            <span class="subcontent-text">Hong Kong - 1588 feet</span>
+                        </p>
+                    </div>
+                    <div class="col-7 about__img-wrapper-reverse">
+                        <img src="images/about/about_2.jpg" alt="Hong Kong" width="630" height="470" class="about__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <h3 class="news__heading">LATEST NEWS</h3>
+                <div class="row news__row">
+                    <div class="news__card-wrapper">
+                        <img src="images/news/maldonado_1.jpg" alt="project" width="370" height="240"
+                            class="news__img img-top">
+                        <div class="news__text-wrapper">
+                            <h4 class="news__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h4>
+                            <p class="news__content">There are many things that are important to catalog design...</p>
+                            <div class="news__author">
+                                <img src="images/news/maldonado.jpg" alt="avatar"
+                                    class="news__author-img rounded-circle">
+                                <div class="author-info">
+                                    <p class="news__author-name">ISABELLA MALDONADO </p>
+                                    <p class="news__author-date">06 Feb 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__card-wrapper">
+                        <img src="images/news/brun_1.jpg" alt="project" width="370" height="240" class="news__img">
+                        <div class="news__text-wrapper">
+                            <h4 class="news__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h4>
+                            <p class="news__content">Free directories: directories are perfect for customers
+                                that are
+                                searching for...</p>
+                            <div class="news__author">
+                                <img src="images/news/brun.jpg" alt="avatar" class="news__author-img rounded-circle">
+                                <div class="author-info">
+                                    <p class="news__author-name">ALJA BRUN</p>
+                                    <p class="news__author-date">20 Jan 2020</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__card-wrapper">
+                        <img src="images/news/freeman_1.jpg" alt="project" width="370" height="240" class="news__img">
+                        <div class="news__text-wrapper">
+                            <h4 class="news__title">EFFECTIVE ADVERTISING POINTERS.</h4>
+                            <p class="news__content">Having a home based business is a wonderful asset to your life...
+                            </p>
+                            <div class="news__author">
+                                <img src="images/news/freeman.jpg" alt="avatar" class="news__author-img rounded-circle">
+                                <div class="author-info">
+                                    <p class="news__author-name">DOMINIC FREEMAN</p>
+                                    <p class="news__author-date">13 Dec 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__card-wrapper">
+                        <img src="images/news/ward_1.jpg" alt="project" width="370" height="240"
+                            class="news__img img-ward">
+                        <div class="news__text-wrapper">
+                            <h4 class="news__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h4>
+                            <p class="news__content">There are many things that are important to catalog design...</p>
+                            <div class="news__author">
+                                <img src="images/news/ward.jpg" alt="avatar" class="news__author-img rounded-circle">
+                                <div class="author-info">
+                                    <p class="news__author-name">ALICE WARD</p>
+                                    <p class="news__author-date">30 Nov 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__card-wrapper">
+                        <img src="images/news/brown_1.jpg" alt="project" width="370" height="240" class="news__img">
+                        <div class="news__text-wrapper">
+                            <h4 class="news__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h4>
+                            <p class="news__content">There are many things that are important to catalog design...</p>
+                            <div class="news__author">
+                                <img src="images/news/brown.jpg" alt="avatar" class="news__author-img rounded-circle">
+                                <div class="author-info">
+                                    <p class="news__author-name">DAN BROWN</p>
+                                    <p class="news__author-date">21 Oct 2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="container">
+                <div class="row">
+                    <h3 class="gallery__heading">GALLERY</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer style="background-color: aqua;" class="footer">
+        <div class="footer__map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8558.73471313815!2d-73.90462597362755!3d40.67463707410932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c4f226cf74d%3A0xb352e17b22c087fe!2sMcDonald&#39;s!5e0!3m2!1suk!2sua!4v1695560616759!5m2!1suk!2sua"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="container">
+            <div class="row">
                 <div class="footer__contact-form contact-form">
-                    <h2 class="footer__contact-title">get in touch</h2>
-                    <div class="contact-form__contact"></div>
-                    <form id="contacts" action="#" method="get" class="contact-form__inputs">
-                        <input type="text" name="name" id="name" placeholder="Enter your full name">
-                        <input type="email" name="email" id="email" placeholder="Enter your email">
-                        <button class="contact-form__btn" type="submit" name="submit">
-                            <span>Submit</span>
-                        </button>
-                    </form>
+                    <h3 class="contact-form__title">get in touch</h3>
+                    <div class="contact-form__wrapper d-flex">
+                        <ul class="contact-form__contact col-6">
+                            <li class="contact-form__addres">91 Nolan Extensions Suite 670 </li>
+                            <li class="contact-form__tel">+001 356-868-2454</li>
+                            <li class="contact-form__email">montichello@service.com</li>
+                            <li class="contact-form__schedule">From 07:05AM to 19:30PM</li>
+                        </ul>
+                        <form id="contacts" action="#" method="get" class="contact-form__inputs col-6">
+                            <input type="text" name="name" id="name" placeholder="Enter your full name">
+                            <input type="email" name="email" id="email" placeholder="Enter your email">
+                            <button class="contact-form__btn" type="submit" name="submit">
+                                <span>Submit</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
                 <div class="col-6 footer__logo">
                     <img src="./images/Logo.png" alt="Monticello">
                 </div>
                 <div class="col-6 footer__socials">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.twitter.com/" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <svg class="icon">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div class="col-6">
                     <p class="copyright">Copyrights &copy; 2020 Montichello</p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </footer>
 
 
@@ -114,6 +365,12 @@
                 fill="white"></path>
             <circle opacity="0.7" cx="20" cy="20" r="19.5" stroke="white"></circle>
         </symbol>
+        <!-- <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="inst-hov">
+            <path
+                d="M20 16.4062C21.9688 16.4062 23.5938 18.0312 23.5938 20C23.5938 22 21.9688 23.5938 20 23.5938C18 23.5938 16.4062 22 16.4062 20C16.4062 18.0312 18 16.4062 20 16.4062ZM20 22.3438C21.2812 22.3438 22.3125 21.3125 22.3125 20C22.3125 18.7188 21.2812 17.6875 20 17.6875C18.6875 17.6875 17.6562 18.7188 17.6562 20C17.6562 21.3125 18.7188 22.3438 20 22.3438ZM24.5625 16.2812C24.5625 16.75 24.1875 17.125 23.7188 17.125C23.25 17.125 22.875 16.75 22.875 16.2812C22.875 15.8125 23.25 15.4375 23.7188 15.4375C24.1875 15.4375 24.5625 15.8125 24.5625 16.2812ZM26.9375 17.125C27 18.2812 27 21.75 26.9375 22.9062C26.875 24.0312 26.625 25 25.8125 25.8438C25 26.6562 24 26.9062 22.875 26.9688C21.7188 27.0312 18.25 27.0312 17.0938 26.9688C15.9688 26.9062 15 26.6562 14.1562 25.8438C13.3438 25 13.0938 24.0312 13.0312 22.9062C12.9688 21.75 12.9688 18.2812 13.0312 17.125C13.0938 16 13.3438 15 14.1562 14.1875C15 13.375 15.9688 13.125 17.0938 13.0625C18.25 13 21.7188 13 22.875 13.0625C24 13.125 25 13.375 25.8125 14.1875C26.625 15 26.875 16 26.9375 17.125ZM25.4375 24.125C25.8125 23.2188 25.7188 21.0312 25.7188 20C25.7188 19 25.8125 16.8125 25.4375 15.875C25.1875 15.2812 24.7188 14.7812 24.125 14.5625C23.1875 14.1875 21 14.2812 20 14.2812C18.9688 14.2812 16.7812 14.1875 15.875 14.5625C15.25 14.8125 14.7812 15.2812 14.5312 15.875C14.1562 16.8125 14.25 19 14.25 20C14.25 21.0312 14.1562 23.2188 14.5312 24.125C14.7812 24.75 15.25 25.2188 15.875 25.4688C16.7812 25.8438 18.9688 25.75 20 25.75C21 25.75 23.1875 25.8438 24.125 25.4688C24.7188 25.2188 25.2188 24.75 25.4375 24.125Z"
+                fill="rgb(233, 89, 80)"></path>
+            <circle opacity="0.7" cx="20" cy="20" r="19.5" stroke="#bc2a8d"></circle>
+        </symbol> -->
         <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 40" id="arrow">
             <path
                 d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
@@ -121,6 +378,9 @@
             <path opacity="0.7"
                 d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
                 stroke="white"></path>
+        </symbol>
+        <symbol fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="bi bi-geo-alt-fill">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
         </symbol>
     </svg>
 

@@ -1,0 +1,60 @@
+.header-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+
+    @include media(){
+        display: none;
+    }
+
+    // .header-socials__facebook
+
+    &__facebook:hover {
+        stroke-width: 2px;
+    }
+
+    // .header-socials__twitter
+
+    &__twitter:hover {
+        stroke-width: 2px;
+    }
+
+    // .header-socials__instagram
+
+    &__instagram:hover {
+        stroke-width: 2px;
+    }
+}
+
+.socials-items {
+    padding-top: 20px;
+
+}
+
+.socials-link {
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+        padding-right: 30px;
+    }
+}
+
+.icon {
+}
+
+// #inst-hov {
+//     display: none;
+//     stroke: $instagram-base;
+
+//     & path {
+//         fill:$instagram-color;
+//     }
+
+//     & circle {
+//         stroke: $instagram-base;
+//         stroke-width: 1.5px;
+//     }
+// }
+

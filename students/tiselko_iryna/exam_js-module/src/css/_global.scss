@@ -5,15 +5,18 @@ body {
     font-style: $default-font-style;
     line-height: $default-line-height;
     letter-spacing: $default-letter-spacing;
-    color: $black-color;
+    color: $pickled-bluewood;
     overflow-x: hidden
 }
 
 h1 {
+    font-family: $secondary-font;
     font-size: $h1-font-size;
     font-weight: $h1-font-weight;
     line-height: $h1-line-height;
-    text-transform: uppercase;
+    letter-spacing: $h1-letter-spacing;
+    color: $h1-color;
+    // text-transform: uppercase;
 }
 
 h2 {
@@ -21,10 +24,23 @@ h2 {
     font-size: $h2-font-size;
     font-weight: $h2-font-weight;
     line-height: $h2-line-height;
-    text-transform: capitalize;
+    letter-spacing: $h2-letter-spacing;
+    color: $h2-color;
+    // text-transform: capitalize;
+}
+
+h3 {
+    font-family: $secondary-font;
+    font-size: $h3-font-size;
+    font-weight: $h3-font-weight;
+    line-height: $h3-line-height;
+    letter-spacing: $h3-letter-spacing;
+    text-transform: uppercase;
+
 }
 
 h4 {
+    font-family: $secondary-font;
     font-size: $h4-font-size;
     font-weight: $h4-font-weight;
     text-transform: uppercase;
@@ -48,4 +64,14 @@ h4 {
 
 @include grid();
 
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
 
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
+}

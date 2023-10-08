@@ -1,0 +1,102 @@
+.footer {
+    width: 100svw;
+    height: 100svh;
+    background-image: url(#{$base-img-pass}/images/footer/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+
+    // .footer__map
+
+    &__map {
+        width: 100%;
+        height: 700px;
+        // position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    // .footer__contact-form
+
+    &__contact-form {
+    }
+
+    // .footer__logo
+
+    &__logo {
+    }
+
+    // .footer__socials
+
+    &__socials {
+    }
+}
+.container {
+}
+.row {
+}
+.contact-form {
+
+    // .contact-form__title
+
+    &__title {
+    }
+
+    // .contact-form__wrapper
+
+    &__wrapper {
+    }
+
+    // .contact-form__contact
+
+    &__contact {
+    }
+
+    // .contact-form__addres
+
+    &__addres {
+    }
+
+    // .contact-form__tel
+
+    &__tel {
+    }
+
+    // .contact-form__email
+
+    &__email {
+    }
+
+    // .contact-form__schedule
+
+    &__schedule {
+    }
+
+    // .contact-form__inputs
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    // .contact-form__btn
+
+    &__btn {
+    }
+}
+.d-flex {
+}
+.col-6 {
+}
+.form {
+
+    // .form__wrapper
+
+    &__wrapper {
+    }
+}
+.icon {
+}
+.copyright {
+}

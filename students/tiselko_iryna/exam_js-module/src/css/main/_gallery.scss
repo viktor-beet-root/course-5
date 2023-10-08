@@ -1,0 +1,23 @@
+.gallery {
+    padding-top: 180px;
+
+    // .gallery__heading
+
+    &__heading {
+        position: relative;
+        padding-bottom: 90px;
+        text-align: center;
+        color: $pickled-bluewood;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $pickled-bluewood;
+            top: -30px;
+            right: 605px;
+        }
+    }
+}

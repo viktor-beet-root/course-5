@@ -1,0 +1,152 @@
+.about {
+    margin-bottom: 150px;
+
+    // .about__heading
+
+    &__heading {
+        position: relative;
+        margin-top: 130px;
+        padding-bottom: 130px;
+        text-align: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $pickled-bluewood;
+            top: -30px;
+            right: 605px;
+        }
+    }
+
+    // .about__img-wrapper
+
+    &__img-wrapper {
+        padding-bottom: 162px;
+        position: relative;
+        z-index: 100;
+    }
+
+    // .about__img
+
+    &__img {
+        display: block;
+        aspect-ratio: 3/4;
+        object-fit: cover;
+        object-position: top;
+
+        @supports not (aspect-ratio: 3/2) {
+            height: 470px;
+        }
+    }
+
+    // .about__img-shadow
+
+    &__img-shadow {
+        display: block;
+        position: absolute;
+        width: 50vw;
+        max-height: 470px;
+        
+        left: 0;
+        z-index: -10;
+        transform: translate(0, -112%);
+        overflow: hidden;
+
+        // .about__img-shadow_color
+
+        &_color {
+            background-color: $malibu;
+        }
+    }
+
+    // .about__content-wrapper
+
+    &__content-wrapper {
+        padding-left: 40px;
+    }
+
+    // .about__suptitle
+
+    &__suptitle {
+        font-family: $secondary-font;
+        font-size: 22px;
+        line-height: normal;
+        padding-top: 84px;
+    }
+
+    // .about__title
+
+    &__title {
+        padding-bottom: 19px;
+    }
+
+    // .about__content
+
+    &__content {
+        width: 470px;
+        padding-bottom: 40px;
+    }
+
+    // .about__btn
+
+    &__btn {
+        text-decoration: none;
+        color: $btn-text-color;
+        border-radius: $border-radius;
+    }
+
+    // .about__subcontent
+
+    &__subcontent {
+        color: $black-color;
+        font-size: 15px;
+        font-style: italic;
+        padding-top: 60px;
+    }
+
+    // .about__icon
+
+    &__icon {
+        width: 9px;
+        height: 17px;
+    }
+
+    // .about__img-wrapper-reverse
+
+    &__img-wrapper-reverse {
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 43vw;
+            height: 470px;
+            background-color: $heliotrope;;
+            top: -43px;
+            right: -311px;
+            z-index: -10;
+        }
+    }
+}
+
+.btn {
+
+    // .btn__wrapper
+
+    &__wrapper {
+    }
+}
+
+.btn-primary {
+}
+
+.icon {
+}
+
+.subcontent-text {
+    padding-left: 5px;
+}
