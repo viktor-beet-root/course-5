@@ -1,6 +1,8 @@
 
 import $ from 'jquery';
 import 'slick-carousel';
+import 'lightbox2';
+
 console.log($);
 
 $('.hero-slider').slick({
@@ -15,7 +17,7 @@ $('.hero-slider').slick({
     verticalSwiping: true,
     responsive: [
         {
-            breakpoint: 992,
+            breakpoint: 576,
             settings: {
                 // dots: false,
                 // draggable: false,
@@ -67,3 +69,12 @@ $('.news-slider').slick({
         }
     ]
 });
+
+lightbox.option({
+    'AlwaysShowNavOnTouchDevices': true,
+    'resizeDuration': 200,
+    'albumLabel': "Image %1 of %2",
+    'wrapAround': true,
+    'resizeDuration': 700,
+    'wrapAround': true,
+})

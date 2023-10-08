@@ -4,6 +4,10 @@
 @include font-face ('open-sans-v35-latin-regular', 400, $font-sub-first);
 @include font-face ('open-sans-v35-latin-italic', 400, $font-sub-first, italic);
 
+* {
+    outline: 2px solid red;
+}
+
 body {
     margin: 0 auto;
     font-family: $main-font;
