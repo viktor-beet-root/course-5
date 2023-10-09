@@ -4,8 +4,6 @@
     background-size: cover;
     background-position: -50% 50%;
     color: $white;
-    padding-top: 110px;
-    padding-bottom: 110px;
     // .why-choose-us__title
 
     &__title {
@@ -26,7 +24,7 @@
         line-height: 28px;
     }
 
-    // .why-choose-us__button-wrapper
+    &__container {}
 
     &__button-wrapper {
         padding: 20px 32px;
@@ -48,7 +46,6 @@
     &__row {
         display: flex;
         justify-content: space-between;
-        padding-right: 173px;
     }
 
     &__content-wrapper {
@@ -60,17 +57,17 @@
     &__img-wrapper {
         display: flex;
         flex-direction: column;
+        padding: 0;
+        padding-top: 15px;
         gap: 16px;
     }
 }
 
 .right-img {
     width: 350px;
-    align-self: flex-start;
     padding-left: 74px;
 }
 
 .left-img {
     width: 350px;
-    align-items: flex-end;
 }
