@@ -32,7 +32,6 @@
 }
 
 
-
 .news-list {}
 
 .news-card {
@@ -140,7 +139,7 @@
 /* Лента слайдов */
 .news-slider .slick-track {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
 /* Слайд */
@@ -212,7 +211,6 @@
 /* Список точок */
 .news-slider.slick-dots li {
     list-style: none;
-
 }
 
 /* Елемент точки */
