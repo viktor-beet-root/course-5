@@ -95,3 +95,11 @@ $('.scroll-to-top').on('click', function (e) {
 
     body.stop().animate({ scrollTop: 0 }, 200);
 });
+
+$('.news-slider').slick({
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: false,
+});

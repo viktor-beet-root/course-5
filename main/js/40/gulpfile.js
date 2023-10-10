@@ -8,6 +8,7 @@ import rename from 'gulp-rename';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
 import gcmq from 'gulp-group-css-media-queries';
+import mmq from 'gulp-merge-media-queries';
 import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 
@@ -28,7 +29,6 @@ function style() {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(gcmq())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css));
 }

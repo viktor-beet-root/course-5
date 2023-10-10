@@ -15737,6 +15737,13 @@ jquery__WEBPACK_IMPORTED_MODULE_2__('.scroll-to-top').on('click', function (e) {
     scrollTop: 0
   }, 200);
 });
+jquery__WEBPACK_IMPORTED_MODULE_2__('.news-slider').slick({
+  dots: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  autoplay: false
+});
 }();
 /******/ })()
 ;

@@ -1,0 +1,132 @@
+.block {
+    padding: 120px 0;
+
+    @include media(sm) {
+        padding: 40px 0;
+    }
+}
+
+.last-news {
+    background-image: url(../images/last-news-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include media(sm) {
+        padding: 40px 0;
+    }
+}
+
+.container {}
+
+.title-h2 {
+    font-family: Montserrat;
+    font-size: 44px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+    position: relative;
+    margin-bottom: 90px;
+
+    &::before {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+        width: 100px;
+        height: 1px;
+        background-color: #fff;
+    }
+}
+
+.news-slider {
+
+    &:not(.slick-initialized) {
+        display: flex;
+
+        .news-slider__item {
+            width: 33.333%;
+
+            &:nth-child(n+4) {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        padding: 15px;
+    }
+}
+
+.news {
+    background-color: #fff;
+
+    // .news__img
+
+    &__img {
+        width: 100%;
+    }
+
+    &__deskription {
+        padding: 30px 15px;
+    }
+
+    // .news__title
+
+    &__title {
+        color: #2C4058;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    // .news__text
+
+    &__text {
+        margin-bottom: 40px;
+    }
+
+    // .news__author
+
+    &__author {
+        margin-top: auto;
+    }
+}
+
+.news-author {
+    display: flex;
+    align-items: center;
+    // .news-author__img
+
+    &__img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // .news-author__info
+
+    &__info {
+        width: calc(100% - 60px);
+        padding: 5px 5px 5px 20px;
+    }
+
+    // .news-author__name
+
+    &__name {
+        color: #2C4058;
+        margin-bottom: 0;
+    }
+
+    // .news-author__date
+
+    &__date {
+        color: #55B7FF;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+}
