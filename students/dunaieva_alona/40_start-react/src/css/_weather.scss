@@ -1,0 +1,84 @@
+.weather {
+
+    &__title {
+        padding: 40px 0;
+    }
+
+    &__img-main {
+        padding-left: 5px;
+    }
+
+    &__subtext {
+        font-size: 16px;
+        padding: 37px 0 100px 0;
+    }
+}
+
+.container {
+    background-color: #39C;
+}
+
+.weather-wrapper {
+    border: 1px solid $white-color;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    &__lisabon {
+        background-color: #3399CC;
+        grid-column: 1 / span 2;
+    }
+
+    &__paris {
+        background-color: #3CC;
+    }
+
+    &__belgrade {
+        background-color: #969;
+    }
+
+    &__venice {
+        background-color: #C24747;
+    }
+
+    &__tel-avive {
+        background-color: #E2674A;
+    }
+
+    &__cair {
+        background-color: #FC6;
+    }
+
+    &__new-york {
+        background-color: #9C9;
+    }
+
+    &__new-delhi {
+        background-color: #699;
+    }
+
+    &__san-francisco {
+        background-color: #C69;
+        grid-column: -4 / -2;
+    }
+
+    &__tokyo {
+        background-color: #396;
+    }
+
+    &__sydney {
+        background-color: #669;
+        grid-column: -5 / -1;
+    }
+}
+
+.block-weather {
+    border: 1px solid $white-color;
+    @include flex-jsc-al(center, center);
+    flex-direction: column;
+    gap: 20px;
+    padding: 26px 0 26px 0;
+
+    img {
+        padding-left: 17px;
+    }
+}
