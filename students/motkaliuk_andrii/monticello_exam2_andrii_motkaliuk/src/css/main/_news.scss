@@ -26,6 +26,19 @@
     }
 }
 
+.news-slider {
+
+    // display: flex;
+    &:not(.slick-initialized) {
+        display: flex;
+
+        .carusel__item:nth-child(n+4) {
+            display: none;
+        }
+    }
+}
+
+
 .carusel {
     &__item {
         max-width: 370px;
@@ -33,6 +46,7 @@
         width: 100%;
         height: 100%;
         background-color: $color-white;
+        padding: 15px;
     }
 }
 
