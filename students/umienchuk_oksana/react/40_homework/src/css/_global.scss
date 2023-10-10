@@ -1,0 +1,9 @@
+@include font-face ('open-sans-v36-latin-regular', 400);
+
+body {
+    font-family: $main-font;
+    background-color: $default-body-bg-color;
+    font-size: $default-font-size;
+    color: $default-body-color;
+    margin: 0 auto;
+}
