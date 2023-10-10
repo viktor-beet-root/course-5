@@ -1,8 +1,8 @@
 import { createElement } from "react";
-import Advice from "./components/Advice";
+import Weather from "./components/Weather";
 
 function App() {
-    return createElement(Advice);
+    return createElement(Weather);
 }
 
 export default App;
