@@ -64,7 +64,7 @@
 
         & .slick-slide{
             padding-right: 30px;
-            width: 400px;
+            width: 370px;
         }
     }
 
@@ -95,12 +95,12 @@
         padding: 0;
         margin-right: 30px;
 
-        &:nth-child(n+5) {
+        &:nth-child(n+4) {
             display: none;
         }
 
         .slick-initialized &{
-            &:nth-child(n+2) {
+            &:nth-child(n+4) {
                 display: block;
             }
         }
@@ -130,7 +130,6 @@
 
     &__content {
         padding-top: 15px;
-        width: 330px;
     }
 
     // .news__author
@@ -155,5 +154,8 @@
     object-position: 15% 25%;
 }
 
-
+.rounded-circle {
+    // display: block;
+    border-radius: 50%;
+}
 

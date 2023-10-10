@@ -95,7 +95,6 @@
     &__btn {
         text-decoration: none;
         color: $btn-text-color;
-        border-radius: $border-radius;
     }
 
     // .about__subcontent
@@ -149,4 +148,8 @@
 
 .subcontent-text {
     padding-left: 5px;
+}
+
+.location {
+    color: $black-color;
 }

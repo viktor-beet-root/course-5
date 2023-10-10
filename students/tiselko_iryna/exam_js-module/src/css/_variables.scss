@@ -35,7 +35,7 @@ $default-font-name: 'Open Sans';
 $secondary-font-name: 'Montserrat';
 $font-sub-menu: 'Source Sans 3'; 
 $btn-font-name: 'Montserrat';
-$fallback: $font-family-sans-serif; // Arial, Helvetica, sans-serif;
+$fallback: Arial, Helvetica, sans-serif;
 $default-font-size: 18px;
 $default-font-weight: 400;
 $default-font-style: normal;
@@ -46,7 +46,7 @@ $secondary-font: $secondary-font-name, $fallback;
 $font-path: './fonts/';
 
 //h1
-$h1-font-size: 80px !important;
+$h1-font-size: 80px;
 // $h1-font-style: normal;
 $h1-font-weight: 700;
 $h1-line-height: normal;

@@ -1,10 +1,10 @@
 .footer {
-    width: 100svw;
-    height: 100svh;
-    background-image: url(#{$base-img-pass}/images/footer/footer-bg.png);
+    padding-top: 150px;
+    padding-bottom: 155px;
+    background-image: url('#{$base-img-pass}../images/footer/footer-bg.png'), linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    background-position: bottom center;
+    background-size: contain;
 
     // .footer__map
 
@@ -19,6 +19,7 @@
     // .footer__contact-form
 
     &__contact-form {
+        background-color: $white-color;
     }
 
     // .footer__logo
@@ -40,6 +41,21 @@
     // .contact-form__title
 
     &__title {
+        position: relative;
+        margin-top: 130px;
+        padding-bottom: 130px;
+        text-align: center;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $pickled-bluewood;
+            top: -30px;
+            right: 605px;
+        }
     }
 
     // .contact-form__wrapper
