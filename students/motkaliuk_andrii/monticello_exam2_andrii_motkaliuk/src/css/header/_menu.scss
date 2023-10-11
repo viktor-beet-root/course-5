@@ -8,7 +8,6 @@
 
     &.bg-header {
         background-color: rgba($color-steel-blue, $alpha: 0.8);
-        backdrop-filter: blur(5px);
         transition: background-color 0.5s ease-in-out;
     }
 }
@@ -41,7 +40,8 @@
         display: none;
         justify-content: flex-start;
         margin: 15px 0;
-        background-color: rgba($color: $color-black, $alpha: .5);
+        padding-left: 0;
+        background-color: rgba($color: $color-black, $alpha: .75);
         position: fixed;
         top: 105px;
         left: 0;
