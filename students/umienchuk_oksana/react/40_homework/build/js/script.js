@@ -21,70 +21,6 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/js/Weather.js":
-/*!***************************!*\
-  !*** ./src/js/Weather.js ***!
-  \***************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ Weather; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "D:\\www\\course-5\\students\\umienchuk_oksana\\react\\40_homework\\src\\js\\Weather.js";
-
-function Weather() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "weather__item lisabon",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 5,
-      columnNumber: 9
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: "weather__city",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6,
-      columnNumber: 13
-    }
-  }, "Lisabon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "weather-wrap clear-fix",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "weather-wrap__temp",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8,
-      columnNumber: 17
-    }
-  }, "21\xB0C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    className: "weather-wrap__img",
-    src: "images/wi-day-sunny.svg",
-    alt: "Icon day sunny",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 17
-    }
-  })));
-}
-;
-
-/***/ }),
-
 /***/ "./src/js/components/Advice.js":
 /*!*************************************!*\
   !*** ./src/js/components/Advice.js ***!
@@ -253,6 +189,172 @@ function Advice() {
 
 /***/ }),
 
+/***/ "./src/js/components/Weather.js":
+/*!**************************************!*\
+  !*** ./src/js/components/Weather.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Weather; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _images_wi_day_sunny_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../images/wi-day-sunny.svg */ "./src/images/wi-day-sunny.svg");
+/* harmony import */ var _images_wi_day_sunny_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_images_wi_day_sunny_svg__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "D:\\www\\course-5\\students\\umienchuk_oksana\\react\\40_homework\\src\\js\\components\\Weather.js";
+
+
+function Weather() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 9
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather__block clear-fix",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather__item lisabon",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "weather__city",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 21
+    }
+  }, "Lisabon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather-wrap clear-fix",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 21
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "weather-wrap__temp",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 25
+    }
+  }, "21\xB0C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "weather-wrap__img",
+    src: (_images_wi_day_sunny_svg__WEBPACK_IMPORTED_MODULE_1___default()),
+    alt: "Icon day sunny",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 25
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather__item paris",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "weather__city ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 21
+    }
+  }, "Paris"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather-wrap clear-fix",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22,
+      columnNumber: 21
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "weather-wrap__temp",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23,
+      columnNumber: 25
+    }
+  }, "11\xB0C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "weather-wrap__img",
+    src: "images/wi-night-sleet.svg",
+    alt: "Icon night sleet",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24,
+      columnNumber: 25
+    }
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather__item belgrade",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32,
+      columnNumber: 17
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "weather__city ",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33,
+      columnNumber: 21
+    }
+  }, "Belgrade"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "weather-wrap clear-fix",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 21
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "weather-wrap__temp",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 25
+    }
+  }, "15\xB0C"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "weather-wrap__img",
+    src: "images/wi-night-cloudy.svg",
+    alt: "Icon night cloud",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 25
+    }
+  })))));
+}
+;
+
+/***/ }),
+
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
@@ -264,12 +366,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _Weather__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Weather */ "./src/js/Weather.js");
+/* harmony import */ var _components_Weather__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Weather */ "./src/js/components/Weather.js");
 
 
 
-var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('root'));
-root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Weather__WEBPACK_IMPORTED_MODULE_2__["default"]));
+var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(document.getElementById('creater'));
+root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Weather__WEBPACK_IMPORTED_MODULE_2__["default"]));
 
 /***/ }),
 
@@ -39639,6 +39741,16 @@ if (false) {} else {
 }
 
 
+/***/ }),
+
+/***/ "./src/images/wi-day-sunny.svg":
+/*!*************************************!*\
+  !*** ./src/images/wi-day-sunny.svg ***!
+  \*************************************/
+/***/ (function() {
+
+throw new Error("Module parse failed: Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n> <?xml version=\"1.0\" encoding=\"utf-8\"?>\n| <!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->\n| <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"");
+
 /***/ })
 
 /******/ 	});
@@ -39740,8 +39852,8 @@ if (false) {} else {
 /******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	__webpack_require__("./src/js/script_old.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	__webpack_require__("./src/js/Weather.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/Advice.js");
+/******/ 	__webpack_require__("./src/js/components/Advice.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/Weather.js");
 /******/ 	
 /******/ })()
 ;

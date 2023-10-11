@@ -54,7 +54,6 @@
         margin-bottom: 0;
         padding: 0;
     }
-
 }
 
 .weather-wrap {
@@ -66,7 +65,7 @@
     // .weather-wrap__temp
 
     &__temp {
-        float: left;
+        // float: left;
         padding-right: 12px;
     }
 
@@ -74,7 +73,7 @@
 
     &__img {
         height: 61px;
-        float: left;
+        // float: left;
         padding-top: 10px;
         width: 48px;
         object-fit: cover;
