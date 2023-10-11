@@ -1,0 +1,8 @@
+@use 'sass:math';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../../src/css/mixins';
+@import '../../src/css/variables';
+@import '../../src/css/fonts';
+@import '../../src/css/global';
+@import '.././css/weather';

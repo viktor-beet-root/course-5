@@ -1,0 +1,25 @@
+@include grid ();
+
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 21px;
+    color: $main-font-color;
+}
+
+.container {
+    max-width: $container-max-with;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0px 137px 0px 137px;
+    border: 25px solid #2B81AC;
+}
+
+h1 {
+    font-size: 22px;
+    // color: $white-color;
+}
+
+h2 {
+    font-size: 1rem;
+}
