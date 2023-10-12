@@ -1,1 +1,1 @@
-https://tiselko181.github.io/course-5/students/tiselko_iryna/41_react/build/index.html
+https://dunaievaas.github.io/course-5/students/dunaieva_alona/41_react-components/build/index.html
