@@ -8,7 +8,13 @@
         background-position: bottom;
         background-size: cover;
         padding-bottom: 130px;
+
+        .slick-slide {
+            margin: 10px;
+        }
     }
+
+
 
     // .news__heading
 
@@ -34,11 +40,15 @@
     // .news__article
 
     &__article {
-        max-width: 440px;
+        width: 440px;
         height: 550px;
         background-color: $white-color;
         display: flex;
         position: relative;
+
+        @include media(xxs) {
+            width: 550px;
+        }
 
         & .card__info {
             display: flex;
@@ -78,10 +88,6 @@
             margin-top: -10px;
         }
     }
-}
-
-.slick-slide {
-    margin: 10px;
 }
 
 .article-wrapper {

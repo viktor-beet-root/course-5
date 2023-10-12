@@ -95,8 +95,12 @@
         height: 100%;
         background: $malibu-color;
         position: absolute;
-        top: -11%;
-        left: -20%;
+        top: -12%;
+        left: -25%;
+
+        @include media(sm) {
+            left: -10%;
+        }
     }
 }
 

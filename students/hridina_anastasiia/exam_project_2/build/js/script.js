@@ -144,6 +144,7 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()(".hero-slider").slick({
   dots: true,
   slidesToShow: 1,
   slideToScroll: 1,
+  adaptiveHeight: true,
   pauseOnHover: false,
   verticalSwiping: false,
   arrows: false,
@@ -206,19 +207,9 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.article-wrapper').slick({
     }
   }]
 });
-lightbox.option({
-  fadeDuration: 600,
-  fitImagesInViewport: true,
-  imageFadeDuration: 600,
-  resizeDuration: 700,
-  wrapAround: false,
-  positionFromTop: 50,
-  disableScrolling: true,
-  showImageNumberLabel: false
-});
 var menu = jquery__WEBPACK_IMPORTED_MODULE_15___default()('.menu');
 var isOpenMenu = false;
-menu.on('transitioned', function () {
+menu.on('transitionend', function () {
   if (!isOpenMenu) {
     menu.css({
       display: ''
@@ -251,7 +242,7 @@ var isHeaderBg = false;
 //     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
 //         header.addClass('bg-header');
 //         isHeaderBg = true;
-//     } else if ($(this).scrollTop() < offsetBgHeader && !isHeaderBg) {
+//     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
 //         header.removeClass('bg-header');
 //         isHeaderBg = false;
 //     };
@@ -276,13 +267,24 @@ var callback = function callback(entries, observer) {
   });
 };
 var observer = new IntersectionObserver(callback, options);
-var target = document.querySelector(".hero");
+var target = document.querySelector(".menu");
 observer.observe(target);
+var body = jquery__WEBPACK_IMPORTED_MODULE_15___default()("html, body");
 jquery__WEBPACK_IMPORTED_MODULE_15___default()('.scroll-to-top').on('click', function (e) {
   e.preventDefault();
   body.stop().animate({
     scrollTop: 0
   }, 200);
+});
+lightbox.option({
+  fadeDuration: 600,
+  fitImagesInViewport: true,
+  imageFadeDuration: 600,
+  resizeDuration: 700,
+  wrapAround: false,
+  positionFromTop: 50,
+  disableScrolling: true,
+  showImageNumberLabel: false
 });
 
 /***/ }),

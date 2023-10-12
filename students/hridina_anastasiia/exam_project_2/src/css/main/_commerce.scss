@@ -75,8 +75,12 @@
             height: 100%;
             background: $heliotrope-color;
             position: absolute;
-            top: -11%;
-            right: -23%;
+            top: -12%;
+            right: -27%;
+
+            @include media(sm) {
+                right: -5%;
+            }
         }
     }
 }

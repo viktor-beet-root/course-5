@@ -4,6 +4,7 @@ import 'lightbox2';
 import button from './galleryButton.js';
 import createFormValidation from './formValidation.js';
 
+
 const addForm = document.querySelector('.form');
 
 createFormValidation(addForm, getUserInfo);
@@ -17,6 +18,7 @@ $(".hero-slider").slick({
     dots: true,
     slidesToShow: 1,
     slideToScroll: 1,
+    adaptiveHeight: true,
     pauseOnHover: false,
     verticalSwiping: false,
     arrows: false,
@@ -88,26 +90,14 @@ $('.article-wrapper').slick({
     ]
 });
 
-lightbox.option({
-    fadeDuration: 600,
-    fitImagesInViewport: true,
-    imageFadeDuration: 600,
-    resizeDuration: 700,
-    wrapAround: false,
-    positionFromTop: 50,
-    disableScrolling: true,
-    showImageNumberLabel: false
-})
-
-
 const menu = $('.menu');
 let isOpenMenu = false;
 
-menu.on('transitioned', function () {
+menu.on('transitionend', function () {
     if (!isOpenMenu) {
         menu.css({ display: '' });
     }
-})
+});
 
 $('.menu-open-btn').on('click', function (e) {
     e.preventDefault();
@@ -127,8 +117,8 @@ $('.menu-open-btn').on('click', function (e) {
     $(this).closest('.menu-wrapper').toggleClass('_open', !isOpenMenu);
 
     isOpenMenu = false;
-
 });
+
 
 const header = $('.header');
 const headerHeight = header.outerHeight(true);
@@ -142,7 +132,7 @@ let isHeaderBg = false;
 //     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
 //         header.addClass('bg-header');
 //         isHeaderBg = true;
-//     } else if ($(this).scrollTop() < offsetBgHeader && !isHeaderBg) {
+//     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
 //         header.removeClass('bg-header');
 //         isHeaderBg = false;
 //     };
@@ -173,9 +163,12 @@ const callback = function (entries, observer) {
 
 const observer = new IntersectionObserver(callback, options);
 
-const target = document.querySelector(".hero");
+const target = document.querySelector(".menu");
 
 observer.observe(target);
+
+
+const body = $("html, body");
 
 $('.scroll-to-top').on('click', function (e) {
     e.preventDefault();
@@ -183,3 +176,14 @@ $('.scroll-to-top').on('click', function (e) {
     body.stop().animate({ scrollTop: 0 }, 200);
 });
 
+
+lightbox.option({
+    fadeDuration: 600,
+    fitImagesInViewport: true,
+    imageFadeDuration: 600,
+    resizeDuration: 700,
+    wrapAround: false,
+    positionFromTop: 50,
+    disableScrolling: true,
+    showImageNumberLabel: false
+});

@@ -249,6 +249,10 @@
         margin-left: 15px;
     }
 
+    @include media(sm) {
+        margin: 0 auto;
+    }
+
 }
 
 .social {
