@@ -1,0 +1,25 @@
+// colors
+$white-color: #fff;
+$main-font-color: $white-color;
+
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: 'Open Sans';
+$main-font: $default-font-name, $fallback;
+$font-path: './fonts/';
+
+// container
+$container-padding: 15px;
+$container-max-with: 1440px;
+$gap: 15px;
+$default-coutn-col: 12;
+$default-width: 1440px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+    "xxxs": 320px
+);
