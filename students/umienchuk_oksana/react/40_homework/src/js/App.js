@@ -1,10 +1,8 @@
-import { createElement } from "react";
-import Advice from "./components/Advice";
+import React from "react";
 
-function App() {
-    return createElement(
-        Advice
-    );
+import Main from "./components/Main";
+import Weather from "./components/Weather";
+
+export default function App() {
+    return < Weather />
 }
-
-export default App;

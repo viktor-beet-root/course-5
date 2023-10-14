@@ -1,9 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Weather from "./components/Weather";
 
+import App from "./App";
 
-const root = createRoot(document.getElementById('creater'));
+const root = createRoot(document.getElementById('root'));
 root.render(
-    React.createElement(Weather)
+    <App />
 );
