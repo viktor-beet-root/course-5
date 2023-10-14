@@ -33385,10 +33385,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ App; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _componetts_header_Header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./componetts/header/Header.js */ "./src/js/componetts/header/Header.js");
-/* harmony import */ var _componetts_main_Main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./componetts/main/Main.js */ "./src/js/componetts/main/Main.js");
-/* harmony import */ var _componetts_footer_Footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./componetts/footer/Footer.js */ "./src/js/componetts/footer/Footer.js");
-/* harmony import */ var _componetts_ui_sprite_Sprite_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./componetts/ui/sprite/Sprite.js */ "./src/js/componetts/ui/sprite/Sprite.js");
+/* harmony import */ var _components_header_Header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/header/Header.js */ "./src/js/components/header/Header.js");
+/* harmony import */ var _components_main_Main_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/main/Main.js */ "./src/js/components/main/Main.js");
+/* harmony import */ var _components_footer_Footer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/footer/Footer.js */ "./src/js/components/footer/Footer.js");
+/* harmony import */ var _components_ui_sprite_Sprite_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/ui/sprite/Sprite.js */ "./src/js/components/ui/sprite/Sprite.js");
 var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\App.js";
 
 
@@ -33396,28 +33396,28 @@ var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\Ap
 
 
 function App() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_componetts_header_Header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_header_Header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_componetts_main_Main_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_main_Main_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_componetts_footer_Footer_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_footer_Footer_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_componetts_ui_sprite_Sprite_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ui_sprite_Sprite_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -33429,16 +33429,16 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/Markup.js":
+/***/ "./src/js/components/Markup.js":
 /*!*************************************!*\
-  !*** ./src/js/componetts/Markup.js ***!
+  !*** ./src/js/components/Markup.js ***!
   \*************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _weather_Weather_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weather/Weather-list.js */ "./src/js/componetts/weather/Weather-list.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\Markup.js";
+/* harmony import */ var _weather_Weather_list_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./weather/Weather-list.js */ "./src/js/components/weather/Weather-list.js");
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\Markup.js";
 
 
 function Markup() {
@@ -33472,9 +33472,9 @@ function Markup() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/footer/Footer.js":
+/***/ "./src/js/components/footer/Footer.js":
 /*!********************************************!*\
-  !*** ./src/js/componetts/footer/Footer.js ***!
+  !*** ./src/js/components/footer/Footer.js ***!
   \********************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33483,7 +33483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ Footer; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\footer\\Footer.js";
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\footer\\Footer.js";
 
 function Footer() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("footer", {
@@ -33498,9 +33498,9 @@ function Footer() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/header/Header.js":
+/***/ "./src/js/components/header/Header.js":
 /*!********************************************!*\
-  !*** ./src/js/componetts/header/Header.js ***!
+  !*** ./src/js/components/header/Header.js ***!
   \********************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33509,7 +33509,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ Header; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\header\\Header.js";
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\header\\Header.js";
 
 function Header() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
@@ -33524,9 +33524,9 @@ function Header() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/main/Main.js":
+/***/ "./src/js/components/main/Main.js":
 /*!****************************************!*\
-  !*** ./src/js/componetts/main/Main.js ***!
+  !*** ./src/js/components/main/Main.js ***!
   \****************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33535,8 +33535,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ Main; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Markup.js */ "./src/js/componetts/Markup.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\main\\Main.js";
+/* harmony import */ var _Markup_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Markup.js */ "./src/js/components/Markup.js");
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\main\\Main.js";
 
 
 function Main() {
@@ -33567,9 +33567,9 @@ function Main() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/ui/sprite/Sprite.js":
+/***/ "./src/js/components/ui/sprite/Sprite.js":
 /*!***********************************************!*\
-  !*** ./src/js/componetts/ui/sprite/Sprite.js ***!
+  !*** ./src/js/components/ui/sprite/Sprite.js ***!
   \***********************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33578,7 +33578,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ Sprite; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\ui\\sprite\\Sprite.js";
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\ui\\sprite\\Sprite.js";
 
 function Sprite() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
@@ -33810,9 +33810,9 @@ function Sprite() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/ui/sprite/Svg-icon.js":
+/***/ "./src/js/components/ui/sprite/Svg-icon.js":
 /*!*************************************************!*\
-  !*** ./src/js/componetts/ui/sprite/Svg-icon.js ***!
+  !*** ./src/js/components/ui/sprite/Svg-icon.js ***!
   \*************************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33821,7 +33821,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ SvgIcon; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\ui\\sprite\\Svg-icon.js";
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\ui\\sprite\\Svg-icon.js";
 
 function SvgIcon(_ref) {
   var iconId = _ref.iconId,
@@ -33847,9 +33847,9 @@ function SvgIcon(_ref) {
 
 /***/ }),
 
-/***/ "./src/js/componetts/weather/Weather-list.js":
+/***/ "./src/js/components/weather/Weather-list.js":
 /*!***************************************************!*\
-  !*** ./src/js/componetts/weather/Weather-list.js ***!
+  !*** ./src/js/components/weather/Weather-list.js ***!
   \***************************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33858,8 +33858,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ WeatherList; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _Weather_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Weather.js */ "./src/js/componetts/weather/Weather.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\weather\\Weather-list.js";
+/* harmony import */ var _Weather_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Weather.js */ "./src/js/components/weather/Weather.js");
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\weather\\Weather-list.js";
 
 
 var city = [{}];
@@ -33976,9 +33976,9 @@ function WeatherList() {
 
 /***/ }),
 
-/***/ "./src/js/componetts/weather/Weather.js":
+/***/ "./src/js/components/weather/Weather.js":
 /*!**********************************************!*\
-  !*** ./src/js/componetts/weather/Weather.js ***!
+  !*** ./src/js/components/weather/Weather.js ***!
   \**********************************************/
 /***/ (function(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
@@ -33987,8 +33987,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": function() { return /* binding */ Weather; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _ui_sprite_Svg_icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/sprite/Svg-icon.js */ "./src/js/componetts/ui/sprite/Svg-icon.js");
-var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\componetts\\weather\\Weather.js";
+/* harmony import */ var _ui_sprite_Svg_icon_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/sprite/Svg-icon.js */ "./src/js/components/ui/sprite/Svg-icon.js");
+var _jsxFileName = "D:\\beetroot\\www\\course-5\\main\\frontEnd\\42\\src\\js\\components\\weather\\Weather.js";
 
 
 function Weather(_ref) {
@@ -34142,14 +34142,14 @@ root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_App_
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./src/js/App.js");
 /******/ 	__webpack_require__("./src/js/script.js");
-/******/ 	__webpack_require__("./src/js/componetts/Markup.js");
-/******/ 	__webpack_require__("./src/js/componetts/footer/Footer.js");
-/******/ 	__webpack_require__("./src/js/componetts/header/Header.js");
-/******/ 	__webpack_require__("./src/js/componetts/main/Main.js");
-/******/ 	__webpack_require__("./src/js/componetts/weather/Weather-list.js");
-/******/ 	__webpack_require__("./src/js/componetts/weather/Weather.js");
-/******/ 	__webpack_require__("./src/js/componetts/ui/sprite/Sprite.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/componetts/ui/sprite/Svg-icon.js");
+/******/ 	__webpack_require__("./src/js/components/Markup.js");
+/******/ 	__webpack_require__("./src/js/components/footer/Footer.js");
+/******/ 	__webpack_require__("./src/js/components/main/Main.js");
+/******/ 	__webpack_require__("./src/js/components/header/Header.js");
+/******/ 	__webpack_require__("./src/js/components/weather/Weather-list.js");
+/******/ 	__webpack_require__("./src/js/components/weather/Weather.js");
+/******/ 	__webpack_require__("./src/js/components/ui/sprite/Sprite.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/ui/sprite/Svg-icon.js");
 /******/ 	
 /******/ })()
 ;
