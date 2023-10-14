@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import 'slick-carousel';
-import 'lightbox2';
 import button from './galleryButton.js';
 import createFormValidation from './formValidation.js';
 
@@ -179,7 +178,7 @@ $('.scroll-to-top').on('click', function (e) {
 
 lightbox.option({
     fadeDuration: 600,
-    fitImagesInViewport: true,
+    fitImagesInViewport: false,
     imageFadeDuration: 600,
     resizeDuration: 700,
     wrapAround: false,
@@ -187,3 +186,5 @@ lightbox.option({
     disableScrolling: true,
     showImageNumberLabel: false
 });
+
+
