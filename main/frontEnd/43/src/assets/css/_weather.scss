@@ -1,0 +1,22 @@
+.row {
+    border: 2px solid $white-color;
+}
+
+.subtitle {
+    margin-top: 35px;
+}
+
+#title {
+    width: 35px;
+    height: 34px;
+    vertical-align: bottom;
+}
+
+.title-wrapper {
+    display: flex;
+    gap: 5px;
+}
+
+.main {
+    border: 25px solid $main-border;
+}
