@@ -1,6 +1,159 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/gallery.js":
+/*!***************************!*\
+  !*** ./src/js/gallery.js ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+
+
+var seeMoreButton = document.querySelector('.gallery-btn');
+var galleryOpenItems = document.querySelectorAll('.gallery-open');
+//Ініціалізуйте прапор для відстеження стану відображення
+var galleryOpenVisible = true;
+seeMoreButton.addEventListener('click', function (event) {
+  // Скасуdfnb стандартну дію посилання, щоб сторінка не перезавантажувалася
+  event.preventDefault();
+  if (galleryOpenVisible) {
+    galleryOpenItems.forEach(function (item) {
+      item.classList.remove('gallery__grid-item--open');
+    });
+  } else {
+    galleryOpenItems.forEach(function (item) {
+      item.classList.add('gallery__grid-item--open');
+    });
+  }
+  galleryOpenVisible = !galleryOpenVisible;
+});
+
+/***/ }),
+
+/***/ "./src/js/header.js":
+/*!**************************!*\
+  !*** ./src/js/header.js ***!
+  \**************************/
+/***/ (function() {
+
+// const menuOpenButton = document.querySelector('.menu-open-btn');
+// console.log(menuOpenButton);
+
+// let menuOpenVisible = false;
+// menuOpenButton.addEventListener('click', function (event) {
+//     console.log(menuOpenVisible);
+//     event.preventDefault();
+
+//     if (menuOpenVisible) {
+//         menuOpenButton.classList.add('_open');
+//     } else {
+//         menuOpenButton.classList.remove('_open');
+//     }
+
+//     menuOpenVisible = !menuOpenVisible;
+// });
+
+/***/ }),
+
+/***/ "./src/js/script.js":
+/*!**************************!*\
+  !*** ./src/js/script.js ***!
+  \**************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lightbox2 */ "./node_modules/lightbox2/dist/js/lightbox.js");
+/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lightbox2__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gallery */ "./src/js/gallery.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header */ "./src/js/header.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
+  arrows: false,
+  dots: true,
+  draggable: true,
+  speed: 500,
+  easing: 'easeInOutCubic',
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  vertical: true,
+  verticalSwiping: true,
+  responsive: [{
+    breakpoint: 576,
+    settings: {
+      // dots: false,
+      // draggable: false,
+      // vertical: false,
+      verticalSwiping: false,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      easing: 'easeInOutCubic'
+    }
+  }]
+});
+jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
+  arrows: true,
+  dots: true,
+  draggable: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  easing: 'easeInOutCubic',
+  responsive: [{
+    breakpoint: 992,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: true
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      draggable: false,
+      autoplay: true
+    }
+  }, {
+    breakpoint: 576,
+    settings: {
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      draggable: false,
+      autoplay: true
+    }
+  }]
+});
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true,
+  'alwaysShowNavOnTouchDevices': true
+});
+
+// $('.menu-open-btn').on('click', function (e) {
+//     e.preventDefault()
+//     console.log($(this));
+//     $(this).closest('.menu-wrapper').toggleClass('_open');
+// });
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/a-callable.js":
 /*!******************************************************!*\
   !*** ./node_modules/core-js/internals/a-callable.js ***!
@@ -16247,116 +16400,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	}();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
-!function() {
-"use strict";
-/*!**************************!*\
-  !*** ./src/js/script.js ***!
-  \**************************/
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lightbox2 */ "./node_modules/lightbox2/dist/js/lightbox.js");
-/* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lightbox2__WEBPACK_IMPORTED_MODULE_4__);
-
-
-
-
-
-jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hero-slider').slick({
-  arrows: false,
-  dots: true,
-  draggable: true,
-  speed: 500,
-  easing: 'easeInOutCubic',
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  vertical: true,
-  verticalSwiping: true,
-  responsive: [{
-    breakpoint: 576,
-    settings: {
-      // dots: false,
-      // draggable: false,
-      // vertical: false,
-      verticalSwiping: false,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      easing: 'easeInOutCubic'
-    }
-  }]
-});
-jquery__WEBPACK_IMPORTED_MODULE_2___default()('.news-slider').slick({
-  arrows: true,
-  dots: true,
-  draggable: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  easing: 'easeInOutCubic',
-  responsive: [{
-    breakpoint: 992,
-    settings: {
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      autoplay: true
-    }
-  }, {
-    breakpoint: 768,
-    settings: {
-      slidesToShow: 2,
-      slidesToScroll: 2,
-      draggable: false,
-      autoplay: true
-    }
-  }, {
-    breakpoint: 576,
-    settings: {
-      arrows: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      draggable: false,
-      autoplay: true
-    }
-  }]
-});
-lightbox.option({
-  'resizeDuration': 200,
-  'wrapAround': true
-});
-var seeMoreButton = document.querySelector('.gallery-btn');
-var galleryOpenItems = document.querySelectorAll('.gallery-open');
-
-// Инициализируйте флаг для отслеживания состояния отображения
-var galleryOpenVisible = false;
-seeMoreButton.addEventListener('click', function (event) {
-  // Отмените стандартное действие ссылки, чтобы страница не перезагружалась
-  event.preventDefault();
-
-  // Переключайте стиль display для элементов с классом "gallery-open"
-  if (galleryOpenVisible) {
-    // Если элементы видимы, скройте их
-    galleryOpenItems.forEach(function (item) {
-      item.style.display = 'none';
-    });
-  } else {
-    // Если элементы скрыты, отобразите их
-    galleryOpenItems.forEach(function (item) {
-      item.style.display = '';
-    });
-  }
-
-  // Обновите флаг состояния отображения
-  galleryOpenVisible = !galleryOpenVisible;
-});
-}();
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./src/js/gallery.js");
+/******/ 	__webpack_require__("./src/js/header.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/script.js");
+/******/ 	
 /******/ })()
 ;
 //# sourceMappingURL=script.js.map

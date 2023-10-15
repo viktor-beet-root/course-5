@@ -2,6 +2,8 @@
 import $ from 'jquery';
 import 'slick-carousel';
 import 'lightbox2';
+import './gallery';
+import './header';
 
 $('.hero-slider').slick({
     arrows: false,
@@ -27,7 +29,6 @@ $('.hero-slider').slick({
             }
         }],
 });
-
 
 $('.news-slider').slick({
     arrows: true,
@@ -70,33 +71,14 @@ $('.news-slider').slick({
 
 lightbox.option({
     'resizeDuration': 200,
-    'wrapAround': true
-})
-
-
-const seeMoreButton = document.querySelector('.gallery-btn');
-const galleryOpenItems = document.querySelectorAll('.gallery-open');
-
-// Инициализируйте флаг для отслеживания состояния отображения
-let galleryOpenVisible = false;
-
-seeMoreButton.addEventListener('click', function (event) {
-    // Отмените стандартное действие ссылки, чтобы страница не перезагружалась
-    event.preventDefault();
-
-    // Переключайте стиль display для элементов с классом "gallery-open"
-    if (galleryOpenVisible) {
-        // Если элементы видимы, скройте их
-        galleryOpenItems.forEach(item => {
-            item.style.display = 'none';
-        });
-    } else {
-        // Если элементы скрыты, отобразите их
-        galleryOpenItems.forEach(item => {
-            item.style.display = '';
-        });
-    }
-
-    // Обновите флаг состояния отображения
-    galleryOpenVisible = !galleryOpenVisible;
+    'wrapAround': true,
+    'alwaysShowNavOnTouchDevices': true,
 });
+
+
+
+// $('.menu-open-btn').on('click', function (e) {
+//     e.preventDefault()
+//     console.log($(this));
+//     $(this).closest('.menu-wrapper').toggleClass('_open');
+// });

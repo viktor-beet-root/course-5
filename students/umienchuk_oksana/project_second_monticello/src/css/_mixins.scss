@@ -163,3 +163,15 @@
         }
     }
 }
+
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
+}
