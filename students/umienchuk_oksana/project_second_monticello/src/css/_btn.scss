@@ -1,32 +1,19 @@
 .btn {
     display: inline-block;
-    background-color: $color-btn;
     color: $default-btn-color;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     white-space: nowrap;
+    font-size: 14px;
+    background-color: $color-btn;
+    border: $btn-border;
+    padding: 16px 41px;
 
-
-    &-primary {
-        padding: 20px 32px;
-        // height: $btn-height-primary;
-
-    }
-
-    &-secondary {
-        border: 0;
-        padding: 16px 24px;
-        // height: $btn-height-secondary;
-        // font-size: $font-size-small;
-
-
-        &:hover {
-            text-decoration: underline;
-        }
-
-        @include media(xs) {
-            padding: 10px 18px;
-        }
+    &:hover,
+    :focus {
+        text-decoration: underline;
+        color: $img-bg-second;
+        border: $btn-border-hover;
     }
 }

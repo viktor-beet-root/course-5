@@ -14,30 +14,10 @@ $img-bg-second: #7E5AFF;
 
 $default-border: 1px solid $color-night-blue;
 
-// $font-size-small-xxs: 12px;
-// $font-size-small: 14px;
-// $font-size-h5: 20px;
-// $font-size-logo-sub: 22px;
-// $font-size-h3: 24px;
-// $font-size-h2: 36px;
-// $font-size-h1-xxs: 42px;
 $font-size-h1: 80px;
 
 $font-weight: 400;
 $font-weight-title: 700;
-
-// $line-height: 20px;git stat  
-// $line-height-text: 28px;
-// $line-height-h: 40px;
-// $line-height-title: 52px;
-
-// $letter-spacing-btn: 1.12px;
-// $letter-spacing-menu: 1.4px;
-// $letter-spacing-text: 1.6px;
-// $letter-spacing-h6: 2px;
-// $letter-spacing: 2.4px;
-// $letter-spacing-holder: 2.8px;
-// $letter-spacing-sub-text: 6.82px;
 
 $text-transform-upper: uppercase;
 $text-transform-capit: capitalize;
@@ -64,12 +44,12 @@ $base-img-path: '../';
 $header-title: $color-white;
 
 // btn
-// $btn-height-pr: 20px;
-// $btn-height-primary: $btn-height-pr;
 // $btn-height-sec: 52px;
 // $btn-height-secondary: $btn-height-sec;
 $color-btn: transparent;
 $default-btn-color: $color-black;
+$btn-border: 1px solid $color-night-blue;
+$btn-border-hover: 1px solid $img-bg-second;
 
 // containers
 $container-padding: 15px;

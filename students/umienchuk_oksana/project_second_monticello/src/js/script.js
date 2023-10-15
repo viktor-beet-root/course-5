@@ -3,8 +3,6 @@ import $ from 'jquery';
 import 'slick-carousel';
 import 'lightbox2';
 
-console.log($);
-
 $('.hero-slider').slick({
     arrows: false,
     dots: true,
@@ -71,10 +69,34 @@ $('.news-slider').slick({
 });
 
 lightbox.option({
-    'AlwaysShowNavOnTouchDevices': true,
     'resizeDuration': 200,
-    'albumLabel': "Image %1 of %2",
-    'wrapAround': true,
-    'resizeDuration': 700,
-    'wrapAround': true,
+    'wrapAround': true
 })
+
+
+const seeMoreButton = document.querySelector('.gallery-btn');
+const galleryOpenItems = document.querySelectorAll('.gallery-open');
+
+// Инициализируйте флаг для отслеживания состояния отображения
+let galleryOpenVisible = false;
+
+seeMoreButton.addEventListener('click', function (event) {
+    // Отмените стандартное действие ссылки, чтобы страница не перезагружалась
+    event.preventDefault();
+
+    // Переключайте стиль display для элементов с классом "gallery-open"
+    if (galleryOpenVisible) {
+        // Если элементы видимы, скройте их
+        galleryOpenItems.forEach(item => {
+            item.style.display = 'none';
+        });
+    } else {
+        // Если элементы скрыты, отобразите их
+        galleryOpenItems.forEach(item => {
+            item.style.display = '';
+        });
+    }
+
+    // Обновите флаг состояния отображения
+    galleryOpenVisible = !galleryOpenVisible;
+});
