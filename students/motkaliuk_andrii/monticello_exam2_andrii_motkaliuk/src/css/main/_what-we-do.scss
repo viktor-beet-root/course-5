@@ -1,10 +1,3 @@
-.what-we-do {
-    color: #2C4058;
-    font-family: Open Sans, $fallback;
-    margin: 0;
-    padding-top: 130px;
-}
-
 .reverse {
     flex-direction: row-reverse;
 }
@@ -19,90 +12,95 @@
     justify-content: end;
 }
 
-.wwd-title {
-    display: block;
-    font-family: Montserrat;
-    font-size: 44px;
-    font-weight: 700;
+.what-we-do {
+    color: $color-steel-blue;
+    font-family: Open Sans, $fallback;
     margin: 0;
-}
+    padding-top: 130px;
 
-.wwd-main-title {
-    text-align: center;
-    padding-bottom: 150px;
-    position: relative;
-
-    &::before {
-        position: absolute;
-        content: '';
+    &__title {
         display: block;
-        max-width: 100px;
+        font-family: Montserrat;
+        font-size: 44px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    &__main-title {
+        text-align: center;
+        padding-bottom: 150px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            max-width: 100px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-black;
+
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__subtitle {
+        font-family: Montserrat, $fallback;
+        font-size: 22px;
+        margin: 0;
+        padding-top: 50px;
+    }
+
+    &__decription {
+        line-height: 30px;
+        margin: 0;
+        padding: 20px 0 40px;
+    }
+
+    &__image-wrapper {
+        max-width: 630px;
         width: 100%;
-        height: 1px;
-        background-color: $color-black;
-
-        top: -30px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        max-height: 470px;
+        height: 100%;
+        margin-bottom: 150px;
     }
-}
 
-.wwd-subtitle {
-    font-family: Montserrat, $fallback;
-    font-size: 22px;
-    margin: 0;
-    padding-top: 50px;
-}
-
-.wwd-decription {
-    line-height: 30px;
-    margin: 0;
-    padding: 20px 0 40px;
-}
-
-.wwd-image-wrapper {
-    max-width: 630px;
-    width: 100%;
-    max-height: 470px;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.wwd-pseudoelement-wrapper-left {
-    &::before {
-        overflow: visible;
-        position: absolute;
-        content: url(../../images/rectangle-blue.svg);
-        display: block;
-        top: -50px;
-        right: 260px;
+    &__pseudoelement-wrapper-left {
+        &::before {
+            overflow: visible;
+            position: absolute;
+            content: url(../../images/rectangle-blue.svg);
+            display: block;
+            margin-top: -50px;
+            left: 0;
+            z-index: -1;
+        }
     }
-}
 
-.wwd-pseudoelement-wrapper-right {
-    &::before {
-        overflow: visible;
-        position: absolute;
-        content: url(../../images/rectangle-purple.svg);
-        display: block;
-        top: -50px;
-        left: 260px;
-        z-index: 1;
+    &__pseudoelement-wrapper-right {
+        &::before {
+            overflow: visible;
+            position: absolute;
+            content: url(../../images/rectangle-purple.svg);
+            display: block;
+            margin-top: -50px;
+            right: 0;
+            z-index: -1;
+        }
     }
-}
 
-.wwd-image {
-    z-index: 100;
-}
+    &__image {
+        z-index: 100;
+    }
 
+    &__location {
+        position: relative;
+        padding-top: 60px;
+    }
 
-.wwd-location {
-    position: relative;
-    padding-top: 60px;
-
-
-    &__wwd-img {
+    &__location-icon {
         display: inline-block;
         position: absolute;
         width: 9px;
@@ -110,11 +108,11 @@
         bottom: 0px;
     }
 
-    &__decription {
+    &__location-decription {
         display: inline-block;
         padding-left: 15px;
-        color: #000;
-        font-family: Open Sans;
+        color: $color-black;
+        font-family: Open Sans, $fallback;
         font-size: 15px;
         font-style: italic;
         margin: 0;

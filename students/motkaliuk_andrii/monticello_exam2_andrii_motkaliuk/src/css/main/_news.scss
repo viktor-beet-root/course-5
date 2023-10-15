@@ -1,8 +1,28 @@
-.news {
+.last-news {
     background: linear-gradient(237deg, #24CCFA 11.16%, #3C7FD4 89.18%);
     padding: 150px 0;
-    color: $color-steel-blue;
     line-height: normal;
+    position: relative;
+
+    &::before {
+        content: "";
+        background: url('../../images/painted-city2.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom;
+        opacity: 0.1;
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    @include media(sm) {
+        padding: 40px 0;
+    }
 
     &__title {
         color: $color-white;
@@ -18,97 +38,96 @@
             width: 100%;
             height: 1px;
             background-color: $color-white;
-
             top: -30px;
             left: 50%;
             transform: translate(-50%, -50%);
         }
     }
+
+    // &__item {
+    //     max-width: 370px;
+    //     max-height: 514px;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: $color-white;
+    //     padding: 15px;
+    // }
 }
 
 .news-slider {
-
-    // display: flex;
     &:not(.slick-initialized) {
         display: flex;
 
-        .carusel__item:nth-child(n+4) {
-            display: none;
+        .news-slider__item {
+            width: 33.333%;
+            z-index: 3;
+
+            &:nth-child(n+4) {
+                display: none;
+            }
         }
     }
-}
 
-
-.carusel {
     &__item {
-        max-width: 370px;
-        max-height: 514px;
-        width: 100%;
-        height: 100%;
-        background-color: $color-white;
         padding: 15px;
     }
 }
 
-.c-item {
-    &__content {
-        padding: 30px 20px;
-    }
+.news {
+    background-color: #fff;
 
-    &__image-wrapper {
-        max-width: 370px;
-        max-height: 240px;
+    &__img {
         width: 100%;
-        height: 100%;
-        padding: 0;
+        max-height: 240px;
         object-fit: cover;
         overflow: hidden;
     }
 
-    &__image {
-        // object-fit: fill;
+    &__deskription {
+        padding: 30px 15px;
     }
 
     &__title {
+        color: #2C4058;
         font-size: 22px;
         font-weight: 700;
-        margin: 0;
+        margin-bottom: 15px;
     }
 
-    &__description {
-        font-family: Open Sans, $fallback;
-        padding-top: 15px;
-        margin: 0;
+    &__text {
+        margin-bottom: 40px;
     }
 
-    &__user-wrapper {
-        display: flex;
-        padding-top: 30px;
-        width: 100%;
-
-        & .col-3 {
-            padding: 15px 0;
-        }
+    &__author {
+        margin-top: auto;
     }
+}
 
-    &__user-image-wrapper {
-        height: 60px;
-        width: 60px;
+.news-author {
+    display: flex;
+    align-items: center;
+
+    &__img {
         border-radius: 50%;
-        overflow: hidden;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
     }
 
-    &__user-image {}
+    &__info {
+        width: calc(100% - 60px);
+        padding: 5px 5px 5px 20px;
+    }
 
-    &__user-name {
-        text-transform: uppercase;
-        padding: 6px 0;
-        margin: 0;
+    &__name {
+        color: #2C4058;
+        margin-bottom: 0;
     }
 
     &__date {
-        color: $color-light-blue;
+        color: #55B7FF;
         font-size: 14px;
-        margin: 0;
+        margin-bottom: 0;
     }
 }
