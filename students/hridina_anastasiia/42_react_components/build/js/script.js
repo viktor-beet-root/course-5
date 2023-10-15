@@ -80,24 +80,54 @@ function BlogPage() {
       lineNumber: 10,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("aside", {
-    className: "aside__block",
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_news_NewsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11,
       columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_news_NewsWrapper__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }));
+}
+/* harmony default export */ __webpack_exports__["default"] = (BlogPage);
+
+/***/ }),
+
+/***/ "./src/js/components/blog/Banner.js":
+/*!******************************************!*\
+  !*** ./src/js/components/blog/Banner.js ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ Banner; }
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/anastasiahridina/Desktop/course-5/students/hridina_anastasiia/42_react_components/src/js/components/blog/Banner.js";
+
+function Banner() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "banner__container",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 17
+      lineNumber: 5,
+      columnNumber: 9
     }
-  })));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "banner__img",
+    src: "./images/banner1.jpg",
+    alt: "banner image",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 13
+    }
+  }));
 }
-/* harmony default export */ __webpack_exports__["default"] = (BlogPage);
 
 /***/ }),
 
@@ -124,36 +154,44 @@ function BlogArticle(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 5,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: "article__name",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 13
-    }
-  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: "article__img",
     src: blogImg,
     alt: "article image",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 6,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "article__info",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "article__name",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8,
+      columnNumber: 17
+    }
+  }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "article__text",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9,
-      columnNumber: 13
+      columnNumber: 17
     }
-  }, text));
+  }, text)));
 }
 
 /***/ }),
@@ -180,23 +218,23 @@ function BlogList() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BlogArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
     blogImg: "./images/image_01.jpeg",
     title: "Did Our Human Ancestors Come Close to Extinction?",
-    text: "Modern humans\u2014aka Homo sapiens\u2014emerged about 300,000 years ago after evolving from human ancestors. There\u2019s a lot we still don\u2019t know about who these ancestors were and where they lived. But according to an August 2023 study, our ancestors may have come close to extinction some 900,000 to 800,000 years ago.\nDuring this period, our human ancestors lost 98.7 percent of their population, according to the study published in Science. The authors estimate that the reduced population had an average of 1,280 breeding individuals, and remained this diminished for over 100,000 years.",
+    text: "Modern humans\u2014aka Homo sapiens\u2014emerged about 300,000 years ago after evolving from human ancestors. There\u2019s a lot we still don\u2019t know about who these ancestors were and where they lived. But according to an August 2023 study, our ancestors may have come close to extinction some 900,000 to 800,000 years ago...",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BlogArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
     blogImg: "./images/image_02.jpeg",
     title: "5 Women Who Ruled the Ancient World",
-    text: "Very few women ever rose to power in the kingdoms and empires of the ancient world. The handful who did, in the Near East, Asia and Europe, fought their way through significant barriers, in often violent times. \nThese women first accessed their power through men\u2014fathers, husbands, brothers and sons. But they stayed in power, sometimes for decades, through a mix of ambition, intelligence, political savvy, generosity, guile and, in some cases, a ruthless and bloody drive for power. ",
+    text: "Very few women ever rose to power in the kingdoms and empires of the ancient world. The handful who did, in the Near East, Asia and Europe, fought their way through significant barriers, in often violent times. \nThese women first accessed their power through men\u2014fathers, husbands, brothers and sons. But they stayed in power, sometimes for decades, through a mix of ambition, intelligence, political savvy, generosity, guile and, in some cases, a ruthless and bloody drive for power... ",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -206,7 +244,7 @@ function BlogList() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BlogArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
     blogImg: "./images/image_03.jpeg",
     title: "Ancient Mysterious Script Finally Decoded",
-    text: "The Kushan Empire was an ancient state that stretched from modern-day Uzbekistan into what is now northern India, and helped spread Buddhism to East Asia between the first and the third centuries. Starting in the 1950s, archeologists began identifying artifacts in the empire\u2019s region bearing an \u201Cunknown Kushan script\u201D that they couldn\u2019t understand. But researchers in Germany and Tajikistan announced in July 2023 that they had finally deciphered part of the ancient writing system.\nThe researchers accomplished this by comparing a trilingual text that French archaeologists located in Afghanistan in the 1960s with a bilingual text that Tajik archaeologists identified in Tajikistan in 2022.",
+    text: "The Kushan Empire was an ancient state that stretched from modern-day Uzbekistan into what is now northern India, and helped spread Buddhism to East Asia between the first and the third centuries. Starting in the 1950s, archeologists began identifying artifacts in the empire\u2019s region bearing an \u201Cunknown Kushan script\u201D that they couldn\u2019t understand...",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -216,11 +254,11 @@ function BlogList() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BlogArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
     blogImg: "./images/image_04.jpeg",
     title: "Did Polynesian Voyagers Reach the Americas Before Columbus?",
-    text: "Polynesian voyagers sailed without a compass or any other nautical instruments. Yet by reading the stars, waves, currents, clouds, seaweed clumps and seabird flights, they managed to cross vast swaths of the Pacific Ocean and settle hundreds of islands, from Hawaii in the north to Easter Island in the southeast to New Zealand in the southwest. Evidence has mounted that they likewise reached mainland South America\u2014and possibly North America as well\u2014long before Christopher Columbus.\n\u201CIt\u2019s one of the most remarkable colonization events of any time in history,\u201D says Jennifer Kahn, an archeologist at the College of William & Mary, who specializes in Polynesia. \u201CWe\u2019re talking about incredibly skilled navigators [discovering] some of the most remote places in the world.\u201D",
+    text: "Polynesian voyagers sailed without a compass or any other nautical instruments. Yet by reading the stars, waves, currents, clouds, seaweed clumps and seabird flights, they managed to cross vast swaths of the Pacific Ocean and settle hundreds of islands, from Hawaii in the north to Easter Island in the southeast to New Zealand in the southwest...",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
+      lineNumber: 12,
       columnNumber: 13
     }
   }));
@@ -369,7 +407,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _BlogPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../BlogPage */ "./src/js/components/BlogPage.js");
+/* harmony import */ var _blog_Banner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../blog/Banner */ "./src/js/components/blog/Banner.js");
 var _jsxFileName = "/Users/anastasiahridina/Desktop/course-5/students/hridina_anastasiia/42_react_components/src/js/components/main/Main.js";
+
 
 
 function Main() {
@@ -378,22 +418,37 @@ function Main() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 9,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+    className: "banner",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 13
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_blog_Banner__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 17
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "blog__article",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 13,
       columnNumber: 13
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_BlogPage__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 14,
       columnNumber: 17
     }
   })));
@@ -416,8 +471,8 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/anastasiahridina/Desktop/course-5/students/hridina_anastasiia/42_react_components/src/js/components/news/NewsArticle.js";
 
 function NewsArticle(_ref) {
-  var newsImg = _ref.newsImg,
-    newsTitle = _ref.newsTitle;
+  var newsTitle = _ref.newsTitle,
+    newsText = _ref.newsText;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "news__card",
     __self: this,
@@ -426,25 +481,23 @@ function NewsArticle(_ref) {
       lineNumber: 5,
       columnNumber: 9
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    className: "news__img",
-    scr: newsImg,
-    alt: "news article image",
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
+    className: "news__title",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6,
       columnNumber: 13
     }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
-    className: "news__title",
+  }, newsTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "news__text",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7,
       columnNumber: 13
     }
-  }, newsTitle));
+  }, newsText));
 }
 
 /***/ }),
@@ -475,8 +528,8 @@ function NewsList() {
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    newsImg: "./images/newsimg01.jpg",
     newsTitle: "Should we be worried about AI`s growing energy use?",
+    newsText: "The expanding use of large AI models demands huge numbers of powerful servers, which could end up consuming as much energy as whole countries",
     __self: this,
     __source: {
       fileName: _jsxFileName,
@@ -484,58 +537,39 @@ function NewsList() {
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    newsImg: "./images/newsimg02.jpg",
     newsTitle: "Bing Chat AI tricked into solving CAPTCHA tests with simple lies",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9,
-      columnNumber: 13
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    newsImg: "./images/newsimg03.jpg",
-    newsTitle: "Let`s stop making lab-grown meat weird",
+    newsText: "Microsoft` s AI-powered Bing Chat can be tricked into  solving anti-bot tests with stories about deceased grandmothers or missing glasses",
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10,
       columnNumber: 13
     }
-  }));
-}
-
-/***/ }),
-
-/***/ "./src/js/components/news/NewsPage.js":
-/*!********************************************!*\
-  !*** ./src/js/components/news/NewsPage.js ***!
-  \********************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ NewsPage; }
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _NewsWrapper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewsWrapper */ "./src/js/components/news/NewsWrapper.js");
-var _jsxFileName = "/Users/anastasiahridina/Desktop/course-5/students/hridina_anastasiia/42_react_components/src/js/components/news/NewsPage.js";
-
-
-function NewsPage() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "news__page",
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    newsTitle: "Let`s stop making lab-grown meat weird",
+    newsText: "The lab-grown meat industry needs to perfect and normalise the staples,  like chicken and beef, before jumping to exotic alternatives like mammoth, argues Brian Kateman",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
-      columnNumber: 9
+      lineNumber: 12,
+      columnNumber: 13
     }
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsWrapper__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    newsTitle: "Two giant planets collided and vaporised in a distant star system",
+    newsText: "A star behaving strangely was the first clue that astronomers were witnessing two Neptune-sized planets smashing into each other,  creating a doughnut that may one day birth a new planet and moons",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 14,
+      columnNumber: 13
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsArticle__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    newsTitle: "The entire brain may be involved in language, not just a few regions",
+    newsText: "Brain regions identified as \u201Clanguage centres\u201D are actually hubs that coordinate  the processing of language throughout the brain, argues a controversial new study",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16,
       columnNumber: 13
     }
   }));
@@ -591,25 +625,25 @@ var _jsxFileName = "/Users/anastasiahridina/Desktop/course-5/students/hridina_an
 
 function NewsWrapper() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "news__wrapper",
+    className: "news__wrapper aside_block",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 9
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsTitle__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 9,
       columnNumber: 13
     }
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_NewsList__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 10,
       columnNumber: 13
     }
   }));
@@ -34103,6 +34137,7 @@ if (false) {} else {
 /******/ 	__webpack_require__("./src/js/App.js");
 /******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	__webpack_require__("./src/js/components/BlogPage.js");
+/******/ 	__webpack_require__("./src/js/components/blog/Banner.js");
 /******/ 	__webpack_require__("./src/js/components/blog/BlogArticle.js");
 /******/ 	__webpack_require__("./src/js/components/blog/BlogList.js");
 /******/ 	__webpack_require__("./src/js/components/blog/BlogTitle.js");
@@ -34112,7 +34147,6 @@ if (false) {} else {
 /******/ 	__webpack_require__("./src/js/components/main/Main.js");
 /******/ 	__webpack_require__("./src/js/components/news/NewsArticle.js");
 /******/ 	__webpack_require__("./src/js/components/news/NewsList.js");
-/******/ 	__webpack_require__("./src/js/components/news/NewsPage.js");
 /******/ 	__webpack_require__("./src/js/components/news/NewsTitle.js");
 /******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/news/NewsWrapper.js");
 /******/ 	
