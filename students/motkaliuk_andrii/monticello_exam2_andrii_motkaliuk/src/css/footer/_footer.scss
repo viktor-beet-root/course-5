@@ -65,3 +65,22 @@
     margin: 0;
     padding-top: 10px;
 }
+
+.scroll-to-top {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: $color-purple;
+    right: 45px;
+    bottom: 45px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 10px 5px rgba($color: $color-black, $alpha: .15);
+    border-radius: 50%;
+    z-index: 2000;
+
+    &__arrow {
+        rotate: 180deg;
+        width: 15px;
+    }
+}

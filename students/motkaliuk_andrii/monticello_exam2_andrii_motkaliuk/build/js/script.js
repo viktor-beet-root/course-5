@@ -16267,29 +16267,24 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()('.hero-slider').slick({
   autoplay: false,
   pauseOnHover: false
 });
-
-// $('.news-slider').slick({
-//     dots: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     autoplay: false,
-//     responsive: [
-//         {
-//             breakpoint: 1024,
-//             settings: {
-//                 slidesToShow: 2,
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 1,
-//             }
-//         }
-//     ]
-// });
-
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('.news-slider').slick({
+  dots: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  autoplay: false,
+  responsive: [{
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2
+    }
+  }, {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1
+    }
+  }]
+});
 var menu = jquery__WEBPACK_IMPORTED_MODULE_3___default()('.menu');
 var isOpenMenu = false;
 menu.on('transitionend', function () {
@@ -16353,6 +16348,13 @@ var callback = function callback(entries, observer) {
 var observer = new IntersectionObserver(callback, options);
 var target = document.querySelector(".hero");
 observer.observe(target);
+var body = jquery__WEBPACK_IMPORTED_MODULE_3___default()("html, body");
+jquery__WEBPACK_IMPORTED_MODULE_3___default()('.scroll-to-top').on('click', function (e) {
+  e.preventDefault();
+  body.stop().animate({
+    scrollTop: 0
+  }, 200);
+});
 }();
 /******/ })()
 ;

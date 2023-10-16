@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Monticello</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/sprite.svg#location" type="image/x-icon">
 </head>
@@ -167,7 +168,7 @@
             <div class="news-slider__item">
     <div class="news">
         <img src="images/cubic-house.jpg" alt="cubic-house" class="news__img">
-        <div class="news__deskription">
+        <div class="news__description">
             <h3 class="news__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
             <p class="news__text">Free directories: directories are perfect for customers that are searching for...</p>
             <div class="news__author news-author">
@@ -185,7 +186,7 @@
             <div class="news-slider__item">
     <div class="news">
         <img src="images/sphere-house.jpg" alt="sphere-house" class="news__img">
-        <div class="news__deskription">
+        <div class="news__description">
             <h3 class="news__title">EFFECTIVE ADVERTISING POINTERS.</h3>
             <p class="news__text">Having a home based business is a wonderful asset to your life...</p>
             <div class="news__author news-author">
@@ -203,7 +204,7 @@
             <div class="news-slider__item">
     <div class="news">
         <img src="images/curved-house.jpg" alt="curved-house" class="news__img">
-        <div class="news__deskription">
+        <div class="news__description">
             <h3 class="news__title">HYPNOTIZE YOURSELF INTO THE GHOST.</h3>
             <p class="news__text">There are many things that are important to catalog design...</p>
             <div class="news__author news-author">
@@ -221,7 +222,7 @@
             <div class="news-slider__item">
     <div class="news">
         <img src="images/brick-house.jpg" alt="brick-house" class="news__img">
-        <div class="news__deskription">
+        <div class="news__description">
             <h3 class="news__title">SEE THE UNMATCHED BEAUTY OF THE GREAT.</h3>
             <p class="news__text">Having a home based business is a wonderful asset to your life...</p>
             <div class="news__author news-author">
@@ -239,7 +240,7 @@
             <div class="news-slider__item">
     <div class="news">
         <img src="images/big-house.jpg" alt="curved-house" class="news__img">
-        <div class="news__deskription">
+        <div class="news__description">
             <h3 class="news__title">EFFECTIVE ADVERTISING POINTERS.</h3>
             <p class="news__text">Free directories: directories are perfect for customers that are searching for...</p>
             <div class="news__author news-author">
@@ -264,19 +265,29 @@
         <div class="galery-grid">
 
             <div class="galery-grid__galery-item galery-item">
-                <img class="galery-item__img" src="images/futur-house.jpg" alt="futur-house">
+                <a class="gallery__link" href="images/futur-house.jpg" data-lightbox="lightbox">
+                    <img class="gallery__img" src="images/futur-house.jpg" alt="">
+                </a>
             </div>
             <div class="galery-grid__galery-item galery-item">
-                <img class="galery-item__img" src="images/big-house.jpg" alt="big-house">
+                <a class="gallery__link" href="images/big-house.jpg" data-lightbox="lightbox">
+                    <img class="gallery__img" src="images/big-house.jpg" alt="">
+                </a>
             </div>
             <div class="galery-grid__galery-item galery-item">
-                <img class="galery-item__img" src="images/red-house.jpg" alt="red-house">
+                <a class="gallery__link" href="images/red-house.jpg" data-lightbox="lightbox">
+                    <img class="gallery__img" src="images/red-house.jpg" alt="">
+                </a>
             </div>
             <div class="galery-grid__galery-item galery-item">
-                <img class="galery-item__img" src="images/white-house.jpg" alt="white-house">
+                <a class="gallery__link" href="images/white-house.jpg" data-lightbox="lightbox">
+                    <img class="gallery__img" src="images/white-house.jpg" alt="">
+                </a>
             </div>
             <div class="galery-grid__galery-item galery-item">
-                <img class="galery-item__img" src="images/broad.jpg" alt="broad">
+                <a class="gallery__link" href="images/broad.jpg" data-lightbox="lightbox">
+                    <img class="gallery__img" src="images/broad.jpg" alt="">
+                </a>
             </div>
 
         </div>
@@ -375,7 +386,11 @@
 </div>
 
     </footer>
+    <a class="scroll-to-top" href="#">
+        <img class="scroll-to-top__arrow" src="images/scroll.svg" alt="arrow">
+    </a>
     <script src="js/script.js"></script>
+    <script src="../node_modules/lightbox2/src/js/lightbox.js"></script>
 </body>
 
 </html>

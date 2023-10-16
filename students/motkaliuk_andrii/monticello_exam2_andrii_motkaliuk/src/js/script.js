@@ -12,27 +12,27 @@ $('.hero-slider').slick({
     pauseOnHover: false,
 });
 
-// $('.news-slider').slick({
-//     dots: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     arrows: true,
-//     autoplay: false,
-//     responsive: [
-//         {
-//             breakpoint: 1024,
-//             settings: {
-//                 slidesToShow: 2,
-//             }
-//         },
-//         {
-//             breakpoint: 768,
-//             settings: {
-//                 slidesToShow: 1,
-//             }
-//         }
-//     ]
-// });
+$('.news-slider').slick({
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: false,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
 
 const menu = $('.menu');
 let isOpenMenu = false;
@@ -107,3 +107,11 @@ const observer = new IntersectionObserver(callback, options);
 const target = document.querySelector(".hero");
 
 observer.observe(target);
+
+const body = $("html, body");
+
+$('.scroll-to-top').on('click', function (e) {
+    e.preventDefault();
+
+    body.stop().animate({ scrollTop: 0 }, 200);
+})
