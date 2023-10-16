@@ -1,0 +1,46 @@
+.aside_block {
+    width: 30%;
+}
+
+.news {
+
+    &__wrapper {
+        background-color: $goldsand-color;
+        padding: 15px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 15px;
+    }
+
+    &__card {
+        border: 2px solid $wheat-color;
+        border-radius: 8px;
+        padding: 15px;
+    }
+
+    &__heading {
+        font-weight: 600;
+        text-align: center;
+        font-size: 36px;
+        text-transform: uppercase;
+        padding-bottom: 25px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: normal;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+}

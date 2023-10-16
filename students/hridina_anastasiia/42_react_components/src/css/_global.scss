@@ -1,0 +1,12 @@
+body {
+    font-family: $main-font;
+    background-color: $default-body-color;
+    font-size: $default-font-size;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+@include grid();

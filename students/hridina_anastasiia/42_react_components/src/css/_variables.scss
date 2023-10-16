@@ -1,0 +1,40 @@
+// colors
+$lightgray-color: #D9D9D9;
+$lightpink-color: #F9D7D7;
+$blueviolet-color: #BDCDF6;
+$white-color: #fff;
+$goldsand-color: #EAC28F;
+$wheat-color: #F5DAB8;
+
+$width: 15px;
+
+// fonts
+$default-font-name: 'Montserrat';
+$secondary-font-name: 'Open Sans';
+$default-font-size: 18px;
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-name, $fallback;
+$secondary-font: $secondary-font-name, $fallback;
+$font-path: './fonts/';
+
+
+// containers
+$default-body-color: $white-color;
+
+$container-padding: 15px;
+$container-max-width: 11720px;
+
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1170px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);
+
+$base-img-pass: '../';
