@@ -21,7 +21,6 @@ function style() {
         .pipe(autoprefixer({
             cascade: false
         }))
-        .pipe(gcmq())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(cleanCSS())

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Monticello</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/sprite.svg#location" type="image/x-icon">
 </head>
@@ -239,7 +238,7 @@
 
             <div class="news-slider__item">
     <div class="news">
-        <img src="images/big-house.jpg" alt="curved-house" class="news__img">
+        <img src="images/red-house.jpg" alt="red-house" class="news__img">
         <div class="news__description">
             <h3 class="news__title">EFFECTIVE ADVERTISING POINTERS.</h3>
             <p class="news__text">Free directories: directories are perfect for customers that are searching for...</p>
@@ -255,44 +254,32 @@
 </div>
 
         </div>
+
     </div>
 </section>
 
-        <section class="galery" id="galery">
+        <section class="gallery" id="gallery">
     <div class="container">
-
-        <h2 class="galery__title">GALLERY</h2>
-        <div class="galery-grid">
-
-            <div class="galery-grid__galery-item galery-item">
-                <a class="gallery__link" href="images/futur-house.jpg" data-lightbox="lightbox">
-                    <img class="gallery__img" src="images/futur-house.jpg" alt="">
-                </a>
-            </div>
-            <div class="galery-grid__galery-item galery-item">
-                <a class="gallery__link" href="images/big-house.jpg" data-lightbox="lightbox">
-                    <img class="gallery__img" src="images/big-house.jpg" alt="">
-                </a>
-            </div>
-            <div class="galery-grid__galery-item galery-item">
-                <a class="gallery__link" href="images/red-house.jpg" data-lightbox="lightbox">
-                    <img class="gallery__img" src="images/red-house.jpg" alt="">
-                </a>
-            </div>
-            <div class="galery-grid__galery-item galery-item">
-                <a class="gallery__link" href="images/white-house.jpg" data-lightbox="lightbox">
-                    <img class="gallery__img" src="images/white-house.jpg" alt="">
-                </a>
-            </div>
-            <div class="galery-grid__galery-item galery-item">
-                <a class="gallery__link" href="images/broad.jpg" data-lightbox="lightbox">
-                    <img class="gallery__img" src="images/broad.jpg" alt="">
-                </a>
-            </div>
-
+        <h2 class="gallery__title">GALLERY</h2>
+        <div class="gallery__gallery-grid gallery-grid">
+            <a class="gallery-grid__gallery-item gallery-item" href="images/futur-house.jpg" data-lightbox="lightbox">
+                <img class="gallery-item__img" src="images/futur-house.jpg" alt="">
+            </a>
+            <a class="gallery-grid__gallery-item gallery-item" href="images/big-house.jpg" data-lightbox="lightbox">
+                <img class="gallery-item__img" src="images/big-house.jpg" alt="">
+            </a>
+            <a class="gallery-grid__gallery-item gallery-item" href="images/red-house.jpg" data-lightbox="lightbox">
+                <img class="gallery-item__img" src="images/red-house.jpg" alt="">
+            </a>
+            <a class="gallery-grid__gallery-item gallery-item" href="images/white-house.jpg" data-lightbox="lightbox">
+                <img class="gallery-item__img" src="images/white-house.jpg" alt="">
+            </a>
+            <a class="gallery-grid__gallery-item gallery-item" href="images/broad.jpg" data-lightbox="lightbox">
+                <img class="gallery-item__img" src="images/broad.jpg" alt="">
+            </a>
         </div>
-        <div class="galery-btn-wrapper">
-            <a class="btn galery-btn" href="#">SEE MORE</a>
+        <div class="gallery__btn-wrapper">
+            <a class="gallery__btn btn" href="#">SEE MORE</a>
         </div>
     </div>
 </section>
@@ -390,7 +377,11 @@
         <img class="scroll-to-top__arrow" src="images/scroll.svg" alt="arrow">
     </a>
     <script src="js/script.js"></script>
-    <script src="../node_modules/lightbox2/src/js/lightbox.js"></script>
+    <!-- <button type="button" class="prev-arrow">
+        <svg class="icon">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </button> -->
 </body>
 
 </html>

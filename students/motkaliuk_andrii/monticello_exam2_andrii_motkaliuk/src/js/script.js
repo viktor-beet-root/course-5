@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import 'lightbox2';
 
 $('.hero-slider').slick({
     dots: true,
@@ -17,6 +18,18 @@ $('.news-slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
+
+    prevArrow: `<button type="button" class="prev-arrow">
+        <svg class="icon">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </button>`,
+    nextArrow: `<button type="button" class="next-arrow">
+        <svg class="icon">
+            <use xlink:href="#arrow"></use>
+        </svg>
+    </button>`,
+
     autoplay: false,
     responsive: [
         {
