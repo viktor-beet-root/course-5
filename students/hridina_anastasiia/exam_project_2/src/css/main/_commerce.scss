@@ -39,11 +39,11 @@
         @include new-font($opensans-font, 15px, 400, italic, normal);
         color: $black-color;
         padding-top: 45px;
+
+        @include media(sm) {
+            padding-bottom: 50px;
+        }
     }
-
-    // .commerce__icon
-
-    &__icon {}
 
     // .commerce__img
 

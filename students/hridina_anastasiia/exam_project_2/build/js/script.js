@@ -144,18 +144,18 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()(".hero-slider").slick({
   slidesToShow: 1,
   slideToScroll: 1,
   adaptiveHeight: true,
-  pauseOnHover: false,
+  pauseOnHover: true,
   verticalSwiping: false,
   arrows: false,
   vertical: true,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 4000,
   infinite: true
 });
 jquery__WEBPACK_IMPORTED_MODULE_15___default()('.article-wrapper').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
-  autoplay: false,
+  autoplay: true,
   infinite: true,
   autoplaySpeed: 3000,
   dots: true,
