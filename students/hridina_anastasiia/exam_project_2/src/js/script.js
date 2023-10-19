@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
+import 'lightbox2';
 import button from './galleryButton.js';
 import createFormValidation from './formValidation.js';
 
@@ -79,15 +80,28 @@ $('.article-wrapper').slick({
         {
             breakpoint: 694,
             settings: {
-                slidesToShow: 1,
+                slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true,
                 arrows: false,
             }
         },
+        {
+            breakpoint: 625,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            }
+        }
     ]
 });
+
+
+//burger menu
 
 const menu = $('.menu');
 let isOpenMenu = false;
@@ -119,6 +133,8 @@ $('.menu-open-btn').on('click', function (e) {
 });
 
 
+//fixed navbar
+
 const header = $('.header');
 const headerHeight = header.outerHeight(true);
 const secondSectionOffset = $('.two').offset().top;
@@ -127,21 +143,10 @@ const offsetBgHeader = secondSectionOffset - headerHeight - offset;
 
 let isHeaderBg = false;
 
-// $(window).on('scroll', function () {
-//     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
-//         header.addClass('bg-header');
-//         isHeaderBg = true;
-//     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
-//         header.removeClass('bg-header');
-//         isHeaderBg = false;
-//     };
-// });
-
-
 const options = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.25,
+    threshold: 0.2,
 };
 
 const callback = function (entries, observer) {
@@ -162,10 +167,12 @@ const callback = function (entries, observer) {
 
 const observer = new IntersectionObserver(callback, options);
 
-const target = document.querySelector(".menu");
+const target = document.querySelector(".hero");
 
 observer.observe(target);
 
+
+//scroll
 
 const body = $("html, body");
 
@@ -176,12 +183,22 @@ $('.scroll-to-top').on('click', function (e) {
 });
 
 
+$(window).on("scroll", function () {
+    if ($(this).scrollTop() > 100) {
+        $('.scroll-to-top').fadeIn();
+    } else {
+        $('.scroll-to-top').fadeOut();
+    }
+});
+
+
+//lightbox
+
 lightbox.option({
     fadeDuration: 600,
-    fitImagesInViewport: false,
     imageFadeDuration: 600,
     resizeDuration: 700,
-    wrapAround: false,
+    wrapAround: true,
     positionFromTop: 50,
     disableScrolling: true,
     showImageNumberLabel: false

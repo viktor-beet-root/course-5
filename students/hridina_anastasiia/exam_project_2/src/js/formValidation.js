@@ -5,7 +5,6 @@ function createFormValidation(form, getUserInfo) {
 
     const validator = new JustValidate(form);
 
-    console.log(validator);
     validator.addField('[name="fullname"]', [
         {
             rule: 'required'

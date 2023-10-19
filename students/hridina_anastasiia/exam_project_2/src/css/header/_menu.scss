@@ -4,7 +4,13 @@
     right: 0;
     left: 0;
     z-index: 100;
+    padding: 15px;
 
+    &.bg-header {
+        background-color: $heliotrope-color;
+        opacity: .9;
+        box-shadow: -1px 4px 15px -7px rgba(0, 0, 0, 0.8);
+    }
 }
 
 .nav__block {
@@ -14,7 +20,11 @@
     align-items: center;
 
     @include media(sm) {
-        margin-top: -3%;
+        margin-top: -1%;
+    }
+
+    @include media(md) {
+        margin-top: -1%;
     }
 }
 
@@ -46,7 +56,6 @@
                 transform: rotate(-45deg);
             }
         }
-
     }
 
     &__line {
@@ -82,7 +91,8 @@
 }
 
 .only-mobile {
-    @include media-m(sm) {
+
+    @include media-m(md) {
         display: none;
     }
 }
@@ -92,12 +102,31 @@
     gap: 70px;
 
     @include media(md) {
-        display: block;
+        display: none;
+        background-color: $heliotrope-color;
+        box-shadow: -1px 5px 29px -2px rgba(0, 0, 0, 0.48);
+        position: fixed;
+        top: 100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 80%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+
+        ._open & {
+            transform: translateX(0);
+        }
     }
 
     @include media(sm) {
         display: none;
-        background-color: rgba(126, 90, 255, .7);
+        background-color: $heliotrope-color;
+        box-shadow: -1px 5px 29px -2px rgba(0, 0, 0, 0.48);
         position: fixed;
         top: 100px;
         left: 0;
@@ -140,7 +169,9 @@
             transition: all 0.3s;
 
             @include media(sm) {
-                display: none;
+                width: 10px;
+                height: 10px;
+                margin-left: -30px;
             }
         }
 
@@ -155,8 +186,12 @@
         @include new-font($sourcesans-font, 14px, 400, normal, normal);
         text-transform: uppercase;
 
+        @include media(md) {
+            font-size: 35px;
+        }
+
         @include media(sm) {
-            font-size: 50px;
+            font-size: 40px;
             color: $white-color;
         }
     }
@@ -170,7 +205,7 @@
         display: inline-flex;
         gap: 45px;
 
-        @include media(sm) {
+        @include media(md) {
             display: none;
         }
 
@@ -178,7 +213,7 @@
             position: relative;
             display: none;
 
-            @include media(sm) {
+            @include media(md) {
                 display: inline-flex;
                 gap: 60px;
                 position: absolute;
@@ -201,8 +236,8 @@
 
         &::after {
             position: absolute;
-            top: -20%;
-            left: -55%;
+            top: -19%;
+            left: -52%;
             content: '';
             display: block;
             border: 1px solid $white-color;
@@ -210,6 +245,7 @@
             width: 40px;
             height: 40px;
             transition: all .3s ease-in-out;
+
         }
 
 

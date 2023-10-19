@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Monticello</title>
-    <link href="path/to/lightbox.css" rel="stylesheet" />
     <link rel="shortcut icon" href="./images/logo_favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -21,12 +20,16 @@
         @@include('./_latest_news.html')
         @@include('./_gallery.html')
         @@include('./_googlemap.html')
+        <section class="two" style="height: 3000px;"></section>
     </main>
     <footer class="footer">
         @@include('./_footer.html')
     </footer>
-
-    <script src="path/to/lightbox.js"></script>
+    <a class="scroll-to-top" href="#">
+        <svg class="top__circle">
+            <use xlink:href="./images/circle-up-regular.svg#circle"></use>
+        </svg>
+    </a>
     <script src="./js/script.js"></script>
 </body>
 

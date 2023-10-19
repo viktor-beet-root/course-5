@@ -55,6 +55,7 @@
             flex-direction: column;
             padding: 15px;
             gap: 35px;
+
         }
     }
 
@@ -100,6 +101,10 @@
         bottom: -15%;
         left: 43%;
         transform: translateY(-50%);
+
+        .slick-active button::before {
+            background-color: $white-color;
+        }
 
         li button::before {
             content: '';
