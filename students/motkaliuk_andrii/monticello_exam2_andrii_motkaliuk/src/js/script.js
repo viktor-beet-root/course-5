@@ -1,6 +1,10 @@
 import $ from 'jquery';
 import 'slick-carousel';
 import 'lightbox2';
+import createFormValidation from './formValidation/createFormValidation.js';
+
+const form = document.querySelector('#user-form');
+createFormValidation(form);
 
 $('.hero-slider').slick({
     dots: true,
@@ -9,7 +13,7 @@ $('.hero-slider').slick({
     slidesToScroll: 1,
     verticalSwiping: false,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     pauseOnHover: false,
 });
 
@@ -19,18 +23,14 @@ $('.news-slider').slick({
     slidesToScroll: 1,
     arrows: true,
 
-    prevArrow: `<button type="button" class="prev-arrow">
-        <svg class="icon">
-            <use xlink:href="#arrow"></use>
-        </svg>
+    prevArrow: `<button type="button" class="prev-arrow slider-arrow">
+        <img src="images/scroll.svg" alt="scroll">
     </button>`,
-    nextArrow: `<button type="button" class="next-arrow">
-        <svg class="icon">
-            <use xlink:href="#arrow"></use>
-        </svg>
+    nextArrow: `<button type="button" class="next-arrow slider-arrow">
+        <img src="images/scroll.svg" alt="scroll">
     </button>`,
 
-    autoplay: false,
+    autoplay: true,
     responsive: [
         {
             breakpoint: 1024,

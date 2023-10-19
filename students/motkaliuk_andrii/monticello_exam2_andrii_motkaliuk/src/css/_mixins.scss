@@ -184,3 +184,20 @@
     font-family: $_family;
     font-style: $_style;
 }
+
+@mixin ellipsis($line: 1) {
+    @if $line==1 {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @else {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: -webkit-box !important;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+        white-space: normal;
+    }
+}
