@@ -60,23 +60,8 @@ $('.menu-open-btn').on('click', function (e) {
 
 // bg-menu-scroll
 const header = $('.header');
-const headerHeight = header.outerHeight(true);
-const secondSectionOffset = $('.about').offset().top;
-const offset = 20;
-const offsetBGHeader = secondSectionOffset - headerHeight - offset;
+
 let isHeaderBg = false;
-
-
-// $(window).on('scroll', function () {
-//     if ($(this).scrollTop() > offsetBGHeader && !isHeaderBg) {
-//         header.addClass('bg-header');
-//         isHeaderBg = true;
-//     } else if ($(this).scrollTop() < offsetBGHeader && isHeaderBg) {
-//         header.removeClass('bg-header');
-//         isHeaderBg = false;
-//     }
-// });
-
 
 const options = {
     root: null,
@@ -100,13 +85,35 @@ const callback = function (entries, observer) {
     })
 };
 
+
 const observer = new IntersectionObserver(callback, options);
-
 const target = document.querySelector(".hero");
-
 observer.observe(target);
 
+
+
+// scroll to top
 const body = $("html, body");
+const scrollToTopBtn = document.querySelector('.scroll-to-top');
+
+const optionsScroll = {
+    root: null,
+    rootMargin: '-150px',
+    threshold: .1
+};
+
+function scrollToTop([entry], observer) {
+    if (entry.isIntersecting === true) {
+        scrollToTopBtn.classList.add('show-scroll');
+    } else {
+        scrollToTopBtn.classList.remove('show-scroll');
+    }
+};
+
+
+const observerScroll = new IntersectionObserver(scrollToTop, optionsScroll);
+const scrollTarget = document.querySelector('.gallery');
+observerScroll.observe(scrollTarget);
 
 $('.scroll-to-top').on('click', function (e) {
     e.preventDefault();

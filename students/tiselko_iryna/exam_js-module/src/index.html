@@ -12,7 +12,7 @@
 
 <body class="page">
     <header class="header">
-        <div class="container-xl header__container fixed-top">
+        <div class="container header__container">
             <div class="row">
                 <div class="header__logo col-3  col-sm-6">
                     <img src="images/Logo.png" alt="Monticello-logo" class="logo-img">
@@ -277,47 +277,62 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="footer__map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8558.73471313815!2d-73.90462597362755!3d40.67463707410932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c4f226cf74d%3A0xb352e17b22c087fe!2sMcDonald&#39;s!5e0!3m2!1suk!2sua!4v1695560616759!5m2!1suk!2sua"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="footer__contact-form contact-form">
+            <h3 class="contact-form__title">get in touch</h3>
+            <div class="contact-form__wrapper d-flex">
+                <ul class="contact-form__contact col-6">
+                    <li class="contact-form__contact-item">
+                        <svg class="contact-form__icon">
+                            <use xlink:href="#location-dot"></use>
+                        </svg>
+                        <span class="contact-form__addres-text">91 Nolan Extensions Suite 670</span>
+                    </li>
+                    <li class="contact-form__contact-item">
+                        <svg class="contact-form__icon">
+                            <use xlink:href="#phone"></use>
+                        </svg>
+                        <span class="contact-form__addres-text">+001 356-868-2454</span>
+                    </li>
+                    <li class="contact-form__contact-item">
+                        <svg class="contact-form__icon">
+                            <use xlink:href="#inbox"></use>
+                        </svg>
+                        <span class="contact-form__addres-text">montichello@service.com</span>
+                    </li>
+                    <li class="contact-form__contact-item">
+                        <svg class="contact-form__icon">
+                            <use xlink:href="#clock"></use>
+                        </svg>
+                        <span class="contact-form__addres-text">From 07:05AM to 19:30PM</span>
+                    </li>
+                </ul>
+                <form id="contacts" action="#" method="get" class="contact-form__inputs col-6">
+                    <input type="text" name="name" id="name" placeholder="Enter your full name">
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                    <button class="contact-form__btn" type="submit" name="submit">
+                        <span>Submit</span>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="container">
             <div class="row">
-                <div class="footer__contact-form contact-form">
-                    <h3 class="contact-form__title">get in touch</h3>
-                    <div class="contact-form__wrapper d-flex">
-                        <ul class="contact-form__contact col-6">
-                            <li class="contact-form__addres">91 Nolan Extensions Suite 670 </li>
-                            <li class="contact-form__tel">+001 356-868-2454</li>
-                            <li class="contact-form__email">montichello@service.com</li>
-                            <li class="contact-form__schedule">From 07:05AM to 19:30PM</li>
-                        </ul>
-                        <form id="contacts" action="#" method="get" class="contact-form__inputs col-6">
-                            <input type="text" name="name" id="name" placeholder="Enter your full name">
-                            <input type="email" name="email" id="email" placeholder="Enter your email">
-                            <button class="contact-form__btn" type="submit" name="submit">
-                                <span>Submit</span>
-                            </button>
-                        </form>
-                    </div>
-                </div>
                 <div class="col-6 footer__logo">
                     <img src="./images/Logo.png" alt="Monticello">
                 </div>
                 <div class="col-6 footer__socials">
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer__socials-link">
                         <svg class="icon">
                             <use xlink:href="#facebook"></use>
                         </svg>
                     </a>
-                    <a href="https://www.twitter.com/" target="_blank">
+                    <a href="https://www.twitter.com/" target="_blank" class="footer__socials-link">
                         <svg class="icon">
                             <use xlink:href="#twitter"></use>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    <a href="https://www.instagram.com/" target="_blank" class="footer__socials-link">
                         <svg class="icon">
                             <use xlink:href="#instagram"></use>
                         </svg>
@@ -328,6 +343,7 @@
                 </div>
             </div>
         </div>
+        <a href="#" class="scroll-to-top"></a>
     </footer>
 
 
@@ -363,22 +379,33 @@
                 fill="white"></path>
             <circle opacity="0.7" cx="20" cy="20" r="19.5" stroke="white"></circle>
         </symbol>
-        <!-- <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" id="inst-hov">
-            <path
-                d="M20 16.4062C21.9688 16.4062 23.5938 18.0312 23.5938 20C23.5938 22 21.9688 23.5938 20 23.5938C18 23.5938 16.4062 22 16.4062 20C16.4062 18.0312 18 16.4062 20 16.4062ZM20 22.3438C21.2812 22.3438 22.3125 21.3125 22.3125 20C22.3125 18.7188 21.2812 17.6875 20 17.6875C18.6875 17.6875 17.6562 18.7188 17.6562 20C17.6562 21.3125 18.7188 22.3438 20 22.3438ZM24.5625 16.2812C24.5625 16.75 24.1875 17.125 23.7188 17.125C23.25 17.125 22.875 16.75 22.875 16.2812C22.875 15.8125 23.25 15.4375 23.7188 15.4375C24.1875 15.4375 24.5625 15.8125 24.5625 16.2812ZM26.9375 17.125C27 18.2812 27 21.75 26.9375 22.9062C26.875 24.0312 26.625 25 25.8125 25.8438C25 26.6562 24 26.9062 22.875 26.9688C21.7188 27.0312 18.25 27.0312 17.0938 26.9688C15.9688 26.9062 15 26.6562 14.1562 25.8438C13.3438 25 13.0938 24.0312 13.0312 22.9062C12.9688 21.75 12.9688 18.2812 13.0312 17.125C13.0938 16 13.3438 15 14.1562 14.1875C15 13.375 15.9688 13.125 17.0938 13.0625C18.25 13 21.7188 13 22.875 13.0625C24 13.125 25 13.375 25.8125 14.1875C26.625 15 26.875 16 26.9375 17.125ZM25.4375 24.125C25.8125 23.2188 25.7188 21.0312 25.7188 20C25.7188 19 25.8125 16.8125 25.4375 15.875C25.1875 15.2812 24.7188 14.7812 24.125 14.5625C23.1875 14.1875 21 14.2812 20 14.2812C18.9688 14.2812 16.7812 14.1875 15.875 14.5625C15.25 14.8125 14.7812 15.2812 14.5312 15.875C14.1562 16.8125 14.25 19 14.25 20C14.25 21.0312 14.1562 23.2188 14.5312 24.125C14.7812 24.75 15.25 25.2188 15.875 25.4688C16.7812 25.8438 18.9688 25.75 20 25.75C21 25.75 23.1875 25.8438 24.125 25.4688C24.7188 25.2188 25.2188 24.75 25.4375 24.125Z"
-                fill="rgb(233, 89, 80)"></path>
-            <circle opacity="0.7" cx="20" cy="20" r="19.5" stroke="#bc2a8d"></circle>
-        </symbol> -->
         <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 40" id="arrow">
             <path
                 d="M24.9048 19.111C24.9606 19.1669 24.9885 19.231 24.9885 19.3036C24.9885 19.3761 24.9606 19.4403 24.9048 19.4961L21.0041 23.3968C20.9483 23.4526 20.8841 23.4805 20.8116 23.4805C20.7391 23.4805 20.6749 23.4526 20.6191 23.3968L16.7184 19.4961C16.6626 19.4403 16.6347 19.3761 16.6347 19.3036C16.6347 19.231 16.6626 19.1669 16.7184 19.111L17.1369 18.6925C17.1927 18.6367 17.2569 18.6088 17.3295 18.6088C17.402 18.6088 17.4662 18.6367 17.522 18.6925L20.8116 21.9821L24.1012 18.6925C24.157 18.6367 24.2212 18.6088 24.2937 18.6088C24.3663 18.6088 24.4305 18.6367 24.4863 18.6925L24.9048 19.111Z"
                 fill="white"></path>
             <path opacity="0.7"
                 d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z"
-                stroke="white"></path>
+                stroke="white">
+            </path>
         </symbol>
         <symbol fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="bi bi-geo-alt-fill">
             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="location-dot">
+            <path
+                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="phone">
+            <path
+                d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="inbox">
+            <path
+                d="M121 32C91.6 32 66 52 58.9 80.5L1.9 308.4C.6 313.5 0 318.7 0 323.9V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V323.9c0-5.2-.6-10.4-1.9-15.5l-57-227.9C446 52 420.4 32 391 32H121zm0 64H391l48 192H387.8c-12.1 0-23.2 6.8-28.6 17.7l-14.3 28.6c-5.4 10.8-16.5 17.7-28.6 17.7H195.8c-12.1 0-23.2-6.8-28.6-17.7l-14.3-28.6c-5.4-10.8-16.5-17.7-28.6-17.7H73L121 96z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="clock">
+            <path
+                d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z" />
         </symbol>
     </svg>
 

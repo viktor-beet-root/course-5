@@ -5,31 +5,60 @@
     background-repeat: no-repeat;
     background-position: bottom center;
     background-size: contain;
+    position: relative;
 
     // .footer__map
 
     &__map {
+        position: absolute;
         width: 100%;
         height: 700px;
-        // position: absolute;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        aspect-ratio: 16/9;
+        z-index: -1;
     }
 
     // .footer__contact-form
 
     &__contact-form {
         background-color: $white-color;
+        width: 770px;
+        height: 450px;
     }
 
     // .footer__logo
 
     &__logo {
+        padding-right: 165px;
+        text-align: center;
     }
 
     // .footer__socials
 
     &__socials {
+        padding-left: 165px;
+        text-align: center;
+    }
+
+    // .footer__socials-link
+
+    &__socials-link {
+        text-decoration: none;
+
+        &:not(:last-of-type) {
+            padding-right: 20px;
+        }
+
+        &:nth-child(2n) {
+
+        }
+
+    }
+
+    // .footer__scroll
+
+    &__scroll {
+        justify-self: flex-end;
     }
 }
 .container {
@@ -37,13 +66,15 @@
 .row {
 }
 .contact-form {
+    // @extend %posfix-center;
+    // z-index: 1000;
 
     // .contact-form__title
 
     &__title {
         position: relative;
-        margin-top: 130px;
-        padding-bottom: 130px;
+        padding-top: 90px;
+        padding-bottom: 40px;
         text-align: center;
 
         &::before {
@@ -53,8 +84,8 @@
             width: 100px;
             height: 1px;
             background-color: $pickled-bluewood;
-            top: -30px;
-            right: 605px;
+            top: 60px;
+            right: 324px;
         }
     }
 
@@ -66,26 +97,29 @@
     // .contact-form__contact
 
     &__contact {
+        padding-bottom: 68px;
     }
 
-    // .contact-form__addres
+    // .contact-form__contact-item
 
-    &__addres {
+    &__contact-item {
+        &:not(:last-of-type) {
+            padding-bottom: 20px;
+        }
+
+        // .contact-form__contact-item_text
+
+        &_text {
+            padding-left: 15px;
+        }
     }
 
-    // .contact-form__tel
+    // .contact-form__icon
 
-    &__tel {
-    }
-
-    // .contact-form__email
-
-    &__email {
-    }
-
-    // .contact-form__schedule
-
-    &__schedule {
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: $heliotrope;
     }
 
     // .contact-form__inputs
@@ -112,7 +146,28 @@
     &__wrapper {
     }
 }
-.icon {
+
+.scroll-to-top {
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    background-image: url('#{$base-img-pass}../images/arrow.svg'), ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+    background-color: rgb(126, 90, 255, .6);
+    box-shadow: 0 0 10px 10px rgba(126, 90, 255, .6);
+    display: none;
+
+    &.show-scroll {
+        display: block;
+    }
 }
+
 .copyright {
 }
+
