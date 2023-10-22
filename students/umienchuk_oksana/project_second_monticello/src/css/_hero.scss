@@ -67,10 +67,18 @@
         text-align: center;
         white-space: nowrap;
         color: $header-title;
-        font-size: 80px;
+        font-size: $font-size-h1;
         font-weight: 700;
         letter-spacing: 8px;
         margin: 0 0 20px;
+
+        @include media(md) {
+            font-size: $font-size-h1-md;
+        }
+
+        @include media(sm) {
+            font-size: $font-size-h1-sm;
+        }
     }
 
     // .hero-slider__sub-text
@@ -95,6 +103,14 @@
         letter-spacing: 8px;
         margin: 0 0 20px;
         text-transform: uppercase;
+
+        @include media(md) {
+            font-size: $font-size-h1-md;
+        }
+
+        @include media(sm) {
+            font-size: $font-size-h1-sm;
+        }
     }
 }
 
@@ -209,4 +225,23 @@
 /* Активна точка */
 .hero-slider .slick-dots li.slick-active button {
     background-color: $color-white;
+}
+
+.scroll-to-top {
+    position: fixed;
+    content: '';
+    height: 50px;
+    width: 50px;
+    background-color: $img-bg-second;
+    text-align: center;
+    padding: 10px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

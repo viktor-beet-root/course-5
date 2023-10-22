@@ -1,0 +1,135 @@
+.project {
+    position: relative;
+    padding-top: 150px;
+    // .project__title
+
+    &__title {
+        position: relative;
+        color: $color-night-blue;
+        text-align: center;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin: 0 0 90px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            background-color: $color-night-blue;
+            top: -20px;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+    }
+
+    // .project__block
+
+    &__block {
+        display: flex;
+        margin-bottom: 150px;
+    }
+
+    // .project__block-img
+
+    &__block-img {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            height: 470px;
+            width: 630px;
+            color: $img-bg-first;
+            top: -50px;
+            left: -20px;
+            z-index: 200;
+        }
+    }
+
+    // .project__block-text
+
+    &__block-text {}
+}
+
+.one {}
+
+.block-desc {
+
+    &-one {
+        margin-left: 70px;
+    }
+
+    &-two {
+        margin-right: 70px;
+    }
+}
+
+.block {
+
+    // .block__sub-text
+
+    &__sub-text {
+        color: #2C4058;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    // .block__title
+
+    &__title {
+        color: #2C4058;
+
+        font-family: Montserrat;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    // .block__desc
+
+    &__desc {
+        color: #2C4058;
+
+        font-family: Open Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    // .block__find-map
+
+    &__find-map {
+        color: #000;
+
+        font-family: Open Sans;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    // .block__find-link
+
+    &__find-link {
+        display: flex;
+    }
+
+}
+
+.btn {}
+
+.icon-img {
+    height: 9px;
+}
+
+.two {}

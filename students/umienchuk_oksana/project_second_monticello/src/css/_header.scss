@@ -4,13 +4,24 @@
     left: 0;
     right: 0;
     z-index: 100;
+    padding-top: 50px;
+    background-color: $img-bg-first;
+
+    &.bg-scroll {
+        background-color: $img-bg-first;
+    }
 }
 
-.logo {}
+.logo {
+
+    &__img {
+        @include media(md) {
+            width: 75%;
+        }
+    }
+}
 
 .menu-wrapper {}
-
-.menu-open-input {}
 
 .menu-open-btn {
     width: 50px;
@@ -94,17 +105,109 @@
     }
 }
 
-.menu-open-btn {}
-
 .menu {
+    display: flex;
+    gap: 90px;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    white-space: nowrap;
+
+    @include media(lg) {
+        gap: 70px;
+    }
+
+    @include media(md) {
+        gap: 50px;
+    }
+
+    @include media(sm) {
+        background-image: linear-gradient(to right, rgba(85, 183, 255, 1), rgba(126, 90, 255, 1));
+        position: fixed;
+        top: 110px;
+        gap: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+        text-align: center;
+        display: block;
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+
+        .menu__link::before {
+            display: none;
+        }
+
+        ._open & {
+            transform: translateX(0);
+        }
+    }
+
+    &__social {
+        display: block;
+        text-align: center;
+    }
+
+    // .menu__items
+
+    .__items {}
 
     // .menu__item
 
-    &__item {}
+    &__item {
+        position: relative;
+        list-style-type: none;
+
+        &:hover .menu__link::before {
+            background-color: $color-white;
+        }
+
+        @include media(sm) {
+            padding: 10px;
+            border-bottom: 1px solid $color-white;
+        }
+    }
 
     // .menu__link
 
-    &__link {}
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-family: $font-sub-menu;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+
+        &::before {
+            position: absolute;
+            content: '';
+            height: 9px;
+            width: 9px;
+            border-radius: 50%;
+            border: 1px solid $color-white;
+            border-color: $color-white;
+            background-color: transparent;
+            padding: 0;
+            z-index: 10;
+            top: 40%;
+            left: -20px;
+
+            @include media(lg) {
+                left: -15px;
+            }
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .menu-open-label-center {}
+
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+}

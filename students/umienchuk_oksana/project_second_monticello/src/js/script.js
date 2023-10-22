@@ -4,6 +4,8 @@ import 'slick-carousel';
 import 'lightbox2';
 import './gallery';
 import './header';
+// import './form';
+
 
 $('.hero-slider').slick({
     arrows: false,
@@ -40,11 +42,18 @@ $('.news-slider').slick({
     easing: 'easeInOutCubic',
     responsive: [
         {
+            breakpoint: 1200,
+            settings: {
+                arrows: false,
+            }
+        },
+        {
             breakpoint: 992,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 autoplay: true,
+                arrows: false,
             }
         },
         {
@@ -54,6 +63,7 @@ $('.news-slider').slick({
                 slidesToScroll: 2,
                 draggable: false,
                 autoplay: true,
+                arrows: false,
             }
         },
         {
@@ -69,6 +79,8 @@ $('.news-slider').slick({
     ]
 });
 
+
+
 lightbox.option({
     'resizeDuration': 200,
     'wrapAround': true,
@@ -77,8 +89,3 @@ lightbox.option({
 
 
 
-// $('.menu-open-btn').on('click', function (e) {
-//     e.preventDefault()
-//     console.log($(this));
-//     $(this).closest('.menu-wrapper').toggleClass('_open');
-// });

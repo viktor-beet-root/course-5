@@ -1,6 +1,16 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/form.js":
+/*!************************!*\
+  !*** ./src/js/form.js ***!
+  \************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
 /***/ "./src/js/gallery.js":
 /*!***************************!*\
   !*** ./src/js/gallery.js ***!
@@ -17,10 +27,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var seeMoreButton = document.querySelector('.gallery-btn');
 var galleryOpenItems = document.querySelectorAll('.gallery-open');
-//Ініціалізуйте прапор для відстеження стану відображення
 var galleryOpenVisible = true;
 seeMoreButton.addEventListener('click', function (event) {
-  // Скасуdfnb стандартну дію посилання, щоб сторінка не перезавантажувалася
   event.preventDefault();
   if (galleryOpenVisible) {
     galleryOpenItems.forEach(function (item) {
@@ -40,23 +48,105 @@ seeMoreButton.addEventListener('click', function (event) {
 /*!**************************!*\
   !*** ./src/js/header.js ***!
   \**************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-// const menuOpenButton = document.querySelector('.menu-open-btn');
-// console.log(menuOpenButton);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
 
-// let menuOpenVisible = false;
-// menuOpenButton.addEventListener('click', function (event) {
-//     console.log(menuOpenVisible);
-//     event.preventDefault();
 
-//     if (menuOpenVisible) {
-//         menuOpenButton.classList.add('_open');
-//     } else {
-//         menuOpenButton.classList.remove('_open');
+
+var menuOpenButton = document.querySelector('.menu-open-btn');
+console.log(menuOpenButton);
+var menuOpenVisible = false;
+var parentElement = menuOpenButton.parentElement;
+console.log(parentElement);
+var menuHeader = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.menu');
+var isOpenMenu = false;
+menuOpenButton.addEventListener('click', function (event) {
+  // console.log(menuOpenVisible);
+  event.preventDefault();
+  if (menuOpenVisible) {
+    parentElement.classList.add('_open');
+  } else {
+    parentElement.classList.remove('_open');
+  }
+  menuOpenVisible = !menuOpenVisible;
+});
+console.log(jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hero').offset());
+var header = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.header');
+var headerHeight = header.outerHeight(true);
+var secondSectionOffset = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hero').offset().top;
+var offset = 20;
+var offsetBgHeader = secondSectionOffset - headerHeight - offset;
+var isHeaderBg = false;
+
+// $(window).on('scroll', function () {
+//     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
+//         console.log(111);
+//         header.addClass('.bg-scroll');
+//         isHeaderBg = true;
+//     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
+//         header.remove('.bg-scroll');
+//         console.log(222);
+//         isHeaderBg = false;
+//     }
+// })
+
+var options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.25
+};
+var callback = function callback(entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.boundingClientRect.top < 0 && !entry.isIntersecting && !isHeaderBg) {
+      header.addClass('.bg-scroll');
+      // !isHeaderBg = true;
+      return;
+    }
+    if (entry.boundingClientRect.top < 0 && entry.isIntersecting && isHeaderBg) {
+      header.remove('.bg-scroll');
+      // !isHeaderBg = false;
+      return;
+    }
+    ;
+  });
+};
+var observer = new IntersectionObserver(callback, options);
+var target = document.querySelector(".hero");
+observer.observe(target);
+
+// menuHeader.on('transitionend', function () {
+
+//     if (!isOpenMenu) {
+//         menuHeader.css({ display: '' });
+//     }
+// });
+
+// $(menuOpenButton).noConflict('click', function (e) {
+//     e.preventDefault();
+
+//     if (!isOpenMenu) {
+//         menuHeader.css({ display: 'flex' });
+
+//         setTimeout(function () {
+//             $(this).closest('.menu-wrapper').toggleClass('_open', !isOpenMenu);
+
+//             isOpenMenu = true;
+//         }.bind(this), 0);
+
+//         return;
 //     }
 
-//     menuOpenVisible = !menuOpenVisible;
+//     $(this).closest('.menu-wrapper').toggleClass('_open', !isOpenMenu);
+
+//     isOpenMenu = false;
 // });
 
 /***/ }),
@@ -77,11 +167,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lightbox2__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lightbox2__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _gallery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./gallery */ "./src/js/gallery.js");
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header */ "./src/js/header.js");
-/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_header__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
 
+
+// import './form';
 
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   arrows: false,
@@ -115,11 +206,17 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
   slidesToScroll: 3,
   easing: 'easeInOutCubic',
   responsive: [{
+    breakpoint: 1200,
+    settings: {
+      arrows: false
+    }
+  }, {
     breakpoint: 992,
     settings: {
       slidesToShow: 3,
       slidesToScroll: 3,
-      autoplay: true
+      autoplay: true,
+      arrows: false
     }
   }, {
     breakpoint: 768,
@@ -127,7 +224,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news-slider').slick({
       slidesToShow: 2,
       slidesToScroll: 2,
       draggable: false,
-      autoplay: true
+      autoplay: true,
+      arrows: false
     }
   }, {
     breakpoint: 576,
@@ -145,12 +243,6 @@ lightbox.option({
   'wrapAround': true,
   'alwaysShowNavOnTouchDevices': true
 });
-
-// $('.menu-open-btn').on('click', function (e) {
-//     e.preventDefault()
-//     console.log($(this));
-//     $(this).closest('.menu-wrapper').toggleClass('_open');
-// });
 
 /***/ }),
 
@@ -16403,6 +16495,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
+/******/ 	__webpack_require__("./src/js/form.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./src/js/gallery.js");
 /******/ 	__webpack_require__("./src/js/header.js");

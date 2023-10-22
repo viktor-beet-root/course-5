@@ -35,7 +35,6 @@
 .news-list {}
 
 .news-card {
-    width: 370px;
     background-color: $color-white;
 
     // .news-card__img
@@ -62,6 +61,14 @@
         color: #2C4058;
         font-size: 22px;
         font-weight: 700;
+
+        @include media(md) {
+            font-size: 20px;
+        }
+
+        @include media(sm) {
+            font-size: 18px;
+        }
     }
 
     // .news-card__sub-text
@@ -73,6 +80,14 @@
         font-family: Open Sans;
         font-size: 18px;
         font-weight: 400;
+
+        @include media(md) {
+            font-size: 16px;
+        }
+
+        @include media(sm) {
+            font-size: 14px;
+        }
     }
 
     // .news-card__author
@@ -92,10 +107,12 @@
     &__block {
         margin: 0 0 0 20px;
 
+        @include media(md) {
+            margin-left: 10px;
+        }
     }
 
     // .news-card__author-name
-
 
     &__author-name {
         margin: 0 0 6px;
@@ -104,6 +121,16 @@
         font-weight: 400;
         text-transform: uppercase;
         white-space: nowrap;
+
+        @include media(md) {
+            font-size: 16px;
+            white-space: wrap;
+        }
+
+        @include media(sm) {
+            font-size: 14px;
+            white-space: wrap;
+        }
     }
 
     // .news-card__author-data
@@ -173,22 +200,27 @@
 
 /* Стрелка влево */
 .news-slider .slick-arrow.slick-prev {
-    left: -60px;
+    left: -50px;
     bottom: 0;
     background-image: url('../images/click-down.svg');
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(90deg);
-
+    z-index: 100;
 }
 
 /* Стрелка вправо */
 .news-slider .slick-arrow.slick-next {
-    right: -60px;
+    right: -35px;
     background-image: url('../images/click-down.svg');
     transform: rotate(-90deg);
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 100;
+
+    @include media(md) {
+        display: none;
+    }
 }
 
 /* Стрелка не активная */

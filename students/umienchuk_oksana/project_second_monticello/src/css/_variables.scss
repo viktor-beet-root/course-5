@@ -9,12 +9,11 @@ $main-color-text: $color-night-blue;
 $second-color-text: $color-white;
 $default-bg-color-menu-open: $color-white;
 
-$img-bg-first: #55B7FF;
-$img-bg-second: #7E5AFF;
-
 $default-border: 1px solid $color-night-blue;
 $default-border-menu-btn: 2px solid $color-white;
 $font-size-h1: 80px;
+$font-size-h1-md: 60px;
+$font-size-h1-sm: 40px;
 
 $font-weight: 400;
 $font-weight-title: 700;
@@ -75,7 +74,7 @@ $default-width: 1170px;
 
 //social
 $social-gap: 20px;
-
+$social-gap-small: 15px;
 
 $breack-points: (
     "lg": 1200px,
