@@ -16,7 +16,7 @@ $('.hero-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
-    verticalSwiping: true,
+    verticalSwiping: false,
     responsive: [
         {
             breakpoint: 576,
@@ -79,13 +79,6 @@ $('.news-slider').slick({
     ]
 });
 
-
-
-lightbox.option({
-    'resizeDuration': 200,
-    'wrapAround': true,
-    'alwaysShowNavOnTouchDevices': true,
-});
 
 
 

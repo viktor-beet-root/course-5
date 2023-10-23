@@ -8,7 +8,7 @@
     padding: 15px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 
-    .bg-scroll & {
+    &.bg-scroll {
         background-color: $img-bg-first;
         background-image: linear-gradient(to right, rgba(85, 183, 255, 1), rgba(126, 90, 255, 1));
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);

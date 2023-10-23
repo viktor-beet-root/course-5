@@ -147,6 +147,14 @@
 
 .news-slider {
     position: relative;
+
+    .slick-slide {
+
+        >div,
+        >div>.news-card {
+            height: 100%;
+        }
+    }
 }
 
 /* Слайдер */
