@@ -4,7 +4,6 @@ import 'lightbox2';
 import button from './galleryButton.js';
 import createFormValidation from './formValidation.js';
 
-
 const addForm = document.querySelector('.form');
 
 createFormValidation(addForm, getUserInfo);
@@ -51,7 +50,7 @@ $('.article-wrapper').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true,
                 arrows: false
@@ -61,7 +60,7 @@ $('.article-wrapper').slick({
             breakpoint: 992,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true,
                 arrows: false
@@ -71,7 +70,7 @@ $('.article-wrapper').slick({
             breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true,
                 arrows: false,

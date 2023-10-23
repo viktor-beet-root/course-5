@@ -172,7 +172,7 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.article-wrapper').slick({
     breakpoint: 1024,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       infinite: true,
       dots: true,
       arrows: false
@@ -181,7 +181,7 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.article-wrapper').slick({
     breakpoint: 992,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       infinite: true,
       dots: true,
       arrows: false
@@ -190,7 +190,7 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.article-wrapper').slick({
     breakpoint: 768,
     settings: {
       slidesToShow: 2,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       infinite: true,
       dots: true,
       arrows: false

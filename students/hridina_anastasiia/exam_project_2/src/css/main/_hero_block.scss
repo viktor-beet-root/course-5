@@ -140,6 +140,10 @@
             @include new-font($default-font-name, 80px, 700, normal, normal, 8px);
             color: $white-color;
             text-align: center;
+
+            @include media(xs) {
+                font-size: 47px;
+            }
         }
 
         // .title__text
