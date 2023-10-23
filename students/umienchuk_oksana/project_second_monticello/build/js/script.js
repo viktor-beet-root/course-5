@@ -106,12 +106,12 @@ var options = {
 var callback = function callback(entries, observer) {
   entries.forEach(function (entry) {
     if (entry.boundingClientRect.top < 0 && !entry.isIntersecting && !isHeaderBg) {
-      header.addClass('.bg-scroll');
+      header.addClass('bg-scroll');
       // !isHeaderBg = true;
       return;
     }
     if (entry.boundingClientRect.top < 0 && entry.isIntersecting && isHeaderBg) {
-      header.remove('.bg-scroll');
+      header.remove('bg-scroll');
       // !isHeaderBg = false;
       return;
     }

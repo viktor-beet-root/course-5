@@ -82,6 +82,12 @@
             grid-row-end: 3;
         }
     }
+
+    &__icon-img {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+    }
 }
 
 .grid-img-wrap {}
@@ -98,4 +104,11 @@
 
 .gallery__grid-item--open {
     display: none;
+}
+
+.first-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
