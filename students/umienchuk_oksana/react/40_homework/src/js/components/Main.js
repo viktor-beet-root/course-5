@@ -12,7 +12,7 @@ export default function Main() {
                     <h2 className="weather__title">CSS Weather Forecast</h2>
                     <SvgIcon imgId="wi-sunset" altImg="sunset" classNameIcon="weather-wrap__img" />
                 </div>
-                < WeatherList />
+                <WeatherList />
                 <p className="last-massege">Have a nice day and don't forget umbrella if you are in New Delhi now!</p>
             </div>
         </main >
