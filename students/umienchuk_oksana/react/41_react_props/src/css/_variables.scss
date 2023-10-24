@@ -13,17 +13,21 @@ $color-block-new-york: #99CC99;
 $color-block-new-delhi: #669999;
 $color-block-san-francisco: #CC6699;
 $color-block-tokyo: #339966;
-$color-block-sydney: #666699;
+$color-block-sydney: #24242d;
+$color-black: #000;
+$main-color-gray: #D9D9D9;
+$main-color-colar: #F9D7D7;
+$main-color-blue: #BDCDF6;
 
-$main-border: 25px solid $color-main-border;
+$main-border: 2px solid $color-main-border;
 $default-border: 2px solid $color-white;
 
-$font-size: 22px;
+$font-size: 14px;
 
 $font-weight-name: 400;
 
 //main color for text 
-$default-body-color: $color-white;
+$default-body-color: $color-black;
 $default-body-bg-color: $color-white;
 // fonts
 $fallback: Arial, Helvetica, sans-serif;

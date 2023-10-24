@@ -7,3 +7,6 @@ body {
     color: $default-body-color;
     margin: 0 auto;
 }
+
+
+@include grid;
