@@ -97,12 +97,12 @@ jquery__WEBPACK_IMPORTED_MODULE_3___default()('.news-slider').slick({
   nextArrow: "<button type=\"button\" class=\"next-arrow slider-arrow\">\n        <img src=\"images/scroll.svg\" alt=\"scroll\">\n    </button>",
   autoplay: true,
   responsive: [{
-    breakpoint: 1024,
+    breakpoint: 1360,
     settings: {
       slidesToShow: 2
     }
   }, {
-    breakpoint: 768,
+    breakpoint: 1024,
     settings: {
       slidesToShow: 1
     }

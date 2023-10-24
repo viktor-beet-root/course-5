@@ -5,6 +5,11 @@
 .right {
     float: right;
     padding-right: 30px;
+
+    @include media(md) {
+        float: none;
+        padding: 0;
+    }
 }
 
 
@@ -18,6 +23,16 @@
     margin: 0;
     padding-top: 130px;
 
+
+
+    @include media(md) {
+        text-align: center;
+    }
+
+    @include media(lg) {
+        padding-top: $res-lg-padding;
+    }
+
     &__title {
         display: block;
         font-family: Montserrat;
@@ -30,6 +45,11 @@
         text-align: center;
         padding-bottom: 150px;
         position: relative;
+
+        @include media(lg) {
+            padding-bottom: 60px;
+        }
+
 
         &::before {
             position: absolute;
@@ -51,12 +71,20 @@
         font-size: 22px;
         margin: 0;
         padding-top: 50px;
+
+        @include media(md) {
+            padding-top: 20px;
+        }
     }
 
     &__decription {
         line-height: 30px;
         margin: 0;
         padding: 20px 0 40px;
+
+        @include media(md) {
+            padding: 20px 0 20px;
+        }
     }
 
     &__image-wrapper {
@@ -65,17 +93,41 @@
         max-height: 470px;
         height: 100%;
         margin-bottom: 150px;
+
+        @include media(md) {
+            margin: 0 auto;
+        }
     }
 
     &__pseudoelement-wrapper-left {
+
+        // &::before {
+        //     overflow: visible;
+        //     position: absolute;
+        //     content: url(../../images/rectangle-blue.svg);
+        //     display: block;
+        //     margin-top: -50px;
+        //     left: 0;
+        //     z-index: -1;
+        // }
         &::before {
             overflow: visible;
             position: absolute;
-            content: url(../../images/rectangle-blue.svg);
+            content: '';
+            max-height: 470px;
+            max-width: 585px;
+            height: 100%;
+            width: 100%;
+            background-color: #55B7FF;
             display: block;
             margin-top: -50px;
             left: 0;
             z-index: -1;
+
+            @include media(md) {
+                max-height: auto;
+                max-width: auto;
+            }
         }
     }
 
@@ -98,23 +150,37 @@
     &__location {
         position: relative;
         padding-top: 60px;
+
+        @include media(md) {
+            padding-top: 20px;
+            padding-bottom: 50px;
+        }
     }
+
 
     &__location-icon {
         display: inline-block;
-        position: absolute;
         width: 9px;
         height: 17px;
         bottom: 0px;
+        top: 0;
     }
 
     &__location-decription {
         display: inline-block;
-        padding-left: 15px;
+        padding-left: 5px;
         color: $color-black;
         font-family: Open Sans, $fallback;
         font-size: 15px;
         font-style: italic;
         margin: 0;
+
+    }
+
+    &__btn-wrapper {
+        @include media(md) {
+            display: flex;
+            justify-content: center;
+        }
     }
 }

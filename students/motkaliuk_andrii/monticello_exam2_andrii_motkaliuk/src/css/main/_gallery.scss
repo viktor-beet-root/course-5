@@ -1,6 +1,10 @@
 .gallery {
     padding: 180px 0;
 
+    @include media(lg) {
+        padding: $res-lg-padding;
+    }
+
     &__title {
         color: $color-steel-blue;
         text-align: center;
@@ -8,6 +12,25 @@
         font-weight: 700;
         margin: 0;
         padding-bottom: 90px;
+        position: relative;
+
+        @include media(lg) {
+            padding-bottom: $res-lg-padding;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            display: block;
+            max-width: 100px;
+            width: 100%;
+            height: 1px;
+            background-color: $color-steel-blue;
+
+            top: -30px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
     &__btn-wrapper {
@@ -26,6 +49,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, minmax(285px, 214px));
 
+    @include media(lg) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, minmax(285px, 214px));
+    }
+
     &__gallery-item {
         position: relative;
         overflow: hidden;
@@ -33,8 +61,11 @@
         &:nth-child(1) {
             grid-column-end: span 2;
             grid-row-end: span 2;
-        }
 
+            @include media(lg) {
+                grid-row-end: span 1;
+            }
+        }
     }
 }
 

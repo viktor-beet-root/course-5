@@ -4,6 +4,10 @@
     line-height: normal;
     position: relative;
 
+    @include media(lg) {
+        padding: $res-lg-padding;
+    }
+
     &::before {
         content: "";
         background: url('../../images/painted-city2.png');

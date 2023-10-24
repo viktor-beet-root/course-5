@@ -33,13 +33,13 @@ $('.news-slider').slick({
     autoplay: true,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1360,
             settings: {
                 slidesToShow: 2,
             }
         },
         {
-            breakpoint: 768,
+            breakpoint: 1024,
             settings: {
                 slidesToShow: 1,
             }

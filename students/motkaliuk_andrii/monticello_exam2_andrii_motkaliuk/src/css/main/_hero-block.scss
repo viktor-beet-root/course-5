@@ -115,6 +115,10 @@
         letter-spacing: 8px;
         text-align: center;
         margin: 0;
+
+        @include media(md) {
+            font-size: 65px;
+        }
     }
 
     &__text {
