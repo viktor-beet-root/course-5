@@ -34171,10 +34171,10 @@ if (false) {} else {
 /******/ 	__webpack_require__("./src/js/components/main/Main.js");
 /******/ 	__webpack_require__("./src/js/components/weather/Weather.js");
 /******/ 	__webpack_require__("./src/js/components/weather/Wether-list.js");
-/******/ 	__webpack_require__("./src/js/components/main/blog-block/Blog-article.js");
-/******/ 	__webpack_require__("./src/js/components/main/blog-block/Blog-block.js");
 /******/ 	__webpack_require__("./src/js/components/main/news-block/News-article.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/main/news-block/News-block.js");
+/******/ 	__webpack_require__("./src/js/components/main/news-block/News-block.js");
+/******/ 	__webpack_require__("./src/js/components/main/blog-block/Blog-article.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/main/blog-block/Blog-block.js");
 /******/ 	
 /******/ })()
 ;
