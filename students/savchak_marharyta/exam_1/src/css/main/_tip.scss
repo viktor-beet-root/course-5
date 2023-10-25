@@ -3,32 +3,43 @@
     // .tip__container
 
     &__container {
-        padding: 107px 300px 60px;
+        padding: 125px 400px 60px;
     }
 
     // .tip__title
 
-    &__title {}
+    &__title {
+        font-weight: 400;
+        color: $white;
+        font-size: 36px;
+        margin: 0;
+    }
 
     &__img {
-        width: 70px;
+        width: 65px;
+        padding-bottom: 15px;
     }
 
     &__list {
         list-style-type: none;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 0 auto;
-        // font-size: 36px;
-        // color:
-        //     font-weight: 400;
+        font-family: $section-title-font;
+        padding: 0;
     }
 
     &__item {}
 }
 
-.container {}
+.search {
+    fill: $blue;
+}
 
-.row {}
+.check-circle {
+    fill: $coral-red;
+}
 
-.col-4 {}
+.thumbs-up {
+    fill: $light-blue;
+}
