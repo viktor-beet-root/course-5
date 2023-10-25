@@ -1,4 +1,5 @@
 /******/ (function() { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/App.js":
@@ -7,7 +8,6 @@
   \***********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": function() { return /* binding */ App; }
@@ -40,67 +40,12 @@ function App() {
 
 /***/ }),
 
-/***/ "./src/js/components/Weather.js":
-/*!**************************************!*\
-  !*** ./src/js/components/Weather.js ***!
-  \**************************************/
-/***/ (function() {
-
-// import React, { createElement, useEffect, useState } from "react";
-
-// export default function Weather() {
-//     return (
-//         <div>
-//             <div className="weather__block clear-fix">
-//                 <div className="weather__item lisabon">
-//                     <h3 className="weather__city">Lisabon</h3>
-//                     <div className="weather-wrap clear-fix">
-//                         <p className="weather-wrap__temp">21°C</p>
-//                         <img
-//                             className="weather-wrap__img"
-//                             src="images/wi-day-sunny.svg"
-//                             alt="Icon day sunny"
-//                         />
-//                     </div>
-//                 </div>
-
-//                 <div className="weather__item paris">
-//                     <h3 className="weather__city ">Paris</h3>
-//                     <div className="weather-wrap clear-fix">
-//                         <p className="weather-wrap__temp">11°C</p>
-//                         <img
-//                             className="weather-wrap__img"
-//                             src="images/wi-night-sleet.svg"
-//                             alt="Icon night sleet"
-//                         />
-//                     </div>
-//                 </div>
-
-//                 <div className="weather__item belgrade">
-//                     <h3 className="weather__city ">Belgrade</h3>
-//                     <div className="weather-wrap clear-fix">
-//                         <p className="weather-wrap__temp">15°C</p>
-//                         <img
-//                             className="weather-wrap__img"
-//                             src="images/wi-night-cloudy.svg"
-//                             alt="Icon night cloud"
-//                         />
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// };
-
-/***/ }),
-
 /***/ "./src/js/components/header/Header.js":
 /*!********************************************!*\
   !*** ./src/js/components/header/Header.js ***!
   \********************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -143,7 +88,6 @@ function Header() {
   \*****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -189,7 +133,6 @@ function Baner(_ref) {
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -268,7 +211,6 @@ function Blog(_ref) {
   \****************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -316,7 +258,6 @@ function Main() {
   \***********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -390,7 +331,6 @@ function BlogArticle(_ref) {
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -479,7 +419,6 @@ function BlogBlock() {
   \***********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -545,7 +484,6 @@ function NewsArticle(_ref) {
   \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -617,67 +555,12 @@ function NewsBlock() {
 
 /***/ }),
 
-/***/ "./src/js/components/weather/Weather.js":
-/*!**********************************************!*\
-  !*** ./src/js/components/weather/Weather.js ***!
-  \**********************************************/
-/***/ (function() {
-
-// import React from "react";
-
-// import SvgIcon from "../ui/SvgSprite";
-
-// export default function Weather({ cityClass, city, temp, imgId, imgAlt, classNameIcon }) {
-//     return (
-//         <div className={`weather__item  + ${cityClass}`}>
-//             <h3 className="weather__city">{city}</h3>
-//             <div className="weather-wrap">
-//                 <p className="weather-wrap__temp">{temp}°C</p>
-//                 <SvgIcon imgId={imgId} imgAlt={imgAlt} classNameIcon={classNameIcon} />
-//             </div>
-//         </div >
-//     )
-// }
-
-/***/ }),
-
-/***/ "./src/js/components/weather/Wether-list.js":
-/*!**************************************************!*\
-  !*** ./src/js/components/weather/Wether-list.js ***!
-  \**************************************************/
-/***/ (function() {
-
-// import React from "react";
-
-// import Weather from "./Weather";
-
-// export default function WeatherList() {
-//     return (
-//         <div className="weather__block">
-//             <Weather city="Lisabon" cityClass="lisabon" temp="21" imgId="wi-day-sunny" imgAlt="day sunny" classNameIcon="weather-wrap__img" />
-//             <Weather city="Paris" cityClass="paris" temp="11" imgId="wi-night-sleet" imgAlt="night sleet" classNameIcon="weather-wrap__img" />
-//             <Weather city="Belgrade" cityClass="belgrade" temp="15" imgId="wi-night-cloudy" imgAlt="night cloud" classNameIcon="weather-wrap__img" />
-//             <Weather city="Venice" cityClass="venice" temp="15" imgId="wi-day-cloudy-high" imgAlt="day cloudy high" classNameIcon="weather-wrap__img" />
-//             <Weather city="Tel-Avive" cityClass="tel-avive" temp="32" imgId="wi-day-sunny" imgAlt="day sunny" classNameIcon="weather-wrap__img" />
-//             <Weather city="Cair" cityClass="cair" temp="21" imgId="wi-day-sunny" imgAlt="day sunny" classNameIcon="weather-wrap__img" />
-//             <Weather city="New-York" cityClass="new-york" temp="17" imgId="wi-day-thunderstorm" imgAlt="thunderstorm" classNameIcon="weather-wrap__img" />
-//             <Weather city="New-Delhi" cityClass="new-delhi" temp="17" imgId="wi-rain-wind" imgAlt="rain wind" classNameIcon="weather-wrap__img" />
-//             <Weather city="San-Francisco" cityClass="san-francisco" temp="15" imgId="wi-day-cloudy-high" imgAlt="day cloudy" classNameIcon="weather-wrap__img" />
-//             <Weather city="Tokyo" cityClass="tokyo" temp="8" imgId="wi-night-clear" imgAlt="night clear" classNameIcon="weather-wrap__img" />
-//             <Weather city="Sydney" cityClass="sydney" temp="21" imgId="wi-day-sunny" imgAlt="day sunny" classNameIcon="weather-wrap__img" />
-//         </div>
-//     )
-// }
-
-/***/ }),
-
 /***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -705,7 +588,6 @@ root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createEle
   \*************************************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 /**
  * @license React
  * react-dom.development.js
@@ -30579,7 +30461,6 @@ if (
   \******************************************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-"use strict";
 
 
 var m = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -30612,7 +30493,6 @@ if (false) {} else {
   \*****************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-"use strict";
 
 
 function checkDCE() {
@@ -30656,7 +30536,6 @@ if (false) {} else {
   \*****************************************************/
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
 /* module decorator */ module = __webpack_require__.nmd(module);
 /**
  * @license React
@@ -33407,7 +33286,6 @@ if (
   \*************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-"use strict";
 
 
 if (false) {} else {
@@ -33423,7 +33301,6 @@ if (false) {} else {
   \*************************************************************/
 /***/ (function(__unused_webpack_module, exports) {
 
-"use strict";
 /**
  * @license React
  * scheduler.development.js
@@ -34068,7 +33945,6 @@ if (
   \*****************************************/
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
-"use strict";
 
 
 if (false) {} else {
@@ -34164,17 +34040,14 @@ if (false) {} else {
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./src/js/App.js");
 /******/ 	__webpack_require__("./src/js/script.js");
-/******/ 	__webpack_require__("./src/js/components/Weather.js");
 /******/ 	__webpack_require__("./src/js/components/header/Header.js");
 /******/ 	__webpack_require__("./src/js/components/main/Baner.js");
 /******/ 	__webpack_require__("./src/js/components/main/Blog.js");
 /******/ 	__webpack_require__("./src/js/components/main/Main.js");
-/******/ 	__webpack_require__("./src/js/components/weather/Weather.js");
-/******/ 	__webpack_require__("./src/js/components/weather/Wether-list.js");
-/******/ 	__webpack_require__("./src/js/components/main/news-block/News-article.js");
-/******/ 	__webpack_require__("./src/js/components/main/news-block/News-block.js");
 /******/ 	__webpack_require__("./src/js/components/main/blog-block/Blog-article.js");
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/main/blog-block/Blog-block.js");
+/******/ 	__webpack_require__("./src/js/components/main/blog-block/Blog-block.js");
+/******/ 	__webpack_require__("./src/js/components/main/news-block/News-article.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/components/main/news-block/News-block.js");
 /******/ 	
 /******/ })()
 ;
