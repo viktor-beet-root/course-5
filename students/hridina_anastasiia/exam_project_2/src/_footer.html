@@ -3,7 +3,7 @@
         <div class="col-12">
             <h3 class="contact__heading">GET IN TOUCH</h3>
         </div>
-        <div class="contacts">
+        <div class="contacts col-12">
             <div class="contact__info">
                 <p class="contact__address">
                     <svg class="ftr__svg" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
@@ -31,14 +31,17 @@
                 </p>
             </div>
             <form class="form" action="#" method="post" autocomplete="off">
-                <input class="ftr__input" type="text" id="fname" name="fullname" placeholder="Fullname" value="">
-                <input class="ftr__input" type="text" id="email" name="email" placeholder="Email" value="">
+                <div class="form__label">
+                    <input class="ftr__input" type="text" id="fname" name="fullname" placeholder="Fullname" value="">
+                </div>
+                <div class="form__label">
+                    <input class="ftr__input" type="text" id="email" name="email" placeholder="Email" value="">
+                </div>
                 <div class="button_footer">
                     <button class="btn_ftr" type="submit">Submit</button>
                 </div>
             </form>
         </div>
-
     </div>
 
     <div class="footer__links">

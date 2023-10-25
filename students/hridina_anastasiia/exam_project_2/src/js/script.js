@@ -3,6 +3,12 @@ import 'slick-carousel';
 import 'lightbox2';
 import button from './galleryButton.js';
 import createFormValidation from './formValidation.js';
+import lightbox from 'lightbox2';
+import callbackBtn from './scrollBtn.js';
+import menu from './burgerMenu.js';
+import header from './fixedNavbar.js';
+
+
 
 const addForm = document.querySelector('.form');
 
@@ -100,77 +106,6 @@ $('.article-wrapper').slick({
 });
 
 
-//burger menu
-
-const menu = $('.menu');
-let isOpenMenu = false;
-
-menu.on('transitionend', function () {
-    if (!isOpenMenu) {
-        menu.css({ display: '' });
-    }
-});
-
-$('.menu-open-btn').on('click', function (e) {
-    e.preventDefault();
-
-    if (!isOpenMenu) {
-        menu.css({ display: 'flex' });
-
-        setTimeout(function () {
-            $(this).closest('.menu-wrapper').toggleClass('_open', !isOpenMenu);
-
-            isOpenMenu = true;
-        }.bind(this), 0);
-
-        return;
-    }
-
-    $(this).closest('.menu-wrapper').toggleClass('_open', !isOpenMenu);
-
-    isOpenMenu = false;
-});
-
-
-//fixed navbar
-
-const header = $('.header');
-const headerHeight = header.outerHeight(true);
-const secondSectionOffset = $('.two').offset().top;
-const offset = 20;
-const offsetBgHeader = secondSectionOffset - headerHeight - offset;
-
-let isHeaderBg = false;
-
-const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.2,
-};
-
-const callback = function (entries, observer) {
-    entries.forEach((entry) => {
-        if (entry.boundingClientRect.top < -20 && !entry.isIntersecting && !isHeaderBg) {
-            header.addClass('bg-header');
-            isHeaderBg = true;
-
-            return;
-        }
-
-        if (entry.boundingClientRect.top < -20 && entry.isIntersecting && isHeaderBg) {
-            header.removeClass('bg-header');
-            isHeaderBg = false;
-        }
-    })
-};
-
-const observer = new IntersectionObserver(callback, options);
-
-const target = document.querySelector(".hero");
-
-observer.observe(target);
-
-
 //scroll
 
 const body = $("html, body");
@@ -182,18 +117,11 @@ $('.scroll-to-top').on('click', function (e) {
 });
 
 
-$(window).on("scroll", function () {
-    if ($(this).scrollTop() > 100) {
-        $('.scroll-to-top').fadeIn();
-    } else {
-        $('.scroll-to-top').fadeOut();
-    }
-});
-
-
 //lightbox
 
-lightbox.option({
+window.lightbox = lightbox;
+
+window.lightbox.option({
     fadeDuration: 600,
     imageFadeDuration: 600,
     resizeDuration: 700,
