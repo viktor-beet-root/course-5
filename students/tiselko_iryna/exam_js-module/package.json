@@ -40,6 +40,7 @@
     "jquery": "^3.7.1",
     "just-validate": "^4.2.0",
     "just-validate-plugin-date": "^1.2.0",
+    "lightbox2": "^2.11.4",
     "slick-carousel": "^1.8.1"
   }
 }

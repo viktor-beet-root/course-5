@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "slick-carousel";
+import "lightbox2";
 
 
 
@@ -87,7 +88,7 @@ const callback = function (entries, observer) {
 
 
 const observer = new IntersectionObserver(callback, options);
-const target = document.querySelector(".hero");
+const target = document.querySelector('.hero');
 observer.observe(target);
 
 
@@ -98,8 +99,8 @@ const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
 const optionsScroll = {
     root: null,
-    rootMargin: '-150px',
-    threshold: .1
+    rootMargin: '-50px',
+    threshold: 0
 };
 
 function scrollToTop([entry], observer) {
@@ -112,7 +113,7 @@ function scrollToTop([entry], observer) {
 
 
 const observerScroll = new IntersectionObserver(scrollToTop, optionsScroll);
-const scrollTarget = document.querySelector('.gallery');
+const scrollTarget = document.querySelector('.footer');
 observerScroll.observe(scrollTarget);
 
 $('.scroll-to-top').on('click', function (e) {
@@ -120,3 +121,32 @@ $('.scroll-to-top').on('click', function (e) {
 
     body.stop().animate({ scrollTop: 0 }, 200);
 });
+
+
+
+// gallery
+const gallery = document.getElementById('gallery');
+const openGalleryBtn = document.getElementById('openGalleryBtn');
+const closeGallery = document.getElementById('closeGalleryBtn');
+const galleryItem = document.querySelector('.gallery__item');
+
+// const galleryList = [...gallery];
+// console.log(galleryList);
+let currentItem = 5;
+
+// let isOpenGallery = false;
+$('openGalleryBtn').on('click', () => {
+
+    for (let i = currentItem; i < currentItem + 5; i++) {
+        gallery[i].style.display = 'block';
+    }
+
+    currentItem += 5;
+});
+
+
+
+
+
+
+

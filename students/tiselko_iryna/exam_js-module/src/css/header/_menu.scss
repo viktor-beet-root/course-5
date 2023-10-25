@@ -20,7 +20,7 @@
                 display: none;
                 background-image: linear-gradient(243deg, rgb(126, 90, 255) 16.9%, rgb(85, 183, 255) 83.27%);
                 position: fixed;
-                top: 90px;
+                top: 84px;
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -98,6 +98,7 @@
     border-radius: 50px;
     border: $default-border;
     background-color: transparent;
+    margin-right: 20px;
 
     ._open & {
         .menu-open-btn__line {

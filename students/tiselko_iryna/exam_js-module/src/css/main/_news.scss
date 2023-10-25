@@ -77,14 +77,9 @@
         color: $white-color;
 
         &::before {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 100px;
-            height: 1px;
             background-color: $white-color;
-            top: -30px;
-            right: 605px;
+            @extend %heading-pseudo;
+            top: -25%;
         }
     }
 

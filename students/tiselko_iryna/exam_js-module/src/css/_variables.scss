@@ -1,5 +1,6 @@
 // colors
 $pickled-bluewood: #2C4058;
+$input-text-color: #4B5562;
 $havelock-blue:#3C7FD4;
 $turquoise:#24CCFA;
 $malibu:#55B7FF;
@@ -26,6 +27,7 @@ $dodger-dark: #486BFE;
 $block-bg-color: rgba(35, 35, 35, 0.90);
 $bittersweetapprox: #FF6363;
 $azure-radiance: #00A2FF;
+
 
 
 
@@ -61,13 +63,13 @@ $h2-color: $white-color;
 
 
 //h3 
-$h3-font-size: 44px !important;
+$h3-font-size: 44px;
 $h3-font-weight: 700;
 $h3-line-height: normal;
 $h3-letter-spacing: 2.6px;
 
 //h4
-$h4-font-size: 22px !important;
+$h4-font-size: 22px;
 $h4-font-weight: 700;
 $h4-line-height: normal;
 
@@ -84,6 +86,7 @@ $border-btn-color-primary: transparent;
 $border-btn-color-secondary: $periwinkle-gray-color;
 $btn-bg: transparent;
 $btn-text-color: $black-color;
+$btn-hover-text-color: $white-color;
 $btn-font-size: 14px;
 $btn-font-weight: inherit;
 $btn-line-height: normal;
