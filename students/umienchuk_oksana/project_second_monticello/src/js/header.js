@@ -31,6 +31,8 @@ const headerHeight = header.outerHeight(true);
 const secondSectionOffset = $('.hero').outerHeight(true);
 const offset = 20;
 const offsetBgHeader = secondSectionOffset - headerHeight - offset;
+const heroButtonUp = $('.scroll-to-top');
+console.log(heroButtonUp);
 
 let isHeaderBg = false;
 console.log(secondSectionOffset)
@@ -39,9 +41,11 @@ $(window).on('scroll', function () {
     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
         console.log(111);
         header.addClass('bg-scroll');
+        heroButtonUp.addClass('bg-scroll');
         isHeaderBg = true;
     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
         header.removeClass('bg-scroll');
+        heroButtonUp.removeClass('bg-scroll');
         console.log(222);
         isHeaderBg = false;
     }

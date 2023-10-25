@@ -78,6 +78,8 @@ var headerHeight = header.outerHeight(true);
 var secondSectionOffset = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero').outerHeight(true);
 var offset = 20;
 var offsetBgHeader = secondSectionOffset - headerHeight - offset;
+var heroButtonUp = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-to-top');
+console.log(heroButtonUp);
 var isHeaderBg = false;
 console.log(secondSectionOffset);
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
@@ -85,9 +87,11 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
     console.log(111);
     header.addClass('bg-scroll');
+    heroButtonUp.addClass('bg-scroll');
     isHeaderBg = true;
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).scrollTop() < offsetBgHeader && isHeaderBg) {
     header.removeClass('bg-scroll');
+    heroButtonUp.removeClass('bg-scroll');
     console.log(222);
     isHeaderBg = false;
   }
@@ -183,6 +187,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   vertical: true,
   verticalSwiping: false,
   responsive: [{
+    breakpoint: 768,
+    settings: {
+      // dots: false,
+      // draggable: true,
+      autoplay: true,
+      verticalSwiping: false,
+      autoplaySpeed: 2000,
+      easing: 'easeInOutCubic'
+    }
+  }, {
     breakpoint: 576,
     settings: {
       // dots: false,

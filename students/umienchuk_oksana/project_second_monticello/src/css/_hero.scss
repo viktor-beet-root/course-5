@@ -74,10 +74,12 @@
 
         @include media(md) {
             font-size: $font-size-h1-md;
+            white-space: wrap;
         }
 
         @include media(sm) {
             font-size: $font-size-h1-sm;
+            white-space: wrap;
         }
     }
 
@@ -120,7 +122,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-
     @include media(sm) {
         bottom: 0;
     }
@@ -130,62 +131,10 @@
     fill: aqua;
 }
 
-/* Слайдер */
-.slick-slider {}
-
-/* Слайдер запущен */
-.slick-slider.slick-initialized {}
-
-/* Слайдер с точками */
-.slick-slider.slick-dotted {}
-
-/* Ограничивающая оболочка */
 .slick-list {
     overflow: hidden;
 }
 
-/* Лента слайдов */
-// .slider .slick-track {
-//     display: block;
-
-//     // @include media(md) {
-//     //     display: flex;
-//     // }
-// }
-
-/* Слайд */
-.slick-slide {}
-
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {}
-
-/* Слайд основной */
-.slick-slide.slick-current {}
-
-/* Слайд по центру */
-.slick-slide.slick-center {}
-
-/* Клонированный слайд */
-.slick-slide.slick-cloned {}
-
-/* Стрелка */
-// .slider .slick-arrow {
-//     position: absolute;
-//     width: 100%;
-//     z-index: 10;
-// }
-
-/* Стрелка влево */
-// .slider .slick-arrow.slick-prev {
-//     top: 0;
-// }
-
-/* Стрелка вправо */
-// .slider .slick-arrow.slick-next {
-//     bottom: 0;
-// }
-
-/* Стрелка не активная */
 .slick-arrow.slick-disabled {}
 
 /* Точки (булиты) */
@@ -198,6 +147,10 @@
     right: 40px;
     top: 50%;
     bottom: 50%;
+
+    @include media(sm) {
+        right: 10px;
+    }
 }
 
 /* Список точок */
@@ -235,11 +188,22 @@
     background-color: $img-bg-second;
     text-align: center;
     padding: 10px;
-    bottom: 10px;
-    right: 10px;
-    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
     color: $color-white;
     text-decoration: none;
+    opacity: 0;
+    transition:
+        background-color 0.5s ease-in-out,
+        box-shadow 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
+
+    &.bg-scroll {
+        background-color: #7E5AFF;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+    }
 
     &:hover {
         text-decoration: underline;

@@ -18,7 +18,14 @@
                     <a class="menu__link" href="#">CONTACT</a>
                 </li>
                 <li class="menu__item menu__social">
-                    @@include("./_socials.html")
+                    @@include("./_socials.html",
+                    {
+                    "right":"right",
+                    })
+                    @@include("./_socials.html",
+                    {
+                    "right":" ",
+                    })
                 </li>
             </ul>
             <button class="menu-open-btn mobile-only" type="button">

@@ -1,6 +1,7 @@
 .project {
     position: relative;
     padding-top: 150px;
+
     // .project__title
 
     &__title {
@@ -33,23 +34,43 @@
         display: flex;
         margin-bottom: 150px;
         align-items: flex-end;
+        justify-content: space-between;
     }
 
     // .project__block-img
 
     &__block-img {
         position: relative;
+        z-index: 10;
 
-        &:before {
-            content: '';
+        &::before {
             position: absolute;
-            height: 470px;
-            width: 630px;
-            color: $img-bg-first;
-            top: -50px;
-            left: -20px;
-            z-index: 200;
+            content: '';
+            height: 100px;
+            width: 100px;
+            background-color: #2C4058;
+            z-index: 50;
+
+            // content: '';
+            // position: absolute;
+            // height: 470px;
+            // width: 553px;
+            // background-color: $img-bg-first;
+            // background-image: url(../images/gallery/lightbox-gallery-img-01.jpg);
+            // top: -50px;
+            // left: -20px;
+            // z-index: 50;
         }
+
+        // &::before {
+        //     overflow: visible;
+        //     position: absolute;
+        //     content: url(../images/gallery/lightbox-gallery-img-01.jpg);
+        //     display: block;
+        //     margin-top: -50px;
+        //     left: 0;
+        //     z-index: 10;
+        // }
     }
 
     // .project__block-text
@@ -92,12 +113,9 @@
 
     &__title {
         color: #2C4058;
-
         font-family: Montserrat;
         font-size: 44px;
-        font-style: normal;
         font-weight: 700;
-        line-height: normal;
         margin-bottom: 19px;
     }
 
@@ -105,10 +123,8 @@
 
     &__desc {
         color: #2C4058;
-
         font-family: Open Sans;
         font-size: 18px;
-        font-style: normal;
         font-weight: 400;
         line-height: 30px;
         margin-bottom: 40px;
@@ -118,12 +134,10 @@
 
     &__find-map {
         color: #000;
-
         font-family: Open Sans;
         font-size: 15px;
         font-style: italic;
         font-weight: 400;
-        line-height: normal;
         margin: 0;
     }
 

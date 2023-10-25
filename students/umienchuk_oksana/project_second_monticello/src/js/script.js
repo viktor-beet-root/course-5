@@ -19,6 +19,17 @@ $('.hero-slider').slick({
     verticalSwiping: false,
     responsive: [
         {
+            breakpoint: 768,
+            settings: {
+                // dots: false,
+                // draggable: true,
+                autoplay: true,
+                verticalSwiping: false,
+                autoplaySpeed: 2000,
+                easing: 'easeInOutCubic',
+            }
+        },
+        {
             breakpoint: 576,
             settings: {
                 // dots: false,
@@ -29,7 +40,9 @@ $('.hero-slider').slick({
                 autoplaySpeed: 2000,
                 easing: 'easeInOutCubic',
             }
-        }],
+        },
+
+    ],
 });
 
 $('.news-slider').slick({

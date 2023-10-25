@@ -7,6 +7,15 @@
         <div class="footer__socials">
             <img src="../images/logo.svg" alt="Logo">
             @@include("./_socials.html")
+
+            @@include("./_socials.html",
+            {
+            "right":" ",
+            })
+            @@include("./_socials.html",
+            {
+            "right":"right",
+            })
         </div>
     </div>
 </section>
