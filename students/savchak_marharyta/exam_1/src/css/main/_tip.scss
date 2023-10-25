@@ -1,8 +1,30 @@
 .tip {
+    background-color: #333333;
+    // .tip__container
+
+    &__container {
+        padding: 107px 300px 60px;
+    }
 
     // .tip__title
 
     &__title {}
+
+    &__img {
+        width: 70px;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        // font-size: 36px;
+        // color:
+        //     font-weight: 400;
+    }
+
+    &__item {}
 }
 
 .container {}
