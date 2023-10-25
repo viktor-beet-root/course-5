@@ -1,0 +1,52 @@
+// colors
+$color-white: #FFF;
+$main-color-text: $color-white;
+$color-main-border: #2B81AC;
+$color-main: #39C;
+$color-block-lisbon: #86ccf0;
+$color-block-paris: #33CCCC;
+$color-block-belgrade: #996699;
+$color-block-venice: #C24747;
+$color-block-tel-avive: #E2674A;
+$color-block-cair: #FFCC66;
+$color-block-new-york: #99CC99;
+$color-block-new-delhi: #669999;
+$color-block-san-francisco: #CC6699;
+$color-block-tokyo: #339966;
+$color-block-sydney: #666699;
+
+$main-border: 25px solid $color-main-border;
+$default-border: 2px solid $color-white;
+
+$font-size: 22px;
+
+$font-weight-name: 400;
+
+//main color for text 
+$default-body-color: $color-white;
+$default-body-bg-color: $color-white;
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: "Open Sans";
+$main-font: $default-font-name, $fallback;
+$default-font-size: 22px;
+
+
+$font-path: './fonts/';
+$base-img-path: '../';
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1440px;
+$gap: 15px;
+
+$default-width: 1440px;
+
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

@@ -1,0 +1,139 @@
+.weather {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    background-color: #39C;
+    border: 25px solid #2B81AC;
+    padding: 66px 119px;
+
+    // .weather__title-wrap
+
+    &__title-wrap {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    // .weather__title
+
+    &__title {
+        font-weight: 400;
+        margin: 0;
+        padding-right: 2px;
+    }
+
+    // .weather__img
+    &__img {
+        height: 61px;
+    }
+
+    // .weather__block
+
+    &__block {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    // .weather__item
+
+    &__item {
+        border: 2px solid $color-white;
+        box-sizing: border-box;
+        text-align: center;
+        width: 25%;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    // .weather__city
+
+    &__city {
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0;
+    }
+}
+
+.weather-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    // .weather-wrap__temp
+
+    &__temp {
+        // float: left;
+        padding-right: 12px;
+    }
+
+    // .weather-wrap__img
+
+    &__img {
+        height: 61px;
+        width: 48px;
+        object-fit: cover;
+    }
+}
+
+.lisabon {
+    background-color: $color-block-lisbon;
+    width: 50%;
+}
+
+.paris {
+    background-color: $color-block-paris;
+    width: 25%;
+}
+
+.belgrade {
+    background-color: $color-block-belgrade;
+    width: 25%;
+}
+
+.venice {
+    background-color: $color-block-venice;
+    width: 25%;
+}
+
+.tel-avive {
+    background-color: $color-block-tel-avive;
+    width: 25%;
+}
+
+.cair {
+    background-color: $color-block-cair;
+    width: 25%;
+}
+
+.new-york {
+    background-color: $color-block-new-york;
+    width: 25%;
+}
+
+.new-delhi {
+    background-color: $color-block-new-delhi;
+    width: 25%;
+}
+
+.san-francisco {
+    background-color: $color-block-san-francisco;
+    width: 50%;
+}
+
+.tokyo {
+    background-color: $color-block-tokyo;
+}
+
+.sydney {
+    background-color: $color-block-sydney;
+    width: 100%;
+}
+
+.last-massege {
+    font-size: 16px;
+}
