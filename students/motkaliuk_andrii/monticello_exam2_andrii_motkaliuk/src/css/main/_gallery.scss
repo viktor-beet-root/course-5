@@ -2,7 +2,11 @@
     padding: 180px 0;
 
     @include media(lg) {
-        padding: $res-lg-padding;
+        padding: $res-lg-padding 0;
+    }
+
+    @include media(md) {
+        padding: $res-lg-padding 0;
     }
 
     &__title {
@@ -54,6 +58,11 @@
         grid-template-rows: repeat(3, minmax(285px, 214px));
     }
 
+    @include media(sm) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, minmax(285px, 214px));
+    }
+
     &__gallery-item {
         position: relative;
         overflow: hidden;
@@ -63,6 +72,11 @@
             grid-row-end: span 2;
 
             @include media(lg) {
+                grid-row-end: span 1;
+            }
+
+            @include media(sm) {
+                grid-column-end: span 1;
                 grid-row-end: span 1;
             }
         }

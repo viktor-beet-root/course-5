@@ -3,6 +3,10 @@
     position: relative;
     background: linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%);
 
+    @include media(sm) {
+        padding: 60px 0;
+    }
+
     &::before {
         content: "";
         background: url('../../images/shadow1.png') no-repeat top;

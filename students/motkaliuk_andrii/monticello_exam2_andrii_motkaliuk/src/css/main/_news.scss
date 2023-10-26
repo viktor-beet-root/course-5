@@ -65,6 +65,7 @@
         font-weight: 700;
         position: relative;
 
+
         &::before {
             position: absolute;
             content: '';
@@ -80,8 +81,12 @@
 }
 
 .news-slider {
-    width: calc(100% - 100px);
+    width: calc(100% - 80px);
     margin: 0 auto;
+
+    .slick-slide {
+        background: none;
+    }
 
     & .slick-slide {
         background: none;
@@ -102,12 +107,12 @@
     }
 
     .prev-arrow {
-        left: -50px;
+        left: -40px;
         rotate: 90deg;
     }
 
     .next-arrow {
-        right: -50px;
+        right: -40px;
         rotate: -90deg;
     }
 
@@ -193,11 +198,19 @@
         font-size: 22px;
         font-weight: 700;
         margin-bottom: 15px;
+
+        @include media(sm) {
+            font-size: 16px;
+        }
     }
 
     &__text {
         @include ellipsis(2);
         margin-bottom: 40px;
+
+        @include media(sm) {
+            font-size: 14px;
+        }
     }
 
     &__author {
@@ -226,6 +239,10 @@
     &__name {
         color: #2C4058;
         margin-bottom: 0;
+
+        @include media(sm) {
+            font-size: 14px;
+        }
     }
 
     &__date {

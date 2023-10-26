@@ -100,16 +100,6 @@
     }
 
     &__pseudoelement-wrapper-left {
-
-        // &::before {
-        //     overflow: visible;
-        //     position: absolute;
-        //     content: url(../../images/rectangle-blue.svg);
-        //     display: block;
-        //     margin-top: -50px;
-        //     left: 0;
-        //     z-index: -1;
-        // }
         &::before {
             overflow: visible;
             position: absolute;
@@ -128,6 +118,10 @@
                 max-height: auto;
                 max-width: auto;
             }
+
+            @include media(sm) {
+                display: none;
+            }
         }
     }
 
@@ -135,11 +129,25 @@
         &::before {
             overflow: visible;
             position: absolute;
-            content: url(../../images/rectangle-purple.svg);
+            content: '';
+            max-height: 470px;
+            max-width: 585px;
+            height: 100%;
+            width: 100%;
+            background-color: $color-purple;
             display: block;
             margin-top: -50px;
             right: 0;
             z-index: -1;
+
+            @include media(md) {
+                max-height: auto;
+                max-width: auto;
+            }
+
+            @include media(sm) {
+                display: none;
+            }
         }
     }
 

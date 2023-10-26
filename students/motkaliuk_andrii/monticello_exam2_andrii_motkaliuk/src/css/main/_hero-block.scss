@@ -32,6 +32,10 @@
             margin: 20px 0;
             border-radius: 50%;
 
+            @include media(sm) {
+                display: none;
+            }
+
             button {
                 font-size: 0;
                 height: 10px;
@@ -117,7 +121,7 @@
         margin: 0;
 
         @include media(md) {
-            font-size: 65px;
+            font-size: 55px;
         }
     }
 
