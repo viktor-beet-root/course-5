@@ -1,0 +1,79 @@
+.places {
+    color: $white;
+    font-size: 20px;
+    line-height: 28px;
+    // .places_description
+
+    &_description {
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        margin: 0;
+        padding-bottom: 24px;
+    }
+
+    // .places__container
+
+    &__container {
+        padding: 217px 315px 165px;
+    }
+
+    // .places__country-name
+
+    &__country-name {
+        font-weight: 300px;
+        letter-spacing: 2px;
+        margin: 0;
+        padding-bottom: 12px;
+    }
+
+    // .places__name
+
+    &__name {
+        text-transform: uppercase;
+        font-weight: 400;
+        margin: 0;
+        padding-bottom: 12px;
+    }
+
+    &__info {
+        padding: 44px 32px;
+        background-color: rgba(35, 35, 35, 0.90);
+    }
+
+    // .places__button-wrapper
+
+    &__button-wrapper {}
+
+    // .places__button
+
+    &__button {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
+
+.first-place {
+    background-image: url("../../images/first_place-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% -204px;
+}
+
+.second-place {
+    background-image: url("../../images/second_place-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% -300px;
+
+    &__box {}
+}
