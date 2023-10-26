@@ -1,0 +1,45 @@
+.header {
+    background-color: $blue ;
+    // .header__title
+
+    &__title {
+        text-transform: uppercase;
+        color: $white;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin: 0;
+        line-height: 24px;
+        font-weight: 700;
+        font-family: $logo-font;
+    }
+}
+
+.nav {
+    width: 576px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    &__item {}
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $btn-font;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+    }
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 0;
+}
