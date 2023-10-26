@@ -1,0 +1,105 @@
+.why-choose-us {
+    background-image: url("../../images/why_choose_us-bg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -50% 50%;
+    color: $white;
+    // .why-choose-us__title
+
+    &__title {
+        font-family: $section-title-font;
+        font-weight: 400;
+        font-size: 36px;
+        margin: 0;
+        padding-bottom: 24px;
+    }
+
+    // .why-choose-us__text
+
+    &__text {
+        font-weight: 300;
+        letter-spacing: 1.6px;
+        margin: 0;
+        padding-bottom: 30px;
+        line-height: 28px;
+        white-space: nowrap;
+    }
+
+    &__container {
+        padding: 120px 150px 120px 0;
+        box-sizing: border-box;
+    }
+
+    &__button-wrapper {
+        padding: 20px 32px;
+        background-color: $blue;
+        width: 150px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__button {
+        color: inherit;
+        font-family: $btn-font;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1.12px;
+        white-space: nowrap;
+        z-index: 100;
+        position: relative;
+    }
+
+    &__button-wrapper::before {
+        content: " ";
+        background-color: $darker-blue;
+        width: 52%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    &__button-wrapper::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-top: 30px solid $blue ;
+        border-right: 30px solid $blue ;
+        border-bottom: 30px solid transparent;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 27%;
+
+    }
+
+    &__row {
+
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content-wrapper {
+        padding-top: 70px;
+    }
+
+    &__img-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 6px;
+        gap: 16px;
+    }
+}
+
+.right-img {
+    width: 350px;
+    padding-left: 74px;
+}
+
+.left-img {
+    width: 350px;
+}
