@@ -1,6 +1,5 @@
 import JustValidate from 'just-validate';
 
-
 export default function createValidation() {
     const validator = new JustValidate('.form');
 

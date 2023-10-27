@@ -27,8 +27,6 @@ export default function changeColorNavBg() {
     };
     
     const observer = new IntersectionObserver(callback, options);
-    
     const target = document.querySelector(".hero");
-    
     observer.observe(target);
 };

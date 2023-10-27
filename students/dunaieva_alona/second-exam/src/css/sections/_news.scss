@@ -43,6 +43,10 @@
     &__catalog-wrapper {
         padding: 0 45px;
 
+        @include media(sm) {
+            padding: unset;
+        }
+
         .slick-slide {
             margin: 0 15px 0 15px;
             height: 514px;
@@ -50,6 +54,7 @@
 
             @include media(sm) {
                 height: fit-content;
+                width: auto;
             }
         }
 
@@ -68,7 +73,7 @@
         .slick-next {
 
             &::before {
-                content: url(../../images/left-arrow.svg);
+                content: url(../images/left-arrow.svg);
                 display: block;
                 width: 6px;
                 height: 16px;
@@ -81,7 +86,7 @@
             right: 0;
 
             &::before {
-                content: url(../../images/left-arrow.svg);
+                content: url(../images/left-arrow.svg);
                 transform: rotate(180deg);
             }
         }

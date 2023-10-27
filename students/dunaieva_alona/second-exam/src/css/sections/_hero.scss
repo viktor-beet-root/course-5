@@ -1,10 +1,5 @@
 .hero {
     height: 100vh;
-    margin-bottom: 121px;
-
-    @include media(md) {
-        margin-bottom: 50px;
-    }
 
     .icons-down {
         position: absolute;

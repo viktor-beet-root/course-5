@@ -20,6 +20,8 @@ export default function newsSlider() {
                 settings: {
                   slidesToShow: 1,
                   slidesToScroll: 1,
+                  nextArrow: false,
+                  prevArrow: false,
                 }
               },
         ]

@@ -23,7 +23,7 @@
     }
 
     @include media(sm) {
-        width: 100%;
+        width: calc(100% - 60px);
         top: 150px;
     }
 
@@ -92,9 +92,9 @@
     width: 15px;
 }
 
-.form-group {}
-
 .form-control {
+    font-family: $main-font;
+    font-size: 18px;
     border-bottom: 1px solid black;
     opacity: 0.5;
     line-height: 2.5;

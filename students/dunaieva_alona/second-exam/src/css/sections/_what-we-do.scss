@@ -19,17 +19,17 @@
         display: inline-block;
         left: 50%;
         transform: translateX(-50%);
-        padding-bottom: 130px;
+        padding: 121px 0 130px;
 
         @include media(md) {
-            padding-bottom: 80px;
+            padding-bottom: 50px 0 80px;
         }
 
         &::before {
             content: '';
             @include pos-absolute(0, 50%);
             transform: translateX(-50%);
-            top: -38px;
+            top: 70px;
             display: block;
             width: calc(100% - 70%);
             height: 0.1px;

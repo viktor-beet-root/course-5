@@ -5,10 +5,10 @@ export default function heroSlider() {
         vertical: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        verticalSwiping: true,
+        verticalSwiping: false,
         arrows: false,
         dots: true,
-        // autoplay: true,
+        autoplay: true,
         pauseOnHover: false,
       });
 }

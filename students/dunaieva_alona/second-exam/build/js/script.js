@@ -162,14 +162,16 @@ function changeColorNavBg() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/index.esm.js");
-/* harmony import */ var _form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./form-valodation/createFormValidation.js */ "./src/js/form-valodation/createFormValidation.js");
-/* harmony import */ var _nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav-bg/changeColor.js */ "./src/js/nav-bg/changeColor.js");
-/* harmony import */ var _scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scroll-to-top/scrollToTop.js */ "./src/js/scroll-to-top/scrollToTop.js");
-/* harmony import */ var _slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./slick-slider/heroSlider.js */ "./src/js/slick-slider/heroSlider.js");
-/* harmony import */ var _slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./slick-slider/newsSlider.js */ "./src/js/slick-slider/newsSlider.js");
+/* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fancyapps/ui */ "./node_modules/@fancyapps/ui/dist/index.esm.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./slick-slider/heroSlider.js */ "./src/js/slick-slider/heroSlider.js");
+/* harmony import */ var _slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./slick-slider/newsSlider.js */ "./src/js/slick-slider/newsSlider.js");
+/* harmony import */ var _form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./form-valodation/createFormValidation.js */ "./src/js/form-valodation/createFormValidation.js");
+/* harmony import */ var _nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./nav-bg/changeColor.js */ "./src/js/nav-bg/changeColor.js");
+/* harmony import */ var _scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scroll-to-top/scrollToTop.js */ "./src/js/scroll-to-top/scrollToTop.js");
+/* harmony import */ var _scroll_menu_item_scrollMenuItem_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scroll-menu-item/scrollMenuItem.js */ "./src/js/scroll-menu-item/scrollMenuItem.js");
+/* harmony import */ var _scroll_down_btnScrollDown_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scroll-down/btnScrollDown.js */ "./src/js/scroll-down/btnScrollDown.js");
 
 
 
@@ -178,25 +180,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-//import scrollMenuItem from './scroll-menu-item/scrollMenuItem.js';
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  (0,_slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
-  (0,_slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind();
-  (0,_form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
-});
-var project = jquery__WEBPACK_IMPORTED_MODULE_0___default()('#project');
+
 var body = jquery__WEBPACK_IMPORTED_MODULE_0___default()("html, body");
-jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu__link').on('click', function (e) {
-  console.log(e);
-  e.preventDefault();
-  body.stop().animate({
-    scrollTop: project.offset().top
-  }, 500);
+/* harmony default export */ __webpack_exports__["default"] = (body);
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
+  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox.bind();
+  (0,_slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  (0,_scroll_menu_item_scrollMenuItem_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
+  (0,_scroll_down_btnScrollDown_js__WEBPACK_IMPORTED_MODULE_9__["default"])();
 });
+
+/***/ }),
+
+/***/ "./src/js/scroll-down/btnScrollDown.js":
+/*!*********************************************!*\
+  !*** ./src/js/scroll-down/btnScrollDown.js ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ btnsScrollDown; }
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../script */ "./src/js/script.js");
+
+
+function btnsScrollDown() {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.icons-down').on('click', function (e) {
+    e.preventDefault();
+    var footer = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.footer');
+    _script__WEBPACK_IMPORTED_MODULE_1__["default"].stop().animate({
+      scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(footer).offset().top
+    }, 1000);
+  });
+}
 
 /***/ }),
 
@@ -204,13 +229,26 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu__link').on('click', functio
 /*!***************************************************!*\
   !*** ./src/js/scroll-menu-item/scrollMenuItem.js ***!
   \***************************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-// import $, { data } from "jquery";
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ scrollMenuItem; }
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../script */ "./src/js/script.js");
 
-// export default function scrollMenuItem() {
 
-// }
+function scrollMenuItem() {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.menu__link').on('click', function (e) {
+    var targetSec = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('href');
+    _script__WEBPACK_IMPORTED_MODULE_1__["default"].animate({
+      scrollTop: jquery__WEBPACK_IMPORTED_MODULE_0___default()(targetSec).offset().top
+    }, 1000);
+  });
+}
 
 /***/ }),
 
@@ -231,6 +269,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _script__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../script */ "./src/js/script.js");
+
 
 
 
@@ -245,10 +285,9 @@ function btnToTop() {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) {
         linkToTop.addClass('scroll-to-top');
-        var body = jquery__WEBPACK_IMPORTED_MODULE_2___default()("html, body");
         jquery__WEBPACK_IMPORTED_MODULE_2___default()('.scroll-to-top').on('click', function (e) {
           e.preventDefault();
-          body.stop().animate({
+          _script__WEBPACK_IMPORTED_MODULE_3__["default"].stop().animate({
             scrollTop: 0
           }, 1000);
         });
@@ -286,10 +325,10 @@ function heroSlider() {
     vertical: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    verticalSwiping: true,
+    verticalSwiping: false,
     arrows: false,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     pauseOnHover: false
   });
 }
@@ -327,7 +366,9 @@ function newsSlider() {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        nextArrow: false,
+        prevArrow: false
       }
     }]
   });
@@ -17996,11 +18037,12 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	__webpack_require__("./src/js/form-valodation/createFormValidation.js");
 /******/ 	__webpack_require__("./src/js/menu-burger/menu-burger.js");
 /******/ 	__webpack_require__("./src/js/nav-bg/changeColor.js");
+/******/ 	__webpack_require__("./src/js/scroll-down/btnScrollDown.js");
 /******/ 	__webpack_require__("./src/js/scroll-menu-item/scrollMenuItem.js");
 /******/ 	__webpack_require__("./src/js/scroll-to-top/scrollToTop.js");
 /******/ 	__webpack_require__("./src/js/slick-slider/heroSlider.js");

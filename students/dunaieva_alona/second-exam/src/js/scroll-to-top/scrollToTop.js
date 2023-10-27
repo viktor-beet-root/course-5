@@ -1,4 +1,5 @@
 import $, { data } from 'jquery';
+import body from "../script";
 
 export default function btnToTop() {
     const linkToTop = $('.link-top');
@@ -13,8 +14,6 @@ export default function btnToTop() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
             linkToTop.addClass('scroll-to-top');
-
-            const body = $("html, body");
 
             $('.scroll-to-top').on('click', function(e) {
                 e.preventDefault();
@@ -37,5 +36,3 @@ export default function btnToTop() {
     observer.observe(target);
   
 }
-
-
