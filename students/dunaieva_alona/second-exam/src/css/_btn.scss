@@ -1,0 +1,19 @@
+$btn-border-color: 1px solid $main-font-color;
+$btn-text: $black-color;
+$btn-hover-color: $gradient-color;
+
+.btn {
+    padding: 16px 41px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border: $btn-border-color;
+    color: $btn-text;
+    font-size: 14px;
+    background-color: unset;
+    border-radius: unset;
+
+    &:hover {
+        background: $btn-hover-color;
+    }
+}

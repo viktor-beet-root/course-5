@@ -1,0 +1,45 @@
+.gallery {
+    margin-bottom: 90px;
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-bottom: 90px;
+
+        @include media(md) {
+            padding-bottom: 50px;
+        }
+
+        &::before {
+            content: '';
+            @include pos-absolute(0, 50%);
+            transform: translateX(-50%);
+            top: -38px;
+            display: block;
+            width: calc(100% - 52%);
+            height: 0.1px;
+            background-color: $bluewood;
+
+        }
+    }
+
+    &__link-img {
+        height: 100%;
+    }
+
+    &__btn {
+        @include flex-jsc-al(center, center);
+    }
+}
+
+.gallery-wrapper {
+    margin-bottom: 60px;
+}
+
+.gallery-wrapper-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
