@@ -56,6 +56,38 @@ function createValidation() {
 
 /***/ }),
 
+/***/ "./src/js/gallery/btnGallery.js":
+/*!**************************************!*\
+  !*** ./src/js/gallery/btnGallery.js ***!
+  \**************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* binding */ btnGallery; }
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function btnGallery() {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()(".gallery__link-img").slice(5).hide();
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()(".gallery__btn").on('click', function (e) {
+    e.preventDefault();
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(".gallery__link-img").slice(5).show();
+    if (jquery__WEBPACK_IMPORTED_MODULE_1___default()(".gallery__link-img").slice(5).show()) {
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()(".gallery__btn").css({
+        display: 'none'
+      });
+    }
+  });
+}
+
+/***/ }),
+
 /***/ "./src/js/menu-burger/menu-burger.js":
 /*!*******************************************!*\
   !*** ./src/js/menu-burger/menu-burger.js ***!
@@ -172,6 +204,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./scroll-to-top/scrollToTop.js */ "./src/js/scroll-to-top/scrollToTop.js");
 /* harmony import */ var _scroll_menu_item_scrollMenuItem_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./scroll-menu-item/scrollMenuItem.js */ "./src/js/scroll-menu-item/scrollMenuItem.js");
 /* harmony import */ var _scroll_down_btnScrollDown_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scroll-down/btnScrollDown.js */ "./src/js/scroll-down/btnScrollDown.js");
+/* harmony import */ var _gallery_btnGallery_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./gallery/btnGallery.js */ "./src/js/gallery/btnGallery.js");
+
 
 
 
@@ -184,16 +218,15 @@ __webpack_require__.r(__webpack_exports__);
 
 var body = jquery__WEBPACK_IMPORTED_MODULE_0___default()("html, body");
 /* harmony default export */ __webpack_exports__["default"] = (body);
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
-  _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox.bind();
-  (0,_slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
-  (0,_nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  (0,_scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
-  (0,_scroll_menu_item_scrollMenuItem_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
-  (0,_scroll_down_btnScrollDown_js__WEBPACK_IMPORTED_MODULE_9__["default"])();
-});
+_fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox.bind();
+(0,_slick_slider_newsSlider_js__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_slick_slider_heroSlider_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
+(0,_form_valodation_createFormValidation_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_nav_bg_changeColor_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
+(0,_scroll_to_top_scrollToTop_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
+(0,_scroll_menu_item_scrollMenuItem_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
+(0,_scroll_down_btnScrollDown_js__WEBPACK_IMPORTED_MODULE_9__["default"])();
+(0,_gallery_btnGallery_js__WEBPACK_IMPORTED_MODULE_10__["default"])();
 
 /***/ }),
 
@@ -564,6 +597,35 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/array-method-has-species-support.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/core-js/internals/array-method-has-species-support.js ***!
+  \****************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var V8_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "./node_modules/core-js/internals/engine-v8-version.js");
+
+var SPECIES = wellKnownSymbol('species');
+
+module.exports = function (METHOD_NAME) {
+  // We can't use this feature detection in V8 since it causes
+  // deoptimization and serious performance degradation
+  // https://github.com/zloirock/core-js/issues/677
+  return V8_VERSION >= 51 || !fails(function () {
+    var array = [];
+    var constructor = array.constructor = {};
+    constructor[SPECIES] = function () {
+      return { foo: 1 };
+    };
+    return array[METHOD_NAME](Boolean).foo !== 1;
+  });
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/array-method-is-strict.js":
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/internals/array-method-is-strict.js ***!
@@ -763,6 +825,27 @@ module.exports = function (bitmap, value) {
     writable: !(bitmap & 4),
     value: value
   };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/create-property.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/internals/create-property.js ***!
+  \***********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "./node_modules/core-js/internals/to-property-key.js");
+var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
+var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "./node_modules/core-js/internals/create-property-descriptor.js");
+
+module.exports = function (object, key, value) {
+  var propertyKey = toPropertyKey(key);
+  if (propertyKey in object) definePropertyModule.f(object, propertyKey, createPropertyDescriptor(0, value));
+  else object[propertyKey] = value;
 };
 
 
@@ -2502,6 +2585,66 @@ module.exports = function (name) {
       : createWellKnownSymbol('Symbol.' + name);
   } return WellKnownSymbolsStore[name];
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.array.slice.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.array.slice.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var isArray = __webpack_require__(/*! ../internals/is-array */ "./node_modules/core-js/internals/is-array.js");
+var isConstructor = __webpack_require__(/*! ../internals/is-constructor */ "./node_modules/core-js/internals/is-constructor.js");
+var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var createProperty = __webpack_require__(/*! ../internals/create-property */ "./node_modules/core-js/internals/create-property.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var arrayMethodHasSpeciesSupport = __webpack_require__(/*! ../internals/array-method-has-species-support */ "./node_modules/core-js/internals/array-method-has-species-support.js");
+var nativeSlice = __webpack_require__(/*! ../internals/array-slice */ "./node_modules/core-js/internals/array-slice.js");
+
+var HAS_SPECIES_SUPPORT = arrayMethodHasSpeciesSupport('slice');
+
+var SPECIES = wellKnownSymbol('species');
+var $Array = Array;
+var max = Math.max;
+
+// `Array.prototype.slice` method
+// https://tc39.es/ecma262/#sec-array.prototype.slice
+// fallback for not array-like ES3 strings and DOM objects
+$({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
+  slice: function slice(start, end) {
+    var O = toIndexedObject(this);
+    var length = lengthOfArrayLike(O);
+    var k = toAbsoluteIndex(start, length);
+    var fin = toAbsoluteIndex(end === undefined ? length : end, length);
+    // inline `ArraySpeciesCreate` for usage native `Array#slice` where it's possible
+    var Constructor, result, n;
+    if (isArray(O)) {
+      Constructor = O.constructor;
+      // cross-realm fallback
+      if (isConstructor(Constructor) && (Constructor === $Array || isArray(Constructor.prototype))) {
+        Constructor = undefined;
+      } else if (isObject(Constructor)) {
+        Constructor = Constructor[SPECIES];
+        if (Constructor === null) Constructor = undefined;
+      }
+      if (Constructor === $Array || Constructor === undefined) {
+        return nativeSlice(O, k, fin);
+      }
+    }
+    result = new (Constructor === undefined ? $Array : Constructor)(max(fin - k, 0));
+    for (n = 0; k < fin; k++, n++) if (k in O) createProperty(result, n, O[k]);
+    result.length = n;
+    return result;
+  }
+});
 
 
 /***/ }),
@@ -18040,6 +18183,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
 /******/ 	__webpack_require__("./src/js/script.js");
 /******/ 	__webpack_require__("./src/js/form-valodation/createFormValidation.js");
+/******/ 	__webpack_require__("./src/js/gallery/btnGallery.js");
 /******/ 	__webpack_require__("./src/js/menu-burger/menu-burger.js");
 /******/ 	__webpack_require__("./src/js/nav-bg/changeColor.js");
 /******/ 	__webpack_require__("./src/js/scroll-down/btnScrollDown.js");

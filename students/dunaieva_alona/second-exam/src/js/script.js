@@ -9,11 +9,12 @@ import changeColorNavBg from './nav-bg/changeColor.js';
 import btnToTop from './scroll-to-top/scrollToTop.js';
 import scrollMenuItem from './scroll-menu-item/scrollMenuItem.js';
 import btnsScrollDown from './scroll-down/btnScrollDown.js';
+import btnGallery from './gallery/btnGallery.js';
 
 const body = $("html, body");
 export default body;
 
-$(function() {
+
   Fancybox.bind();
   newsSlider();
   heroSlider();
@@ -22,4 +23,4 @@ $(function() {
   btnToTop();
   scrollMenuItem();
   btnsScrollDown();
-});
+  btnGallery();

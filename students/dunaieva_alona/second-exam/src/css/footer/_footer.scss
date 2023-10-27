@@ -1,5 +1,5 @@
 .footer {
-    background-image: $gradient-bg, url('../../images/footer-bg.jpg');
+    background-image: $gradient-bg, url('../images/footer-bg.jpg');
     padding: 200px 0 230px 0;
 
     @include media(sm) {
