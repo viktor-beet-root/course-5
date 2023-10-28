@@ -4,8 +4,6 @@ import 'slick-carousel';
 import 'lightbox2';
 import './gallery';
 import './header';
-// import './form';
-
 
 $('.hero-slider').slick({
     arrows: false,
@@ -16,7 +14,7 @@ $('.hero-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     vertical: true,
-    verticalSwiping: false,
+    verticalSwiping: true,
     responsive: [
         {
             breakpoint: 768,

@@ -5,9 +5,46 @@
 /*!************************!*\
   !*** ./src/js/form.js ***!
   \************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var just_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! just-validate */ "./node_modules/just-validate/dist/just-validate.es.js");
 
 
+
+function createFormValidation(form) {
+  var validator = new just_validate__WEBPACK_IMPORTED_MODULE_2__["default"](form, undefined, []);
+  console.log(validator);
+  validator.addField('[name="user-name"]', [{
+    rule: 'required'
+  }, {
+    rule: 'minLength',
+    value: 2
+  }]).addField('[name="email"]', [{
+    rule: 'required'
+  }, {
+    rule: 'email'
+  }]);
+  validator.onSuccess(function (event) {
+    var formData = new FormData(event.target);
+    fetch('#', {
+      method: 'POST',
+      body: formData
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log(data);
+    }).catch(function (error) {
+      console.error('Помилка відправки на сервер:', error);
+    });
+  });
+}
+/* harmony default export */ __webpack_exports__["default"] = (createFormValidation);
 
 /***/ }),
 
@@ -174,8 +211,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import './form';
-
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   arrows: false,
   dots: true,
@@ -185,7 +220,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   vertical: true,
-  verticalSwiping: false,
+  verticalSwiping: true,
   responsive: [{
     breakpoint: 768,
     settings: {
@@ -275,6 +310,69 @@ module.exports = function (argument) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/a-constructor.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/a-constructor.js ***!
+  \*********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var isConstructor = __webpack_require__(/*! ../internals/is-constructor */ "./node_modules/core-js/internals/is-constructor.js");
+var tryToString = __webpack_require__(/*! ../internals/try-to-string */ "./node_modules/core-js/internals/try-to-string.js");
+
+var $TypeError = TypeError;
+
+// `Assert: IsConstructor(argument) is true`
+module.exports = function (argument) {
+  if (isConstructor(argument)) return argument;
+  throw $TypeError(tryToString(argument) + ' is not a constructor');
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/a-possible-prototype.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/internals/a-possible-prototype.js ***!
+  \****************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+
+var $String = String;
+var $TypeError = TypeError;
+
+module.exports = function (argument) {
+  if (typeof argument == 'object' || isCallable(argument)) return argument;
+  throw $TypeError("Can't set " + $String(argument) + ' as a prototype');
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/an-instance.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/internals/an-instance.js ***!
+  \*******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
+
+var $TypeError = TypeError;
+
+module.exports = function (it, Prototype) {
+  if (isPrototypeOf(Prototype, it)) return it;
+  throw $TypeError('Incorrect invocation');
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/an-object.js":
 /*!*****************************************************!*\
   !*** ./node_modules/core-js/internals/an-object.js ***!
@@ -316,6 +414,50 @@ module.exports = !STRICT_METHOD ? function forEach(callbackfn /* , thisArg */) {
   return $forEach(this, callbackfn, arguments.length > 1 ? arguments[1] : undefined);
 // eslint-disable-next-line es/no-array-prototype-foreach -- safe
 } : [].forEach;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/array-includes.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/array-includes.js ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
+
+// `Array.prototype.{ indexOf, includes }` methods implementation
+var createMethod = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIndexedObject($this);
+    var length = lengthOfArrayLike(O);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare -- NaN check
+    if (IS_INCLUDES && el !== el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare -- NaN check
+      if (value !== value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) {
+      if ((IS_INCLUDES || index in O) && O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+module.exports = {
+  // `Array.prototype.includes` method
+  // https://tc39.es/ecma262/#sec-array.prototype.includes
+  includes: createMethod(true),
+  // `Array.prototype.indexOf` method
+  // https://tc39.es/ecma262/#sec-array.prototype.indexof
+  indexOf: createMethod(false)
+};
 
 
 /***/ }),
@@ -426,6 +568,21 @@ module.exports = function (METHOD_NAME, argument) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/array-slice.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/internals/array-slice.js ***!
+  \*******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+
+module.exports = uncurryThis([].slice);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/array-species-constructor.js":
 /*!*********************************************************************!*\
   !*** ./node_modules/core-js/internals/array-species-constructor.js ***!
@@ -474,6 +631,58 @@ var arraySpeciesConstructor = __webpack_require__(/*! ../internals/array-species
 // https://tc39.es/ecma262/#sec-arrayspeciescreate
 module.exports = function (originalArray, length) {
   return new (arraySpeciesConstructor(originalArray))(length === 0 ? 0 : length);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/check-correctness-of-iteration.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/core-js/internals/check-correctness-of-iteration.js ***!
+  \**************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+var SAFE_CLOSING = false;
+
+try {
+  var called = 0;
+  var iteratorWithReturn = {
+    next: function () {
+      return { done: !!called++ };
+    },
+    'return': function () {
+      SAFE_CLOSING = true;
+    }
+  };
+  iteratorWithReturn[ITERATOR] = function () {
+    return this;
+  };
+  // eslint-disable-next-line es/no-array-from, no-throw-literal -- required for testing
+  Array.from(iteratorWithReturn, function () { throw 2; });
+} catch (error) { /* empty */ }
+
+module.exports = function (exec, SKIP_CLOSING) {
+  try {
+    if (!SKIP_CLOSING && !SAFE_CLOSING) return false;
+  } catch (error) { return false; } // workaround of old WebKit + `eval` bug
+  var ITERATION_SUPPORT = false;
+  try {
+    var object = {};
+    object[ITERATOR] = function () {
+      return {
+        next: function () {
+          return { done: ITERATION_SUPPORT = true };
+        }
+      };
+    };
+    exec(object);
+  } catch (error) { /* empty */ }
+  return ITERATION_SUPPORT;
 };
 
 
@@ -540,6 +749,34 @@ module.exports = TO_STRING_TAG_SUPPORT ? classofRaw : function (it) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/copy-constructor-properties.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/core-js/internals/copy-constructor-properties.js ***!
+  \***********************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var ownKeys = __webpack_require__(/*! ../internals/own-keys */ "./node_modules/core-js/internals/own-keys.js");
+var getOwnPropertyDescriptorModule = __webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js");
+var definePropertyModule = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
+
+module.exports = function (target, source, exceptions) {
+  var keys = ownKeys(source);
+  var defineProperty = definePropertyModule.f;
+  var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
+  for (var i = 0; i < keys.length; i++) {
+    var key = keys[i];
+    if (!hasOwn(target, key) && !(exceptions && hasOwn(exceptions, key))) {
+      defineProperty(target, key, getOwnPropertyDescriptor(source, key));
+    }
+  }
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/create-non-enumerable-property.js":
 /*!**************************************************************************!*\
   !*** ./node_modules/core-js/internals/create-non-enumerable-property.js ***!
@@ -577,6 +814,26 @@ module.exports = function (bitmap, value) {
     writable: !(bitmap & 4),
     value: value
   };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/define-built-in-accessor.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/internals/define-built-in-accessor.js ***!
+  \********************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var makeBuiltIn = __webpack_require__(/*! ../internals/make-built-in */ "./node_modules/core-js/internals/make-built-in.js");
+var defineProperty = __webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js");
+
+module.exports = function (target, name, descriptor) {
+  if (descriptor.get) makeBuiltIn(descriptor.get, name, { getter: true });
+  if (descriptor.set) makeBuiltIn(descriptor.set, name, { setter: true });
+  return defineProperty.f(target, name, descriptor);
 };
 
 
@@ -774,6 +1031,100 @@ module.exports = DOMTokenListPrototype === Object.prototype ? undefined : DOMTok
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/engine-is-browser.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-browser.js ***!
+  \*************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var IS_DENO = __webpack_require__(/*! ../internals/engine-is-deno */ "./node_modules/core-js/internals/engine-is-deno.js");
+var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "./node_modules/core-js/internals/engine-is-node.js");
+
+module.exports = !IS_DENO && !IS_NODE
+  && typeof window == 'object'
+  && typeof document == 'object';
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/engine-is-deno.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-deno.js ***!
+  \**********************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+/* global Deno -- Deno case */
+module.exports = typeof Deno == 'object' && Deno && typeof Deno.version == 'object';
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/engine-is-ios-pebble.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-ios-pebble.js ***!
+  \****************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ "./node_modules/core-js/internals/engine-user-agent.js");
+
+module.exports = /ipad|iphone|ipod/i.test(userAgent) && typeof Pebble != 'undefined';
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/engine-is-ios.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-ios.js ***!
+  \*********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ "./node_modules/core-js/internals/engine-user-agent.js");
+
+// eslint-disable-next-line redos/no-vulnerable -- safe
+module.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(userAgent);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/engine-is-node.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-node.js ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var classof = __webpack_require__(/*! ../internals/classof-raw */ "./node_modules/core-js/internals/classof-raw.js");
+
+module.exports = classof(global.process) === 'process';
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/engine-is-webos-webkit.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/internals/engine-is-webos-webkit.js ***!
+  \******************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var userAgent = __webpack_require__(/*! ../internals/engine-user-agent */ "./node_modules/core-js/internals/engine-user-agent.js");
+
+module.exports = /web0s(?!.*chrome)/i.test(userAgent);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/engine-user-agent.js":
 /*!*************************************************************!*\
   !*** ./node_modules/core-js/internals/engine-user-agent.js ***!
@@ -826,6 +1177,94 @@ module.exports = version;
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/enum-bug-keys.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/internals/enum-bug-keys.js ***!
+  \*********************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+// IE8- don't enum bug keys
+module.exports = [
+  'constructor',
+  'hasOwnProperty',
+  'isPrototypeOf',
+  'propertyIsEnumerable',
+  'toLocaleString',
+  'toString',
+  'valueOf'
+];
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/export.js":
+/*!**************************************************!*\
+  !*** ./node_modules/core-js/internals/export.js ***!
+  \**************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var getOwnPropertyDescriptor = (__webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f);
+var createNonEnumerableProperty = __webpack_require__(/*! ../internals/create-non-enumerable-property */ "./node_modules/core-js/internals/create-non-enumerable-property.js");
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+var defineGlobalProperty = __webpack_require__(/*! ../internals/define-global-property */ "./node_modules/core-js/internals/define-global-property.js");
+var copyConstructorProperties = __webpack_require__(/*! ../internals/copy-constructor-properties */ "./node_modules/core-js/internals/copy-constructor-properties.js");
+var isForced = __webpack_require__(/*! ../internals/is-forced */ "./node_modules/core-js/internals/is-forced.js");
+
+/*
+  options.target         - name of the target object
+  options.global         - target is the global object
+  options.stat           - export as static methods of target
+  options.proto          - export as prototype methods of target
+  options.real           - real prototype method for the `pure` version
+  options.forced         - export even if the native feature is available
+  options.bind           - bind methods to the target, required for the `pure` version
+  options.wrap           - wrap constructors to preventing global pollution, required for the `pure` version
+  options.unsafe         - use the simple assignment of property instead of delete + defineProperty
+  options.sham           - add a flag to not completely full polyfills
+  options.enumerable     - export as enumerable property
+  options.dontCallGetSet - prevent calling a getter on target
+  options.name           - the .name of the function if it does not match the key
+*/
+module.exports = function (options, source) {
+  var TARGET = options.target;
+  var GLOBAL = options.global;
+  var STATIC = options.stat;
+  var FORCED, target, key, targetProperty, sourceProperty, descriptor;
+  if (GLOBAL) {
+    target = global;
+  } else if (STATIC) {
+    target = global[TARGET] || defineGlobalProperty(TARGET, {});
+  } else {
+    target = (global[TARGET] || {}).prototype;
+  }
+  if (target) for (key in source) {
+    sourceProperty = source[key];
+    if (options.dontCallGetSet) {
+      descriptor = getOwnPropertyDescriptor(target, key);
+      targetProperty = descriptor && descriptor.value;
+    } else targetProperty = target[key];
+    FORCED = isForced(GLOBAL ? key : TARGET + (STATIC ? '.' : '#') + key, options.forced);
+    // contained in target
+    if (!FORCED && targetProperty !== undefined) {
+      if (typeof sourceProperty == typeof targetProperty) continue;
+      copyConstructorProperties(sourceProperty, targetProperty);
+    }
+    // add a flag to not completely full polyfills
+    if (options.sham || (targetProperty && targetProperty.sham)) {
+      createNonEnumerableProperty(sourceProperty, 'sham', true);
+    }
+    defineBuiltIn(target, key, sourceProperty, options);
+  }
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/fails.js":
 /*!*************************************************!*\
   !*** ./node_modules/core-js/internals/fails.js ***!
@@ -841,6 +1280,28 @@ module.exports = function (exec) {
     return true;
   }
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/function-apply.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/function-apply.js ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var NATIVE_BIND = __webpack_require__(/*! ../internals/function-bind-native */ "./node_modules/core-js/internals/function-bind-native.js");
+
+var FunctionPrototype = Function.prototype;
+var apply = FunctionPrototype.apply;
+var call = FunctionPrototype.call;
+
+// eslint-disable-next-line es/no-reflect -- safe
+module.exports = typeof Reflect == 'object' && Reflect.apply || (NATIVE_BIND ? call.bind(apply) : function () {
+  return call.apply(apply, arguments);
+});
 
 
 /***/ }),
@@ -938,6 +1399,27 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/function-uncurry-this-accessor.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/core-js/internals/function-uncurry-this-accessor.js ***!
+  \**************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+
+module.exports = function (object, key, method) {
+  try {
+    // eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
+    return uncurryThis(aCallable(Object.getOwnPropertyDescriptor(object, key)[method]));
+  } catch (error) { /* empty */ }
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/function-uncurry-this-clause.js":
 /*!************************************************************************!*\
   !*** ./node_modules/core-js/internals/function-uncurry-this-clause.js ***!
@@ -999,6 +1481,56 @@ var aFunction = function (argument) {
 
 module.exports = function (namespace, method) {
   return arguments.length < 2 ? aFunction(global[namespace]) : global[namespace] && global[namespace][method];
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/get-iterator-method.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/internals/get-iterator-method.js ***!
+  \***************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var classof = __webpack_require__(/*! ../internals/classof */ "./node_modules/core-js/internals/classof.js");
+var getMethod = __webpack_require__(/*! ../internals/get-method */ "./node_modules/core-js/internals/get-method.js");
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "./node_modules/core-js/internals/is-null-or-undefined.js");
+var Iterators = __webpack_require__(/*! ../internals/iterators */ "./node_modules/core-js/internals/iterators.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+
+module.exports = function (it) {
+  if (!isNullOrUndefined(it)) return getMethod(it, ITERATOR)
+    || getMethod(it, '@@iterator')
+    || Iterators[classof(it)];
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/get-iterator.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/internals/get-iterator.js ***!
+  \********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var tryToString = __webpack_require__(/*! ../internals/try-to-string */ "./node_modules/core-js/internals/try-to-string.js");
+var getIteratorMethod = __webpack_require__(/*! ../internals/get-iterator-method */ "./node_modules/core-js/internals/get-iterator-method.js");
+
+var $TypeError = TypeError;
+
+module.exports = function (argument, usingIterator) {
+  var iteratorMethod = arguments.length < 2 ? getIteratorMethod(argument) : usingIterator;
+  if (aCallable(iteratorMethod)) return anObject(call(iteratorMethod, argument));
+  throw $TypeError(tryToString(argument) + ' is not iterable');
 };
 
 
@@ -1083,6 +1615,39 @@ module.exports = Object.hasOwn || function hasOwn(it, key) {
 "use strict";
 
 module.exports = {};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/host-report-errors.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/core-js/internals/host-report-errors.js ***!
+  \**************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+module.exports = function (a, b) {
+  try {
+    // eslint-disable-next-line no-console -- safe
+    arguments.length === 1 ? console.error(a) : console.error(a, b);
+  } catch (error) { /* empty */ }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/html.js":
+/*!************************************************!*\
+  !*** ./node_modules/core-js/internals/html.js ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
+
+module.exports = getBuiltIn('document', 'documentElement');
 
 
 /***/ }),
@@ -1245,6 +1810,28 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/is-array-iterator-method.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/internals/is-array-iterator-method.js ***!
+  \********************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var Iterators = __webpack_require__(/*! ../internals/iterators */ "./node_modules/core-js/internals/iterators.js");
+
+var ITERATOR = wellKnownSymbol('iterator');
+var ArrayPrototype = Array.prototype;
+
+// check on default Array iterator
+module.exports = function (it) {
+  return it !== undefined && (Iterators.Array === it || ArrayPrototype[ITERATOR] === it);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/is-array.js":
 /*!****************************************************!*\
   !*** ./node_modules/core-js/internals/is-array.js ***!
@@ -1352,6 +1939,40 @@ module.exports = !construct || fails(function () {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/is-forced.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/internals/is-forced.js ***!
+  \*****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+
+var replacement = /#|\.prototype\./;
+
+var isForced = function (feature, detection) {
+  var value = data[normalize(feature)];
+  return value === POLYFILL ? true
+    : value === NATIVE ? false
+    : isCallable(detection) ? fails(detection)
+    : !!detection;
+};
+
+var normalize = isForced.normalize = function (string) {
+  return String(string).replace(replacement, '.').toLowerCase();
+};
+
+var data = isForced.data = {};
+var NATIVE = isForced.NATIVE = 'N';
+var POLYFILL = isForced.POLYFILL = 'P';
+
+module.exports = isForced;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/is-null-or-undefined.js":
 /*!****************************************************************!*\
   !*** ./node_modules/core-js/internals/is-null-or-undefined.js ***!
@@ -1425,6 +2046,134 @@ module.exports = USE_SYMBOL_AS_UID ? function (it) {
   var $Symbol = getBuiltIn('Symbol');
   return isCallable($Symbol) && isPrototypeOf($Symbol.prototype, $Object(it));
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/iterate.js":
+/*!***************************************************!*\
+  !*** ./node_modules/core-js/internals/iterate.js ***!
+  \***************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var bind = __webpack_require__(/*! ../internals/function-bind-context */ "./node_modules/core-js/internals/function-bind-context.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var tryToString = __webpack_require__(/*! ../internals/try-to-string */ "./node_modules/core-js/internals/try-to-string.js");
+var isArrayIteratorMethod = __webpack_require__(/*! ../internals/is-array-iterator-method */ "./node_modules/core-js/internals/is-array-iterator-method.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
+var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
+var getIterator = __webpack_require__(/*! ../internals/get-iterator */ "./node_modules/core-js/internals/get-iterator.js");
+var getIteratorMethod = __webpack_require__(/*! ../internals/get-iterator-method */ "./node_modules/core-js/internals/get-iterator-method.js");
+var iteratorClose = __webpack_require__(/*! ../internals/iterator-close */ "./node_modules/core-js/internals/iterator-close.js");
+
+var $TypeError = TypeError;
+
+var Result = function (stopped, result) {
+  this.stopped = stopped;
+  this.result = result;
+};
+
+var ResultPrototype = Result.prototype;
+
+module.exports = function (iterable, unboundFunction, options) {
+  var that = options && options.that;
+  var AS_ENTRIES = !!(options && options.AS_ENTRIES);
+  var IS_RECORD = !!(options && options.IS_RECORD);
+  var IS_ITERATOR = !!(options && options.IS_ITERATOR);
+  var INTERRUPTED = !!(options && options.INTERRUPTED);
+  var fn = bind(unboundFunction, that);
+  var iterator, iterFn, index, length, result, next, step;
+
+  var stop = function (condition) {
+    if (iterator) iteratorClose(iterator, 'normal', condition);
+    return new Result(true, condition);
+  };
+
+  var callFn = function (value) {
+    if (AS_ENTRIES) {
+      anObject(value);
+      return INTERRUPTED ? fn(value[0], value[1], stop) : fn(value[0], value[1]);
+    } return INTERRUPTED ? fn(value, stop) : fn(value);
+  };
+
+  if (IS_RECORD) {
+    iterator = iterable.iterator;
+  } else if (IS_ITERATOR) {
+    iterator = iterable;
+  } else {
+    iterFn = getIteratorMethod(iterable);
+    if (!iterFn) throw $TypeError(tryToString(iterable) + ' is not iterable');
+    // optimisation for array iterators
+    if (isArrayIteratorMethod(iterFn)) {
+      for (index = 0, length = lengthOfArrayLike(iterable); length > index; index++) {
+        result = callFn(iterable[index]);
+        if (result && isPrototypeOf(ResultPrototype, result)) return result;
+      } return new Result(false);
+    }
+    iterator = getIterator(iterable, iterFn);
+  }
+
+  next = IS_RECORD ? iterable.next : iterator.next;
+  while (!(step = call(next, iterator)).done) {
+    try {
+      result = callFn(step.value);
+    } catch (error) {
+      iteratorClose(iterator, 'throw', error);
+    }
+    if (typeof result == 'object' && result && isPrototypeOf(ResultPrototype, result)) return result;
+  } return new Result(false);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/iterator-close.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/internals/iterator-close.js ***!
+  \**********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var getMethod = __webpack_require__(/*! ../internals/get-method */ "./node_modules/core-js/internals/get-method.js");
+
+module.exports = function (iterator, kind, value) {
+  var innerResult, innerError;
+  anObject(iterator);
+  try {
+    innerResult = getMethod(iterator, 'return');
+    if (!innerResult) {
+      if (kind === 'throw') throw value;
+      return value;
+    }
+    innerResult = call(innerResult, iterator);
+  } catch (error) {
+    innerError = true;
+    innerResult = error;
+  }
+  if (kind === 'throw') throw value;
+  if (innerError) throw innerResult;
+  anObject(innerResult);
+  return value;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/iterators.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/internals/iterators.js ***!
+  \*****************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+module.exports = {};
 
 
 /***/ }),
@@ -1536,6 +2285,130 @@ module.exports = Math.trunc || function trunc(x) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/microtask.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/core-js/internals/microtask.js ***!
+  \*****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var bind = __webpack_require__(/*! ../internals/function-bind-context */ "./node_modules/core-js/internals/function-bind-context.js");
+var getOwnPropertyDescriptor = (__webpack_require__(/*! ../internals/object-get-own-property-descriptor */ "./node_modules/core-js/internals/object-get-own-property-descriptor.js").f);
+var macrotask = (__webpack_require__(/*! ../internals/task */ "./node_modules/core-js/internals/task.js").set);
+var Queue = __webpack_require__(/*! ../internals/queue */ "./node_modules/core-js/internals/queue.js");
+var IS_IOS = __webpack_require__(/*! ../internals/engine-is-ios */ "./node_modules/core-js/internals/engine-is-ios.js");
+var IS_IOS_PEBBLE = __webpack_require__(/*! ../internals/engine-is-ios-pebble */ "./node_modules/core-js/internals/engine-is-ios-pebble.js");
+var IS_WEBOS_WEBKIT = __webpack_require__(/*! ../internals/engine-is-webos-webkit */ "./node_modules/core-js/internals/engine-is-webos-webkit.js");
+var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "./node_modules/core-js/internals/engine-is-node.js");
+
+var MutationObserver = global.MutationObserver || global.WebKitMutationObserver;
+var document = global.document;
+var process = global.process;
+var Promise = global.Promise;
+// Node.js 11 shows ExperimentalWarning on getting `queueMicrotask`
+var queueMicrotaskDescriptor = getOwnPropertyDescriptor(global, 'queueMicrotask');
+var microtask = queueMicrotaskDescriptor && queueMicrotaskDescriptor.value;
+var notify, toggle, node, promise, then;
+
+// modern engines have queueMicrotask method
+if (!microtask) {
+  var queue = new Queue();
+
+  var flush = function () {
+    var parent, fn;
+    if (IS_NODE && (parent = process.domain)) parent.exit();
+    while (fn = queue.get()) try {
+      fn();
+    } catch (error) {
+      if (queue.head) notify();
+      throw error;
+    }
+    if (parent) parent.enter();
+  };
+
+  // browsers with MutationObserver, except iOS - https://github.com/zloirock/core-js/issues/339
+  // also except WebOS Webkit https://github.com/zloirock/core-js/issues/898
+  if (!IS_IOS && !IS_NODE && !IS_WEBOS_WEBKIT && MutationObserver && document) {
+    toggle = true;
+    node = document.createTextNode('');
+    new MutationObserver(flush).observe(node, { characterData: true });
+    notify = function () {
+      node.data = toggle = !toggle;
+    };
+  // environments with maybe non-completely correct, but existent Promise
+  } else if (!IS_IOS_PEBBLE && Promise && Promise.resolve) {
+    // Promise.resolve without an argument throws an error in LG WebOS 2
+    promise = Promise.resolve(undefined);
+    // workaround of WebKit ~ iOS Safari 10.1 bug
+    promise.constructor = Promise;
+    then = bind(promise.then, promise);
+    notify = function () {
+      then(flush);
+    };
+  // Node.js without promises
+  } else if (IS_NODE) {
+    notify = function () {
+      process.nextTick(flush);
+    };
+  // for other environments - macrotask based on:
+  // - setImmediate
+  // - MessageChannel
+  // - window.postMessage
+  // - onreadystatechange
+  // - setTimeout
+  } else {
+    // `webpack` dev server bug on IE global methods - use bind(fn, global)
+    macrotask = bind(macrotask, global);
+    notify = function () {
+      macrotask(flush);
+    };
+  }
+
+  microtask = function (fn) {
+    if (!queue.head) notify();
+    queue.add(fn);
+  };
+}
+
+module.exports = microtask;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/new-promise-capability.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/core-js/internals/new-promise-capability.js ***!
+  \******************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+
+var $TypeError = TypeError;
+
+var PromiseCapability = function (C) {
+  var resolve, reject;
+  this.promise = new C(function ($$resolve, $$reject) {
+    if (resolve !== undefined || reject !== undefined) throw $TypeError('Bad Promise constructor');
+    resolve = $$resolve;
+    reject = $$reject;
+  });
+  this.resolve = aCallable(resolve);
+  this.reject = aCallable(reject);
+};
+
+// `NewPromiseCapability` abstract operation
+// https://tc39.es/ecma262/#sec-newpromisecapability
+module.exports.f = function (C) {
+  return new PromiseCapability(C);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/object-define-property.js":
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/internals/object-define-property.js ***!
@@ -1591,6 +2464,77 @@ exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/object-get-own-property-descriptor.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-get-own-property-descriptor.js ***!
+  \******************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var propertyIsEnumerableModule = __webpack_require__(/*! ../internals/object-property-is-enumerable */ "./node_modules/core-js/internals/object-property-is-enumerable.js");
+var createPropertyDescriptor = __webpack_require__(/*! ../internals/create-property-descriptor */ "./node_modules/core-js/internals/create-property-descriptor.js");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var toPropertyKey = __webpack_require__(/*! ../internals/to-property-key */ "./node_modules/core-js/internals/to-property-key.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var IE8_DOM_DEFINE = __webpack_require__(/*! ../internals/ie8-dom-define */ "./node_modules/core-js/internals/ie8-dom-define.js");
+
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
+var $getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+
+// `Object.getOwnPropertyDescriptor` method
+// https://tc39.es/ecma262/#sec-object.getownpropertydescriptor
+exports.f = DESCRIPTORS ? $getOwnPropertyDescriptor : function getOwnPropertyDescriptor(O, P) {
+  O = toIndexedObject(O);
+  P = toPropertyKey(P);
+  if (IE8_DOM_DEFINE) try {
+    return $getOwnPropertyDescriptor(O, P);
+  } catch (error) { /* empty */ }
+  if (hasOwn(O, P)) return createPropertyDescriptor(!call(propertyIsEnumerableModule.f, O, P), O[P]);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/object-get-own-property-names.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-get-own-property-names.js ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var internalObjectKeys = __webpack_require__(/*! ../internals/object-keys-internal */ "./node_modules/core-js/internals/object-keys-internal.js");
+var enumBugKeys = __webpack_require__(/*! ../internals/enum-bug-keys */ "./node_modules/core-js/internals/enum-bug-keys.js");
+
+var hiddenKeys = enumBugKeys.concat('length', 'prototype');
+
+// `Object.getOwnPropertyNames` method
+// https://tc39.es/ecma262/#sec-object.getownpropertynames
+// eslint-disable-next-line es/no-object-getownpropertynames -- safe
+exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
+  return internalObjectKeys(O, hiddenKeys);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/object-get-own-property-symbols.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-get-own-property-symbols.js ***!
+  \***************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+// eslint-disable-next-line es/no-object-getownpropertysymbols -- safe
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/object-is-prototype-of.js":
 /*!******************************************************************!*\
   !*** ./node_modules/core-js/internals/object-is-prototype-of.js ***!
@@ -1602,6 +2546,101 @@ exports.f = DESCRIPTORS ? V8_PROTOTYPE_DEFINE_BUG ? function defineProperty(O, P
 var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
 
 module.exports = uncurryThis({}.isPrototypeOf);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/object-keys-internal.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-keys-internal.js ***!
+  \****************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
+var indexOf = (__webpack_require__(/*! ../internals/array-includes */ "./node_modules/core-js/internals/array-includes.js").indexOf);
+var hiddenKeys = __webpack_require__(/*! ../internals/hidden-keys */ "./node_modules/core-js/internals/hidden-keys.js");
+
+var push = uncurryThis([].push);
+
+module.exports = function (object, names) {
+  var O = toIndexedObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) !hasOwn(hiddenKeys, key) && hasOwn(O, key) && push(result, key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (hasOwn(O, key = names[i++])) {
+    ~indexOf(result, key) || push(result, key);
+  }
+  return result;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/object-property-is-enumerable.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-property-is-enumerable.js ***!
+  \*************************************************************************/
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+var $propertyIsEnumerable = {}.propertyIsEnumerable;
+// eslint-disable-next-line es/no-object-getownpropertydescriptor -- safe
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+
+// Nashorn ~ JDK8 bug
+var NASHORN_BUG = getOwnPropertyDescriptor && !$propertyIsEnumerable.call({ 1: 2 }, 1);
+
+// `Object.prototype.propertyIsEnumerable` method implementation
+// https://tc39.es/ecma262/#sec-object.prototype.propertyisenumerable
+exports.f = NASHORN_BUG ? function propertyIsEnumerable(V) {
+  var descriptor = getOwnPropertyDescriptor(this, V);
+  return !!descriptor && descriptor.enumerable;
+} : $propertyIsEnumerable;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/object-set-prototype-of.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/core-js/internals/object-set-prototype-of.js ***!
+  \*******************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+/* eslint-disable no-proto -- safe */
+var uncurryThisAccessor = __webpack_require__(/*! ../internals/function-uncurry-this-accessor */ "./node_modules/core-js/internals/function-uncurry-this-accessor.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var aPossiblePrototype = __webpack_require__(/*! ../internals/a-possible-prototype */ "./node_modules/core-js/internals/a-possible-prototype.js");
+
+// `Object.setPrototypeOf` method
+// https://tc39.es/ecma262/#sec-object.setprototypeof
+// Works with __proto__ only. Old v8 can't work with null proto objects.
+// eslint-disable-next-line es/no-object-setprototypeof -- safe
+module.exports = Object.setPrototypeOf || ('__proto__' in {} ? function () {
+  var CORRECT_SETTER = false;
+  var test = {};
+  var setter;
+  try {
+    setter = uncurryThisAccessor(Object.prototype, '__proto__', 'set');
+    setter(test, []);
+    CORRECT_SETTER = test instanceof Array;
+  } catch (error) { /* empty */ }
+  return function setPrototypeOf(O, proto) {
+    anObject(O);
+    aPossiblePrototype(proto);
+    if (CORRECT_SETTER) setter(O, proto);
+    else O.__proto__ = proto;
+    return O;
+  };
+}() : undefined);
 
 
 /***/ }),
@@ -1653,6 +2692,204 @@ module.exports = function (input, pref) {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/own-keys.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/internals/own-keys.js ***!
+  \****************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var getOwnPropertyNamesModule = __webpack_require__(/*! ../internals/object-get-own-property-names */ "./node_modules/core-js/internals/object-get-own-property-names.js");
+var getOwnPropertySymbolsModule = __webpack_require__(/*! ../internals/object-get-own-property-symbols */ "./node_modules/core-js/internals/object-get-own-property-symbols.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+
+var concat = uncurryThis([].concat);
+
+// all object keys, includes non-enumerable and symbols
+module.exports = getBuiltIn('Reflect', 'ownKeys') || function ownKeys(it) {
+  var keys = getOwnPropertyNamesModule.f(anObject(it));
+  var getOwnPropertySymbols = getOwnPropertySymbolsModule.f;
+  return getOwnPropertySymbols ? concat(keys, getOwnPropertySymbols(it)) : keys;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/perform.js":
+/*!***************************************************!*\
+  !*** ./node_modules/core-js/internals/perform.js ***!
+  \***************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+module.exports = function (exec) {
+  try {
+    return { error: false, value: exec() };
+  } catch (error) {
+    return { error: true, value: error };
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/promise-constructor-detection.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/core-js/internals/promise-constructor-detection.js ***!
+  \*************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var NativePromiseConstructor = __webpack_require__(/*! ../internals/promise-native-constructor */ "./node_modules/core-js/internals/promise-native-constructor.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var isForced = __webpack_require__(/*! ../internals/is-forced */ "./node_modules/core-js/internals/is-forced.js");
+var inspectSource = __webpack_require__(/*! ../internals/inspect-source */ "./node_modules/core-js/internals/inspect-source.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var IS_BROWSER = __webpack_require__(/*! ../internals/engine-is-browser */ "./node_modules/core-js/internals/engine-is-browser.js");
+var IS_DENO = __webpack_require__(/*! ../internals/engine-is-deno */ "./node_modules/core-js/internals/engine-is-deno.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+var V8_VERSION = __webpack_require__(/*! ../internals/engine-v8-version */ "./node_modules/core-js/internals/engine-v8-version.js");
+
+var NativePromisePrototype = NativePromiseConstructor && NativePromiseConstructor.prototype;
+var SPECIES = wellKnownSymbol('species');
+var SUBCLASSING = false;
+var NATIVE_PROMISE_REJECTION_EVENT = isCallable(global.PromiseRejectionEvent);
+
+var FORCED_PROMISE_CONSTRUCTOR = isForced('Promise', function () {
+  var PROMISE_CONSTRUCTOR_SOURCE = inspectSource(NativePromiseConstructor);
+  var GLOBAL_CORE_JS_PROMISE = PROMISE_CONSTRUCTOR_SOURCE !== String(NativePromiseConstructor);
+  // V8 6.6 (Node 10 and Chrome 66) have a bug with resolving custom thenables
+  // https://bugs.chromium.org/p/chromium/issues/detail?id=830565
+  // We can't detect it synchronously, so just check versions
+  if (!GLOBAL_CORE_JS_PROMISE && V8_VERSION === 66) return true;
+  // We need Promise#{ catch, finally } in the pure version for preventing prototype pollution
+  if (IS_PURE && !(NativePromisePrototype['catch'] && NativePromisePrototype['finally'])) return true;
+  // We can't use @@species feature detection in V8 since it causes
+  // deoptimization and performance degradation
+  // https://github.com/zloirock/core-js/issues/679
+  if (!V8_VERSION || V8_VERSION < 51 || !/native code/.test(PROMISE_CONSTRUCTOR_SOURCE)) {
+    // Detect correctness of subclassing with @@species support
+    var promise = new NativePromiseConstructor(function (resolve) { resolve(1); });
+    var FakePromise = function (exec) {
+      exec(function () { /* empty */ }, function () { /* empty */ });
+    };
+    var constructor = promise.constructor = {};
+    constructor[SPECIES] = FakePromise;
+    SUBCLASSING = promise.then(function () { /* empty */ }) instanceof FakePromise;
+    if (!SUBCLASSING) return true;
+  // Unhandled rejections tracking support, NodeJS Promise without it fails @@species test
+  } return !GLOBAL_CORE_JS_PROMISE && (IS_BROWSER || IS_DENO) && !NATIVE_PROMISE_REJECTION_EVENT;
+});
+
+module.exports = {
+  CONSTRUCTOR: FORCED_PROMISE_CONSTRUCTOR,
+  REJECTION_EVENT: NATIVE_PROMISE_REJECTION_EVENT,
+  SUBCLASSING: SUBCLASSING
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/promise-native-constructor.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/core-js/internals/promise-native-constructor.js ***!
+  \**********************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+
+module.exports = global.Promise;
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/promise-resolve.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/internals/promise-resolve.js ***!
+  \***********************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var newPromiseCapability = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
+
+module.exports = function (C, x) {
+  anObject(C);
+  if (isObject(x) && x.constructor === C) return x;
+  var promiseCapability = newPromiseCapability.f(C);
+  var resolve = promiseCapability.resolve;
+  resolve(x);
+  return promiseCapability.promise;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/promise-statics-incorrect-iteration.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/core-js/internals/promise-statics-incorrect-iteration.js ***!
+  \*******************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var NativePromiseConstructor = __webpack_require__(/*! ../internals/promise-native-constructor */ "./node_modules/core-js/internals/promise-native-constructor.js");
+var checkCorrectnessOfIteration = __webpack_require__(/*! ../internals/check-correctness-of-iteration */ "./node_modules/core-js/internals/check-correctness-of-iteration.js");
+var FORCED_PROMISE_CONSTRUCTOR = (__webpack_require__(/*! ../internals/promise-constructor-detection */ "./node_modules/core-js/internals/promise-constructor-detection.js").CONSTRUCTOR);
+
+module.exports = FORCED_PROMISE_CONSTRUCTOR || !checkCorrectnessOfIteration(function (iterable) {
+  NativePromiseConstructor.all(iterable).then(undefined, function () { /* empty */ });
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/queue.js":
+/*!*************************************************!*\
+  !*** ./node_modules/core-js/internals/queue.js ***!
+  \*************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+var Queue = function () {
+  this.head = null;
+  this.tail = null;
+};
+
+Queue.prototype = {
+  add: function (item) {
+    var entry = { item: item, next: null };
+    var tail = this.tail;
+    if (tail) tail.next = entry;
+    else this.head = entry;
+    this.tail = entry;
+  },
+  get: function () {
+    var entry = this.head;
+    if (entry) {
+      var next = this.head = entry.next;
+      if (next === null) this.tail = null;
+      return entry.item;
+    }
+  }
+};
+
+module.exports = Queue;
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/require-object-coercible.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/internals/require-object-coercible.js ***!
@@ -1670,6 +2907,59 @@ var $TypeError = TypeError;
 module.exports = function (it) {
   if (isNullOrUndefined(it)) throw $TypeError("Can't call method on " + it);
   return it;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/set-species.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/core-js/internals/set-species.js ***!
+  \*******************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
+var defineBuiltInAccessor = __webpack_require__(/*! ../internals/define-built-in-accessor */ "./node_modules/core-js/internals/define-built-in-accessor.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+var DESCRIPTORS = __webpack_require__(/*! ../internals/descriptors */ "./node_modules/core-js/internals/descriptors.js");
+
+var SPECIES = wellKnownSymbol('species');
+
+module.exports = function (CONSTRUCTOR_NAME) {
+  var Constructor = getBuiltIn(CONSTRUCTOR_NAME);
+
+  if (DESCRIPTORS && Constructor && !Constructor[SPECIES]) {
+    defineBuiltInAccessor(Constructor, SPECIES, {
+      configurable: true,
+      get: function () { return this; }
+    });
+  }
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/set-to-string-tag.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/set-to-string-tag.js ***!
+  \*************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var defineProperty = (__webpack_require__(/*! ../internals/object-define-property */ "./node_modules/core-js/internals/object-define-property.js").f);
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var TO_STRING_TAG = wellKnownSymbol('toStringTag');
+
+module.exports = function (target, TAG, STATIC) {
+  if (target && !STATIC) target = target.prototype;
+  if (target && !hasOwn(target, TO_STRING_TAG)) {
+    defineProperty(target, TO_STRING_TAG, { configurable: true, value: TAG });
+  }
 };
 
 
@@ -1738,6 +3028,32 @@ var store = __webpack_require__(/*! ../internals/shared-store */ "./node_modules
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/species-constructor.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/core-js/internals/species-constructor.js ***!
+  \***************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var aConstructor = __webpack_require__(/*! ../internals/a-constructor */ "./node_modules/core-js/internals/a-constructor.js");
+var isNullOrUndefined = __webpack_require__(/*! ../internals/is-null-or-undefined */ "./node_modules/core-js/internals/is-null-or-undefined.js");
+var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
+
+var SPECIES = wellKnownSymbol('species');
+
+// `SpeciesConstructor` abstract operation
+// https://tc39.es/ecma262/#sec-speciesconstructor
+module.exports = function (O, defaultConstructor) {
+  var C = anObject(O).constructor;
+  var S;
+  return C === undefined || isNullOrUndefined(S = anObject(C)[SPECIES]) ? defaultConstructor : aConstructor(S);
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/symbol-constructor-detection.js":
 /*!************************************************************************!*\
   !*** ./node_modules/core-js/internals/symbol-constructor-detection.js ***!
@@ -1764,6 +3080,177 @@ module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
     // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
     !Symbol.sham && V8_VERSION && V8_VERSION < 41;
 });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/task.js":
+/*!************************************************!*\
+  !*** ./node_modules/core-js/internals/task.js ***!
+  \************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var apply = __webpack_require__(/*! ../internals/function-apply */ "./node_modules/core-js/internals/function-apply.js");
+var bind = __webpack_require__(/*! ../internals/function-bind-context */ "./node_modules/core-js/internals/function-bind-context.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+var html = __webpack_require__(/*! ../internals/html */ "./node_modules/core-js/internals/html.js");
+var arraySlice = __webpack_require__(/*! ../internals/array-slice */ "./node_modules/core-js/internals/array-slice.js");
+var createElement = __webpack_require__(/*! ../internals/document-create-element */ "./node_modules/core-js/internals/document-create-element.js");
+var validateArgumentsLength = __webpack_require__(/*! ../internals/validate-arguments-length */ "./node_modules/core-js/internals/validate-arguments-length.js");
+var IS_IOS = __webpack_require__(/*! ../internals/engine-is-ios */ "./node_modules/core-js/internals/engine-is-ios.js");
+var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "./node_modules/core-js/internals/engine-is-node.js");
+
+var set = global.setImmediate;
+var clear = global.clearImmediate;
+var process = global.process;
+var Dispatch = global.Dispatch;
+var Function = global.Function;
+var MessageChannel = global.MessageChannel;
+var String = global.String;
+var counter = 0;
+var queue = {};
+var ONREADYSTATECHANGE = 'onreadystatechange';
+var $location, defer, channel, port;
+
+fails(function () {
+  // Deno throws a ReferenceError on `location` access without `--location` flag
+  $location = global.location;
+});
+
+var run = function (id) {
+  if (hasOwn(queue, id)) {
+    var fn = queue[id];
+    delete queue[id];
+    fn();
+  }
+};
+
+var runner = function (id) {
+  return function () {
+    run(id);
+  };
+};
+
+var eventListener = function (event) {
+  run(event.data);
+};
+
+var globalPostMessageDefer = function (id) {
+  // old engines have not location.origin
+  global.postMessage(String(id), $location.protocol + '//' + $location.host);
+};
+
+// Node.js 0.9+ & IE10+ has setImmediate, otherwise:
+if (!set || !clear) {
+  set = function setImmediate(handler) {
+    validateArgumentsLength(arguments.length, 1);
+    var fn = isCallable(handler) ? handler : Function(handler);
+    var args = arraySlice(arguments, 1);
+    queue[++counter] = function () {
+      apply(fn, undefined, args);
+    };
+    defer(counter);
+    return counter;
+  };
+  clear = function clearImmediate(id) {
+    delete queue[id];
+  };
+  // Node.js 0.8-
+  if (IS_NODE) {
+    defer = function (id) {
+      process.nextTick(runner(id));
+    };
+  // Sphere (JS game engine) Dispatch API
+  } else if (Dispatch && Dispatch.now) {
+    defer = function (id) {
+      Dispatch.now(runner(id));
+    };
+  // Browsers with MessageChannel, includes WebWorkers
+  // except iOS - https://github.com/zloirock/core-js/issues/624
+  } else if (MessageChannel && !IS_IOS) {
+    channel = new MessageChannel();
+    port = channel.port2;
+    channel.port1.onmessage = eventListener;
+    defer = bind(port.postMessage, port);
+  // Browsers with postMessage, skip WebWorkers
+  // IE8 has postMessage, but it's sync & typeof its postMessage is 'object'
+  } else if (
+    global.addEventListener &&
+    isCallable(global.postMessage) &&
+    !global.importScripts &&
+    $location && $location.protocol !== 'file:' &&
+    !fails(globalPostMessageDefer)
+  ) {
+    defer = globalPostMessageDefer;
+    global.addEventListener('message', eventListener, false);
+  // IE8-
+  } else if (ONREADYSTATECHANGE in createElement('script')) {
+    defer = function (id) {
+      html.appendChild(createElement('script'))[ONREADYSTATECHANGE] = function () {
+        html.removeChild(this);
+        run(id);
+      };
+    };
+  // Rest old browsers
+  } else {
+    defer = function (id) {
+      setTimeout(runner(id), 0);
+    };
+  }
+}
+
+module.exports = {
+  set: set,
+  clear: clear
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/to-absolute-index.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/to-absolute-index.js ***!
+  \*************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
+
+var max = Math.max;
+var min = Math.min;
+
+// Helper for a popular repeating case of the spec:
+// Let integer be ? ToInteger(index).
+// If integer < 0, let result be max((length + integer), 0); else let result be min(integer, length).
+module.exports = function (index, length) {
+  var integer = toIntegerOrInfinity(index);
+  return integer < 0 ? max(integer + length, 0) : min(integer, length);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/internals/to-indexed-object.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/internals/to-indexed-object.js ***!
+  \*************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+// toObject with fallback for non-array-like ES3 strings
+var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "./node_modules/core-js/internals/indexed-object.js");
+var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+
+module.exports = function (it) {
+  return IndexedObject(requireObjectCoercible(it));
+};
 
 
 /***/ }),
@@ -1993,6 +3480,24 @@ module.exports = DESCRIPTORS && fails(function () {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/validate-arguments-length.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/core-js/internals/validate-arguments-length.js ***!
+  \*********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+var $TypeError = TypeError;
+
+module.exports = function (passed, required) {
+  if (passed < required) throw $TypeError('Not enough arguments');
+  return passed;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/weak-map-basic-detection.js":
 /*!********************************************************************!*\
   !*** ./node_modules/core-js/internals/weak-map-basic-detection.js ***!
@@ -2058,6 +3563,503 @@ var toString = __webpack_require__(/*! ../internals/object-to-string */ "./node_
 if (!TO_STRING_TAG_SUPPORT) {
   defineBuiltIn(Object.prototype, 'toString', toString, { unsafe: true });
 }
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.all.js":
+/*!********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.all.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var newPromiseCapabilityModule = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
+var perform = __webpack_require__(/*! ../internals/perform */ "./node_modules/core-js/internals/perform.js");
+var iterate = __webpack_require__(/*! ../internals/iterate */ "./node_modules/core-js/internals/iterate.js");
+var PROMISE_STATICS_INCORRECT_ITERATION = __webpack_require__(/*! ../internals/promise-statics-incorrect-iteration */ "./node_modules/core-js/internals/promise-statics-incorrect-iteration.js");
+
+// `Promise.all` method
+// https://tc39.es/ecma262/#sec-promise.all
+$({ target: 'Promise', stat: true, forced: PROMISE_STATICS_INCORRECT_ITERATION }, {
+  all: function all(iterable) {
+    var C = this;
+    var capability = newPromiseCapabilityModule.f(C);
+    var resolve = capability.resolve;
+    var reject = capability.reject;
+    var result = perform(function () {
+      var $promiseResolve = aCallable(C.resolve);
+      var values = [];
+      var counter = 0;
+      var remaining = 1;
+      iterate(iterable, function (promise) {
+        var index = counter++;
+        var alreadyCalled = false;
+        remaining++;
+        call($promiseResolve, C, promise).then(function (value) {
+          if (alreadyCalled) return;
+          alreadyCalled = true;
+          values[index] = value;
+          --remaining || resolve(values);
+        }, reject);
+      });
+      --remaining || resolve(values);
+    });
+    if (result.error) reject(result.value);
+    return capability.promise;
+  }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.catch.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.catch.js ***!
+  \**********************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+var FORCED_PROMISE_CONSTRUCTOR = (__webpack_require__(/*! ../internals/promise-constructor-detection */ "./node_modules/core-js/internals/promise-constructor-detection.js").CONSTRUCTOR);
+var NativePromiseConstructor = __webpack_require__(/*! ../internals/promise-native-constructor */ "./node_modules/core-js/internals/promise-native-constructor.js");
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+
+var NativePromisePrototype = NativePromiseConstructor && NativePromiseConstructor.prototype;
+
+// `Promise.prototype.catch` method
+// https://tc39.es/ecma262/#sec-promise.prototype.catch
+$({ target: 'Promise', proto: true, forced: FORCED_PROMISE_CONSTRUCTOR, real: true }, {
+  'catch': function (onRejected) {
+    return this.then(undefined, onRejected);
+  }
+});
+
+// makes sure that native promise-based APIs `Promise#catch` properly works with patched `Promise#then`
+if (!IS_PURE && isCallable(NativePromiseConstructor)) {
+  var method = getBuiltIn('Promise').prototype['catch'];
+  if (NativePromisePrototype['catch'] !== method) {
+    defineBuiltIn(NativePromisePrototype, 'catch', method, { unsafe: true });
+  }
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.constructor.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.constructor.js ***!
+  \****************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+var IS_NODE = __webpack_require__(/*! ../internals/engine-is-node */ "./node_modules/core-js/internals/engine-is-node.js");
+var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+var setPrototypeOf = __webpack_require__(/*! ../internals/object-set-prototype-of */ "./node_modules/core-js/internals/object-set-prototype-of.js");
+var setToStringTag = __webpack_require__(/*! ../internals/set-to-string-tag */ "./node_modules/core-js/internals/set-to-string-tag.js");
+var setSpecies = __webpack_require__(/*! ../internals/set-species */ "./node_modules/core-js/internals/set-species.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
+var isObject = __webpack_require__(/*! ../internals/is-object */ "./node_modules/core-js/internals/is-object.js");
+var anInstance = __webpack_require__(/*! ../internals/an-instance */ "./node_modules/core-js/internals/an-instance.js");
+var speciesConstructor = __webpack_require__(/*! ../internals/species-constructor */ "./node_modules/core-js/internals/species-constructor.js");
+var task = (__webpack_require__(/*! ../internals/task */ "./node_modules/core-js/internals/task.js").set);
+var microtask = __webpack_require__(/*! ../internals/microtask */ "./node_modules/core-js/internals/microtask.js");
+var hostReportErrors = __webpack_require__(/*! ../internals/host-report-errors */ "./node_modules/core-js/internals/host-report-errors.js");
+var perform = __webpack_require__(/*! ../internals/perform */ "./node_modules/core-js/internals/perform.js");
+var Queue = __webpack_require__(/*! ../internals/queue */ "./node_modules/core-js/internals/queue.js");
+var InternalStateModule = __webpack_require__(/*! ../internals/internal-state */ "./node_modules/core-js/internals/internal-state.js");
+var NativePromiseConstructor = __webpack_require__(/*! ../internals/promise-native-constructor */ "./node_modules/core-js/internals/promise-native-constructor.js");
+var PromiseConstructorDetection = __webpack_require__(/*! ../internals/promise-constructor-detection */ "./node_modules/core-js/internals/promise-constructor-detection.js");
+var newPromiseCapabilityModule = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
+
+var PROMISE = 'Promise';
+var FORCED_PROMISE_CONSTRUCTOR = PromiseConstructorDetection.CONSTRUCTOR;
+var NATIVE_PROMISE_REJECTION_EVENT = PromiseConstructorDetection.REJECTION_EVENT;
+var NATIVE_PROMISE_SUBCLASSING = PromiseConstructorDetection.SUBCLASSING;
+var getInternalPromiseState = InternalStateModule.getterFor(PROMISE);
+var setInternalState = InternalStateModule.set;
+var NativePromisePrototype = NativePromiseConstructor && NativePromiseConstructor.prototype;
+var PromiseConstructor = NativePromiseConstructor;
+var PromisePrototype = NativePromisePrototype;
+var TypeError = global.TypeError;
+var document = global.document;
+var process = global.process;
+var newPromiseCapability = newPromiseCapabilityModule.f;
+var newGenericPromiseCapability = newPromiseCapability;
+
+var DISPATCH_EVENT = !!(document && document.createEvent && global.dispatchEvent);
+var UNHANDLED_REJECTION = 'unhandledrejection';
+var REJECTION_HANDLED = 'rejectionhandled';
+var PENDING = 0;
+var FULFILLED = 1;
+var REJECTED = 2;
+var HANDLED = 1;
+var UNHANDLED = 2;
+
+var Internal, OwnPromiseCapability, PromiseWrapper, nativeThen;
+
+// helpers
+var isThenable = function (it) {
+  var then;
+  return isObject(it) && isCallable(then = it.then) ? then : false;
+};
+
+var callReaction = function (reaction, state) {
+  var value = state.value;
+  var ok = state.state === FULFILLED;
+  var handler = ok ? reaction.ok : reaction.fail;
+  var resolve = reaction.resolve;
+  var reject = reaction.reject;
+  var domain = reaction.domain;
+  var result, then, exited;
+  try {
+    if (handler) {
+      if (!ok) {
+        if (state.rejection === UNHANDLED) onHandleUnhandled(state);
+        state.rejection = HANDLED;
+      }
+      if (handler === true) result = value;
+      else {
+        if (domain) domain.enter();
+        result = handler(value); // can throw
+        if (domain) {
+          domain.exit();
+          exited = true;
+        }
+      }
+      if (result === reaction.promise) {
+        reject(TypeError('Promise-chain cycle'));
+      } else if (then = isThenable(result)) {
+        call(then, result, resolve, reject);
+      } else resolve(result);
+    } else reject(value);
+  } catch (error) {
+    if (domain && !exited) domain.exit();
+    reject(error);
+  }
+};
+
+var notify = function (state, isReject) {
+  if (state.notified) return;
+  state.notified = true;
+  microtask(function () {
+    var reactions = state.reactions;
+    var reaction;
+    while (reaction = reactions.get()) {
+      callReaction(reaction, state);
+    }
+    state.notified = false;
+    if (isReject && !state.rejection) onUnhandled(state);
+  });
+};
+
+var dispatchEvent = function (name, promise, reason) {
+  var event, handler;
+  if (DISPATCH_EVENT) {
+    event = document.createEvent('Event');
+    event.promise = promise;
+    event.reason = reason;
+    event.initEvent(name, false, true);
+    global.dispatchEvent(event);
+  } else event = { promise: promise, reason: reason };
+  if (!NATIVE_PROMISE_REJECTION_EVENT && (handler = global['on' + name])) handler(event);
+  else if (name === UNHANDLED_REJECTION) hostReportErrors('Unhandled promise rejection', reason);
+};
+
+var onUnhandled = function (state) {
+  call(task, global, function () {
+    var promise = state.facade;
+    var value = state.value;
+    var IS_UNHANDLED = isUnhandled(state);
+    var result;
+    if (IS_UNHANDLED) {
+      result = perform(function () {
+        if (IS_NODE) {
+          process.emit('unhandledRejection', value, promise);
+        } else dispatchEvent(UNHANDLED_REJECTION, promise, value);
+      });
+      // Browsers should not trigger `rejectionHandled` event if it was handled here, NodeJS - should
+      state.rejection = IS_NODE || isUnhandled(state) ? UNHANDLED : HANDLED;
+      if (result.error) throw result.value;
+    }
+  });
+};
+
+var isUnhandled = function (state) {
+  return state.rejection !== HANDLED && !state.parent;
+};
+
+var onHandleUnhandled = function (state) {
+  call(task, global, function () {
+    var promise = state.facade;
+    if (IS_NODE) {
+      process.emit('rejectionHandled', promise);
+    } else dispatchEvent(REJECTION_HANDLED, promise, state.value);
+  });
+};
+
+var bind = function (fn, state, unwrap) {
+  return function (value) {
+    fn(state, value, unwrap);
+  };
+};
+
+var internalReject = function (state, value, unwrap) {
+  if (state.done) return;
+  state.done = true;
+  if (unwrap) state = unwrap;
+  state.value = value;
+  state.state = REJECTED;
+  notify(state, true);
+};
+
+var internalResolve = function (state, value, unwrap) {
+  if (state.done) return;
+  state.done = true;
+  if (unwrap) state = unwrap;
+  try {
+    if (state.facade === value) throw TypeError("Promise can't be resolved itself");
+    var then = isThenable(value);
+    if (then) {
+      microtask(function () {
+        var wrapper = { done: false };
+        try {
+          call(then, value,
+            bind(internalResolve, wrapper, state),
+            bind(internalReject, wrapper, state)
+          );
+        } catch (error) {
+          internalReject(wrapper, error, state);
+        }
+      });
+    } else {
+      state.value = value;
+      state.state = FULFILLED;
+      notify(state, false);
+    }
+  } catch (error) {
+    internalReject({ done: false }, error, state);
+  }
+};
+
+// constructor polyfill
+if (FORCED_PROMISE_CONSTRUCTOR) {
+  // 25.4.3.1 Promise(executor)
+  PromiseConstructor = function Promise(executor) {
+    anInstance(this, PromisePrototype);
+    aCallable(executor);
+    call(Internal, this);
+    var state = getInternalPromiseState(this);
+    try {
+      executor(bind(internalResolve, state), bind(internalReject, state));
+    } catch (error) {
+      internalReject(state, error);
+    }
+  };
+
+  PromisePrototype = PromiseConstructor.prototype;
+
+  // eslint-disable-next-line no-unused-vars -- required for `.length`
+  Internal = function Promise(executor) {
+    setInternalState(this, {
+      type: PROMISE,
+      done: false,
+      notified: false,
+      parent: false,
+      reactions: new Queue(),
+      rejection: false,
+      state: PENDING,
+      value: undefined
+    });
+  };
+
+  // `Promise.prototype.then` method
+  // https://tc39.es/ecma262/#sec-promise.prototype.then
+  Internal.prototype = defineBuiltIn(PromisePrototype, 'then', function then(onFulfilled, onRejected) {
+    var state = getInternalPromiseState(this);
+    var reaction = newPromiseCapability(speciesConstructor(this, PromiseConstructor));
+    state.parent = true;
+    reaction.ok = isCallable(onFulfilled) ? onFulfilled : true;
+    reaction.fail = isCallable(onRejected) && onRejected;
+    reaction.domain = IS_NODE ? process.domain : undefined;
+    if (state.state === PENDING) state.reactions.add(reaction);
+    else microtask(function () {
+      callReaction(reaction, state);
+    });
+    return reaction.promise;
+  });
+
+  OwnPromiseCapability = function () {
+    var promise = new Internal();
+    var state = getInternalPromiseState(promise);
+    this.promise = promise;
+    this.resolve = bind(internalResolve, state);
+    this.reject = bind(internalReject, state);
+  };
+
+  newPromiseCapabilityModule.f = newPromiseCapability = function (C) {
+    return C === PromiseConstructor || C === PromiseWrapper
+      ? new OwnPromiseCapability(C)
+      : newGenericPromiseCapability(C);
+  };
+
+  if (!IS_PURE && isCallable(NativePromiseConstructor) && NativePromisePrototype !== Object.prototype) {
+    nativeThen = NativePromisePrototype.then;
+
+    if (!NATIVE_PROMISE_SUBCLASSING) {
+      // make `Promise#then` return a polyfilled `Promise` for native promise-based APIs
+      defineBuiltIn(NativePromisePrototype, 'then', function then(onFulfilled, onRejected) {
+        var that = this;
+        return new PromiseConstructor(function (resolve, reject) {
+          call(nativeThen, that, resolve, reject);
+        }).then(onFulfilled, onRejected);
+      // https://github.com/zloirock/core-js/issues/640
+      }, { unsafe: true });
+    }
+
+    // make `.constructor === Promise` work for native promise-based APIs
+    try {
+      delete NativePromisePrototype.constructor;
+    } catch (error) { /* empty */ }
+
+    // make `instanceof Promise` work for native promise-based APIs
+    if (setPrototypeOf) {
+      setPrototypeOf(NativePromisePrototype, PromisePrototype);
+    }
+  }
+}
+
+$({ global: true, constructor: true, wrap: true, forced: FORCED_PROMISE_CONSTRUCTOR }, {
+  Promise: PromiseConstructor
+});
+
+setToStringTag(PromiseConstructor, PROMISE, false, true);
+setSpecies(PROMISE);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.js":
+/*!****************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.js ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+// TODO: Remove this module from `core-js@4` since it's split to modules listed below
+__webpack_require__(/*! ../modules/es.promise.constructor */ "./node_modules/core-js/modules/es.promise.constructor.js");
+__webpack_require__(/*! ../modules/es.promise.all */ "./node_modules/core-js/modules/es.promise.all.js");
+__webpack_require__(/*! ../modules/es.promise.catch */ "./node_modules/core-js/modules/es.promise.catch.js");
+__webpack_require__(/*! ../modules/es.promise.race */ "./node_modules/core-js/modules/es.promise.race.js");
+__webpack_require__(/*! ../modules/es.promise.reject */ "./node_modules/core-js/modules/es.promise.reject.js");
+__webpack_require__(/*! ../modules/es.promise.resolve */ "./node_modules/core-js/modules/es.promise.resolve.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.race.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.race.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var aCallable = __webpack_require__(/*! ../internals/a-callable */ "./node_modules/core-js/internals/a-callable.js");
+var newPromiseCapabilityModule = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
+var perform = __webpack_require__(/*! ../internals/perform */ "./node_modules/core-js/internals/perform.js");
+var iterate = __webpack_require__(/*! ../internals/iterate */ "./node_modules/core-js/internals/iterate.js");
+var PROMISE_STATICS_INCORRECT_ITERATION = __webpack_require__(/*! ../internals/promise-statics-incorrect-iteration */ "./node_modules/core-js/internals/promise-statics-incorrect-iteration.js");
+
+// `Promise.race` method
+// https://tc39.es/ecma262/#sec-promise.race
+$({ target: 'Promise', stat: true, forced: PROMISE_STATICS_INCORRECT_ITERATION }, {
+  race: function race(iterable) {
+    var C = this;
+    var capability = newPromiseCapabilityModule.f(C);
+    var reject = capability.reject;
+    var result = perform(function () {
+      var $promiseResolve = aCallable(C.resolve);
+      iterate(iterable, function (promise) {
+        call($promiseResolve, C, promise).then(capability.resolve, reject);
+      });
+    });
+    if (result.error) reject(result.value);
+    return capability.promise;
+  }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.reject.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.reject.js ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var newPromiseCapabilityModule = __webpack_require__(/*! ../internals/new-promise-capability */ "./node_modules/core-js/internals/new-promise-capability.js");
+var FORCED_PROMISE_CONSTRUCTOR = (__webpack_require__(/*! ../internals/promise-constructor-detection */ "./node_modules/core-js/internals/promise-constructor-detection.js").CONSTRUCTOR);
+
+// `Promise.reject` method
+// https://tc39.es/ecma262/#sec-promise.reject
+$({ target: 'Promise', stat: true, forced: FORCED_PROMISE_CONSTRUCTOR }, {
+  reject: function reject(r) {
+    var capability = newPromiseCapabilityModule.f(this);
+    call(capability.reject, undefined, r);
+    return capability.promise;
+  }
+});
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.promise.resolve.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.promise.resolve.js ***!
+  \************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
+var getBuiltIn = __webpack_require__(/*! ../internals/get-built-in */ "./node_modules/core-js/internals/get-built-in.js");
+var IS_PURE = __webpack_require__(/*! ../internals/is-pure */ "./node_modules/core-js/internals/is-pure.js");
+var NativePromiseConstructor = __webpack_require__(/*! ../internals/promise-native-constructor */ "./node_modules/core-js/internals/promise-native-constructor.js");
+var FORCED_PROMISE_CONSTRUCTOR = (__webpack_require__(/*! ../internals/promise-constructor-detection */ "./node_modules/core-js/internals/promise-constructor-detection.js").CONSTRUCTOR);
+var promiseResolve = __webpack_require__(/*! ../internals/promise-resolve */ "./node_modules/core-js/internals/promise-resolve.js");
+
+var PromiseConstructorWrapper = getBuiltIn('Promise');
+var CHECK_WRAPPER = IS_PURE && !FORCED_PROMISE_CONSTRUCTOR;
+
+// `Promise.resolve` method
+// https://tc39.es/ecma262/#sec-promise.resolve
+$({ target: 'Promise', stat: true, forced: IS_PURE || FORCED_PROMISE_CONSTRUCTOR }, {
+  resolve: function resolve(x) {
+    return promiseResolve(CHECK_WRAPPER && this === PromiseConstructorWrapper ? NativePromiseConstructor : this, x);
+  }
+});
 
 
 /***/ }),
@@ -12819,6 +14821,1601 @@ if ( typeof noGlobal === "undefined" ) {
 
 return jQuery;
 } );
+
+
+/***/ }),
+
+/***/ "./node_modules/just-validate/dist/just-validate.es.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/just-validate/dist/just-validate.es.js ***!
+  \*************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CustomStyleTagIds: function() { return /* binding */ CustomStyleTagIds; },
+/* harmony export */   GroupRules: function() { return /* binding */ GroupRules; },
+/* harmony export */   Rules: function() { return /* binding */ Rules; },
+/* harmony export */   "default": function() { return /* binding */ JustValidate; }
+/* harmony export */ });
+var __defProp = Object.defineProperty;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __publicField = (obj, key, value) => {
+  __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
+  return value;
+};
+const EMAIL_REGEXP = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const INTEGER_REGEXP = /^-?[0-9]\d*$/;
+const PASSWORD_REGEXP = /^(?=.*[A-Za-z])(?=.*\d).{8,}$/;
+const STRONG_PASSWORD_REGEXP = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+const isEmpty = (value) => {
+  let newVal = value;
+  if (typeof value === "string") {
+    newVal = value.trim();
+  }
+  return !newVal;
+};
+const isEmail = (value) => {
+  return EMAIL_REGEXP.test(value);
+};
+const isLengthMoreThanMax = (value, len) => {
+  return value.length > len;
+};
+const isLengthLessThanMin = (value, len) => {
+  return value.length < len;
+};
+const isNumber = (value) => {
+  if (typeof value !== "string") {
+    return false;
+  }
+  return !isNaN(+value) && !isNaN(parseFloat(value));
+};
+const isInteger = (value) => {
+  return INTEGER_REGEXP.test(value);
+};
+const isPassword = (value) => {
+  return PASSWORD_REGEXP.test(value);
+};
+const isStrongPassword = (value) => {
+  return STRONG_PASSWORD_REGEXP.test(value);
+};
+const isNumberMoreThanMax = (value, len) => {
+  return value > len;
+};
+const isNumberLessThanMin = (value, len) => {
+  return value < len;
+};
+const isInvalidOrEmptyString = (value) => {
+  return typeof value !== "string" || value === "";
+};
+var Rules = /* @__PURE__ */ ((Rules2) => {
+  Rules2["Required"] = "required";
+  Rules2["Email"] = "email";
+  Rules2["MinLength"] = "minLength";
+  Rules2["MaxLength"] = "maxLength";
+  Rules2["Password"] = "password";
+  Rules2["Number"] = "number";
+  Rules2["Integer"] = "integer";
+  Rules2["MaxNumber"] = "maxNumber";
+  Rules2["MinNumber"] = "minNumber";
+  Rules2["StrongPassword"] = "strongPassword";
+  Rules2["CustomRegexp"] = "customRegexp";
+  Rules2["MinFilesCount"] = "minFilesCount";
+  Rules2["MaxFilesCount"] = "maxFilesCount";
+  Rules2["Files"] = "files";
+  return Rules2;
+})(Rules || {});
+var GroupRules = /* @__PURE__ */ ((GroupRules2) => {
+  GroupRules2["Required"] = "required";
+  return GroupRules2;
+})(GroupRules || {});
+var CustomStyleTagIds = /* @__PURE__ */ ((CustomStyleTagIds2) => {
+  CustomStyleTagIds2["Label"] = "label";
+  CustomStyleTagIds2["LabelArrow"] = "labelArrow";
+  return CustomStyleTagIds2;
+})(CustomStyleTagIds || {});
+const defaultDictionary = [
+  {
+    key: Rules.Required,
+    dict: {
+      en: "The field is required"
+    }
+  },
+  {
+    key: Rules.Email,
+    dict: {
+      en: "Email has invalid format"
+    }
+  },
+  {
+    key: Rules.MaxLength,
+    dict: {
+      en: "The field must contain a maximum of :value characters"
+    }
+  },
+  {
+    key: Rules.MinLength,
+    dict: {
+      en: "The field must contain a minimum of :value characters"
+    }
+  },
+  {
+    key: Rules.Password,
+    dict: {
+      en: "Password must contain minimum eight characters, at least one letter and one number"
+    }
+  },
+  {
+    key: Rules.StrongPassword,
+    dict: {
+      en: "Password should contain minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+    }
+  },
+  {
+    key: Rules.Number,
+    dict: {
+      en: "Value should be a number"
+    }
+  },
+  {
+    key: Rules.MaxNumber,
+    dict: {
+      en: "Number should be less or equal than :value"
+    }
+  },
+  {
+    key: Rules.MinNumber,
+    dict: {
+      en: "Number should be more or equal than :value"
+    }
+  },
+  {
+    key: Rules.MinFilesCount,
+    dict: {
+      en: "Files count should be more or equal than :value"
+    }
+  },
+  {
+    key: Rules.MaxFilesCount,
+    dict: {
+      en: "Files count should be less or equal than :value"
+    }
+  },
+  {
+    key: Rules.Files,
+    dict: {
+      en: "Uploaded files have one or several invalid properties (extension/size/type etc)."
+    }
+  }
+];
+const DEFAULT_ERROR_FIELD_MESSAGE = "Value is incorrect";
+const isPromise = (val) => typeof val === "object" && val !== null && "then" in val && typeof val.then === "function";
+const getNodeParents = (el) => {
+  let elem = el;
+  const els = [];
+  while (elem) {
+    els.unshift(elem);
+    elem = elem.parentNode;
+  }
+  return els;
+};
+const getClosestParent = (groups, parents) => {
+  const reversedParents = [...parents].reverse();
+  for (let i = 0, len = reversedParents.length; i < len; ++i) {
+    const parent = reversedParents[i];
+    for (const key in groups) {
+      const group = groups[key];
+      if (group.groupElem === parent) {
+        return [key, group];
+      }
+    }
+  }
+  return null;
+};
+const getClassList = (classList) => {
+  if (Array.isArray(classList)) {
+    return classList.filter((cls) => cls.length > 0);
+  }
+  if (typeof classList === "string" && classList.trim()) {
+    return [...classList.split(" ").filter((cls) => cls.length > 0)];
+  }
+  return [];
+};
+const isElement = (element) => {
+  return element instanceof Element || element instanceof HTMLDocument;
+};
+const errorLabelCss = `.just-validate-error-label[data-tooltip=true]{position:fixed;padding:4px 8px;background:#423f3f;color:#fff;white-space:nowrap;z-index:10;border-radius:4px;transform:translateY(-5px)}.just-validate-error-label[data-tooltip=true]:before{content:'';width:0;height:0;border-left:solid 5px transparent;border-right:solid 5px transparent;border-bottom:solid 5px #423f3f;position:absolute;z-index:3;display:block;bottom:-5px;transform:rotate(180deg);left:calc(50% - 5px)}.just-validate-error-label[data-tooltip=true][data-direction=left]{transform:translateX(-5px)}.just-validate-error-label[data-tooltip=true][data-direction=left]:before{right:-7px;bottom:auto;left:auto;top:calc(50% - 2px);transform:rotate(90deg)}.just-validate-error-label[data-tooltip=true][data-direction=right]{transform:translateX(5px)}.just-validate-error-label[data-tooltip=true][data-direction=right]:before{right:auto;bottom:auto;left:-7px;top:calc(50% - 2px);transform:rotate(-90deg)}.just-validate-error-label[data-tooltip=true][data-direction=bottom]{transform:translateY(5px)}.just-validate-error-label[data-tooltip=true][data-direction=bottom]:before{right:auto;bottom:auto;left:calc(50% - 5px);top:-5px;transform:rotate(0)}`;
+const TOOLTIP_ARROW_HEIGHT = 5;
+const defaultGlobalConfig = {
+  errorFieldStyle: {
+    color: "#b81111",
+    border: "1px solid #B81111"
+  },
+  errorFieldCssClass: "just-validate-error-field",
+  successFieldCssClass: "just-validate-success-field",
+  errorLabelStyle: {
+    color: "#b81111"
+  },
+  errorLabelCssClass: "just-validate-error-label",
+  successLabelCssClass: "just-validate-success-label",
+  focusInvalidField: true,
+  lockForm: true,
+  testingMode: false,
+  validateBeforeSubmitting: false
+};
+class JustValidate {
+  constructor(form, globalConfig, dictLocale) {
+    __publicField(this, "form", null);
+    __publicField(this, "fields", {});
+    __publicField(this, "groupFields", {});
+    __publicField(this, "errors", {});
+    __publicField(this, "isValid", false);
+    __publicField(this, "isSubmitted", false);
+    __publicField(this, "globalConfig", defaultGlobalConfig);
+    __publicField(this, "errorLabels", {});
+    __publicField(this, "successLabels", {});
+    __publicField(this, "eventListeners", []);
+    __publicField(this, "dictLocale", defaultDictionary);
+    __publicField(this, "currentLocale", "en");
+    __publicField(this, "customStyleTags", {});
+    __publicField(this, "onSuccessCallback");
+    __publicField(this, "onFailCallback");
+    __publicField(this, "onValidateCallback");
+    __publicField(this, "tooltips", []);
+    __publicField(this, "lastScrollPosition");
+    __publicField(this, "isScrollTick");
+    __publicField(this, "fieldIds", /* @__PURE__ */ new Map());
+    __publicField(this, "getKeyByFieldSelector", (field) => {
+      return this.fieldIds.get(field);
+    });
+    __publicField(this, "getFieldSelectorByKey", (key) => {
+      for (const [fieldSelector, k] of this.fieldIds) {
+        if (key === k) {
+          return fieldSelector;
+        }
+      }
+      return void 0;
+    });
+    __publicField(this, "getCompatibleFields", () => {
+      const fields = {};
+      Object.keys(this.fields).forEach((key) => {
+        let newKey = key;
+        const fieldSelector = this.getFieldSelectorByKey(key);
+        if (typeof fieldSelector === "string") {
+          newKey = fieldSelector;
+        }
+        fields[newKey] = { ...this.fields[key] };
+      });
+      return fields;
+    });
+    __publicField(this, "setKeyByFieldSelector", (field) => {
+      if (this.fieldIds.has(field)) {
+        return this.fieldIds.get(field);
+      }
+      const key = String(this.fieldIds.size + 1);
+      this.fieldIds.set(field, key);
+      return key;
+    });
+    __publicField(this, "refreshAllTooltips", () => {
+      this.tooltips.forEach((item) => {
+        item.refresh();
+      });
+    });
+    __publicField(this, "handleDocumentScroll", () => {
+      this.lastScrollPosition = window.scrollY;
+      if (!this.isScrollTick) {
+        window.requestAnimationFrame(() => {
+          this.refreshAllTooltips();
+          this.isScrollTick = false;
+        });
+        this.isScrollTick = true;
+      }
+    });
+    __publicField(this, "formSubmitHandler", (ev) => {
+      ev.preventDefault();
+      this.isSubmitted = true;
+      this.validateHandler(ev);
+    });
+    __publicField(this, "handleFieldChange", (target) => {
+      let foundKey;
+      for (const key in this.fields) {
+        const field = this.fields[key];
+        if (field.elem === target) {
+          foundKey = key;
+          break;
+        }
+      }
+      if (!foundKey) {
+        return;
+      }
+      this.fields[foundKey].touched = true;
+      this.validateField(foundKey, true);
+    });
+    __publicField(this, "handleGroupChange", (target) => {
+      let foundKey;
+      for (const key in this.groupFields) {
+        const group = this.groupFields[key];
+        if (group.elems.find((elem) => elem === target)) {
+          foundKey = key;
+          break;
+        }
+      }
+      if (!foundKey) {
+        return;
+      }
+      this.groupFields[foundKey].touched = true;
+      this.validateGroup(foundKey, true);
+    });
+    __publicField(this, "handlerChange", (ev) => {
+      if (!ev.target) {
+        return;
+      }
+      this.handleFieldChange(ev.target);
+      this.handleGroupChange(ev.target);
+      this.renderErrors();
+    });
+    this.initialize(form, globalConfig, dictLocale);
+  }
+  initialize(form, globalConfig, dictLocale) {
+    this.form = null;
+    this.errors = {};
+    this.isValid = false;
+    this.isSubmitted = false;
+    this.globalConfig = defaultGlobalConfig;
+    this.errorLabels = {};
+    this.successLabels = {};
+    this.eventListeners = [];
+    this.customStyleTags = {};
+    this.tooltips = [];
+    this.currentLocale = "en";
+    if (typeof form === "string") {
+      const elem = document.querySelector(form);
+      if (!elem) {
+        throw Error(
+          `Form with ${form} selector not found! Please check the form selector`
+        );
+      }
+      this.setForm(elem);
+    } else if (form instanceof HTMLFormElement) {
+      this.setForm(form);
+    } else {
+      throw Error(
+        `Form selector is not valid. Please specify a string selector or a DOM element.`
+      );
+    }
+    this.globalConfig = { ...defaultGlobalConfig, ...globalConfig };
+    if (dictLocale) {
+      this.dictLocale = [...dictLocale, ...defaultDictionary];
+    }
+    if (this.isTooltip()) {
+      const styleTag = document.createElement("style");
+      styleTag.textContent = errorLabelCss;
+      this.customStyleTags[CustomStyleTagIds.Label] = document.head.appendChild(styleTag);
+      this.addListener("scroll", document, this.handleDocumentScroll);
+    }
+  }
+  getLocalisedString(rule, ruleValue, customMsg) {
+    var _a;
+    const search = customMsg != null ? customMsg : rule;
+    let localisedStr = (_a = this.dictLocale.find((item) => item.key === search)) == null ? void 0 : _a.dict[this.currentLocale];
+    if (!localisedStr) {
+      if (customMsg) {
+        localisedStr = customMsg;
+      }
+    }
+    if (localisedStr && ruleValue !== void 0) {
+      switch (rule) {
+        case Rules.MaxLength:
+        case Rules.MinLength:
+        case Rules.MaxNumber:
+        case Rules.MinNumber:
+        case Rules.MinFilesCount:
+        case Rules.MaxFilesCount:
+          localisedStr = localisedStr.replace(":value", String(ruleValue));
+      }
+    }
+    return localisedStr || customMsg || DEFAULT_ERROR_FIELD_MESSAGE;
+  }
+  getFieldErrorMessage(fieldRule, elem) {
+    const msg = typeof fieldRule.errorMessage === "function" ? fieldRule.errorMessage(this.getElemValue(elem), this.fields) : fieldRule.errorMessage;
+    return this.getLocalisedString(fieldRule.rule, fieldRule.value, msg);
+  }
+  getFieldSuccessMessage(successMessage, elem) {
+    const msg = typeof successMessage === "function" ? successMessage(this.getElemValue(elem), this.fields) : successMessage;
+    return this.getLocalisedString(void 0, void 0, msg);
+  }
+  getGroupErrorMessage(groupRule) {
+    return this.getLocalisedString(
+      groupRule.rule,
+      void 0,
+      groupRule.errorMessage
+    );
+  }
+  getGroupSuccessMessage(groupRule) {
+    if (!groupRule.successMessage) {
+      return void 0;
+    }
+    return this.getLocalisedString(
+      void 0,
+      void 0,
+      groupRule.successMessage
+    );
+  }
+  setFieldInvalid(key, fieldRule) {
+    this.fields[key].isValid = false;
+    this.fields[key].errorMessage = this.getFieldErrorMessage(
+      fieldRule,
+      this.fields[key].elem
+    );
+  }
+  setFieldValid(key, successMessage) {
+    this.fields[key].isValid = true;
+    if (successMessage !== void 0) {
+      this.fields[key].successMessage = this.getFieldSuccessMessage(
+        successMessage,
+        this.fields[key].elem
+      );
+    }
+  }
+  setGroupInvalid(key, groupRule) {
+    this.groupFields[key].isValid = false;
+    this.groupFields[key].errorMessage = this.getGroupErrorMessage(groupRule);
+  }
+  setGroupValid(key, groupRule) {
+    this.groupFields[key].isValid = true;
+    this.groupFields[key].successMessage = this.getGroupSuccessMessage(groupRule);
+  }
+  getElemValue(elem) {
+    switch (elem.type) {
+      case "checkbox":
+        return elem.checked;
+      case "file":
+        return elem.files;
+      default:
+        return elem.value;
+    }
+  }
+  validateGroupRule(key, elems, groupRule) {
+    switch (groupRule.rule) {
+      case GroupRules.Required: {
+        if (elems.every((elem) => !elem.checked)) {
+          this.setGroupInvalid(key, groupRule);
+        } else {
+          this.setGroupValid(key, groupRule);
+        }
+      }
+    }
+  }
+  validateFieldRule(key, elem, fieldRule, afterInputChanged = false) {
+    const ruleValue = fieldRule.value;
+    const elemValue = this.getElemValue(elem);
+    if (fieldRule.plugin) {
+      const result = fieldRule.plugin(
+        elemValue,
+        this.getCompatibleFields()
+      );
+      if (!result) {
+        this.setFieldInvalid(key, fieldRule);
+      }
+      return;
+    }
+    switch (fieldRule.rule) {
+      case Rules.Required: {
+        if (isEmpty(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.Email: {
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (!isEmail(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.MaxLength: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (isLengthMoreThanMax(elemValue, ruleValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.MinLength: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (isLengthLessThanMin(elemValue, ruleValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.Password: {
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (!isPassword(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.StrongPassword: {
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (!isStrongPassword(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.Number: {
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (!isNumber(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.Integer: {
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        if (!isInteger(elemValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.MaxNumber: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        const num = +elemValue;
+        if (Number.isNaN(num) || isNumberMoreThanMax(num, ruleValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.MinNumber: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (isInvalidOrEmptyString(elemValue)) {
+          break;
+        }
+        const num = +elemValue;
+        if (Number.isNaN(num) || isNumberLessThanMin(num, ruleValue)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.CustomRegexp: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          return;
+        }
+        let regexp;
+        try {
+          regexp = new RegExp(ruleValue);
+        } catch (e) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] should be a valid regexp. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        const str = String(elemValue);
+        if (str !== "" && !regexp.test(str)) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+        break;
+      }
+      case Rules.MinFilesCount: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (Number.isFinite(elemValue == null ? void 0 : elemValue.length) && elemValue.length < ruleValue) {
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        break;
+      }
+      case Rules.MaxFilesCount: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (typeof ruleValue !== "number") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be a number. The field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        if (Number.isFinite(elemValue == null ? void 0 : elemValue.length) && elemValue.length > ruleValue) {
+          this.setFieldInvalid(key, fieldRule);
+          break;
+        }
+        break;
+      }
+      case Rules.Files: {
+        if (ruleValue === void 0) {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field is not defined. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          return;
+        }
+        if (typeof ruleValue !== "object") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be an object. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          return;
+        }
+        const filesConfig = ruleValue.files;
+        if (typeof filesConfig !== "object") {
+          console.error(
+            `Value for ${fieldRule.rule} rule for [${key}] field should be an object with files array. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          return;
+        }
+        const isFilePropsInvalid = (file, fileConfig) => {
+          const minSizeInvalid = Number.isFinite(fileConfig.minSize) && file.size < fileConfig.minSize;
+          const maxSizeInvalid = Number.isFinite(fileConfig.maxSize) && file.size > fileConfig.maxSize;
+          const nameInvalid = Array.isArray(fileConfig.names) && !fileConfig.names.includes(file.name);
+          const extInvalid = Array.isArray(fileConfig.extensions) && !fileConfig.extensions.includes(
+            file.name.split(".")[file.name.split(".").length - 1]
+          );
+          const typeInvalid = Array.isArray(fileConfig.types) && !fileConfig.types.includes(file.type);
+          return minSizeInvalid || maxSizeInvalid || nameInvalid || extInvalid || typeInvalid;
+        };
+        if (typeof elemValue === "object" && elemValue !== null) {
+          for (let fileIdx = 0, len = elemValue.length; fileIdx < len; ++fileIdx) {
+            const file = elemValue.item(fileIdx);
+            if (!file) {
+              this.setFieldInvalid(key, fieldRule);
+              break;
+            }
+            const filesInvalid = isFilePropsInvalid(file, filesConfig);
+            if (filesInvalid) {
+              this.setFieldInvalid(key, fieldRule);
+              break;
+            }
+          }
+        }
+        break;
+      }
+      default: {
+        if (typeof fieldRule.validator !== "function") {
+          console.error(
+            `Validator for custom rule for [${key}] field should be a function. This field will be always invalid.`
+          );
+          this.setFieldInvalid(key, fieldRule);
+          return;
+        }
+        const result = fieldRule.validator(
+          elemValue,
+          this.getCompatibleFields()
+        );
+        if (typeof result !== "boolean" && typeof result !== "function") {
+          console.error(
+            `Validator return value for [${key}] field should be boolean or function. It will be cast to boolean.`
+          );
+        }
+        if (typeof result === "function") {
+          if (afterInputChanged) {
+            this.fields[key].asyncCheckPending = true;
+          } else {
+            this.fields[key].asyncCheckPending = false;
+            const promise = result();
+            if (!isPromise(promise)) {
+              console.error(
+                `Validator function for custom rule for [${key}] field should return a Promise. This field will be always invalid.`
+              );
+              this.setFieldInvalid(key, fieldRule);
+              return;
+            }
+            return promise.then((resp) => {
+              if (!resp) {
+                this.setFieldInvalid(key, fieldRule);
+              }
+            }).catch(() => {
+              this.setFieldInvalid(key, fieldRule);
+            });
+          }
+        }
+        if (!result) {
+          this.setFieldInvalid(key, fieldRule);
+        }
+      }
+    }
+  }
+  isFormValid() {
+    let isValid = true;
+    for (let i = 0, len = Object.values(this.fields).length; i < len; ++i) {
+      const item = Object.values(this.fields)[i];
+      if (item.isValid === void 0) {
+        isValid = void 0;
+        break;
+      }
+      if (item.isValid === false) {
+        isValid = false;
+        break;
+      }
+    }
+    for (let i = 0, len = Object.values(this.groupFields).length; i < len; ++i) {
+      const item = Object.values(this.groupFields)[i];
+      if (item.isValid === void 0) {
+        isValid = void 0;
+        break;
+      }
+      if (item.isValid === false) {
+        isValid = false;
+        break;
+      }
+    }
+    return isValid;
+  }
+  validateField(key, afterInputChanged = false) {
+    var _a;
+    const field = this.fields[key];
+    field.isValid = true;
+    const promises = [];
+    [...field.rules].reverse().forEach((rule) => {
+      const res = this.validateFieldRule(
+        key,
+        field.elem,
+        rule,
+        afterInputChanged
+      );
+      if (isPromise(res)) {
+        promises.push(res);
+      }
+    });
+    if (field.isValid) {
+      this.setFieldValid(key, (_a = field.config) == null ? void 0 : _a.successMessage);
+    }
+    return Promise.allSettled(promises).finally(() => {
+      var _a2;
+      if (afterInputChanged) {
+        (_a2 = this.onValidateCallback) == null ? void 0 : _a2.call(this, {
+          isValid: this.isFormValid(),
+          isSubmitted: this.isSubmitted,
+          fields: this.getCompatibleFields(),
+          groups: { ...this.groupFields }
+        });
+      }
+    });
+  }
+  revalidateField(fieldSelector) {
+    if (typeof fieldSelector !== "string" && !isElement(fieldSelector)) {
+      throw Error(
+        `Field selector is not valid. Please specify a string selector or a valid DOM element.`
+      );
+    }
+    const key = this.getKeyByFieldSelector(fieldSelector);
+    if (!key || !this.fields[key]) {
+      console.error(`Field not found. Check the field selector.`);
+      return Promise.reject();
+    }
+    return new Promise((resolve) => {
+      this.validateField(key, true).finally(() => {
+        this.clearFieldStyle(key);
+        this.clearFieldLabel(key);
+        this.renderFieldError(key, true);
+        resolve(!!this.fields[key].isValid);
+      });
+    });
+  }
+  revalidateGroup(groupSelector) {
+    if (typeof groupSelector !== "string" && !isElement(groupSelector)) {
+      throw Error(
+        `Group selector is not valid. Please specify a string selector or a valid DOM element.`
+      );
+    }
+    const key = this.getKeyByFieldSelector(groupSelector);
+    if (!key || !this.groupFields[key]) {
+      console.error(`Group not found. Check the group selector.`);
+      return Promise.reject();
+    }
+    return new Promise((resolve) => {
+      this.validateGroup(key).finally(() => {
+        this.clearFieldLabel(key);
+        this.renderGroupError(key, true);
+        resolve(!!this.groupFields[key].isValid);
+      });
+    });
+  }
+  validateGroup(key, afterInputChanged = false) {
+    const group = this.groupFields[key];
+    const promises = [];
+    [...group.rules].reverse().forEach((rule) => {
+      const res = this.validateGroupRule(key, group.elems, rule);
+      if (isPromise(res)) {
+        promises.push(res);
+      }
+    });
+    return Promise.allSettled(promises).finally(() => {
+      var _a;
+      if (afterInputChanged) {
+        (_a = this.onValidateCallback) == null ? void 0 : _a.call(this, {
+          isValid: this.isFormValid(),
+          isSubmitted: this.isSubmitted,
+          fields: this.getCompatibleFields(),
+          groups: { ...this.groupFields }
+        });
+      }
+    });
+  }
+  focusInvalidField() {
+    for (const key in this.fields) {
+      const field = this.fields[key];
+      if (!field.isValid) {
+        setTimeout(() => field.elem.focus(), 0);
+        break;
+      }
+    }
+  }
+  afterSubmitValidation(forceRevalidation = false) {
+    this.renderErrors(forceRevalidation);
+    if (this.globalConfig.focusInvalidField) {
+      this.focusInvalidField();
+    }
+  }
+  validate(forceRevalidation = false) {
+    return new Promise((resolve) => {
+      const promises = [];
+      Object.keys(this.fields).forEach((key) => {
+        const promise = this.validateField(key);
+        if (isPromise(promise)) {
+          promises.push(promise);
+        }
+      });
+      Object.keys(this.groupFields).forEach((key) => {
+        const promise = this.validateGroup(key);
+        if (isPromise(promise)) {
+          promises.push(promise);
+        }
+      });
+      Promise.allSettled(promises).then(() => {
+        var _a;
+        this.afterSubmitValidation(forceRevalidation);
+        (_a = this.onValidateCallback) == null ? void 0 : _a.call(this, {
+          isValid: this.isFormValid(),
+          isSubmitted: this.isSubmitted,
+          fields: this.getCompatibleFields(),
+          groups: { ...this.groupFields }
+        });
+        resolve(!!promises.length);
+      });
+    });
+  }
+  revalidate() {
+    return new Promise((resolve) => {
+      this.validateHandler(void 0, true).finally(() => {
+        if (this.globalConfig.focusInvalidField) {
+          this.focusInvalidField();
+        }
+        resolve(this.isValid);
+      });
+    });
+  }
+  validateHandler(ev, forceRevalidation = false) {
+    if (this.globalConfig.lockForm) {
+      this.lockForm();
+    }
+    return this.validate(forceRevalidation).finally(() => {
+      var _a, _b;
+      if (this.globalConfig.lockForm) {
+        this.unlockForm();
+      }
+      if (this.isValid) {
+        (_a = this.onSuccessCallback) == null ? void 0 : _a.call(this, ev);
+      } else {
+        (_b = this.onFailCallback) == null ? void 0 : _b.call(this, this.getCompatibleFields(), this.groupFields);
+      }
+    });
+  }
+  setForm(form) {
+    this.form = form;
+    this.form.setAttribute("novalidate", "novalidate");
+    this.removeListener("submit", this.form, this.formSubmitHandler);
+    this.addListener("submit", this.form, this.formSubmitHandler);
+  }
+  addListener(type, elem, handler) {
+    elem.addEventListener(type, handler);
+    this.eventListeners.push({ type, elem, func: handler });
+  }
+  removeListener(type, elem, handler) {
+    elem.removeEventListener(type, handler);
+    this.eventListeners = this.eventListeners.filter(
+      (item) => item.type !== type || item.elem !== elem
+    );
+  }
+  addField(fieldSelector, rules, config) {
+    if (typeof fieldSelector !== "string" && !isElement(fieldSelector)) {
+      throw Error(
+        `Field selector is not valid. Please specify a string selector or a valid DOM element.`
+      );
+    }
+    let elem;
+    if (typeof fieldSelector === "string") {
+      elem = this.form.querySelector(fieldSelector);
+    } else {
+      elem = fieldSelector;
+    }
+    if (!elem) {
+      throw Error(
+        `Field doesn't exist in the DOM! Please check the field selector.`
+      );
+    }
+    if (!Array.isArray(rules) || !rules.length) {
+      throw Error(
+        `Rules argument should be an array and should contain at least 1 element.`
+      );
+    }
+    rules.forEach((item) => {
+      if (!("rule" in item || "validator" in item || "plugin" in item)) {
+        throw Error(
+          `Rules argument must contain at least one rule or validator property.`
+        );
+      }
+      if (!item.validator && !item.plugin && (!item.rule || !Object.values(Rules).includes(item.rule))) {
+        throw Error(
+          `Rule should be one of these types: ${Object.values(Rules).join(
+            ", "
+          )}. Provided value: ${item.rule}`
+        );
+      }
+    });
+    const key = this.setKeyByFieldSelector(fieldSelector);
+    this.fields[key] = {
+      elem,
+      rules,
+      isValid: void 0,
+      touched: false,
+      config
+    };
+    this.setListeners(elem);
+    if (this.isSubmitted || this.globalConfig.validateBeforeSubmitting) {
+      this.validateField(key);
+    }
+    return this;
+  }
+  removeField(fieldSelector) {
+    if (typeof fieldSelector !== "string" && !isElement(fieldSelector)) {
+      throw Error(
+        `Field selector is not valid. Please specify a string selector or a valid DOM element.`
+      );
+    }
+    const key = this.getKeyByFieldSelector(fieldSelector);
+    if (!key || !this.fields[key]) {
+      console.error(`Field not found. Check the field selector.`);
+      return this;
+    }
+    const type = this.getListenerType(this.fields[key].elem.type);
+    this.removeListener(type, this.fields[key].elem, this.handlerChange);
+    this.clearErrors();
+    delete this.fields[key];
+    return this;
+  }
+  removeGroup(group) {
+    if (typeof group !== "string") {
+      throw Error(
+        `Group selector is not valid. Please specify a string selector.`
+      );
+    }
+    const key = this.getKeyByFieldSelector(group);
+    if (!key || !this.groupFields[key]) {
+      console.error(`Group not found. Check the group selector.`);
+      return this;
+    }
+    this.groupFields[key].elems.forEach((elem) => {
+      const type = this.getListenerType(elem.type);
+      this.removeListener(type, elem, this.handlerChange);
+    });
+    this.clearErrors();
+    delete this.groupFields[key];
+    return this;
+  }
+  addRequiredGroup(groupField, errorMessage, config, successMessage) {
+    if (typeof groupField !== "string" && !isElement(groupField)) {
+      throw Error(
+        `Group selector is not valid. Please specify a string selector or a valid DOM element.`
+      );
+    }
+    let elem;
+    if (typeof groupField === "string") {
+      elem = this.form.querySelector(groupField);
+    } else {
+      elem = groupField;
+    }
+    if (!elem) {
+      throw Error(`Group selector not found! Please check the group selector.`);
+    }
+    const inputs = elem.querySelectorAll("input");
+    const childrenInputs = Array.from(inputs).filter((input) => {
+      const parent = getClosestParent(this.groupFields, getNodeParents(input));
+      if (!parent) {
+        return true;
+      }
+      return parent[1].elems.find((elem2) => elem2 !== input);
+    });
+    const key = this.setKeyByFieldSelector(groupField);
+    this.groupFields[key] = {
+      rules: [
+        {
+          rule: GroupRules.Required,
+          errorMessage,
+          successMessage
+        }
+      ],
+      groupElem: elem,
+      elems: childrenInputs,
+      touched: false,
+      isValid: void 0,
+      config
+    };
+    inputs.forEach((input) => {
+      this.setListeners(input);
+    });
+    return this;
+  }
+  getListenerType(type) {
+    switch (type) {
+      case "checkbox":
+      case "select-one":
+      case "file":
+      case "radio": {
+        return "change";
+      }
+      default: {
+        return "input";
+      }
+    }
+  }
+  setListeners(elem) {
+    const type = this.getListenerType(elem.type);
+    this.removeListener(type, elem, this.handlerChange);
+    this.addListener(type, elem, this.handlerChange);
+  }
+  clearFieldLabel(key) {
+    var _a, _b;
+    (_a = this.errorLabels[key]) == null ? void 0 : _a.remove();
+    (_b = this.successLabels[key]) == null ? void 0 : _b.remove();
+  }
+  clearFieldStyle(key) {
+    var _a, _b, _c, _d;
+    const field = this.fields[key];
+    const errorStyle = ((_a = field.config) == null ? void 0 : _a.errorFieldStyle) || this.globalConfig.errorFieldStyle;
+    Object.keys(errorStyle).forEach((key2) => {
+      field.elem.style[key2] = "";
+    });
+    const successStyle = ((_b = field.config) == null ? void 0 : _b.successFieldStyle) || this.globalConfig.successFieldStyle || {};
+    Object.keys(successStyle).forEach((key2) => {
+      field.elem.style[key2] = "";
+    });
+    field.elem.classList.remove(
+      ...getClassList(
+        ((_c = field.config) == null ? void 0 : _c.errorFieldCssClass) || this.globalConfig.errorFieldCssClass
+      ),
+      ...getClassList(
+        ((_d = field.config) == null ? void 0 : _d.successFieldCssClass) || this.globalConfig.successFieldCssClass
+      )
+    );
+  }
+  clearErrors() {
+    var _a, _b;
+    Object.keys(this.errorLabels).forEach(
+      (key) => this.errorLabels[key].remove()
+    );
+    Object.keys(this.successLabels).forEach(
+      (key) => this.successLabels[key].remove()
+    );
+    for (const key in this.fields) {
+      this.clearFieldStyle(key);
+    }
+    for (const key in this.groupFields) {
+      const group = this.groupFields[key];
+      const errorStyle = ((_a = group.config) == null ? void 0 : _a.errorFieldStyle) || this.globalConfig.errorFieldStyle;
+      Object.keys(errorStyle).forEach((key2) => {
+        group.elems.forEach((elem) => {
+          var _a2;
+          elem.style[key2] = "";
+          elem.classList.remove(
+            ...getClassList(
+              ((_a2 = group.config) == null ? void 0 : _a2.errorFieldCssClass) || this.globalConfig.errorFieldCssClass
+            )
+          );
+        });
+      });
+      const successStyle = ((_b = group.config) == null ? void 0 : _b.successFieldStyle) || this.globalConfig.successFieldStyle || {};
+      Object.keys(successStyle).forEach((key2) => {
+        group.elems.forEach((elem) => {
+          var _a2;
+          elem.style[key2] = "";
+          elem.classList.remove(
+            ...getClassList(
+              ((_a2 = group.config) == null ? void 0 : _a2.successFieldCssClass) || this.globalConfig.successFieldCssClass
+            )
+          );
+        });
+      });
+    }
+    this.tooltips = [];
+  }
+  isTooltip() {
+    return !!this.globalConfig.tooltip;
+  }
+  lockForm() {
+    const elems = this.form.querySelectorAll(
+      "input, textarea, button, select"
+    );
+    for (let i = 0, len = elems.length; i < len; ++i) {
+      elems[i].setAttribute(
+        "data-just-validate-fallback-disabled",
+        elems[i].disabled ? "true" : "false"
+      );
+      elems[i].setAttribute("disabled", "disabled");
+      elems[i].style.pointerEvents = "none";
+      elems[i].style.webkitFilter = "grayscale(100%)";
+      elems[i].style.filter = "grayscale(100%)";
+    }
+  }
+  unlockForm() {
+    const elems = this.form.querySelectorAll(
+      "input, textarea, button, select"
+    );
+    for (let i = 0, len = elems.length; i < len; ++i) {
+      if (elems[i].getAttribute("data-just-validate-fallback-disabled") !== "true") {
+        elems[i].removeAttribute("disabled");
+      }
+      elems[i].style.pointerEvents = "";
+      elems[i].style.webkitFilter = "";
+      elems[i].style.filter = "";
+    }
+  }
+  renderTooltip(elem, errorLabel, position) {
+    var _a;
+    const { top, left, width, height } = elem.getBoundingClientRect();
+    const errorLabelRect = errorLabel.getBoundingClientRect();
+    const pos = position || ((_a = this.globalConfig.tooltip) == null ? void 0 : _a.position);
+    switch (pos) {
+      case "left": {
+        errorLabel.style.top = `${top + height / 2 - errorLabelRect.height / 2}px`;
+        errorLabel.style.left = `${left - errorLabelRect.width - TOOLTIP_ARROW_HEIGHT}px`;
+        break;
+      }
+      case "top": {
+        errorLabel.style.top = `${top - errorLabelRect.height - TOOLTIP_ARROW_HEIGHT}px`;
+        errorLabel.style.left = `${left + width / 2 - errorLabelRect.width / 2}px`;
+        break;
+      }
+      case "right": {
+        errorLabel.style.top = `${top + height / 2 - errorLabelRect.height / 2}px`;
+        errorLabel.style.left = `${left + width + TOOLTIP_ARROW_HEIGHT}px`;
+        break;
+      }
+      case "bottom": {
+        errorLabel.style.top = `${top + height + TOOLTIP_ARROW_HEIGHT}px`;
+        errorLabel.style.left = `${left + width / 2 - errorLabelRect.width / 2}px`;
+        break;
+      }
+    }
+    errorLabel.dataset.direction = pos;
+    const refresh = () => {
+      this.renderTooltip(elem, errorLabel, position);
+    };
+    return {
+      refresh
+    };
+  }
+  createErrorLabelElem(key, errorMessage, config) {
+    const errorLabel = document.createElement("div");
+    errorLabel.innerHTML = errorMessage;
+    const customErrorLabelStyle = this.isTooltip() ? config == null ? void 0 : config.errorLabelStyle : (config == null ? void 0 : config.errorLabelStyle) || this.globalConfig.errorLabelStyle;
+    Object.assign(errorLabel.style, customErrorLabelStyle);
+    errorLabel.classList.add(
+      ...getClassList(
+        (config == null ? void 0 : config.errorLabelCssClass) || this.globalConfig.errorLabelCssClass
+      ),
+      "just-validate-error-label"
+    );
+    if (this.isTooltip()) {
+      errorLabel.dataset.tooltip = "true";
+    }
+    if (this.globalConfig.testingMode) {
+      errorLabel.dataset.testId = `error-label-${key}`;
+    }
+    this.errorLabels[key] = errorLabel;
+    return errorLabel;
+  }
+  createSuccessLabelElem(key, successMessage, config) {
+    if (successMessage === void 0) {
+      return null;
+    }
+    const successLabel = document.createElement("div");
+    successLabel.innerHTML = successMessage;
+    const customSuccessLabelStyle = (config == null ? void 0 : config.successLabelStyle) || this.globalConfig.successLabelStyle;
+    Object.assign(successLabel.style, customSuccessLabelStyle);
+    successLabel.classList.add(
+      ...getClassList(
+        (config == null ? void 0 : config.successLabelCssClass) || this.globalConfig.successLabelCssClass
+      ),
+      "just-validate-success-label"
+    );
+    if (this.globalConfig.testingMode) {
+      successLabel.dataset.testId = `success-label-${key}`;
+    }
+    this.successLabels[key] = successLabel;
+    return successLabel;
+  }
+  renderErrorsContainer(label, errorsContainer) {
+    const container = errorsContainer || this.globalConfig.errorsContainer;
+    if (typeof container === "string") {
+      const elem = this.form.querySelector(container);
+      if (elem) {
+        elem.appendChild(label);
+        return true;
+      } else {
+        console.error(
+          `Error container with ${container} selector not found. Errors will be rendered as usual`
+        );
+      }
+    }
+    if (container instanceof Element) {
+      container.appendChild(label);
+      return true;
+    }
+    if (container !== void 0) {
+      console.error(
+        `Error container not found. It should be a string or existing Element. Errors will be rendered as usual`
+      );
+    }
+    return false;
+  }
+  renderGroupLabel(elem, label, errorsContainer, isSuccess) {
+    if (!isSuccess) {
+      const renderedInErrorsContainer = this.renderErrorsContainer(
+        label,
+        errorsContainer
+      );
+      if (renderedInErrorsContainer) {
+        return;
+      }
+    }
+    elem.appendChild(label);
+  }
+  renderFieldLabel(elem, label, errorsContainer, isSuccess) {
+    var _a, _b, _c, _d, _e, _f, _g;
+    if (!isSuccess) {
+      const renderedInErrorsContainer = this.renderErrorsContainer(
+        label,
+        errorsContainer
+      );
+      if (renderedInErrorsContainer) {
+        return;
+      }
+    }
+    if (elem.type === "checkbox" || elem.type === "radio") {
+      const labelElem = document.querySelector(
+        `label[for="${elem.getAttribute("id")}"]`
+      );
+      if (((_b = (_a = elem.parentElement) == null ? void 0 : _a.tagName) == null ? void 0 : _b.toLowerCase()) === "label") {
+        (_d = (_c = elem.parentElement) == null ? void 0 : _c.parentElement) == null ? void 0 : _d.appendChild(label);
+      } else if (labelElem) {
+        (_e = labelElem.parentElement) == null ? void 0 : _e.appendChild(label);
+      } else {
+        (_f = elem.parentElement) == null ? void 0 : _f.appendChild(label);
+      }
+    } else {
+      (_g = elem.parentElement) == null ? void 0 : _g.appendChild(label);
+    }
+  }
+  showLabels(fields, isError) {
+    Object.keys(fields).forEach((fieldName, i) => {
+      const error = fields[fieldName];
+      const key = this.getKeyByFieldSelector(fieldName);
+      if (!key || !this.fields[key]) {
+        console.error(`Field not found. Check the field selector.`);
+        return;
+      }
+      const field = this.fields[key];
+      field.isValid = !isError;
+      this.clearFieldStyle(key);
+      this.clearFieldLabel(key);
+      this.renderFieldError(key, false, error);
+      if (i === 0 && this.globalConfig.focusInvalidField) {
+        setTimeout(() => field.elem.focus(), 0);
+      }
+    });
+  }
+  showErrors(fields) {
+    if (typeof fields !== "object") {
+      throw Error(
+        "[showErrors]: Errors should be an object with key: value format"
+      );
+    }
+    this.showLabels(fields, true);
+  }
+  showSuccessLabels(fields) {
+    if (typeof fields !== "object") {
+      throw Error(
+        "[showSuccessLabels]: Labels should be an object with key: value format"
+      );
+    }
+    this.showLabels(fields, false);
+  }
+  renderFieldError(key, forced = false, message) {
+    var _a, _b, _c, _d, _e, _f;
+    const field = this.fields[key];
+    if (field.isValid === false) {
+      this.isValid = false;
+    }
+    if (field.isValid === void 0 || !forced && !this.isSubmitted && !field.touched && message === void 0) {
+      return;
+    }
+    if (field.isValid) {
+      if (!field.asyncCheckPending) {
+        const successLabel = this.createSuccessLabelElem(
+          key,
+          message !== void 0 ? message : field.successMessage,
+          field.config
+        );
+        if (successLabel) {
+          this.renderFieldLabel(
+            field.elem,
+            successLabel,
+            (_a = field.config) == null ? void 0 : _a.errorsContainer,
+            true
+          );
+        }
+        field.elem.classList.add(
+          ...getClassList(
+            ((_b = field.config) == null ? void 0 : _b.successFieldCssClass) || this.globalConfig.successFieldCssClass
+          )
+        );
+      }
+      return;
+    }
+    field.elem.classList.add(
+      ...getClassList(
+        ((_c = field.config) == null ? void 0 : _c.errorFieldCssClass) || this.globalConfig.errorFieldCssClass
+      )
+    );
+    const errorLabel = this.createErrorLabelElem(
+      key,
+      message !== void 0 ? message : field.errorMessage,
+      field.config
+    );
+    this.renderFieldLabel(
+      field.elem,
+      errorLabel,
+      (_d = field.config) == null ? void 0 : _d.errorsContainer
+    );
+    if (this.isTooltip()) {
+      this.tooltips.push(
+        this.renderTooltip(
+          field.elem,
+          errorLabel,
+          (_f = (_e = field.config) == null ? void 0 : _e.tooltip) == null ? void 0 : _f.position
+        )
+      );
+    }
+  }
+  renderGroupError(key, force = true) {
+    var _a, _b, _c, _d;
+    const group = this.groupFields[key];
+    if (group.isValid === false) {
+      this.isValid = false;
+    }
+    if (group.isValid === void 0 || !force && !this.isSubmitted && !group.touched) {
+      return;
+    }
+    if (group.isValid) {
+      group.elems.forEach((elem) => {
+        var _a2, _b2;
+        Object.assign(
+          elem.style,
+          ((_a2 = group.config) == null ? void 0 : _a2.successFieldStyle) || this.globalConfig.successFieldStyle
+        );
+        elem.classList.add(
+          ...getClassList(
+            ((_b2 = group.config) == null ? void 0 : _b2.successFieldCssClass) || this.globalConfig.successFieldCssClass
+          )
+        );
+      });
+      const successLabel = this.createSuccessLabelElem(
+        key,
+        group.successMessage,
+        group.config
+      );
+      if (successLabel) {
+        this.renderGroupLabel(
+          group.groupElem,
+          successLabel,
+          (_a = group.config) == null ? void 0 : _a.errorsContainer,
+          true
+        );
+      }
+      return;
+    }
+    this.isValid = false;
+    group.elems.forEach((elem) => {
+      var _a2, _b2;
+      Object.assign(
+        elem.style,
+        ((_a2 = group.config) == null ? void 0 : _a2.errorFieldStyle) || this.globalConfig.errorFieldStyle
+      );
+      elem.classList.add(
+        ...getClassList(
+          ((_b2 = group.config) == null ? void 0 : _b2.errorFieldCssClass) || this.globalConfig.errorFieldCssClass
+        )
+      );
+    });
+    const errorLabel = this.createErrorLabelElem(
+      key,
+      group.errorMessage,
+      group.config
+    );
+    this.renderGroupLabel(
+      group.groupElem,
+      errorLabel,
+      (_b = group.config) == null ? void 0 : _b.errorsContainer
+    );
+    if (this.isTooltip()) {
+      this.tooltips.push(
+        this.renderTooltip(
+          group.groupElem,
+          errorLabel,
+          (_d = (_c = group.config) == null ? void 0 : _c.tooltip) == null ? void 0 : _d.position
+        )
+      );
+    }
+  }
+  renderErrors(forceRevalidation = false) {
+    if (!this.isSubmitted && !forceRevalidation && !this.globalConfig.validateBeforeSubmitting) {
+      return;
+    }
+    this.clearErrors();
+    this.isValid = true;
+    for (const key in this.groupFields) {
+      this.renderGroupError(key);
+    }
+    for (const key in this.fields) {
+      this.renderFieldError(key);
+    }
+  }
+  destroy() {
+    this.eventListeners.forEach((event) => {
+      this.removeListener(event.type, event.elem, event.func);
+    });
+    Object.keys(this.customStyleTags).forEach((key) => {
+      this.customStyleTags[key].remove();
+    });
+    this.clearErrors();
+    if (this.globalConfig.lockForm) {
+      this.unlockForm();
+    }
+  }
+  refresh() {
+    this.destroy();
+    if (!this.form) {
+      console.error("Cannot initialize the library! Form is not defined");
+    } else {
+      this.initialize(this.form, this.globalConfig);
+      Object.keys(this.fields).forEach((key) => {
+        const fieldSelector = this.getFieldSelectorByKey(key);
+        if (fieldSelector) {
+          this.addField(
+            fieldSelector,
+            [...this.fields[key].rules],
+            this.fields[key].config
+          );
+        }
+      });
+    }
+  }
+  setCurrentLocale(locale) {
+    if (typeof locale !== "string" && locale !== void 0) {
+      console.error("Current locale should be a string");
+      return;
+    }
+    this.currentLocale = locale;
+    if (this.isSubmitted) {
+      this.validate();
+    }
+  }
+  onSuccess(callback) {
+    this.onSuccessCallback = callback;
+    return this;
+  }
+  onFail(callback) {
+    this.onFailCallback = callback;
+    return this;
+  }
+  onValidate(callback) {
+    this.onValidateCallback = callback;
+    return this;
+  }
+}
+
 
 
 /***/ }),

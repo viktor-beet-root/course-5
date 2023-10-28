@@ -17,45 +17,19 @@
             </div>
             <ul class="menu menu__items">
                 <li class="menu__item">
-                    <a class="menu__link" href="#">ABOUT US</a>
+                    <a class="menu__link" href="#anchor-down-click">ABOUT US</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">PROJECTS</a>
+                    <a class="menu__link" href="#gallery">PROJECTS</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">NEWS</a>
+                    <a class="menu__link" href="#news">NEWS</a>
                 </li>
                 <li class="menu__item">
-                    <a class="menu__link" href="#">CONTACT</a>
+                    <a class="menu__link" href="#form-contact">CONTACT</a>
                 </li>
                 <li class="menu__item menu__social">
                     <section class="social right">
-    <ul class="social-icons">
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#facebook" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#twitter" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#instagram" />
-                </svg>
-            </a>
-        </li>
-    </ul>
-</section>
-
-                    <section class="social  ">
     <ul class="social-icons">
         <li class="social-icon">
             <a href="#" class="social-icon__link">
@@ -152,8 +126,10 @@
     <div class="container">
         <h2 class="project__title">WHAT WE DO</h2>
         <div class="project__block one">
-            <img class="project__block-img col-7" src="../images/project-one.png" alt="Trade Center Image">
-            <div class="project__block-text block-desc-one">
+            <div class="project__img-wrapper col-7">
+                <img class="project__block-img" src="../images/project-one.png" alt="Trade Center Image">
+            </div>
+            <div class="project__block-text block-desc-one col-5">
                 <p class="block__sub-text">ONE WORLD</p>
                 <h3 class="block__title">TRADE CENTER</h3>
                 <p class="block__desc">Increasing prosperity in our lives can be accomplished by having the right frame
@@ -188,7 +164,7 @@
     </div>
 </section>
 
-        <section class="news">
+        <section class="news" id="news">
     <div class="container">
         <h2 class="news__title">LATEST NEWS</h2>
         <div class="news-slider">
@@ -530,68 +506,47 @@
 
     </main>
     <section class="footer">
-    <img class="footer__img" src="../images/footer-bg.jpg" alt="Footer background">
+    <!-- <img class="footer__img" src="../images/footer-bg.jpg" alt="Footer background"> -->
     <div class="container footer__container">
         <div class="footer__form">
-            <section>
+            <section class="form-section" id="form-contact">
+    <div class="form-section__container">
+        <h2 class="form-section__title">GET IN TOUCH</h2>
+        <div class="row">
+            <div class="col-6 info">
+                <ul class="info__items">
+                    <li class="info__item">
+                        <img class="info__img" src="../images/find-form.svg" alt="">
+                        <p class="info__disc">91 Nolan Extensions Suite 670</p>
+                    </li>
+                    <li class="info__item">
+                        <img class="info__img" src="../images/phone.svg" alt="">
+                        <p class="info__disc">+001 356-868-2454</p>
+                    </li>
+                    <li class="info__item">
+                        <img class="info__img" src="../images/email.svg" alt="">
+                        <p class="info__disc">montichello@service.com</p>
+                    </li>
+                    <li class="info__item">
+                        <img class="info__img" src="../images/clock.svg" alt="">
+                        <p class="info__disc">From 07:05AM to 19:30PM</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <form class="form" id="form-cont" action="">
+                    <input class="form__input" id="user-name" type="text" name="name" placeholder="Name" />
+                    <input class="form__input" id="email" type="email" name="email" placeholder="Email" />
+                    <button class="btn form__btn">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
         </div>
         <div class="footer__socials">
             <img src="../images/logo.svg" alt="Logo">
-            <section class="social @@right">
-    <ul class="social-icons">
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#facebook" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#twitter" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#instagram" />
-                </svg>
-            </a>
-        </li>
-    </ul>
-</section>
-
-
-            <section class="social  ">
-    <ul class="social-icons">
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#facebook" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#twitter" />
-                </svg>
-            </a>
-        </li>
-        <li class="social-icon">
-            <a href="#" class="social-icon__link">
-                <svg class="icon-img">
-                    <use xlink:href="#instagram" />
-                </svg>
-            </a>
-        </li>
-    </ul>
-</section>
-
             <section class="social right">
     <ul class="social-icons">
         <li class="social-icon">
@@ -619,7 +574,9 @@
 </section>
 
         </div>
+        <p>Copyrights © 2020 Montichello</p>
     </div>
+
 </section>
 
     <svg class="sprite">

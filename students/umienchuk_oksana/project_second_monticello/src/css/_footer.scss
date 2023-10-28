@@ -2,6 +2,7 @@
     position: relative;
     // overflow-x: hidden;
     width: 100%;
+    padding-top: 200px;
 
     &__img {
         display: block;
@@ -15,35 +16,23 @@
         right: 0;
         left: 0;
         background-image: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
-        z-index: 2;
+        z-index: -1;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .text-lorem {}
 
-    &__container {
-        position: absolute;
-        top: -60%;
-        right: 0;
-        left: 0;
-        width: 770px;
-        display: flex;
-        border: 1px solid red;
-        color: azure;
-        z-index: 20;
-    }
+    &__container {}
 
-    &__form {
-        color: azure;
-        width: 770px;
-        height: 450px;
-        margin-bottom: 50px;
-    }
+    &__form {}
 
     &__socials {
-        position: absolute;
-        bottom: 0;
-        z-index: 10;
-        right: 0;
-        left: 0;
+        max-width: 770px;
+        margin: 0 auto;
     }
 }

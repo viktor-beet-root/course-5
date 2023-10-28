@@ -29,6 +29,19 @@
     }
 
     // .project__block
+    &__img-wrapper {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 470px;
+            width: 553px;
+            background-color: $img-bg-first;
+            // background-image: url(../images/gallery/lightbox-gallery-img-01.jpg);
+            left: 0;
+            z-index: -1;
+            margin-top: -40px;
+        }
+    }
 
     &__block {
         display: flex;
@@ -82,12 +95,15 @@
     }
 }
 
+.project__block {}
+
 .one {}
 
 .block-desc {
 
     &-one {
-        margin-left: 70px;
+        // margin-left: 70px;
+        padding-left: 70px;
     }
 
     &-two {
