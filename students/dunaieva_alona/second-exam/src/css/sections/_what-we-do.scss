@@ -1,0 +1,138 @@
+.service {
+    margin-bottom: 150px;
+    overflow-x: hidden;
+
+    @include media(md) {
+        margin-bottom: 50px;
+    }
+
+    &__row-trade-center {
+        margin-bottom: 172px;
+
+        @include media(sm) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 121px 0 130px;
+
+        @include media(md) {
+            padding-bottom: 50px 0 80px;
+        }
+
+        &::before {
+            content: '';
+            @include pos-absolute(0, 50%);
+            transform: translateX(-50%);
+            top: 70px;
+            display: block;
+            width: calc(100% - 70%);
+            height: 0.1px;
+            background-color: $bluewood;
+
+        }
+    }
+
+    .icon-mark-map {
+        width: 9px;
+        height: 17px;
+        fill: $bluewood;
+    }
+}
+
+.img-wrapper-left {
+
+    &__img {
+        object-fit: contain;
+    }
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__sque {
+        position: absolute;
+        top: -50px;
+        z-index: -1;
+        right: 175px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: $blue-color;
+
+        @include media(md) {
+            right: unset;
+        }
+    }
+}
+
+.trade-center {
+
+    &__text {
+        padding-top: 19px;
+        padding-bottom: 40px;
+        line-height: 30px;
+    }
+
+    &__mark-map {
+        @include flex-jsc-al(start, center);
+        gap: 10px;
+        padding-top: 60px;
+    }
+
+    &__text-map {
+        font-family: $secondary-font;
+        font-style: italic;
+        font-size: 15px;
+    }
+}
+
+.commerce-center {
+
+    &__text {
+        @extend .trade-center__text;
+    }
+
+    &__mark-map {
+        @include flex-jsc-al(start, center);
+        gap: 10px;
+        padding-top: 60px;
+
+        @include media(sm) {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__text-map {
+        @extend .trade-center__text-map;
+    }
+}
+
+.img-wrapper-right {
+    @extend .img-wrapper-left;
+
+    &__img {
+        object-fit: contain;
+    }
+
+    &__sque {
+        position: absolute;
+        top: -50px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: $purple-color;
+        left: 174px;
+
+        @include media(md) {
+            left: unset;
+        }
+
+    }
+}
