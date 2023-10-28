@@ -3,8 +3,9 @@
     // .tip__container
 
     &__container {
-        padding: 125px 400px 60px;
+        padding: 110px 100px 45px;
         position: relative;
+        box-sizing: border-box;
     }
 
     // .tip__title
@@ -18,7 +19,7 @@
 
     &__img {
         width: 65px;
-        padding-bottom: 15px;
+        padding-bottom: 20px;
         display: block;
         margin: 0 auto;
     }
@@ -27,7 +28,7 @@
         list-style-type: none;
         display: flex;
         justify-content: space-between;
-        margin: 0 auto;
+        // margin: 0 auto;
         font-family: $section-title-font;
         padding: 0;
 
@@ -48,8 +49,8 @@
     height: 540px;
     position: absolute;
     z-index: 100;
-    top: 50px;
-    left: 460px;
+    top: 45px;
+    right: 160px;
     opacity: 0.502;
 }
 
@@ -64,8 +65,8 @@
     height: 540px;
     position: absolute;
     z-index: 100;
-    top: 50px;
-    right: 460px;
+    top: 45px;
+    left: 160px;
     opacity: 0.502;
 }
 

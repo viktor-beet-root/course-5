@@ -1,6 +1,5 @@
 .places {
     color: $white;
-    font-size: 20px;
     line-height: 28px;
     // .places_description
 
@@ -9,13 +8,13 @@
         font-size: 16px;
         letter-spacing: 1.6px;
         margin: 0;
-        padding-bottom: 24px;
+        padding-bottom: 28px;
     }
 
     // .places__container
 
     &__container {
-        padding: 217px 315px 165px;
+        padding: 217px 240px 120px;
     }
 
     // .places__country-name
@@ -24,7 +23,8 @@
         font-weight: 300px;
         letter-spacing: 2px;
         margin: 0;
-        padding-bottom: 12px;
+        font-size: 20px;
+        padding-bottom: 16px;
     }
 
     // .places__name
@@ -32,6 +32,7 @@
     &__name {
         text-transform: uppercase;
         font-weight: 400;
+        font-size: 20px;
         margin: 0;
         padding-bottom: 12px;
     }
@@ -43,14 +44,19 @@
 
     // .places__button-wrapper
 
-    &__button-wrapper {}
+    &__button-wrapper {
+        padding: 16px 30px;
+    }
 
     // .places__button
 
     &__button {
+        display: block;
+        text-align: center;
         color: $white;
         text-decoration: none;
         text-transform: uppercase;
+        font-size: $default-font-size;
 
     }
 
