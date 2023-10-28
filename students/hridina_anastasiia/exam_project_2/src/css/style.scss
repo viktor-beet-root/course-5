@@ -34,6 +34,20 @@
     border-radius: 50%;
 }
 
-.two {
-    display: none;
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+
+@function slick-font-url($url){
+@if function-exists(font-url) {
+    @return font-url($url);
+}
+
+@else {
+    @return url($slick-font-path + $url);
+}
 }

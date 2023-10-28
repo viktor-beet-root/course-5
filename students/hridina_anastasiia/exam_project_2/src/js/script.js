@@ -9,7 +9,6 @@ import menu from './burgerMenu.js';
 import header from './fixedNavbar.js';
 
 
-
 const addForm = document.querySelector('.form');
 
 createFormValidation(addForm, getUserInfo);
