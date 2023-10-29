@@ -2,6 +2,10 @@
     position: relative;
     padding-top: 150px;
 
+    @include media(sm) {
+        padding-top: 100px;
+    }
+
     // .project__title
 
     &__title {
@@ -9,10 +13,12 @@
         color: $color-night-blue;
         text-align: center;
         font-size: 44px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
+        font-weight: $font-weight-title;
         margin: 0 0 90px;
+
+        @include media(sm) {
+            margin: 0 0 45px;
+        }
 
         &::before {
             content: '';
@@ -28,33 +34,71 @@
         }
     }
 
-    // .project__block
-    &__img-wrapper {
+    &__block {
+        display: flex;
+        margin-bottom: 150px;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include media(sm) {
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__img-wrapper-left {
+
         &::before {
             content: '';
             position: absolute;
             height: 470px;
             width: 553px;
             background-color: $img-bg-first;
-            // background-image: url(../images/gallery/lightbox-gallery-img-01.jpg);
-            left: 0;
             z-index: -1;
-            margin-top: -40px;
+            margin-top: -60px;
+            left: 0;
+
+            @include media(md) {
+                height: 370px;
+                width: 453px
+            }
+
+            @include media(sm) {
+                display: none;
+            }
         }
     }
 
-    &__block {
-        display: flex;
-        margin-bottom: 150px;
-        align-items: flex-end;
-        justify-content: space-between;
+    &__img-wrapper-right {
+        &::before {
+            content: '';
+            position: absolute;
+            height: 470px;
+            width: 553px;
+            background-color: $img-bg-second;
+            z-index: -1;
+            margin-top: -60px;
+            right: 0;
+
+            @include media(md) {
+                height: 370px;
+                width: 453px
+            }
+
+            @include media(sm) {
+                display: none;
+            }
+        }
     }
+
+
 
     // .project__block-img
 
     &__block-img {
         position: relative;
         z-index: 10;
+        width: 100%;
 
         &::before {
             position: absolute;
@@ -63,27 +107,7 @@
             width: 100px;
             background-color: #2C4058;
             z-index: 50;
-
-            // content: '';
-            // position: absolute;
-            // height: 470px;
-            // width: 553px;
-            // background-color: $img-bg-first;
-            // background-image: url(../images/gallery/lightbox-gallery-img-01.jpg);
-            // top: -50px;
-            // left: -20px;
-            // z-index: 50;
         }
-
-        // &::before {
-        //     overflow: visible;
-        //     position: absolute;
-        //     content: url(../images/gallery/lightbox-gallery-img-01.jpg);
-        //     display: block;
-        //     margin-top: -50px;
-        //     left: 0;
-        //     z-index: 10;
-        // }
     }
 
     // .project__block-text
@@ -95,19 +119,24 @@
     }
 }
 
-.project__block {}
-
-.one {}
 
 .block-desc {
 
     &-one {
-        // margin-left: 70px;
         padding-left: 70px;
+
+
+        @include media(sm) {
+            padding: 0;
+        }
     }
 
     &-two {
-        margin-right: 70px;
+        padding-right: 70px;
+
+        @include media(sm) {
+            padding: 0;
+        }
     }
 }
 
@@ -116,32 +145,25 @@
     // .block__sub-text
 
     &__sub-text {
-        color: #2C4058;
-        font-family: Montserrat;
+        color: $color-night-blue;
         font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
         margin: 0;
     }
 
     // .block__title
 
     &__title {
-        color: #2C4058;
-        font-family: Montserrat;
+        color: $color-night-blue;
         font-size: 44px;
-        font-weight: 700;
         margin-bottom: 19px;
     }
 
     // .block__desc
 
     &__desc {
-        color: #2C4058;
-        font-family: Open Sans;
+        color: $color-night-blue;
+        font-family: $font-sub-first;
         font-size: 18px;
-        font-weight: 400;
         line-height: 30px;
         margin-bottom: 40px;
     }
@@ -149,11 +171,10 @@
     // .block__find-map
 
     &__find-map {
-        color: #000;
-        font-family: Open Sans;
+        color: $color-black;
+        font-family: $font-sub-first;
         font-size: 15px;
         font-style: italic;
-        font-weight: 400;
         margin: 0;
     }
 
@@ -163,13 +184,8 @@
         display: flex;
         margin-bottom: 15px;
     }
-
 }
-
-.btn {}
 
 .icon-img {
     height: 9px;
 }
-
-.two {}

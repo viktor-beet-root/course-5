@@ -45,4 +45,8 @@
 .right {
     display: flex;
     justify-content: flex-end;
+
+    @include media(sm) {
+        justify-content: center;
+    }
 }

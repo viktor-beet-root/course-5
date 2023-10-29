@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: 101;
     padding-top: 50px;
     padding: 15px;
     transition:
@@ -11,8 +11,7 @@
         box-shadow 0.5s ease-in-out;
 
     &.bg-scroll {
-        // background-image: linear-gradient(to right, rgba(85, 183, 255, 1), rgba(126, 90, 255, 1));
-        background-color: #7E5AFF;
+        background-color: $img-bg-second;
         box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
     }
 }
@@ -182,8 +181,6 @@
         color: $color-white;
         font-family: $font-sub-menu;
         font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
 
         &::before {
             position: absolute;

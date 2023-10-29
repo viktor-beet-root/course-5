@@ -11,6 +11,7 @@ $default-bg-color-menu-open: $color-white;
 
 $default-border: 1px solid $color-night-blue;
 $default-border-menu-btn: 2px solid $color-white;
+$linear-gradient: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
 $font-size-h1: 80px;
 $font-size-h1-md: 60px;
 $font-size-h1-sm: 40px;
@@ -20,7 +21,6 @@ $font-weight-title: 700;
 
 $text-transform-upper: uppercase;
 $text-transform-capit: capitalize;
-
 
 //main color for text 
 $default-body-color: $color-night-blue;
@@ -43,8 +43,6 @@ $base-img-path: '../';
 $header-title: $color-white;
 
 // btn
-// $btn-height-sec: 52px;
-// $btn-height-secondary: $btn-height-sec;
 $color-btn: transparent;
 $default-btn-color: $color-black;
 $btn-border: 1px solid $color-night-blue;
@@ -59,18 +57,6 @@ $gap: 15px;
 $defaulp-count-col: 12;
 
 $default-width: 1170px;
-
-//menu_open
-// $default-bg-color-menu-open: $color-white;
-
-//header__menu
-// $default-bg-color-nav: $accent;
-
-//content
-// $background-bg-content: rgba(35, 35, 35, 0.9);
-
-// footer 
-// $footer-gap-social-icons: 32px;
 
 //social
 $social-gap: 20px;
