@@ -1,0 +1,53 @@
+@use 'sass:math';
+@import '../../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import "./variables";
+@import "./extend";
+@import "./mixins";
+@import './lightbox';
+@import './fonts';
+@import './reset';
+@import "./global";
+@import './header/menu';
+@import'./main/hero_block';
+@import './main/trade_center';
+@import './main/commerce';
+@import './main/latest_news';
+@import './main/gallery';
+@import './main/googlemap';
+@import './footer/footer';
+
+
+
+.top__circle {
+    display: block;
+    fill: transparent;
+    stroke: $malibu-color;
+    stroke-width: 10px;
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0px 0px 17px -6px rgba(0, 0, 0, 0.74);
+    border-radius: 50%;
+}
+
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+
+@function slick-font-url($url){
+@if function-exists(font-url) {
+    @return font-url($url);
+}
+
+@else {
+    @return url($slick-font-path + $url);
+}
+}
