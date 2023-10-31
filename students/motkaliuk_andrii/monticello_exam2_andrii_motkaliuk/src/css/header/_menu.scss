@@ -12,8 +12,6 @@
     }
 }
 
-.logo {}
-
 .nav {
     height: 100%;
 }
@@ -43,7 +41,7 @@
         padding-left: 0;
         background-color: rgba($color: $color-black, $alpha: .75);
         position: fixed;
-        top: 105px;
+        top: 109px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -73,7 +71,7 @@
         border: 2px solid transparent;
 
         &::before {
-            content: url(../../images/ellipse-3.svg);
+            content: url("../../images/ellipse-3.svg");
             padding-right: 5px;
 
             @include media(lg) {
@@ -87,7 +85,7 @@
             transition: border .5s ease-in-out;
 
             &::before {
-                content: url(../../images/ellipse-4.svg);
+                content: url("../../images/ellipse-4.svg");
             }
         }
     }
@@ -118,7 +116,6 @@
             }
         }
     }
-
 
     &__line {
         position: relative;

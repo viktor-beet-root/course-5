@@ -23,8 +23,6 @@
     margin: 0;
     padding-top: 130px;
 
-
-
     @include media(md) {
         text-align: center;
     }
@@ -49,7 +47,6 @@
         @include media(lg) {
             padding-bottom: 60px;
         }
-
 
         &::before {
             position: absolute;
@@ -105,17 +102,20 @@
             position: absolute;
             content: '';
             max-height: 470px;
-            max-width: 585px;
             height: 100%;
-            width: 100%;
+            width: 50%;
             background-color: #55B7FF;
             display: block;
             margin-top: -50px;
             left: 0;
             z-index: -1;
 
+            @include media(lg) {
+                max-height: 400px;
+            }
+
             @include media(md) {
-                max-height: auto;
+                max-height: 470px;
                 max-width: auto;
             }
 
@@ -131,17 +131,20 @@
             position: absolute;
             content: '';
             max-height: 470px;
-            max-width: 585px;
             height: 100%;
-            width: 100%;
+            width: 50%;
             background-color: $color-purple;
             display: block;
             margin-top: -50px;
             right: 0;
             z-index: -1;
 
+            @include media(lg) {
+                max-height: 400px;
+            }
+
             @include media(md) {
-                max-height: auto;
+                max-height: 470px;
                 max-width: auto;
             }
 
@@ -182,7 +185,6 @@
         font-size: 15px;
         font-style: italic;
         margin: 0;
-
     }
 
     &__btn-wrapper {

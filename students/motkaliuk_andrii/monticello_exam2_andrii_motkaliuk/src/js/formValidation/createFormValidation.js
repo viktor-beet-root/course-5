@@ -3,37 +3,26 @@ import JustValidate from 'just-validate';
 function createFormValidation(form) {
     const validator = new JustValidate(form, undefined, []);
 
-    console.log(validator);
     validator.addField('[name="user-name"]', [
         {
             rule: 'required',
+            errorMessage: 'This field is required',
         },
         {
             rule: 'minLength',
             value: 2,
+            errorMessage: 'The name must have at least 2 letters',
         },
     ]).addField('[name="email"]', [
         {
             rule: 'required',
+            value: /[a-z, A-Z, 0-9]/gi,
+            errorMessage: 'This field is required',
         },
         {
             rule: 'email',
+            errorMessage: 'Email has invalid format',
         },
     ]);
-    validator.onSuccess((event) => {
-        const formData = new FormData(event.target);
-
-        fetch('#', {
-            method: 'POST',
-            body: formData,
-        })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-            })
-            .catch((error) => {
-                console.error('Помилка відправки на сервер:', error);
-            });
-    });
 }
 export default createFormValidation;

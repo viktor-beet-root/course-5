@@ -24,17 +24,10 @@
     margin: 0 auto;
 }
 
-
-.logo {
-    &__img {}
-}
-
 .social-media {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-
-    &__social-media-item {}
 }
 
 .social-media-item {
@@ -73,17 +66,26 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    background-color: $color-purple;
     right: 45px;
     bottom: 45px;
     width: 45px;
     height: 45px;
-    box-shadow: 0 0 10px 5px rgba($color: $color-black, $alpha: .15);
     border-radius: 50%;
     z-index: 2000;
+    opacity: 0;
+    transition:
+        background-color 0.5s ease-in-out,
+        box-shadow 0.5s ease-in-out,
+        opacity 0.5s ease-in-out;
 
     &__arrow {
         rotate: 180deg;
         width: 15px;
+    }
+
+    &.bg-scroll {
+        background-color: $color-purple;
+        box-shadow: 0 0 10px 5px rgba($color: $color-black, $alpha: .15);
+        opacity: 1;
     }
 }
