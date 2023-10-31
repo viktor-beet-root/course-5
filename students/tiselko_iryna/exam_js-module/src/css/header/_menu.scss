@@ -42,6 +42,12 @@
 		&__item {
             position: relative;
 
+            &.active {
+                &::before{
+                    background-color: $white-color;
+                }
+            }
+
             &:last-of-type {
                 display: none;
             }

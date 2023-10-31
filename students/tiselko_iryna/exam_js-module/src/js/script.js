@@ -1,8 +1,11 @@
 import $ from "jquery";
+import JustValidate from 'just-validate';
 import "slick-carousel";
-import "lightbox2";
+import { Fancybox } from "@fancyapps/ui";
 
+const body = $("html, body");
 
+Fancybox.bind();
 
 $('.hero-slider').slick({
     dots: true,
@@ -92,61 +95,130 @@ const target = document.querySelector('.hero');
 observer.observe(target);
 
 
+// smooth scroll (menu)
 
-// scroll to top
-const body = $("html, body");
+
+function smoothScrollMenu() {
+
+    $('.menu__link').on('click', function (e) {
+        e.preventDefault();
+
+        const switchToSection = $(this).attr('href');
+
+        body.animate({
+            scrollTop: $(switchToSection).offset().top
+        }, 1000);
+    });
+}
+
+smoothScrollMenu();
+
+
+
+//smoothScrollDown
+
+function smoothScrollDown() {
+
+    $('.smoothScrollDown__link').on('click', function (e) {
+        e.preventDefault();
+        const ScrollDown = $(this).attr('href');
+
+        body.animate({
+            scrollTop: $(ScrollDown).offset().top
+        }, 1000);
+    });
+}
+
+smoothScrollDown();
+
+
+
+// scrolltotop-btn
 const scrollToTopBtn = document.querySelector('.scroll-to-top');
 
 const optionsScroll = {
     root: null,
-    rootMargin: '-50px',
-    threshold: 0
+    rootMargin: "0px",
+    threshold: .8,
 };
 
-function scrollToTop([entry], observer) {
-    if (entry.isIntersecting === true) {
-        scrollToTopBtn.classList.add('show-scroll');
-    } else {
-        scrollToTopBtn.classList.remove('show-scroll');
-    }
+const scrollToTop = function (entries, scrollObserver) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            scrollToTopBtn.style.display = 'none'
+
+        } else {
+            scrollToTopBtn.style.display = 'block';
+        }
+    })
 };
 
+const scrollObserver = new IntersectionObserver(scrollToTop, optionsScroll);
+const scrollTarget = document.querySelector('.hero');
 
-const observerScroll = new IntersectionObserver(scrollToTop, optionsScroll);
-const scrollTarget = document.querySelector('.footer');
-observerScroll.observe(scrollTarget);
+scrollObserver.observe(scrollTarget);
 
-$('.scroll-to-top').on('click', function (e) {
+
+// galleryBtn
+const openGalleryBtn = document.getElementById('openGalleryBtn');
+const images = document.querySelectorAll('.item_hidden');
+let isHidden = true;
+
+openGalleryBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
-    body.stop().animate({ scrollTop: 0 }, 200);
-});
-
-
-
-// gallery
-const gallery = document.getElementById('gallery');
-const openGalleryBtn = document.getElementById('openGalleryBtn');
-const closeGallery = document.getElementById('closeGalleryBtn');
-const galleryItem = document.querySelector('.gallery__item');
-
-// const galleryList = [...gallery];
-// console.log(galleryList);
-let currentItem = 5;
-
-// let isOpenGallery = false;
-$('openGalleryBtn').on('click', () => {
-
-    for (let i = currentItem; i < currentItem + 5; i++) {
-        gallery[i].style.display = 'block';
+    if (isHidden) {
+        images.forEach(item => item.classList.remove('_hidden'));
+    } else {
+        images.forEach(item => item.classList.add('_hidden'));
     }
 
-    currentItem += 5;
+    openGalleryBtn.textContent = isHidden ? 'See Less' : 'See More';
+
+    isHidden = !isHidden;
 });
 
 
 
+//form-validation
+const getInTouchForm = document.getElementById('contacts-form');
+
+function contactFormValidation(form) {
+    const validator = new JustValidate(form, getUserData);
+    validator.addField('[name="name"]', [
+        {
+            rule: 'required',
+            errorMessage: 'This field must be filled',
+        },
+        {
+            rule: 'minLength',
+            value: 3,
+            errorMessage: 'The field must contain at least 2 letters',
+        },
+        {
+            rule: 'customRegexp',
+            value: /[a-z, A-Z]/gi,
+            errorMessage: 'Must contain the following characters: [a-z, A-Z]',
+        },
+    ]).addField('[name="email"]', [
+        {
+            rule: 'required',
+            errorMessage: 'This field must be filled'
+        },
+        {
+            rule: 'email',
+            errorMessage: 'Does not match the email format'
+        },
+    ]);
+
+    validator.onSuccess((e) => {
+        getUserData(new FormData(e.target));
+    })
+}
+
+function getUserData(data) {
+    const userData = Object.fromEntries([...data]);
+}
 
 
-
-
+contactFormValidation(getInTouchForm, getUserData);

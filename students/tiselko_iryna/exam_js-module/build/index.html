@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
     <title>Monticello</title>
     <link rel="icon" type="images/png" href="/images/fav.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -20,16 +21,16 @@
             <nav class="menu col-7 cols-sm-6">
                 <ul class="menu__list">
                     <li class="menu__item">
-                        <a href="#" class="menu__link">about us</a>
+                        <a href="#about" class="menu__link active">about us</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">projects</a>
+                        <a href="#gallery" class="menu__link">projects</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">news</a>
+                        <a href="#news" class="menu__link">news</a>
                     </li>
                     <li class="menu__item">
-                        <a href="#" class="menu__link">contact</a>
+                        <a href="#contacts-form" class="menu__link">contact</a>
                     </li>
                     <li class="menu__item socials-items">
                         <a href="https://www.facebook.com/" target="_blank"
@@ -77,14 +78,14 @@
 </header>
 
     <main class="main">
-        <section class="hero">
+        <section class="hero section">
     <div class="hero-slider">
         <div class="hero-slider__item">
             <img src="images/hero/main-hero.jpg" alt="slider_1" class="hero-slider__img">
             <div class="container hero-slider__container">
                 <h1 class="hero-slider__title">SIMPLE &amp; MODERN</h1>
                 <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                <a href="#">
+                <a href="#about" class="smoothScrollDown__link">
                     <svg class="icon">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -96,7 +97,7 @@
             <div class="container hero-slider__container">
                 <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
                 <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                <a href="#">
+                <a href="#about" class="smoothScrollDown__link">
                     <svg class="icon">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -108,7 +109,7 @@
             <div class="container hero-slider__container">
                 <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
                 <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                <a href="#">
+                <a href="#about" class="smoothScrollDown__link">
                     <svg class="icon">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -120,7 +121,7 @@
             <div class="container hero-slider__container">
                 <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
                 <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                <a href="#">
+                <a href="#about" class="smoothScrollDown__link">
                     <svg class="icon">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -132,7 +133,7 @@
             <div class="container hero-slider__container">
                 <h2 class="hero-slider__title">SIMPLE &amp; MODERN</h2>
                 <p class="hero-slider__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
-                <a href="#">
+                <a href="#about" class="smoothScrollDown__link">
                     <svg class="icon">
                         <use xlink:href="#arrow"></use>
                     </svg>
@@ -142,7 +143,7 @@
     </div>
 </section>
 
-        <section class="about">
+        <section class="about" id="about">
     <div class="container">
         <div class="row">
             <h3 class="about__heading">What we do</h3>
@@ -186,7 +187,7 @@
     </div>
 </section>
 
-        <section class="news">
+        <section class="news" id="news">
     <div class="container">
         <h3 class="news__heading">LATEST NEWS</h3>
         <div class="row news__row">
@@ -267,65 +268,68 @@
     </div>
 </section>
 
-        <section class="gallery">
+        <section class="gallery" id="gallery">
     <div class="container">
         <h3 class="gallery__heading">GALLERY</h3>
-        <div class="gallery__wrapper" id="gallery">
-            <a href="./images/gallery/img_1.jpg" data-lightbox="archi-tech" class="gallery__item gallery__item-big">
+        <div class="gallery__wrapper" id="gallery__wrapper">
+            <a href="./images/gallery/img_1.jpg" data-fancybox="gallery" class="gallery__item gallery__item-big">
                 <img src="./images/gallery/img_1.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_2.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_2.jpg" data-fancybox="gallery" class="gallery__item">
                 <img src="./images/gallery/img_2.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_3.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_3.jpg" data-fancybox="gallery" class="gallery__item">
                 <img src="./images/gallery/img_3.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_4.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_4.jpg" data-fancybox="gallery" class="gallery__item">
                 <img src="./images/gallery/img_4.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_5.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_5.jpg" data-fancybox="gallery" class="gallery__item">
                 <img src="./images/gallery/img_5.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_6.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_6.jpg" data-fancybox="gallery"
+                class="gallery__item gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_6.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_7.jpg" data-lightbox="archi-tech" class="gallery__item gallery__item-big">
+            <a href="./images/gallery/img_7.jpg" data-fancybox="gallery"
+                class="gallery__item gallery__item gallery__item-big item_hidden _hidden ">
                 <img src="./images/gallery/img_7.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_8.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_8.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_8.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_9.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_9.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_9.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_10.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_10.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_10.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_11.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_11.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_11.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_12.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_12.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_12.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_13.jpg" data-lightbox="archi-tech" class="gallery__item gallery__item-big">
+            <a href="./images/gallery/img_13.jpg" data-fancybox="gallery"
+                class="gallery__item gallery__item-big item_hidden _hidden">
                 <img src="./images/gallery/img_13.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_14.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_14.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_14.jpg" alt="" class="gallery__img">
             </a>
-            <a href="./images/gallery/img_15.jpg" data-lightbox="archi-tech" class="gallery__item">
+            <a href="./images/gallery/img_15.jpg" data-fancybox="gallery" class="gallery__item item_hidden _hidden">
                 <img src="./images/gallery/img_15.jpg" alt="" class="gallery__img">
             </a>
         </div>
         <div class="gallery__btn-wrapper">
             <button type="button" class="btn btn-primary gallery__btn" id="openGalleryBtn">see more</button>
-            <button type="button" class="btn btn-primary gallery__btn" id="closeGalleryBtn">close</button>
+            <!-- <button type="button" class="btn btn-primary gallery__btn" id="closeGalleryBtn">close</button> -->
         </div>
     </div>
 </section>
 
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
     <div class="footer__map-wrapper">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5088.675360164823!2d-73.90265552025534!3d40.67959883610473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c4659d47839%3A0xf3498a2c520f220c!2sRodse%20Wine%20and%20Liquors!5e0!3m2!1suk!2spl!4v1698266206456!5m2!1suk!2spl"
@@ -333,7 +337,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="container footer__container">
-        <div class="footer__contact-form contact-form">
+        <div class="footer__contact-form contact-form" id="contacts">
             <h3 class="contact-form__title">get in touch</h3>
             <div class="contact-form__wrapper">
                 <ul class="contact-form__contact col-6">
@@ -362,9 +366,13 @@
                         <span class="contact-form__addres-text">From 07:05AM to 19:30PM</span>
                     </li>
                 </ul>
-                <form id="contacts" action="#" method="get" class="contact-form__inputs col-6">
-                    <input type="text" name="name" id="name" placeholder="Full Name">
-                    <input type="email" name="email" id="email" placeholder="Email">
+                <form id="contacts-form" action="#" method="get" class="contact-form__inputs col-6">
+                    <div class="contact-form__name-input">
+                        <input type="text" name="name" id="name" placeholder="Full Name" value="" class="input_name">
+                    </div>
+                    <div class="contact-form__email-input">
+                        <input type="email" name="email" id="email" placeholder="Email" value="" class="input_email">
+                    </div>
                     <button class="contact-form__btn btn btn-secondary" type="submit" name="submit">
                         <span>Submit</span>
                     </button>

@@ -31,19 +31,6 @@
     // .gallery__item
 
     &__item {
-        display: none;
-
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5) {
-            display: block;
-        }
-
-        // &:nth-child(-n+5) {
-        //     display: block;
-        // }
 
         &-big {
             grid-column: span 2;
@@ -65,8 +52,6 @@
 
     &__btn {
         margin: 5px;
-
-        
     }
 
     // .gallery__btn-wrapper
@@ -78,7 +63,7 @@
         padding-top: 30px;
     }
 
-    .hideItems {
+    ._hidden{
         display: none;
     }
 }

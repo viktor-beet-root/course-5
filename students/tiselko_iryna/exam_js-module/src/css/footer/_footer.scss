@@ -79,10 +79,7 @@
 
 
 }
-.container {
-}
-.row {
-}
+
 .contact-form {
 
     // .contact-form__title
@@ -117,12 +114,6 @@
         &:not(:last-of-type) {
             padding-bottom: 20px;
         }
-
-        // .contact-form__contact-item_text
-
-        &_text {
-            padding-left: 15px;
-        }
     }
 
     // .contact-form__icon
@@ -133,30 +124,44 @@
         fill: $heliotrope;
     }
 
+    // .contact-form__addres-text
+
+    &__addres-text {
+        font-family: $secondary-font;
+        line-height: 28px;
+        color: $black-color;
+        padding-left: 5px;
+    }
+
     // .contact-form__inputs
 
     &__inputs {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         padding-right: 60px;
-
-        &>input {
-            border: none;
-            border-bottom: 1px solid rgb(44, 64, 88, 0.2);
-
-            &:hover {
-                border-bottom: 1px solid $pickled-bluewood;
-            }
-
-            @include placeholder() {
-                font-family: $secondary-font;
-                color: $input-text-color;
-                padding-bottom: 14px;
-            }
-        }
-
+        padding-top: 0;
     }
+
+    // .contact-form__name-input
+    // .contact-form__email-input
+
+    &__name-input,
+    &__email-input {
+        
+        
+        @include placeholder() {
+            font-family: $secondary-font;
+            color: $gray-6-color;
+            line-height: 27px;
+        }
+    }
+
+    
+
+    &__email-input {
+    }
+
 
     // .contact-form__btn
 
@@ -164,15 +169,35 @@
         align-self: flex-end;
     }
 }
-.col-6 {
-}
-.form {
 
-    // .form__wrapper
+.input {
 
-    &__wrapper {
+    // .input_name
+    // .input_email
+    &_name,
+    &_email {
+        width: 310px;
+        border: none;
+        border-bottom: 1px solid rgb(44, 64, 88, 0.2);
+        padding-bottom: 14px;
+
+        &:hover {
+            border-bottom: 1px solid $pickled-bluewood;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $pickled-bluewood;
+        }
+
+        @include placeholder () {
+            font-family: $secondary-font;
+            line-height: 27px;
+            color: $gray-color;
+        }
     }
+
 }
+
 
 .scroll-to-top {
     position: fixed;
@@ -189,10 +214,6 @@
     background-color: rgb(126, 90, 255, .6);
     box-shadow: 0 0 10px 10px rgba(126, 90, 255, .6);
     display: none;
-
-    &.show-scroll {
-        display: block;
-    }
 }
 
 .copyright {
@@ -202,3 +223,6 @@
     color: $white-color;
 }
 
+.just-validate-error-label {
+    font-size: 14px;
+}

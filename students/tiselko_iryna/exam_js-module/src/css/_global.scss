@@ -9,7 +9,7 @@ body {
     overflow-x: hidden
 }
 
-body h1 {
+h1 {
     font-family: $secondary-font;
     font-size: $h1-font-size;
     font-weight: $h1-font-weight;
@@ -19,7 +19,7 @@ body h1 {
     // text-transform: uppercase;
 }
 
-body h2 {
+h2 {
     font-family: $secondary-font;
     font-size: $h2-font-size;
     font-weight: $h2-font-weight;

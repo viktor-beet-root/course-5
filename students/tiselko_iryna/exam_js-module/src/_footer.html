@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="footer__map-wrapper">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5088.675360164823!2d-73.90265552025534!3d40.67959883610473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25c4659d47839%3A0xf3498a2c520f220c!2sRodse%20Wine%20and%20Liquors!5e0!3m2!1suk!2spl!4v1698266206456!5m2!1suk!2spl"
@@ -6,7 +6,7 @@
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="container footer__container">
-        <div class="footer__contact-form contact-form">
+        <div class="footer__contact-form contact-form" id="contacts">
             <h3 class="contact-form__title">get in touch</h3>
             <div class="contact-form__wrapper">
                 <ul class="contact-form__contact col-6">
@@ -35,9 +35,13 @@
                         <span class="contact-form__addres-text">From 07:05AM to 19:30PM</span>
                     </li>
                 </ul>
-                <form id="contacts" action="#" method="get" class="contact-form__inputs col-6">
-                    <input type="text" name="name" id="name" placeholder="Full Name">
-                    <input type="email" name="email" id="email" placeholder="Email">
+                <form id="contacts-form" action="#" method="get" class="contact-form__inputs col-6">
+                    <div class="contact-form__name-input">
+                        <input type="text" name="name" id="name" placeholder="Full Name" value="" class="input_name">
+                    </div>
+                    <div class="contact-form__email-input">
+                        <input type="email" name="email" id="email" placeholder="Email" value="" class="input_email">
+                    </div>
                     <button class="contact-form__btn btn btn-secondary" type="submit" name="submit">
                         <span>Submit</span>
                     </button>
