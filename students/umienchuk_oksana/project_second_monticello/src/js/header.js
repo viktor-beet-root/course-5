@@ -33,14 +33,12 @@ let isHeaderBg = false;
 $(window).on('scroll', function () {
 
     if ($(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
-        console.log(111);
         header.addClass('bg-scroll');
         heroButtonUp.addClass('bg-scroll');
         isHeaderBg = true;
     } else if ($(this).scrollTop() < offsetBgHeader && isHeaderBg) {
         header.removeClass('bg-scroll');
         heroButtonUp.removeClass('bg-scroll');
-        console.log(222);
         isHeaderBg = false;
     }
 })

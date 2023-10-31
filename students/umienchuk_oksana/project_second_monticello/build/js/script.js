@@ -13,14 +13,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function createFormValidation(form) {
   var validator = new just_validate__WEBPACK_IMPORTED_MODULE_0__["default"](form);
-  console.log(validator);
   validator.addField('[name="user-name"]', [{
     rule: 'required',
     errorMessage: 'This field is required'
   }, {
     rule: 'minLength',
     value: 3,
-    errorMessage: 'The name must have at least 3 letters'
+    errorMessage: 'Must be at least 3 letters'
   }]).addField('[name="user-email"]', [{
     rule: 'email',
     errorMessage: 'Email has invalid format'
@@ -101,14 +100,12 @@ var heroButtonUp = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.scroll-to-top
 var isHeaderBg = false;
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).on('scroll', function () {
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).scrollTop() > offsetBgHeader && !isHeaderBg) {
-    console.log(111);
     header.addClass('bg-scroll');
     heroButtonUp.addClass('bg-scroll');
     isHeaderBg = true;
   } else if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).scrollTop() < offsetBgHeader && isHeaderBg) {
     header.removeClass('bg-scroll');
     heroButtonUp.removeClass('bg-scroll');
-    console.log(222);
     isHeaderBg = false;
   }
 });
@@ -142,20 +139,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.hero-slider').slick({
   responsive: [{
     breakpoint: 768,
     settings: {
-      // dots: false,
-      // draggable: true,
       autoplay: true,
-      verticalSwiping: false,
+      verticalSwiping: true,
       autoplaySpeed: 2000,
       easing: 'easeInOutCubic'
     }
   }, {
     breakpoint: 576,
     settings: {
-      // dots: false,
-      // draggable: false,
-      // vertical: false,
-      verticalSwiping: false,
+      verticalSwiping: true,
       autoplay: true,
       autoplaySpeed: 2000,
       easing: 'easeInOutCubic'

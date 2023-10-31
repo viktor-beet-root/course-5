@@ -103,11 +103,25 @@
         padding: 10px 5px;
         background: transparent;
         margin-bottom: 30px;
+    }
 
+    &__input-wrap {
+        position: relative;
     }
 }
 
 .just-validate-error-field {
     color: rgb(184, 17, 17);
     font-size: 18px;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+
+    @include media(sm) {
+        font-size: 16px;
+        // bottom: -15px;
+    }
 }

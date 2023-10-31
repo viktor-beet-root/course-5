@@ -52,7 +52,7 @@
             content: '';
             position: absolute;
             height: 470px;
-            width: 553px;
+            width: 50%;
             background-color: $img-bg-first;
             z-index: -1;
             margin-top: -60px;
@@ -60,7 +60,7 @@
 
             @include media(md) {
                 height: 370px;
-                width: 453px
+                width: 50%;
             }
 
             @include media(sm) {
@@ -74,7 +74,7 @@
             content: '';
             position: absolute;
             height: 470px;
-            width: 553px;
+            width: 50%;
             background-color: $img-bg-second;
             z-index: -1;
             margin-top: -60px;
@@ -82,7 +82,7 @@
 
             @include media(md) {
                 height: 370px;
-                width: 453px
+                width: 50%;
             }
 
             @include media(sm) {
@@ -119,6 +119,9 @@
     }
 }
 
+.revers {
+    flex-direction: row-reverse;
+}
 
 .block-desc {
 

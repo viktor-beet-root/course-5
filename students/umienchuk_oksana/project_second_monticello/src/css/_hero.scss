@@ -61,7 +61,7 @@
 
     &__title {
         text-align: center;
-        white-space: nowrap;
+        white-space: wrap;
         color: $header-title;
         font-size: $font-size-h1;
         font-weight: $font-weight-title;
@@ -94,7 +94,7 @@
 
     &__sub-title {
         text-align: center;
-        // white-space: nowrap;
+        white-space: wrap;
         color: $header-title;
         font-size: 80px;
         font-weight: $font-weight-title;
@@ -126,8 +126,6 @@
 .slick-list {
     overflow: hidden;
 }
-
-.slick-arrow.slick-disabled {}
 
 .hero-slider .slick-dots {
     display: flex;

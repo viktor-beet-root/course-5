@@ -176,7 +176,7 @@
     }
 
     @include media(xs) {
-        gap: 0;
+        gap: 10px;
     }
 }
 
@@ -228,6 +228,10 @@
     gap: 20px;
     color: transparent;
     padding: 0;
+
+    @include media(sm) {
+        gap: 5px;
+    }
 }
 
 .news-slider.slick-dots li {

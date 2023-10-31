@@ -3,7 +3,6 @@ import JustValidate from 'just-validate';
 function createFormValidation(form) {
 
     const validator = new JustValidate(form);
-    console.log(validator)
 
     validator
         .addField('[name="user-name"]', [
@@ -14,7 +13,7 @@ function createFormValidation(form) {
             {
                 rule: 'minLength',
                 value: 3,
-                errorMessage: 'The name must have at least 3 letters',
+                errorMessage: 'Must be at least 3 letters',
             }
         ])
         .addField('[name="user-email"]', [

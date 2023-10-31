@@ -16,10 +16,8 @@ $('.hero-slider').slick({
         {
             breakpoint: 768,
             settings: {
-                // dots: false,
-                // draggable: true,
                 autoplay: true,
-                verticalSwiping: false,
+                verticalSwiping: true,
                 autoplaySpeed: 2000,
                 easing: 'easeInOutCubic',
             }
@@ -27,10 +25,7 @@ $('.hero-slider').slick({
         {
             breakpoint: 576,
             settings: {
-                // dots: false,
-                // draggable: false,
-                // vertical: false,
-                verticalSwiping: false,
+                verticalSwiping: true,
                 autoplay: true,
                 autoplaySpeed: 2000,
                 easing: 'easeInOutCubic',
