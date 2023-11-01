@@ -1,0 +1,25 @@
+.btn {
+    display: inline-block;
+    color: $default-btn-color;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    background-color: $color-btn;
+    border: $btn-border;
+    padding: 16px 41px;
+
+    &:hover,
+    :focus {
+        text-decoration: underline;
+        color: $img-bg-second;
+        border: $btn-border-hover;
+    }
+}
+
+.form__btn {
+    display: block;
+    float: right;
+    font-size: 18px;
+}

@@ -1,0 +1,30 @@
+@include font-face ('montserrat-v25-latin-regular', 400);
+@include font-face ('montserrat-v25-latin-700', 700);
+@include font-face ('source-sans-3-v9-latin-regular', 400, $font-sub-menu);
+@include font-face ('open-sans-v35-latin-regular', 400, $font-sub-first);
+@include font-face ('open-sans-v35-latin-italic', 400, $font-sub-first, italic);
+
+body {
+    margin: 0 auto;
+    font-family: $main-font;
+    background-color: $default-body-bg-color;
+    font-size: $default-font-size;
+    color: $default-body-color;
+    font-weight: $default-font-weight;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+@include grid();
+
+.mobyle-only {
+    @include media-m(sm) {
+        display: none;
+    }
+}
+
+.sprite {
+    position: fixed;
+}

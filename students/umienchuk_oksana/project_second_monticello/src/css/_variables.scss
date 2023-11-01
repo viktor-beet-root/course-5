@@ -1,0 +1,71 @@
+// colors
+$img-bg-first: #55B7FF;
+$img-bg-second: #7E5AFF;
+$color-white: #FFF;
+$color-night-blue: #2C4058;
+$color-black: #000;
+
+$main-color-text: $color-night-blue;
+$second-color-text: $color-white;
+$default-bg-color-menu-open: $color-white;
+
+$default-border: 1px solid $color-night-blue;
+$default-border-menu-btn: 2px solid $color-white;
+$linear-gradient: linear-gradient(to right, rgba(85, 183, 255, 0.7), rgba(126, 90, 255, 0.7));
+$font-size-h1: 80px;
+$font-size-h1-md: 60px;
+$font-size-h1-sm: 40px;
+
+$font-weight: 400;
+$font-weight-title: 700;
+
+$text-transform-upper: uppercase;
+$text-transform-capit: capitalize;
+
+//main color for text 
+$default-body-color: $color-night-blue;
+$default-body-bg-color: $color-white;
+
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: Montserrat;
+$main-font: $default-font-name, $fallback;
+$default-font-size: 18px;
+$default-font-weight: $font-weight;
+
+$font-sub-first: "Open Sans";
+$font-sub-menu: "Source Sans 3";
+$default-font-sub-font: $font-sub-first, $fallback;
+$font-path: './fonts/';
+$base-img-path: '../';
+
+//header
+$header-title: $color-white;
+
+// btn
+$color-btn: transparent;
+$default-btn-color: $color-black;
+$btn-border: 1px solid $color-night-blue;
+$btn-border-hover: 1px solid $img-bg-second;
+
+// containers
+$container-padding: 15px;
+$container-max-width: 1170px;
+
+$gap-cont: 15px;
+$gap: 15px;
+$defaulp-count-col: 12;
+
+$default-width: 1170px;
+
+//social
+$social-gap: 20px;
+$social-gap-small: 15px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px
+);

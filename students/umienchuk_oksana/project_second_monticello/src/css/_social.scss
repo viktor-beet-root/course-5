@@ -1,0 +1,52 @@
+.social {}
+
+.social-icons {
+    list-style: none;
+    display: flex;
+    gap: $social-gap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+    &__left {
+        justify-content: flex-end;
+    }
+
+    @include media(md) {
+        gap: $social-gap-small;
+    }
+}
+
+.social-icon {
+
+    // .social-icon__link
+
+    &__link {}
+}
+
+.steps {
+
+    // .steps__icon
+
+    &__icon {}
+}
+
+.icon-img {
+    height: 40px;
+    width: 40px;
+
+    @include media(md) {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+
+    @include media(sm) {
+        justify-content: center;
+    }
+}

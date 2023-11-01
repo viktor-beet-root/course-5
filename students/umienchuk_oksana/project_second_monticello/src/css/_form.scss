@@ -1,0 +1,127 @@
+.form-section {
+    color: $color-black;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto 60px;
+    padding: 90px 60px 0 60px;
+    z-index: 10;
+    background-color: $color-white;
+    background-image: url('#{$base-img-path}/images/city-form.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -300px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @include media(sm) {
+        position: static;
+        transform: translateX(0);
+        margin-bottom: 30px;
+        padding: 80px 30px 0 40px;
+    }
+
+    // .form-section__container
+
+    &__container {}
+
+    // .form-section__title
+
+    &__title {
+        position: relative;
+        color: $color-night-blue;
+        text-align: center;
+        font-size: 44px;
+        font-weight: $font-weight-title;
+        margin: 0 0 42px;
+
+        @include media(sm) {
+            font-size: $font-size-h1-sm;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            background-color: $color-night-blue;
+            top: -30px;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+        }
+    }
+}
+
+.info {
+
+    // .info__items
+
+    &__items {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    // .info__item
+
+    &__item {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    // .info__img
+
+    &__img {
+        height: 20px;
+    }
+
+    // .info__disc
+
+    &__disc {
+        margin: 0;
+        font-size: 18px;
+
+        @include media(sm) {
+            font-size: 14px;
+        }
+    }
+}
+
+.form {
+
+    &__input {
+        width: 100%;
+        color: $color-black;
+        line-height: 27px;
+        border: none;
+        border-bottom: 1px solid $color-night-blue;
+        padding: 10px 5px;
+        background: transparent;
+        margin-bottom: 30px;
+    }
+
+    &__input-wrap {
+        position: relative;
+    }
+}
+
+.just-validate-error-field {
+    color: rgb(184, 17, 17);
+    font-size: 18px;
+}
+
+.just-validate-error-label {
+    position: absolute;
+    bottom: 0;
+    font-size: 16px;
+
+    @include media(sm) {
+        font-size: 16px;
+        // bottom: -15px;
+    }
+}
