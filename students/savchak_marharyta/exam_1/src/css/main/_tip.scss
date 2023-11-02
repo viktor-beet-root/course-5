@@ -3,9 +3,9 @@
     // .tip__container
 
     &__container {
-        padding: 110px 100px 45px;
+        padding-top: 108px;
+        padding-bottom: 40px;
         position: relative;
-        box-sizing: border-box;
     }
 
     // .tip__title
@@ -19,8 +19,11 @@
 
     &__img {
         width: 65px;
-        padding-bottom: 20px;
-        display: block;
+    }
+
+    &__img-wrapper {
+        width: 65px;
+        padding-bottom: 14px;
         margin: 0 auto;
     }
 
@@ -28,11 +31,11 @@
         list-style-type: none;
         display: flex;
         justify-content: space-between;
-        // margin: 0 auto;
         font-family: $section-title-font;
-        padding: 0;
-
+        padding-right: 100px;
+        padding-left: 100px;
     }
+
 
     &__item {}
 }
@@ -45,13 +48,52 @@
     border-bottom: 1px dashed transparent;
     border-top: 1px dashed $white;
     border-radius: 50%;
-    width: 540px;
-    height: 540px;
+    width: 25%;
+    height: 120%;
     position: absolute;
     z-index: 100;
-    top: 45px;
-    right: 160px;
+    top: 60px;
+    right: 500px;
     opacity: 0.502;
+
+
+    @include media(xxxxxxxlg) {
+        width: 450px;
+        height: 450px;
+        right: 470px;
+        top: 55px;
+    }
+
+    @include media(xxxxxxlg) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @include media(xxxxxlg) {
+        width: 350px;
+        height: 350px;
+    }
+
+    @include media(xxxxlg) {
+        width: 300px;
+        height: 300px;
+    }
+
+    @include media(xxxlg) {
+        width: 250px;
+        height: 250px;
+    }
+
+    @include media(xxlg) {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include media(xlg) {
+        width: 150px;
+        height: 150px;
+    }
+
 }
 
 .tip__list::after {
@@ -61,14 +103,55 @@
     border-bottom: 1px dashed transparent;
     border-top: 1px dashed $white;
     border-radius: 50%;
-    width: 540px;
-    height: 540px;
+    width: 25%;
+    height: 120%;
     position: absolute;
     z-index: 100;
-    top: 45px;
-    left: 160px;
+    top: 60px;
+    left: 500px;
     opacity: 0.502;
+
+
+    @include media(xxxxxxxlg) {
+        width: 450px;
+        height: 450px;
+        left: 470px;
+        top: 55px;
+    }
+
+    @include media(xxxxxxlg) {
+        width: 400px;
+        height: 400px;
+    }
+
+    @include media(xxxxxlg) {
+        width: 350px;
+        height: 350px;
+    }
+
+    @include media(xxxxlg) {
+        width: 300px;
+        height: 300px;
+    }
+
+    @include media(xxxlg) {
+        width: 250px;
+        height: 250px;
+    }
+
+    @include media(xxlg) {
+        width: 200px;
+        height: 200px;
+    }
+
+    @include media(xlg) {
+        width: 150px;
+        height: 150px;
+    }
+
 }
+
+
 
 .search {
     color: $blue ;

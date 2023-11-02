@@ -26,8 +26,8 @@
     }
 
     &__container {
-        padding: 120px 150px 120px 0;
-        box-sizing: border-box;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     &__button-wrapper {
@@ -68,6 +68,8 @@
     &__row {
         display: flex;
         justify-content: space-between;
+        // gap: 136px;
+        padding-right: 150px;
     }
 
     &__content-wrapper {

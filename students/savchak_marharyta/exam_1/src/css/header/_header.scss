@@ -4,6 +4,7 @@
 
     &__title {
         padding-top: 5px;
+        text-decoration: none;
         text-transform: uppercase;
         color: $white;
         font-size: 24px;
@@ -11,6 +12,10 @@
         margin: 0;
         font-weight: 700;
         font-family: $logo-font;
+    }
+
+    &__title:hover {
+        color: $dark-gray;
     }
 }
 
@@ -26,7 +31,9 @@
     margin: 0;
     padding: 0;
 
-    &__item {}
+    &__link:hover {
+        color: $dark-gray;
+    }
 
     &__link {
         text-decoration: none;
@@ -41,5 +48,6 @@
 .header__container {
     display: flex;
     justify-content: space-between;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }

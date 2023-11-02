@@ -4,10 +4,8 @@ body {
     max-width: $default-width;
 }
 
-.container {
-    padding-bottom: $container-bottom-padding;
-    width: $container-max-width;
-    margin: 0 auto;
+html {
+    scroll-behavior: smooth;
 }
 
 img {

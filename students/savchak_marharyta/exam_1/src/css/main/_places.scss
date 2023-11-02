@@ -8,13 +8,15 @@
         font-size: 16px;
         letter-spacing: 1.6px;
         margin: 0;
-        padding-bottom: 28px;
+        padding-bottom: 24px;
+        line-height: 28px;
     }
 
     // .places__container
 
     &__container {
-        padding: 217px 240px 120px;
+        padding-top: 220px;
+        padding-bottom: 120px;
     }
 
     // .places__country-name
@@ -34,12 +36,13 @@
         font-weight: 400;
         font-size: 20px;
         margin: 0;
-        padding-bottom: 12px;
+        padding-bottom: 17px;
     }
 
     &__info {
         padding: 44px 32px;
         background-color: rgba(35, 35, 35, 0.90);
+        width: 49%;
     }
 
     // .places__button-wrapper
@@ -60,19 +63,13 @@
 
     }
 
-    &__row {
-        display: flex;
-        justify-content: flex-end;
-    }
-
-
 }
 
 .first-place {
     background-image: url("../../images/first_place-bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% -204px;
+    background-position: 50% -200px;
 }
 
 .second-place {
@@ -81,5 +78,13 @@
     background-size: cover;
     background-position: 50% -300px;
 
-    &__box {}
+    &__box {
+        float: right;
+    }
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
