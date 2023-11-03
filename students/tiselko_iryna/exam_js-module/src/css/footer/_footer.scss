@@ -1,16 +1,26 @@
 .footer {
+    height: 100%;
     background-image: url('#{$base-img-pass}../images/footer/footer-bg.png'), linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center bottom;
     background-size: contain;
     position: relative;
+
+    @include media (xs) {
+        background-image: unset;
+    }
 
     // .footer__map-wrapper
 
     &__map-wrapper{
         width: 100vw;
         height: 700px;
+
+        @include media () {
+            height: 750px;
+        }
     }
+
 
     // .footer__contact-form
 
@@ -24,6 +34,22 @@
         height: 450px;
         position: absolute;
         @extend %posfix-center;
+
+        @include media () {
+            width: 595px;
+            height: 700px;
+            top: 45%;
+        }
+
+        @include media (xs) {
+            width: 450px;
+            height: 700px;
+        }
+
+        @include media (xxs) {
+            width: 350px;
+            height: 700px;
+        }
     }
 
     // .footer__logo
@@ -31,13 +57,16 @@
     &__logo {
         text-align: center;
         padding-left: 56px;
+
+        @include media () {
+            padding-left: 0;
+        }
     }
 
     // .footer__socials
 
     &__socials {
         text-align: center;
-        
     }
 
     // .footer__socials-link
@@ -68,6 +97,16 @@
     &__row {
         padding-top: 203px;
         align-items: center;
+
+        @include media (xs) {
+            padding-top: 280px;
+            background-image: linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: contain;
+            position: relative;
+            z-index: -1;
+        }
     }
 
     // .footer__copyright
@@ -93,6 +132,23 @@
         &::before {
             @extend %heading-pseudo;
             top: -37%;
+
+            @include media (xs) {
+                width: 90px;
+                top: -28%;
+            }
+        }
+
+        @include media () {
+            margin-top: 120px;
+        }
+
+        @include media (xs) {
+            padding-bottom: 35px;
+        }
+
+        @include media (xxs) {
+           font-size: 34px;
         }
     }
 
@@ -100,12 +156,21 @@
 
     &__wrapper {
         display: flex;
+
+        @include media () {
+            flex-direction: column-reverse;
+        }
     }
 
     // .contact-form__contact
 
     &__contact {
         padding: 0 0 68px 60px;
+
+        @include media () {
+            padding: 20px 0 30px 0;
+            text-align: center;
+        }
     }
 
     // .contact-form__contact-item
@@ -141,6 +206,10 @@
         gap: 25px;
         padding-right: 60px;
         padding-top: 0;
+
+        @include media () {
+           padding: 20px;
+        }
     }
 
     // .contact-form__name-input
@@ -160,6 +229,9 @@
     
 
     &__email-input {
+        @include media () {
+            padding-bottom: 20px;
+        }
     }
 
 
@@ -167,6 +239,11 @@
 
     &__btn {
         align-self: flex-end;
+
+        @include media () {
+            align-self: center;
+            width: 190px;
+        }
     }
 }
 
@@ -194,10 +271,21 @@
             line-height: 27px;
             color: $gray-color;
         }
+
+        @include media () {
+            width: 450px;
+            padding-left: 10px;
+            margin-left: 43px;
+        }
+
+        @include media (xs) {
+            width: 290px;
+            padding-left: 10px;
+            margin-left: unset;
+        }
     }
 
 }
-
 
 .scroll-to-top {
     position: fixed;
@@ -214,6 +302,12 @@
     background-color: rgb(126, 90, 255, .6);
     box-shadow: 0 0 10px 10px rgba(126, 90, 255, .6);
     display: none;
+    z-index: 100;
+
+    @include media (xs) {
+        right: 15px;
+        bottom: 20px;
+    }
 }
 
 .copyright {
@@ -221,6 +315,10 @@
     font-size: 14px;
     line-height: normal;
     color: $white-color;
+
+    @include media () {
+        padding-bottom: 50px;
+    }
 }
 
 .just-validate-error-label {

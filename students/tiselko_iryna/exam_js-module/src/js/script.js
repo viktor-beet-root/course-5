@@ -23,13 +23,46 @@ $('.news__row').slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
-    autoplay: true,
+    autoplay: false,
+    adaptiveHeigh: true,
     infinite: true,
     variableWidth: true,
     prevArrow: `<button type="button" class="slick-prev"><svg class="icon">
     <use xlink:href="#arrow"></use></svg></button>`,
     nextArrow: `<button type="button" class="slick-next"><svg class="icon">
     <use xlink:href="#arrow"></use></svg></button>`,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            }
+        },
+        {
+            breakpoint: 625,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            }
+        }
+    ]
 });
 
 
@@ -222,3 +255,7 @@ function getUserData(data) {
 
 
 contactFormValidation(getInTouchForm, getUserData);
+
+
+// change place (Media Queries)
+

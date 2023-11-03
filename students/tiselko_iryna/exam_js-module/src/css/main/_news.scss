@@ -6,10 +6,28 @@
     background-position: bottom center;
     background-size: contain;
 
+    @include media (md) {
+        padding-top: 125px;
+        padding-bottom: 110px;
+    }
+
+    @include media (xs) {
+        padding-top: 100px;
+        padding-bottom: 110px;
+    }
+
+    & .container {
+        padding: 0;
+    }
+
     // .news__row
 
     &__row {
         justify-content: center;
+
+        @include media(xs) {
+            margin: 0;
+        }
 
         & .slick-dots {
             bottom: unset;
@@ -17,7 +35,7 @@
             bottom: -58px;
     
             @include media() {
-                right: -103px;
+                right: unset;
             }
     
             & .slick-active {
@@ -30,7 +48,23 @@
                 height: 10px;
                 border: 1px solid $white-color;
                 border-radius: 50%;
-                margin-right: 36px;
+
+                &:not(:last-of-type){
+                    margin-right: 36px;
+
+                    @include media(xs) {
+                        margin-right: 26px;
+                    }
+                }
+
+                @include media() {
+                    width: 7px;
+                    height: 7px;
+
+                    &:not(:last-of-type){
+                        margin-right: 26px;
+                    }
+                }
             }
     
             & li button {
@@ -46,6 +80,10 @@
             rotate: 90deg;
             top: 47%;
             left: -15px;
+
+            @include media(xs) {
+                left: unset;
+            }
         }
 
         & .slick-next {
@@ -56,15 +94,39 @@
             rotate: -90deg;
             top: 51%;
             right: -15px;
+
+            @include media(xs) {
+                right: unset;
+            }
         }
 
         & .slick-list {
             width: 1170px;
+
+            @include media(md) {
+				width: 785px;
+			}
+
+            @include media() {
+				width: 730px;
+			}
+
+            @include media(xs) {
+				width: 320px;
+			}
         }
 
         & .slick-slide{
             padding-right: 30px;
             width: 370px;
+
+            @include media() {
+                width: 350px;
+            }
+
+            @include media(xs) {
+                width: 320px;
+            }
         }
     }
 
@@ -80,6 +142,18 @@
             background-color: $white-color;
             @extend %heading-pseudo;
             top: -25%;
+
+            @include media (xs) {
+                width: 90px;
+            }
+        }
+
+        @include media (xs) {
+            padding-bottom: 50px;
+        }
+
+        @include media (xxs) {
+           font-size: 34px;
         }
     }
 
@@ -119,12 +193,35 @@
     &__text-wrapper {
         padding: 30px 0 0 20px;
         width: 330px;
+
+        @include media(xs) {
+            width: 320px;
+        }
+    }
+
+    // .news__title
+    &__title {
+        font-size: 18px;
+
+        @include media(xs) {
+            width: 290px;
+        }
     }
 
     // .news__content
 
     &__content {
         padding-top: 15px;
+
+        @include media(xs) {
+            width: 290px;
+            padding-right: 10px;
+            height: 58px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
     }
 
     // .news__author
@@ -132,12 +229,20 @@
     &__author {
         display: flex;
         padding: 39px 0 38px 0;
+
+        @include media(xs) {
+            width: 300px;
+        }
     }
 }
 
 .author-info{
     padding-left: 20px;
     font-family: $secondary-font;
+
+    @include media(xs) {
+        font-size: 14px;
+    }
 }
 
 .img-top {

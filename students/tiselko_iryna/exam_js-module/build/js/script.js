@@ -20376,11 +20376,40 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.news__row').slick({
   slidesToScroll: 1,
   dots: true,
   arrows: true,
-  autoplay: true,
+  autoplay: false,
+  adaptiveHeigh: true,
   infinite: true,
   variableWidth: true,
   prevArrow: "<button type=\"button\" class=\"slick-prev\"><svg class=\"icon\">\n    <use xlink:href=\"#arrow\"></use></svg></button>",
-  nextArrow: "<button type=\"button\" class=\"slick-next\"><svg class=\"icon\">\n    <use xlink:href=\"#arrow\"></use></svg></button>"
+  nextArrow: "<button type=\"button\" class=\"slick-next\"><svg class=\"icon\">\n    <use xlink:href=\"#arrow\"></use></svg></button>",
+  responsive: [{
+    breakpoint: 1200,
+    settings: {
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      infinite: true,
+      dots: true,
+      arrows: false
+    }
+  }, {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: false
+    }
+  }, {
+    breakpoint: 625,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: true,
+      dots: true,
+      arrows: false
+    }
+  }]
 });
 
 // burger menu
@@ -20529,6 +20558,8 @@ function getUserData(data) {
   var userData = Object.fromEntries(_toConsumableArray(data));
 }
 contactFormValidation(getInTouchForm, getUserData);
+
+// change place (Media Queries)
 }();
 /******/ })()
 ;

@@ -3,26 +3,30 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
-    padding: 0;
+    padding: 0 30px 0 0;
+
+    @include media(md){
+        position: absolute;
+        top: 32px;
+        right: 5px;
+    }
+
+    // @include media(){
+    //     position: absolute;
+    //     top: 32px;
+    //     right: 5px;
+    // }
 
     @include media(){
         display: none;
     }
 
     // .header-socials__facebook
-
-    &__facebook:hover {
-        stroke-width: 2px;
-    }
-
     // .header-socials__twitter
-
-    &__twitter:hover {
-        stroke-width: 2px;
-    }
-
     // .header-socials__instagram
 
+    &__facebook:hover,
+    &__twitter:hover,
     &__instagram:hover {
         stroke-width: 2px;
     }
@@ -41,20 +45,4 @@
     }
 }
 
-.icon {
-}
-
-// #inst-hov {
-//     display: none;
-//     stroke: $instagram-base;
-
-//     & path {
-//         fill:$instagram-color;
-//     }
-
-//     & circle {
-//         stroke: $instagram-base;
-//         stroke-width: 1.5px;
-//     }
-// }
 
