@@ -1,6 +1,6 @@
 .footer {
     height: 100%;
-    background-image: url('#{$base-img-pass}../images/footer/footer-bg.png'), linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
+    background-image: url('#{$base-img-pass}images/footer/footer-bg.png'), linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: contain;
@@ -26,7 +26,7 @@
 
     &__contact-form {
         background-color: $white-color;
-        background-image: url('../../images/footer/form-bg.png');
+        background-image: url('#{$base-img-pass}images/footer/form-bg.png');
         background-repeat: no-repeat;
         background-position: bottom center;
         background-size: contain;
@@ -295,7 +295,7 @@
     height: 40px;
     border-radius: 50%;
     border: 2px solid $white-color;
-    background-image: url('#{$base-img-pass}../images/arrow.svg'), ;
+    background-image: url('#{$base-img-pass}images/arrow.svg'), ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15px;
