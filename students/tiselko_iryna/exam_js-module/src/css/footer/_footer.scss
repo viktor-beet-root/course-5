@@ -43,12 +43,11 @@
 
         @include media (xs) {
             width: 450px;
-            height: 700px;
+            height: 740px;
         }
 
         @include media (xxs) {
             width: 350px;
-            height: 700px;
         }
     }
 
@@ -323,4 +322,12 @@
 
 .just-validate-error-label {
     font-size: 14px;
+
+    @include media () {
+        padding-left: 65px;
+    }
+
+    @include media (xs) {
+        padding-left: 25px;
+    }
 }

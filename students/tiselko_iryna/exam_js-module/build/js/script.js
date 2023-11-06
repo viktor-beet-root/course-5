@@ -20368,7 +20368,7 @@ jquery__WEBPACK_IMPORTED_MODULE_15___default()('.hero-slider').slick({
   slidesToScroll: 1,
   verticalSwiping: false,
   arrows: false,
-  autoplay: true,
+  autoplay: false,
   pauseOnFocus: false
 });
 jquery__WEBPACK_IMPORTED_MODULE_15___default()('.news__row').slick({

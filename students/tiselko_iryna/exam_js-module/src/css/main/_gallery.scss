@@ -8,7 +8,6 @@
     }
 
     & .container {
-        
         @include media (lg) {
             padding: 0;
         }
@@ -33,7 +32,7 @@
         }
 
         @include media (xs) {
-            padding-bottom: 50px;
+            padding-bottom: 35px;
         }
 
         @include media (xxs) {
@@ -44,12 +43,21 @@
     // .gallery__wrapper
 
     &__wrapper {
+        margin: 10px;
         padding-top: 45px;
         padding-bottom: 30px;
         display: grid;
         justify-content: center;
         gap: 10px;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        @include media (md) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        @include media () {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
 
         @include media (xs) {
             padding-top: 15px;
@@ -66,8 +74,8 @@
             grid-row: span 2;
 
             @include media (xs) {
-                grid-column: span 3;
-                grid-row: span 3;
+                grid-column: span 2;
+                grid-row: span 2;
             }
         }
     }

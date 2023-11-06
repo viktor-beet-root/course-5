@@ -102,7 +102,7 @@
 
 	&__title {
 		color: $white-color;
-		padding-top: 246px;
+		padding-top: 306px;
 		padding-bottom: 20px;
 		
 		@include media(md) {
@@ -112,13 +112,16 @@
 		@include media() {
 			font-size: 45px;
 			line-height: 75px;
-			padding-top: 126px;
+		}
+
+		@include media(xs) {
+			font-size: 34px;
+			line-height: 75px;
 		}
 
 		@include media(xxs) {
 			font-size: 40px;
 			line-height: 75px;
-			padding-top: 186px;
 		}
 	}
 
@@ -135,8 +138,13 @@
 			padding-bottom: 126px;
 		}
 
+		@include media(xs) {
+			padding-bottom: 126px;
+		}
+
 		@include media(xxs) {
 			font-size: 10px;
+			letter-spacing: 3.6px;
 		}
 	}
 

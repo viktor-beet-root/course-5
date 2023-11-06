@@ -14,7 +14,7 @@ $('.hero-slider').slick({
     slidesToScroll: 1,
     verticalSwiping: false,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     pauseOnFocus: false,
 });
 
