@@ -14,7 +14,7 @@ $('.hero-slider').slick({
     slidesToScroll: 1,
     verticalSwiping: false,
     arrows: false,
-    autoplay: false,
+    autoplay: true,
     pauseOnFocus: false,
 });
 
@@ -23,7 +23,7 @@ $('.news__row').slick({
     slidesToScroll: 1,
     dots: true,
     arrows: true,
-    autoplay: false,
+    autoplay: true,
     adaptiveHeigh: true,
     infinite: true,
     variableWidth: true,
