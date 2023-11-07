@@ -48,51 +48,13 @@
     border-bottom: 1px dashed transparent;
     border-top: 1px dashed $white;
     border-radius: 50%;
-    width: 25%;
-    height: 120%;
+    width: 37%;
+    height: 125%;
     position: absolute;
     z-index: 100;
     top: 60px;
-    right: 500px;
+    right: 200px;
     opacity: 0.502;
-
-
-    @include media(xxxxxxxlg) {
-        width: 450px;
-        height: 450px;
-        right: 470px;
-        top: 55px;
-    }
-
-    @include media(xxxxxxlg) {
-        width: 400px;
-        height: 400px;
-    }
-
-    @include media(xxxxxlg) {
-        width: 350px;
-        height: 350px;
-    }
-
-    @include media(xxxxlg) {
-        width: 300px;
-        height: 300px;
-    }
-
-    @include media(xxxlg) {
-        width: 250px;
-        height: 250px;
-    }
-
-    @include media(xxlg) {
-        width: 200px;
-        height: 200px;
-    }
-
-    @include media(xlg) {
-        width: 150px;
-        height: 150px;
-    }
 
 }
 
@@ -103,51 +65,13 @@
     border-bottom: 1px dashed transparent;
     border-top: 1px dashed $white;
     border-radius: 50%;
-    width: 25%;
-    height: 120%;
+    width: 37%;
+    height: 125%;
     position: absolute;
     z-index: 100;
     top: 60px;
-    left: 500px;
+    left: 200px;
     opacity: 0.502;
-
-
-    @include media(xxxxxxxlg) {
-        width: 450px;
-        height: 450px;
-        left: 470px;
-        top: 55px;
-    }
-
-    @include media(xxxxxxlg) {
-        width: 400px;
-        height: 400px;
-    }
-
-    @include media(xxxxxlg) {
-        width: 350px;
-        height: 350px;
-    }
-
-    @include media(xxxxlg) {
-        width: 300px;
-        height: 300px;
-    }
-
-    @include media(xxxlg) {
-        width: 250px;
-        height: 250px;
-    }
-
-    @include media(xxlg) {
-        width: 200px;
-        height: 200px;
-    }
-
-    @include media(xlg) {
-        width: 150px;
-        height: 150px;
-    }
 
 }
 

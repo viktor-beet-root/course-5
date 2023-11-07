@@ -1,3 +1,5 @@
+@import "./menu";
+
 .header {
     background-color: $blue ;
     // .header__title
@@ -17,6 +19,13 @@
     &__title:hover {
         color: $dark-gray;
     }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 }
 
 .nav {
@@ -24,18 +33,18 @@
     padding-top: 10px;
 }
 
-.menu {
+.header__menu {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     margin: 0;
     padding: 0;
 
-    &__link:hover {
+    &_link:hover {
         color: $dark-gray;
     }
 
-    &__link {
+    &_link {
         text-decoration: none;
         text-transform: uppercase;
         color: $white;
@@ -43,11 +52,18 @@
         font-size: 14px;
         letter-spacing: 1.4px;
     }
-}
 
-.header__container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    &_item {
+        position: relative;
+    }
+
+    &_item:hover {
+
+        .submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+
+        }
+    }
 }

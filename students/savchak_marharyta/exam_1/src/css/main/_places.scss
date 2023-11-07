@@ -69,14 +69,14 @@
     background-image: url("../../images/first_place-bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% -200px;
+    background-position: 50% 50%;
 }
 
 .second-place {
     background-image: url("../../images/second_place-bg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% -300px;
+    background-position: 50% 50%;
 
     &__box {
         float: right;
