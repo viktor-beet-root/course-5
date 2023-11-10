@@ -17,6 +17,16 @@
     &__container {
         padding-top: 220px;
         padding-bottom: 120px;
+
+        @include media(md) {
+            padding-top: 150px;
+            padding-bottom: 100px;
+        }
+
+        @include media(sm) {
+            padding-top: 110px;
+            padding-bottom: 80px;
+        }
     }
 
     // .places__country-name
@@ -42,7 +52,7 @@
     &__info {
         padding: 44px 32px;
         background-color: rgba(35, 35, 35, 0.90);
-        width: 49%;
+        // width: 49%;
     }
 
     // .places__button-wrapper
@@ -67,16 +77,12 @@
 
 .first-place {
     background-image: url("../../images/first_place-bg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    @extend %background-positioning;
 }
 
 .second-place {
     background-image: url("../../images/second_place-bg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    @extend %background-positioning;
 
     &__box {
         float: right;

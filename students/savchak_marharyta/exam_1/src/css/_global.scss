@@ -34,13 +34,16 @@ img {
     // white-space: nowrap;
     z-index: 100;
     position: relative;
+
 }
 
 .btn-wrapper {
     background-color: $blue;
-    width: 150px;
+    max-width: 150px;
     position: relative;
     z-index: 1;
+
+    @include media(md) {}
 }
 
 .btn-wrapper::before {
@@ -68,4 +71,11 @@ img {
     top: 0;
     left: 24%;
 
+}
+
+.container {
+    @include media(lg) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }

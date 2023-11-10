@@ -1,8 +1,6 @@
 .why-choose-us {
     background-image: url("../../images/why_choose_us-bg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -50% 50%;
+    @extend %background-positioning;
     color: $white;
     // .why-choose-us__title
 
@@ -12,6 +10,10 @@
         font-size: 36px;
         margin: 0;
         padding-bottom: 24px;
+
+        @include media(xs) {
+            text-align: center;
+        }
     }
 
     // .why-choose-us__text
@@ -22,16 +24,28 @@
         margin: 0;
         padding-bottom: 30px;
         line-height: 28px;
+
     }
 
     &__container {
         padding-top: 120px;
         padding-bottom: 124px;
         padding-right: 112px;
+
+        @include media(md) {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        @include media(sm) {
+            padding-right: 60px;
+        }
     }
 
     &__button-wrapper {
-        padding: 20px 32px;
+        padding: 20px 20px;
+        margin: 0 auto;
+
     }
 
     &__button {
@@ -63,18 +77,35 @@
         top: 0;
         left: 27%;
 
+
     }
 
     &__row {
         display: flex;
         justify-content: space-around;
         margin: 0 auto;
+
+        @include media(sm) {
+            justify-content: space-between;
+        }
+
+        @include media(xs) {
+            flex-direction: column;
+        }
     }
 
     &__content-wrapper {
         padding-top: 70px;
         padding-left: 0;
         padding-right: 0;
+
+        @include media(md) {
+            padding-top: 20px;
+        }
+
+        @include media(sm) {
+            padding-top: 0;
+        }
     }
 
     &__img-wrapper {
@@ -83,12 +114,25 @@
         padding: 0;
         padding-top: 6px;
         gap: 16px;
+
+        @include media(sm) {
+            padding-top: 20px;
+        }
+
+        @include media(xs) {
+            flex-direction: row;
+
+        }
     }
 }
 
 .right-img {
     width: 350px;
     padding-left: 74px;
+
+    @include media(sm) {
+        padding-left: 0;
+    }
 }
 
 .left-img {

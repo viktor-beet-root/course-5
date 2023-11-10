@@ -14,6 +14,11 @@
         margin: 0;
         font-weight: 700;
         font-family: $logo-font;
+
+        @include media(xs) {
+            font-size: 18px;
+        }
+
     }
 
     &__title:hover {
@@ -23,9 +28,26 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding: 25px 15px;
+
+        @include media(lg) {
+            padding: 50px 15px;
+        }
+
+        @include media(md) {
+            padding: 15px 15px;
+        }
+
+        @include media(sm) {
+            padding: 10px 10px;
+        }
+
+        @include media(xs) {
+            padding: 20px 20px;
+        }
     }
+
+
 }
 
 .nav {
@@ -40,6 +62,28 @@
     margin: 0;
     padding: 0;
 
+    @include media(lg) {
+        padding-left: 50px;
+
+    }
+
+    @include media(md) {
+        padding-left: 110px;
+    }
+
+    @include media(sm) {
+        padding-left: 35px;
+        font-size: 10px;
+    }
+
+    @include media(xs) {
+        padding-left: 15px;
+    }
+
+    @include media(xxs) {
+        flex-direction: column;
+    }
+
     &_link:hover {
         color: $dark-gray;
     }
@@ -51,6 +95,23 @@
         font-family: $btn-font;
         font-size: 14px;
         letter-spacing: 1.4px;
+
+        @include media(lg) {
+            letter-spacing: .7px;
+        }
+
+        @include media(md) {
+            font-size: 13px;
+        }
+
+        @include media(xs) {
+            font-size: 11px;
+        }
+
+        @include media(xxs) {
+            font-size: 8px;
+        }
+
     }
 
     &_item {
@@ -65,5 +126,70 @@
             pointer-events: all;
 
         }
+    }
+}
+
+.menu-open-label {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: solid 1px $black;
+
+    .menu-open-input:checked+& {
+        .menu-open-label__line {
+            background-color: transparent;
+
+            &::before {
+                top: auto;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: auto;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        position: relative;
+        display: block;
+        width: 70%;
+        background-color: $dark-gray;
+        height: 4px;
+        border-radius: 4px;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-gray;
+            border-radius: inherit;
+            position: absolute;
+        }
+
+        &::before {
+            top: -12px;
+        }
+
+        &::after {
+            bottom: -11px;
+        }
+
+    }
+}
+
+.header__menu-wrapper {
+    @include media(xxs) {
+        position: fixed;
+        width: 100%;
+        top: 53px;
+        bottom: 0;
+        background-color: $white;
     }
 }

@@ -9,7 +9,7 @@
 </head>
 
 <body class="page">
-    <section class="heroblock">
+    <section class="heroblock ">
     <div class="container heroblock__container">
         <div class="row heroblock__row">
             <h1 class="heroblock__title">bhromaon</h1>
@@ -50,7 +50,11 @@
     <div class="container header__container">
         <a href="#" class="header__title">bhromaon</a>
         <nav class="nav">
-            <ul class="header__menu">
+            <input type="checkbox" class="menu-open-input" id="menu_open">
+            <label class="menu-open-label" for="menu_open">
+                <span class="menu-open-label__line"></span>
+            </label>
+            <ul class="header__menu header__menu-wrapper">
                 <li class="header__menu_item"><a href="#who-we-are" class="header__menu_link">who we are</a> </li>
                 <li class="header__menu_item"><a href="#what-we-do" class="header__menu_link">what we do</a> </li>
                 <li class="header__menu_item"><a href="#travel-with-us" class="header__menu_link">travel with us</a>
@@ -77,7 +81,7 @@
     <section id="who-we-are" class="why-choose-us">
     <div class="container why-choose-us__container">
         <div class="row why-choose-us__row">
-            <div class="why-choose-us__content-wrapper col-6"> <!--col-6-->
+            <div class="why-choose-us__content-wrapper col-6 col-xs-12"> <!--col-6-->
                 <h2 class="why-choose-us__title">Why Choose Us</h2>
                 <p class="why-choose-us__text">Tion and dislike men who are so
                     beguiled and demoralized by desire by the charms of pleasure
@@ -89,7 +93,7 @@
                     <a href="#" class="why-choose-us__button btn">Explore Places</a>
                 </div>
             </div>
-            <div class="why-choose-us__img-wrapper col-4"> <!--col-4-->
+            <div class="why-choose-us__img-wrapper col-4 col-sm-5 col-xs-6"> <!--col-4-->
                 <img src="images/house-near-the-lake.png" alt="house near the lake"
                     class="why-choose-us__img left-img ">
                 <img src="images/why-choose-us-img.png" alt="mountains" class="why-choose-us__img right-img ">
@@ -145,9 +149,9 @@
     </div>
 </section>
 
-    <section id="travel-with-us" class="places first-place">
+    <section id="travel-with-us" class="places first-place ">
     <div class="container places__container">
-        <div class=" col-6 places__info">
+        <div class=" col-6 places__info col-sm-9 col-xs-12">
             <p class="places__country-name">Spain</p>
             <h3 class="places__name">grand spain madrid</h3>
             <p class="places_description">But I must explain to
@@ -161,9 +165,9 @@
         </div>
     </div>
 </section>
-<section class="places second-place">
+<section class="places second-place ">
     <div class="container places__container clearfix ">
-        <div class="col-6 places__info second-place__box ">
+        <div class="col-6 places__info second-place__box col-sm-9 col-xs-12">
             <p class="places__country-name">Spain</p>
             <h3 class="places__name">grand spain madrid</h3>
             <p class="places_description">But I must explain to
@@ -180,14 +184,13 @@
 
     <section class="testimonial">
     <div class="container testimonial__container">
-        <div class="row testimonial__row">
-            <h2 class="testimonial__title">What Our Tourists Say</h2>
-        </div>
+        <h2 class="testimonial__title">What Our Tourists Say</h2>
         <div class="row testimonial__row">
             <!-- <div class="col-4 testimonial__img-wrapper"> -->
-            <img class=" col-4 testimonial__img" src="images/testimonial-img.png" alt="Sam Sumon photo">
+            <img class=" col-4 testimonial__img col-sm-5 col-xs-12" src="images/testimonial-img.png"
+                alt="Sam Sumon photo">
             <!-- </div> -->
-            <div class="col-8 testimonial__info">
+            <div class="col-8 testimonial__info col-sm-7 col-xs-12">
                 <h3 class="testimonial__name">sam sumon</h3>
                 <p class="testimonial__text">
                     <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"

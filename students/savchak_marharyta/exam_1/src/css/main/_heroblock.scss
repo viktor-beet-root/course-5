@@ -1,8 +1,6 @@
 .heroblock {
     background-image: url("../../images/heroblock-bg.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    @extend %background-positioning;
     color: $white;
 
     &__title {
@@ -12,6 +10,10 @@
         margin: 0;
         padding-bottom: 8px;
         font-family: $logo-font-family;
+
+        @include media(xxxs) {
+            font-size: 32px;
+        }
     }
 
     // .heroblock__text
@@ -23,17 +25,51 @@
         padding-left: 5px;
         padding-bottom: 48px;
         letter-spacing: 6.82px;
+
+        @include media(md) {
+            padding-bottom: 34px;
+        }
+
+        @include media(xxxs) {
+            font-size: 18px;
+        }
     }
 
     // .heroblock__input-wrapper
 
     &__input-wrapper {
+        display: flex;
         background-color: $white;
         margin: 0 auto;
         position: relative;
         margin-bottom: 214px;
         padding: 18px 31px;
         width: 580px;
+
+        @include media(md) {
+            margin-bottom: 150px;
+        }
+
+        @include media(sm) {
+            width: 450px;
+            padding: 14px 28px;
+            margin-bottom: 120px;
+
+        }
+
+        @include media(xs) {
+            width: 370px;
+        }
+
+        @include media(xxs) {
+            width: 250px;
+            padding: 10px 20px;
+        }
+
+        @include media(xxxs) {
+            width: 200px;
+            padding: 10px 10px;
+        }
     }
 
     // .heroblock__input
@@ -45,7 +81,19 @@
         outline: none;
         padding: 3px 3px;
         letter-spacing: 2.8px;
-        width: 370px;
+        flex-grow: 1;
+
+        @include media(xs) {
+            width: 300px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+
+        @include media(xxs) {
+            width: 300px;
+            font-size: 10px;
+            letter-spacing: .5px;
+        }
     }
 
     // .heroblock__button-wrapper
@@ -58,6 +106,15 @@
         padding: 15px 23px;
         font-size: 14px;
         display: flex;
+
+        @include media(sm) {
+            padding: 10px 19px;
+
+        }
+
+        @include media(xxs) {
+            padding: 5px 10px;
+        }
     }
 
     // .heroblock__button-img
@@ -67,6 +124,14 @@
         height: 16px;
         fill: #FFF;
         padding-right: 11px;
+
+        @include media(xs) {
+            padding-right: 5px;
+        }
+
+        @include media(xxs) {
+            padding-right: 0;
+        }
     }
 
     // .heroblock__button
@@ -79,6 +144,15 @@
         letter-spacing: 1.4px;
         line-height: 20px;
         padding: 0;
+
+        @include media(xs) {
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        @include media(xxs) {
+            display: none;
+        }
     }
 
     &__scrolldown {
@@ -109,6 +183,10 @@
 .heroblock__container {
     padding-top: 295px;
     padding-bottom: $container-bottom-padding;
+
+    @include media(md) {
+        padding-top: 160px;
+    }
 }
 
 .heroblock__row {

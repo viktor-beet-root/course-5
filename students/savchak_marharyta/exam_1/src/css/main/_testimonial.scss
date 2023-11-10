@@ -1,28 +1,46 @@
 .testimonial {
     color: $white;
     background-image: url("../../images/testimonial-bg.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+    @extend %background-positioning;
 
     &__container {
         padding-top: 120px;
         padding-bottom: 180px;
+
+        @include media(md) {
+            padding-top: 90px;
+            padding-bottom: 135px;
+        }
+
+        @include media(xs) {
+            padding: 70px 70px 100px 70px;
+        }
+
+        @include media(xxs) {
+            padding: 80px 55px 100px 55px;
+        }
     }
 
     // .testimonial__row
 
-    &__row {}
+    &__row {
+        margin: 0 auto;
+
+        @include media(xs) {
+            flex-direction: column;
+        }
+    }
 
     // .testimonial__title
 
     &__title {
-        margin: 0 auto;
+        margin: 0;
         font-family: $section-title-font;
         font-size: 36px;
         font-weight: 400;
         line-height: 40px;
         padding-bottom: 60px;
+        text-align: center;
     }
 
     &__text-quote {
@@ -42,6 +60,8 @@
 
     &__img {
         padding: 0;
+        object-fit: cover;
+        object-position: 70% 50%;
     }
 
     // .testimonial__info
@@ -49,6 +69,10 @@
     &__info {
         padding: 48px 60px;
         background-color: $dark-gray;
+
+        @include media(md) {
+            padding: 30px 45px;
+        }
 
     }
 
