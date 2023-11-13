@@ -20,19 +20,16 @@
 
     }
 
-
     &__text {
         line-height: 28px;
         letter-spacing: 1.6px;
         margin: 0 0 32px;
-
 
         @include media(sm) {
             margin: 0 0 20px 0;
             text-align: justify;
         }
     }
-
 
     &__image-house {
         display: block;
@@ -72,21 +69,27 @@
 }
 
 .btn {
-    display: inline-block;
-    background-color: $color-btn;
-    color: $default-body-color;
-    display: inline-flex;
-    align-items: center;
+    @include fonts-type($font-sub-font, $default-font-size, $font-weight-name, $line-height, $letter-spacing-menu, $text-transform-upper);
     text-decoration: none;
-    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 213px;
+    height: 60px;
 
+    border: 0;
+    background-image: url(../images/rectangle_8.svg);
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+}
 
-    &-basic {
-        padding: 20px 32px;
-        height: $btn-height-primary;
-        @include fonts-type($font-sub-font, 16px, $font-weight-name, $line-height, $letter-spacing-btn, $text-transform-upper);
+.btn-basic {
+    background-color: $color-blue-accent;
+    color: $color-white;
+
+    &:hover {
+        background-color: $color-dark-blue-accent;
     }
-
 }
 
 .way {
