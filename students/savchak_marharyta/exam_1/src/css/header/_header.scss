@@ -30,16 +30,13 @@
         justify-content: space-between;
         padding: 25px 15px;
 
-        @include media(lg) {
-            padding: 50px 15px;
-        }
-
         @include media(md) {
             padding: 15px 15px;
         }
 
         @include media(sm) {
-            padding: 10px 10px;
+            flex-direction: column;
+            align-items: center;
         }
 
         @include media(xs) {
@@ -50,39 +47,40 @@
 
 }
 
-.nav {
-    width: 576px;
-    padding-top: 10px;
-}
 
 .header__menu {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0;
     padding: 0;
+    gap: 38px;
 
-    @include media(lg) {
-        padding-left: 50px;
-
-    }
-
-    @include media(md) {
-        padding-left: 110px;
-    }
 
     @include media(sm) {
-        padding-left: 35px;
-        font-size: 10px;
+        display: block;
+
     }
 
-    @include media(xs) {
-        padding-left: 15px;
-    }
+    // @include media(lg) {
+    //     padding-left: 50px;
 
-    @include media(xxs) {
-        flex-direction: column;
-    }
+    // }
+
+    // @include media(md) {
+    //     padding-left: 110px;
+    // }
+
+    // @include media(sm) {
+    //     padding-left: 35px;
+    //     font-size: 10px;
+    // }
+
+    // @include media(xs) {
+    //     padding-left: 15px;
+    // }
+
 
     &_link:hover {
         color: $dark-gray;
@@ -116,6 +114,12 @@
 
     &_item {
         position: relative;
+
+        @include media(sm) {
+            border-bottom: 1px solid $dark-gray;
+            padding: 20px 0;
+            text-align: center;
+        }
     }
 
     &_item:hover {
@@ -129,67 +133,47 @@
     }
 }
 
+.menu-open-input {
+    @include visuality-hidden;
+}
+
+.menu-open-input {
+    @include visuality-hidden;
+}
+
 .menu-open-label {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    border: solid 1px $black;
 
-    .menu-open-input:checked+& {
-        .menu-open-label__line {
-            background-color: transparent;
+    &-wrapper {
+        text-transform: uppercase;
 
-            &::before {
-                top: auto;
-                transform: rotate(45deg);
-            }
-
-            &::after {
-                bottom: auto;
-                transform: rotate(-45deg);
-            }
+        @include media(sm) {
+            text-align: center;
         }
-    }
-
-    &__line {
-        position: relative;
-        display: block;
-        width: 70%;
-        background-color: $dark-gray;
-        height: 4px;
-        border-radius: 4px;
-
-        &::before,
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            background-color: $dark-gray;
-            border-radius: inherit;
-            position: absolute;
-        }
-
-        &::before {
-            top: -12px;
-        }
-
-        &::after {
-            bottom: -11px;
-        }
-
     }
 }
 
 .header__menu-wrapper {
-    @include media(xxs) {
-        position: fixed;
+    @include media(sm) {
+        position: sticky;
         width: 100%;
-        top: 53px;
-        bottom: 0;
-        background-color: $white;
+        top: 58px;
+        background-color: $blue;
+        display: none;
+
+        .menu-open-input:checked~& {
+            display: block;
+        }
+
+
     }
+}
+
+.header__menu_item:visited {
+    @include media(sm) {
+
+        .header__menu-wrapper {
+            display: none;
+        }
+    }
+
 }
