@@ -9,6 +9,7 @@ $padding-link-menu: 15px;
         top: 20px;
         background-color: rgba(83, 115, 253, .9);
 
+
         // .header__submenu_item
 
         &_item {
@@ -48,4 +49,9 @@ $padding-link-menu: 15px;
     pointer-events: none;
     transition: all .3s ease-in-out;
     padding-top: 25px;
+
+    @include media(sm) {
+        left: 200px;
+        top: -75px;
+    }
 }

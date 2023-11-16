@@ -52,13 +52,16 @@
     &__info {
         padding: 44px 32px;
         background-color: rgba(35, 35, 35, 0.90);
-        // width: 49%;
     }
 
     // .places__button-wrapper
 
     &__button-wrapper {
         padding: 16px 30px;
+
+        @include media(xxxs) {
+            padding: 10px 20px;
+        }
     }
 
     // .places__button
@@ -70,6 +73,10 @@
         text-decoration: none;
         text-transform: uppercase;
         font-size: $default-font-size;
+
+        @include media(xxxs) {
+            font-size: 12px;
+        }
 
     }
 

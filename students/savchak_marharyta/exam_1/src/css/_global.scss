@@ -31,19 +31,28 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1.12px;
-    // white-space: nowrap;
     z-index: 100;
     position: relative;
-
 }
 
 .btn-wrapper {
     background-color: $blue;
-    max-width: 150px;
     position: relative;
     z-index: 1;
+    width: 154px;
 
-    @include media(md) {}
+    @include media(xs) {
+        width: 154px;
+    }
+
+    @include media(xxs) {
+        width: 110px;
+        margin: 0 auto;
+    }
+
+    @include media(xxxs) {
+        width: 80px;
+    }
 }
 
 .btn-wrapper::before {
@@ -62,14 +71,26 @@ img {
     content: "";
     width: 0;
     height: 0;
-    border-left: 31px solid transparent;
-    border-top: 31px solid $blue ;
-    border-right: 31px solid $blue ;
-    border-bottom: 31px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 30px solid $blue ;
+    border-right: 30px solid $blue ;
+    border-bottom: 30px solid transparent;
     z-index: 3;
     position: absolute;
     top: 0;
     left: 24%;
+
+    @include media(xxs) {
+        left: 17%;
+    }
+
+    @include media(xxxs) {
+        left: 12%;
+        border-left: 24px solid transparent;
+        border-top: 24px solid $blue ;
+        border-right: 24px solid $blue ;
+        border-bottom: 24px solid transparent
+    }
 
 }
 

@@ -44,13 +44,26 @@
 
     &__button-wrapper {
         padding: 20px 20px;
-        margin: 0 auto;
 
+        @include media(xxxs) {
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
     }
 
     &__button {
-        white-space: nowrap;
+        @include media(xxs) {
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        @include media(xxxs) {
+            font-size: 8px;
+        }
+
     }
+
+
 
     &__button-wrapper::before {
         content: " ";
@@ -68,15 +81,26 @@
         content: "";
         width: 0;
         height: 0;
-        border-left: 30px solid transparent;
-        border-top: 30px solid $blue ;
-        border-right: 30px solid $blue ;
-        border-bottom: 30px solid transparent;
+        border-left: 28px solid transparent;
+        border-top: 28px solid $blue ;
+        border-right: 28px solid $blue ;
+        border-bottom: 28px solid transparent;
         z-index: 3;
         position: absolute;
         top: 0;
-        left: 27%;
+        left: 23%;
 
+        @include media(xxs) {
+            left: 22%;
+        }
+
+        @include media(xxxs) {
+            left: 16%;
+            border-left: 19px solid transparent;
+            border-top: 19px solid $blue ;
+            border-right: 19px solid $blue ;
+            border-bottom: 19px solid transparent;
+        }
 
     }
 
