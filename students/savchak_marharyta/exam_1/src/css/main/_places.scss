@@ -1,5 +1,4 @@
 .places {
-    color: $white;
     line-height: 28px;
     // .places_description
 
@@ -10,6 +9,7 @@
         margin: 0;
         padding-bottom: 24px;
         line-height: 28px;
+        color: $white;
     }
 
     // .places__container
@@ -37,6 +37,7 @@
         margin: 0;
         font-size: 20px;
         padding-bottom: 16px;
+        color: $white;
     }
 
     // .places__name
@@ -47,6 +48,7 @@
         font-size: 20px;
         margin: 0;
         padding-bottom: 17px;
+        color: $white;
     }
 
     &__info {

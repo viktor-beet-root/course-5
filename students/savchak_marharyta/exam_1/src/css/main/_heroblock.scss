@@ -1,7 +1,7 @@
 .heroblock {
     background-image: url("../../images/heroblock-bg.jpeg");
     @extend %background-positioning;
-    color: $white;
+
 
     &__title {
         text-transform: uppercase;
@@ -10,6 +10,7 @@
         margin: 0;
         padding-bottom: 8px;
         font-family: $logo-font-family;
+        color: $white;
 
         @include media(xxxs) {
             font-size: 32px;
@@ -25,6 +26,7 @@
         padding-left: 5px;
         padding-bottom: 48px;
         letter-spacing: 6.82px;
+        color: $white;
 
         @include media(md) {
             padding-bottom: 34px;

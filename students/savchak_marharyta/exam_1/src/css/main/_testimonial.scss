@@ -1,5 +1,4 @@
 .testimonial {
-    color: $white;
     background-image: url("../../images/testimonial-bg.jpeg");
     @extend %background-positioning;
 
@@ -25,6 +24,7 @@
 
     &__row {
         margin: 0 auto;
+        color: $white;
 
         @include media(xs) {
             flex-direction: column;
@@ -41,6 +41,7 @@
         line-height: 40px;
         padding-bottom: 60px;
         text-align: center;
+        color: $white;
     }
 
     &__text-quote {

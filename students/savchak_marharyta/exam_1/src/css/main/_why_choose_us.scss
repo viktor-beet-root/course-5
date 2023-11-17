@@ -1,7 +1,6 @@
 .why-choose-us {
     background-image: url("../../images/why_choose_us-bg.jpeg");
     @extend %background-positioning;
-    color: $white;
     // .why-choose-us__title
 
     &__title {
@@ -10,6 +9,7 @@
         font-size: 36px;
         margin: 0;
         padding-bottom: 24px;
+        color: $white;
 
         @include media(xs) {
             text-align: center;
@@ -24,7 +24,7 @@
         margin: 0;
         padding-bottom: 30px;
         line-height: 28px;
-
+        color: $white;
     }
 
     &__container {
@@ -43,6 +43,7 @@
     }
 
     &__button-wrapper {
+        color: $white;
         padding: 20px 20px;
 
         @include media(xxxs) {
