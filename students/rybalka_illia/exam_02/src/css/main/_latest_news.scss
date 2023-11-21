@@ -1,0 +1,221 @@
+.news {
+
+    // .news__section
+
+    &__section {
+        background: url(../images/background/bg-2.png), linear-gradient(237deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        padding-bottom: 130px;
+
+        .slick-slide {
+            margin: 10px;
+        }
+    }
+
+
+
+    // .news__heading
+
+    &__heading {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        color: $white-color;
+        text-align: center;
+        padding-top: 80px;
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 100px;
+            border: 1px solid $white-color;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 40px;
+        }
+    }
+
+    // .news__article
+
+    &__article {
+        width: 440px;
+        height: 550px;
+        background-color: $white-color;
+        display: flex;
+        position: relative;
+
+        @include media(xxs) {
+            width: 550px;
+        }
+
+        & .card__info {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            gap: 35px;
+
+        }
+    }
+
+    // .news__img
+
+    &__img {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    // .news__hdn-md
+
+    &__hdn-md {
+        @include new-font($default-font-name, 22px, 700, normal, normal);
+        color: $pickled-bluewood;
+
+        @include media(lg) {
+            font-size: 19px;
+        }
+    }
+
+    // .news__text
+
+    &__text {
+        @include new-font($opensans-font, 18px, 400, normal, normal);
+        color: $pickled-bluewood;
+        margin-top: -30px;
+
+        @include media(lg) {
+            margin-top: -10px;
+        }
+    }
+}
+
+.article-wrapper {
+    width: 100%;
+    padding: 20px;
+    position: relative;
+
+    & .slick-dots {
+        width: auto;
+        bottom: -15%;
+        left: 43%;
+        transform: translateY(-50%);
+
+        .slick-active button::before {
+            background-color: $white-color;
+        }
+
+        li button::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 1px solid $white-color;
+            border-radius: 50%;
+
+        }
+
+        @include media(sm) {
+            left: 45%;
+        }
+
+
+        @include media(xs) {
+            left: 35%;
+        }
+
+        @include media(xxs) {
+            left: 28%;
+        }
+    }
+}
+
+.slick-prev {
+    display: block;
+    position: absolute;
+    border-left: 2px solid $white-color;
+    border-top: 2px solid $white-color;
+    width: 10px;
+    height: 10px;
+    transform: rotate(-45deg);
+
+    &::before {
+        content: '';
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        border: 1px solid $white-color;
+        border-radius: 50%;
+        padding: 25px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.slick-next {
+    display: block;
+    position: absolute;
+    border-left: 2px solid $white-color;
+    border-top: 2px solid $white-color;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+
+    &::before {
+        content: '';
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        border: 1px solid $white-color;
+        border-radius: 50%;
+        padding: 27px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+.info-wrapper {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+
+    // .info-wrapper__img
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    // .info-wrapper__name
+
+    &__name {
+        @include new-font($default-font-name, 18px, 400, normal, normal);
+        color: $pickled-bluewood;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        margin-top: 6px;
+    }
+
+    // .info-wrapper__date
+
+    &__date {
+        @include new-font($default-font-name, 14px, 400, normal, normal);
+        color: $malibu-color;
+        margin-left: 15px;
+
+    }
+}

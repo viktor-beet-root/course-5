@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+    <title>Monticello</title>
+    <link rel="shortcut icon" href="./images/logo_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        @@include('./_menu.html')
+    </header>
+    <main class="main">
+        @@include('./_hero_block.html')
+        @@include('./_trade_center.html')
+        @@include('./_commerce_center.html')
+        @@include('./_latest_news.html')
+        @@include('./_gallery.html')
+        @@include('./_map.html')
+    </main>
+    <footer class="footer">
+        @@include('./_footer.html')
+    </footer>
+    <a class="scroll-to-top" href="#">
+        <svg class="top__circle">
+            <use xlink:href="./images/circle-up-regular.svg#circle"></use>
+        </svg>
+    </a>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

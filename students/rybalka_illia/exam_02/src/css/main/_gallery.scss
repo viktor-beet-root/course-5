@@ -1,0 +1,88 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+
+    // .gallery__section
+
+    &__section {
+        padding-bottom: 150px;
+    }
+
+    &__hdr {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        color: $pickled-bluewood;
+        text-align: center;
+        padding-top: 85px;
+        position: relative;
+
+        &::before {
+            content: '';
+            border: 1px solid $pickled-bluewood;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 50px;
+        }
+    }
+
+    &_svg {
+        width: 70px;
+        height: 70px;
+
+    }
+
+}
+
+.gallery__img {
+
+    &_first {
+        grid-column: 1 / span 2;
+        grid-row: 1 /span 2;
+
+        @include media(sm) {
+            grid-column: 1 / span 4;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.item {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__btn {
+    padding-top: 70px;
+    margin: 0 auto;
+}
+
+.btn-sm {
+    border: 1px solid $pickled-bluewood;
+    padding: 16px 32px;
+    text-align: center;
+    @include new-font($default-font-name, 14px, 400, normal, normal);
+    text-transform: uppercase;
+    color: $black-color;
+    background-color: $white-color;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: $pickled-bluewood;
+        color: $white-color;
+    }
+}

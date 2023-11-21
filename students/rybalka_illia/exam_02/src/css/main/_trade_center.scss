@@ -1,0 +1,124 @@
+.trade {
+
+    // .trade__section
+
+    &__section {
+        background-color: $white-color;
+        padding-bottom: 150px;
+    }
+
+    // .trade__title
+
+    &__title {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        color: $pickled-bluewood;
+        text-align: center;
+        position: relative;
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        &::before {
+            content: '';
+            border: 1px solid $pickled-bluewood;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 30px;
+        }
+    }
+
+    &_block {
+        @include media(sm) {
+            padding: 25px;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 90%;
+        height: 90%;
+        margin-left: 25px;
+        position: relative;
+        z-index: 1;
+    }
+
+    // .trade__heading-small 
+
+    &__heading-small {
+        @include new-font($default-font-name, 22px, 400, normal, normal);
+        text-transform: uppercase;
+        color: $pickled-bluewood;
+        margin-bottom: 0;
+    }
+
+    // .trade__heading-medium
+
+    &__heading-medium {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        text-transform: uppercase;
+        color: $pickled-bluewood;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    // .trade__text
+
+    &__text {
+        @include new-font($opensans-font, 18px, 400, normal, 30px);
+        color: $pickled-bluewood;
+    }
+
+    // .trade__icon-text
+
+    &__icon-text {
+        margin-top: 60px;
+        color: $black-color;
+        @include new-font($opensans-font, 15px, 400, italic, normal);
+    }
+
+    // .trade__icon
+
+    &__icon {
+        color: $pickled-bluewood;
+        @include new-font(15px, 400, normal, normal, 4.5px);
+    }
+}
+
+.square__img {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 80%;
+        height: 100%;
+        background: $malibu-color;
+        position: absolute;
+        top: -12%;
+        left: -25%;
+
+        @include media(sm) {
+            left: -10%;
+        }
+    }
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $pickled-bluewood;
+    padding: 16px 32px;
+    color: $black-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: $pickled-bluewood;
+        color: $white-color;
+    }
+}
