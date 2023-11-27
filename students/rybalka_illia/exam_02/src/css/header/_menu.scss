@@ -123,28 +123,6 @@
         }
     }
 
-    @include media(sm) {
-        display: none;
-        background-color: $heliotrope-color;
-        box-shadow: -1px 5px 29px -2px rgba(0, 0, 0, 0.48);
-        position: fixed;
-        top: 100px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        transform: translateX(-100%);
-        transition: transform .3s ease-in-out;
-
-        ._open & {
-            transform: translateX(0);
-        }
-    }
-
     // .menu__item
 
     &__item {
