@@ -1,5 +1,5 @@
 .testimonial {
-    background-image: url("../../images/testimonial-bg.jpeg");
+    background-image: url('../../images/testimonial-bg.jpeg');
     @extend %background-positioning;
 
     &__container {
