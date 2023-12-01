@@ -85,12 +85,12 @@
 }
 
 .first-place {
-    background-image: url('../../images/first_place-bg.jpeg');
+    background-image: url(../../images/first_place-bg.jpeg);
     @extend %background-positioning;
 }
 
 .second-place {
-    background-image: url('../../images/second_place-bg.jpeg');
+    background-image: url(../../images/second_place-bg.jpeg);
     @extend %background-positioning;
 
     &__box {
