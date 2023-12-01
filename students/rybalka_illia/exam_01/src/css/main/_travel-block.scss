@@ -3,29 +3,34 @@
     // .travel_textblock
 
     &__textblock {
-        width: 50%;
         background: rgba(35, 35, 35, 0.90);
-        margin-top: 240px;
-        margin-left: 120px;
-        padding: 20px;
+        width: 50%;
+        padding: 30px;
+        margin-top: 220px;
+        margin-right: 50%;
+
         box-sizing: border-box;
+        margin-bottom: 120px;
 
         @include media(md) {
             text-align: center;
             margin-left: 25%;
-            margin-top: 14%;
+            margin-top: 10%;
+            margin-bottom: 10%;
         }
 
         @include media(sm) {
             width: 70%;
             margin: 0 auto;
-            margin-top: 18%;
+            margin-top: 10%;
+            margin-bottom: 10%;
         }
 
         @include media(xs) {
             width: 100%;
             margin-left: 0;
-            margin-top: 25%;
+            margin-top: 10%;
+            margin-bottom: 10%;
         }
 
         @include media(xxs) {
@@ -42,8 +47,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 684px;
-
     }
 
     &__header {

@@ -4,7 +4,6 @@
 
     &__block {
         background-image: url(../images/spain2_bg.jpg);
-        height: 684px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -15,15 +14,16 @@
     &__textblock {
         background: rgba(35, 35, 35, 0.90);
         width: 50%;
-        padding: 20px;
-        margin-top: 200px;
-        margin-left: 400px;
+        padding: 30px;
+        margin-top: 220px;
+        margin-bottom: 120px;
+        margin-left: 50%;
         box-sizing: border-box;
 
         @include media(md) {
             text-align: center;
-            margin-left: 24%;
-            margin-top: 14%;
+            margin-left: 25%;
+            margin-top: 10%;
         }
 
         @include media (sm) {
@@ -35,7 +35,8 @@
         @include media(xs) {
             width: 100%;
             margin-left: 0;
-            margin-top: 25%;
+            position: relative;
+            bottom: 70px;
         }
 
         @include media(xxs) {

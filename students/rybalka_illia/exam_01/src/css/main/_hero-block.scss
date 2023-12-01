@@ -140,7 +140,7 @@
         flex-direction: column;
         justify-content: center;
         gap: 25px;
-        padding: 20px;
+        padding: 50px;
     }
 
 }
@@ -161,7 +161,7 @@
 
         &:first-child {
             margin-bottom: 15px;
-            margin-left: 45px;
+            margin-left: 15%;
 
             @include media(sm) {
                 margin-left: 0;
@@ -170,7 +170,7 @@
         }
 
         &:nth-child(2) {
-            margin-left: 120px;
+            margin-left: 28%;
 
             @include media(sm) {
                 margin-left: 20px;
@@ -234,7 +234,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 160px;
+    gap: 150px;
     margin-top: 90px;
     margin-bottom: 0;
 
