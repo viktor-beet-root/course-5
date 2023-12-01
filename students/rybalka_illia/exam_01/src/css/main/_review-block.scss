@@ -1,9 +1,9 @@
 .review {
-
     // .review_img
 
     &_img {
         display: block;
+        height: 100%;
 
         @include media(md) {
             margin: 0 auto;
@@ -48,8 +48,8 @@
     // .review__image-wrapper
 
     &__image-wrapper {
-        width: 40%;
-        display: block;
+        width: 50%;
+        // display: block;
 
         @include media(md) {
             width: 100%;
@@ -97,6 +97,7 @@
             @include new-font($default-font-name, 16px, 300, normal, 28px, 1.6px);
             color: $white-color;
             margin-top: -20px;
+            padding-right: 60px;
 
             @include media(md) {
                 padding: 10px;
