@@ -1,0 +1,325 @@
+.footer {
+    position: relative;
+    background: url(../images/background/footer-bg.png), linear-gradient(50deg, $malibu-color 25%, $heliotrope-color 75%);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding-top: 250px;
+    padding-bottom: 60px;
+}
+
+
+
+.contact {
+
+    // .contact__card
+
+    &__card {
+        background-image: url(../images/background/footer_city.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: 780px;
+        height: 450px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        background-color: $white-color;
+        padding: 20px;
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px -3px 18px -3px rgba(0, 0, 0, 0.27);
+
+        @include media(md) {
+            width: 740px;
+            height: 420px;
+            margin: 0 auto;
+        }
+
+        @include media(sm) {
+            width: 500px;
+            height: 700px;
+        }
+
+        @include media(xs) {
+            width: 400px;
+            height: 590px;
+        }
+
+        @include media(xxs) {
+            width: 95%;
+            height: auto;
+        }
+    }
+
+    // .contact__heading
+
+    &__heading {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        color: $pickled-bluewood;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            border: 1px solid $pickled-bluewood;
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            margin-top: 2%;
+        }
+
+        @include media(xs) {
+            font-size: 36px;
+        }
+
+        @include media(xxs) {
+            font-size: 26px;
+        }
+    }
+
+    // .contact__address
+
+    &__address {
+        @include new-font($default-font-name, 18px, 400, normal, 28px);
+        color: $black-color;
+        text-decoration: none;
+
+        &:first-child {
+            padding-bottom: 10px;
+        }
+
+        &:last-child {
+            padding-top: 25px;
+        }
+
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include media(sm) {
+            margin: 0 auto;
+        }
+
+        @include media(xxs) {
+            padding-top: 30px;
+        }
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    @include media(sm) {
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+}
+
+.form {
+    width: 80%;
+
+    @include media(sm) {
+        width: 100%;
+    }
+
+    &__label {
+        padding: 13px;
+    }
+
+}
+
+.ftr {
+
+    // .ftr__icon
+
+    &__icon {
+        fill: $heliotrope-color;
+    }
+
+    &__svg {
+        margin-right: 10px;
+    }
+
+    &__logo {
+        @include media(sm) {
+            width: 230px;
+        }
+    }
+
+    // .ftr__input
+
+    &__input {
+        border: 0;
+        border-bottom: 1px solid $pickled-bluewood;
+        background: transparent;
+        width: 100%;
+        padding-bottom: 15px;
+        font-size: 18px;
+        line-height: 27px;
+        color: $black-color;
+        opacity: .3;
+
+        &:focus {
+            outline: none;
+            opacity: 1;
+        }
+
+    }
+
+
+    // .ftr__copyright
+
+    &__copyright {
+        @include new-font($default-font-name, 14px, 400, normal, normal);
+        color: $white-color;
+    }
+}
+
+.button_footer {
+    text-align: right;
+    margin-right: 13px;
+
+    @include media(sm) {
+        text-align: center;
+    }
+}
+
+.btn_ftr {
+    border: 1px solid $pickled-bluewood;
+    padding: 10px 22px;
+    background: transparent;
+    @include new-font($default-font-name, 18px, 400, normal, 27px);
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+        background-color: $pickled-bluewood;
+        color: $white-color;
+    }
+}
+
+.footer {
+
+    // .footer__links
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        width: 770px;
+        margin: 0 auto;
+
+        @include media(md) {
+            width: 710px;
+        }
+
+        @include media(sm) {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 50px;
+            width: 400px;
+        }
+
+        @include media(xxs) {
+            width: 100%;
+        }
+    }
+}
+
+.logo__container {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    margin-left: -15px;
+
+    @include media(md) {
+        margin-left: 15px;
+    }
+
+    @include media(sm) {
+        margin: 0 auto;
+    }
+
+}
+
+.social {
+
+    &__links {
+
+        &_ftr {
+            display: inline-flex;
+            gap: 45px;
+            margin-top: 5px;
+            margin-right: 20px;
+        }
+
+    }
+
+    // .social__item
+
+    &__item {
+
+        // .social__item_ftr
+
+        &_ftr {
+            text-decoration: none;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: -5%;
+                left: -54%;
+                content: '';
+                display: block;
+                border: 1px solid $white-color;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                transition: all .3s ease-in-out;
+
+                @include media(sm) {
+                    top: -5px;
+                }
+            }
+
+            &:hover::after {
+                background-color: $white-color;
+                opacity: .3;
+            }
+        }
+    }
+
+    // .social__svg
+
+    &__svg {
+
+        // .social__svg_ftr
+
+        &_ftr {
+            width: 20px;
+            height: 20px;
+            fill: $white-color;
+        }
+    }
+}

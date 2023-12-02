@@ -1,0 +1,86 @@
+.commerce {
+
+    // .commerce__section
+
+    &__section {
+        background-color: $white-color;
+        padding-bottom: 100px;
+    }
+
+
+    // .commerce__heading-small
+
+    &__heading-small {
+        @include new-font($default-font-name, 22px, 400, normal, normal);
+        color: $pickled-bluewood;
+        margin-bottom: 0;
+    }
+
+    // .commerce__heading-medium
+
+    &__heading-medium {
+        @include new-font($default-font-name, 44px, 700, normal, normal);
+        color: $pickled-bluewood;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    // .commerce__text
+
+    &__text {
+        @include new-font($opensans-font, 18px, 400, normal, 30px);
+        color: $pickled-bluewood;
+        padding-right: 65px;
+    }
+
+    // .commerce__icon-text
+
+    &__icon-text {
+        @include new-font($opensans-font, 15px, 400, italic, normal);
+        color: $black-color;
+        padding-top: 45px;
+
+        @include media(sm) {
+            padding-bottom: 50px;
+        }
+    }
+
+    // .commerce__img
+
+    &__img {
+        display: block;
+        width: 90%;
+        height: 90%;
+        position: relative;
+        margin-left: 30px;
+    }
+
+    &_block {
+        @include media(sm) {
+            padding: 25px;
+        }
+    }
+}
+
+.square {
+
+    // .square_commerce
+
+    &_commerce {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 85%;
+            height: 100%;
+            background: $heliotrope-color;
+            position: absolute;
+            top: -12%;
+            right: -27%;
+
+            @include media(sm) {
+                right: -5%;
+            }
+        }
+    }
+}
