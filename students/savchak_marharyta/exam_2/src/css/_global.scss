@@ -1,0 +1,39 @@
+@include grid ();
+
+.only-desktop {
+    @include media(md) {
+        display: none !important;
+    }
+}
+
+.only-mobile {
+    @include media-m(md) {
+        display: none !important;
+    }
+}
+
+body {
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 18px;
+    color: $main-font-color;
+
+    @include media(md) {
+        font-size: 14px;
+    }
+}
+
+.container {
+    max-width: $container-max-with;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 44px;
+
+    @include media(md) {
+        font-size: 30px;
+    }
+}
