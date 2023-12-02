@@ -9,6 +9,7 @@ import scrollMenuItem from './headerMenuScroll.js';
 import btnGallery from './galleryBtn.js';
 import createValidation from './formValidation.js';
 import scrollDown from './scrollDown.js';
+import scrollTop from './scrollTop.js';
 
 
 heroSlider();
@@ -18,3 +19,4 @@ scrollMenuItem();
 btnGallery();
 createValidation();
 scrollDown();
+scrollTop();
