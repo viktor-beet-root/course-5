@@ -1,0 +1,42 @@
+// colors
+$white-color: #fff;
+$purple-color: #7E5AFF;
+$blue-color: #55B7FF;
+$bluewood: #2C4058;
+$black-color: #000;
+$gradient-color: linear-gradient(237deg, #24CCFA 11.16%, #3C7FD4 89.18%);
+$gradient-bg: linear-gradient(90deg, rgba(85, 183, 255, 0.9) 20%, rgba(126, 90, 255, 0.9) 68%);
+$main-font-color: $bluewood;
+//dots-color
+$dots-color: $white-color;
+$dots-bg-color: $dots-color;
+$border-dots: 1px solid $dots-color;
+
+$black-color: #000;
+$dark-grey: #333;
+$icon-color: $white-color;
+$color-mobile-menu: rgba(83, 115, 253, 0.9);
+
+// fonts
+$fallback: Arial, Helvetica, sans-serif;
+$default-font-name: 'Montserrat';
+$main-font: $default-font-name, $fallback;
+$secondary-font: 'Open Sans', $fallback;
+$menu-font: 'Source Sans 3', $fallback;
+$font-path: './fonts/';
+
+// container
+$container-padding: 15px;
+$container-max-with: 1170px;
+$gap: 15px;
+$default-coutn-col: 12;
+$default-width: 1170px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+    "xxxs": 320px
+);
