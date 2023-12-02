@@ -1,0 +1,179 @@
+$menu-border-color: $border-dots;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+
+    &.change-bg {
+        background: $gradient-bg;
+    }
+}
+
+.nav-wrapper {
+    @include flex-jsc-al(space-between, center);
+
+    @include media(md) {
+        &__logo {
+            order: 2;
+            text-align: end;
+        }
+    }
+}
+
+.menu {
+    @include flex-jsc-al(space-between, center);
+
+
+    @include media(md) {
+        display: none;
+        background: $gradient-bg;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        left: 0;
+        height: fit-content;
+        width: 100%;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 0 25px;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+
+        ._open & {
+            transform: translateX(0);
+        }
+    }
+
+
+    &__link {
+        font-family: $menu-font;
+        font-size: 14px;
+        font-size: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white-color;
+        position: relative;
+    }
+
+    &__link::before {
+        content: '';
+        display: block;
+        border: $menu-border-color;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: -24px;
+    }
+
+    &__link:hover::before {
+        background-color: $white-color;
+    }
+}
+
+.social-list {
+    @include flex-jsc-al(center, center);
+    gap: 20px;
+
+    &__item {
+        position: relative;
+    }
+}
+
+.icon {
+    fill: $icon-color;
+}
+
+.icon-facebook {
+    @include pos-absolute(11px, 14px);
+    fill: $icon-color;
+    width: 10px;
+    height: 16px;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    fill: none;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.5;
+        transform: scale(1.5);
+    }
+}
+
+.icon-twitter {
+    @include pos-absolute(11px, 12px);
+    width: 16px;
+    height: 18px;
+}
+
+.icon-instagram {
+    @include pos-absolute(11px, 13px);
+    width: 14px;
+    height: 18px;
+}
+
+.menu-open-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 6px;
+    border: $menu-border-color;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+
+    ._open & {
+        .menu-open-btn__line {
+            background-color: transparent;
+
+            &::before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__line {
+        display: block;
+        position: relative;
+        width: 70%;
+        background-color: $white-color;
+        height: 4px;
+        border-radius: 4px;
+        transition: background-color 0.3s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $white-color;
+            border-radius: inherit;
+            position: absolute;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &::before {
+            top: -11px;
+        }
+
+        &::after {
+            bottom: -11px;
+        }
+
+    }
+}
