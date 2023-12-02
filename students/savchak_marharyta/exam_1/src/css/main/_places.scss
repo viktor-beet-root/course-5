@@ -85,13 +85,17 @@
 }
 
 .first-place {
-    background-image: url(../../images/first_place-bg.jpeg);
-    @extend %background-positioning;
+    background: url(../../images/first_place-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .second-place {
-    background-image: url(../../images/second_place-bg.jpeg);
-    @extend %background-positioning;
+    background: url(../../images/second_place-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__box {
         float: right;

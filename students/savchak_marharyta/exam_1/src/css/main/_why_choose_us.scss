@@ -1,6 +1,8 @@
 .why-choose-us {
-    background-image: url(../../images/why_choose_us-bg.jpeg);
-    @extend %background-positioning;
+    background: url(../../images/why_choose_us-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     // .why-choose-us__title
 
     &__title {

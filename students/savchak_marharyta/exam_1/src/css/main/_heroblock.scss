@@ -1,6 +1,8 @@
 .heroblock {
-    background-image: url(../../images/heroblock-bg.jpeg);
-    @extend %background-positioning;
+    background: url(../../images/heroblock-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
 

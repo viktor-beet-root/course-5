@@ -1,6 +1,8 @@
 .testimonial {
-    background-image: url(../../images/testimonial-bg.jpeg);
-    @extend %background-positioning;
+    background: url(../../images/testimonial-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__container {
         padding-top: 120px;
