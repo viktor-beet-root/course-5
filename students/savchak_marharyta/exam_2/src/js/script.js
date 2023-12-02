@@ -5,7 +5,9 @@ import 'slick-carousel';
 
 import heroSlider from './slider/heroSlider.js';
 import changeColorItemBg from './changeHeaderItemColor.js';
+import scrollMenuItem from './headerMenuScroll.js';
 
 
 heroSlider();
 changeColorItemBg();
+scrollMenuItem();
