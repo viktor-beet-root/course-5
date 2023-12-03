@@ -60,7 +60,6 @@ menuOpenButton.on('click', function (e) {
   jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).closest(navClass).toggleClass(addClassOpen, !isOpenMenu);
   isOpenMenu = false;
 });
-/* harmony default export */ __webpack_exports__["default"] = ((jquery__WEBPACK_IMPORTED_MODULE_1___default()));
 
 /***/ }),
 
@@ -232,6 +231,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _formValidation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./formValidation.js */ "./src/js/formValidation.js");
 /* harmony import */ var _scrollDown_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./scrollDown.js */ "./src/js/scrollDown.js");
 /* harmony import */ var _scrollTop_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./scrollTop.js */ "./src/js/scrollTop.js");
+/* harmony import */ var _burgerMenu_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./burgerMenu.js */ "./src/js/burgerMenu.js");
+
 
 
 
@@ -18356,8 +18357,8 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	__webpack_require__("./src/js/burgerMenu.js");
 /******/ 	// This entry module is referenced by other modules so it can't be inlined
+/******/ 	__webpack_require__("./src/js/burgerMenu.js");
 /******/ 	__webpack_require__("./src/js/changeHeaderItemColor.js");
 /******/ 	__webpack_require__("./src/js/formValidation.js");
 /******/ 	__webpack_require__("./src/js/galleryBtn.js");

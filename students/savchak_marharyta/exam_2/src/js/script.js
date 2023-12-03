@@ -10,6 +10,7 @@ import btnGallery from './galleryBtn.js';
 import createValidation from './formValidation.js';
 import scrollDown from './scrollDown.js';
 import scrollTop from './scrollTop.js';
+import "./burgerMenu.js";
 
 const body = $("html, body");
 export default body;

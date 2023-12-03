@@ -34,4 +34,3 @@ menuOpenButton.on('click', function (e) {
 
 });
 
-export default $;
