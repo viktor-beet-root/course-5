@@ -1,0 +1,25 @@
+.scroll-to-top {
+    display: block;
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+
+    .icon-circle {
+        transition: transform 0.3s ease-in-out;
+        border-radius: 50%;
+        fill: $purple-color;
+
+        &:hover {
+            transform: scale(1.5);
+            opacity: 0.8;
+        }
+    }
+
+    .icon-down-arrow {
+        transform: rotate(180deg);
+        width: 10px;
+        height: 18px;
+        fill: $blue-color;
+        @include pos-absolute(11px, 15px);
+    }
+}

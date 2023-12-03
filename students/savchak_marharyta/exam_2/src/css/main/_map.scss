@@ -1,0 +1,115 @@
+.map {
+    position: relative;
+
+    &__bg {
+        width: 100%;
+    }
+}
+
+.form-wrapper {
+    min-width: 770px;
+    background-color: $white-color;
+    margin: 0 auto;
+    padding: 60px;
+    position: absolute;
+    right: 50%;
+    top: 127px;
+    transform: translateX(50%);
+
+    @include media(md) {
+        min-width: fit-content;
+        padding: 30px;
+        top: 70px;
+    }
+
+    @include media(sm) {
+        width: calc(100% - 60px);
+        top: 150px;
+    }
+
+    &__title {
+        position: relative;
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 40px 0;
+
+        &::before {
+            content: '';
+            @include pos-absolute(0, 50%);
+            transform: translateX(-50%);
+            display: block;
+            width: calc(100% - 70%);
+            height: 0.1px;
+            background-color: $bluewood;
+
+        }
+    }
+}
+
+.contacts {
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    @include media(md) {
+        gap: 10px;
+    }
+
+    a {
+        text-decoration-line: none;
+        color: $black-color;
+
+    }
+
+    .icon {
+        fill: $purple-color;
+    }
+
+    &__adress {
+
+
+        .icon-mark-map {
+            height: 17px;
+            width: 15px;
+        }
+    }
+}
+
+.icon-phone {
+    height: 26px;
+    width: 17px;
+}
+
+.icon-mail {
+    height: 17px;
+    width: 15px;
+}
+
+.icon-time {
+    height: 17px;
+    width: 15px;
+}
+
+.form-control {
+    font-family: $main-font;
+    font-size: 18px;
+    border-bottom: 1px solid black;
+    opacity: 0.5;
+    line-height: 2.5;
+    width: calc(100% - 25px);
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.just-validate-error-label {
+    font-size: 14px;
+}
+
+.btn-primary {
+    margin-top: 30px;
+    float: right;
+}

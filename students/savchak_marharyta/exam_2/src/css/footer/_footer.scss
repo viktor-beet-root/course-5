@@ -1,0 +1,33 @@
+.footer {
+    background-image: $gradient-bg, url('../images/footer-bg.jpg');
+    padding: 200px 0 230px 0;
+
+    @include media(sm) {
+        padding: 250px 0 50px 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            object-fit: none;
+        }
+
+        @include media(sm) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__copyrights {
+        color: $white-color;
+        font-size: 14px;
+        padding-top: 41px;
+    }
+}
+
+.footer-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+}
