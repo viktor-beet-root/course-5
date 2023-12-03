@@ -5,12 +5,11 @@
     background-repeat: no-repeat;
     padding: 0;
     position: relative;
-    // width: 100dvw;
-    // height: 100dvh;
+    height: 100vh;
 
-    // @include media(md) {
-    //     height: 100dvh;
-    // }
+    @include media(xs) {
+        height: 70%;
+    }
 
     @include media(xs) {
         height: 70%;
