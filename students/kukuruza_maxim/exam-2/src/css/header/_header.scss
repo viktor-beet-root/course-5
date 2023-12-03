@@ -28,7 +28,12 @@
     }
 
     transition: all .3s;
+
+    @include media(md) {
+        width: 170px;
+    }
 }
+
 
 .menu {
     display: flex;
@@ -37,12 +42,13 @@
     text-transform: uppercase;
     font-size: 14px;
 
-    @include media(md) {
-        width: 992px;
 
-    }
 
     &__item {
+        @include media(sm) {
+            display: none;
+        }
+
 
         &:hover {
 
@@ -64,10 +70,8 @@
             background: transparent;
             transition: all .3s;
 
-            @include media(sm) {
-                width: 10px;
-                height: 10px;
-                margin-left: -30px;
+            @include media(md) {
+                display: none;
             }
         }
     }
@@ -75,6 +79,14 @@
     &__link {
         color: $white-color;
         text-decoration: none;
+
+        @include media(lg) {
+            font-size: 12px;
+        }
+
+        @include media(md) {
+            font-size: 11px;
+        }
 
     }
 
@@ -84,6 +96,10 @@
         gap: 20px;
 
         &-item {
+            @include media(md) {
+                width: 30px;
+            }
+
             &:hover {
                 transform: scale(1.15)
             }
@@ -97,5 +113,60 @@
     &__nav {
         @extend .menu;
         gap: 70px;
+
+        @include media(lg) {
+            gap: 40px;
+
+        }
+
+        @include media(md) {
+            gap: 20px;
+
+        }
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(7px);
+    background: rgba($color: #000000, $alpha: .5);
+    color: black;
+    transform: translateX(100%);
+
+    @include media(sm) {
+
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    .menu__social {
+        gap: 20px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .menu__item {
+        display: flex;
+        width: 100%;
+        height: 40px;
+    }
+}
+
+.menu-icon {
+    fill: #fff;
+
+    @include media-m(sm) {
+        display: none;
+    }
+
+    @include media(sm) {
+        display: flex;
     }
 }
