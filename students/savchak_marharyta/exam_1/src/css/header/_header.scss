@@ -120,8 +120,8 @@
         position: relative;
 
         @include media(sm) {
-            padding: 20px 0;
             text-align: center;
+            padding: 10px;
         }
     }
 
@@ -142,14 +142,64 @@
 
 .menu-open-label {
 
-    &-wrapper {
-        text-transform: uppercase;
 
-        @include media(sm) {
-            text-align: center;
+    @include media(sm) {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        border-color: $dark-gray;
+
+        .menu-open-input:checked+& {
+            .menu-open-label__line {
+                background-color: transparent;
+
+                &::before {
+                    top: 0;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__line {
+        position: relative;
+        display: block;
+        width: 70%;
+        background-color: $dark-gray;
+        height: 4px;
+        border-radius: 4px;
+        transition: background-color .3s ease-in-out;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $dark-gray;
+            border-radius: inherit;
+            position: absolute;
+            transition: all .3s ease-in-out;
+        }
+
+        &::before {
+            top: -11px;
+        }
+
+        &::after {
+            bottom: -11px;
         }
     }
 }
+
 
 .header__menu-wrapper {
     @include media(sm) {
@@ -161,6 +211,7 @@
 
         .menu-open-input:checked~& {
             display: block;
+
         }
 
 

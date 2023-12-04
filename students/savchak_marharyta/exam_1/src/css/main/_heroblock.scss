@@ -4,14 +4,13 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-
+    height: 100vh;
 
     &__title {
         text-transform: uppercase;
         text-align: center;
         font-size: 48px;
         margin: 0;
-        padding-bottom: 8px;
         font-family: $logo-font-family;
         color: $white;
 
@@ -47,9 +46,9 @@
         background-color: $white;
         margin: 0 auto;
         position: relative;
-        margin-bottom: 214px;
         padding: 18px 31px;
         width: 580px;
+        margin-bottom: 10vh;
 
         @include media(md) {
             margin-bottom: 150px;
@@ -87,6 +86,7 @@
         padding: 3px 3px;
         letter-spacing: 2.8px;
         flex-grow: 1;
+
 
         @include media(xs) {
             width: 300px;
@@ -165,6 +165,7 @@
         flex-direction: column;
         margin: 0 auto;
 
+
         &_text {
             color: $white;
             text-decoration: none;
@@ -186,7 +187,7 @@
 }
 
 .heroblock__container {
-    padding-top: 295px;
+    padding-top: 30vh;
     padding-bottom: $container-bottom-padding;
 
     @include media(md) {
