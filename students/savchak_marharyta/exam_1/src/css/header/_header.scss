@@ -1,8 +1,8 @@
-@import "./menu";
-
 .header {
     background-color: $blue ;
     // .header__title
+    height: 10vh;
+
 
     &__title {
         padding-top: 5px;
@@ -28,11 +28,8 @@
     &__container {
         display: flex;
         justify-content: space-between;
-        padding: 25px 15px;
+        padding: 3vh;
 
-        @include media(md) {
-            padding: 15px 15px;
-        }
 
         @include media(sm) {
             flex-direction: column;
@@ -40,10 +37,6 @@
             padding-bottom: 0;
             padding-left: 0;
             padding-right: 0;
-        }
-
-        @include media(xs) {
-            padding: 20px 20px;
         }
     }
 
@@ -63,8 +56,7 @@
 
     @include media(sm) {
         display: block;
-        position: relative;
-
+        height: 90vh;
     }
 
     // @include media(lg) {
@@ -106,22 +98,28 @@
             font-size: 13px;
         }
 
-        @include media(xs) {
-            font-size: 12px;
+        @include media(sm) {
+            font-size: 20px;
         }
 
         // @include media(xxs) {
         //     font-size: 8px;
         // }
 
+        .header__menu_link:checked {}
+
     }
 
     &_item {
-        position: relative;
+
 
         @include media(sm) {
+            top: 0;
             text-align: center;
-            padding: 10px;
+            padding: 30px;
+            border-bottom: 1px solid $white;
+            margin-left: 30px;
+            margin-right: 30px;
         }
     }
 
@@ -134,6 +132,12 @@
 
         }
     }
+
+    &_item:first-child {
+        @include media(sm) {
+            padding-top: 90px;
+        }
+    }
 }
 
 .menu-open-input {
@@ -144,8 +148,8 @@
 
 
     @include media(sm) {
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -172,9 +176,9 @@
     &__line {
         position: relative;
         display: block;
-        width: 70%;
+        width: 100%;
         background-color: $dark-gray;
-        height: 4px;
+        height: 3px;
         border-radius: 4px;
         transition: background-color .3s ease-in-out;
 
@@ -203,17 +207,22 @@
 
 .header__menu-wrapper {
     @include media(sm) {
-        position: sticky;
+        position: absolute;
         width: 100%;
-        top: 58px;
+        top: 0;
+        transform: translateX(-100vw);
         background-color: $blue;
         display: none;
+        background-color: rgba(83, 115, 253, .9);
+        display: block;
+        transition: transform .3s ease-in-out;
+
 
         .menu-open-input:checked~& {
-            display: block;
+            transform: translateX(0);
+            transition: transform .3s ease-in-out;
 
         }
-
 
     }
 }
