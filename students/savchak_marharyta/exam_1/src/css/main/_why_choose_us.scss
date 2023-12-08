@@ -39,8 +39,12 @@
             padding-bottom: 90px;
         }
 
-        @include media(sm) {
-            padding-right: 60px;
+        @include media(xs) {
+            padding: 80px;
+        }
+
+        @include media(xxs) {
+            padding: 60px;
         }
     }
 
@@ -110,7 +114,6 @@
     &__row {
         display: flex;
         justify-content: space-around;
-        margin: 0 auto;
 
         @include media(sm) {
             justify-content: space-between;
@@ -118,6 +121,7 @@
 
         @include media(xs) {
             flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -146,22 +150,16 @@
             padding-top: 20px;
         }
 
-        @include media(xs) {
-            flex-direction: row;
-
-        }
     }
 }
 
 .right-img {
-    width: 350px;
     padding-left: 74px;
 
     @include media(sm) {
         padding-left: 0;
+
     }
 }
 
-.left-img {
-    width: 350px;
-}
+.left-img {}

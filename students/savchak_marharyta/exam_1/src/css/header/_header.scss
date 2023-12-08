@@ -31,13 +31,6 @@
         padding: 2vh;
 
 
-        @include media(sm) {
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 0;
-            padding-left: 0;
-            padding-right: 0;
-        }
     }
 
 
@@ -58,25 +51,6 @@
         display: block;
         height: 93vh;
     }
-
-    // @include media(lg) {
-    //     padding-left: 50px;
-
-    // }
-
-    // @include media(md) {
-    //     padding-left: 110px;
-    // }
-
-    // @include media(sm) {
-    //     padding-left: 35px;
-    //     font-size: 10px;
-    // }
-
-    // @include media(xs) {
-    //     padding-left: 15px;
-    // }
-
 
     &_link:hover {
         color: $dark-gray;
@@ -121,16 +95,6 @@
         }
     }
 
-    &_item:hover {
-
-        .submenu {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: all;
-
-        }
-    }
-
     &_item:first-child {
         @include media(sm) {
             padding-top: 90px;
@@ -144,15 +108,13 @@
 
 .menu-open-label {
 
-
     @include media(sm) {
         width: 30px;
         height: 30px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 1vh 1vw;
+        justify-content: flex-end;
         border-radius: 6px;
-        border-color: $dark-gray;
 
         .menu-open-input:checked+& {
             .menu-open-label__line {
@@ -175,7 +137,7 @@
         position: relative;
         display: block;
         width: 100%;
-        background-color: $dark-gray;
+        background-color: $white;
         height: 3px;
         border-radius: 4px;
         transition: background-color .3s ease-in-out;
@@ -186,7 +148,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            background-color: $dark-gray;
+            background-color: $white;
             border-radius: inherit;
             position: absolute;
             transition: all .3s ease-in-out;
@@ -208,9 +170,9 @@
         position: absolute;
         width: 100%;
         top: 0;
+        left: 0;
         transform: translateX(-100vw);
         background-color: $blue;
-        display: none;
         background-color: rgba(83, 115, 253, .9);
         display: block;
         transition: transform .3s ease-in-out;

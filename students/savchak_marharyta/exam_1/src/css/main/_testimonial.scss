@@ -14,11 +14,11 @@
         }
 
         @include media(xs) {
-            padding: 70px 70px 100px 70px;
+            padding: 80px;
         }
 
         @include media(xxs) {
-            padding: 80px 55px 100px 55px;
+            padding: 30px;
         }
     }
 
@@ -44,6 +44,10 @@
         padding-bottom: 60px;
         text-align: center;
         color: $white;
+
+        @include media(xxs) {
+            padding-bottom: 30px;
+        }
     }
 
     &__text-quote {
@@ -75,6 +79,10 @@
 
         @include media(md) {
             padding: 30px 45px;
+        }
+
+        @include media(xxs) {
+            padding: 20px;
         }
 
     }
