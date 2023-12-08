@@ -25,6 +25,12 @@
     &__instagram:hover {
         stroke-width: 2px;
     }
+
+    &__facebook:focus,
+    &__twitter:focus,
+    &__instagram:focus {
+        outline: none;
+    }
 }
 
 .socials-items {

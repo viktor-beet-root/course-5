@@ -14,7 +14,7 @@ $('.hero-slider').slick({
     slidesToScroll: 1,
     verticalSwiping: false,
     arrows: false,
-    autoplay: true,
+    autoplay: false,
     pauseOnFocus: false,
 });
 
@@ -172,13 +172,19 @@ const scrollToTopBtn = document.querySelector('.scroll-to-top');
 const optionsScroll = {
     root: null,
     rootMargin: "0px",
-    threshold: .8,
+    threshold: .2,
 };
 
 const scrollToTop = function (entries, scrollObserver) {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             scrollToTopBtn.style.display = 'none'
+
+            $('.scroll-to-top').on('click', function (e) {
+                e.preventDefault();
+
+                body.stop().animate({ scrollTop: 0 }, 800);
+            });
 
         } else {
             scrollToTopBtn.style.display = 'block';
@@ -259,3 +265,22 @@ contactFormValidation(getInTouchForm, getUserData);
 
 // change place (Media Queries)
 
+
+// gallery
+const imgBig = document.querySelectorAll('.xxs');
+
+function addStyletoImg() {
+    if (mediaQueryImgBig.matches) {
+        imgBig.forEach(item => item.classList.add('-big'));
+    } else {
+        imgBig.forEach(item => item.classList.remove('-big'));
+    }
+}
+
+const mediaQueryImgBig = window.matchMedia("(max-width: 480px)");
+
+mediaQueryImgBig.addEventListener("change", function () {
+    addStyletoImg();
+});
+
+addStyletoImg();

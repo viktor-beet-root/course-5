@@ -50,6 +50,7 @@
 
     &__item {
         position: relative;
+        outline: none;
 
         &.active {
             &::before{
@@ -101,6 +102,11 @@
         text-decoration:none;
         text-transform: uppercase;
         padding: 15px;
+        outline: none;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 

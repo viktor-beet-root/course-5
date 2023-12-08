@@ -93,7 +93,14 @@
 	// .hero-slider__container
 
 	&__container {
-		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		text-align: center;
 		z-index: 10;
 	}
@@ -102,8 +109,6 @@
 
 	&__title {
 		color: $white-color;
-		padding-top: 306px;
-		padding-bottom: 20px;
 		
 		@include media(md) {
 			font-size: 65px;
@@ -126,20 +131,13 @@
 	}
 
 	// .hero-slider__subtitle
-
 	&__subtitle {
 		line-height: normal;
 		letter-spacing: 5.4px;
 		color: $white-color;
-		padding-bottom: 240px;
 
 		@include media() {
 			font-size: 12px;
-			padding-bottom: 126px;
-		}
-
-		@include media(xs) {
-			padding-bottom: 126px;
 		}
 
 		@include media(xxs) {
@@ -148,12 +146,19 @@
 		}
 	}
 
+
 	// .hero-slider__icon
 	
 	&__icon{
-		@include media(xxs) {
-			padding-top: 50px;
-		}
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		bottom: 5%;
+		transform: translateX(-50%);
+
+		// @include media(xxs) {
+		// 	padding-top: 50px;
+		// }
 
 	}
 }

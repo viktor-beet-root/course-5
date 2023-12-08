@@ -43,6 +43,10 @@
             }
         }
 
+        @include media (lg) {
+            padding-bottom: 75px;
+        }
+
         @include media (xs) {
             padding-bottom: 75px;
         }
@@ -99,34 +103,7 @@
             z-index: -10;
 
             @include media (lg) {
-                width: 580px;
-                left: 5%;
-            }
-
-            @include media (md) {
-                width: 400px;
-                height: 335px;
-                left: 8%;
-            }
-
-            @include media () {
-                width: 630px;
-                height: 470px;
-                top: 150px;
-                left: 7%;
-            }
-
-            @include media (xs) {
-                width: 500px;
-                height: 370px;
-                left: 3%;
-            }
-
-            @include media (xxs) {
-                height: 185px;
-                width: 280px;
-                top: 95px;
-                left: 2%;
+                display: none;
             }
         }
     
@@ -145,34 +122,7 @@
                 z-index: -10;
 
                 @include media (lg) {
-                    width: 580px;
-                    right: 3%;
-                }
-
-                @include media (md) {
-                    width: 400px;
-                    height: 335px;
-                    right: 10%;
-                    bottom: 97px;
-                }
-
-                @include media () {
-                    width: 630px;
-                    height: 470px;
-                    right: 2%;
-                    bottom: 60px;
-                }
-
-                @include media (xs) {
-                    width: 500px;
-                    height: 370px;
-                    bottom: 50px;
-                    right: unset;
-                }
-
-                @include media (xxs) {
-                    height: 185px;
-                    width: 280px;
+                    display: none;
                 }
             }
         }
@@ -192,21 +142,22 @@
         }
 
         @include media (lg) {
-            width: 540px;
+            width: 500px;
         }
 
         @include media (md) {
-            width: 400px;
-            height: 335px;
+            width: 390px;
+            height: 315px;
         }
 
         @include media () {
-            width: 630px;
-            height: 470px;
+            width: 500px;
+            height: 430px;
+            margin: 0 auto;
         }
 
         @include media (xs) {
-            width: 500px;
+            width: 320px;
             height: 370px;
             margin: 0 auto;
         }
@@ -221,7 +172,7 @@
     // .about__content-wrapper
 
     &__content-wrapper {
-        padding-right: 40px;
+        padding: 0 40px;
 
         @include media () {
             padding-left: 40px;
@@ -233,6 +184,7 @@
 
         &-reverse {
             padding-right: 40px;
+            padding: 0 40px;
 
             @include media () {
                 padding-left: 40px;
@@ -279,36 +231,28 @@
     // .about__content
 
     &__content {
-        width: 470px;
         padding-bottom: 40px;
-
-        @include media (md) {
-            width: 430px;
-        }
 
         @include media () {
             font-size: 16px;
-            width: unset;
         }
 
         @include media (xs) {
             font-size: 14px;
-            width: 400px;
         }
 
         @include media (xxs) {
-            width: 365px;
             padding-bottom: 20px;
-        }
-
-        @media screen and (max-width: 390px) {
-            width: 300px;
         }
     }
 
     // .about__btn
 
     &__btn {
+        @include media (md) {
+            width: 145px;
+        }
+
         @include media (xxs) {
             width: 145px;
         }
