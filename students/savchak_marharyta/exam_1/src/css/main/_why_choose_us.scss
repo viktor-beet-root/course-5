@@ -1,0 +1,165 @@
+.why-choose-us {
+    background: url(../images/why_choose_us-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // .why-choose-us__title
+
+    &__title {
+        font-family: $section-title-font;
+        font-weight: 400;
+        font-size: 36px;
+        margin: 0;
+        padding-bottom: 24px;
+        color: $white;
+
+        @include media(xs) {
+            text-align: center;
+        }
+    }
+
+    // .why-choose-us__text
+
+    &__text {
+        font-weight: 300;
+        letter-spacing: 1.6px;
+        margin: 0;
+        padding-bottom: 30px;
+        line-height: 28px;
+        color: $white;
+    }
+
+    &__container {
+        padding-top: 120px;
+        padding-bottom: 124px;
+        padding-right: 112px;
+
+        @include media(md) {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        @include media(xs) {
+            padding: 80px;
+        }
+
+        @include media(xxs) {
+            padding: 60px;
+        }
+    }
+
+    &__button-wrapper {
+        color: $white;
+        padding: 20px 20px;
+
+        @include media(xxxs) {
+            padding: 10px 10px;
+            margin: 0 auto;
+        }
+    }
+
+    &__button {
+        @include media(xxs) {
+            white-space: nowrap;
+            font-size: 12px;
+        }
+
+        @include media(xxxs) {
+            font-size: 8px;
+        }
+
+    }
+
+
+
+    &__button-wrapper::before {
+        content: " ";
+        background-color: $darker-blue;
+        width: 52%;
+        height: 100%;
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+
+    &__button-wrapper::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 28px solid transparent;
+        border-top: 28px solid $blue ;
+        border-right: 28px solid $blue ;
+        border-bottom: 28px solid transparent;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 23%;
+
+        @include media(xxs) {
+            left: 22%;
+        }
+
+        @include media(xxxs) {
+            left: 16%;
+            border-left: 19px solid transparent;
+            border-top: 19px solid $blue ;
+            border-right: 19px solid $blue ;
+            border-bottom: 19px solid transparent;
+        }
+
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-around;
+
+        @include media(sm) {
+            justify-content: space-between;
+        }
+
+        @include media(xs) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content-wrapper {
+        padding-top: 70px;
+        padding-left: 0;
+        padding-right: 0;
+
+        @include media(md) {
+            padding-top: 20px;
+        }
+
+        @include media(sm) {
+            padding-top: 0;
+        }
+    }
+
+    &__img-wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 6px;
+        gap: 16px;
+
+        @include media(sm) {
+            padding-top: 20px;
+        }
+
+    }
+}
+
+.right-img {
+    padding-left: 74px;
+
+    @include media(sm) {
+        padding-left: 0;
+
+    }
+}
+
+.left-img {}

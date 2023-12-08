@@ -1,0 +1,211 @@
+.heroblock {
+    background: url(../images/heroblock-bg.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 93vh;
+
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 48px;
+        margin: 0;
+        font-family: $logo-font-family;
+        color: $white;
+
+        @include media(xxxs) {
+            font-size: 32px;
+        }
+    }
+
+    // .heroblock__text
+
+    &__text {
+        font-size: 22px;
+        text-align: center;
+        margin: 0;
+        padding-left: 5px;
+        padding-bottom: 48px;
+        letter-spacing: 6.82px;
+        color: $white;
+
+        @include media(md) {
+            padding-bottom: 34px;
+        }
+
+        @include media(xxxs) {
+            font-size: 18px;
+        }
+    }
+
+    // .heroblock__input-wrapper
+
+    &__input-wrapper {
+        display: flex;
+        background-color: $white;
+        margin: 0 auto;
+        position: relative;
+        padding: 18px 31px;
+        width: 580px;
+        margin-bottom: 20vh;
+
+        @include media(md) {
+            margin-bottom: 150px;
+        }
+
+        @include media(sm) {
+            width: 450px;
+            padding: 14px 28px;
+            margin-bottom: 120px;
+
+        }
+
+        @include media(xs) {
+            width: 370px;
+        }
+
+        @include media(xxs) {
+            width: 250px;
+            padding: 10px 20px;
+            margin-bottom: 15vh;
+        }
+
+        @include media(xxxs) {
+            width: 200px;
+            padding: 10px 10px;
+        }
+    }
+
+    // .heroblock__input
+
+    &__input {
+        font-size: 14px;
+        color: $light-gray;
+        border: none;
+        outline: none;
+        padding: 3px 3px;
+        letter-spacing: 2.8px;
+        flex-grow: 1;
+
+
+        @include media(xs) {
+            width: 300px;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+        }
+
+        @include media(xxs) {
+            width: 300px;
+            font-size: 10px;
+            letter-spacing: .5px;
+        }
+    }
+
+    // .heroblock__button-wrapper
+
+    &__button-wrapper {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        background-color: $blue;
+        padding: 15px 23px;
+        font-size: 14px;
+        display: flex;
+
+        @include media(sm) {
+            padding: 10px 19px;
+
+        }
+
+        @include media(xxs) {
+            padding: 5px 10px;
+        }
+    }
+
+    // .heroblock__button-img
+
+    &__button-img {
+        width: 16px;
+        height: 16px;
+        fill: #FFF;
+        padding-right: 11px;
+
+        @include media(xs) {
+            padding-right: 5px;
+        }
+
+        @include media(xxs) {
+            padding-right: 0;
+        }
+    }
+
+    // .heroblock__button
+
+    &__button {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $btn-font-family, $fallback ;
+        letter-spacing: 1.4px;
+        line-height: 20px;
+        padding: 0;
+
+        @include media(xs) {
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        @include media(xxs) {
+            display: none;
+        }
+    }
+
+    &__scrolldown {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+
+        &_text {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            padding-bottom: 4px;
+            letter-spacing: 2.8px;
+        }
+
+        &_arrow {
+            // margin: 0 auto;
+        }
+    }
+
+    &__scrolldown:hover>.arrow-wrapper {
+
+        transform: translateY(20px);
+    }
+
+}
+
+.heroblock__container {
+    padding-top: 20vh;
+    padding-bottom: $container-bottom-padding;
+
+    @include media(md) {
+        padding-top: 160px;
+    }
+
+    @include media(xxs) {
+        padding-top: 30vh;
+    }
+}
+
+.heroblock__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-wrapper {
+    margin: 0 auto;
+    transition: 0.5s ease-in-out;
+}

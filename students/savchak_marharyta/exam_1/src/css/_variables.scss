@@ -1,0 +1,50 @@
+//colors
+$light-blue: #00A2FF;
+$blue: #5373FD;
+$white: #FFFF;
+$darker-blue: #486BFE;
+$coral-red: #FF6363;
+$transparent-gray: rgba(35, 35, 35, 0.90);
+$dark-gray: #333333;
+$black: #000000;
+$light-gray: #999999;
+
+//fonts
+$default-font-family: 'Josefin Sans';
+$fallback: Arial, Helvetica, sans-serif;
+$main-font: $default-font-family, $fallback;
+$font-path: './fonts/';
+$default-font-color: $white;
+$default-font-size: 16px;
+
+$logo-font-family: 'Josefin Sans';
+$logo-font: $logo-font-family, $fallback;
+
+$description-font-family: 'Josefin Sans';
+$description-font: $description-font-family, $fallback;
+
+$section-titles-font-family: 'Aleo';
+$section-title-font: $section-titles-font-family, $fallback;
+$btn-font-family: 'Aleo';
+$btn-font: $btn-font-family, $fallback;
+//containers
+
+$container-bottom-padding: 120px;
+$tip-padding: 60px;
+$container-max-width: 1320px;
+$desktop-btm-padding: 90px;
+$md-sm-btm-padding: 30px;
+
+$gap: 15px;
+$default-count-col: 12;
+
+$default-width: 1320px;
+
+$breack-points: (
+    "lg": 1200px,
+    "md": 992px,
+    "sm": 768px,
+    "xs": 576px,
+    "xxs": 480px,
+    "xxxs": 320px
+);

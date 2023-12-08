@@ -1,0 +1,102 @@
+body {
+    font-family: $main-font;
+    font-size: $default-font-size;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%
+}
+
+@include grid();
+
+.mobile-only {
+    @include media-m(sm) {
+        display: none !important;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none !important;
+    }
+}
+
+.btn {
+    color: inherit;
+    font-family: $btn-font;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.12px;
+    z-index: 100;
+    position: relative;
+}
+
+.btn-wrapper {
+    background-color: $blue;
+    position: relative;
+    z-index: 1;
+    width: 154px;
+
+    @include media(xs) {
+        width: 154px;
+    }
+
+    @include media(xxs) {
+        width: 110px;
+        margin: 0 auto;
+    }
+
+    @include media(xxxs) {
+        width: 80px;
+    }
+}
+
+.btn-wrapper::before {
+    content: " ";
+    background-color: $darker-blue;
+    width: 52%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.btn-wrapper::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-top: 30px solid $blue ;
+    border-right: 30px solid $blue ;
+    border-bottom: 30px solid transparent;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 24%;
+
+    @include media(xxs) {
+        left: 17%;
+    }
+
+    @include media(xxxs) {
+        left: 12%;
+        border-left: 24px solid transparent;
+        border-top: 24px solid $blue ;
+        border-right: 24px solid $blue ;
+        border-bottom: 24px solid transparent
+    }
+
+}
+
+.container {
+    @include media(lg) {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}

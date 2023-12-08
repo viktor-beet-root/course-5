@@ -1,0 +1,142 @@
+.tip {
+    background-color: #333333;
+    // .tip__container
+
+    &__container {
+        padding-top: 108px;
+        padding-bottom: 40px;
+        position: relative;
+
+        @include media(md) {
+            padding-top: 60px;
+            padding-bottom: 25px;
+        }
+
+        @include media(xxs) {
+            padding-top: 60px;
+            padding-bottom: 25px;
+        }
+
+        @include media(xxxs) {
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+    }
+
+    // .tip__title
+
+    &__title {
+        font-weight: 400;
+        color: $white;
+        font-size: 36px;
+        margin: 0;
+        text-align: center;
+
+        @include media(lg) {
+            font-size: 24px;
+        }
+    }
+
+    &__img {
+        @include media(lg) {
+            height: 54px;
+        }
+    }
+
+    &__img-wrapper {
+        text-align: center;
+        padding-bottom: 14px;
+        margin: 0 auto;
+
+        @include media(xxxs) {
+            padding-bottom: 5px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        font-family: $section-title-font;
+        padding: 0 100px;
+        white-space: nowrap;
+
+        @include media(md) {
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__item:not(:last-child) {
+        @include media(md) {
+            padding-bottom: 50px;
+        }
+    }
+
+    .tip__list::before {
+        content: "";
+        border-left: 1px dashed transparent;
+        border-right: 1px dashed transparent;
+        border-bottom: 1px dashed transparent;
+        border-top: 1px dashed $white;
+        border-radius: 50%;
+        width: 37%;
+        height: 125%;
+        position: absolute;
+        z-index: 100;
+        top: 60px;
+        right: 200px;
+        opacity: 0.502;
+
+        @include media(lg) {
+            width: 32%;
+            right: 220px;
+        }
+
+        @include media(md) {
+            display: none;
+        }
+
+    }
+
+    .tip__list::after {
+        content: "";
+        border-left: 1px dashed transparent;
+        border-right: 1px dashed transparent;
+        border-bottom: 1px dashed transparent;
+        border-top: 1px dashed $white;
+        border-radius: 50%;
+        width: 37%;
+        height: 125%;
+        position: absolute;
+        z-index: 100;
+        top: 60px;
+        left: 200px;
+        opacity: 0.502;
+
+        @include media(lg) {
+            width: 32%;
+            left: 220px;
+        }
+
+        @include media(md) {
+            display: none;
+
+        }
+
+    }
+
+}
+
+.search {
+    color: $blue ;
+}
+
+.check-circle {
+    color: $coral-red;
+}
+
+.thumbs-up {
+    color: $light-blue;
+}
