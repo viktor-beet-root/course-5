@@ -2,26 +2,29 @@
 
 @import './vars';
 
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
 }
-*,*:before,*:after{
+
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-.container{
+.container {
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
 }
 
-.link-box{
+.link-box {
     font-family: $def-font;
     font-style: normal;
     font-weight: 400;
@@ -33,7 +36,7 @@ html{
     padding: 16px 41px 17px;
     transition: all ease .4s;
 
-    &:hover{
+    &:hover {
         border: 1px solid #7E5AFF;
         color: #7E5AFF;
     }

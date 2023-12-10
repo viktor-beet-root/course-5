@@ -242,8 +242,6 @@ function myForm() {
       input.parentElement.classList.remove("error");
       input.classList.remove("error");
     }
-
-    // Validate email
     function validateEmail(input) {
       return !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(input.value);
     }
@@ -328,9 +326,6 @@ __webpack_require__.r(__webpack_exports__);
 function myScroll() {
   var sections = document.querySelectorAll("section");
   function activeMenu() {
-    var length = sections.length;
-    while (--length && window.scrollY + 141 < sections[length].offsetTop) {}
-    ;
     var scrollTop = scrollY;
     var header = document.querySelector('.header');
     if (scrollTop >= 650) {
@@ -365,37 +360,35 @@ function myScroll() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 function newsSlicker() {
-  $(document).ready(function () {
-    $('.mySlick').slick({
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      dots: true,
-      responsive: [{
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          centerMode: true,
-          centerPadding: "30px"
-        }
-      }, {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          centerMode: true,
-          centerPadding: "10px"
-        }
-      }, {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerMode: true,
-          centerPadding: "5px"
-        }
-      }]
-    });
+  $('.mySlick').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: "30px"
+      }
+    }, {
+      breakpoint: 992,
+      settings: {
+        slidesToShow: 2,
+        centerMode: true,
+        centerPadding: "10px"
+      }
+    }, {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        centerMode: true,
+        centerPadding: "5px"
+      }
+    }]
   });
 }
 /* harmony default export */ __webpack_exports__["default"] = (newsSlicker);

@@ -86,7 +86,6 @@ function myForm() {
             input.classList.remove("error");
         }
 
-        // Validate email
         function validateEmail(input) {
             return !/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/.test(input.value);
         }

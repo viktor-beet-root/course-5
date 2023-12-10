@@ -815,7 +815,9 @@ template {
   border: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -1906,7 +1908,6 @@ html {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: -5px;
 }
 .gallery-box__big {
   width: 50%;
@@ -2425,6 +2426,6 @@ html {
 }
 @media screen and (max-width: 480px) {
   .footer {
-    padding: 203px 0 70px;
+    padding: 203px 0 105px;
   }
 }

@@ -4,9 +4,6 @@ function myScroll() {
 
     function activeMenu() {
 
-        let length = sections.length;
-        while (--length && window.scrollY + 141 < sections[length].offsetTop) { };
-
         const scrollTop = scrollY;
         const header = document.querySelector('.header');
         if (scrollTop >= 650) {
