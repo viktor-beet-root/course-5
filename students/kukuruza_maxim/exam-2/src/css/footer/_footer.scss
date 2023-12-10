@@ -1,13 +1,20 @@
 .footer {
     background: url(../../images/footer.png), linear-gradient(251deg, #7E5AFF -2.19%, #55B7FF 103.21%);
     padding-top: 150px;
+    background-repeat: no-repeat;
     padding-bottom: 150px;
+    position: relative;
 
     &-info {
         width: 800px;
         max-width: 800px;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 350px;
+
+        @include media(md) {
+            margin-top: 450px;
+
+        }
     }
 }
 
@@ -18,16 +25,18 @@
 
 .contact__card {
     background: url(../../images/city-img.png), #ffffff;
-    background-size: 350px;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    padding: 40px;
     width: 770px;
     height: 475px;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
     z-index: 2;
     color: #000;
-    margin-top: -300px;
     box-shadow: 5px 0px 10px 0px #000;
 
     @include media(md) {
@@ -68,6 +77,16 @@
     text-decoration: none;
     display: flex;
     gap: 10px;
+    align-items: center;
+
+    @include media(md) {
+        justify-content: center;
+    }
+
+    @include media(sm) {
+        font-size: 16px;
+        letter-spacing: 0;
+    }
 
     svg {
         fill: #7e5aff;
@@ -78,6 +97,7 @@
 
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 20px;
 }
 
@@ -126,16 +146,27 @@
     display: flex;
     gap: 20px;
     flex-direction: column;
+    width: 100%;
+
+    @include media(md) {
+        width: 100%;
+    }
 
     .form__label {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         color: #000;
+
+
 
         .more-btn {
             color: #000;
-            width: 100px;
-            margin: 0 auto;
+            width: 140px;
+            height: 50px;
+
+            @include media(md) {
+                margin: 0 auto;
+            }
 
             text-align: center;
         }
@@ -152,6 +183,8 @@
     line-height: 27px;
     color: #000;
     opacity: 0.3;
+
+
 }
 
 .form__label.error {
