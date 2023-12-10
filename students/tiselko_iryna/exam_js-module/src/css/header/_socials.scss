@@ -1,0 +1,49 @@
+.header-socials {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    padding: 0 30px 0 0;
+
+    @include media(md){
+        position: absolute;
+        top: 32px;
+        right: 5px;
+    }
+
+
+    @include media(){
+        display: none;
+    }
+
+    // .header-socials__facebook
+    // .header-socials__twitter
+    // .header-socials__instagram
+
+    &__facebook:hover,
+    &__twitter:hover,
+    &__instagram:hover {
+        stroke-width: 2px;
+    }
+
+    &__facebook:focus,
+    &__twitter:focus,
+    &__instagram:focus {
+        outline: none;
+    }
+}
+
+.socials-items {
+    padding-top: 20px;
+
+}
+
+.socials-link {
+    text-decoration: none;
+
+    &:not(:last-of-type) {
+        padding-right: 30px;
+    }
+}
+
+

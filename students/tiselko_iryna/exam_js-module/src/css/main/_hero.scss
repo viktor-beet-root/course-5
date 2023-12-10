@@ -1,0 +1,161 @@
+.hero {
+	height: 100vh;
+}
+
+.slick-vertical .slick-slide {
+	border: none;
+}
+
+.hero-slider {
+	height: 100%;
+
+	.slick-dots {
+		bottom: unset;
+		width: auto;
+		top: 50%;
+		transform: translateY(-50%) rotate(90deg);
+		right: -68px;
+
+		@include media() {
+			right: -103px;
+		}
+
+		& .slick-active {
+			background-color: $white-color;
+			position: relative;
+		}
+	
+		& li{
+			width: 10px;
+			height: 10px;
+			border: 1px solid $white-color;
+			border-radius: 50%;
+			margin-right: 35px;
+
+			@include media() {
+				width: 7px;
+				height: 7px;
+			}
+		}
+
+		& li button {
+			display: none;
+		}
+	}
+
+	// .hero-slider__item
+	&__item {
+		position: relative;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:nth-child(n+2) {
+			display: none;
+		}
+		.slick-initialized &{
+
+			&:nth-child(n+2) {
+				display: block;
+			}
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: $hero-gradient;
+			z-index: 2;
+		}
+	}
+
+	// .hero-slider__img
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: cover;
+		object-position: center top;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	// .hero-slider__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		z-index: 10;
+	}
+
+	// .hero-slider__title
+	&__title {
+		color: $white-color;
+		
+		@include media(md) {
+			font-size: 65px;
+		}
+
+		@include media() {
+			font-size: 45px;
+			line-height: 75px;
+		}
+
+		@include media(xs) {
+			font-size: 34px;
+			line-height: 75px;
+		}
+
+		@include media(xxs) {
+			font-size: 40px;
+			line-height: 75px;
+		}
+	}
+
+	// .hero-slider__subtitle
+	&__subtitle {
+		line-height: normal;
+		letter-spacing: 5.4px;
+		color: $white-color;
+
+		@include media() {
+			font-size: 12px;
+		}
+
+		@include media(xxs) {
+			font-size: 10px;
+			letter-spacing: 3.6px;
+		}
+	}
+
+
+	// .hero-slider__icon
+	&__icon{
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		bottom: 5%;
+		transform: translateX(-50%);
+	}
+}
+
+
+
+
+
+
+

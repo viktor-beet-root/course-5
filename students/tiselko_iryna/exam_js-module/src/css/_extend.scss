@@ -1,0 +1,30 @@
+%flex-jst-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+%posfix-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+%ul-not-marker {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+%heading-pseudo {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    background-color: $pickled-bluewood;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

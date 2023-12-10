@@ -1,0 +1,46 @@
+.btn {
+    display: inline-block;
+    border: 1px solid $pickled-bluewood;
+    width: $btn-width;
+    height: $btn-height;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $secondary-font;
+    font-size: $btn-font-size;
+    font-weight: $btn-font-weight;
+    line-height: $btn-line-height;
+    letter-spacing: $btn-letter-spacing;
+    text-transform: uppercase;
+    text-decoration: none;
+
+
+    &-small {
+        border-color: $border-btn-color-secondary;
+        color: #2f281e;
+    }
+
+    &-text-wrap {
+        white-space: nowrap;
+        z-index: 10;
+    }
+
+    &-primary {
+        background-color: $btn-bg;
+        color: $btn-text-color;
+    }
+
+    &-secondary {
+        width: 140px;
+        height: 50px;
+        background-color: $btn-bg;
+        color: $btn-text-color;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        color: $btn-hover-text-color;
+        background-image: $hero-gradient;
+        border: none;
+    }
+}

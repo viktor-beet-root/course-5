@@ -1,0 +1,333 @@
+.footer {
+    height: 100%;
+    background-image: url('#{$base-img-pass}images/footer/footer-bg.png'), linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    position: relative;
+
+    @include media (xs) {
+        background-image: unset;
+    }
+
+    // .footer__map-wrapper
+
+    &__map-wrapper{
+        width: 100vw;
+        height: 700px;
+
+        @include media () {
+            height: 750px;
+        }
+    }
+
+
+    // .footer__contact-form
+
+    &__contact-form {
+        background-color: $white-color;
+        background-image: url('#{$base-img-pass}images/footer/form-bg.png');
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+        width: 770px;
+        height: 450px;
+        position: absolute;
+        @extend %posfix-center;
+
+        @include media () {
+            width: 595px;
+            height: 700px;
+            top: 45%;
+        }
+
+        @include media (xs) {
+            width: 450px;
+            height: 740px;
+        }
+
+        @include media (xxs) {
+            width: 350px;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        text-align: center;
+        padding-left: 56px;
+
+        @include media () {
+            padding-left: 0;
+        }
+    }
+
+    // .footer__socials
+
+    &__socials {
+        text-align: center;
+    }
+
+    // .footer__socials-link
+
+    &__socials-link {
+        text-decoration: none;
+
+        &:not(:last-of-type) {
+            padding-right: 20px;
+        }
+
+    }
+
+    // .footer__scroll
+
+    &__scroll {
+        justify-self: flex-end;
+    }
+
+    // .footer__container
+
+    &__container {
+        height: 549px;
+    }
+
+    // .footer__row
+
+    &__row {
+        padding-top: 203px;
+        align-items: center;
+
+        @include media (xs) {
+            padding-top: 280px;
+            background-image: linear-gradient(237deg, #24ccfa 11.16%, #3C7FD4 89.18%);
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: contain;
+            position: relative;
+            z-index: -1;
+        }
+    }
+
+    // .footer__copyright
+
+    &__copyright{
+        padding-top: 41px;
+        text-align: center;
+    }
+
+
+}
+
+.contact-form {
+
+    // .contact-form__title
+
+    &__title {
+        position: relative;
+        padding-bottom: 40px;
+        text-align: center;
+        margin-top: 90px;
+
+        &::before {
+            @extend %heading-pseudo;
+            top: -37%;
+
+            @include media (xs) {
+                width: 90px;
+                top: -28%;
+            }
+        }
+
+        @include media () {
+            margin-top: 120px;
+        }
+
+        @include media (xs) {
+            padding-bottom: 35px;
+        }
+
+        @include media (xxs) {
+           font-size: 34px;
+        }
+    }
+
+    // .contact-form__wrapper
+
+    &__wrapper {
+        display: flex;
+
+        @include media () {
+            flex-direction: column-reverse;
+        }
+    }
+
+    // .contact-form__contact
+
+    &__contact {
+        padding: 0 0 68px 60px;
+
+        @include media () {
+            padding: 20px 0 30px 0;
+            text-align: center;
+        }
+    }
+
+    // .contact-form__contact-item
+
+    &__contact-item {
+        &:not(:last-of-type) {
+            padding-bottom: 20px;
+        }
+    }
+
+    // .contact-form__icon
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: $heliotrope;
+    }
+
+    // .contact-form__addres-text
+
+    &__addres-text {
+        font-family: $secondary-font;
+        line-height: 28px;
+        color: $black-color;
+        padding-left: 5px;
+    }
+
+    // .contact-form__inputs
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding-right: 60px;
+        padding-top: 0;
+
+        @include media () {
+           padding: 20px;
+        }
+    }
+
+    // .contact-form__name-input
+    // .contact-form__email-input
+
+    &__name-input,
+    &__email-input {
+        
+        
+        @include placeholder() {
+            font-family: $secondary-font;
+            color: $gray-6-color;
+            line-height: 27px;
+        }
+    }
+
+    
+
+    &__email-input {
+        @include media () {
+            padding-bottom: 20px;
+        }
+    }
+
+
+    // .contact-form__btn
+
+    &__btn {
+        align-self: flex-end;
+
+        @include media () {
+            align-self: center;
+            width: 190px;
+        }
+    }
+}
+
+.input {
+
+    // .input_name
+    // .input_email
+    &_name,
+    &_email {
+        width: 310px;
+        border: none;
+        border-bottom: 1px solid rgb(44, 64, 88, 0.2);
+        padding-bottom: 14px;
+
+        &:hover {
+            border-bottom: 1px solid $pickled-bluewood;
+        }
+
+        &:focus {
+            border-bottom: 1px solid $pickled-bluewood;
+        }
+
+        @include placeholder () {
+            font-family: $secondary-font;
+            line-height: 27px;
+            color: $gray-color;
+        }
+
+        @include media () {
+            width: 450px;
+            padding-left: 10px;
+            margin-left: 43px;
+        }
+
+        @include media (xs) {
+            width: 290px;
+            padding-left: 10px;
+            margin-left: unset;
+        }
+    }
+
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid $white-color;
+    background-image: url('#{$base-img-pass}images/arrow.svg'), ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px;
+    background-color: rgb(126, 90, 255, .6);
+    box-shadow: 0 0 10px 10px rgba(126, 90, 255, .6);
+    display: none;
+    z-index: 100;
+
+    @include media (xs) {
+        right: 15px;
+        bottom: 20px;
+    }
+}
+
+.copyright {
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: normal;
+    color: $white-color;
+
+    @include media () {
+        padding-bottom: 50px;
+    }
+}
+
+.just-validate-error-label {
+    font-size: 14px;
+
+    @include media () {
+        padding-left: 65px;
+    }
+
+    @include media (xs) {
+        padding-left: 25px;
+    }
+}

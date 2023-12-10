@@ -1,0 +1,116 @@
+.gallery {
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    @include media (xs) {
+        padding-top: 100px;
+        padding-bottom: 75px;
+    }
+
+    & .container {
+        @include media (lg) {
+            padding: 0;
+        }
+    }
+
+    // .gallery__heading
+
+    &__heading {
+        position: relative;
+        padding-bottom: 45px;
+        text-align: center;
+        color: $pickled-bluewood;
+
+        &::before {
+            @extend %heading-pseudo;
+            top: -36%;
+
+            @include media (xs) {
+                width: 90px;
+                top: -25%;
+            }
+        }
+
+        @include media (xs) {
+            padding-bottom: 35px;
+        }
+
+        @include media (xxs) {
+           font-size: 34px;
+        }
+    }
+
+    // .gallery__wrapper
+
+    &__wrapper {
+        margin: 10px;
+        padding-top: 45px;
+        padding-bottom: 30px;
+        display: grid;
+        justify-content: center;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+        @include media (md) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        @include media () {
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        }
+
+        @include media (xs) {
+            padding-top: 15px;
+            gap: 5px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+
+    // .gallery__item
+
+    &__item {
+        &-big {
+            grid-column: span 2;
+            grid-row: span 2;
+
+            @include media (xs) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+        }
+    }
+
+    // .gallery__img
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+    }
+
+    // .gallery__btn
+
+    &__btn {
+        margin: 5px;
+    }
+
+    // .gallery__btn-wrapper
+
+    &__btn-wrapper {
+        display: flex;
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    ._hidden{
+        display: none;
+    }
+}
+
+.-big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+

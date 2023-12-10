@@ -1,0 +1,33 @@
+@use 'sass:math';
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "./variables";
+@import "./extend";
+@import "./mixins";
+@import "./reset";
+@import "./fonts";
+@import "./global";
+@import "./form";
+@import "./header/header";
+@import "./main/hero";
+@import "./main/about";
+@import "./main/news";
+@import "./main/gallery";
+@import "./footer/footer";
+
+
+.slick-list {
+    .slick-loading & {
+        background: #fff slick-image-url("../images/ajax-loader.gif") center center no-repeat;
+    }
+}
+
+.slick-slide{
+    @font-face {
+        font-family: "slick";
+        src: url("../css/fonts/slick.woff") format("woff"), url("../css/fonts/slick.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+    }
+}
