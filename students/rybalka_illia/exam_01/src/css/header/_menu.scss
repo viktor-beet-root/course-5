@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-right: 150px;
+    margin-right: 20px;
     margin-top: 20px;
     position: relative;
 
@@ -30,8 +30,17 @@
     // .menu__wrapper-item
 
     &__wrapper-item {
+        display: flex;
+        margin-left: 340px;
+
+        @include media(xxl) {
+            margin-right: -97px;
+            margin-left: 385px;
+        }
+
         @include media(lg) {
-            margin-right: 80px;
+            margin-right: -97px;
+            margin-left: 10px;
         }
 
         @include media(md) {

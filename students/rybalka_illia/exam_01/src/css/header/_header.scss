@@ -9,6 +9,12 @@
     display: grid;
     place-content: center;
 
+    .container {
+        display: flex;
+        max-width: 1300px;
+        padding: 0 25px;
+    }
+
     @include media(xs) {
         height: 100vh;
     }
@@ -204,18 +210,32 @@
     // .heading__bottom
 
     &__bottom {
+        display: flex;
+        align-items: center;
         @include new-font(24px, 700, normal, 28px, 2.4px);
         text-transform: uppercase;
         color: $white-color;
-        margin-left: 140px;
+        margin-left: -129px;
         margin-top: 26px;
 
+        @include media(xs) {
+            margin-left: -10px;
+            margin-right: 10px;
+        }
+
         @include media(lg) {
-            margin-left: 100px;
+            margin-left: -96px;
+            margin-right: 245px;
+        }
+
+        @include media(sm) {
+            margin-right: 104px;
+            margin-left: -5px;
         }
 
         @include media(md) {
-            margin-left: 15px;
+            margin-left: -21px;
+            margin-right: 420px;
         }
     }
 }
@@ -240,7 +260,6 @@
             @include new-font(14px, 400, normal, 20px, 2.8px);
             color: $white-color;
             text-decoration: none;
-            position: relative;
             position: relative;
 
             &::after {
