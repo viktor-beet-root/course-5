@@ -19,13 +19,13 @@
     }
 }
 
-@mixin new-font($_family: $default-font-name, $_size: $default-font-size, $_weight: 300, $_style: normal, $_line-height: 28px, $_ltr-spacing: 1.6px) {
-    font-family: $_family;
-    font-size: $_size;
-    font-weight: $_weight;
-    font-style: $_style;
+@mixin fonts-type ($_font-family: $default-font-name, $_font-size: $default-font-size, $_font-weight: $default-font-weight, $_line-height: $line-height-text, $_letter-spacing: normal, $_text-transform: none) {
+    font-family: $_font-family;
+    font-size: $_font-size;
+    font-weight: $_font-weight;
     line-height: $_line-height;
-    letter-spacing: $_ltr-spacing;
+    letter-spacing: $_letter-spacing;
+    text-transform: $_text-transform;
 }
 
 @mixin test {
@@ -79,6 +79,7 @@
     clip: rect(0, 0, 0, 0) !important;
     margin: -1px !important;
 }
+
 
 @mixin container {
     .container {
@@ -142,8 +143,9 @@
     }
 }
 
+
 @mixin media-m($point: sm) {
-    @media screen and (min-width: (map-get($breack-points, $point) + 1)) {
+    @media screen and (min-width: (map-get($breack-points, $point)+1)) {
         @content;
     }
 }
@@ -162,6 +164,7 @@
     }
 }
 
+
 @mixin dev-col($_col: $default-count-col) {
     $width: math.div(100%, $default-count-col) * $_col;
 
@@ -172,14 +175,14 @@
     box-sizing: border-box;
 }
 
-@mixin col($_col: $default-count-col, $_breackpoint: '') {
-    @if $_breackpoint !='' {
+@mixin col($_col: $default-count-col, $_breackpoint: "") {
+    @if $_breackpoint !="" {
         @include media($_breackpoint) {
             @include dev-col($_col);
         }
     }
 
     @else {
-        @include dev-col($_col);
+        @include dev-col($_col)
     }
 }

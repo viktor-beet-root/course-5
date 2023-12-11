@@ -1,80 +1,59 @@
 .footer {
+    background-color: #000000;
+    color: $color-white;
+    padding: 65px 0;
 
-    background: $color-black;
-    padding-bottom: 60px;
+    &__links {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
 
-    // .footer__heading
-
-    &__heading {
-        margin-top: 0;
-        color: $white-color;
-        @include new-font(24px, 700, normal, 2.4px);
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 2.4px;
         text-transform: uppercase;
         text-align: center;
-        padding-top: 80px;
-
-        @include media(sm) {
-            font-size: 30px;
-        }
-
-        @include media(xxs) {
-            font-size: 26px;
-        }
+        margin: 0;
+        padding-bottom: 10px;
     }
 
-    // .footer__text
-
-    &__text {
-        color: $white-color;
-        @include new-font(14px, 20px);
+    &__subtitle {
         text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2.8px;
+        margin: 0;
+        padding-bottom: 20px;
+    }
+}
 
-        @include media(sm) {
-            font-size: 24px;
-        }
+.links {
+    list-style: none;
+    margin: 0;
 
-        @include media(xxs) {
-            font-size: 20px;
+    &__item {
+        padding-left: 32px;
+
+        &:first-child {
+            padding-left: 0;
         }
     }
 }
 
-.social-wrapper {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    padding: 0;
-    margin: 0;
-}
-
-.social {
-
-    // .social__link
+.item {
 
     &__link {
-        &:hover {
-            & .social__svg {
-                fill: $dodgerblue-color;
-            }
+        &:hover .item__img {
+            fill: $color-blue-accent;
         }
     }
 
-    &__svg {
-        width: 26px;
+    &__img {
         height: 32px;
-        fill: $white-color;
-
-        @include media(sm) {
-            width: 36px;
-            height: 36px;
-        }
-
-        @include media(xxs) {
-            width: 30px;
-            height: 30px;
-        }
+        width: 42px;
+        fill: white;
     }
-
 }

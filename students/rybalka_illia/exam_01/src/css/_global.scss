@@ -2,7 +2,27 @@ body {
     font-family: $main-font;
     background-color: $default-body-color;
     font-size: $default-font-size;
-    overflow-x: hidden;
+    color: $default-body-color;
+    font-weight: $default-font-weight;
+}
+
+.container,
+.row,
+.search-wrapper {
+    height: 100%;
 }
 
 @include grid();
+
+
+.mobyle-only {
+    @include media-m(sm) {
+        display: none;
+    }
+}
+
+.desktop-only {
+    @include media(sm) {
+        display: none;
+    }
+}
